@@ -27,7 +27,7 @@
     {"id": "CN-Yiyuan-z10-848-401-Yiyuan", "zh": "沂源", "status": "approved", "source": "@source/8e48106f7fadfefe", "record_sha256": "a0868ea3a1e198244f73f83c8dbd68bfa7d7e0183aa97545af8e4d2d9e307ba8", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
     {"id": "CN-Yiyuan-z10-848-401-Shiqiao", "zh": "石桥", "status": "approved", "source": "@source/8e48106f7fadfefe", "record_sha256": "7d64e1c99bdd8b8ee77f02372cef942338c1efd9922b31ce97a256a709e55278", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
     {"id": "CN-Yiyuan-z10-848-401-Zhongzhuang", "zh": "中庄", "status": "approved", "source": "@source/aaa7f71372df31cd", "record_sha256": "90ca152ea0aeadf102fbdb18e4b765133020f908b32bd0a4068753f8c2c697bc", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
-    {"id": "CN-Yiyuan-z10-848-401-Xili", "zh": "西里", "status": "approved", "source": "@source/8e48106f7fadfefe", "record_sha256": "6ace960b50994ee3f2dac868086dc5aadd39844fe084c8cca963216cbe7d5877", "review_notes": "同级原版字样与相应地点的地名资料已核对。"}
+    {"id": "CN-Yiyuan-z10-848-401-Xili", "zh": "西里", "status": "approved", "source": "@source/c44f47f261628b09", "record_sha256": "6ace960b50994ee3f2dac868086dc5aadd39844fe084c8cca963216cbe7d5877", "review_notes": "同级原版字样与相应地点的地名资料已核对。"}
   ],
   "layouts": [
     {"id": "CN-Yiyuan-z10-848-401-Yuezhuang", "x": 92.0, "y": 99.0, "lines": ["悦庄"], "font_size": 12, "font_style": "regular"},

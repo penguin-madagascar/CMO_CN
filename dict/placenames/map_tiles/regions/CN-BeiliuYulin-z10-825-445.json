@@ -1,0 +1,34 @@
+{
+  "id": "CN-BeiliuYulin-z10-825-445",
+  "z": 10,
+  "x": 825,
+  "y": 445,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/825/445.png"
+  ],
+  "context_tiles": [
+    "10/824/445.png",
+    "10/824/446.png",
+    "10/825/446.png"
+  ],
+  "features": [
+    {"id": "CN-BeiliuYulin-z10-825-445-N01", "kind": "city", "original": "Beiliu", "original_bbox": [208, 158, 246, 176], "source_url": "@source/67fa6773d830cec9", "source_glyph_complete": true, "source_printed_full_literal": "Beiliu"},
+    {"id": "CN-BeiliuYulin-z10-825-445-Yulin", "kind": "city", "original": "Yulin", "original_bbox": [81, 196, 119, 216], "source_url": "@source/67fa6773d830cec9", "source_glyph_complete": true, "source_printed_full_literal": "Yulin"}
+  ],
+  "translations": [
+    {"id": "CN-BeiliuYulin-z10-825-445-N01", "zh": "北流", "status": "approved", "source": "@source/5f2251d3f7e92448", "record_sha256": "6f220586c7f62252725f8c58d2373e35ecc66c41f8b3523c30b4221add755856", "review_notes": "对照同级原图字框及同一地点的中文地名。"},
+    {"id": "CN-BeiliuYulin-z10-825-445-Yulin", "zh": "玉林", "status": "approved", "source": "@source/0d23c99c7b37ecba", "record_sha256": "cf654b5cab1b9656494b9708d60ce22618b8c63c22403a4efa1d5ee4e7084f04", "review_notes": "与原图 Yulin 及实际显示于本瓦片的 Cities.wwp 第583项逐名核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-BeiliuYulin-z10-825-445-N01", "x": 227.0, "y": 167.0, "lines": ["北流"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-BeiliuYulin-z10-825-445-Yulin", "x": 81.5, "y": 225.5, "lines": ["玉林"], "font_size": 13.25, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-BeiliuYulin-z10-825-445-shared-1", "owner_region": "CN-MugeXingyeLongan-z10-824-445", "feature_id": "CN-MugeXingyeLongan-z10-824-445-N03", "kind": "city", "original": "Long'an", "source_url": "@source/bb7590915604e09b", "original_bbox": [-38, 138, 2, 155], "review_notes": "同级原图跨片拼合的完整字框与原有中文标注一致。"},
+    {"id": "CN-BeiliuYulin-z10-825-445-shared-2", "owner_region": "CN-Pubei-Bobai-Fumian-z10-823-446", "feature_id": "CN-Pubei-Bobai-Fumian-z10-823-446-S01", "kind": "city", "original": "Fumian", "source_url": "@source/ca4d74941c78d336", "original_bbox": [-12, 251, 36, 270], "review_notes": "同级原图跨片拼合的完整字框与原有中文标注一致。"}
+  ],
+  "legacy_suppressions": []
+}

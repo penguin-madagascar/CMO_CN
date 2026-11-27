@@ -817,7 +817,7 @@ namespace CMOShared
     {
         // BEGIN GENERATED PACKED REGION COVERAGE
         // Reviewed map/administrative entity joins: edf0f5ef37123e26b9ee6e68bbd2c412d998f6e6bfc534cfc7ec6375108f9e2e
-        internal const string Fingerprint = "93320f8a43f4224e438dffe054e48bf7bda1c60a6eb9f71973daab30fdbc6c78";
+        internal const string Fingerprint = "157f35c045bf015c75f43854b4bb30c05dc52f5cdbf0fd919621d7d0f0f7b99a";
         private static readonly Dictionary<string, int> ZoomMasks = new Dictionary<string, int>(StringComparer.Ordinal)
         {
             { "万丹省/C0C840B8/42D45581", 192 },
@@ -1028,7 +1028,7 @@ namespace CMOShared
     internal static class PackedWwpCoverage
     {
         // BEGIN GENERATED PACKED WWP COVERAGE
-        internal const string Fingerprint = "93320f8a43f4224e438dffe054e48bf7bda1c60a6eb9f71973daab30fdbc6c78";
+        internal const string Fingerprint = "157f35c045bf015c75f43854b4bb30c05dc52f5cdbf0fd919621d7d0f0f7b99a";
         private static readonly Dictionary<string, int> ZoomMasks = new Dictionary<string, int>(StringComparer.Ordinal)
         {
             { "0/不丹/41DC0000/42B50000", 112 },
@@ -1651,6 +1651,7 @@ namespace CMOShared
             { "1/吴川/41ABA834/42DD8825", 512 },
             { "1/吴市/4208EDCB/4304910B", 512 },
             { "1/周口/42068888/42E54444", 384 },
+            { "1/周村/42134445/42EBA223", 1024 },
             { "1/呵叻/416F87D3/42CC3434", 384 },
             { "1/呼和浩特/42233E03/42DF4DF0", 448 },
             { "1/和平市/41A68990/42D2ACD9", 768 },
@@ -2505,6 +2506,7 @@ namespace CMOShared
             { "1/海伦/423DD375/42FDE849", 128 },
             { "1/海口/41A05DDC/42DCAEEF", 512 },
             { "1/海地角/419E1336/C2906574", 128 },
+            { "1/海城/42236805/42F57EBE", 1024 },
             { "1/海州/42182989/42FB6DF0", 1920 },
             { "1/海得拉巴/418B1289/429CE9A8", 192 },
             { "1/海得拉巴/41CB23AD/4288BF50", 64 },
@@ -2512,7 +2514,7 @@ namespace CMOShared
             { "1/海防市/41A6EB22/42D55DED", 896 },
             { "1/涅夫捷卡姆斯克/42605E35/4259107D", 128 },
             { "1/涅夫捷尤甘斯克/4274662F/429134FD", 64 },
-            { "1/淄博/42132989/42EC206D", 768 },
+            { "1/淄博/42132989/42EC206D", 1792 },
             { "1/淮北/4207E5D4/42E99556", 384 },
             { "1/淮南/4202816C/42E9FE6F", 384 },
             { "1/淮安/42065ABD/42EE09D1", 256 },
@@ -2562,7 +2564,7 @@ namespace CMOShared
             { "1/特里凡得琅/4107C49C/4299E603", 192 },
             { "1/特隆赫姆/427DB8D2/4126522A", 64 },
             { "1/特鲁希略/C101DB18/C29E0F5A", 64 },
-            { "1/玉林/41B5110F/42DC4CCD", 960 },
+            { "1/玉林/41B5110F/42DC4CCD", 1984 },
             { "1/玉溪/41C2D70A/42CD159E", 128 },
             { "1/玛琅/C0FF59B4/42E142C4", 128 },
             { "1/玻利瓦尔城/41021153/C27E29D7", 128 },
@@ -2770,7 +2772,7 @@ namespace CMOShared
             { "1/苏加武眉/C0DD60BF/42D5DA74", 128 },
             { "1/苏哈尔/41C2EA16/4262FCBC", 384 },
             { "1/苏姆盖特/42225BE0/4246ACA8", 256 },
-            { "1/苏家屯/4226A2FD/42F6ADA8", 512 },
+            { "1/苏家屯/4226A2FD/42F6ADA8", 1536 },
             { "1/苏尔古特/42750000/4292D556", 64 },
             { "1/苏尔特/41F9ABDE/4184B593", 384 },
             { "1/苏州/41FA6EC1/42F130D6", 384 },
@@ -2810,7 +2812,7 @@ namespace CMOShared
             { "1/莱里达/4226778B/3F1F4730", 256 },
             { "1/莱阳/4213E740/42F16D5E", 384 },
             { "1/菏泽/420CF508/42E6F279", 384 },
-            { "1/萍乡/41DCEF0B/42E3B502", 960 },
+            { "1/萍乡/41DCEF0B/42E3B502", 1984 },
             { "1/营口/4222A8C7/42F474E8", 384 },
             { "1/萨凡纳/4200558C/C2A2331D", 128 },
             { "1/萨南达季/420D4282/423BFECD", 768 },
@@ -3036,7 +3038,7 @@ namespace CMOShared
             { "1/门头沟/421FC0B5/42E82FA7", 512 },
             { "1/门格洛尔/414EACF9/4295B64A", 192 },
             { "1/门迪亚/414857DC/4299CA61", 128 },
-            { "1/阜新/42280FEF/42F3515A", 768 },
+            { "1/阜新/42280FEF/42F3515A", 1792 },
             { "1/阜阳/4203999A/42E7A223", 384 },
             { "1/阳春/41B15557/42DF9111", 512 },
             { "1/阳朔/41C63F19/42DCFAB6", 512 },

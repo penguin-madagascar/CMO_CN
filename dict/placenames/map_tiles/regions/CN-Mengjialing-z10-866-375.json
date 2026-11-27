@@ -16,7 +16,7 @@
     {"id": "CN-Mengjialing-z10-866-375-S03", "kind": "city", "original": "Shiling", "original_bbox": [162, 222, 203, 242], "source_url": "@source/f3ab9d3f169b4d01", "source_glyph_complete": true, "source_printed_full_literal": "Shiling"}
   ],
   "translations": [
-    {"id": "CN-Mengjialing-z10-866-375-S01", "zh": "孟家岭", "status": "approved", "source": "@source/591c5fe9deafa5f7", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "a39d8bc19636b8315f5ab7cbfdd2d03757ca7c4606b4c7d3c00e2e80d8b2abc8"},
+    {"id": "CN-Mengjialing-z10-866-375-S01", "zh": "孟家岭", "status": "approved", "source": "@source/cb4cdc06be458546", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "a39d8bc19636b8315f5ab7cbfdd2d03757ca7c4606b4c7d3c00e2e80d8b2abc8"},
     {"id": "CN-Mengjialing-z10-866-375-S03", "zh": "石岭", "status": "approved", "source": "@source/de177c47825d4e63", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "f20499f169b3639941113f3757d2f486cfc9b6422dbb3109cb7c7cb190efa42f"}
   ],
   "layouts": [

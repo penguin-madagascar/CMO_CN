@@ -1,0 +1,28 @@
+{
+  "id": "CN-Longguang-z10-815-444",
+  "z": 10,
+  "x": 815,
+  "y": 444,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/815/444.png"
+  ],
+  "context_tiles": [
+    "10/815/445.png"
+  ],
+  "features": [
+    {"id": "CN-Longguang-z10-815-444-Longguang", "kind": "city", "original": "Longguang", "original_bbox": [137, 40, 199, 60], "source_url": "@source/1e66145d8785ad7a", "source_glyph_complete": true, "source_printed_full_literal": "Longguang"}
+  ],
+  "translations": [
+    {"id": "CN-Longguang-z10-815-444-Longguang", "zh": "龙光", "source": "@source/68238224ab35f61f", "status": "approved", "record_sha256": "926ec2a9ebe248d1154510b9dc01cd9f6b6a333c665e7add5fac976c56542154", "review_notes": "原版完整字样与游戏矢量地图 OSM 节点 2324530487 的中英名称、位置相符。官方资料核定德保县龙光乡。"}
+  ],
+  "layouts": [
+    {"id": "CN-Longguang-z10-815-444-Longguang", "x": 168.0, "y": 50.0, "lines": ["龙光"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Longguang-z10-815-444-shared-Xialei", "owner_region": "CN-DaxinXialeiShuolongJinlong-z10-815-445", "feature_id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N01", "kind": "city", "original": "Xialei", "source_url": "@source/f6fbee49329970f3", "original_bbox": [153, 251, 184, 266], "review_notes": "邻片已经绘制此地名。拼接核实完整原字框，保留原来的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

@@ -887,6 +887,40 @@
 | `dict/placenames/map_tiles/regions/G32-Amazon-z7-42-64-private7.json` | 巴西亚马孙 z7 的7个中文地名及7个实见城市圆点。 |
 | `dict/placenames/map_tiles/regions/G189-z9-441-208-core12.json` | 九州 z9 核心及南部3×2区域的15个中文地名；保留必需空中文片。 |
 | `dict/placenames/map_tiles/regions/G225-Quezon-core-z10-859-472.json` | 奎松省 z10 的4个中文标签；古马卡复用既有 owner。 |
+| `dict/placenames/map_tiles/regions/CN-Baiyu-z10-866-376.json` | 记录 10/866/376 起的 1×1 区域，含柏榆。 |
+| `dict/placenames/map_tiles/regions/CN-BeiliuYulin-z10-825-445.json` | 记录 10/825/445 起的 1×1 区域，含北流、玉林。 |
+| `dict/placenames/map_tiles/regions/CN-BianqiaoFeixian-z10-847-404.json` | 记录 10/847/404 起的 1×1 区域，含卞桥、费县。 |
+| `dict/placenames/map_tiles/regions/CN-DaxiYongheLianshan-z10-830-439.json` | 记录 10/830/439 起的 1×1 区域，含大锡、永和、连山。 |
+| `dict/placenames/map_tiles/regions/CN-Diantou-z10-849-406.json` | 记录 10/849/406 起的 1×1 区域，含店头、李埝。 |
+| `dict/placenames/map_tiles/regions/CN-Gangtun-z10-854-384.json` | 记录 10/854/384 起的 1×1 区域，含钢屯、白马石、杨郊、药王等。 |
+| `dict/placenames/map_tiles/regions/CN-Ganquan-z10-861-384.json` | 记录 10/861/384 起的 1×1 区域，含甘泉、海城、牌楼、接文。 |
+| `dict/placenames/map_tiles/regions/CN-HepuQuzhangChangleZhakou-z10-823-448.json` | 记录 10/823/448 起的 1×1 区域，含曲樟、常乐、闸口。 |
+| `dict/placenames/map_tiles/regions/CN-Junan-z10-849-404.json` | 记录 10/849/404 起的 1×1 区域，含道口、筵宾、莒南。 |
+| `dict/placenames/map_tiles/regions/CN-Juxian-z10-849-403.json` | 记录 10/849/403 起的 1×1 区域，含莒县、小店、大庄。 |
+| `dict/placenames/map_tiles/regions/CN-Longguang-z10-815-444.json` | 记录 10/815/444 起的 1×1 区域，含龙光。 |
+| `dict/placenames/map_tiles/regions/CN-Luyang-z10-858-382.json` | 记录 10/858/382 起的 1×1 区域，含闾阳、甜水。 |
+| `dict/placenames/map_tiles/regions/CN-Mengjialing-z10-866-375.json` | 记录 10/866/375 起的 1×1 区域，含孟家岭、石岭。 |
+| `dict/placenames/map_tiles/regions/CN-MugeXingyeLongan-z10-824-445.json` | 记录 10/824/445 起的 1×1 区域，含木格、兴业、龙安。 |
+| `dict/placenames/map_tiles/regions/CN-NanmuLiaoshiXuanfeng-z10-836-429.json` | 记录 10/836/429 起的 1×1 区域，含楠木、辽市、天台、东源等。 |
+| `dict/placenames/map_tiles/regions/CN-PaoziShijiazi-z10-859-379.json` | 记录 10/859/379 起的 1×1 区域，含泡子、十家子。 |
+| `dict/placenames/map_tiles/regions/CN-Pingan-z10-859-384.json` | 记录 10/859/384 起的 1×1 区域，含平安、沟沿、荣兴。 |
+| `dict/placenames/map_tiles/regions/CN-Pingfang-z10-852-384.json` | 记录 10/852/384 起的 1×1 区域，含平房、建昌、汤神庙。 |
+| `dict/placenames/map_tiles/regions/CN-PingxiangLuxiLiushi-z10-835-430.json` | 记录 10/835/430 起的 2×1 区域，含芦溪、六市、萍乡、湘东等。 |
+| `dict/placenames/map_tiles/regions/CN-ShanluoLuchuanShapo-z10-825-446.json` | 记录 10/825/446 起的 1×1 区域，含珊罗、沙坡、陆川。 |
+| `dict/placenames/map_tiles/regions/CN-ShenquanWenzhuGucheng-z10-836-432.json` | 记录 10/836/432 起的 1×2 区域，含神泉、文竹、古城、东上等。 |
+| `dict/placenames/map_tiles/regions/CN-Shuiji-z10-848-430.json` | 记录 10/848/430 起的 1×1 区域，含水吉。 |
+| `dict/placenames/map_tiles/regions/CN-Wanggang-z10-862-381.json` | 记录 10/862/381 起的 1×1 区域，含苏家屯、王纲、红菱。 |
+| `dict/placenames/map_tiles/regions/CN-WangtaiHuzhuang-z10-860-384.json` | 记录 10/860/384 起的 1×1 区域，含望台、虎庄。 |
+| `dict/placenames/map_tiles/regions/CN-Wuli-z10-822-447.json` | 记录 10/822/447 起的 1×1 区域，含武利。 |
+| `dict/placenames/map_tiles/regions/CN-Wuxing-z10-861-382.json` | 记录 10/861/382 起的 1×1 区域，含五星、沙岭。 |
+| `dict/placenames/map_tiles/regions/CN-XinjiangYaqian-z10-837-433.json` | 记录 10/837/433 起的 1×1 区域，含新江、衙前。 |
+| `dict/placenames/map_tiles/regions/CN-Xinmin-z10-858-380.json` | 记录 10/858/380 起的 1×1 区域，含阜新、新民、国华、大市。 |
+| `dict/placenames/map_tiles/regions/CN-Xinyi-z10-848-407.json` | 记录 10/848/407 起的 1×1 区域，含新沂、港头。 |
+| `dict/placenames/map_tiles/regions/CN-Xiwei-z10-868-375.json` | 记录 10/868/375 起的 1×1 区域，含西苇。 |
+| `dict/placenames/map_tiles/regions/CN-Xiying-z10-845-400.json` | 记录 10/845/400 起的 1×1 区域，含西营。 |
+| `dict/placenames/map_tiles/regions/CN-Yiyuan-z10-848-401.json` | 记录 10/848/401 起的 1×1 区域，含悦庄、九山、沂源、石桥等。 |
+| `dict/placenames/map_tiles/regions/CN-ZiboZhoucunZichuan-z10-847-399.json` | 记录 10/847/399 起的 1×1 区域，含淄博、周村、淄川。 |
+| `dict/placenames/map_tiles/regions/RU-Mglin-z9-302-166.json` | 记录 9/302/166 起的 1×1 区域，含姆格林。 |
 | `dict/placenames/map_tiles/*.jsonl` | 去重原图索引、公共来源 URL 与精简审核表；保留必要来源、输入与 RGBA 指纹 |
 | `docs/MAP_TILE_SOURCES.md` | 拆分地图格式、编辑规则、临时展开、完整重建与历史指纹迁移边界 |
 | `assets/placenames/ChineseMapTiles.dat` | 已核验清单确定性编译的中文标签瓦片，安装器/绿色包/运行时共用；新增覆盖必须先通过来源与像素审核 |

@@ -1,0 +1,39 @@
+{
+  "id": "CN-Xinmin-z10-858-380",
+  "z": 10,
+  "x": 858,
+  "y": 380,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/858/380.png"
+  ],
+  "context_tiles": [
+    "10/857/380.png",
+    "10/858/381.png",
+    "10/859/380.png"
+  ],
+  "features": [
+    {"id": "CN-Xinmin-z10-858-380-S01", "kind": "city", "original": "Fuxin", "original_bbox": [-15, 8, 22, 27], "source_url": "@source/4f38fcc516cd0bde", "source_glyph_complete": true, "source_printed_full_literal": "Fuxin"},
+    {"id": "CN-Xinmin-z10-858-380-S03", "kind": "city", "original": "Xinmin", "original_bbox": [22, 139, 65, 155], "source_url": "@source/4f38fcc516cd0bde", "source_glyph_complete": true, "source_printed_full_literal": "Xinmin"},
+    {"id": "CN-Xinmin-z10-858-380-S04", "kind": "city", "original": "Guohua", "original_bbox": [154, 164, 193, 179], "source_url": "@source/4f38fcc516cd0bde", "source_glyph_complete": true, "source_printed_full_literal": "Guohua"},
+    {"id": "CN-Xinmin-z10-858-380-S05", "kind": "city", "original": "Dashi", "original_bbox": [81, 248, 110, 263], "source_url": "@source/4f38fcc516cd0bde", "source_glyph_complete": true, "source_printed_full_literal": "Dashi"}
+  ],
+  "translations": [
+    {"id": "CN-Xinmin-z10-858-380-S01", "zh": "阜新", "status": "approved", "source": "@source/3ea30517f680a6d7", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "8f926c1b7ee3d7706d84060956141258ccc17c7b10355d835c0f2f3090fa4f8a"},
+    {"id": "CN-Xinmin-z10-858-380-S03", "zh": "新民", "status": "approved", "source": "@source/53499d0da3e6f332", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "a865b0ed105ea8e7d026a3831b87711a085d56f10300c0e34dd5c08fb0310413"},
+    {"id": "CN-Xinmin-z10-858-380-S04", "zh": "国华", "status": "approved", "source": "@source/9523c8d67d8dd998", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "ecccce511cbc2fece1cc4bca1bfaf99873b43bd10053df32024d6da08e55e3a6"},
+    {"id": "CN-Xinmin-z10-858-380-S05", "zh": "大市", "status": "approved", "source": "@source/4188d92ec85c7326", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "9cb9e98e87dff96da3d08f148de49413940ecd8af984d822584f37bbaaf6e84f"}
+  ],
+  "layouts": [
+    {"id": "CN-Xinmin-z10-858-380-S01", "x": 18.5, "y": 18.0, "lines": ["阜新"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-Xinmin-z10-858-380-S03", "x": 43.5, "y": 147.0, "lines": ["新民"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Xinmin-z10-858-380-S04", "x": 173.5, "y": 171.5, "lines": ["国华"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Xinmin-z10-858-380-S05", "x": 95.5, "y": 247, "lines": ["大市"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Xinmin-z10-858-380-owner-01", "owner_region": "CN-FurongXinlitunFangshan-z10-859-380", "feature_id": "CN-FurongXinlitunFangshan-z10-859-380-S02", "kind": "city", "original": "Furong", "source_url": "@source/a98d05a830d2b3f8", "original_bbox": [254, 55, 294, 75], "review_notes": "拼接同级原图，字框和既有中文所有者逐像素相符。"}
+  ],
+  "legacy_suppressions": []
+}

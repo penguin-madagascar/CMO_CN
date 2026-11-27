@@ -1,0 +1,54 @@
+{
+  "id": "CN-PingxiangLuxiLiushi-z10-835-430",
+  "z": 10,
+  "x": 835,
+  "y": 430,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/835/430.png",
+    "10/836/430.png"
+  ],
+  "context_tiles": [
+    "10/836/429.png",
+    "10/837/429.png",
+    "10/837/430.png",
+    "10/834/430.png"
+  ],
+  "features": [
+    {"id": "CN-LuxiLiushi-z10-836-430-N01", "kind": "city", "original": "Luxi", "original_bbox": [329, 34, 357, 52], "source_url": "@source/b6250e0fa9a0d39a", "source_glyph_complete": true, "source_printed_full_literal": "Luxi"},
+    {"id": "CN-LuxiLiushi-z10-836-430-N02", "kind": "city", "original": "Liushi", "original_bbox": [256, 242, 271, 256], "source_url": "@source/b6250e0fa9a0d39a", "source_glyph_complete": false, "source_printed_full_literal": null, "source_visible_fragment": "…shi", "resolved_semantic_name": "Liushi", "original_is_support_not_full_glyph_transcription": true},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Pingxiang", "kind": "city", "original": "Pingxiang", "original_bbox": [205, 9, 274, 33], "source_url": "@source/f426e61cfb586431", "source_glyph_complete": true, "source_printed_full_literal": "Pingxiang"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Xiangdong", "kind": "city", "original": "Xiangdong", "original_bbox": [91, 25, 160, 47], "source_url": "@source/f426e61cfb586431", "source_glyph_complete": true, "source_printed_full_literal": "Xiangdong"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Anyuan", "kind": "city", "original": "Anyuan", "original_bbox": [203, 43, 252, 65], "source_url": "@source/f426e61cfb586431", "source_glyph_complete": true, "source_printed_full_literal": "Anyuan"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Shentan", "kind": "city", "original": "Shentan", "original_bbox": [-24, 124, 18, 140], "source_url": "@source/f426e61cfb586431", "source_glyph_complete": true, "source_printed_full_literal": "Shentan"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Dongqiao", "kind": "city", "original": "Dongqiao", "original_bbox": [43, 195, 99, 215], "source_url": "@source/f426e61cfb586431", "source_glyph_complete": true, "source_printed_full_literal": "Dongqiao"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Baizhu", "kind": "city", "original": "Baizhu", "original_bbox": [169, 212, 204, 227], "source_url": "@source/f426e61cfb586431", "source_glyph_complete": true, "source_printed_full_literal": "Baizhu"}
+  ],
+  "translations": [
+    {"id": "CN-LuxiLiushi-z10-836-430-N01", "zh": "芦溪", "status": "approved", "source": "@source/da021914760728b3", "record_sha256": "87e68e2ef664ce8b4a2bad68921dbb6ba364d8a393c6e807c2b0280c9c6e7a99", "review_notes": "对照同级原图字框及同一地点的中文地名。"},
+    {"id": "CN-LuxiLiushi-z10-836-430-N02", "zh": "六市", "status": "approved", "source": "@source/5a8566bf9b9a885f", "record_sha256": "bcad85c502206315fd50ec0778aca520b238b1e2869b82bc318a98473294d519", "review_notes": "本片实见“…shi”；按同一地点的双语地名及冻结审核记录确认完整名称。"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Pingxiang", "zh": "萍乡", "status": "approved", "source": "@source/a02a5c4b99f9ca71", "record_sha256": "6ae8177e5d93c5bcc7fceedc716218af5f7fa17692c2333eea1a759a9c6c6634", "review_notes": "同级原图完整词形，核对对应坐标的双语地名。"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Xiangdong", "zh": "湘东", "status": "approved", "source": "@source/9fa0c800413eb771", "record_sha256": "dc1a9f87aa58604915672e8f76599a33220ae819b51a3fbd09d6dcf7bf2808e0", "review_notes": "同级原图完整词形，核对对应坐标的双语地名。"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Anyuan", "zh": "安源", "status": "approved", "source": "@source/94860a92e57a7bb9", "record_sha256": "3e3576f901e538f3708bbc769af857c5b973037cd98337986651c48b8bf7e561", "review_notes": "同级原图完整词形，核对对应坐标的双语地名。"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Shentan", "zh": "沈潭", "status": "approved", "source": "@source/87b775f5f09d8399", "record_sha256": "6ce115c82cec33610e526a7c852a7b80683a9b512d0636b9b008d088ff0eb1cd", "review_notes": "同级原图完整词形，核对对应坐标的双语地名。"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Dongqiao", "zh": "东桥", "status": "approved", "source": "@source/16013bdcb0e1ce80", "record_sha256": "6c4f0b4b8e3d055eb27ec159d53214e0e16010652f5b8515835285064984652f", "review_notes": "同级原图完整词形，核对对应坐标的双语地名。"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Baizhu", "zh": "白竺", "status": "approved", "source": "@source/03d78148b876d9d2", "record_sha256": "e0f8a9a720eb881a85463a01175d82f49bd289b3d7855b851ad920ca50d7aa4b", "review_notes": "同级原图完整词形，核对对应坐标的双语地名。"}
+  ],
+  "layouts": [
+    {"id": "CN-LuxiLiushi-z10-836-430-N01", "x": 343.0, "y": 43.0, "lines": ["芦溪"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-LuxiLiushi-z10-836-430-N02", "x": 271, "y": 246, "lines": ["六市"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Pingxiang", "x": 218.5, "y": 55.5, "lines": ["萍乡"], "font_style": "regular", "font_size": 13.25},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Xiangdong", "x": 125.5, "y": 36.0, "lines": ["湘东"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Anyuan", "x": 227.5, "y": 76.0, "lines": ["安源"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Shentan", "x": 15, "y": 132.0, "lines": ["沈潭"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Dongqiao", "x": 71.0, "y": 205.0, "lines": ["东桥"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-PingxiangLuxiLiushi-z10-835-430-Baizhu", "x": 186.5, "y": 219.5, "lines": ["白竺"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-LuxiLiushi-z10-836-430-shared-1", "owner_region": "CN-NanmuLiaoshiXuanfeng-z10-836-429", "feature_id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N05", "kind": "city", "original": "Xuanfeng", "source_url": "@source/198e97927e5f0e0f", "original_bbox": [393, -16, 441, 1], "review_notes": "同级原图跨片拼合的完整字框与原有中文标注一致。"},
+    {"id": "CN-LuxiLiushi-z10-836-430-shared-2", "owner_region": "CN-WentangHongjiang-z10-837-430", "feature_id": "CN-WentangHongjiang-z10-837-430-Wentang", "kind": "city", "original": "Wentang", "source_url": "@source/198e97927e5f0e0f", "original_bbox": [506, -14, 557, 5], "review_notes": "同级原图跨片拼合的完整字框与原有中文标注一致。"}
+  ],
+  "legacy_suppressions": []
+}
