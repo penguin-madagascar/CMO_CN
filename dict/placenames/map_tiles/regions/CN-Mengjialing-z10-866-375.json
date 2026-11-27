@@ -1,0 +1,32 @@
+{
+  "id": "CN-Mengjialing-z10-866-375",
+  "z": 10,
+  "x": 866,
+  "y": 375,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/866/375.png"
+  ],
+  "context_tiles": [
+    "10/867/375.png"
+  ],
+  "features": [
+    {"id": "CN-Mengjialing-z10-866-375-S01", "kind": "city", "original": "Mengjialing", "original_bbox": [150, 67, 208, 85], "source_url": "@source/f3ab9d3f169b4d01", "source_glyph_complete": true, "source_printed_full_literal": "Mengjialing"},
+    {"id": "CN-Mengjialing-z10-866-375-S03", "kind": "city", "original": "Shiling", "original_bbox": [162, 222, 203, 242], "source_url": "@source/f3ab9d3f169b4d01", "source_glyph_complete": true, "source_printed_full_literal": "Shiling"}
+  ],
+  "translations": [
+    {"id": "CN-Mengjialing-z10-866-375-S01", "zh": "孟家岭", "status": "approved", "source": "@source/591c5fe9deafa5f7", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "a39d8bc19636b8315f5ab7cbfdd2d03757ca7c4606b4c7d3c00e2e80d8b2abc8"},
+    {"id": "CN-Mengjialing-z10-866-375-S03", "zh": "石岭", "status": "approved", "source": "@source/de177c47825d4e63", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "f20499f169b3639941113f3757d2f486cfc9b6422dbb3109cb7c7cb190efa42f"}
+  ],
+  "layouts": [
+    {"id": "CN-Mengjialing-z10-866-375-S01", "x": 179.0, "y": 76.0, "lines": ["孟家岭"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Mengjialing-z10-866-375-S03", "x": 182.5, "y": 232.0, "lines": ["石岭"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Mengjialing-z10-866-375-owner-01", "owner_region": "CN-SandaoErlongshanJianan-z10-867-375", "feature_id": "CN-SandaoErlongshanJianan-z10-867-375-S02", "kind": "water", "original": "Erlongshan Reservoir", "source_url": "@source/a82233a1a4ebe09e", "original_bbox": [236, 103, 302, 128], "review_notes": "拼接同级原图，字框和既有中文所有者逐像素相符。"}
+  ],
+  "legacy_suppressions": [],
+  "source_unclassified": {"pixels": 19, "bbox": [197, 254, 227, 256], "mask_sha256": "f789a0df8ea67b6931083d227c4704cb1e574262d617d843a49492587c0aab39"}
+}

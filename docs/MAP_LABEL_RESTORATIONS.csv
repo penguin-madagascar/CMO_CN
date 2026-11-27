@@ -126,3 +126,71 @@ Daly City,戴利城,8,内置 WWP,Cities.wwp #4010（从 0 编号）,8/40/99,纬�
 Turkey,土耳其,8,内置 WWP,Synoptic.wwp #207（从 0 编号）,8/152/97,纬度 39°，经度 35°,EM-East-Mediterranean-z8-152-95,WWP-Synoptic-207-z8,8/152/97
 Bao Loc,保禄市,8,内置 WWP,Cities.wwp #4207（从 0 编号）,8/204/119,纬度 11.5479803°，经度 107.807716°,AP-Indochina-z8-200-112,WWP-Cities-4207-z8,8/204/119
 Artem,阿尔乔姆,8,内置 WWP,Cities.wwp #3499（从 0 编号）,8/222/93,纬度 43.3595009°，经度 132.188873°,NEA18-Primorye-z8-222-93,WWP-Cities-3499-z8,8/222/93
+Quzhang,曲樟,10,原版地图文字,MapTiles/Labels/10/823/448.png,10/823/448,"该缩放世界像素框 [210828, 114750, 210879, 114771]",CN-HepuQuzhangChangleZhakou-z10-823-448,CN-HepuQuzhangChangleZhakou-z10-823-448-Quzhang,10/823/448
+Changle,常乐,10,原版地图文字,MapTiles/Labels/10/823/448.png,10/823/448,"该缩放世界像素框 [210729, 114766, 210770, 114784]",CN-HepuQuzhangChangleZhakou-z10-823-448,CN-HepuQuzhangChangleZhakou-z10-823-448-Changle,10/823/448
+Zhakou,闸口,10,原版地图文字,MapTiles/Labels/10/823/448.png,10/823/448,"该缩放世界像素框 [210772, 114865, 210811, 114880]",CN-HepuQuzhangChangleZhakou-z10-823-448,CN-HepuQuzhangChangleZhakou-z10-823-448-Zhakou,10/823/448
+Bianqiao,卞桥,10,原版地图文字,MapTiles/Labels/10/847/404.png,10/847/404,"该缩放世界像素框 [216859, 103424, 216904, 103436]",CN-BianqiaoFeixian-z10-847-404,CN-BianqiaoFeixian-z10-847-404-N01,10/847/404
+Feixian,费县,10,原版地图文字,MapTiles/Labels/10/847/404.png,10/847/404,"该缩放世界像素框 [216954, 103588, 217000, 103607]",CN-BianqiaoFeixian-z10-847-404,CN-BianqiaoFeixian-z10-847-404-N02,10/847/404
+Paozi,泡子,10,原版地图文字,MapTiles/Labels/10/859/379.png,10/859/379,"该缩放世界像素框 [220123, 97098, 220155, 97115]",CN-PaoziShijiazi-z10-859-379,CN-PaoziShijiazi-z10-859-379-N01,10/859/379
+Shijiazi,十家子,10,原版地图文字,MapTiles/Labels/10/859/379.png,10/859/379,"该缩放世界像素框 [220079, 97203, 220116, 97221]",CN-PaoziShijiazi-z10-859-379,CN-PaoziShijiazi-z10-859-379-N02,10/859/379
+Wangtai,望台,10,原版地图文字,MapTiles/Labels/10/860/384.png,10/860/384,"该缩放世界像素框 [220336, 98311, 220378, 98329]",CN-WangtaiHuzhuang-z10-860-384,CN-WangtaiHuzhuang-z10-860-384-N01,10/860/384
+Huzhuang,虎庄,10,原版地图文字,MapTiles/Labels/10/860/384.png MapTiles/Labels/10/860/385.png,10/860/384 10/860/385,"该缩放世界像素框 [220281, 98551, 220331, 98569]",CN-WangtaiHuzhuang-z10-860-384,CN-WangtaiHuzhuang-z10-860-384-N02,10/860/384
+Baiyu,柏榆,10,原版地图文字,MapTiles/Labels/10/866/376.png,10/866/376,"该缩放世界像素框 [221892, 96381, 221921, 96398]",CN-Baiyu-z10-866-376,CN-Baiyu-z10-866-376-N01,10/866/376
+Xiwei,西苇,10,原版地图文字,MapTiles/Labels/10/868/375.png,10/868/375,"该缩放世界像素框 [222299, 96109, 222329, 96123]",CN-Xiwei-z10-868-375,CN-Xiwei-z10-868-375-N01,10/868/375
+Yuezhuang,悦庄,10,原版地图文字,MapTiles/Labels/10/848/401.png,10/848/401,"该缩放世界像素框 [217153, 102746, 217207, 102764]",CN-Yiyuan-z10-848-401,CN-Yiyuan-z10-848-401-Yuezhuang,10/848/401
+Jiushan,九山,10,原版地图文字,MapTiles/Labels/10/848/401.png MapTiles/Labels/10/849/401.png,10/848/401 10/849/401,"该缩放世界像素框 [217319, 102758, 217362, 102774]",CN-Yiyuan-z10-848-401,CN-Yiyuan-z10-848-401-Jiushan,10/848/401
+Yiyuan,沂源,10,原版地图文字,MapTiles/Labels/10/848/401.png,10/848/401,"该缩放世界像素框 [217090, 102767, 217135, 102788]",CN-Yiyuan-z10-848-401,CN-Yiyuan-z10-848-401-Yiyuan,10/848/401
+Shiqiao,石桥,10,原版地图文字,MapTiles/Labels/10/848/401.png,10/848/401,"该缩放世界像素框 [217218, 102800, 217262, 102820]",CN-Yiyuan-z10-848-401,CN-Yiyuan-z10-848-401-Shiqiao,10/848/401
+Zhongzhuang,中庄,10,原版地图文字,MapTiles/Labels/10/848/401.png,10/848/401,"该缩放世界像素框 [217175, 102869, 217242, 102887]",CN-Yiyuan-z10-848-401,CN-Yiyuan-z10-848-401-Zhongzhuang,10/848/401
+Xili,西里,10,原版地图文字,MapTiles/Labels/10/848/401.png MapTiles/Labels/10/848/402.png,10/848/401 10/848/402,"该缩放世界像素框 [217223, 102901, 217245, 102917]",CN-Yiyuan-z10-848-401,CN-Yiyuan-z10-848-401-Xili,10/848/401
+Xinyi,新沂,10,原版地图文字,MapTiles/Labels/10/848/407.png,10/848/407,"该缩放世界像素框 [217233, 104384, 217268, 104405]",CN-Xinyi-z10-848-407,CN-Xinyi-z10-848-407-Xinyi,10/848/407
+Gangtou,港头,10,原版地图文字,MapTiles/Labels/10/848/407.png,10/848/407,"该缩放世界像素框 [217133, 104422, 217181, 104443]",CN-Xinyi-z10-848-407,CN-Xinyi-z10-848-407-Gangtou,10/848/407
+Shuiji,水吉,10,原版地图文字,MapTiles/Labels/10/848/430.png,10/848/430,"该缩放世界像素框 [217229, 110289, 217263, 110309]",CN-Shuiji-z10-848-430,CN-Shuiji-z10-848-430-Shuiji,10/848/430
+Juxian,莒县,10,原版地图文字,MapTiles/Labels/10/849/403.png MapTiles/Labels/10/850/403.png,10/849/403 10/850/403,"该缩放世界像素框 [217578, 103302, 217620, 103320]",CN-Juxian-z10-849-403,CN-Juxian-z10-849-403-Juxian,10/849/403
+Xiaodian,小店,10,原版地图文字,MapTiles/Labels/10/849/403.png,10/849/403,"该缩放世界像素框 [217547, 103366, 217592, 103381]",CN-Juxian-z10-849-403,CN-Juxian-z10-849-403-Xiaodian,10/849/403
+Dazhuang,大庄,10,原版地图文字,MapTiles/Labels/10/849/403.png,10/849/403,"该缩放世界像素框 [217358, 103409, 217407, 103424]",CN-Juxian-z10-849-403,CN-Juxian-z10-849-403-Dazhuang,10/849/403
+Daokou,道口,10,原版地图文字,MapTiles/Labels/10/849/404.png,10/849/404,"该缩放世界像素框 [217491, 103586, 217530, 103601]",CN-Junan-z10-849-404,CN-Junan-z10-849-404-Daokou,10/849/404
+Yanbin,筵宾,10,原版地图文字,MapTiles/Labels/10/849/404.png,10/849/404,"该缩放世界像素框 [217543, 103594, 217584, 103610]",CN-Junan-z10-849-404,CN-Junan-z10-849-404-Yanbin,10/849/404
+Junan,莒南,10,原版地图文字,MapTiles/Labels/10/849/404.png MapTiles/Labels/10/849/405.png MapTiles/Labels/10/850/404.png MapTiles/Labels/10/850/405.png,10/849/404 10/849/405 10/850/404 10/850/405,"该缩放世界像素框 [217583, 103669, 217622, 103687]",CN-Junan-z10-849-404,CN-Junan-z10-849-404-Junan,10/849/404
+Diantou,店头,10,原版地图文字,MapTiles/Labels/10/849/406.png,10/849/406,"该缩放世界像素框 [217409, 103981, 217450, 103995]",CN-Diantou-z10-849-406,CN-Diantou-z10-849-406-S02,10/849/406
+Linian,李埝,10,原版地图文字,MapTiles/Labels/10/849/406.png,10/849/406,"该缩放世界像素框 [217419, 104120, 217451, 104135]",CN-Diantou-z10-849-406,CN-Diantou-z10-849-406-S03,10/849/406
+Pingfang,平房,10,原版地图文字,MapTiles/Labels/10/852/384.png,10/852/384,"该缩放世界像素框 [218167, 98309, 218211, 98327]",CN-Pingfang-z10-852-384,CN-Pingfang-z10-852-384-S01,10/852/384
+Jianchang,建昌,10,原版地图文字,MapTiles/Labels/10/852/384.png,10/852/384,"该缩放世界像素框 [218277, 98456, 218340, 98478]",CN-Pingfang-z10-852-384,CN-Pingfang-z10-852-384-S03,10/852/384
+Tangshenmiao,汤神庙,10,原版地图文字,MapTiles/Labels/10/852/384.png,10/852/384,"该缩放世界像素框 [218127, 98492, 218199, 98510]",CN-Pingfang-z10-852-384,CN-Pingfang-z10-852-384-S04,10/852/384
+Gangtun,钢屯,10,原版地图文字,MapTiles/Labels/10/854/384.png MapTiles/Labels/10/855/384.png,10/854/384 10/855/384,"该缩放世界像素框 [218878, 98353, 218926, 98371]",CN-Gangtun-z10-854-384,CN-Gangtun-z10-854-384-S01,10/854/384
+Baimashi,白马石,10,原版地图文字,MapTiles/Labels/10/854/384.png,10/854/384,"该缩放世界像素框 [218679, 98359, 218731, 98375]",CN-Gangtun-z10-854-384,CN-Gangtun-z10-854-384-S02,10/854/384
+Yangjiao,杨郊,10,原版地图文字,MapTiles/Labels/10/854/384.png,10/854/384,"该缩放世界像素框 [218829, 98471, 218873, 98488]",CN-Gangtun-z10-854-384,CN-Gangtun-z10-854-384-S03,10/854/384
+Yaowang,药王,10,原版地图文字,MapTiles/Labels/10/854/384.png,10/854/384,"该缩放世界像素框 [218698, 98503, 218744, 98521]",CN-Gangtun-z10-854-384,CN-Gangtun-z10-854-384-S05,10/854/384
+Huashan,华山,10,原版地图文字,MapTiles/Labels/10/854/384.png,10/854/384,"该缩放世界像素框 [218826, 98529, 218870, 98544]",CN-Gangtun-z10-854-384,CN-Gangtun-z10-854-384-S06,10/854/384
+Luyang,闾阳,10,原版地图文字,MapTiles/Labels/10/857/382.png MapTiles/Labels/10/858/382.png,10/857/382 10/858/382,"该缩放世界像素框 [219647, 97906, 219686, 97925]",CN-Luyang-z10-858-382,CN-Luyang-z10-858-382-S03,10/858/382
+Tianshui,甜水,10,原版地图文字,MapTiles/Labels/10/858/382.png,10/858/382,"该缩放世界像素框 [219751, 97947, 219795, 97961]",CN-Luyang-z10-858-382,CN-Luyang-z10-858-382-S04,10/858/382
+Ping’an,平安,10,原版地图文字,MapTiles/Labels/10/859/384.png,10/859/384,"该缩放世界像素框 [220005, 98388, 220043, 98406]",CN-Pingan-z10-859-384,CN-Pingan-z10-859-384-S02,10/859/384
+Gouyan,沟沿,10,原版地图文字,MapTiles/Labels/10/859/384.png,10/859/384,"该缩放世界像素框 [220064, 98447, 220107, 98467]",CN-Pingan-z10-859-384,CN-Pingan-z10-859-384-S03,10/859/384
+Rongxing,荣兴,10,原版地图文字,MapTiles/Labels/10/859/384.png,10/859/384,"该缩放世界像素框 [219948, 98486, 220001, 98506]",CN-Pingan-z10-859-384,CN-Pingan-z10-859-384-S04,10/859/384
+Wuxing,五星,10,原版地图文字,MapTiles/Labels/10/861/382.png,10/861/382,"该缩放世界像素框 [220615, 97818, 220660, 97838]",CN-Wuxing-z10-861-382,CN-Wuxing-z10-861-382-S02,10/861/382
+Shaling,沙岭,10,原版地图文字,MapTiles/Labels/10/861/382.png,10/861/382,"该缩放世界像素框 [220630, 97951, 220672, 97972]",CN-Wuxing-z10-861-382,CN-Wuxing-z10-861-382-S03,10/861/382
+Mengjialing,孟家岭,10,原版地图文字,MapTiles/Labels/10/866/375.png,10/866/375,"该缩放世界像素框 [221846, 96067, 221904, 96085]",CN-Mengjialing-z10-866-375,CN-Mengjialing-z10-866-375-S01,10/866/375
+Shiling,石岭,10,原版地图文字,MapTiles/Labels/10/866/375.png,10/866/375,"该缩放世界像素框 [221858, 96222, 221899, 96242]",CN-Mengjialing-z10-866-375,CN-Mengjialing-z10-866-375-S03,10/866/375
+Muge,木格,10,原版地图文字,MapTiles/Labels/10/824/445.png,10/824/445,"该缩放世界像素框 [210953, 113970, 210986, 113990]",CN-MugeXingyeLongan-z10-824-445,CN-MugeXingyeLongan-z10-824-445-N01,10/824/445
+Xingye,兴业,10,原版地图文字,MapTiles/Labels/10/824/445.png,10/824/445,"该缩放世界像素框 [211054, 114052, 211101, 114074]",CN-MugeXingyeLongan-z10-824-445,CN-MugeXingyeLongan-z10-824-445-N02,10/824/445
+Long'an,龙安,10,原版地图文字,MapTiles/Labels/10/824/445.png MapTiles/Labels/10/825/445.png,10/824/445 10/825/445,"该缩放世界像素框 [211162, 114058, 211202, 114075]",CN-MugeXingyeLongan-z10-824-445,CN-MugeXingyeLongan-z10-824-445-N03,10/824/445
+Shanluo,珊罗,10,原版地图文字,MapTiles/Labels/10/825/446.png,10/825/446,"该缩放世界像素框 [211315, 114194, 211357, 114209]",CN-ShanluoLuchuanShapo-z10-825-446,CN-ShanluoLuchuanShapo-z10-825-446-N01,10/825/446
+Shapo,沙坡,10,原版地图文字,MapTiles/Labels/10/825/446.png,10/825/446,"该缩放世界像素框 [211430, 114373, 211456, 114391]",CN-ShanluoLuchuanShapo-z10-825-446,CN-ShanluoLuchuanShapo-z10-825-446-N02,10/825/446
+Luchuan,陆川,10,原版地图文字,MapTiles/Labels/10/825/446.png,10/825/446,"该缩放世界像素框 [211334, 114379, 211388, 114398]",CN-ShanluoLuchuanShapo-z10-825-446,CN-ShanluoLuchuanShapo-z10-825-446-N03,10/825/446
+Daxi,大锡,10,原版地图文字,MapTiles/Labels/10/830/439.png,10/830/439,"该缩放世界像素框 [212562, 112411, 212585, 112426]",CN-DaxiYongheLianshan-z10-830-439,CN-DaxiYongheLianshan-z10-830-439-N01,10/830/439
+Yonghe,永和,10,原版地图文字,MapTiles/Labels/10/830/439.png,10/830/439,"该缩放世界像素框 [212631, 112553, 212670, 112570]",CN-DaxiYongheLianshan-z10-830-439,CN-DaxiYongheLianshan-z10-830-439-N02,10/830/439
+Lianshan,连山,10,原版地图文字,MapTiles/Labels/10/830/439.png,10/830/439,"该缩放世界像素框 [212664, 112594, 212721, 112612]",CN-DaxiYongheLianshan-z10-830-439,CN-DaxiYongheLianshan-z10-830-439-N03,10/830/439
+Nanmu,楠木,10,原版地图文字,MapTiles/Labels/10/836/428.png MapTiles/Labels/10/836/429.png,10/836/428 10/836/429,"该缩放世界像素框 [214185, 109820, 214227, 109837]",CN-NanmuLiaoshiXuanfeng-z10-836-429,CN-NanmuLiaoshiXuanfeng-z10-836-429-N01,10/836/429
+Liaoshi,辽市,10,原版地图文字,MapTiles/Labels/10/836/429.png,10/836/429,"该缩放世界像素框 [214170, 109929, 214211, 109945]",CN-NanmuLiaoshiXuanfeng-z10-836-429,CN-NanmuLiaoshiXuanfeng-z10-836-429-N02,10/836/429
+Tiantai,天台,10,原版地图文字,MapTiles/Labels/10/836/429.png,10/836/429,"该缩放世界像素框 [214081, 109952, 214116, 109967]",CN-NanmuLiaoshiXuanfeng-z10-836-429,CN-NanmuLiaoshiXuanfeng-z10-836-429-N03,10/836/429
+Dongyuan,东源,10,原版地图文字,MapTiles/Labels/10/836/429.png,10/836/429,"该缩放世界像素框 [214016, 110007, 214035, 110021]",CN-NanmuLiaoshiXuanfeng-z10-836-429,CN-NanmuLiaoshiXuanfeng-z10-836-429-N04,10/836/429
+Xuanfeng,宣风,10,原版地图文字,MapTiles/Labels/10/836/429.png MapTiles/Labels/10/836/430.png,10/836/429 10/836/430,"该缩放世界像素框 [214153, 110064, 214201, 110081]",CN-NanmuLiaoshiXuanfeng-z10-836-429,CN-NanmuLiaoshiXuanfeng-z10-836-429-N05,10/836/429
+Shenquan,神泉,10,原版地图文字,MapTiles/Labels/10/836/432.png,10/836/432,"该缩放世界像素框 [214016, 110593, 214046, 110609]",CN-ShenquanWenzhuGucheng-z10-836-432,CN-ShenquanWenzhuGucheng-z10-836-432-N01,10/836/432
+Wenzhu,文竹,10,原版地图文字,MapTiles/Labels/10/836/432.png,10/836/432,"该缩放世界像素框 [214045, 110632, 214086, 110647]",CN-ShenquanWenzhuGucheng-z10-836-432,CN-ShenquanWenzhuGucheng-z10-836-432-N02,10/836/432
+Gucheng,古城,10,原版地图文字,MapTiles/Labels/10/836/432.png MapTiles/Labels/10/836/433.png,10/836/432 10/836/433,"该缩放世界像素框 [214063, 110831, 214107, 110849]",CN-ShenquanWenzhuGucheng-z10-836-432,CN-ShenquanWenzhuGucheng-z10-836-432-N03,10/836/432
+Dongshang,东上,10,原版地图文字,MapTiles/Labels/10/835/433.png MapTiles/Labels/10/836/433.png,10/835/433 10/836/433,"该缩放世界像素框 [213989, 110869, 214048, 110889]",CN-ShenquanWenzhuGucheng-z10-836-432,CN-ShenquanWenzhuGucheng-z10-836-432-N04,10/836/433
+Maoping,茅坪,10,原版地图文字,MapTiles/Labels/10/836/433.png,10/836/433,"该缩放世界像素框 [214078, 110927, 214128, 110947]",CN-ShenquanWenzhuGucheng-z10-836-432,CN-ShenquanWenzhuGucheng-z10-836-432-N05,10/836/433
+Shidu,十都,10,原版地图文字,MapTiles/Labels/10/836/433.png,10/836/433,"该缩放世界像素框 [214024, 110999, 214054, 111014]",CN-ShenquanWenzhuGucheng-z10-836-432,CN-ShenquanWenzhuGucheng-z10-836-432-N06,10/836/433
+Xinjiang,新江,10,原版地图文字,MapTiles/Labels/10/837/433.png,10/837/433,"该缩放世界像素框 [214369, 110921, 214417, 110940]",CN-XinjiangYaqian-z10-837-433,CN-XinjiangYaqian-z10-837-433-N01,10/837/433
+Yaqian,衙前,10,原版地图文字,MapTiles/Labels/10/837/433.png,10/837/433,"该缩放世界像素框 [214413, 111003, 214449, 111020]",CN-XinjiangYaqian-z10-837-433,CN-XinjiangYaqian-z10-837-433-N02,10/837/433
+Xiying,西营,10,原版地图文字,MapTiles/Labels/10/845/400.png,10/845/400,"该缩放世界像素框 [216411, 102480, 216445, 102497]",CN-Xiying-z10-845-400,CN-Xiying-z10-845-400-N01,10/845/400

@@ -1,0 +1,41 @@
+{
+  "id": "CN-Gangtun-z10-854-384",
+  "z": 10,
+  "x": 854,
+  "y": 384,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/854/384.png"
+  ],
+  "context_tiles": [
+    "10/853/384.png",
+    "10/855/384.png"
+  ],
+  "features": [
+    {"id": "CN-Gangtun-z10-854-384-S01", "kind": "city", "original": "Gangtun", "original_bbox": [254, 49, 302, 67], "source_url": "@source/db56e5739a9b80ea", "source_glyph_complete": true, "source_printed_full_literal": "Gangtun"},
+    {"id": "CN-Gangtun-z10-854-384-S02", "kind": "city", "original": "Baimashi", "original_bbox": [55, 55, 107, 71], "source_url": "@source/db56e5739a9b80ea", "source_glyph_complete": true, "source_printed_full_literal": "Baimashi"},
+    {"id": "CN-Gangtun-z10-854-384-S03", "kind": "city", "original": "Yangjiao", "original_bbox": [205, 167, 249, 184], "source_url": "@source/db56e5739a9b80ea", "source_glyph_complete": true, "source_printed_full_literal": "Yangjiao"},
+    {"id": "CN-Gangtun-z10-854-384-S05", "kind": "city", "original": "Yaowang", "original_bbox": [74, 199, 120, 217], "source_url": "@source/db56e5739a9b80ea", "source_glyph_complete": true, "source_printed_full_literal": "Yaowang"},
+    {"id": "CN-Gangtun-z10-854-384-S06", "kind": "city", "original": "Huashan", "original_bbox": [202, 225, 246, 240], "source_url": "@source/db56e5739a9b80ea", "source_glyph_complete": true, "source_printed_full_literal": "Huashan"}
+  ],
+  "translations": [
+    {"id": "CN-Gangtun-z10-854-384-S01", "zh": "钢屯", "status": "approved", "source": "@source/ccb642b72b6813e8", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "0d9cf65eecb6bf38f6edde389b8b1428f0edf3eec4af9b346a9926d2608addc0"},
+    {"id": "CN-Gangtun-z10-854-384-S02", "zh": "白马石", "status": "approved", "source": "@source/cab8aec6d0e7b9bb", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "7360f5f78ba3be9c458b2abbe3e3627f5f974d50e8331c4db139268f2c224048"},
+    {"id": "CN-Gangtun-z10-854-384-S03", "zh": "杨郊", "status": "approved", "source": "@source/81b97980de62fad8", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "c4a0080d61654e9b1da2478d399bd669cfca48e9aa7ea68956368d4eee6bdf72"},
+    {"id": "CN-Gangtun-z10-854-384-S05", "zh": "药王", "status": "approved", "source": "@source/b405fc4092eec358", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "0a42a7e4cd80f39cafc6bb5a30d428358f68de8b9deb69bba09493c0cdb068b0"},
+    {"id": "CN-Gangtun-z10-854-384-S06", "zh": "华山", "status": "approved", "source": "@source/02c3409f86ffd67f", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "3d0f1e8ca476bd1b9fbb0bebd8581605f35392167704201f5c58b7f49de7605a"}
+  ],
+  "layouts": [
+    {"id": "CN-Gangtun-z10-854-384-S01", "x": 240, "y": 58.0, "lines": ["钢屯"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Gangtun-z10-854-384-S02", "x": 81.0, "y": 63.0, "lines": ["白马石"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Gangtun-z10-854-384-S03", "x": 227.0, "y": 175.5, "lines": ["杨郊"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Gangtun-z10-854-384-S05", "x": 97.0, "y": 208.0, "lines": ["药王"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Gangtun-z10-854-384-S06", "x": 224.0, "y": 232.5, "lines": ["华山"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Gangtun-z10-854-384-owner-03", "owner_region": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384", "feature_id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S03", "kind": "city", "original": "Gezidong", "source_url": "@source/c6d0beb3cc96b2a7", "original_bbox": [-51, 179, 1, 199], "review_notes": "拼接同级原图，字框和既有中文所有者逐像素相符。"}
+  ],
+  "legacy_suppressions": []
+}

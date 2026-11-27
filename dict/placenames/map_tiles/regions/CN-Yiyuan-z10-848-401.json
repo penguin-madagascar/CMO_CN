@@ -1,0 +1,45 @@
+{
+  "id": "CN-Yiyuan-z10-848-401",
+  "z": 10,
+  "x": 848,
+  "y": 401,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/848/401.png"
+  ],
+  "context_tiles": [
+    "10/848/400.png",
+    "10/848/402.png",
+    "10/849/401.png"
+  ],
+  "features": [
+    {"id": "CN-Yiyuan-z10-848-401-Yuezhuang", "kind": "city", "original": "Yuezhuang", "original_bbox": [65, 90, 119, 108], "source_url": "@source/dd6dcc7488f79f04", "source_glyph_complete": true, "source_printed_full_literal": "Yuezhuang"},
+    {"id": "CN-Yiyuan-z10-848-401-Jiushan", "kind": "city", "original": "Jiushan", "original_bbox": [231, 102, 274, 118], "source_url": "@source/dd6dcc7488f79f04", "source_glyph_complete": true, "source_printed_full_literal": "Jiushan"},
+    {"id": "CN-Yiyuan-z10-848-401-Yiyuan", "kind": "city", "original": "Yiyuan", "original_bbox": [2, 111, 47, 132], "source_url": "@source/dd6dcc7488f79f04", "source_glyph_complete": true, "source_printed_full_literal": "Yiyuan"},
+    {"id": "CN-Yiyuan-z10-848-401-Shiqiao", "kind": "city", "original": "Shiqiao", "original_bbox": [130, 144, 174, 164], "source_url": "@source/dd6dcc7488f79f04", "source_glyph_complete": true, "source_printed_full_literal": "Shiqiao"},
+    {"id": "CN-Yiyuan-z10-848-401-Zhongzhuang", "kind": "city", "original": "Zhongzhuang", "original_bbox": [87, 213, 154, 231], "source_url": "@source/dd6dcc7488f79f04", "source_glyph_complete": true, "source_printed_full_literal": "Zhongzhuang"},
+    {"id": "CN-Yiyuan-z10-848-401-Xili", "kind": "city", "original": "Xili", "original_bbox": [135, 245, 157, 261], "source_url": "@source/dd6dcc7488f79f04", "source_glyph_complete": true, "source_printed_full_literal": "Xili"}
+  ],
+  "translations": [
+    {"id": "CN-Yiyuan-z10-848-401-Yuezhuang", "zh": "悦庄", "status": "approved", "source": "@source/62a73e5e90fe20c0", "record_sha256": "43ca77300482948fb85c4e7b6d9a252a69955214db43db0fc6074df5b6b66e6b", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
+    {"id": "CN-Yiyuan-z10-848-401-Jiushan", "zh": "九山", "status": "approved", "source": "@source/b213877e2e801281", "record_sha256": "a90e2464b15cce49482207d4b2013eddce1f1f710719cc3863225984c402b3e5", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
+    {"id": "CN-Yiyuan-z10-848-401-Yiyuan", "zh": "沂源", "status": "approved", "source": "@source/8e48106f7fadfefe", "record_sha256": "a0868ea3a1e198244f73f83c8dbd68bfa7d7e0183aa97545af8e4d2d9e307ba8", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
+    {"id": "CN-Yiyuan-z10-848-401-Shiqiao", "zh": "石桥", "status": "approved", "source": "@source/8e48106f7fadfefe", "record_sha256": "7d64e1c99bdd8b8ee77f02372cef942338c1efd9922b31ce97a256a709e55278", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
+    {"id": "CN-Yiyuan-z10-848-401-Zhongzhuang", "zh": "中庄", "status": "approved", "source": "@source/aaa7f71372df31cd", "record_sha256": "90ca152ea0aeadf102fbdb18e4b765133020f908b32bd0a4068753f8c2c697bc", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
+    {"id": "CN-Yiyuan-z10-848-401-Xili", "zh": "西里", "status": "approved", "source": "@source/8e48106f7fadfefe", "record_sha256": "6ace960b50994ee3f2dac868086dc5aadd39844fe084c8cca963216cbe7d5877", "review_notes": "同级原版字样与相应地点的地名资料已核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-Yiyuan-z10-848-401-Yuezhuang", "x": 92.0, "y": 99.0, "lines": ["悦庄"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-Yiyuan-z10-848-401-Jiushan", "x": 241, "y": 110.0, "lines": ["九山"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-Yiyuan-z10-848-401-Yiyuan", "x": 24.5, "y": 121.5, "lines": ["沂源"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-Yiyuan-z10-848-401-Shiqiao", "x": 152.0, "y": 154.0, "lines": ["石桥"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-Yiyuan-z10-848-401-Zhongzhuang", "x": 120.5, "y": 222.0, "lines": ["中庄"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-Yiyuan-z10-848-401-Xili", "x": 146.0, "y": 246, "lines": ["西里"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Yiyuan-z10-848-401-shared-Sitou", "owner_region": "CN-WujingSitou-z10-848-400", "feature_id": "CN-WujingSitou-z10-848-400-Sitou", "kind": "city", "original": "Sitou", "source_url": "@source/bc7fe5db16bb37e5", "original_bbox": [190, -7, 218, 9], "review_notes": "连续原字框与同级邻片已有地名完全对应，中文沿用该区原有位置。"}
+  ],
+  "legacy_suppressions": []
+}

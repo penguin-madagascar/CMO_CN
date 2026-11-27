@@ -817,7 +817,7 @@ namespace CMOShared
     {
         // BEGIN GENERATED PACKED REGION COVERAGE
         // Reviewed map/administrative entity joins: edf0f5ef37123e26b9ee6e68bbd2c412d998f6e6bfc534cfc7ec6375108f9e2e
-        internal const string Fingerprint = "2c9e1e49e0e5037ed0b80a60998455c0040867884c3c2a3af7f205f9b2bf4f05";
+        internal const string Fingerprint = "93320f8a43f4224e438dffe054e48bf7bda1c60a6eb9f71973daab30fdbc6c78";
         private static readonly Dictionary<string, int> ZoomMasks = new Dictionary<string, int>(StringComparer.Ordinal)
         {
             { "万丹省/C0C840B8/42D45581", 192 },
@@ -1028,7 +1028,7 @@ namespace CMOShared
     internal static class PackedWwpCoverage
     {
         // BEGIN GENERATED PACKED WWP COVERAGE
-        internal const string Fingerprint = "2c9e1e49e0e5037ed0b80a60998455c0040867884c3c2a3af7f205f9b2bf4f05";
+        internal const string Fingerprint = "93320f8a43f4224e438dffe054e48bf7bda1c60a6eb9f71973daab30fdbc6c78";
         private static readonly Dictionary<string, int> ZoomMasks = new Dictionary<string, int>(StringComparer.Ordinal)
         {
             { "0/不丹/41DC0000/42B50000", 112 },

@@ -1,0 +1,29 @@
+{
+  "id": "CN-Shuiji-z10-848-430",
+  "z": 10,
+  "x": 848,
+  "y": 430,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/848/430.png"
+  ],
+  "context_tiles": [
+    "10/849/430.png"
+  ],
+  "features": [
+    {"id": "CN-Shuiji-z10-848-430-Shuiji", "kind": "city", "original": "Shuiji", "original_bbox": [141, 209, 175, 229], "source_url": "@source/e8887a0392c93849", "source_glyph_complete": true, "source_printed_full_literal": "Shuiji"}
+  ],
+  "translations": [
+    {"id": "CN-Shuiji-z10-848-430-Shuiji", "zh": "水吉", "status": "approved", "source": "@source/f6e901c1e7ebf746", "record_sha256": "0e39b7c3ec840fa0ad2aee786bfada8642e8cc97e9b68d4050b59bf2774af6de", "review_notes": "同级原版字样与相应地点的地名资料已核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-Shuiji-z10-848-430-Shuiji", "x": 158.0, "y": 219.0, "lines": ["水吉"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Shuiji-z10-848-430-shared-Haocun", "owner_region": "CN-SongxiDongping-z10-849-430", "feature_id": "CN-SongxiDongping-z10-849-430-Haocun", "kind": "city", "original": "Haocun", "source_url": "@source/e8887a0392c93849", "original_bbox": [232, 69, 270, 84], "review_notes": "连续原字框与同级邻片已有地名完全对应，中文沿用该区原有位置。"},
+    {"id": "CN-Shuiji-z10-848-430-shared-Zhangdun", "owner_region": "CN-SongxiDongping-z10-849-430", "feature_id": "CN-SongxiDongping-z10-849-430-Zhangdun", "kind": "city", "original": "Zhangdun", "source_url": "@source/e8887a0392c93849", "original_bbox": [216, 162, 273, 182], "review_notes": "连续原字框与同级邻片已有地名完全对应，中文沿用该区原有位置。"}
+  ],
+  "legacy_suppressions": []
+}

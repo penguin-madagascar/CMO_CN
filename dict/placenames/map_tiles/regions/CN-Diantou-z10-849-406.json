@@ -1,0 +1,31 @@
+{
+  "id": "CN-Diantou-z10-849-406",
+  "z": 10,
+  "x": 849,
+  "y": 406,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/849/406.png"
+  ],
+  "context_tiles": [
+    "10/848/406.png"
+  ],
+  "features": [
+    {"id": "CN-Diantou-z10-849-406-S02", "kind": "city", "original": "Diantou", "original_bbox": [65, 45, 106, 59], "source_url": "@source/9a79573c57920c71", "source_glyph_complete": true, "source_printed_full_literal": "Diantou"},
+    {"id": "CN-Diantou-z10-849-406-S03", "kind": "city", "original": "Linian", "original_bbox": [75, 184, 107, 199], "source_url": "@source/9a79573c57920c71", "source_glyph_complete": true, "source_printed_full_literal": "Linian"}
+  ],
+  "translations": [
+    {"id": "CN-Diantou-z10-849-406-S02", "zh": "店头", "status": "approved", "source": "@source/ae031408023a329b", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "4f2a16a76cb9f2a5ca39cf5baa71823c1c33904a1063086502e390c51b65eacf"},
+    {"id": "CN-Diantou-z10-849-406-S03", "zh": "李埝", "status": "approved", "source": "@source/c745e978a797e176", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "1ee655bef94d181375a405260bb4f6d3c956acc1a4819eabc85f8fc42861d6b3"}
+  ],
+  "layouts": [
+    {"id": "CN-Diantou-z10-849-406-S02", "x": 85.5, "y": 52.0, "lines": ["店头"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Diantou-z10-849-406-S03", "x": 91.0, "y": 191.5, "lines": ["李埝"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Diantou-z10-849-406-owner-00", "owner_region": "CN-TanchengCaozhuang-z10-848-406", "feature_id": "CN-TanchengCaozhuang-z10-848-406-Caozhuang", "kind": "city", "original": "Caozhuang", "source_url": "@source/8ca3ee249275e906", "original_bbox": [-5, 29, 56, 49], "review_notes": "拼接同级原图，字框和既有中文所有者逐像素相符。"}
+  ],
+  "legacy_suppressions": []
+}

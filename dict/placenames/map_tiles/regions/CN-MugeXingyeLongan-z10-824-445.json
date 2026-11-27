@@ -1,0 +1,36 @@
+{
+  "id": "CN-MugeXingyeLongan-z10-824-445",
+  "z": 10,
+  "x": 824,
+  "y": 445,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/824/445.png"
+  ],
+  "context_tiles": [
+    "10/824/446.png",
+    "10/825/445.png",
+    "10/825/446.png"
+  ],
+  "features": [
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N01", "kind": "city", "original": "Muge", "original_bbox": [9, 50, 42, 70], "source_url": "@source/bb7590915604e09b", "source_glyph_complete": true, "source_printed_full_literal": "Muge"},
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N02", "kind": "city", "original": "Xingye", "original_bbox": [110, 132, 157, 154], "source_url": "@source/bb7590915604e09b", "source_glyph_complete": true, "source_printed_full_literal": "Xingye"},
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N03", "kind": "city", "original": "Long'an", "original_bbox": [218, 138, 258, 155], "source_url": "@source/bb7590915604e09b", "source_glyph_complete": true, "source_printed_full_literal": "Long'an"}
+  ],
+  "translations": [
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N01", "zh": "木格", "status": "approved", "source": "@source/9da6a8ef08d80f7d", "record_sha256": "0c26eecd86b3d9c63ee5bcbb14d3765b0a7bdcea73502a5cfe358edcc4b46d79", "review_notes": "对照同级原图字框及同一地点的中文地名。"},
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N02", "zh": "兴业", "status": "approved", "source": "@source/dcd597cb2b0857f4", "record_sha256": "829d9354d803c0eb28ed7128aa18a349e231d8465173588c641a786e2c51b4be", "review_notes": "对照同级原图字框及同一地点的中文地名。"},
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N03", "zh": "龙安", "status": "approved", "source": "@source/bf2d0ad409ff5b24", "record_sha256": "e5b93947f4584dbef4d56b67eb8e321138406cf48b8c83bc24432caa1e57336d", "review_notes": "对照同级原图字框及同一地点的中文地名。"}
+  ],
+  "layouts": [
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N01", "x": 25.5, "y": 60.0, "lines": ["木格"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N02", "x": 133.5, "y": 143.0, "lines": ["兴业"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-MugeXingyeLongan-z10-824-445-N03", "x": 238.0, "y": 146.5, "lines": ["龙安"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-MugeXingyeLongan-z10-824-445-shared-1", "owner_region": "CN-Pubei-Bobai-Fumian-z10-823-446", "feature_id": "CN-Pubei-Bobai-Fumian-z10-823-446-S01", "kind": "city", "original": "Fumian", "source_url": "@source/ca4d74941c78d336", "original_bbox": [244, 251, 292, 270], "review_notes": "同级原图跨片拼合的完整字框与原有中文标注一致。"}
+  ],
+  "legacy_suppressions": []
+}

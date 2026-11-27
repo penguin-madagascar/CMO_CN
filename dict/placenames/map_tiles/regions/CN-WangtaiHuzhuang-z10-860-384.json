@@ -1,0 +1,29 @@
+{
+  "id": "CN-WangtaiHuzhuang-z10-860-384",
+  "z": 10,
+  "x": 860,
+  "y": 384,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/860/384.png"
+  ],
+  "context_tiles": [
+    "10/860/385.png"
+  ],
+  "features": [
+    {"id": "CN-WangtaiHuzhuang-z10-860-384-N01", "kind": "city", "original": "Wangtai", "original_bbox": [176, 7, 218, 25], "source_url": "@source/7bca58631ae62a4d", "source_glyph_complete": true, "source_printed_full_literal": "Wangtai"},
+    {"id": "CN-WangtaiHuzhuang-z10-860-384-N02", "kind": "city", "original": "Huzhuang", "original_bbox": [121, 247, 171, 265], "source_url": "@source/7bca58631ae62a4d", "source_glyph_complete": true, "source_printed_full_literal": "Huzhuang"}
+  ],
+  "translations": [
+    {"id": "CN-WangtaiHuzhuang-z10-860-384-N01", "zh": "望台", "status": "approved", "source": "@source/083b0549d17084f5", "record_sha256": "8a8051bd921d75327c7de953bcebd3c4600396210fdfdb26fd03a14551ca1eed", "review_notes": "同级原字、逐片地名核查和所引地名资料按所在地相互核对。"},
+    {"id": "CN-WangtaiHuzhuang-z10-860-384-N02", "zh": "虎庄", "status": "approved", "source": "@source/dc3b1e7af8f9bd0d", "record_sha256": "dc464fca9f9ed613559e2e3339da3afca9fa36eb0b8feb6c11f08d58777106d0", "review_notes": "同级原字、逐片地名核查和所引地名资料按所在地相互核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-WangtaiHuzhuang-z10-860-384-N01", "x": 197.0, "y": 16.0, "lines": ["望台"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-WangtaiHuzhuang-z10-860-384-N02", "x": 146.0, "y": 246, "lines": ["虎庄"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

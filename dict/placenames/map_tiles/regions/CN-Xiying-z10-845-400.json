@@ -1,0 +1,28 @@
+{
+  "id": "CN-Xiying-z10-845-400",
+  "z": 10,
+  "x": 845,
+  "y": 400,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/845/400.png"
+  ],
+  "context_tiles": [
+    "10/846/400.png"
+  ],
+  "features": [
+    {"id": "CN-Xiying-z10-845-400-N01", "kind": "city", "original": "Xiying", "original_bbox": [91, 80, 125, 97], "source_url": "@source/8a33c1fe18c0c5bb", "source_glyph_complete": true, "source_printed_full_literal": "Xiying"}
+  ],
+  "translations": [
+    {"id": "CN-Xiying-z10-845-400-N01", "zh": "西营", "status": "approved", "source": "@source/289a3a99c17c5cc1", "record_sha256": "a4d55bbaf2988f9e4746d3b7eda62f1e60b00dcfe2ac635c210151e11f4aac5b", "review_notes": "对照同级原图字框及同一地点的中文地名。"}
+  ],
+  "layouts": [
+    {"id": "CN-Xiying-z10-845-400-N01", "x": 108.0, "y": 88.5, "lines": ["西营"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Xiying-z10-845-400-shared-1", "owner_region": "CN-WenzuBoshanMiaoshan-z10-846-400", "feature_id": "CN-WenzuBoshanMiaoshan-z10-846-400-Duozhuang", "kind": "city", "original": "Duozhuang", "source_url": "@source/8a33c1fe18c0c5bb", "original_bbox": [228, 84, 292, 104], "review_notes": "同级原图跨片拼合的完整字框与原有中文标注一致。"}
+  ],
+  "legacy_suppressions": []
+}

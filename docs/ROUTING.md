@@ -305,8 +305,8 @@
 | `scripts/test_global_map_catalog.py` | 全球地图目录门禁负例、集合分母、全中文、确定性和旧产物保留回归 |
 | `dict/placenames/tile_regions.json` | 拆分地图源的公共设置与有序区域索引；具体内容在 map_tiles/regions，非全球完整目录 |
 | `dict/placenames/map_tiles/regions/*.json` | 按区域维护的原名、中文、布局、符号及原图引用；地图增量编辑对应区域，不重建巨型源文件 |
-| `docs/MAP_LABEL_RESTORATIONS.csv` | 127 处实测缺失标注的原名、中文、缩放、原始位置、正式区域和标签 ID。 |
-| `docs/MAP_LABEL_REVIEW_QUEUE.csv` | 97 张待继续核对的原图坐标，以及其尚待归属的原图像素数。 |
+| `docs/MAP_LABEL_RESTORATIONS.csv` | 已恢复标注的原名、中文、缩放、原始位置、正式区域和标签 ID。 |
+| `docs/MAP_LABEL_REVIEW_QUEUE.csv` | 待继续核对的原图坐标及各片尚待归属的原图像素数。 |
 | `dict/placenames/packed_region_coverage.jsonl` | 记录正式地图已绘出的省级行政区及缩放，供 R88 同实体去重。 |
 | `scripts/verify_packed_regions.py` | 核对正式省名的实际承载瓦片、源身份和 DAT 指纹，生成共享渲染器的行政区索引。 |
 | `scripts/test_verify_packed_regions.py` | 验证行政区替代关系与同一实体在不同缩放的边界。 |

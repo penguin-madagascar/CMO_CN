@@ -1,0 +1,35 @@
+{
+  "id": "CN-Juxian-z10-849-403",
+  "z": 10,
+  "x": 849,
+  "y": 403,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/849/403.png"
+  ],
+  "context_tiles": [
+    "10/848/403.png",
+    "10/850/403.png"
+  ],
+  "features": [
+    {"id": "CN-Juxian-z10-849-403-Juxian", "kind": "city", "original": "Juxian", "original_bbox": [234, 134, 276, 152], "source_url": "@source/d28f7f0eb4f22a2e", "source_glyph_complete": true, "source_printed_full_literal": "Juxian"},
+    {"id": "CN-Juxian-z10-849-403-Xiaodian", "kind": "city", "original": "Xiaodian", "original_bbox": [203, 198, 248, 213], "source_url": "@source/d28f7f0eb4f22a2e", "source_glyph_complete": true, "source_printed_full_literal": "Xiaodian"},
+    {"id": "CN-Juxian-z10-849-403-Dazhuang", "kind": "city", "original": "Dazhuang", "original_bbox": [14, 241, 63, 256], "source_url": "@source/d28f7f0eb4f22a2e", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null}
+  ],
+  "translations": [
+    {"id": "CN-Juxian-z10-849-403-Juxian", "zh": "莒县", "status": "approved", "source": "@source/7f7e2da9b9ccb216", "record_sha256": "dd5fa39004528065ed2bed257ec7e68c15dc1ed7b70b8a7240823ccf0805283a", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
+    {"id": "CN-Juxian-z10-849-403-Xiaodian", "zh": "小店", "status": "approved", "source": "@source/246f4f22694fd32c", "record_sha256": "a64bd2d3b1c19a743c20eed9c11adb5f0e3e5911880459e6a62db8a071afc962", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
+    {"id": "CN-Juxian-z10-849-403-Dazhuang", "zh": "大庄", "status": "approved", "source": "@source/70314a7d84bedd3b", "record_sha256": "0b5e32204d8f2ffcef05451d712cdcd66920cd81756209870c2b229ab0c04066", "review_notes": "本片下缘可读 Dazhuang，末字母下部受原图裁切；同地资料核为大庄。"}
+  ],
+  "layouts": [
+    {"id": "CN-Juxian-z10-849-403-Juxian", "x": 241, "y": 143.0, "lines": ["莒县"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-Juxian-z10-849-403-Xiaodian", "x": 225.5, "y": 205.5, "lines": ["小店"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-Juxian-z10-849-403-Dazhuang", "x": 38.5, "y": 246, "lines": ["大庄"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Juxian-z10-849-403-shared-Yinan", "owner_region": "CN-YinanZhuanbuHuyangTanyi-z10-848-403", "feature_id": "CN-YinanZhuanbuHuyangTanyi-z10-848-403-Yinan", "kind": "city", "original": "Yinan", "source_url": "@source/2fcef8a3a27a5cd6", "original_bbox": [-32, 167, 6, 185], "review_notes": "连续原字框与同级邻片已有地名完全对应，中文沿用该区原有位置。"}
+  ],
+  "legacy_suppressions": []
+}

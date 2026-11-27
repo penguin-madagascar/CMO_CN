@@ -1,0 +1,43 @@
+{
+  "id": "CN-NanmuLiaoshiXuanfeng-z10-836-429",
+  "z": 10,
+  "x": 836,
+  "y": 429,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/836/429.png"
+  ],
+  "context_tiles": [
+    "10/836/428.png",
+    "10/836/430.png",
+    "10/837/429.png",
+    "10/837/430.png"
+  ],
+  "features": [
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N01", "kind": "city", "original": "Nanmu", "original_bbox": [169, -4, 211, 13], "source_url": "@source/198e97927e5f0e0f", "source_glyph_complete": true, "source_printed_full_literal": "Nanmu"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N02", "kind": "city", "original": "Liaoshi", "original_bbox": [154, 105, 195, 121], "source_url": "@source/198e97927e5f0e0f", "source_glyph_complete": true, "source_printed_full_literal": "Liaoshi"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N03", "kind": "city", "original": "Tiantai", "original_bbox": [65, 128, 100, 143], "source_url": "@source/198e97927e5f0e0f", "source_glyph_complete": true, "source_printed_full_literal": "Tiantai"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N04", "kind": "city", "original": "Dongyuan", "original_bbox": [0, 183, 19, 197], "source_url": "@source/198e97927e5f0e0f", "source_glyph_complete": false, "source_printed_full_literal": null, "source_visible_fragment": "…uan", "resolved_semantic_name": "Dongyuan", "original_is_support_not_full_glyph_transcription": true},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N05", "kind": "city", "original": "Xuanfeng", "original_bbox": [137, 240, 185, 257], "source_url": "@source/198e97927e5f0e0f", "source_glyph_complete": true, "source_printed_full_literal": "Xuanfeng"}
+  ],
+  "translations": [
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N01", "zh": "楠木", "status": "approved", "source": "@source/bb28690f64c388df", "record_sha256": "630b294098fdfb183721e57768e031d5e784c00cc83929b20aedff2a6583cc3b", "review_notes": "对照同级原图字框及同一地点的中文地名。"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N02", "zh": "辽市", "status": "approved", "source": "@source/f3b8aa35a17a4a56", "record_sha256": "dd4b1fb03c482aad5d5125583fde35b34a48c7344e050b6ee5e8b2c626d8785d", "review_notes": "对照同级原图字框及同一地点的中文地名。"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N03", "zh": "天台", "status": "approved", "source": "@source/8b8880d78fd65ccb", "record_sha256": "e2d4dda52575623abbc6653808a2c8955ec66c23c015b00c27128cd199a95705", "review_notes": "对照同级原图字框及同一地点的中文地名。"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N04", "zh": "东源", "status": "approved", "source": "@source/8f8cb9f7958435f7", "record_sha256": "51299c88bc61daf0c8de5208b02e3fc1ea426b728f5597932e16dbd0e4e0b921", "review_notes": "本片实见“…uan”；按同一地点的双语地名及冻结审核记录确认完整名称。"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N05", "zh": "宣风", "status": "approved", "source": "@source/87edbf7262ba69b0", "record_sha256": "e02baf5ecfa1c75a822a96a7af46cfd222a205517b19c42343d7a34a135281f3", "review_notes": "对照同级原图字框及同一地点的中文地名。"}
+  ],
+  "layouts": [
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N01", "x": 190.0, "y": 10, "lines": ["楠木"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N02", "x": 174.5, "y": 113.0, "lines": ["辽市"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N03", "x": 82.5, "y": 135.5, "lines": ["天台"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N04", "x": 15, "y": 190.0, "lines": ["东源"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-N05", "x": 161.0, "y": 246, "lines": ["宣风"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-NanmuLiaoshiXuanfeng-z10-836-429-shared-1", "owner_region": "CN-WentangHongjiang-z10-837-430", "feature_id": "CN-WentangHongjiang-z10-837-430-Wentang", "kind": "city", "original": "Wentang", "source_url": "@source/198e97927e5f0e0f", "original_bbox": [250, 242, 301, 261], "review_notes": "同级原图跨片拼合的完整字框与原有中文标注一致。"}
+  ],
+  "legacy_suppressions": []
+}

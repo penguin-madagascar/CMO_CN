@@ -1,0 +1,28 @@
+{
+  "id": "CN-Xinyi-z10-848-407",
+  "z": 10,
+  "x": 848,
+  "y": 407,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/848/407.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "CN-Xinyi-z10-848-407-Xinyi", "kind": "city", "original": "Xinyi", "original_bbox": [145, 192, 180, 213], "source_url": "@source/195992b100b5e1d0", "source_glyph_complete": true, "source_printed_full_literal": "Xinyi"},
+    {"id": "CN-Xinyi-z10-848-407-Gangtou", "kind": "city", "original": "Gangtou", "original_bbox": [45, 230, 93, 251], "source_url": "@source/195992b100b5e1d0", "source_glyph_complete": true, "source_printed_full_literal": "Gangtou"}
+  ],
+  "translations": [
+    {"id": "CN-Xinyi-z10-848-407-Xinyi", "zh": "新沂", "status": "approved", "source": "@source/c6f7026ef68c1e9f", "record_sha256": "d95e083d65b025e01bd806c59ac82bb6b9007691115949e1b0433e85e61e4c53", "review_notes": "同级原版字样与相应地点的地名资料已核对。"},
+    {"id": "CN-Xinyi-z10-848-407-Gangtou", "zh": "港头", "status": "approved", "source": "@source/7620827b8ea20bee", "record_sha256": "ebc88219f6b0efdf55d1f25cc5d149d3a1e43ebd4ece3374b1506aa0e2906f45", "review_notes": "同级原版字样与相应地点的地名资料已核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-Xinyi-z10-848-407-Xinyi", "x": 162.5, "y": 202.5, "lines": ["新沂"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-Xinyi-z10-848-407-Gangtou", "x": 69.0, "y": 240.5, "lines": ["港头"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "source_unclassified": {"pixels": 322, "bbox": [0, 157, 25, 174], "mask_sha256": "38f61bf735e57b73e9520a9517409f074103fc2725db57ad77f1f4e0299f30a2"}
+}

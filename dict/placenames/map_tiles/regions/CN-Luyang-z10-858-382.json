@@ -1,0 +1,36 @@
+{
+  "id": "CN-Luyang-z10-858-382",
+  "z": 10,
+  "x": 858,
+  "y": 382,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/858/382.png"
+  ],
+  "context_tiles": [
+    "10/857/382.png",
+    "10/858/383.png",
+    "10/859/382.png",
+    "10/859/383.png"
+  ],
+  "features": [
+    {"id": "CN-Luyang-z10-858-382-S03", "kind": "city", "original": "Luyang", "original_bbox": [-1, 114, 38, 133], "source_url": "@source/7ccf20d92927b7ef", "source_glyph_complete": true, "source_printed_full_literal": "Luyang"},
+    {"id": "CN-Luyang-z10-858-382-S04", "kind": "city", "original": "Tianshui", "original_bbox": [103, 155, 147, 169], "source_url": "@source/7ccf20d92927b7ef", "source_glyph_complete": true, "source_printed_full_literal": "Tianshui"}
+  ],
+  "translations": [
+    {"id": "CN-Luyang-z10-858-382-S03", "zh": "闾阳", "status": "approved", "source": "@source/21fa112d27b55653", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "af5f53ed474cbeb9458d965dc9a8646483953efc9954d9b46817a9c007df5b1c"},
+    {"id": "CN-Luyang-z10-858-382-S04", "zh": "甜水", "status": "approved", "source": "@source/b780cdf756787a90", "review_notes": "逐项核对同缩放原字、地理位置及中文地名来源。", "record_sha256": "9612ccaf58e26a4b1ea18446b6efb336b9cfc6c67ffcdc1b4726c1c282aa0872"}
+  ],
+  "layouts": [
+    {"id": "CN-Luyang-z10-858-382-S03", "x": 18.5, "y": 123.5, "lines": ["闾阳"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Luyang-z10-858-382-S04", "x": 125.0, "y": 162.0, "lines": ["甜水"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Luyang-z10-858-382-owner-01", "owner_region": "CN-WujiaDeshengXintai-z10-859-382", "feature_id": "CN-WujiaDeshengXintai-z10-859-382-S01", "kind": "city", "original": "Wujia", "source_url": "@source/a346e3595f317a7c", "original_bbox": [245, 40, 280, 60], "review_notes": "拼接同级原图，字框和既有中文所有者逐像素相符。"},
+    {"id": "CN-Luyang-z10-858-382-owner-04", "owner_region": "CN-PanjinPanshanShaling-z10-859-383", "feature_id": "CN-PanjinPanshanShaling-z10-859-383-S01", "kind": "city", "original": "Panshan", "source_url": "@source/ebe81b77d303509d", "original_bbox": [231, 250, 285, 268], "review_notes": "拼接同级原图，字框和既有中文所有者逐像素相符。"}
+  ],
+  "legacy_suppressions": [],
+  "source_unclassified": {"pixels": 57, "bbox": [144, 0, 176, 2], "mask_sha256": "207da284c517f98e8b7c61d639a6ef8911f359d6165de14a355b3829cc42fe8c"}
+}
