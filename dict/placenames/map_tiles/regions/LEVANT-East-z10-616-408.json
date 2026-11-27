@@ -131,8 +131,8 @@
     {"id": "LEVE10-005", "zh": "杰鲁德", "status": "approved", "source": "@source/e326f36cfd301bf9", "record_sha256": "fe2a3437385147107944090657ba93716a47cdfaab8f0a01a21e792155defb71", "review_notes": "@note/translations"},
     {"id": "LEVE10-006", "zh": "杜迈尔", "status": "approved", "source": "@source/d433a33f3cd0011a", "record_sha256": "b0f4a43d1533b8f0f7ba2417c06a00c3d62f49ad8cddb24c9e27eacf89643f82", "review_notes": "@note/translations"},
     {"id": "LEVE10-007", "zh": "乌泰巴", "status": "approved", "source": "@source/44753038aa17379b", "record_sha256": "5e737a2a38998fab70fd58be54a8d91fab6db6f4be9aaf55b006a416e2cfe6c1", "review_notes": "@note/translations"},
-    {"id": "LEVE10-009", "zh": "舍赫巴", "status": "approved", "source": "@source/47c3b03bae0d8416", "record_sha256": "c3a2677e455693d9bbe0beded971e97b7774fa046273442726d49a8ca1d4e73a", "review_notes": "@note/translations"},
-    {"id": "LEVE10-012", "zh": "塞勒海德", "status": "approved", "source": "@source/93e32b5571d99830", "record_sha256": "46718b4213a23f51a1c6ea20116e08d2b63ac585249c4f945b3ca5ca391495bd", "review_notes": "@note/translations"},
+    {"id": "LEVE10-009", "zh": "舍赫巴", "status": "approved", "source": "@source/b47d689164660ff8", "record_sha256": "c3a2677e455693d9bbe0beded971e97b7774fa046273442726d49a8ca1d4e73a", "review_notes": "原图的 Shahba 对应叙利亚区治（GeoNames 164626）。该居民点的 RDF 未列中文。项目用字“舍赫巴”沿用同名行政区中文“舍赫巴區”的专名部分（https://sws.geonames.org/164625/about.rdf）。"},
+    {"id": "LEVE10-012", "zh": "塞勒海德", "status": "approved", "source": "@source/23b7fc3a23c87d21", "record_sha256": "46718b4213a23f51a1c6ea20116e08d2b63ac585249c4f945b3ca5ca391495bd", "review_notes": "原图的 Salkhad 对应叙利亚区治（GeoNames 164917）。该居民点的 RDF 未列中文。项目用字“塞勒海德”沿用同名行政区中文“塞勒海德區”的专名部分（https://sws.geonames.org/164916/about.rdf）。"},
     {"id": "LEVE10-013", "zh": "萨法维", "status": "approved", "source": "@source/049fa13c7106246c", "record_sha256": "e0453ffeb9906b937160c9878175b70124a66f1875db480cd7c219229ed4a6ff", "review_notes": "@note/translations"}
   ],
   "layouts": [

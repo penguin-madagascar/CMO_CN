@@ -42,7 +42,7 @@
     {"id": "CNWB18-CNG-110", "zh": "黎城", "status": "approved", "source": "@source/ab03892ddb28cf6e", "record_sha256": "67ff8f012be0a0ac2430c0e5053aba9ba436f58b28b47e90014218b8fb2e0fd6", "review_notes": "@note/translations"},
     {"id": "CNWB18-CNG-114", "zh": "广平", "status": "approved", "source": "@source/421d9c9e86314dcb", "record_sha256": "fa2f7351e2b42fd7914acea460fa918686e1ac08e146f8df99071dd215c137ef", "review_notes": "@note/translations"},
     {"id": "CNWB18-CNG-117", "zh": "成安", "status": "approved", "source": "@source/cc30affb507d8772", "record_sha256": "ebf916e50dfcc57bec37197900d904442d5359ae581c35eeb891e935b1259fab", "review_notes": "@note/translations"},
-    {"id": "CNWB18-CNG-121", "zh": "丰丰", "status": "approved", "source": "@source/7c3cf36141ac1b0c", "record_sha256": "f3b7c95eee0b64acc36c2a93faa2b74ee94f105268a05bd0f76553ed5a9a96a4", "review_notes": "@note/translations"},
+    {"id": "CNWB18-CNG-121", "zh": "峰峰", "status": "approved", "source": "@source/2bbf53366103a0f5", "record_sha256": "f3b7c95eee0b64acc36c2a93faa2b74ee94f105268a05bd0f76553ed5a9a96a4", "review_notes": "邯郸市峰峰矿区，原图同点地名为峰峰矿区（OpenStreetMap 节点 3648458739）。据同地政府资料取“峰峰”。"},
     {"id": "CNWB18-CNG-122", "zh": "磁县", "status": "approved", "source": "@source/d8c1b12f930a3c8c", "record_sha256": "c76cd600a64d9b4171bacef47a334392a9003e0c3670e1c844afc62fe18020b5", "review_notes": "@note/translations"},
     {"id": "CNWB18-CNG-124", "zh": "石城", "status": "approved", "source": "@source/ee9cb466cdeadd57", "record_sha256": "698ee30fe392f91c1c448578fbccea208791d60611dc02ca91b880bef9d88e52", "review_notes": "@note/translations"},
     {"id": "CNWB18-CNG-125", "zh": "魏县", "status": "approved", "source": "@source/a7445c289f7e6591", "record_sha256": "57f99fc37b49cba0bdfd0b62c877a96791c475ed0fb044fa8729fb0627b04bb1", "review_notes": "@note/translations"},
@@ -53,7 +53,7 @@
     {"id": "CNWB18-CNG-150", "zh": "安阳", "status": "approved", "source": "@source/2500a94efeebd5fb", "record_sha256": "78b9e41bd913f042885889450ddd8dfe1b32e3393563993639e54ed492eb0c1f", "review_notes": "@note/translations"},
     {"id": "CNWB18-CNG-151", "zh": "南乐", "status": "approved", "source": "@source/42492975ca1f2ffd", "record_sha256": "5d46d6bb40d8f228e139174774ac35072b8c29360a16615f21b33c857e774026", "review_notes": "@note/translations"},
     {"id": "CNWB18-CNG-153", "zh": "林州", "status": "approved", "source": "@source/6e7818f94b0d72e7", "record_sha256": "bcf716b235f73987f08be07c55e439b982ace6ffb990c3181caaea87b49288a3", "review_notes": "@note/translations"},
-    {"id": "CNWB18-CNG-157", "zh": "辛村", "status": "approved", "source": "@source/ac07d0d002f9342a", "record_sha256": "aba1159a1dff2d685a2cb6ad1ecbcd24fee91687879db12ea529bb9ec806b7a0", "review_notes": "@note/translations"}
+    {"id": "CNWB18-CNG-157", "zh": "辛村", "status": "approved", "source": "@source/03a97c13977ef715", "record_sha256": "aba1159a1dff2d685a2cb6ad1ecbcd24fee91687879db12ea529bb9ec806b7a0", "review_notes": "原图 Xincun 的位置与同名聚落“辛村镇”相符，现用短名“辛村”。"}
   ],
   "layouts": [
     {"id": "CNWB18-CNG-105", "x": 170.0, "y": 14, "font_size": 12, "font_style": "regular"},

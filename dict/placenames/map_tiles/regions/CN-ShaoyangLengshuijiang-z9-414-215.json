@@ -41,5 +41,7 @@
     {"id": "CN-ShaoyangLengshuijiang-z9-414-215-shared-SC14-N007", "owner_region": "SC14-R05-z9-415-215", "feature_id": "SC14-N007", "kind": "city", "original": "Shaodong", "source_url": "@source/347835ce5c8874c2", "original_bbox": [201, 162, 264, 185], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"},
     {"id": "CN-ShaoyangLengshuijiang-z9-414-215-shared-SC14-N012", "owner_region": "SC14-R05-z9-415-215", "feature_id": "SC14-N012", "kind": "city", "original": "Shuangfeng", "source_url": "@source/347835ce5c8874c2", "original_bbox": [195, 237, 261, 257], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
   ],
-  "legacy_suppressions": []
+  "legacy_suppressions": [
+    {"feature_id": "CN-ShaoyangLengshuijiang-z9-414-215-N01", "name": "冷水江", "level": 1, "lat": 27.688060760498047, "lon": 111.429443359375, "source": "@source/167c9683819e7e76", "review_notes": "原图在南片印有 Lengshuijiang，跨缝北片的 Cities.wwp 第 735 条为同一城市，仅在九级由南片译名承接。"}
+  ]
 }

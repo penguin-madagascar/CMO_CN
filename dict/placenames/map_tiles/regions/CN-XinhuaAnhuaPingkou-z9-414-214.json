@@ -40,8 +40,5 @@
   "shared_sources": [
     {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-shared-CN-ShaoyangLengshuijiang-z9-414-215-N02", "owner_region": "CN-ShaoyangLengshuijiang-z9-414-215", "feature_id": "CN-ShaoyangLengshuijiang-z9-414-215-N02", "kind": "city", "original": "Lianyuan", "source_url": "@source/347835ce5c8874c2", "original_bbox": [178, 242, 235, 263], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
   ],
-  "legacy_suppressions": [],
-  "canonical_captions": [
-    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-Cities735", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 123, "y": 246, "font_size": 14, "font_style": "regular", "lines": ["冷水江"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 735, "original_Chinese_name": "冷水江", "lat_f32_bits": 1105035558, "lon_f32_bits": 1121901536, "flags": 0, "level": 1}}
-  ]
+  "legacy_suppressions": []
 }

@@ -28,17 +28,17 @@
     {"id": "CNWB18-CNG-086", "kind": "city", "original": "Chang'an", "original_bbox": [63, 463, 114, 484], "source_url": "@source/477593f20aa80e5d"}
   ],
   "translations": [
-    {"id": "CNWB18-CNG-075", "zh": "圪辽", "status": "approved", "source": "@source/8429335cf9b8de43", "record_sha256": "0b953a49b9b33e644944ae1fe57b44c6ec71450f1922adadd3582dc0da2c8f86", "review_notes": "@note/translations"},
+    {"id": "CNWB18-CNG-075", "zh": "圪廖", "status": "approved", "source": "@source/1331a71d936d96a5", "record_sha256": "0b953a49b9b33e644944ae1fe57b44c6ec71450f1922adadd3582dc0da2c8f86", "review_notes": "原图位置对应宁武县迭台寺乡圪廖村，当地公开名录列出该村。地图节点 https://www.openstreetmap.org/node/5200320142 亦记 Geliao、圪廖村。"},
     {"id": "CNWB18-CNG-076", "zh": "新堡", "status": "approved", "source": "@source/41de8725ada7f91b", "record_sha256": "8d795bbcc6db10ad21ed45b02b104808f9af881b954532d39446d9bc945fa985", "review_notes": "@note/translations"},
-    {"id": "CNWB18-CNG-077", "zh": "索坡", "status": "approved", "source": "@source/1847d29f6792d260", "record_sha256": "3e6dd4548ca2e0476601b042443562de2b117b23a41f36f0bdd35741f2e774c7", "review_notes": "@note/translations"},
+    {"id": "CNWB18-CNG-077", "zh": "娑婆", "status": "approved", "source": "@source/9a97cad3b84e3dec", "record_sha256": "3e6dd4548ca2e0476601b042443562de2b117b23a41f36f0bdd35741f2e774c7", "review_notes": "静乐县，原图同点地名为娑婆乡（OpenStreetMap 节点 5236729579）。据同地政府资料取“娑婆”。"},
     {"id": "CNWB18-CNG-078", "zh": "顺会", "status": "approved", "source": "@source/8b2494d457a7efb1", "record_sha256": "feb237de7a47618c3e4d7ce5f7fbabe5738a7593fb5a9180c21970bdf17eb8a3", "review_notes": "@note/translations"},
     {"id": "CNWB18-CNG-079", "zh": "静乐", "status": "approved", "source": "@source/2a88cdba29a8409c", "record_sha256": "6f781fb6a94e335851f2138010b35c3e2e84fc531460a9ef311e8d36639e804a", "review_notes": "@note/translations"},
-    {"id": "CNWB18-CNG-080", "zh": "西岭京", "status": "approved", "source": "@source/477593f20aa80e5d", "record_sha256": "16bdff83e6deca7c22504c7c0e00714bc184715073a76069a5848b96a7b12245", "review_notes": "@note/translations"},
-    {"id": "CNWB18-CNG-081", "zh": "格尚", "status": "approved", "source": "@source/477593f20aa80e5d", "record_sha256": "64dedfe598f320a786b67484477a19cc66eea86e4e90dc7cdba694e29d05e590", "review_notes": "@note/translations"},
-    {"id": "CNWB18-CNG-082", "zh": "天池典", "status": "approved", "source": "@source/477593f20aa80e5d", "record_sha256": "a94aa2e760f3a5ebbc8053984d593fb9e473b4c34b67244e40df6916c98f1411", "review_notes": "@note/translations"},
+    {"id": "CNWB18-CNG-080", "zh": "西凌井", "status": "approved", "source": "@source/f293d53b2c3d3517", "record_sha256": "16bdff83e6deca7c22504c7c0e00714bc184715073a76069a5848b96a7b12245", "review_notes": "阳曲县，原图同点地名为西凌井乡（OpenStreetMap 节点 5264138451）。据同地政府资料取“西凌井”。"},
+    {"id": "CNWB18-CNG-081", "zh": "阁上", "status": "approved", "source": "@source/6bc8bdbb4f149617", "record_sha256": "64dedfe598f320a786b67484477a19cc66eea86e4e90dc7cdba694e29d05e590", "review_notes": "古交市，原图同点地名为阁上乡（OpenStreetMap 节点 5236688644）。据同地政府资料取“阁上”。"},
+    {"id": "CNWB18-CNG-082", "zh": "天池店", "status": "approved", "source": "@source/0dce3924ad1d5d27", "record_sha256": "a94aa2e760f3a5ebbc8053984d593fb9e473b4c34b67244e40df6916c98f1411", "review_notes": "娄烦县，原图同点地名为天池店乡（OpenStreetMap 节点 5234812168）。据同地政府资料取“天池店”。"},
     {"id": "CNWB18-CNG-083", "zh": "古交", "status": "approved", "source": "@source/632feda38ce14ebf", "record_sha256": "f11f7c2ef40b05ca5c1fb8034eabbf9df9302882a9e8341baf68acef2c25f1dd", "review_notes": "@note/translations"},
-    {"id": "CNWB18-CNG-085", "zh": "岔口", "status": "approved", "source": "@source/937754a95ec09b7a", "record_sha256": "53dae9ab712403d3fdff011e6c58bb51fe397c50c9951ccc476def20e330b6bc", "review_notes": "@note/translations"},
-    {"id": "CNWB18-CNG-086", "zh": "昌安", "status": "approved", "source": "@source/477593f20aa80e5d", "record_sha256": "5c0e0b646200e7c303024accc17534be5ad31fbe7b529f38c3c9e2f3c960cd5d", "review_notes": "@note/translations"}
+    {"id": "CNWB18-CNG-085", "zh": "岔口", "status": "approved", "source": "@source/a1e7a29d803b58c0", "record_sha256": "53dae9ab712403d3fdff011e6c58bb51fe397c50c9951ccc476def20e330b6bc", "review_notes": "原图 Chakou 的位置与同名聚落“岔口乡”相符，现用短名“岔口”。"},
+    {"id": "CNWB18-CNG-086", "zh": "常安", "status": "approved", "source": "@source/e7dd0bf630f96e0f", "record_sha256": "5c0e0b646200e7c303024accc17534be5ad31fbe7b529f38c3c9e2f3c960cd5d", "review_notes": "古交市，原图同点地名为常安乡（OpenStreetMap 节点 5235164341）。据同地政府资料取“常安”。"}
   ],
   "layouts": [
     {"id": "CNWB18-CNG-075", "x": 171.5, "y": 47.5, "font_size": 12, "font_style": "regular"},

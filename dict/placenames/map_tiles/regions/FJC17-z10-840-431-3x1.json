@@ -26,7 +26,7 @@
     {"id": "FJC17-P004", "zh": "永丰", "status": "approved", "source": "@source/717c7fa85d40be6d", "record_sha256": "d254083d1b18c66994d4f7d89bf05fee0b6855d57f3808f145ffc265166775b0", "review_notes": "@note/translations"},
     {"id": "FJC17-P006", "zh": "南村", "status": "approved", "source": "@source/3a10dc8ad9115803", "record_sha256": "08a2fdcb386595848a9faea8cbd7aa25f381e2e5ec78cdb95ee7519424218955", "review_notes": "@note/translations"},
     {"id": "FJC17-P024", "zh": "新丰", "status": "approved", "source": "@source/278935244ae023c4", "record_sha256": "c3f89d48c9ebea577dd1454c77fef0b64e1a3462ee75800929e2f67dddfd4d73", "review_notes": "@note/translations"},
-    {"id": "FJC17-P028", "zh": "陶塘", "status": "approved", "source": "@source/0fe0ed024daa7db3", "record_sha256": "8e810cbf3b100669e9cb7af63d9b0f771ff40cebcaadc4f3b73aaefff968f383", "review_notes": "@note/translations"}
+    {"id": "FJC17-P028", "zh": "陶唐", "status": "approved", "source": "@source/baebf5d018f6c354", "record_sha256": "8e810cbf3b100669e9cb7af63d9b0f771ff40cebcaadc4f3b73aaefff968f383", "review_notes": "永丰县，原图同点地名为陶唐乡（OpenStreetMap 节点 6746098839）。据同地政府资料取“陶唐”。"}
   ],
   "layouts": [
     {"id": "FJC17-P000", "x": 658.5, "y": 20.0, "font_size": 11, "font_style": "regular"},

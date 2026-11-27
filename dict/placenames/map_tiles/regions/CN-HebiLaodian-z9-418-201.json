@@ -32,8 +32,8 @@
   ],
   "layouts": [
     {"id": "CN-HebiLaodian-z9-418-201-N01", "x": 89.5, "y": 35.0, "font_size": 12, "font_style": "regular", "lines": ["鹤山"]},
-    {"id": "CN-HebiLaodian-z9-418-201-N02", "x": 103, "y": 79, "font_size": 12, "font_style": "regular", "lines": ["山城"]},
-    {"id": "CN-HebiLaodian-z9-418-201-N03", "x": 104.21944444444671, "y": 59.45177939037967, "font_size": 12, "font_style": "regular", "lines": ["鹤壁"]},
+    {"id": "CN-HebiLaodian-z9-418-201-N02", "x": 98, "y": 61.5, "font_size": 12, "font_style": "regular", "lines": ["山城"]},
+    {"id": "CN-HebiLaodian-z9-418-201-N03", "x": 140, "y": 127, "font_size": 12, "font_style": "regular", "lines": ["鹤壁"]},
     {"id": "CN-HebiLaodian-z9-418-201-N04", "x": 108.0, "y": 185.0, "font_size": 12, "font_style": "regular", "lines": ["淇县"]},
     {"id": "CN-HebiLaodian-z9-418-201-N05", "x": 165.5, "y": 235.0, "font_size": 12, "font_style": "regular", "lines": ["新镇"]},
     {"id": "CN-HebiLaodian-z9-418-201-N06", "x": 239, "y": 245, "font_size": 12, "font_style": "regular", "lines": ["老店"]}
@@ -44,5 +44,7 @@
     {"id": "CN-HebiLaodian-z9-418-201-shared-CN-PuyangNeihuang-z9-419-201-N03", "owner_region": "CN-PuyangNeihuang-z9-419-201", "feature_id": "CN-PuyangNeihuang-z9-419-201-N03", "kind": "city", "original": "Wangzhuang", "source_url": "@source/bb1f546f0855a93c", "original_bbox": [208, 105, 280, 125], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"},
     {"id": "CN-HebiLaodian-z9-418-201-shared-CN-PuyangNeihuang-z9-419-201-N05", "owner_region": "CN-PuyangNeihuang-z9-419-201", "feature_id": "CN-PuyangNeihuang-z9-419-201-N05", "kind": "city", "original": "Xunxian", "source_url": "@source/bb1f546f0855a93c", "original_bbox": [207, 152, 260, 170], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
   ],
-  "legacy_suppressions": []
+  "legacy_suppressions": [
+    {"feature_id": "CN-HebiLaodian-z9-418-201-N03", "name": "鹤壁", "level": 1, "lat": 35.899169921875, "lon": 114.19249725341797, "source": "@source/f300612cadebaa5c", "review_notes": "原图 Hebi 位于 Shancheng 东南，九级按原图定位鹤壁并精确停用 Cities.wwp 第 788 条旧锚。"}
+  ]
 }

@@ -164,7 +164,7 @@
   ],
   "translations": [
     {"id": "SEA7-018-Khon-Kaen", "zh": "孔敬", "status": "approved", "source": "@source/0690618820a736be", "record_sha256": "aed1748c10471f4b217df4080731596833f1ee0c9c5b2d32d4e73ed9f1d6f96c", "review_notes": "@note/translations"},
-    {"id": "SEA7-019-Savannakhet", "zh": "沙湾拿吉", "status": "approved", "source": "@source/a8b2ef3578cfa0a7", "record_sha256": "32352a1e6cb3db10b55b3ab2554841fae81a031ef3f79684ccb0354cf071af27", "review_notes": "@note/translations"},
+    {"id": "SEA7-019-Savannakhet", "zh": "沙湾拿吉", "status": "approved", "source": "@source/5bda73cb70f0f03e", "record_sha256": "32352a1e6cb3db10b55b3ab2554841fae81a031ef3f79684ccb0354cf071af27", "review_notes": "原图的 Savannakhet 对应老挝省会（GeoNames 1653316）。该居民点的 RDF 未列中文。项目用字“沙湾拿吉”沿用同名行政区中文“沙湾拿吉省”的专名部分（https://sws.geonames.org/1653315/about.rdf）。"},
     {"id": "SEA7-022-Nakhon-Sawan", "zh": "那空沙旺", "status": "approved", "source": "@source/e9fe3a8cfffcf905", "record_sha256": "4ce5fb924f8cc860d9c17547ca4dec6262c2db0f4f3230e3647b1b2c4fe7c843", "review_notes": "@note/translations"},
     {"id": "SEA7-023-Ubon-Ratchathani", "zh": "乌汶叻差他尼", "status": "approved", "source": "@source/942a3defdf8c1f7d", "record_sha256": "4c368c0cecf29cc2d668618f96f852d1eff4d761656c04982b2af7f6530f2fd4", "review_notes": "@note/translations"},
     {"id": "SEA7-024-Pakse", "zh": "巴色", "status": "approved", "source": "@source/e9fe3a8cfffcf905", "record_sha256": "c91f13e83ea3bf12db7cfe67738b38acc501e3e16679d33adc2274a30868fa96", "review_notes": "@note/translations"},

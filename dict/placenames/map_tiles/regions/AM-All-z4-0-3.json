@@ -175,7 +175,7 @@
     {"id": "AM4-104-Baffin-Bay", "kind": "marine", "original": "Baffin Bay", "original_bbox": [1236, -17, 1327, 8], "source_url": "@source/31fb21cd40ef5a9e"}
   ],
   "translations": [
-    {"id": "AM4-1-Arctic-Bay", "zh": "北極灣", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "3ee93de55b7a36da79a7ba5ba3110e43234b6d8ae10e7a3c18688b2f93dfe33b", "review_notes": "@note/translations"},
+    {"id": "AM4-1-Arctic-Bay", "zh": "北极湾", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "3ee93de55b7a36da79a7ba5ba3110e43234b6d8ae10e7a3c18688b2f93dfe33b", "review_notes": "核对原图地名、同地来源与简体写法。"},
     {"id": "AM4-2-Naujaat", "zh": "努雅特", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "3a2fbe3c8a46a99c1937ac1927f695c0edcdf55da8f88a75aea67603ac29fa39", "review_notes": "@note/translations"},
     {"id": "AM4-3-Chukchi-Sea", "zh": "楚科奇海", "status": "approved", "source": "@source/d3f1ff651e4d7bb3", "record_sha256": "f088df43db712bf24fc18d407d65c6fcc77a5ae0de5fe89145de6c4b5fc45f3c", "review_notes": "@note/translations"},
     {"id": "AM4-4-Beaufort-Sea", "zh": "波弗特海", "status": "approved", "source": "@source/d3f1ff651e4d7bb3", "record_sha256": "ec28c41410dc34bf5af083d7979c17d5ba7e9fc5239d1f50b1619b68658d972c", "review_notes": "@note/translations"},
