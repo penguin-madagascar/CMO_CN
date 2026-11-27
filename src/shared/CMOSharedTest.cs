@@ -250,8 +250,62 @@ internal static class CMOIntegritySelfTest
         finally { process.Dispose(); }
     }
 
+    private static void MaplessRollbackTests(string bundle, string missingBundle)
+    {
+        foreach (string scenario in new[] { "success", "modified", "untracked", "adopted", "occupied", "incomplete", "child-failed", "child-created" })
+        {
+            string game = Fixture("mapless-" + scenario);
+            Isolate(Path.Combine(game, "test-only-user"));
+            string map = Path.Combine(game, "ChineseMapTiles.dat"), held = map + ".rollback";
+            Write(map, "registered source map");
+            string manifest = CmoPaths.ManifestPath(game);
+            if (scenario != "untracked")
+                InstallManifest.Write(game, "9.9.9", scenario == "adopted" ? "adopted" : "installed-package", InstallManifest.HashEngineFiles(game));
+            if (scenario == "modified") Write(map, "user edited map");
+            if (scenario == "occupied") Write(held, "unrelated file");
+            if (scenario == "child-failed") Write(Path.Combine(game, "Command.exe.config"), "broken XML");
+            if (scenario == "child-created") Write(Path.Combine(game, ".test-create-conflicting-map"), FixtureMarker);
+            string target = scenario == "incomplete" ? missingBundle : bundle;
+            if (scenario == "child-created") target = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string cached = VersionStore.Cache(target);
+            string version = VersionStore.PackageVersion(cached);
+            byte[] before = File.ReadAllBytes(map);
+            byte[] previous = File.Exists(manifest) ? File.ReadAllBytes(manifest) : null;
+            string original = Path.Combine(game, @"WW\Cache\Stamen Terrain - Labels.orig\sentinel");
+            Write(original, "original cache");
+            int stops = 0;
+            string error;
+            bool ok = Rollback.Run(game, version, true, delegate { stops++; }, out error);
+            if (scenario == "success")
+            {
+                InstallManifest current = InstallManifest.Read(game);
+                Check("mapless-target-child-installs-two-files", ok && stops == 1 && !File.Exists(map) && !File.Exists(held)
+                    && current != null && current.Version == version && current.Files.Count == 2 && current.Source == cached
+                    && InstallManifest.Verify(game, out error) == ManifestState.Ok, error);
+            }
+            else if (scenario == "child-created")
+                Check("mapless-conflicting-child-file-preserved", !ok && stops == 1 && File.ReadAllText(map) == "child map"
+                    && Same(before, File.ReadAllBytes(held)) && error.Contains(held), error);
+            else
+            {
+                bool sameManifest = previous == null ? !File.Exists(manifest) : Same(previous, File.ReadAllBytes(manifest));
+                bool sameBackup = scenario == "occupied" ? File.ReadAllText(held) == "unrelated file" : !File.Exists(held);
+                Check("mapless-rollback-" + scenario, !ok && stops == (scenario == "child-failed" ? 1 : 0)
+                    && Same(before, File.ReadAllBytes(map)) && sameManifest && sameBackup, error);
+            }
+            Check("mapless-original-cache-" + scenario, File.ReadAllText(original) == "original cache", original);
+        }
+    }
+
     private static void RollbackTests(string self, string bundle)
     {
+        string pidFile = Path.Combine(root, "timeout-worker.pid");
+        int timedOut = Rollback.RunProcess(self, "--worker \"" + pidFile + "\"", 1500);
+        int pid = int.Parse(File.ReadAllText(pidFile));
+        bool exited;
+        try { using (var worker = System.Diagnostics.Process.GetProcessById(pid)) exited = worker.HasExited; }
+        catch (ArgumentException) { exited = true; }
+        Check("timed-out-worker-exited-before-return", timedOut == -1 && exited, "PID=" + pid);
         string game = Fixture("rollback");
         Isolate(Path.Combine(root, "rollback-user"));
         CmoSettings settings = new CmoSettings();
@@ -316,17 +370,33 @@ internal static class CMOIntegritySelfTest
         try
         {
             if (args.Length == 2 && args[0] == "--prepare") { Prepare(Path.GetFullPath(args[1])); return 0; }
-            if (args.Length == 1 && args[0] == "--worker") { System.Threading.Thread.Sleep(30000); return 0; }
+            if (args.Length >= 1 && args[0] == "--worker")
+            {
+                if (args.Length == 2) Write(args[1], System.Diagnostics.Process.GetCurrentProcess().Id.ToString());
+                System.Threading.Thread.Sleep(30000);
+                return 0;
+            }
             if (args.Length >= 2 && args[0] == "--install")
             {
                 string game = Path.GetFullPath(args[1]);
                 if (File.ReadAllText(Path.Combine(game, ".cmo-integrity-fixture")) != FixtureMarker)
                     throw new InvalidOperationException("Not an explicitly marked test fixture");
                 Isolate(Path.Combine(game, "test-only-user"));
+                if (File.Exists(Path.Combine(game, ".test-create-conflicting-map")))
+                {
+                    Write(Path.Combine(game, "ChineseMapTiles.dat"), "child map");
+                    return 17;
+                }
                 string error;
                 bool ok = CMOLocalizerInstaller.InstallerCore.Install(game, delegate(string path) { }, out error);
                 Console.WriteLine("Synthetic package CLI install=" + ok + " " + error);
                 return ok ? 0 : 1;
+            }
+            if (args.Length == 4 && args[0] == "--mapless-tests")
+            {
+                root = Path.GetFullPath(args[1]);
+                MaplessRollbackTests(Path.GetFullPath(args[2]), Path.GetFullPath(args[3]));
+                return failures == 0 ? 0 : 1;
             }
             if (args.Length != 4 || args[0] != "--tests")
                 throw new ArgumentException("--prepare <inputs> | --tests <fixtures> <rollback-bundle> <missing-bundle>");
@@ -338,6 +408,7 @@ internal static class CMOIntegritySelfTest
             IntegrityFailures(Path.GetFullPath(args[3]));
             DigestTests(self);
             RollbackTests(self, Path.GetFullPath(args[2]));
+            MaplessRollbackTests(Path.GetFullPath(args[2]), Path.GetFullPath(args[3]));
         }
         catch (Exception ex) { failures++; Console.WriteLine("FAIL integrity-harness -- " + ex); }
         Console.WriteLine("CMOIntegrityTest: checks=" + checks + " failures=" + failures + "; synthetic only, no real game/registry/process enumeration");

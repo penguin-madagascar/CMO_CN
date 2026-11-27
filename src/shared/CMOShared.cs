@@ -906,44 +906,56 @@ namespace CMOShared
             return File.Exists(path) ? path : null;
         }
 
-        public static bool VerifyEngineFiles(string packagePath, Dictionary<string, string> files, out string error, string sidecarHash = null)
+        internal static Dictionary<string, string> ExpectedEngineFiles(string packagePath, string sidecarHash, out string error)
         {
             error = "";
             string[] resources = EmbeddedResourceNames(packagePath);
             if (resources.Length == 0)
             {
                 error = "无法读取安装包内嵌资源，已中止登记。";
+                return null;
+            }
+            var expected = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            foreach (string name in InstallManifest.EngineFiles)
+                expected[name] = EmbeddedSha256(packagePath, name);
+            if (Array.IndexOf(resources, "MAP_TILES") >= 0)
+                expected[InstallManifest.MapTileFile] = EmbeddedSha256(packagePath, "MAP_TILES");
+            else if (sidecarHash != null)
+                expected[InstallManifest.MapTileFile] = sidecarHash;
+            foreach (var file in expected)
+            {
+                if (!string.IsNullOrEmpty(file.Value)) continue;
+                error = "安装包内未找到 " + file.Key + " 资源或无法读取其 SHA256，已中止登记。";
+                return null;
+            }
+            return expected;
+        }
+
+        internal static bool MatchEngineFiles(Dictionary<string, string> expected, Dictionary<string, string> files, out string error)
+        {
+            error = "";
+            if (files == null || files.Count != expected.Count)
+            {
+                error = "已部署文件与安装包应校验的文件不一致（" + string.Join("、", expected.Keys) + "），已中止登记。";
                 return false;
             }
-            var expectedFiles = new List<string>(InstallManifest.EngineFiles);
-            bool embeddedMap = Array.IndexOf(resources, "MAP_TILES") >= 0;
-            if (embeddedMap || sidecarHash != null) expectedFiles.Add(InstallManifest.MapTileFile);
-            if (files == null || files.Count != expectedFiles.Count)
+            foreach (var file in expected)
             {
-                error = "已部署文件与安装包应校验的文件不一致（" + string.Join("、", expectedFiles.ToArray()) + "），已中止登记。";
-                return false;
-            }
-            foreach (string name in expectedFiles)
-            {
-                string expect;
-                if (name == InstallManifest.MapTileFile)
-                    expect = embeddedMap ? EmbeddedSha256(packagePath, "MAP_TILES") : sidecarHash;
-                else
-                    expect = EmbeddedSha256(packagePath, name);
                 string actual;
-                if (string.IsNullOrEmpty(expect))
+                if (!files.TryGetValue(file.Key, out actual)
+                    || !string.Equals(actual, file.Value, StringComparison.OrdinalIgnoreCase))
                 {
-                    error = "安装包内未找到 " + name + " 资源或无法读取其 SHA256，已中止登记。";
-                    return false;
-                }
-                if (!files.TryGetValue(name, out actual)
-                    || !string.Equals(actual, expect, StringComparison.OrdinalIgnoreCase))
-                {
-                    error = "部署后 " + name + " 与安装包内嵌载荷不一致，已中止登记（避免混合态）。";
+                    error = "部署后 " + file.Key + " 与安装包载荷不一致，已中止登记（避免混合态）。";
                     return false;
                 }
             }
             return true;
+        }
+
+        public static bool VerifyEngineFiles(string packagePath, Dictionary<string, string> files, out string error, string sidecarHash = null)
+        {
+            var expected = ExpectedEngineFiles(packagePath, sidecarHash, out error);
+            return expected != null && MatchEngineFiles(expected, files, out error);
         }
 
         public static Stream EmbeddedResourceStream(string packagePath, string resourceName)
@@ -1042,31 +1054,96 @@ namespace CMOShared
                 return false;
             }
 
-            stopProcesses();
+            string map = Path.Combine(gamePath, InstallManifest.MapTileFile);
+            string held = map + ".rollback";
+            bool moved = false, success = false;
+            string savedManifest = null;
+            try
+            {
+                string sidecar = PackageAssets.FindMapSidecar(pkg, Path.GetDirectoryName(pkg));
+                string sidecarHash = sidecar == null ? null : InstallManifest.Sha256OfFile(sidecar);
+                var expected = PackageAssets.ExpectedEngineFiles(pkg, sidecarHash, out error);
+                if (expected == null) return false;
+                string recorded = null;
+                if (!expected.ContainsKey(InstallManifest.MapTileFile) && File.Exists(map))
+                {
+                    InstallManifest installed = InstallManifest.Read(gamePath);
+                    if (installed == null || installed.Source == "adopted"
+                        || !installed.Files.TryGetValue(InstallManifest.MapTileFile, out recorded)
+                        || (File.GetAttributes(map) & FileAttributes.ReparsePoint) != 0
+                        || !string.Equals(recorded, InstallManifest.Sha256OfFile(map), StringComparison.OrdinalIgnoreCase))
+                    {
+                        error = "目标版本不带地图，现有地图无法与原安装清单核对，已保留: " + map;
+                        return false;
+                    }
+                    if (File.Exists(held))
+                    {
+                        error = "暂存地图的位置已被占用，已保留两份文件: " + held;
+                        return false;
+                    }
+                    savedManifest = File.ReadAllText(CmoPaths.ManifestPath(gamePath), Encoding.UTF8);
+                }
 
-            string args = "--install \"" + gamePath + "\" --silent";
-            int code = RunProcess(pkg, args, 600000);
+                stopProcesses();
+                if (recorded != null)
+                {
+                    // 子安装器会自行重绘缓存；原始 Labels.orig 仍由它和卸载流程使用。
+                    File.Move(map, held);
+                    moved = true;
+                    if (!string.Equals(recorded, InstallManifest.Sha256OfFile(held), StringComparison.OrdinalIgnoreCase))
+                        throw new IOException("暂存地图与原安装清单不一致。");
+                }
+                success = InstallCachedPackage(gamePath, targetVersion, pkg, expected, out error);
+            }
+            catch (TimeoutException ex)
+            {
+                error = ex.Message;
+                if (moved) error += " 请待子进程结束后检查原地图: " + held;
+                CmoLog.Error(error);
+                return false;
+            }
+            catch (Exception ex) { error = "回退失败: " + ex.Message; }
+
+            if (moved)
+            {
+                try
+                {
+                    if (success) File.Delete(held);
+                    else
+                    {
+                        // File.Move 不覆盖子进程或用户后来写入的同名文件。
+                        File.Move(held, map);
+                        AtomicFile.WriteText(CmoPaths.ManifestPath(gamePath), savedManifest);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    error += " 无法完成地图回退清理: " + ex.Message;
+                    if (File.Exists(held)) error += " 原地图保留在 " + held;
+                    success = false;
+                }
+            }
+            if (success) CmoLog.Info("已回退到 v" + targetVersion + "（" + pkg + "）");
+            else CmoLog.Error(error);
+            return success;
+        }
+
+        private static bool InstallCachedPackage(string gamePath, string targetVersion, string pkg,
+            Dictionary<string, string> expected, out string error)
+        {
+            int code = RunProcess(pkg, "--install \"" + gamePath + "\" --silent", 600000);
             if (code != 0)
             {
                 error = "运行安装包失败（退出码 " + code + "）: " + pkg;
-                CmoLog.Error(error);
                 return false;
             }
-
             Dictionary<string, string> files = InstallManifest.HashEngineFiles(gamePath);
-            string sidecar = PackageAssets.FindMapSidecar(pkg, Path.GetDirectoryName(pkg));
-            string sidecarHash = sidecar == null ? null : InstallManifest.Sha256OfFile(sidecar);
-            if (!PackageAssets.VerifyEngineFiles(pkg, files, out error, sidecarHash))
-            {
-                CmoLog.Error(error);
-                return false;
-            }
+            if (!PackageAssets.MatchEngineFiles(expected, files, out error)) return false;
             if (!InstallManifest.Write(gamePath, targetVersion, pkg, files))
             {
                 error = "回退成功但写入安装清单失败，请重新安装以修复状态。";
                 return false;
             }
-            CmoLog.Info("已回退到 v" + targetVersion + "（" + pkg + "）");
             return true;
         }
 
@@ -1122,13 +1199,15 @@ namespace CMOShared
             psi.UseShellExecute = false;
             psi.CreateNoWindow = true;
             psi.WorkingDirectory = Path.GetDirectoryName(exe);
-            Process p = Process.Start(psi);
-            if (!p.WaitForExit(timeoutMs))
+            using (Process p = Process.Start(psi))
             {
-                try { p.Kill(); } catch { }
+                if (p.WaitForExit(timeoutMs)) return p.ExitCode;
+                try { p.Kill(); }
+                catch (Exception ex) { CmoLog.Warn("终止超时安装进程失败: " + ex.Message); }
+                if (!p.WaitForExit(5000))
+                    throw new TimeoutException("安装进程超时且尚未确认退出（PID " + p.Id + "）: " + exe);
                 return -1;
             }
-            return p.ExitCode;
         }
     }
 }
