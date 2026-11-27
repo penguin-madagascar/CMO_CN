@@ -32,9 +32,9 @@
 
 ### 地图源数据
 
-- `dict/placenames/tile_regions.json` 只维护有序索引；具体地图修改写入 `dict/placenames/map_tiles/regions/<区域ID>.json`，公共来源、原图及审核分别维护在该目录的三张 JSONL 表。
-- 使用 `scripts/map_tile_manifest.py` 的 `load_manifest` / `manifest_files` 读取完整数据与输入闭包。旧工具需要的展开清单只能生成到 `build/` 或临时目录，禁止重新提交巨型展开清单。
-- 正式数据保留必要来源、身份、几何和审核指纹，不重复写入长篇执行过程。修改后须重新核验；拆分或展开工具不自动批准数据。具体格式见 `docs/MAP_TILE_SOURCES.md`。
+- 在 `dict/placenames/reviewed_map.json` 维护新增实体、逐级排版、符号与原地名的关联。译名出处、原图字框及原成员身份在 `dict/placenames/reviewed_map_evidence.json` 对应记录中同步维护。
+- 原有城市和宏观地名保留各自 WWP 的成员顺序，省州引用构建后词典 `places` 的实际下标。新增同级关联时，核对实体位置、原文和存在的中文排版。
+- 在仓库根目录运行 `python -B scripts/build_dict.py` 生成 `dict/CMOLocalizer.json`，再按[地图数据维护](docs/MAP_TILE_SOURCES.md)核对构建、动态显示和缓存回归。
 
 ```bash
 bash scripts/build.sh                # 编译 + build_dict
