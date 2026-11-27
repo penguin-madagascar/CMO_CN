@@ -164,6 +164,91 @@ public static class MapLabelTilePackTests
             && Equal(expected, File.ReadAllBytes(fallback)), "existing unpacked region host is refreshed in the warm cache");
     }
 
+    static void CheckWarmCacheVerification(Assembly engine, MethodInfo render) {
+        string game = Path.Combine(root, "warm");
+        string dictionary = Path.Combine(root, "warm-cache-regions.json");
+        File.WriteAllText(dictionary, "{\"places\":[[\"甲省\",-12,24,2.5],[\"乙州\",-12,24,2.5]]}", Encoding.UTF8);
+        MethodInfo readRegions = engine.GetType("CMOShared.MapLabelRegions").GetMethod("LoadFromDictionary");
+        var places = (IList)readRegions.Invoke(null, new object[]{dictionary});
+        string packFile = Valid(Png(256, Color.Transparent), "warm-cache-verification");
+        object pack = Load(packFile);
+        string packed = Tile(game), fallback = Path.Combine(Cache(game), @"4\9\8.png");
+        string receipt = Path.Combine(Cache(game), ".chinese-map-rendered.sha256");
+        byte[] original = Png(256, Color.Blue);
+        Write(packed, original);
+        Write(fallback, original);
+        Func<int> apply = () => (int)Call(pack, "ApplyToCacheWithLegacy", game, places);
+        // Use a fresh pack so the comparison never shares the tested instance's cached roster index.
+        Func<int,int,int,byte[]> expected = (z,x,y) =>
+            (byte[])render.Invoke(null, new object[]{places, Load(packFile), z, x, y, 0, 0});
+        byte[] first = expected(3, 4, 4), firstFallback = expected(4, 9, 8);
+        Check(apply() == 2 && Equal(first, File.ReadAllBytes(packed)) && Equal(firstFallback, File.ReadAllBytes(fallback))
+            && File.Exists(receipt), "cold cache writes a verification receipt for packed and existing fallback tiles");
+        var fixedTime = new DateTime(2003, 2, 1, 0, 0, 0, DateTimeKind.Utc);
+        File.SetLastWriteTimeUtc(packed, fixedTime);
+        File.SetLastWriteTimeUtc(fallback, fixedTime);
+        pack = Load(packFile);
+        places = (IList)readRegions.Invoke(null, new object[]{dictionary});
+        Check(apply() == 0 && File.GetLastWriteTimeUtc(packed) == fixedTime && File.GetLastWriteTimeUtc(fallback) == fixedTime,
+            "a new pack and roster instance reuse intact cached pixels");
+        foreach (string path in new[]{packed, fallback}) {
+            byte[] damaged = File.ReadAllBytes(path);
+            damaged[damaged.Length / 2] ^= 1;
+            File.WriteAllBytes(path, damaged);
+            File.SetLastWriteTimeUtc(path, fixedTime);
+        }
+        Check(apply() == 2 && Equal(first, File.ReadAllBytes(packed)) && Equal(firstFallback, File.ReadAllBytes(fallback)),
+            "identical length and modification time cannot hide packed or fallback PNG corruption");
+        File.Delete(packed);
+        File.WriteAllBytes(receipt, new byte[]{1, 2, 3});
+        Check(apply() == 1 && Equal(first, File.ReadAllBytes(packed)) && new FileInfo(receipt).Length > 3,
+            "a truncated receipt is rebuilt and the missing covered PNG is restored");
+        object firstPlace = places[0];
+        places.RemoveAt(0);
+        places.Add(firstPlace);
+        byte[] reordered = expected(3, 4, 4);
+        Check(!Equal(first, reordered) && apply() == 2 && Equal(reordered, File.ReadAllBytes(packed))
+            && Equal(expected(4, 9, 8), File.ReadAllBytes(fallback)), "changing roster order respects equal-priority label placement");
+        byte[] lastReceipt = File.ReadAllBytes(receipt);
+        object priorityWinner = places[0];
+        priorityWinner.GetType().GetField("Name").SetValue(priorityWinner, "更名省");
+        byte[] renamed = expected(3, 4, 4), renamedFallback = expected(4, 9, 8);
+        Check(!Equal(renamed, reordered), "changing a field on the same roster changes its rendered bytes");
+        using (var hold = File.Open(fallback, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)) {
+            bool failed = false;
+            try { apply(); } catch (TargetInvocationException e) { failed = e.InnerException is IOException; }
+            Check(failed && (!File.Exists(receipt) || Equal(lastReceipt, File.ReadAllBytes(receipt))),
+                "failed tile replacement cannot publish a receipt for changed roster data");
+        }
+        apply();
+        Check(Equal(renamed, File.ReadAllBytes(packed)) && Equal(renamedFallback, File.ReadAllBytes(fallback)) && apply() == 0,
+            "retry finishes the changed roster and subsequent startup keeps its verified outputs");
+        Check(Equal(original, File.ReadAllBytes(Path.Combine(Cache(game) + ".orig", @"3\4\4.png")))
+            && Equal(original, File.ReadAllBytes(Path.Combine(Cache(game) + ".orig", @"4\9\8.png"))),
+            "warm repairs and failed updates preserve the original cache");
+        File.Delete(packed);
+        File.WriteAllBytes(fallback, original);
+        using (var start = new System.Threading.ManualResetEventSlim(false)) {
+            Func<int> repair = () => {
+                object fresh = Load(packFile);
+                start.Wait();
+                return (int)Call(fresh, "ApplyToCacheWithLegacy", game, places);
+            };
+            var left = System.Threading.Tasks.Task.Factory.StartNew(repair);
+            var right = System.Threading.Tasks.Task.Factory.StartNew(repair);
+            start.Set();
+            Check(left.Result + right.Result == 2 && Equal(renamed, File.ReadAllBytes(packed))
+                && Equal(renamedFallback, File.ReadAllBytes(fallback)) && apply() == 0,
+                "concurrent refreshes repair both files once and leave a reusable receipt");
+        }
+        places.Clear();
+        Check(apply() == 2 && Equal(expected(3, 4, 4), File.ReadAllBytes(packed))
+            && Equal(expected(4, 9, 8), File.ReadAllBytes(fallback)),
+            "removing the last label clears its previously managed fallback tile");
+        File.Delete(fallback);
+        Check(apply() == 0 && !File.Exists(fallback), "a deleted off-pack cache tile remains on demand");
+    }
+
     static void CheckHistoricalWwp(Assembly engine, MethodInfo render) {
         var type = engine.GetType("CMOShared.MapLabelPlace");
         string file = Path.Combine(root, "wwp-region-collision.json");
@@ -237,6 +322,7 @@ public static class MapLabelTilePackTests
             var ruleRenderer=engine.GetType("CMOShared.MapLabelRenderer",true).GetMethod("RenderTileBytes");
             CheckPackedRegionIdentity(engine);
             CheckRegionOverlay(engine, ruleRenderer);
+            CheckWarmCacheVerification(engine, ruleRenderer);
             CheckHistoricalWwp(engine, ruleRenderer);
             object[] ruleHit={rulePlaces,rules,7,0,0,0,0};
             Check(Equal(rulePng,(byte[])ruleRenderer.Invoke(null,ruleHit)) && (int)ruleHit[5]==1 && (int)ruleHit[6]==1,"v2 direct hit retains exact approved PNG and counts");

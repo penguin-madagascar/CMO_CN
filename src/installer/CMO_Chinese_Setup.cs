@@ -1482,14 +1482,12 @@ namespace CMOLocalizerInstaller
         {
             string packPath = Path.Combine(gamePath, "ChineseMapTiles.dat");
             MapLabelTilePack pack = File.Exists(packPath) ? MapLabelTilePack.Load(packPath) : null;
+            MapLabelTilePack.CacheReceipt receipt = null;
             int saved = 0;
             try
             {
                 string cacheDir = MapLabelTilePack.CacheDirectory(gamePath);
                 // Only fallback paths need a second pass; the pack writer produces final covered tiles.
-                var pngs = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-                foreach (string file in MapLabelTilePack.CacheFiles(cacheDir))
-                    if (file.EndsWith(".png", StringComparison.OrdinalIgnoreCase)) pngs.Add(file);
                 if (pack == null)
                 {
                     if (!Directory.Exists(cacheDir)) return 0;
@@ -1505,7 +1503,11 @@ namespace CMOLocalizerInstaller
                 }
                 catch { }
                 if (list.Count == 0 && pack == null) return 0;
-                if (pack != null) saved += pack.PrepareCacheRefresh(gamePath, list);
+                if (pack != null) receipt = new MapLabelTilePack.CacheReceipt(gamePath, pack.Fingerprint, list);
+                var pngs = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+                foreach (string file in MapLabelTilePack.CacheFiles(cacheDir))
+                    if (file.EndsWith(".png", StringComparison.OrdinalIgnoreCase)) pngs.Add(file);
+                if (pack != null) saved += pack.ApplyCache(gamePath, list, receipt, false);
 
                 Parallel.ForEach(pngs, pngPath =>
                 {
@@ -1526,15 +1528,17 @@ namespace CMOLocalizerInstaller
                         {
                             // Preserve legacy redraw writes/counts, including explicit refresh of identical pixels.
                             MapLabelTilePack.WriteCacheBytes(pngPath, png, true);
+                            if (receipt != null) receipt.Record(z + "/" + x + "/" + y, png);
                             System.Threading.Interlocked.Increment(ref saved);
                         }
                     }
                     catch { if (pack != null) throw; }
                 });
-                if (pack != null) pack.CompleteCacheRefresh(gamePath);
+                if (pack != null) pack.CompleteCacheRefresh(gamePath, receipt);
                 return saved;
             }
             catch { if (pack != null) throw; return 0; }
+            finally { if (receipt != null) receipt.Dispose(); }
         }
 
 

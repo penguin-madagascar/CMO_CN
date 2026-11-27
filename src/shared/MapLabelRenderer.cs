@@ -375,14 +375,20 @@ namespace CMOShared
         {
             AssertPlainPath(directory);
             var files = new List<string>();
-            if (!Directory.Exists(directory)) return files;
-            foreach (string file in Directory.GetFiles(directory))
-            {
-                AssertPlainPath(file);
-                files.Add(file);
-            }
-            foreach (string child in Directory.GetDirectories(directory)) files.AddRange(CacheFiles(child));
+            if (Directory.Exists(directory)) CollectCacheFiles(directory, files);
             return files;
+        }
+
+        private static void CollectCacheFiles(string directory, List<string> files)
+        {
+            foreach (string path in Directory.GetFileSystemEntries(directory))
+            {
+                FileAttributes attributes = File.GetAttributes(path);
+                if ((attributes & FileAttributes.ReparsePoint) != 0)
+                    throw new IOException("Reparse points are not allowed in map cache paths: " + path);
+                if ((attributes & FileAttributes.Directory) != 0) CollectCacheFiles(path, files);
+                else files.Add(path);
+            }
         }
 
         private static void CopyCache(string source, string destination)
@@ -439,30 +445,181 @@ namespace CMOShared
             return true;
         }
 
+        // The receipt is disposable. Every cached PNG must still match the digest of the
+        // renderer's output before it can skip drawing; file length and time are not evidence.
+        internal sealed class CacheReceipt : IDisposable
+        {
+            private readonly string path, inputs;
+            private readonly System.Threading.Mutex mutex;
+            private readonly Dictionary<string, string> previous = new Dictionary<string, string>(StringComparer.Ordinal);
+            private readonly Dictionary<string, string> current = new Dictionary<string, string>(StringComparer.Ordinal);
+            private bool sameInputs;
+
+            internal CacheReceipt(string gameDir, string pack, IList<MapLabelPlace> places)
+            {
+                string cache = CacheDirectory(gameDir);
+                path = Path.Combine(cache, ".chinese-map-rendered.sha256");
+                inputs = InputHash(gameDir, pack, places);
+                mutex = new System.Threading.Mutex(false, @"Local\CMOMapCache-" + Hash(Encoding.UTF8.GetBytes(cache.ToUpperInvariant())));
+                try { mutex.WaitOne(); }
+                catch (System.Threading.AbandonedMutexException) { } // Our handle now owns the lock.
+                try { Load(); }
+                catch { Dispose(); throw; }
+            }
+
+            public void Dispose()
+            {
+                mutex.ReleaseMutex();
+                mutex.Dispose();
+            }
+
+            private static string Hash(byte[] bytes)
+            {
+                using (var sha = SHA256.Create()) return BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-", "");
+            }
+
+            private static string FileHash(string file)
+            {
+                using (var input = File.OpenRead(file))
+                using (var sha = SHA256.Create()) return BitConverter.ToString(sha.ComputeHash(input)).Replace("-", "");
+            }
+
+            private static string RendererBuild(string gameDir)
+            {
+                var module = typeof(MapLabelRenderer).Module;
+                if (module.Assembly.GetName().Name == "CMOLocalizer") return module.ModuleVersionId.ToString();
+                // A setup embeds the engine compiled from the same renderer. Match that build even
+                // when an updater replaces the disk DLL while an older game process still holds it.
+                using (var resource = module.Assembly.GetManifestResourceStream("CMOLocalizer.dll"))
+                {
+                    if (resource != null)
+                    {
+                        using (var copy = new MemoryStream())
+                        {
+                            resource.CopyTo(copy);
+                            byte[] engine = copy.ToArray();
+                            try { return System.Reflection.Assembly.ReflectionOnlyLoad(engine).ManifestModule.ModuleVersionId.ToString(); }
+                            catch (BadImageFormatException) { return Hash(engine); } // Resource-only installer test hosts.
+                        }
+                    }
+                }
+                string file = Path.Combine(gameDir, "CMOLocalizer.dll");
+                return File.Exists(file) ? FileHash(file) : module.ModuleVersionId.ToString();
+            }
+
+            private static string InputHash(string gameDir, string pack, IList<MapLabelPlace> places)
+            {
+                using (var buffer = new MemoryStream())
+                using (var writer = new BinaryWriter(buffer, Encoding.UTF8))
+                {
+                    writer.Write("CMO map cache v1");
+                    writer.Write(pack);
+                    if (places != null)
+                    {
+                        writer.Write(RendererBuild(gameDir));
+                        writer.Write(Environment.OSVersion.VersionString);
+                        string fonts = Environment.GetFolderPath(Environment.SpecialFolder.Fonts);
+                        foreach (string name in new[] { "msyh.ttc", "msyhbd.ttc", "msyh.ttf", "msyhbd.ttf" })
+                        {
+                            string file = Path.Combine(fonts, name);
+                            writer.Write(File.Exists(file) ? FileHash(file) : "");
+                        }
+                        writer.Write(places.Count);
+                        // Rendering has stable priority ties, so the input order also matters.
+                        foreach (MapLabelPlace place in places)
+                        {
+                            writer.Write(place.Name ?? ""); writer.Write(place.DisplayName ?? "");
+                            writer.Write(place.Lat); writer.Write(place.Lon); writer.Write(place.Level);
+                            writer.Write(place.Rank); writer.Write(place.MinZoom); writer.Write(place.MaxZoom);
+                            writer.Write(place.Priority); writer.Write(place.IsLegacy);
+                        }
+                    }
+                    writer.Flush();
+                    return Hash(buffer.ToArray());
+                }
+            }
+
+            private void Load()
+            {
+                AssertPlainPath(path);
+                var file = new FileInfo(path);
+                if (!file.Exists || file.Length < 131 || file.Length > 64 * 1024 * 1024) return;
+                string text = File.ReadAllText(path, Encoding.UTF8);
+                if (text.Length < 65 || text[64] != '\n') return;
+                string body = text.Substring(65);
+                if (Hash(Encoding.UTF8.GetBytes(body)) != text.Substring(0, 64)) return;
+                using (var lines = new StringReader(body))
+                {
+                    sameInputs = lines.ReadLine() == inputs;
+                    string line;
+                    while ((line = lines.ReadLine()) != null)
+                    {
+                        int tab = line.IndexOf('\t');
+                        if (tab <= 0 || line.Length - tab != 65 || previous.ContainsKey(line.Substring(0, tab)))
+                        {
+                            previous.Clear(); sameInputs = false; return;
+                        }
+                        previous.Add(line.Substring(0, tab), line.Substring(tab + 1));
+                    }
+                }
+            }
+
+            internal bool Matches(string key, string png)
+            {
+                string digest;
+                if (!sameInputs || !previous.TryGetValue(key, out digest) || !File.Exists(png) || FileHash(png) != digest) return false;
+                current[key] = digest;
+                return true;
+            }
+
+            internal bool PreviouslyManaged(string key) { return previous.ContainsKey(key); }
+            internal bool HasPrevious { get { return previous.Count != 0; } }
+
+            internal void Record(string key, byte[] bytes)
+            {
+                string digest = Hash(bytes);
+                lock (current) current[key] = digest; // Installer fallback writes run in parallel.
+            }
+
+            internal void Save()
+            {
+                var lines = new StringBuilder().Append(inputs).Append('\n');
+                foreach (var row in current.OrderBy(p => p.Key, StringComparer.Ordinal))
+                    lines.Append(row.Key).Append('\t').Append(row.Value).Append('\n');
+                string body = lines.ToString();
+                WriteCacheBytes(path, Encoding.UTF8.GetBytes(Hash(Encoding.UTF8.GetBytes(body)) + "\n" + body));
+            }
+        }
+
         // Return actual PNG writes; a marker alone never makes a missing/damaged tile trustworthy.
         public int ApplyToCache(string gameDir)
         {
-            return ApplyCache(gameDir, null, true);
+            return ApplyAndComplete(gameDir, null);
         }
 
         public int ApplyToCacheWithLegacy(string gameDir, IList<MapLabelPlace> places)
         {
             if (places == null) throw new ArgumentNullException("places");
-            return ApplyCache(gameDir, places, true);
+            return ApplyAndComplete(gameDir, places);
         }
 
-        // The installer also redraws fallback tiles before declaring the refresh complete.
-        internal int PrepareCacheRefresh(string gameDir, IList<MapLabelPlace> places)
+        private int ApplyAndComplete(string gameDir, IList<MapLabelPlace> places)
         {
-            return ApplyCache(gameDir, places, false);
+            using (var receipt = new CacheReceipt(gameDir, Fingerprint, places))
+            {
+                int written = ApplyCache(gameDir, places, receipt, true);
+                CompleteCacheRefresh(gameDir, receipt);
+                return written;
+            }
         }
 
-        internal void CompleteCacheRefresh(string gameDir)
+        internal void CompleteCacheRefresh(string gameDir, CacheReceipt receipt)
         {
+            receipt.Save();
             WriteCacheBytes(Path.Combine(CacheDirectory(gameDir), ".chinese-map-tiles.sha256"), Encoding.ASCII.GetBytes(Fingerprint + "\n"));
         }
 
-        private int ApplyCache(string gameDir, IList<MapLabelPlace> places, bool publishMarker)
+        internal int ApplyCache(string gameDir, IList<MapLabelPlace> places, CacheReceipt receipt, bool refreshFallback)
         {
             string cache = CacheDirectory(gameDir);
             List<string> existing = CacheFiles(cache);
@@ -472,13 +629,16 @@ namespace CMOShared
             foreach (Tile tile in tiles.Values)
             {
                 string path = Path.Combine(cache, tile.Z.ToString(), tile.X.ToString(), tile.Y + ".png");
+                string key = Key(tile.Z, tile.X, tile.Y);
+                if (receipt.Matches(key, path)) continue;
                 int candidates, rendered;
                 byte[] png = places == null ? tile.Png
                     : MapLabelRenderer.RenderPackedTile(tile.Png, tile.LabelCount, index.Lookup(tile.Z, tile.X, tile.Y), this,
                         tile.Z, tile.X, tile.Y, out candidates, out rendered);
                 if (WriteCacheBytes(path, png)) written++;
+                receipt.Record(key, png);
             }
-            if (publishMarker && places != null)
+            if (refreshFallback && places != null)
             {
                 var refreshed = new HashSet<string>(StringComparer.Ordinal);
                 foreach (LegacyRule rule in legacyRules)
@@ -501,14 +661,16 @@ namespace CMOShared
                         string path = Path.Combine(cache, rule.Z.ToString(), tx.ToString(), ty + ".png");
                         AssertPlainPath(path);
                         if (tiles.ContainsKey(key) || !File.Exists(path) || !refreshed.Add(key)) continue;
+                        if (receipt.Matches(key, path)) continue;
                         int candidates, rendered;
                         byte[] png = MapLabelRenderer.RenderTileBytes(places, this, rule.Z, tx, ty, out candidates, out rendered);
                         if (WriteCacheBytes(path, png)) written++;
+                        receipt.Record(key, png);
                     }
                 }
                 // Existing fallback PNGs bypass the tile server. Refresh hosts with stock or
                 // administrative labels at this zoom, including both sides of inclusive seams.
-                if (index.OutsideHosts.Count > 0)
+                if (index.OutsideHosts.Count > 0 || receipt.HasPrevious)
                 {
                     foreach (string path in existing)
                     {
@@ -519,14 +681,16 @@ namespace CMOShared
                             || !int.TryParse(parts[1], out x) || !int.TryParse(Path.GetFileNameWithoutExtension(parts[2]), out y)) continue;
                         int n = 1 << z;
                         string key = Key(z, x, y);
-                        if (x < 0 || x >= n || y < 0 || y >= n || !index.OutsideHosts.Contains(key) || !refreshed.Add(key)) continue;
+                        if (x < 0 || x >= n || y < 0 || y >= n || tiles.ContainsKey(key) || !refreshed.Add(key)) continue;
+                        if (!index.OutsideHosts.Contains(key) && !receipt.PreviouslyManaged(key)) continue;
+                        if (receipt.Matches(key, path)) continue;
                         int candidates, rendered;
                         byte[] png = MapLabelRenderer.RenderTileBytes(places, this, z, x, y, out candidates, out rendered);
                         if (WriteCacheBytes(path, png)) written++;
+                        receipt.Record(key, png);
                     }
                 }
             }
-            if (publishMarker) CompleteCacheRefresh(gameDir);
             return written;
         }
     }
@@ -3233,6 +3397,12 @@ namespace CMOShared
                 }
                 return false;
             }
+
+            internal bool BlocksPoint(int x, int y)
+            {
+                return x < 0 || y < 0 || x >= TileSize || y >= TileSize
+                    || (rows[y * WordsPerRow + x / 32] & (1u << (x % 32))) != 0;
+            }
         }
 
         private const int MaxRegionShift = 96;
@@ -3288,19 +3458,107 @@ namespace CMOShared
         private sealed class Leader
         {
             internal PointF Anchor, Edge;
+            internal RectangleF Bounds;
         }
 
-        private static void DrawLeaders(Graphics graphics, List<Leader> leaders, List<RectangleF> occupied)
+        private static float Distance(PointF a, PointF b)
+        {
+            float dx = a.X - b.X, dy = a.Y - b.Y;
+            return (float)Math.Sqrt(dx * dx + dy * dy);
+        }
+
+        private static bool InsideLabel(Rectangle[] labels, int x, int y)
+        {
+            foreach (Rectangle box in labels)
+                if (box.Contains(x, y)) return true;
+            return false;
+        }
+
+        private static readonly int[] LeaderBends = { 0, -4, 4, -8, 8, -12, 12 };
+
+        // Sample the same protected pixels used by the final composite and text clip. Favour a
+        // continuous visible trail near both endpoints when the shortest leader is itself hidden.
+        private static double LeaderScore(PointF[] path, PackedInk ink, Rectangle[] protectedText, out int visible)
+        {
+            int steps = 0, first = -1, last = -1, run = 0, longest = 0;
+            visible = 0;
+            for (int part = 1; part < path.Length; part++)
+            {
+                PointF a = path[part - 1], b = path[part];
+                int count = Math.Max(1, (int)Math.Ceiling(Distance(a, b)));
+                for (int i = 0; i < count; i++, steps++)
+                {
+                    float t = (i + 0.5f) / count;
+                    int x = (int)Math.Floor(a.X + t * (b.X - a.X)), y = (int)Math.Floor(a.Y + t * (b.Y - a.Y));
+                    if (ink.BlocksPoint(x, y) || InsideLabel(protectedText, x, y))
+                    {
+                        run = 0;
+                        continue;
+                    }
+                    if (first < 0) first = steps;
+                    last = steps;
+                    visible++;
+                    longest = Math.Max(longest, ++run);
+                }
+            }
+            if (longest < 3) return double.PositiveInfinity;
+            return steps + 3 * first + 4 * (steps - 1 - last) + (steps - visible);
+        }
+
+        private static PointF[] RouteLeader(Leader leader, PackedInk ink, Rectangle[] protectedText)
+        {
+            PointF[] best = { leader.Anchor, leader.Edge };
+            int visible;
+            LeaderScore(best, ink, protectedText, out visible);
+            if (visible >= 3) return best;
+
+            // Keep the geographic endpoint fixed. Try nearby edges of the same label and short
+            // bends around intervening text; all routes remain inside the original tile.
+            RectangleF box = leader.Bounds;
+            var ends = new List<PointF> { leader.Edge };
+            for (float x = box.Left; x <= box.Right; x += 4)
+            {
+                ends.Add(new PointF(x, box.Top));
+                ends.Add(new PointF(x, box.Bottom));
+            }
+            for (float y = box.Top; y <= box.Bottom; y += 4)
+            {
+                ends.Add(new PointF(box.Left, y));
+                ends.Add(new PointF(box.Right, y));
+            }
+            float maximum = Distance(leader.Anchor, leader.Edge) + 24;
+            double bestScore = double.PositiveInfinity;
+            foreach (PointF end in ends)
+            {
+                float length = Distance(leader.Anchor, end);
+                if (length < 1 || length > maximum) continue;
+                float nx = (end.Y - leader.Anchor.Y) / length, ny = (leader.Anchor.X - end.X) / length;
+                foreach (int bend in LeaderBends)
+                {
+                    var mid = new PointF((leader.Anchor.X + end.X) / 2 + bend * nx, (leader.Anchor.Y + end.Y) / 2 + bend * ny);
+                    if (mid.X < 0 || mid.Y < 0 || mid.X >= TileSize || mid.Y >= TileSize
+                        || Distance(leader.Anchor, mid) + Distance(mid, end) > maximum) continue;
+                    PointF[] trial = bend == 0 ? new[] { leader.Anchor, end } : new[] { leader.Anchor, mid, end };
+                    double score = LeaderScore(trial, ink, protectedText, out visible);
+                    if (score < bestScore) { best = trial; bestScore = score; }
+                }
+            }
+            return best;
+        }
+
+        private static void DrawLeaders(Graphics graphics, List<Leader> leaders, List<RectangleF> occupied, PackedInk ink)
         {
             if (leaders.Count == 0) return;
             // Glyphs and their halos stay intact. The final merge also restores every covered pack pixel.
-            foreach (RectangleF bounds in occupied) graphics.ExcludeClip(Rectangle.Ceiling(bounds));
+            Rectangle[] protectedText = occupied.Select(Rectangle.Ceiling).ToArray();
+            foreach (Rectangle bounds in protectedText) graphics.ExcludeClip(bounds);
             using (var outline = new Pen(Color.FromArgb(190, 30, 30, 30), 2f))
             using (var line = new Pen(Color.FromArgb(215, 235, 235, 235), 0.85f))
                 foreach (Leader leader in leaders)
                 {
-                    graphics.DrawLine(outline, leader.Anchor, leader.Edge);
-                    graphics.DrawLine(line, leader.Anchor, leader.Edge);
+                    PointF[] route = RouteLeader(leader, ink, protectedText);
+                    graphics.DrawLines(outline, route);
+                    graphics.DrawLines(line, route);
                 }
         }
 
@@ -3446,7 +3704,7 @@ namespace CMOShared
                                             Math.Max(bounds.Top, Math.Min(bounds.Bottom, rawY)));
                                         float leadX = edge.X - rawX, leadY = edge.Y - rawY;
                                         if (leadX * leadX + leadY * leadY > 4)
-                                            leaders.Add(new Leader { Anchor = new PointF(rawX, rawY), Edge = edge });
+                                            leaders.Add(new Leader { Anchor = new PointF(rawX, rawY), Edge = edge, Bounds = bounds });
                                     }
                                     else if ((background != null && background.Intersects(bounds)) || occupied.Any(bounds.IntersectsWith))
                                     {
@@ -3470,7 +3728,7 @@ namespace CMOShared
                                 }
                             }
                         }
-                        DrawLeaders(graphics, leaders, occupied);
+                        DrawLeaders(graphics, leaders, occupied, background);
                     }
                 }
                 return bitmap;
