@@ -51,11 +51,12 @@ MAIN = DICT / "CMOLocalizer.json"
 # The engine's own scanner (scripts/verify_engine_parse.py) and the offset
 # injection path require exactly these top-level sections.  Any other producer
 # (see the legacy engines) must fail loudly rather than ship a foreign schema.
-TOP_LEVEL_SECTIONS = frozenset({"_meta", "places", "comments", "offsets", "exact", "partial", "words"})
+TOP_LEVEL_SECTIONS = frozenset({"_meta", "places", "reviewed_map", "comments", "offsets", "exact", "partial", "words"})
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from triage import classify, is_script_or_schema  # noqa: E402
 from inject_filter import injection_safe, harmful_shape  # noqa: E402
+from reviewed_map import load_reviewed_map  # noqa: E402
 
 ELLIPSIS = re.compile(r"…+")
 CJK_ANY = re.compile(r"[一-鿿]")
@@ -634,6 +635,7 @@ def build() -> dict:
         # 旧引擎的分区扫描只认 offsets/exact/partial/words，它会忽略第一个已知分区
         # 之前的所有内容，因此新词典仍能被旧引擎正常读取（向后兼容是硬要求，R72/R88）。
         "places": ordered_places,
+        "reviewed_map": load_reviewed_map(ROOT, ordered_places),
         "comments": ordered_comments,
         "offsets": ordered_offsets,
         "exact": ordered_exact,
