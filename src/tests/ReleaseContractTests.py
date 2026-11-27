@@ -189,7 +189,8 @@ class ReleaseContractTests(unittest.TestCase):
         cmd += ["-reference:" + ref for ref in ("System.dll", "System.Core.dll", "System.Windows.Forms.dll",
                 "System.Drawing.dll", "System.Xml.dll", "System.IO.Compression.dll", "System.IO.Compression.FileSystem.dll")]
         cmd += [f"-resource:{cls.inputs_dir / name},{name}" for name in cls.payloads]
-        cmd += [str(ROOT / path) for path in ("src/shared/CMOShared.cs", "src/shared/MapLabelRenderer.cs",
+        cmd += [str(ROOT / path) for path in ("src/shared/CMOShared.cs", "src/shared/MapLabelRenderer.cs", "src/shared/MapLabelCache.cs",
+                                             "src/shared/MapLabelOriginalCache.cs",
                                              "src/installer/CMO_Chinese_Setup.cs")]
         cmd.append(str(host_path))
         result = subprocess.run(cmd, capture_output=True, timeout=90)

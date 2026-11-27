@@ -23,25 +23,6 @@ done
   || { echo "==> 密钥门禁未通过，中止打包"; exit 1; }
 "$PY" "$ROOT/scripts/verify_placenames.py" --set Cities
 "$PY" "$ROOT/scripts/verify_placenames.py" --set Synoptic
-MAP_SOURCE_ARGS=(--manifest "$ROOT/dict/placenames/tile_regions.json"
-  --asset "$ROOT/assets/placenames/ChineseMapTiles.dat")
-if [[ -n "${CMO_MAP_SOURCE_PACKAGE:-}" ]]; then
-  MAP_SOURCE_ARGS+=(--source-package "$CMO_MAP_SOURCE_PACKAGE")
-fi
-if [[ -n "${CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS:-}${CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS_SHA256:-}" ]]; then
-  : "${CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS:?original external approval file is required}"
-  : "${CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS_SHA256:?original external approval SHA256 is required}"
-  MAP_SOURCE_ARGS+=(--owner-native-source-approvals "$CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS"
-    --owner-native-source-approvals-sha256 "$CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS_SHA256")
-fi
-if [[ -n "${CMO_MAP_CANONICAL_CAPTION_APPROVALS:-}${CMO_MAP_CANONICAL_CAPTION_APPROVALS_SHA256:-}" ]]; then
-  : "${CMO_MAP_CANONICAL_CAPTION_APPROVALS:?map caption approval file is required}"
-  : "${CMO_MAP_CANONICAL_CAPTION_APPROVALS_SHA256:?map caption approval SHA256 is required}"
-  MAP_SOURCE_ARGS+=(--canonical-caption-approvals "$CMO_MAP_CANONICAL_CAPTION_APPROVALS"
-    --canonical-caption-approvals-sha256 "$CMO_MAP_CANONICAL_CAPTION_APPROVALS_SHA256")
-fi
-"$PY" "$ROOT/scripts/verify_map_tile_source_package.py" "${MAP_SOURCE_ARGS[@]}"
-
 # The final live report binds the exact source/dll/json/setup that will be packaged.
 # This check does NOT launch installer/live or rewrite README/report.
 "$PY" "$ROOT/scripts/release_check.py" --pre
@@ -56,7 +37,6 @@ mkdir -p "$PACK/DB/Templates"
 cp "$OUT/CMOLocalizer.dll" "$PACK/"
 cp "$ROOT/dict/CMOLocalizer.json" "$PACK/"
 cp "$OUT/CMO_Updater.exe" "$PACK/"
-cp "$ROOT/assets/placenames/ChineseMapTiles.dat" "$PACK/"
 cp "$SETUP" "$PACK/"
 
 mkdir -p "$PACK/WW/PlacenameSets/Synoptic" "$PACK/WW/PlacenameSets/Cities"

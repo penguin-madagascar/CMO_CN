@@ -40,7 +40,8 @@ def checked_data(data, members, layers):
             references.add((layer, index))
         else:
             origin, kind, name, latitude, longitude = row
-            if origin != "local" or not kind or not name or not coordinates_ok(latitude, longitude):
+            if (origin != "local" or not all(isinstance(v, str) and v.strip() for v in (kind, name))
+                    or not coordinates_ok(latitude, longitude)):
                 raise ValueError(f"Invalid geographic entity {number}: {row}")
 
     claimed = {}
@@ -57,7 +58,7 @@ def checked_data(data, members, layers):
     for number, (entity, z, dx, dy, lines, size, style) in enumerate(labels):
         if not index_ok(entity, entities) or not zoom_ok(z):
             raise ValueError(f"Unknown entity or zoom for label {number}")
-        if not all(isinstance(n, (int, float)) and math.isfinite(n) for n in (dx, dy)):
+        if not all(type(n) in (int, float) and math.isfinite(n) for n in (dx, dy)):
             raise ValueError(f"Invalid placement for label {number}")
         if not in_range(size, 1, 128) or type(style) is not int or style not in (0, 1):
             raise ValueError(f"Invalid text size or style for label {number}")
@@ -68,7 +69,7 @@ def checked_data(data, members, layers):
             bind(number, z, *entities[entity])
 
     for label, z, layer, index in data["joins"]:
-        if not index_ok(label, labels) or z != labels[label][1]:
+        if not index_ok(label, labels) or not zoom_ok(z) or z != labels[label][1]:
             raise ValueError(f"Unknown label/zoom for additional member {layer} {index}")
         bind(label, z, layer, index)
 
@@ -93,7 +94,7 @@ def checked_data(data, members, layers):
 
     for number, (z, latitude, longitude, dx, dy, kind, size, stroke, owner, shape) in enumerate(data["symbols"]):
         if (not zoom_ok(z) or not coordinates_ok(latitude, longitude)
-                or not all(isinstance(n, (int, float)) and math.isfinite(n) for n in (dx, dy))
+                or not all(type(n) in (int, float) and math.isfinite(n) for n in (dx, dy))
                 or kind not in ("circle", "triangle", "slash") or not in_range(size, 0, 128) or size == 0
                 or not in_range(stroke, 0, 128) or stroke == 0):
             raise ValueError(f"Invalid map symbol {number}")

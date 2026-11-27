@@ -51,6 +51,11 @@ REQUIRED_SOURCES = [
     "src/shared/CMOShared.cs",
     "src/shared/CMOSharedTest.cs",
     "src/shared/MapLabelRenderer.cs",
+    "src/shared/MapLabelCache.cs",
+    "src/shared/MapLabelOriginalCache.cs",
+    "scripts/reviewed_map.py",
+    "dict/placenames/reviewed_map.json",
+    "dict/placenames/reviewed_map_evidence.json",
     "scripts/build.sh",
     "scripts/build.ps1",
     "scripts/localize_html_files.py",
@@ -75,11 +80,10 @@ REQUIRED_SOURCES = [
 REQUIRED_ASSETS = [
     "assets/placenames/Synoptic.wwp",
     "assets/placenames/Cities.wwp",
-    "assets/placenames/ChineseMapTiles.dat",
     "assets/launcher/stringsChinese.resx",
 ]
 DB_TEMPLATES = ["Aircraft", "Facility", "GroundUnit", "Platform", "Satellite", "Ship", "Submarine", "Weapon"]
-FORBIDDEN_IN_PACK = [".workflow/", "evidence/", "地图瓦片源码/", ".env", "regression_report.json",
+FORBIDDEN_IN_PACK = [".workflow/", "evidence/", ".env", "regression_report.json",
                      "CMOSharedTest.exe", "GuiDriver.exe", "_res_probe"]
 REPORT_MODES = ("static", "installer", "live")
 # Minimal real-case anchors prevent relabelling a live-only list as static/installer evidence.
@@ -378,12 +382,9 @@ def pack_problems(pack_bytes: bytes, version: str, *, setup_bytes: bytes | None 
     return problems
 
 
-PLACENAME_RESOURCES = (("PLACE_CITIES", "Cities"), ("PLACE_SYNOPTIC", "Synoptic"), ("MAP_TILES", "ChineseMapTiles"))
-PLACENAME_ASSET_FILES = {"Cities": "Cities.wwp", "Synoptic": "Synoptic.wwp",
-                        "ChineseMapTiles": "ChineseMapTiles.dat"}
+PLACENAME_RESOURCES = (("PLACE_CITIES", "Cities"), ("PLACE_SYNOPTIC", "Synoptic"))
 PACK_PLACENAME_MEMBERS = {"Cities": "WW/PlacenameSets/Cities/0000_0000.wwp",
-                          "Synoptic": "WW/PlacenameSets/Synoptic/0000_0000.wwp",
-                          "ChineseMapTiles": "ChineseMapTiles.dat"}
+                          "Synoptic": "WW/PlacenameSets/Synoptic/0000_0000.wwp"}
 
 
 def placename_asset_hashes(root: Path | None = None) -> dict[str, str]:
@@ -391,7 +392,7 @@ def placename_asset_hashes(root: Path | None = None) -> dict[str, str]:
     base = ROOT if root is None else Path(root)
     wanted: dict[str, str] = {}
     for _, set_name in PLACENAME_RESOURCES:
-        path = base / "assets/placenames" / PLACENAME_ASSET_FILES[set_name]
+        path = base / "assets/placenames" / (set_name + ".wwp")
         if path.is_file():
             wanted[set_name] = hashlib.sha256(path.read_bytes()).hexdigest()
     return wanted
@@ -413,7 +414,7 @@ def placename_payload_problems(setup: Path | None, pack: Path | None,
         embedded = embedded_resource_hashes(setup, names)
         for resource, set_name in PLACENAME_RESOURCES:
             if set_name in wanted and embedded.get(resource) != wanted[set_name]:
-                problems.append(f"安装器内嵌 {resource} 与 assets/placenames/{PLACENAME_ASSET_FILES[set_name]} 不一致")
+                problems.append(f"安装器内嵌 {resource} 与 assets/placenames/{set_name}.wwp 不一致")
     if pack is not None:
         try:
             with zipfile.ZipFile(pack) as z:
@@ -424,7 +425,7 @@ def placename_payload_problems(setup: Path | None, pack: Path | None,
                     if member not in names:
                         problems.append(f"绿色包缺少 {member}")
                     elif hashlib.sha256(z.read(member)).hexdigest() != wanted[set_name]:
-                        problems.append(f"绿色包 {member} 与 assets/placenames/{PLACENAME_ASSET_FILES[set_name]} 不一致")
+                        problems.append(f"绿色包 {member} 与 assets/placenames/{set_name}.wwp 不一致")
         except (OSError, zipfile.BadZipFile) as exc:
             problems.append(f"绿色包地名集无法核验: {exc}")
     return problems
@@ -552,6 +553,7 @@ def main(argv: list[str] | None = None) -> int:
     VA.gate_scenario_meta()
     VA.gate_briefings()
     VA.gate_placenames()
+    VA.gate_reviewed_map()
     VA.gate_db_templates()
     VA.gate_no_secrets()
     VA.gate_readme_downloads()
@@ -568,12 +570,6 @@ def main(argv: list[str] | None = None) -> int:
     record("regression-report", "schema2 发版回归报告（当前输入/三个独立分层/非空/非未来/24h）", not problems,
            "; ".join(problems) if problems else "static/installer/live 各自证据有效")
     if args.pre:
-        try:
-            problems = placename_payload_problems(SETUP, None)
-        except (OSError, ValueError, subprocess.SubprocessError) as exc:
-            problems = [f"安装器地名载荷无法核验: {exc}"]
-        record("placename-payload", "打包前核对已构建安装器内嵌地名及地图", not problems,
-               "; ".join(problems) if problems else "地名集和地图与仓库资产一致")
         print("  [SKIP] artifacts / pack-contents  (--pre：尚未打包)")
     else:
         check_artifacts()

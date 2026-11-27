@@ -33,6 +33,11 @@ class ReviewedMapTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "owner"):
             checked_data(self.data, self.members, self.layers)
 
+    def test_boolean_cannot_be_rendered_as_an_offset(self):
+        self.data["labels"][0][2] = True
+        with self.assertRaisesRegex(ValueError, "placement"):
+            checked_data(self.data, self.members, self.layers)
+
 
 if __name__ == "__main__":
     unittest.main()

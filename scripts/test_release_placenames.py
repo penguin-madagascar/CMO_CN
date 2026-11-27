@@ -2,9 +2,7 @@
 """Exercise the real release placename gate against complete synthetic assets."""
 from __future__ import annotations
 
-import contextlib
 import hashlib
-import io
 import json
 from pathlib import Path
 import struct
@@ -60,10 +58,7 @@ class ReleasePlacenameTests(unittest.TestCase):
         return self.root / "assets/placenames" / f"{name}.wwp"
 
     def check_gate(self):
-        # These fixtures contain only WWP sets. The packed R88 layer has its own manifest and DAT.
-        with (patch.object(verify_all, "results", []),
-              patch("verify_packed_regions.verify", return_value="R88 checked separately"),
-              patch("verify_packed_wwp.verify", return_value="packed WWP checked separately")):
+        with patch.object(verify_all, "results", []):
             verify_all.gate_placenames()
             self.assertEqual(1, len(verify_all.results))
             name, ok, detail = verify_all.results[0]
@@ -208,12 +203,10 @@ class PlacenamePayloadTests(unittest.TestCase):
                 if name not in omit:
                     z.writestr(release_check.PACK_PLACENAME_MEMBERS[name], data)
 
-    def embedded(self, *, cities=None, synoptic=None, map_tiles=None):
+    def embedded(self, *, cities=None, synoptic=None):
         """Stand-in for the CLR reflection read so the tests stay hermetic and fast."""
         payload = {"PLACE_CITIES": self.payloads["Cities"] if cities is None else cities,
                    "PLACE_SYNOPTIC": self.payloads["Synoptic"] if synoptic is None else synoptic}
-        if map_tiles is not None:
-            payload["MAP_TILES"] = map_tiles
 
         def reader(_setup, names):
             return {name: hashlib.sha256(payload[name]).hexdigest() for name in names}
@@ -232,25 +225,6 @@ class PlacenamePayloadTests(unittest.TestCase):
         with self.embedded():
             self.assertEqual([], release_check.placename_payload_problems(
                 self.root / "setup.exe", None, self.root))
-
-    def test_prepackage_checks_installer_map_before_the_zip_exists(self):
-        (self.root / "assets/placenames/ChineseMapTiles.dat").write_bytes(b"verified")
-        for embedded, expected in ((b"old map", 1), (b"verified", 0)):
-            with (self.subTest(embedded=embedded), self.embedded(map_tiles=embedded),
-                  patch.object(release_check, "ROOT", self.root), patch.object(release_check, "VA"),
-                  patch.object(release_check, "check_sources"), patch.object(release_check, "check_assets"),
-                  patch.object(release_check, "check_regression_report", return_value=[]),
-                  contextlib.redirect_stdout(io.StringIO()) as output):
-                self.assertEqual(expected, release_check.main(["--pre"]))
-                if expected:
-                    self.assertIn("MAP_TILES", output.getvalue())
-        self.assertFalse(self.pack.exists())
-
-    def test_public_pack_rejects_private_map_source_directory(self):
-        with zipfile.ZipFile(self.pack, "w") as archive:
-            archive.writestr("地图瓦片源码/source-package.json", "{}")
-        problems = release_check.pack_problems(self.pack.read_bytes(), "4.3.1")
-        self.assertTrue(any("地图瓦片源码/" in problem for problem in problems), problems)
 
     def test_stale_installer_payload_is_flagged(self):
         with self.embedded(cities=b"old-cities"):

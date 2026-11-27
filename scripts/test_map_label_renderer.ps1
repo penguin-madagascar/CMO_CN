@@ -20,6 +20,3 @@ foreach ($fixture in @('MapLabelRendererTests', 'MapLabelSamples')) {
 & (Join-Path $OutputDir 'MapLabelRendererTests.exe') $Engine 2>&1 |
     Tee-Object -FilePath (Join-Path $OutputDir 'map_label_renderer.log')
 if ($LASTEXITCODE) { throw 'Map label renderer regression failed' }
-$assets = Join-Path $repo 'assets\placenames'
-& (Join-Path $OutputDir 'MapLabelRendererTests.exe') $Engine --released-wwp $assets (Join-Path $assets 'ChineseMapTiles.dat')
-if ($LASTEXITCODE) { throw 'Released WWP display regression failed' }

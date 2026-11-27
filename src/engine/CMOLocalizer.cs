@@ -325,8 +325,7 @@ namespace CMOLocalizer
             }
         }
 
-        private static readonly List<CMOShared.MapLabelPlace> mapPlaces = new List<CMOShared.MapLabelPlace>();
-        private static CMOShared.MapLabelTilePack mapTilePack;
+        private static CMOShared.MapLabelIndex mapLabels;
         private sealed class TileClient
         {
             public readonly TcpClient Client;
@@ -351,43 +350,17 @@ namespace CMOLocalizer
         {
             try
             {
-                string tilePackPath = Path.Combine(baseDir, "ChineseMapTiles.dat");
-                mapTilePack = null;
-                if (File.Exists(tilePackPath))
-                {
-                    try
-                    {
-                        mapTilePack = CMOShared.MapLabelTilePack.Load(tilePackPath);
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new InvalidDataException("ChineseMapTiles.dat initialization failed: " + ex.Message, ex);
-                    }
-                }
-                mapPlaces.Clear();
-                mapPlaces.AddRange(CMOShared.MapLabelCatalog.LoadBasePlaces(baseDir));
-
-                // 省/州级标签（R88）：原版 Stamen 标签层里有省级名字，而两套 WWP 只有
-                // 城市与国家，重绘后省级标签整体消失。数据放在词典 `places` 分区（不新增资产）。
+                string dictPath = Path.Combine(baseDir, "CMOLocalizer.json");
+                mapLabels = CMOShared.MapLabelIndex.Load(baseDir, dictPath);
                 try
                 {
-                    string dictPath = Path.Combine(baseDir, "CMOLocalizer.json");
-                    List<CMOShared.MapLabelPlace> regions = CMOShared.MapLabelRegions.LoadFromDictionary(dictPath);
-                    if (regions.Count > 0) mapPlaces.AddRange(regions);
-                    Log("Region labels: " + regions.Count + " 省/州级标签已并入（原版深度对齐）。");
+                    int rewritten = CMOShared.MapLabelCache.Refresh(baseDir, mapLabels, false);
+                    RecordStatus("label_cache", "refreshed=" + rewritten + " fingerprint=" + mapLabels.Fingerprint);
                 }
-                catch (Exception regionError)
+                catch (Exception cacheError)
                 {
-                    Log("Region labels failed: " + regionError.GetBaseException().Message);
-                }
-
-                if (mapTilePack != null)
-                {
-                    try { mapTilePack.ApplyToCacheWithLegacy(baseDir, mapPlaces); }
-                    catch (Exception ex)
-                    {
-                        throw new InvalidDataException("ChineseMapTiles.dat initialization failed: " + ex.Message, ex);
-                    }
+                    Log("Label cache refresh failed: " + cacheError.GetBaseException().Message);
+                    RecordStatus("label_cache", "refresh failed: " + cacheError.GetBaseException().Message);
                 }
 
                 tileListener = new TcpListener(IPAddress.Loopback, 0);
@@ -398,8 +371,8 @@ namespace CMOLocalizer
                 offsetMap[1789870] = localUrl;
                 offsetMap[21564] = "zh-CN";
                 offsetMap[62636] = "zh-CN";
-                Log("LocalTileServer started on " + localUrl + " with " + mapPlaces.Count + " Chinese landmarks.");
-                RecordStatus("label_server", localUrl + " landmarks=" + mapPlaces.Count);
+                Log("LocalTileServer started on " + localUrl + " with map fingerprint " + mapLabels.Fingerprint);
+                RecordStatus("label_server", localUrl + " fingerprint=" + mapLabels.Fingerprint);
 
                 // Game downloads also use the CLR pool. Keep both accepting and
                 // serving independent, with bounded workers and queued sockets.
@@ -515,8 +488,7 @@ namespace CMOLocalizer
 
         private static byte[] RenderChineseTileBytes(int z, int x, int y, out int candidates, out int rendered)
         {
-            return CMOShared.MapLabelRenderer.RenderTileBytes(mapPlaces, mapTilePack,
-                z, x, y, out candidates, out rendered);
+            return CMOShared.MapLabelRenderer.RenderTileBytes(mapLabels, z, x, y, out candidates, out rendered);
         }
 
         /// <summary>

@@ -162,17 +162,18 @@ def gate_placenames() -> None:
         errors.extend(region_problems[:6])
     else:
         summaries.append(f"Regions {region_summary.get('matched', 0)}/{region_summary.get('source_entries', 0)} places")
-    from verify_packed_regions import verify
-    try:
-        summaries.append(verify(ROOT))
-    except (ValueError, KeyError, OSError) as exc:
-        errors.append(f"R88 packed map coverage: {exc}")
-    from verify_packed_wwp import verify as verify_wwp
-    try:
-        summaries.append(verify_wwp(ROOT))
-    except (ValueError, KeyError, OSError) as exc:
-        errors.append(f"WWP packed map coverage: {exc}")
     record("placenames", not errors, "; ".join(summaries + errors[:6]))
+
+def gate_reviewed_map() -> None:
+    from reviewed_map import verify_dictionary
+
+    try:
+        labels, symbols = verify_dictionary(ROOT)
+    except (ValueError, KeyError, OSError) as error:
+        record("reviewed map", False, str(error))
+        return
+    record("reviewed map", True, f"{labels} labels, {symbols} symbols")
+
 
 def gate_hotkeys() -> None:
     """快捷键窗口正文（R91）：整段译文与实机采集原文逐行对齐，词典产物一致。"""
@@ -323,7 +324,7 @@ def gate_routing() -> None:
 
 def main() -> int:
     for g in (gate_dictionary, gate_menu, gate_engine_parse,
-              gate_scenario_meta, gate_briefings, gate_placenames, gate_hotkeys,
+              gate_scenario_meta, gate_briefings, gate_placenames, gate_reviewed_map, gate_hotkeys,
               gate_db_templates, gate_version, gate_no_secrets,
               gate_routing, gate_repository):
         try:

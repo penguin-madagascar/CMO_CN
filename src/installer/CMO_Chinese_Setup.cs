@@ -966,8 +966,11 @@ namespace CMOLocalizerInstaller
             WriteLog("安装开始：游戏目录=" + gamePath + "；安装包目录=" + curDir
                 + "；载荷来源=安装包内嵌资源");
 
+            LegacyMapTransition previousMap = null;
             try
             {
+                previousMap = LegacyMapTransition.Open(gamePath);
+                if (previousMap != null) LegacyMapTransition.RequireGameStopped(gamePath);
                 string dllDest = Path.Combine(gamePath, "CMOLocalizer.dll");
                 string jsonDest = Path.Combine(gamePath, "CMOLocalizer.json");
                 string writeErr;
@@ -1057,16 +1060,9 @@ namespace CMOLocalizerInstaller
                 // 兜底：对 zip 未覆盖的 HTML 做标题级替换 (带 .orig 备份)
                 LocalizeScenarioBriefings(Path.Combine(gamePath, "Scenarios"));
 
-                // 先校验并部署已核验瓦片，再重建缓存；坏包必须使安装失败。
-                string sidecarHash;
-                if (!DeployMapTilePack(gamePath, curDir, out sidecarHash, out writeErr))
-                {
-                    errorMsg = writeErr;
-                    return false;
-                }
-
                 // 自动汉化 World Wind 标注图层瓦片 (WW/Cache/Stamen Terrain - Labels)
-                LocalizeMapLabelTiles(gamePath);
+                MapLabelOriginalCache.EnsureOriginalBackup(gamePath);
+                RefreshMapLabelTiles(gamePath);
 
                 // 最后一步：写「安装清单」（部署实证）—— 它是「装了什么版本」的唯一真相，
                 // 也是「一键还原后立即显示原版英文环境」的依据；失败不得留下半份清单。
@@ -1079,18 +1075,19 @@ namespace CMOLocalizerInstaller
                         + "，安装器 CurrentVersion=" + CurrentVersion);
                 }
                 Dictionary<string, string> manifestFiles = InstallManifest.HashEngineFiles(gamePath);
-                if (!PackageAssets.VerifyEngineFiles(Application.ExecutablePath, manifestFiles, out errorMsg, sidecarHash))
+                if (!PackageAssets.VerifyEngineFiles(Application.ExecutablePath, manifestFiles, out errorMsg))
                 {
                     CmoLog.Error(errorMsg);
                     return false;
                 }
+                if (previousMap != null) previousMap.Commit();
                 if (!InstallManifest.Write(gamePath, CurrentVersion, Application.ExecutablePath, manifestFiles))
                 {
                     errorMsg = "汉化文件已部署，但写入安装清单失败（状态可能显示不准，重新安装即可修复）。";
                     return false;
                 }
-                // 缓存安装器及本次实际使用的旁置地图，供离线回退。
-                VersionStore.Cache(Application.ExecutablePath, gamePath, sidecarHash);
+                // 缓存自身安装包：回退以整个安装包为单位（权威、自带全部资产）
+                VersionStore.Cache(Application.ExecutablePath);
 
                 return true;
             }
@@ -1099,6 +1096,7 @@ namespace CMOLocalizerInstaller
                 errorMsg = ex.Message;
                 return false;
             }
+            finally { if (previousMap != null) previousMap.Dispose(); }
         }
 
 
@@ -1481,131 +1479,36 @@ namespace CMOLocalizerInstaller
         /// </summary>
         private static int LocalizeMapLabelTiles(string gamePath)
         {
-            string packPath = Path.Combine(gamePath, "ChineseMapTiles.dat");
-            MapLabelTilePack pack = File.Exists(packPath) ? MapLabelTilePack.Load(packPath) : null;
-            MapLabelTilePack.CacheReceipt receipt = null;
-            int saved = 0;
-            try
-            {
-                string cacheDir = MapLabelTilePack.CacheDirectory(gamePath);
-                // Only fallback paths need a second pass; the pack writer produces final covered tiles.
-                if (pack == null)
-                {
-                    if (!Directory.Exists(cacheDir)) return 0;
-                    MapLabelTilePack.EnsureCacheBackup(gamePath);
-                }
-                List<MapLabelPlace> list = MapLabelCatalog.LoadBasePlaces(gamePath);
-                // 省/州级标签（R88）来自词典 places 分区：缓存重绘与运行时必须用同一份数据，
-                // 否则安装器重绘的瓦片会缺省级名，而运行时新瓦片有——同一张地图两副样子。
-                try
-                {
-                    string dictPath = Path.Combine(gamePath, "CMOLocalizer.json");
-                    list.AddRange(MapLabelRegions.LoadFromDictionary(dictPath));
-                }
-                catch { }
-                if (list.Count == 0 && pack == null) return 0;
-                if (pack != null) receipt = new MapLabelTilePack.CacheReceipt(gamePath, pack.Fingerprint, list);
-                var pngs = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-                foreach (string file in MapLabelTilePack.CacheFiles(cacheDir))
-                    if (file.EndsWith(".png", StringComparison.OrdinalIgnoreCase)) pngs.Add(file);
-                if (pack != null) saved += pack.ApplyCache(gamePath, list, receipt, false);
-
-                Parallel.ForEach(pngs, pngPath =>
-                {
-                    try
-                    {
-                        string norm = pngPath.Replace('\\', '/');
-                        string[] parts = norm.Split('/');
-                        int z = int.Parse(parts[parts.Length - 3]);
-                        int x = int.Parse(parts[parts.Length - 2]);
-                        string fName = parts[parts.Length - 1];
-                        int y = int.Parse(fName.Substring(0, fName.IndexOf('.')));
-
-                        if (pack != null && pack.ContainsTile(z, x, y)) return;
-                        int candidates;
-                        int rendered;
-                        byte[] png = MapLabelRenderer.RenderTileBytes(list, pack, z, x, y, out candidates, out rendered);
-                        if (list.Count != 0)
-                        {
-                            // Preserve legacy redraw writes/counts, including explicit refresh of identical pixels.
-                            MapLabelTilePack.WriteCacheBytes(pngPath, png, true);
-                            if (receipt != null) receipt.Record(z + "/" + x + "/" + y, png);
-                            System.Threading.Interlocked.Increment(ref saved);
-                        }
-                    }
-                    catch { if (pack != null) throw; }
-                });
-                if (pack != null) pack.CompleteCacheRefresh(gamePath, receipt);
-                return saved;
-            }
-            catch { if (pack != null) throw; return 0; }
-            finally { if (receipt != null) receipt.Dispose(); }
+            try { return RefreshMapLabelTiles(gamePath); }
+            catch (IOException ex) { WriteLog(ex.Message); return 0; }
+            catch (UnauthorizedAccessException ex) { WriteLog(ex.Message); return 0; }
         }
 
-
-        // 来源仅限安装器目录、既有 patch_files 目录和精确命名的内嵌资源。
-        // 先把候选完整写到同目录 staging 并验证，再原子发布，保留已有好包。
-        private static bool DeployMapTilePack(string gamePath, string sourceDir, out string sidecarHash, out string error)
+        private static int RefreshMapLabelTiles(string gamePath)
         {
-            error = "";
-            sidecarHash = null;
-            string dest = Path.Combine(gamePath, "ChineseMapTiles.dat");
-            string temp = dest + ".cmo_new-" + Guid.NewGuid().ToString("N");
-            try
-            {
-                using (Stream resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("MAP_TILES"))
-                {
-                    if (resource != null)
-                    {
-                        // 内嵌包属于本版安装器，升级时游戏或安装器目录可能还留着旧 DAT。
-                        using (FileStream output = File.Create(temp)) resource.CopyTo(output);
-                    }
-                    else
-                    {
-                        string source = PackageAssets.FindMapSidecar(Assembly.GetExecutingAssembly().Location, sourceDir);
-                        if (source == null) return true;
-                        sidecarHash = InstallManifest.Sha256OfFile(source);
-                        if (string.Equals(Path.GetFullPath(source), Path.GetFullPath(dest), StringComparison.OrdinalIgnoreCase))
-                        {
-                            MapLabelTilePack.Load(source);
-                            return true;
-                        }
-                        File.Copy(source, temp);
-                    }
-                }
-                MapLabelTilePack.Load(temp);
-                if (File.Exists(dest) && new FileInfo(dest).Length == new FileInfo(temp).Length
-                    && InstallManifest.Sha256OfFile(dest) == InstallManifest.Sha256OfFile(temp)) return true;
-                ReplaceFileAtomic(temp, dest);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                error = "部署已核验中文地图瓦片失败: " + ex.Message;
-                return false;
-            }
-            finally
-            {
-                if (File.Exists(temp)) File.Delete(temp);
-            }
+            var index = MapLabelIndex.Load(gamePath, Path.Combine(gamePath, "CMOLocalizer.json"));
+            return MapLabelCache.Refresh(gamePath, index, true);
         }
 
         private static void RestoreMapLabelTiles(string gamePath)
         {
-            // 删除失败必须向上传回卸载失败，不能先还原后被旧 pack 再次汉化。
-            string packPath = Path.Combine(gamePath, "ChineseMapTiles.dat");
-            if (File.Exists(packPath)) File.Delete(packPath);
-            try
+            using (var previousMap = LegacyMapTransition.Open(gamePath))
             {
-                string cacheDir = Path.Combine(gamePath, @"WW\Cache\Stamen Terrain - Labels");
-                string backupDir = Path.Combine(gamePath, @"WW\Cache\Stamen Terrain - Labels.orig");
-                if (Directory.Exists(backupDir))
-                {
-                    if (Directory.Exists(cacheDir)) Directory.Delete(cacheDir, true);
-                    Directory.Move(backupDir, cacheDir);
-                }
+                if (previousMap != null) LegacyMapTransition.RequireGameStopped(gamePath);
+                string dictionary = Path.Combine(gamePath, "CMOLocalizer.json");
+                MapLabelIndex index = null;
+                Func<int,int,int,byte[]> renderUnrecorded = null;
+                if (File.Exists(dictionary))
+                    renderUnrecorded = (z,x,y) => {
+                        if (index == null) index = MapLabelIndex.Load(gamePath,dictionary);
+                        int candidates, drawn;
+                        var bytes = MapLabelRenderer.RenderTileBytes(index,z,x,y,out candidates,out drawn);
+                        return drawn > 0 ? bytes : null;
+                    };
+                int changed = MapLabelOriginalCache.Restore(gamePath,renderUnrecorded);
+                if (changed != 0) WriteLog("保留了 " + changed + " 个用户修改的缓存文件及其原备份。");
+                if (previousMap != null) previousMap.Commit();
             }
-            catch { }
         }
 
         // ── 原子替换：目标文件可能正被运行中的游戏占用 ──────────────────────────
@@ -2001,6 +1904,7 @@ namespace CMOLocalizerInstaller
 
             try
             {
+                RestoreMapLabelTiles(gamePath);
                 string cfgPath = Path.Combine(gamePath, "Command.exe.config");
                 string bakPath = Path.Combine(gamePath, "Command.exe.config.cmo_bak");
 
@@ -2049,9 +1953,6 @@ namespace CMOLocalizerInstaller
 
                 // 还原 QuickBattle 下的 .orig 表单页备份
                 RestoreQuickBattleHtml(gamePath);
-
-                // 还原 World Wind 标注图层瓦片
-                RestoreMapLabelTiles(gamePath);
 
                 // 还原原始英文地名集
                 RestorePlacenames(gamePath);

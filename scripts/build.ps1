@@ -25,9 +25,8 @@ if (Test-Path -LiteralPath $webViewSource -PathType Leaf) {
 }
 $sources = @(Get-ChildItem -LiteralPath $engineDir -Filter '*.cs' | Sort-Object Name)
 if ($sources.Count -eq 0) { throw "No engine sources in $engineDir" }
-$sharedRenderer = Join-Path $repoRoot 'src\shared\MapLabelRenderer.cs'
-if (Test-Path -LiteralPath $sharedRenderer -PathType Leaf) {
-    $sources += Get-Item -LiteralPath $sharedRenderer
+foreach ($name in 'MapLabelRenderer.cs','MapLabelCache.cs','MapLabelOriginalCache.cs') {
+    $sources += Get-Item -LiteralPath (Join-Path $repoRoot "src\shared\$name")
 }
 $frameworkDir = Split-Path -Parent $Compiler
 $references = @('System.dll', 'System.Core.dll', 'System.Data.dll',

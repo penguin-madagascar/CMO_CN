@@ -68,6 +68,11 @@ $existingLibraries = @()
 if (Test-Path -LiteralPath $rendererBuild) {
     $existingLibraries = @(Get-ChildItem -LiteralPath $rendererBuild -Filter PlacenameTileRenderer.dll -Recurse | ForEach-Object FullName)
 }
+$userPngs = @((Join-Path $normal.Cache 'my-note.png'), (Join-Path $normal.Cache 'screenshots\context\view.png'))
+foreach ($path in $userPngs) {
+    [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($path)) | Out-Null
+    [IO.File]::WriteAllBytes($path, $pngBytes)
+}
 $result = Refresh $normal
 if (-not $CounterLibrary) {
     $createdLibraries = @(Get-ChildItem -LiteralPath $rendererBuild -Filter PlacenameTileRenderer.dll -Recurse |
@@ -76,6 +81,9 @@ if (-not $CounterLibrary) {
     $CounterLibrary = $createdLibraries[0].FullName
 }
 Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 1 PNG')) 'normal PNG refresh reports a counted save'
+foreach ($path in $userPngs) {
+    Check ([Convert]::ToBase64String([IO.File]::ReadAllBytes($path)) -eq [Convert]::ToBase64String($pngBytes)) 'non-tile PNG survives normal refresh byte for byte'
+}
 Add-Type -AssemblyName System.Drawing
 $bitmap = [Drawing.Bitmap]::new($normal.Tile)
 try { Check ($bitmap.Width -eq 256 -and $bitmap.Height -eq 256) 'real renderer replaced tiny PNG with 256x256 labels' }
@@ -143,6 +151,11 @@ foreach ($kind in @('missing', 'empty')) {
     Check ($result.Code -eq 0 -and $result.Text.Contains('nothing to refresh')) "$kind cache skips compiler"
     Check (-not [IO.Directory]::Exists($fixture.Cache + '.orig')) "$kind cache creates no backup"
 }
+$onlyUser = Fixture 'only-user-png' -NoTile
+[IO.File]::WriteAllBytes((Join-Path $onlyUser.Cache 'my-note.png'), $pngBytes)
+$result = Refresh $onlyUser -MissingCompiler
+Check ($result.Code -eq 0 -and $result.Text.Contains('nothing to refresh') -and
+    -not [IO.Directory]::Exists($onlyUser.Cache + '.orig')) 'user PNG alone skips compilation and backup'
 foreach ($relative in @('7\109\128.png', '7\109\bad.png')) {
     $fixture = Fixture ('invalid-' + $script:checks) $relative
     $result = Refresh $fixture
@@ -256,88 +269,6 @@ finally { $handle.Dispose() }
 Check ($counted -is [int] -and $counted -eq 0 -and [IO.File]::Exists($copyFailure.Backup) -and
     [Convert]::ToBase64String([IO.File]::ReadAllBytes($copyFailure.Backup)) -eq [Convert]::ToBase64String($pngBytes)) 'later render failure preserves the already complete original backup'
 Check ([IO.File]::ReadAllText($copyFailure.Terrain) -eq 'terrain sentinel') 'failure and retry never change terrain'
-
-# A verified pack may add paths absent from the previous cache, including an entirely missing cache.
-function Add-TilePack($Fixture, [switch]$V2) {
-    $tileBytes = [IO.File]::ReadAllBytes($normal.Tile)
-    $payload = [IO.MemoryStream]::new()
-    $writer = [IO.BinaryWriter]::new($payload)
-    $writer.Write([int]1); $writer.Write([int]3); $writer.Write([int]4); $writer.Write([int]4)
-    $writer.Write([int]2); $writer.Write([int]$tileBytes.Length); $writer.Write($tileBytes)
-    $format = 'CMOTIL01'
-    if ($V2) {
-        $format = 'CMOTIL02'
-        $writer.Write([int]1); $writer.Write([int]3); $writer.Write([string][char]0x5E02)
-        $writer.Write([float]0); $writer.Write([float]0); $writer.Write([int]1)
-    }
-    $writer.Flush()
-    $sha = [Security.Cryptography.SHA256]::Create()
-    try { $fingerprint = [BitConverter]::ToString($sha.ComputeHash($payload.ToArray())).Replace('-', '').ToLowerInvariant() }
-    finally { $sha.Dispose() }
-    $packWriter = [IO.BinaryWriter]::new([IO.File]::Create((Join-Path $Fixture.Game 'ChineseMapTiles.dat')))
-    try { $packWriter.Write([Text.Encoding]::ASCII.GetBytes($format)); $packWriter.Write($fingerprint); $packWriter.Write($payload.ToArray()) }
-    finally { $packWriter.Dispose(); $writer.Dispose(); $payload.Dispose() }
-}
-$packMissing = Fixture 'pack-missing-cache' -NoCache
-Add-TilePack $packMissing
-$result = Refresh $packMissing
-Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 1 PNG') -and
-    [IO.File]::Exists((Join-Path $packMissing.Cache '3\4\4.png'))) 'pack creates previously missing cache coverage'
-$packExtra = Fixture 'pack-extra-tile'
-Add-TilePack $packExtra
-[IO.Directory]::CreateDirectory((Join-Path $packExtra.Cache 'empty-original-directory')) | Out-Null
-$result = Refresh $packExtra
-Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 2 PNG')) 'pack adds new tile and preserves counted legacy redraw'
-$result = Refresh $packExtra
-Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 1 PNG')) 'repeat pack refresh counts only legacy redraw'
-Check ([Convert]::ToBase64String([IO.File]::ReadAllBytes($packExtra.Backup)) -eq [Convert]::ToBase64String($pngBytes)) 'pack refresh retains pre-pack original backup'
-Check ([IO.Directory]::Exists((Join-Path ($packExtra.Cache + '.orig') 'empty-original-directory'))) 'pack backup includes empty original directories'
-Check ([IO.File]::ReadAllText($packExtra.Terrain) -eq 'terrain sentinel') 'pack refresh never changes terrain'
-$packOnly = Fixture 'pack-only' -NoCache
-Add-TilePack $packOnly
-foreach ($set in @('Synoptic', 'Cities')) { [IO.File]::Delete((Join-Path $packOnly.Game "WW\PlacenameSets\$set\0000_0000.wwp")) }
-$result = Refresh $packOnly
-Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 1 PNG')) 'pack-only refresh works without legacy WWP'
-$regionPack = Fixture 'v2-dictionary-regions'
-Add-TilePack $regionPack -V2
-foreach ($set in @('Synoptic', 'Cities')) { [IO.File]::Delete((Join-Path $regionPack.Game "WW\PlacenameSets\$set\0000_0000.wwp")) }
-$regionName = [string][char]0x7701
-$dictionary = '{"places":[["' + $regionName + '",-8,8,3],["' + $regionName + '",47.72,128.88,7]]}'
-[IO.File]::WriteAllText((Join-Path $regionPack.Game 'CMOLocalizer.json'), $dictionary, [Text.Encoding]::UTF8)
-$result = Refresh $regionPack
-Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 2 PNG')) 'dictionary-only refresh counts composed v2 tile and fallback tile'
-$packedPath = Join-Path $regionPack.Cache '3\4\4.png'
-$composed = [Convert]::ToBase64String([IO.File]::ReadAllBytes($packedPath))
-function Has-AddedInk([string]$BeforePath, [string]$AfterPath) {
-    $before = [Drawing.Bitmap]::new($BeforePath)
-    $after = [Drawing.Bitmap]::new($AfterPath)
-    try {
-        for ($y = 0; $y -lt $after.Height; $y++) {
-            for ($x = 0; $x -lt $after.Width; $x++) {
-                if ($after.GetPixel($x, $y).A -gt 0 -and $before.GetPixel($x, $y).A -eq 0) { return $true }
-            }
-        }
-        return $false
-    }
-    finally { $before.Dispose(); $after.Dispose() }
-}
-Check (Has-AddedInk $normal.Tile $packedPath) 'dictionary label adds ink to packed PNG'
-Check (Has-AddedInk $emptyTile.Tile $regionPack.Tile) 'dictionary-only fallback has visible labels'
-$result = Refresh $regionPack
-Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 1 PNG') -and
-    $composed -ceq [Convert]::ToBase64String([IO.File]::ReadAllBytes($packedPath))) 'repeat v2 refresh preserves composed bytes and counts only fallback'
-$lockedDict = Fixture 'locked-dictionary' -NoCache
-Add-TilePack $lockedDict -V2
-$dictionaryPath = Join-Path $lockedDict.Game 'CMOLocalizer.json'
-[IO.File]::WriteAllText($dictionaryPath, $dictionary, [Text.Encoding]::UTF8)
-$handle = [IO.File]::Open($dictionaryPath, [IO.FileMode]::Open, [IO.FileAccess]::ReadWrite, [IO.FileShare]::None)
-try { $result = Refresh $lockedDict }
-finally { $handle.Dispose() }
-Check ($result.Code -ne 0 -and -not [IO.Directory]::Exists($lockedDict.Cache + '.orig')) 'locked dictionary fails before backup or rendering'
-$badPack = Fixture 'corrupt-pack' -NoCache
-[IO.File]::WriteAllBytes((Join-Path $badPack.Game 'ChineseMapTiles.dat'), [byte[]](1,2,3))
-$result = Refresh $badPack
-Check ($result.Code -ne 0 -and -not [IO.Directory]::Exists($badPack.Cache + '.orig')) 'corrupt pack fails before publishing a backup'
 
 $summary = "Placename tile checks=$script:checks failures=$script:failures"
 $script:log.Add($summary)

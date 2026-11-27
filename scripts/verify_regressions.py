@@ -98,9 +98,8 @@ TILE_MODES = ["starvation", "protocol", "idle", "batch", "multi-idle", "trickle"
 def _engine_source_args() -> list[str]:
     engine_dir = ROOT / "src/engine"
     args = list(map(str, sorted(engine_dir.glob("*.cs"))))
-    shared = ROOT / "src/shared/MapLabelRenderer.cs"
-    if shared.is_file():
-        args.append(str(shared))
+    args.extend(str(ROOT / "src/shared" / name) for name in
+                ("MapLabelRenderer.cs", "MapLabelCache.cs", "MapLabelOriginalCache.cs"))
     if (engine_dir / "WebViewTranslation.cs").is_file():
         script = engine_dir / "WebViewTranslation.js"
         if not script.is_file():

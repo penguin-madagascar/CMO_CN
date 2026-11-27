@@ -41,31 +41,6 @@ mkdir -p "$OUT"
 # csc.exe is a native Windows binary: hand it backslash paths.
 W() { cygpath -w "$1"; }
 
-# Rebuilding map pixels is explicit. The ordinary prebuilt-map build is unchanged.
-if [[ -n "${CMO_MAP_MANIFEST:-}" ]]; then
-  : "${CMO_MAP_ORIGINAL_ROOT:?map source root is required}"
-  : "${CMO_MAP_FONT:?regular map font is required}"
-  : "${CMO_MAP_BOLD_FONT:?bold map font is required}"
-  : "${CMO_MAP_SOURCE_PACKAGE:?fresh source package directory is required}"
-  MAP_ARGS=(--manifest "$CMO_MAP_MANIFEST" --original-root "$CMO_MAP_ORIGINAL_ROOT"
-    --font "$CMO_MAP_FONT" --bold-font "$CMO_MAP_BOLD_FONT"
-    --output "$ROOT/assets/placenames/ChineseMapTiles.dat" --report "$OUT/map_tile_build_report.json"
-    --source-package-dir "$CMO_MAP_SOURCE_PACKAGE")
-  if [[ -n "${CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS:-}${CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS_SHA256:-}" ]]; then
-    : "${CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS:?external approval file is required}"
-    : "${CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS_SHA256:?external approval SHA256 is required}"
-    MAP_ARGS+=(--owner-native-source-approvals "$CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS"
-      --owner-native-source-approvals-sha256 "$CMO_MAP_OWNER_NATIVE_SOURCE_APPROVALS_SHA256")
-  fi
-  if [[ -n "${CMO_MAP_CANONICAL_CAPTION_APPROVALS:-}${CMO_MAP_CANONICAL_CAPTION_APPROVALS_SHA256:-}" ]]; then
-    : "${CMO_MAP_CANONICAL_CAPTION_APPROVALS:?map caption approval file is required}"
-    : "${CMO_MAP_CANONICAL_CAPTION_APPROVALS_SHA256:?map caption approval SHA256 is required}"
-    MAP_ARGS+=(--canonical-caption-approvals "$CMO_MAP_CANONICAL_CAPTION_APPROVALS"
-      --canonical-caption-approvals-sha256 "$CMO_MAP_CANONICAL_CAPTION_APPROVALS_SHA256")
-  fi
-  "$PY" "$ROOT/scripts/build_map_tile_pack.py" "${MAP_ARGS[@]}"
-fi
-
 echo "==> building CMOLocalizer.dll (output=$OUT)"
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(W "$ROOT/scripts/build.ps1")" -OutputDir "$(W "$OUT")"
 if [[ "$ENGINE_ONLY" -eq 1 ]]; then exit 0; fi
@@ -117,6 +92,7 @@ echo "==> building CMO_Updater.exe"
   -reference:System.dll -reference:System.Core.dll \
   -reference:System.Windows.Forms.dll -reference:System.Drawing.dll \
   "$(W "$ROOT/src/shared/CMOShared.cs")" \
+  "$(W "$ROOT/src/shared/MapLabelOriginalCache.cs")" \
   "$(W "$ROOT/src/updater/CMO_Updater.cs")"
 
 echo "==> building CMOSharedTest.exe (test host, not packaged)"
@@ -124,6 +100,7 @@ echo "==> building CMOSharedTest.exe (test host, not packaged)"
   -out:"$(W "$OUT/CMOSharedTest.exe")" \
   -reference:System.dll -reference:System.Core.dll \
   "$(W "$ROOT/src/shared/CMOShared.cs")" \
+  "$(W "$ROOT/src/shared/MapLabelOriginalCache.cs")" \
   "$(W "$ROOT/src/shared/CMOSharedTest.cs")"
 
 # Symbols/Menu 的中文按钮图（引擎启动时预加载，必须随包分发）
@@ -140,12 +117,6 @@ print(f"symbols menu zip: {dest.stat().st_size} bytes")
 PYEOF
 fi
 
-# The independent map-label feature supplies this shared source when present.
-INSTALLER_SHARED_SOURCES=()
-if [ -f "$ROOT/src/shared/MapLabelRenderer.cs" ]; then
-  INSTALLER_SHARED_SOURCES+=("$(W "$ROOT/src/shared/MapLabelRenderer.cs")")
-fi
-
 echo "==> building $SETUP_EXE"
 RES=()
 RES+=(-resource:"$(W "$OUT/CMOLocalizer.dll")",CMOLocalizer.dll)
@@ -153,7 +124,6 @@ RES+=(-resource:"$(W "$DICTIONARY")",CMOLocalizer.json)
 RES+=(-resource:"$(W "$OUT/CMO_Updater.exe")",UPDATER_EXE)
 RES+=(-resource:"$(W "$ROOT/assets/placenames/Synoptic.wwp")",PLACE_SYNOPTIC)
 RES+=(-resource:"$(W "$ROOT/assets/placenames/Cities.wwp")",PLACE_CITIES)
-RES+=(-resource:"$(W "$ROOT/assets/placenames/ChineseMapTiles.dat")",MAP_TILES)
 RES+=(-resource:"$(W "$ROOT/assets/launcher/stringsChinese.resx")",LAUNCHER_ZH)
 if [ -f "$SYM_ZIP" ]; then
   RES+=(-resource:"$(W "$SYM_ZIP")",SYMBOLS_MENU_ZIP)
@@ -173,7 +143,9 @@ RES+=(-resource:"$(W "$OUT/QuickBattle_HTML.zip")",QB_HTML_ZIP)
   -reference:System.IO.Compression.dll -reference:System.IO.Compression.FileSystem.dll \
   "${RES[@]}" \
   "$(W "$ROOT/src/shared/CMOShared.cs")" \
-  "${INSTALLER_SHARED_SOURCES[@]}" \
+  "$(W "$ROOT/src/shared/MapLabelRenderer.cs")" \
+  "$(W "$ROOT/src/shared/MapLabelCache.cs")" \
+  "$(W "$ROOT/src/shared/MapLabelOriginalCache.cs")" \
   "$(W "$ROOT/src/installer/CMO_Chinese_Setup.cs")"
 
 # Only a new release build maintains the unversioned compatibility copy.

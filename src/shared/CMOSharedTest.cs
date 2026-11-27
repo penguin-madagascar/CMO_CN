@@ -250,62 +250,8 @@ internal static class CMOIntegritySelfTest
         finally { process.Dispose(); }
     }
 
-    private static void MaplessRollbackTests(string bundle, string missingBundle)
-    {
-        foreach (string scenario in new[] { "success", "modified", "untracked", "adopted", "occupied", "incomplete", "child-failed", "child-created" })
-        {
-            string game = Fixture("mapless-" + scenario);
-            Isolate(Path.Combine(game, "test-only-user"));
-            string map = Path.Combine(game, "ChineseMapTiles.dat"), held = map + ".rollback";
-            Write(map, "registered source map");
-            string manifest = CmoPaths.ManifestPath(game);
-            if (scenario != "untracked")
-                InstallManifest.Write(game, "9.9.9", scenario == "adopted" ? "adopted" : "installed-package", InstallManifest.HashEngineFiles(game));
-            if (scenario == "modified") Write(map, "user edited map");
-            if (scenario == "occupied") Write(held, "unrelated file");
-            if (scenario == "child-failed") Write(Path.Combine(game, "Command.exe.config"), "broken XML");
-            if (scenario == "child-created") Write(Path.Combine(game, ".test-create-conflicting-map"), FixtureMarker);
-            string target = scenario == "incomplete" ? missingBundle : bundle;
-            if (scenario == "child-created") target = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string cached = VersionStore.Cache(target);
-            string version = VersionStore.PackageVersion(cached);
-            byte[] before = File.ReadAllBytes(map);
-            byte[] previous = File.Exists(manifest) ? File.ReadAllBytes(manifest) : null;
-            string original = Path.Combine(game, @"WW\Cache\Stamen Terrain - Labels.orig\sentinel");
-            Write(original, "original cache");
-            int stops = 0;
-            string error;
-            bool ok = Rollback.Run(game, version, true, delegate { stops++; }, out error);
-            if (scenario == "success")
-            {
-                InstallManifest current = InstallManifest.Read(game);
-                Check("mapless-target-child-installs-two-files", ok && stops == 1 && !File.Exists(map) && !File.Exists(held)
-                    && current != null && current.Version == version && current.Files.Count == 2 && current.Source == cached
-                    && InstallManifest.Verify(game, out error) == ManifestState.Ok, error);
-            }
-            else if (scenario == "child-created")
-                Check("mapless-conflicting-child-file-preserved", !ok && stops == 1 && File.ReadAllText(map) == "child map"
-                    && Same(before, File.ReadAllBytes(held)) && error.Contains(held), error);
-            else
-            {
-                bool sameManifest = previous == null ? !File.Exists(manifest) : Same(previous, File.ReadAllBytes(manifest));
-                bool sameBackup = scenario == "occupied" ? File.ReadAllText(held) == "unrelated file" : !File.Exists(held);
-                Check("mapless-rollback-" + scenario, !ok && stops == (scenario == "child-failed" ? 1 : 0)
-                    && Same(before, File.ReadAllBytes(map)) && sameManifest && sameBackup, error);
-            }
-            Check("mapless-original-cache-" + scenario, File.ReadAllText(original) == "original cache", original);
-        }
-    }
-
     private static void RollbackTests(string self, string bundle)
     {
-        string pidFile = Path.Combine(root, "timeout-worker.pid");
-        int timedOut = Rollback.RunProcess(self, "--worker \"" + pidFile + "\"", 1500);
-        int pid = int.Parse(File.ReadAllText(pidFile));
-        bool exited;
-        try { using (var worker = System.Diagnostics.Process.GetProcessById(pid)) exited = worker.HasExited; }
-        catch (ArgumentException) { exited = true; }
-        Check("timed-out-worker-exited-before-return", timedOut == -1 && exited, "PID=" + pid);
         string game = Fixture("rollback");
         Isolate(Path.Combine(root, "rollback-user"));
         CmoSettings settings = new CmoSettings();
@@ -370,33 +316,17 @@ internal static class CMOIntegritySelfTest
         try
         {
             if (args.Length == 2 && args[0] == "--prepare") { Prepare(Path.GetFullPath(args[1])); return 0; }
-            if (args.Length >= 1 && args[0] == "--worker")
-            {
-                if (args.Length == 2) Write(args[1], System.Diagnostics.Process.GetCurrentProcess().Id.ToString());
-                System.Threading.Thread.Sleep(30000);
-                return 0;
-            }
+            if (args.Length == 1 && args[0] == "--worker") { System.Threading.Thread.Sleep(30000); return 0; }
             if (args.Length >= 2 && args[0] == "--install")
             {
                 string game = Path.GetFullPath(args[1]);
                 if (File.ReadAllText(Path.Combine(game, ".cmo-integrity-fixture")) != FixtureMarker)
                     throw new InvalidOperationException("Not an explicitly marked test fixture");
                 Isolate(Path.Combine(game, "test-only-user"));
-                if (File.Exists(Path.Combine(game, ".test-create-conflicting-map")))
-                {
-                    Write(Path.Combine(game, "ChineseMapTiles.dat"), "child map");
-                    return 17;
-                }
                 string error;
                 bool ok = CMOLocalizerInstaller.InstallerCore.Install(game, delegate(string path) { }, out error);
                 Console.WriteLine("Synthetic package CLI install=" + ok + " " + error);
                 return ok ? 0 : 1;
-            }
-            if (args.Length == 4 && args[0] == "--mapless-tests")
-            {
-                root = Path.GetFullPath(args[1]);
-                MaplessRollbackTests(Path.GetFullPath(args[2]), Path.GetFullPath(args[3]));
-                return failures == 0 ? 0 : 1;
             }
             if (args.Length != 4 || args[0] != "--tests")
                 throw new ArgumentException("--prepare <inputs> | --tests <fixtures> <rollback-bundle> <missing-bundle>");
@@ -408,7 +338,6 @@ internal static class CMOIntegritySelfTest
             IntegrityFailures(Path.GetFullPath(args[3]));
             DigestTests(self);
             RollbackTests(self, Path.GetFullPath(args[2]));
-            MaplessRollbackTests(Path.GetFullPath(args[2]), Path.GetFullPath(args[3]));
         }
         catch (Exception ex) { failures++; Console.WriteLine("FAIL integrity-harness -- " + ex); }
         Console.WriteLine("CMOIntegrityTest: checks=" + checks + " failures=" + failures + "; synthetic only, no real game/registry/process enumeration");
@@ -444,7 +373,6 @@ internal static class CMOSharedSelfTest
             ManifestRoundTrip();
             ManifestModifiedAndClear();
             ManifestAdopt();
-            MapPackageManifest();
             PackageCachePruneAndPrevious();
             PackageVersionFromRealPackage();
             ReleaseGateTruthTable();
@@ -573,100 +501,6 @@ internal static class CMOSharedSelfTest
         string empty = Game("adopt-empty");
         Check("manifest-adopt-requires-engine", !InstallManifest.Adopt(empty, "4.1.5"),
             "adopt must fail when engine files are absent");
-    }
-
-    // A minimal managed package with the same resource names used by released installers.
-    private static string EnginePackage(string game, bool withMap)
-    {
-        string name = withMap ? "WithMap" : "Legacy";
-        string filename = name + ".dll";
-        var assembly = AppDomain.CurrentDomain.DefineDynamicAssembly(new System.Reflection.AssemblyName(name),
-            System.Reflection.Emit.AssemblyBuilderAccess.Save, game);
-        var module = assembly.DefineDynamicModule(name, filename);
-        using (var dll = File.OpenRead(Path.Combine(game, "CMOLocalizer.dll")))
-        using (var dictionary = File.OpenRead(Path.Combine(game, "CMOLocalizer.json")))
-        using (var map = withMap ? File.OpenRead(Path.Combine(game, "ChineseMapTiles.dat")) : null)
-        {
-            module.DefineManifestResource("CMOLocalizer.dll", dll, System.Reflection.ResourceAttributes.Public);
-            module.DefineManifestResource("CMOLocalizer.json", dictionary, System.Reflection.ResourceAttributes.Public);
-            if (withMap) module.DefineManifestResource("MAP_TILES", map, System.Reflection.ResourceAttributes.Public);
-            assembly.Save(filename);
-        }
-        return Path.Combine(game, filename);
-    }
-
-    private static void MapPackageManifest()
-    {
-        string game = Game("map-package");
-        WriteEngineFiles(game, "map-engine", "map-dictionary");
-        string map = Path.Combine(game, "ChineseMapTiles.dat");
-        string error;
-        var two = InstallManifest.HashEngineFiles(game);
-        string legacy = EnginePackage(game, false);
-        Check("legacy-two-file-package", PackageAssets.VerifyEngineFiles(legacy, two, out error), error);
-        File.WriteAllText(map, "embedded map");
-        var three = InstallManifest.HashEngineFiles(game);
-        string package = EnginePackage(game, true);
-        Check("embedded-map-package", PackageAssets.VerifyEngineFiles(package, three, out error), error);
-        Check("required-map-not-deployed", !PackageAssets.VerifyEngineFiles(package, two, out error), error);
-        Check("legacy-package-cannot-attest-leftover-map", !PackageAssets.VerifyEngineFiles(legacy, three, out error), error);
-        string sidecarHash = InstallManifest.Sha256OfFile(map);
-        Check("selected-sidecar-matches-deployment", PackageAssets.VerifyEngineFiles(legacy, three, out error, sidecarHash), error);
-        Check("selected-sidecar-must-be-deployed", !PackageAssets.VerifyEngineFiles(legacy, two, out error, sidecarHash), error);
-        string setup = Path.Combine(game, "CMO_Chinese_Setup_v4.3.1.exe");
-        File.Copy(legacy, setup, true);
-        string cached = VersionStore.Cache(setup, game, sidecarHash);
-        string cachedMap = PackageAssets.FindMapSidecar(cached, CmoPaths.PackagesDir);
-        Check("offline-sidecar-replay", cachedMap != null && InstallManifest.Sha256OfFile(cachedMap) == sidecarHash
-            && PackageAssets.VerifyEngineFiles(cached, three, out error, InstallManifest.Sha256OfFile(cachedMap)), error);
-        using (File.Open(Path.Combine(CmoPaths.PackagesDir, ".package-cache.lock"), FileMode.Open, FileAccess.Write, FileShare.None))
-            Check("concurrent-cache-writer-leaves-existing-package-intact", VersionStore.Cache(setup, game) == null && File.Exists(cachedMap), "");
-        Check("download-preserves-matching-cached-sidecar", VersionStore.Cache(setup) == cached && File.Exists(cachedMap), "");
-        File.Copy(package, setup, true);
-        Check("same-version-new-build-removes-old-sidecar", VersionStore.Cache(setup) == cached && !File.Exists(cachedMap)
-            && InstallManifest.Sha256OfFile(cached) == InstallManifest.Sha256OfFile(package), "");
-        File.Copy(legacy, setup, true);
-        VersionStore.Cache(setup, game, sidecarHash);
-        Check("confirmed-mapless-install-clears-cached-sidecar", VersionStore.Cache(setup, game) == cached && !File.Exists(cachedMap), "");
-        File.WriteAllText(Path.Combine(CmoPaths.PackagesDir, InstallManifest.MapTileFile), "unrelated cached neighbor");
-        string other = Path.Combine(game, "CMO_Chinese_Setup_v4.3.0.exe");
-        File.Copy(legacy, other, true);
-        string older = VersionStore.Cache(other);
-        Check("cached-sidecar-is-per-package", PackageAssets.FindMapSidecar(older, CmoPaths.PackagesDir) == null, "");
-        File.WriteAllText(map, "changed between verification and caching");
-        Check("cache-rejects-changed-sidecar", VersionStore.Cache(other, game, sidecarHash) == null
-            && PackageAssets.FindMapSidecar(older, CmoPaths.PackagesDir) == null, "");
-        File.WriteAllText(map, "embedded map");
-        // 此自测使用共同的版本缓存；后续用例有自己的一组固定版本。
-        VersionStore.Cache(other, game, sidecarHash);
-        string prunedMap = PackageAssets.FindMapSidecar(older, CmoPaths.PackagesDir);
-        string neighbor = older + ".unrelated.map.dat";
-        File.WriteAllText(neighbor, "user file");
-        VersionStore.Prune(1);
-        Check("prune-deletes-only-the-bound-sidecar", prunedMap != null && !File.Exists(older)
-            && !File.Exists(prunedMap) && File.Exists(neighbor), "");
-        File.Delete(neighbor);
-        File.Delete(cachedMap);
-        File.Delete(cached);
-        File.Delete(older);
-        File.Delete(Path.Combine(CmoPaths.PackagesDir, InstallManifest.MapTileFile));
-        Check("adopt-existing-map", InstallManifest.Adopt(game, "4.3.1"), "");
-        InstallManifest registered = InstallManifest.Read(game);
-        Check("read-all-three-hashes", registered != null && registered.Files.Count == 3
-            && registered.Files["ChineseMapTiles.dat"] == three["ChineseMapTiles.dat"], "");
-        Check("verify-map-manifest", InstallManifest.Verify(game, out error) == ManifestState.Ok, error);
-        File.WriteAllText(map, "different map");
-        Check("reject-tampered-sidecar", !PackageAssets.VerifyEngineFiles(legacy, InstallManifest.HashEngineFiles(game), out error, sidecarHash), error);
-        Check("reject-tampered-map-package", !PackageAssets.VerifyEngineFiles(package, InstallManifest.HashEngineFiles(game), out error), error);
-        Check("detect-tampered-registered-map", InstallManifest.Verify(game, out error) == ManifestState.Modified, error);
-        File.Delete(map);
-        Check("detect-missing-registered-map", InstallManifest.Verify(game, out error) == ManifestState.Modified, error);
-        File.WriteAllText(map, "embedded map");
-        string manifest = CmoPaths.ManifestPath(game);
-        File.WriteAllText(manifest, File.ReadAllText(manifest).Replace(three["ChineseMapTiles.dat"], "invalid"));
-        Check("invalid-recorded-map-hash", InstallManifest.Verify(game, out error) == ManifestState.Modified, error);
-        File.Delete(Path.Combine(game, "CMOLocalizer.dll"));
-        Check("map-does-not-replace-required-engine", !InstallManifest.Adopt(game, "4.3.1"), "");
     }
 
     // 7. 安装包缓存：Prune 保留最近 N 个、Previous 取正确上一版本

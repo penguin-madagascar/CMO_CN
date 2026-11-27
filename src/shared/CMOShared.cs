@@ -399,6 +399,139 @@ namespace CMOShared
         }
     }
 
+    // One-way bridge from previously installed PR map tiles. R88 itself reads only the dictionary.
+    internal sealed class LegacyMapTransition : IDisposable
+    {
+        private const string DataName = "ChineseMapTiles.dat";
+        private readonly string cache;
+        private readonly Dictionary<string, string> markers = new Dictionary<string, string>();
+        private IDisposable guard;
+        internal string DataPath { get; private set; }
+        internal string DataSha256 { get; private set; }
+        internal bool OwnsData { get { return DataSha256 != null; } }
+
+        private LegacyMapTransition(string game)
+        {
+            cache = MapLabelOriginalCache.DirectoryFor(game);
+            DataPath = Path.Combine(Path.GetFullPath(game), DataName);
+        }
+
+        private void Enter() { guard = MapLabelOriginalCache.Lock(cache); }
+
+        public void Dispose()
+        {
+            if (guard == null) return;
+            guard.Dispose();
+            guard = null;
+        }
+
+        // Official PR #8 DATs also shipped in the manual deployment bundle, which did not create a manifest.
+        private static bool PublishedData(string path, string hash)
+        {
+            long size = new FileInfo(path).Length;
+            return (size == 34982424 && MapLabelOriginalCache.Same(hash, "6f602bcf03ef527901160859e622be60823acd1ee04a48d0f8d2d0980ebb5c6b")) ||
+                   (size == 27779190 && MapLabelOriginalCache.Same(hash, "70d8b15695685233b0e4f531898167e2566ae851367cd51b40f4c524493af19e"));
+        }
+
+        // The old marker stores the payload digest, while the installation manifest stores the whole file digest.
+        private static string PayloadHash(string path)
+        {
+            using (var stream = File.OpenRead(path))
+            using (var reader = new BinaryReader(stream, Encoding.UTF8))
+            {
+                if (stream.Length < 77) return null;
+                string magic = Encoding.ASCII.GetString(reader.ReadBytes(8));
+                if ((magic != "CMOTIL01" && magic != "CMOTIL02") || reader.ReadByte() != 64) return null;
+                string expected = Encoding.ASCII.GetString(reader.ReadBytes(64));
+                if (!MapLabelOriginalCache.Digest(expected)) return null;
+                using (var sha = SHA256.Create())
+                    return MapLabelOriginalCache.Same(expected, BitConverter.ToString(sha.ComputeHash(stream)).Replace("-", "")) ? expected : null;
+            }
+        }
+
+        // Null signals an ordinary two-file installation. Existing files with unrelated names or bytes are preserved.
+        internal static LegacyMapTransition Open(string gamePath)
+        {
+            var plan = new LegacyMapTransition(gamePath);
+            string marker = Path.Combine(plan.cache,MapLabelOriginalCache.OldTilesMarker), receipt = Path.Combine(plan.cache,MapLabelOriginalCache.OldRenderMarker);
+            if (!File.Exists(plan.DataPath) && !File.Exists(marker) && !File.Exists(receipt)) return null;
+            plan.Enter();
+            try
+            {
+                MapLabelOriginalCache.Plain(plan.DataPath); MapLabelOriginalCache.Plain(marker); MapLabelOriginalCache.Plain(receipt);
+                string recorded;
+                var manifest = InstallManifest.Read(gamePath);
+                bool tracked = manifest != null && !MapLabelOriginalCache.Same(manifest.Source, "adopted") && manifest.Files.TryGetValue(DataName,out recorded);
+                string marked = File.Exists(marker) && new FileInfo(marker).Length <= 68 ? File.ReadAllText(marker).Trim() : null;
+                bool validMarker = MapLabelOriginalCache.Digest(marked);
+                var oldReceipt = MapLabelOriginalCache.ReadOldReceipt(receipt);
+                if (File.Exists(plan.DataPath))
+                {
+                    string fileHash = InstallManifest.Sha256OfFile(plan.DataPath);
+                    if (tracked && !MapLabelOriginalCache.Same(manifest.Files[DataName],fileHash))
+                        throw new IOException("先前安装的地图文件已有改动，已保留：" + plan.DataPath);
+                    if (tracked || PublishedData(plan.DataPath,fileHash) || (validMarker && MapLabelOriginalCache.Same(marked,PayloadHash(plan.DataPath))))
+                        plan.DataSha256 = fileHash;
+                }
+                if (!tracked && !plan.OwnsData && !(validMarker && oldReceipt != null))
+                {
+                    plan.Dispose();
+                    return null;
+                }
+                if (validMarker) plan.markers[marker] = InstallManifest.Sha256OfFile(marker);
+                if (oldReceipt != null) plan.markers[receipt] = InstallManifest.Sha256OfFile(receipt);
+                return plan;
+            }
+            catch { plan.Dispose(); throw; }
+        }
+
+        internal void RemoveCacheMarkers()
+        {
+            foreach (var marker in markers)
+            {
+                MapLabelOriginalCache.Plain(marker.Key);
+                if (File.Exists(marker.Key) && MapLabelOriginalCache.Same(InstallManifest.Sha256OfFile(marker.Key),marker.Value))
+                    File.Delete(marker.Key);
+            }
+        }
+
+        internal void RemoveCacheMarkersAfterRollback()
+        {
+            Enter();
+            try { RemoveCacheMarkers(); } finally { Dispose(); }
+        }
+
+        internal void Commit()
+        {
+            if (OwnsData && File.Exists(DataPath))
+            {
+                MapLabelOriginalCache.Plain(DataPath);
+                if (!MapLabelOriginalCache.Same(InstallManifest.Sha256OfFile(DataPath), DataSha256))
+                    throw new IOException("迁移过程中地图文件已改变，已保留：" + DataPath);
+                File.Delete(DataPath);
+            }
+            RemoveCacheMarkers();
+        }
+
+        internal static void RequireGameStopped(string gamePath)
+        {
+            string target = Path.GetFullPath(Path.Combine(gamePath, "Command.exe"));
+            foreach (var process in Process.GetProcessesByName("Command"))
+            {
+                using (process)
+                {
+                    try
+                    {
+                        if (MapLabelOriginalCache.Same(process.MainModule.FileName,target))
+                            throw new IOException("请先关闭当前游戏，再迁移旧地图缓存。");
+                    }
+                    catch (InvalidOperationException) { } // It exited during enumeration.
+                }
+            }
+        }
+
+    }
+
     public enum ManifestState { NotInstalled, Ok, Modified }
 
     /// <summary>安装清单：游戏目录级「部署实证」，是「装了什么版本」的唯一真相。</summary>
@@ -412,7 +545,6 @@ namespace CMOShared
         public readonly Dictionary<string, string> Files = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
         public static readonly string[] EngineFiles = { "CMOLocalizer.dll", "CMOLocalizer.json" };
-        internal const string MapTileFile = "ChineseMapTiles.dat";
 
         public static string Sha256OfFile(string path)
         {
@@ -434,8 +566,6 @@ namespace CMOShared
                 string p = Path.Combine(gamePath, name);
                 if (File.Exists(p)) files[name] = Sha256OfFile(p);
             }
-            string mapTiles = Path.Combine(gamePath, MapTileFile);
-            if (File.Exists(mapTiles)) files[MapTileFile] = Sha256OfFile(mapTiles);
             return files;
         }
 
@@ -488,7 +618,7 @@ namespace CMOShared
                     if (open >= 0 && close > open)
                     {
                         string block = json.Substring(open + 1, close - open - 1);
-                        foreach (Match mm in Regex.Matches(block, "\"((?:[^\"\\\\]|\\\\.)*)\"\\s*:\\s*(?:\"([0-9a-fA-F]{64})\")?"))
+                        foreach (Match mm in Regex.Matches(block, "\"((?:[^\"\\\\]|\\\\.)*)\"\\s*:\\s*\"([0-9a-fA-F]{8,})\""))
                             m.Files[FlatJson.Unescape(mm.Groups[1].Value)] = mm.Groups[2].Value.ToLowerInvariant();
                     }
                 }
@@ -511,11 +641,8 @@ namespace CMOShared
                 detail = "无安装清单";
                 return ManifestState.NotInstalled;
             }
-            foreach (string name in EngineFiles)
-                if (!m.Files.ContainsKey(name)) { detail = "清单缺少 " + name; return ManifestState.Modified; }
             foreach (KeyValuePair<string, string> kv in m.Files)
             {
-                if (kv.Value.Length != 64) { detail = kv.Key + " 的清单 SHA256 无效"; return ManifestState.Modified; }
                 string p = Path.Combine(gamePath, kv.Key);
                 if (!File.Exists(p)) { detail = kv.Key + " 缺失"; return ManifestState.Modified; }
                 string actual;
@@ -569,9 +696,10 @@ namespace CMOShared
         public static bool Adopt(string gamePath, string fallbackVersion)
         {
             if (string.IsNullOrEmpty(gamePath) || !Directory.Exists(gamePath)) return false;
-            Dictionary<string, string> files = HashEngineFiles(gamePath);
             foreach (string name in EngineFiles)
-                if (!files.ContainsKey(name)) return false;
+                if (!File.Exists(Path.Combine(gamePath, name))) return false;
+            Dictionary<string, string> files = HashEngineFiles(gamePath);
+            if (files.Count != EngineFiles.Length) return false;
             // 版本回退链：调用方给的（注册表）→ 已部署资产自带戳 → unknown
             string v = fallbackVersion;
             if (string.IsNullOrEmpty(v)) v = DeployedAssetVersion(gamePath);
@@ -678,7 +806,7 @@ namespace CMOShared
         }
 
         /// <summary>把安装包复制进缓存目录（按资产版本命名）；返回缓存路径，失败返回 null。</summary>
-        public static string Cache(string setupPath, string installedGame = null, string sidecarHash = null)
+        public static string Cache(string setupPath)
         {
             try
             {
@@ -690,63 +818,23 @@ namespace CMOShared
                     return null;
                 }
                 CmoPaths.EnsureDir(CmoPaths.PackagesDir);
-                using (OpenCacheWriter())
+                string dest = Path.Combine(CmoPaths.PackagesDir, "CMO_Chinese_Setup_v" + ver + ".exe");
+                bool samePlace = string.Equals(Path.GetFullPath(dest), Path.GetFullPath(setupPath), StringComparison.OrdinalIgnoreCase);
+                if (!samePlace)
                 {
-                    string dest = Path.Combine(CmoPaths.PackagesDir, "CMO_Chinese_Setup_v" + ver + ".exe");
-                    bool samePlace = string.Equals(Path.GetFullPath(dest), Path.GetFullPath(setupPath), StringComparison.OrdinalIgnoreCase);
-                    // 旁置地图绑定到具体 EXE；不同版本或同版本的不同构建不能串用。
-                    string setupHash = InstallManifest.Sha256OfFile(setupPath);
-                    string map = CachedMapPath(dest, setupHash);
-                    string previousHash = samePlace ? setupHash : (File.Exists(dest) ? InstallManifest.Sha256OfFile(dest) : null);
-                    if (sidecarHash != null)
-                        CopyVerified(Path.Combine(installedGame, InstallManifest.MapTileFile), map, sidecarHash);
-                    else if (installedGame != null && File.Exists(map))
-                        File.Delete(map);
-                    if (setupHash != previousHash)
+                    if (!File.Exists(dest) || new FileInfo(dest).Length != new FileInfo(setupPath).Length)
                     {
-                        try { CopyVerified(setupPath, dest, setupHash); }
-                        catch
-                        {
-                            if (sidecarHash != null) File.Delete(map);
-                            throw;
-                        }
-                        if (previousHash != null) File.Delete(CachedMapPath(dest, previousHash));
+                        File.Copy(setupPath, dest, true);
+                        CmoLog.Info("已缓存安装包: " + dest);
                     }
-                    return dest;
                 }
+                return dest;
             }
             catch (Exception ex)
             {
                 CmoLog.Warn("缓存安装包失败: " + ex.Message);
                 return null;
             }
-        }
-
-        private static FileStream OpenCacheWriter()
-        {
-            // 安装器和更新器共用目录。在另一个进程发布或清理时，沿用缓存失败不影响安装的处理。
-            return File.Open(Path.Combine(CmoPaths.PackagesDir, ".package-cache.lock"),
-                FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-        }
-
-        internal static string CachedMapPath(string setupPath, string setupHash)
-        {
-            return setupPath + "." + setupHash + ".map.dat";
-        }
-
-        private static void CopyVerified(string source, string target, string expectedHash)
-        {
-            if (File.Exists(target) && InstallManifest.Sha256OfFile(target) == expectedHash) return;
-            string temp = Path.Combine(Path.GetDirectoryName(target), Path.GetRandomFileName());
-            try
-            {
-                File.Copy(source, temp);
-                if (InstallManifest.Sha256OfFile(temp) != expectedHash)
-                    throw new IOException("缓存前文件已变化: " + source);
-                if (File.Exists(target)) File.Replace(temp, target, null);
-                else File.Move(temp, target);
-            }
-            finally { if (File.Exists(temp)) File.Delete(temp); }
         }
 
         public static List<string> CachedVersions()
@@ -805,17 +893,13 @@ namespace CMOShared
             try
             {
                 if (keep < 1) keep = 1;
-                if (!Directory.Exists(CmoPaths.PackagesDir)) return;
-                using (OpenCacheWriter())
+                List<string> vs = CachedVersions();
+                for (int i = keep; i < vs.Count; i++)
                 {
-                    List<string> vs = CachedVersions();
-                    for (int i = keep; i < vs.Count; i++)
+                    string p = CachedPackage(vs[i]);
+                    if (p != null && File.Exists(p))
                     {
-                        string p = CachedPackage(vs[i]);
-                        if (p == null || !File.Exists(p)) continue;
-                        string map = CachedMapPath(p, InstallManifest.Sha256OfFile(p));
                         File.Delete(p);
-                        File.Delete(map);
                         CmoLog.Info("清理旧安装包缓存: " + p);
                     }
                 }
@@ -892,70 +976,31 @@ namespace CMOShared
             }
         }
 
-        // 普通安装器按分发目录寻找旁置地图。缓存中多个安装器共享目录，只能读取本 EXE 的副本。
-        internal static string FindMapSidecar(string packagePath, string sourceDir)
-        {
-            if (string.Equals(Path.GetFullPath(sourceDir).TrimEnd(Path.DirectorySeparatorChar),
-                Path.GetFullPath(CmoPaths.PackagesDir).TrimEnd(Path.DirectorySeparatorChar), StringComparison.OrdinalIgnoreCase))
-            {
-                string cached = VersionStore.CachedMapPath(packagePath, InstallManifest.Sha256OfFile(packagePath));
-                return File.Exists(cached) ? cached : null;
-            }
-            string path = Path.Combine(sourceDir, InstallManifest.MapTileFile);
-            if (!File.Exists(path)) path = Path.Combine(sourceDir, "patch_files", InstallManifest.MapTileFile);
-            return File.Exists(path) ? path : null;
-        }
-
-        internal static Dictionary<string, string> ExpectedEngineFiles(string packagePath, string sidecarHash, out string error)
+        public static bool VerifyEngineFiles(string packagePath, Dictionary<string, string> files, out string error)
         {
             error = "";
-            string[] resources = EmbeddedResourceNames(packagePath);
-            if (resources.Length == 0)
+            if (files == null || files.Count != InstallManifest.EngineFiles.Length)
             {
-                error = "无法读取安装包内嵌资源，已中止登记。";
-                return null;
-            }
-            var expected = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-            foreach (string name in InstallManifest.EngineFiles)
-                expected[name] = EmbeddedSha256(packagePath, name);
-            if (Array.IndexOf(resources, "MAP_TILES") >= 0)
-                expected[InstallManifest.MapTileFile] = EmbeddedSha256(packagePath, "MAP_TILES");
-            else if (sidecarHash != null)
-                expected[InstallManifest.MapTileFile] = sidecarHash;
-            foreach (var file in expected)
-            {
-                if (!string.IsNullOrEmpty(file.Value)) continue;
-                error = "安装包内未找到 " + file.Key + " 资源或无法读取其 SHA256，已中止登记。";
-                return null;
-            }
-            return expected;
-        }
-
-        internal static bool MatchEngineFiles(Dictionary<string, string> expected, Dictionary<string, string> files, out string error)
-        {
-            error = "";
-            if (files == null || files.Count != expected.Count)
-            {
-                error = "已部署文件与安装包应校验的文件不一致（" + string.Join("、", expected.Keys) + "），已中止登记。";
+                error = "部署后引擎文件不完整（期望 dll+json），已中止登记。";
                 return false;
             }
-            foreach (var file in expected)
+            foreach (string name in InstallManifest.EngineFiles)
             {
+                string expect = EmbeddedSha256(packagePath, name);
                 string actual;
-                if (!files.TryGetValue(file.Key, out actual)
-                    || !string.Equals(actual, file.Value, StringComparison.OrdinalIgnoreCase))
+                if (string.IsNullOrEmpty(expect))
                 {
-                    error = "部署后 " + file.Key + " 与安装包载荷不一致，已中止登记（避免混合态）。";
+                    error = "安装包内未找到 " + name + " 资源或无法读取其 SHA256，已中止登记。";
+                    return false;
+                }
+                if (!files.TryGetValue(name, out actual)
+                    || !string.Equals(actual, expect, StringComparison.OrdinalIgnoreCase))
+                {
+                    error = "部署后 " + name + " 与安装包内嵌载荷不一致，已中止登记（避免混合态）。";
                     return false;
                 }
             }
             return true;
-        }
-
-        public static bool VerifyEngineFiles(string packagePath, Dictionary<string, string> files, out string error, string sidecarHash = null)
-        {
-            var expected = ExpectedEngineFiles(packagePath, sidecarHash, out error);
-            return expected != null && MatchEngineFiles(expected, files, out error);
         }
 
         public static Stream EmbeddedResourceStream(string packagePath, string resourceName)
@@ -1054,97 +1099,119 @@ namespace CMOShared
                 return false;
             }
 
-            string map = Path.Combine(gamePath, InstallManifest.MapTileFile);
+            const string mapName = "ChineseMapTiles.dat";
+            string map = Path.Combine(gamePath, mapName);
             string held = map + ".rollback";
-            bool moved = false, success = false;
-            string savedManifest = null;
+            LegacyMapTransition legacy = null;
+            string savedManifest = null, targetMapHash = null;
+            bool moved = false, installed = false;
             try
             {
-                string sidecar = PackageAssets.FindMapSidecar(pkg, Path.GetDirectoryName(pkg));
-                string sidecarHash = sidecar == null ? null : InstallManifest.Sha256OfFile(sidecar);
-                var expected = PackageAssets.ExpectedEngineFiles(pkg, sidecarHash, out error);
-                if (expected == null) return false;
-                string recorded = null;
-                if (!expected.ContainsKey(InstallManifest.MapTileFile) && File.Exists(map))
+                string[] resources = PackageAssets.EmbeddedResourceNames(pkg);
+                if (resources.Length == 0)
+                    throw new IOException("无法读取回退安装包资源: " + pkg);
+                if (Array.IndexOf(resources, "MAP_TILES") >= 0)
                 {
-                    InstallManifest installed = InstallManifest.Read(gamePath);
-                    if (installed == null || installed.Source == "adopted"
-                        || !installed.Files.TryGetValue(InstallManifest.MapTileFile, out recorded)
-                        || (File.GetAttributes(map) & FileAttributes.ReparsePoint) != 0
-                        || !string.Equals(recorded, InstallManifest.Sha256OfFile(map), StringComparison.OrdinalIgnoreCase))
-                    {
-                        error = "目标版本不带地图，现有地图无法与原安装清单核对，已保留: " + map;
-                        return false;
-                    }
-                    if (File.Exists(held))
-                    {
-                        error = "暂存地图的位置已被占用，已保留两份文件: " + held;
-                        return false;
-                    }
-                    savedManifest = File.ReadAllText(CmoPaths.ManifestPath(gamePath), Encoding.UTF8);
+                    targetMapHash = PackageAssets.EmbeddedSha256(pkg, "MAP_TILES");
+                    if (targetMapHash == null) throw new IOException("无法核验旧包内嵌地图: " + pkg);
+                }
+                else
+                {
+                    // 旧 PR 的离线旁置资产按安装器本身的 SHA 绑定；目录内其他版本的地图不参与。
+                    string sidecar = pkg + "." + InstallManifest.Sha256OfFile(pkg) + ".map.dat";
+                    if (File.Exists(sidecar)) targetMapHash = InstallManifest.Sha256OfFile(sidecar);
                 }
 
                 stopProcesses();
-                if (recorded != null)
+                legacy = LegacyMapTransition.Open(gamePath);
+                using (legacy)
                 {
-                    // 子安装器会自行重绘缓存；原始 Labels.orig 仍由它和卸载流程使用。
-                    File.Move(map, held);
-                    moved = true;
-                    if (!string.Equals(recorded, InstallManifest.Sha256OfFile(held), StringComparison.OrdinalIgnoreCase))
-                        throw new IOException("暂存地图与原安装清单不一致。");
+                    if (File.Exists(held) || Directory.Exists(held))
+                        throw new IOException("已有未完成回退的暂存文件，请先核对: " + held);
+                    if (legacy != null && legacy.OwnsData)
+                    {
+                        string manifest = CmoPaths.ManifestPath(gamePath);
+                        if (File.Exists(manifest)) savedManifest = File.ReadAllText(manifest, Encoding.UTF8);
+                        File.Move(legacy.DataPath, held);
+                        moved = true;
+                        RequireUnchangedMap(held, legacy.DataSha256);
+                    }
+                    else if (File.Exists(map))
+                    {
+                        InstallManifest previous = InstallManifest.Read(gamePath);
+                        if (targetMapHash != null || (previous != null && previous.Files.ContainsKey(mapName)))
+                            throw new IOException("现有同名文件无法确认归属，已保留: " + map);
+                    }
                 }
-                success = InstallCachedPackage(gamePath, targetVersion, pkg, expected, out error);
+
+                // 子安装器也可能进入地图迁移或刷新缓存，不能跨进程持有旧缓存互斥。
+                int code = RunProcess(pkg, "--install \"" + gamePath + "\" --silent", 600000);
+                if (code != 0) throw new IOException("运行安装包失败（退出码 " + code + "）: " + pkg);
+                Dictionary<string, string> files = InstallManifest.HashEngineFiles(gamePath);
+                if (!PackageAssets.VerifyEngineFiles(pkg, files, out error)) throw new IOException(error);
+                if (targetMapHash != null)
+                {
+                    if (!SameMap(map, targetMapHash)) throw new IOException("部署的旧版地图与目标安装包不符: " + map);
+                    files[mapName] = targetMapHash;
+                }
+                else if (moved && File.Exists(map))
+                    throw new IOException("回退过程中出现新的同名文件，已保留: " + map);
+                if (!InstallManifest.Write(gamePath, targetVersion, pkg, files))
+                    throw new IOException("回退已部署，但无法登记安装清单。");
+                installed = true;
+                if (targetMapHash == null && legacy != null) legacy.RemoveCacheMarkersAfterRollback();
+                if (moved)
+                {
+                    RequireUnchangedMap(held, legacy.DataSha256);
+                    File.Delete(held);
+                }
+                CmoLog.Info("已回退到 v" + targetVersion + "（" + pkg + "）");
+                return true;
             }
             catch (TimeoutException ex)
             {
-                error = ex.Message;
-                if (moved) error += " 请待子进程结束后检查原地图: " + held;
-                CmoLog.Error(error);
-                return false;
+                // 超时后仍在运行的子进程可能继续写文件，此时保留原件，不与子进程竞争还原。
+                error = ex.Message + (moved ? " 原地图暂存于: " + held : "");
             }
-            catch (Exception ex) { error = "回退失败: " + ex.Message; }
-
-            if (moved)
+            catch (Exception ex)
             {
-                try
+                error = "回退失败: " + ex.Message;
+                if (moved && !installed)
                 {
-                    if (success) File.Delete(held);
-                    else
+                    try
                     {
-                        // File.Move 不覆盖子进程或用户后来写入的同名文件。
-                        File.Move(held, map);
-                        AtomicFile.WriteText(CmoPaths.ManifestPath(gamePath), savedManifest);
+                        RequireUnchangedMap(held, legacy.DataSha256);
+                        if (File.Exists(map) && targetMapHash != null && SameMap(map, targetMapHash))
+                            File.Replace(held, map, null);
+                        else File.Move(held, map); // 后来出现的未知文件不会被覆盖。
+                        if (savedManifest != null)
+                            AtomicFile.WriteText(CmoPaths.ManifestPath(gamePath), savedManifest);
+                        else
+                        {
+                            // 绿色旧版可能没有清单。只撤销这次子安装器刚登记的目标版本。
+                            var child = InstallManifest.Read(gamePath);
+                            if (child != null && string.Equals(child.Source, pkg, StringComparison.OrdinalIgnoreCase)
+                                && string.Equals(child.Version, pkgVer, StringComparison.OrdinalIgnoreCase))
+                                File.Delete(CmoPaths.ManifestPath(gamePath));
+                        }
                     }
+                    catch (Exception restoreError) { error += " 还原失败: " + restoreError.Message; }
                 }
-                catch (Exception ex)
-                {
-                    error += " 无法完成地图回退清理: " + ex.Message;
-                    if (File.Exists(held)) error += " 原地图保留在 " + held;
-                    success = false;
-                }
+                if (moved && File.Exists(held)) error += " 原地图暂存于: " + held;
             }
-            if (success) CmoLog.Info("已回退到 v" + targetVersion + "（" + pkg + "）");
-            else CmoLog.Error(error);
-            return success;
+            CmoLog.Error(error);
+            return false;
         }
 
-        private static bool InstallCachedPackage(string gamePath, string targetVersion, string pkg,
-            Dictionary<string, string> expected, out string error)
+        private static void RequireUnchangedMap(string path, string hash)
         {
-            int code = RunProcess(pkg, "--install \"" + gamePath + "\" --silent", 600000);
-            if (code != 0)
-            {
-                error = "运行安装包失败（退出码 " + code + "）: " + pkg;
-                return false;
-            }
-            Dictionary<string, string> files = InstallManifest.HashEngineFiles(gamePath);
-            if (!PackageAssets.MatchEngineFiles(expected, files, out error)) return false;
-            if (!InstallManifest.Write(gamePath, targetVersion, pkg, files))
-            {
-                error = "回退成功但写入安装清单失败，请重新安装以修复状态。";
-                return false;
-            }
-            return true;
+            if (!SameMap(path, hash)) throw new IOException("暂存地图与迁移前的摘要不符: " + path);
+        }
+
+        private static bool SameMap(string path, string hash)
+        {
+            return File.Exists(path) && (File.GetAttributes(path) & FileAttributes.ReparsePoint) == 0
+                && string.Equals(InstallManifest.Sha256OfFile(path), hash, StringComparison.OrdinalIgnoreCase);
         }
 
         public static void KillProcesses()

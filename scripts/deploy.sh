@@ -46,7 +46,7 @@ if check.stdout.strip():
 if backup.exists():
     raise SystemExit("backup destination already exists; never overwrite an earlier backup")
 backup.mkdir(parents=True)
-relatives = ["Command.exe.config", "CMOLocalizer.dll", "CMOLocalizer.json", "ChineseMapTiles.dat",
+relatives = ["Command.exe.config", "CMOLocalizer.dll", "CMOLocalizer.json",
              "WW/PlacenameSets/Synoptic/0000_0000.wwp", "WW/PlacenameSets/Cities/0000_0000.wwp"]
 relatives += ["DB/Templates/" + p.name for p in sorted((root / "assets/db_templates").glob("*.html"))]
 records = []
@@ -74,7 +74,6 @@ deploy_file() {
 
 deploy_file "$ENGINE" "$GAME/CMOLocalizer.dll"
 deploy_file "$DICTIONARY" "$GAME/CMOLocalizer.json"
-deploy_file "$ROOT/assets/placenames/ChineseMapTiles.dat" "$GAME/ChineseMapTiles.dat"
 cp "$ROOT/assets/db_templates/"*.html "$GAME/DB/Templates/"
 cp "$ROOT/assets/placenames/Synoptic.wwp" "$GAME/WW/PlacenameSets/Synoptic/0000_0000.wwp"
 cp "$ROOT/assets/placenames/Cities.wwp" "$GAME/WW/PlacenameSets/Cities/0000_0000.wwp"
@@ -139,14 +138,13 @@ print(f"deployed: offsets={len(d['offsets'])} exact={len(d['exact'])} "
 # （R0 门禁会红，但那时已经白跑一整套回归）。
 stale = []
 for src, dst in ((engine, game / "CMOLocalizer.dll"),
-                 (dictionary, game / "CMOLocalizer.json"),
-                 (root / "assets/placenames/ChineseMapTiles.dat", game / "ChineseMapTiles.dat")):
+                 (dictionary, game / "CMOLocalizer.json")):
     if src.read_bytes() != dst.read_bytes():
         stale.append(dst.name)
 if stale:
     print("deploy FAIL: 与仓库产物不一致: " + ", ".join(stale))
     raise SystemExit(1)
-print("deployed: dll/json/map tiles 与仓库产物逐字节一致")
+print("deployed: dll/json 与仓库产物逐字节一致")
 PYEOF
 
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(cygpath -w "$ROOT/scripts/refresh_placename_tiles.ps1")" -GameDir "$(cygpath -w "$GAME")"
