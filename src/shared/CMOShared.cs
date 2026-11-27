@@ -412,6 +412,7 @@ namespace CMOShared
         public readonly Dictionary<string, string> Files = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
         public static readonly string[] EngineFiles = { "CMOLocalizer.dll", "CMOLocalizer.json" };
+        internal const string MapTileFile = "ChineseMapTiles.dat";
 
         public static string Sha256OfFile(string path)
         {
@@ -433,8 +434,8 @@ namespace CMOShared
                 string p = Path.Combine(gamePath, name);
                 if (File.Exists(p)) files[name] = Sha256OfFile(p);
             }
-            string mapTiles = Path.Combine(gamePath, "ChineseMapTiles.dat");
-            if (File.Exists(mapTiles)) files["ChineseMapTiles.dat"] = Sha256OfFile(mapTiles);
+            string mapTiles = Path.Combine(gamePath, MapTileFile);
+            if (File.Exists(mapTiles)) files[MapTileFile] = Sha256OfFile(mapTiles);
             return files;
         }
 
@@ -487,7 +488,7 @@ namespace CMOShared
                     if (open >= 0 && close > open)
                     {
                         string block = json.Substring(open + 1, close - open - 1);
-                        foreach (Match mm in Regex.Matches(block, "\"((?:[^\"\\\\]|\\\\.)*)\"\\s*:\\s*\"([0-9a-fA-F]{8,})\""))
+                        foreach (Match mm in Regex.Matches(block, "\"((?:[^\"\\\\]|\\\\.)*)\"\\s*:\\s*(?:\"([0-9a-fA-F]{64})\")?"))
                             m.Files[FlatJson.Unescape(mm.Groups[1].Value)] = mm.Groups[2].Value.ToLowerInvariant();
                     }
                 }
@@ -510,8 +511,11 @@ namespace CMOShared
                 detail = "无安装清单";
                 return ManifestState.NotInstalled;
             }
+            foreach (string name in EngineFiles)
+                if (!m.Files.ContainsKey(name)) { detail = "清单缺少 " + name; return ManifestState.Modified; }
             foreach (KeyValuePair<string, string> kv in m.Files)
             {
+                if (kv.Value.Length != 64) { detail = kv.Key + " 的清单 SHA256 无效"; return ManifestState.Modified; }
                 string p = Path.Combine(gamePath, kv.Key);
                 if (!File.Exists(p)) { detail = kv.Key + " 缺失"; return ManifestState.Modified; }
                 string actual;
@@ -565,10 +569,9 @@ namespace CMOShared
         public static bool Adopt(string gamePath, string fallbackVersion)
         {
             if (string.IsNullOrEmpty(gamePath) || !Directory.Exists(gamePath)) return false;
-            foreach (string name in EngineFiles)
-                if (!File.Exists(Path.Combine(gamePath, name))) return false;
             Dictionary<string, string> files = HashEngineFiles(gamePath);
-            if (files.Count != EngineFiles.Length) return false;
+            foreach (string name in EngineFiles)
+                if (!files.ContainsKey(name)) return false;
             // 版本回退链：调用方给的（注册表）→ 已部署资产自带戳 → unknown
             string v = fallbackVersion;
             if (string.IsNullOrEmpty(v)) v = DeployedAssetVersion(gamePath);
@@ -848,14 +851,22 @@ namespace CMOShared
         public static bool VerifyEngineFiles(string packagePath, Dictionary<string, string> files, out string error)
         {
             error = "";
-            if (files == null || files.Count != InstallManifest.EngineFiles.Length)
+            string[] resources = EmbeddedResourceNames(packagePath);
+            if (resources.Length == 0)
             {
-                error = "部署后引擎文件不完整（期望 dll+json），已中止登记。";
+                error = "无法读取安装包内嵌资源，已中止登记。";
                 return false;
             }
-            foreach (string name in InstallManifest.EngineFiles)
+            var expectedFiles = new List<string>(InstallManifest.EngineFiles);
+            if (Array.IndexOf(resources, "MAP_TILES") >= 0) expectedFiles.Add(InstallManifest.MapTileFile);
+            if (files == null || files.Count != expectedFiles.Count)
             {
-                string expect = EmbeddedSha256(packagePath, name);
+                error = "已部署文件与安装包应校验的文件不一致（" + string.Join("、", expectedFiles.ToArray()) + "），已中止登记。";
+                return false;
+            }
+            foreach (string name in expectedFiles)
+            {
+                string expect = EmbeddedSha256(packagePath, name == InstallManifest.MapTileFile ? "MAP_TILES" : name);
                 string actual;
                 if (string.IsNullOrEmpty(expect))
                 {

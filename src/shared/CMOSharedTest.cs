@@ -373,6 +373,7 @@ internal static class CMOSharedSelfTest
             ManifestRoundTrip();
             ManifestModifiedAndClear();
             ManifestAdopt();
+            MapPackageManifest();
             PackageCachePruneAndPrevious();
             PackageVersionFromRealPackage();
             ReleaseGateTruthTable();
@@ -501,6 +502,59 @@ internal static class CMOSharedSelfTest
         string empty = Game("adopt-empty");
         Check("manifest-adopt-requires-engine", !InstallManifest.Adopt(empty, "4.1.5"),
             "adopt must fail when engine files are absent");
+    }
+
+    // A minimal managed package with the same resource names used by released installers.
+    private static string EnginePackage(string game, bool withMap)
+    {
+        string name = withMap ? "WithMap" : "Legacy";
+        string filename = name + ".dll";
+        var assembly = AppDomain.CurrentDomain.DefineDynamicAssembly(new System.Reflection.AssemblyName(name),
+            System.Reflection.Emit.AssemblyBuilderAccess.Save, game);
+        var module = assembly.DefineDynamicModule(name, filename);
+        using (var dll = File.OpenRead(Path.Combine(game, "CMOLocalizer.dll")))
+        using (var dictionary = File.OpenRead(Path.Combine(game, "CMOLocalizer.json")))
+        using (var map = withMap ? File.OpenRead(Path.Combine(game, "ChineseMapTiles.dat")) : null)
+        {
+            module.DefineManifestResource("CMOLocalizer.dll", dll, System.Reflection.ResourceAttributes.Public);
+            module.DefineManifestResource("CMOLocalizer.json", dictionary, System.Reflection.ResourceAttributes.Public);
+            if (withMap) module.DefineManifestResource("MAP_TILES", map, System.Reflection.ResourceAttributes.Public);
+            assembly.Save(filename);
+        }
+        return Path.Combine(game, filename);
+    }
+
+    private static void MapPackageManifest()
+    {
+        string game = Game("map-package");
+        WriteEngineFiles(game, "map-engine", "map-dictionary");
+        string map = Path.Combine(game, "ChineseMapTiles.dat");
+        string error;
+        var two = InstallManifest.HashEngineFiles(game);
+        string legacy = EnginePackage(game, false);
+        Check("legacy-two-file-package", PackageAssets.VerifyEngineFiles(legacy, two, out error), error);
+        File.WriteAllText(map, "embedded map");
+        var three = InstallManifest.HashEngineFiles(game);
+        string package = EnginePackage(game, true);
+        Check("embedded-map-package", PackageAssets.VerifyEngineFiles(package, three, out error), error);
+        Check("required-map-not-deployed", !PackageAssets.VerifyEngineFiles(package, two, out error), error);
+        Check("legacy-package-cannot-attest-leftover-map", !PackageAssets.VerifyEngineFiles(legacy, three, out error), error);
+        Check("adopt-existing-map", InstallManifest.Adopt(game, "4.3.1"), "");
+        InstallManifest registered = InstallManifest.Read(game);
+        Check("read-all-three-hashes", registered != null && registered.Files.Count == 3
+            && registered.Files["ChineseMapTiles.dat"] == three["ChineseMapTiles.dat"], "");
+        Check("verify-map-manifest", InstallManifest.Verify(game, out error) == ManifestState.Ok, error);
+        File.WriteAllText(map, "different map");
+        Check("reject-tampered-map-package", !PackageAssets.VerifyEngineFiles(package, InstallManifest.HashEngineFiles(game), out error), error);
+        Check("detect-tampered-registered-map", InstallManifest.Verify(game, out error) == ManifestState.Modified, error);
+        File.Delete(map);
+        Check("detect-missing-registered-map", InstallManifest.Verify(game, out error) == ManifestState.Modified, error);
+        File.WriteAllText(map, "embedded map");
+        string manifest = CmoPaths.ManifestPath(game);
+        File.WriteAllText(manifest, File.ReadAllText(manifest).Replace(three["ChineseMapTiles.dat"], "invalid"));
+        Check("invalid-recorded-map-hash", InstallManifest.Verify(game, out error) == ManifestState.Modified, error);
+        File.Delete(Path.Combine(game, "CMOLocalizer.dll"));
+        Check("map-does-not-replace-required-engine", !InstallManifest.Adopt(game, "4.3.1"), "");
     }
 
     // 7. 安装包缓存：Prune 保留最近 N 个、Previous 取正确上一版本
