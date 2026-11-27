@@ -1,0 +1,25 @@
+{
+  "id": "S20-Haldia-continuation-z7-95-56",
+  "z": 7,
+  "x": 95,
+  "y": 56,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/95/56.png"
+  ],
+  "context_tiles": [
+    "7/95/55.png"
+  ],
+  "features": [],
+  "translations": [],
+  "layouts": [],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "S20-OBS14-shared-AM26-139-Haldia", "owner_region": "AM-India-z7-South", "feature_id": "AM26-139-Haldia", "kind": "city", "original": "Haldia", "original_bbox": [74, -14, 116, 7], "source_url": "@source/7dc36073073d9b31", "review_notes": "PROPOSAL ONLY: complete same-print Source bbox; new-tile continuation198 accounted here; unchanged old owner remains sole Chinese caption/native owner. Requires Root exact reuse and later genuine review."}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "WWP-Cities-2125-z7", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2125, "original_Chinese_name": "库尔塔利", "lat_f32_bits": 1102000947, "lon_f32_bits": 1118883021, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 111.0, "y": 11.0, "font_style": "regular", "font_size": 12, "lines": ["库尔塔利"]}}
+  ]
+}

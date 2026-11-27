@@ -1,0 +1,46 @@
+{
+  "id": "HH5-Heilong-z8-216-89-1x2",
+  "z": 8,
+  "x": 216,
+  "y": 89,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    {"path": "8/216/89.png", "origin": "qualified historical attested original", "source_alpha_count": 1184},
+    {"path": "8/216/90.png", "origin": "qualified historical attested original", "source_alpha_count": 178}
+  ],
+  "context_tiles": [
+    {"path": "8/215/88.png", "origin": "qualified historical attested original", "source_alpha_count": 64},
+    {"path": "8/215/89.png", "origin": "qualified historical attested original", "source_alpha_count": 2570},
+    {"path": "8/215/90.png", "origin": "qualified historical attested original", "source_alpha_count": 532},
+    {"path": "8/215/91.png", "origin": "qualified historical attested original", "source_alpha_count": 1521},
+    {"path": "8/216/88.png", "origin": "qualified historical attested original", "source_alpha_count": 509},
+    {"path": "8/216/91.png", "origin": "qualified historical attested original", "source_alpha_count": 1145},
+    {"path": "8/217/90.png", "origin": "actual official once readonly context, not historical cache proof", "source_alpha_count": 2490}
+  ],
+  "features": [
+    {"id": "HH5-S-06", "kind": "city", "original": "Qiqihar", "original_bbox": [32, 171, 84, 196], "source_url": "@source/de57b59c289acedb"},
+    {"id": "HH5-S-08", "kind": "city", "original": "Daqing", "original_bbox": [242, 369, 291, 395], "source_url": "@source/de57b59c289acedb"}
+  ],
+  "translations": [
+    {"id": "HH5-S-06", "zh": "齐齐哈尔", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "41b59935acbac1c930418e97dca68945d561d6e8323d1cd7447960310d1e626d", "review_notes": "Source-qualified complete NE Chinese; private author SELF wording review only. Different actual TARGET still pending."},
+    {"id": "HH5-S-08", "zh": "大庆", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "9cac5dc8465f20fec914e13cdde7176d92b2d00f7db54f6b0d01c466cea1f4f2", "review_notes": "Source-qualified complete NE Chinese; private author SELF wording review only. Different actual TARGET still pending."}
+  ],
+  "layouts": [
+    {"id": "HH5-S-06", "x": 70.0, "y": 183.5, "font_size": 12, "font_style": "regular", "lines": ["齐齐哈尔"]},
+    {"id": "HH5-S-08", "x": 220, "y": 338, "font_size": 12, "font_style": "regular", "lines": ["大庆"]}
+  ],
+  "symbols": [
+    {"id": "HH5-S-06-circle", "feature_id": "HH5-S-06", "kind": "circle", "x": 36.5, "y": 175.5, "size": 9, "outline_width": 1, "original_bbox": [32, 171, 41, 180]},
+    {"id": "HH5-S-08-circle", "feature_id": "HH5-S-08", "kind": "circle", "x": 246.5, "y": 373.5, "size": 9, "outline_width": 1, "original_bbox": [242, 369, 251, 378]}
+  ],
+  "shared_sources": [
+    {"id": "HH5-Fularji-exact-old-normal", "owner_region": "AP-Northeast-China-z8-208-88", "feature_id": "AP-NE8-004", "kind": "city", "original": "Fularji", "original_bbox": [-26, 207, 25, 231], "source_url": "@source/de57b59c289acedb", "review_notes": "Proposed exact old normal reference only; full Fula’erji spelling variant is Source-qualified. No duplicate normal/native, old size7 unchanged; Target permission pending."}
+  ],
+  "canonical_captions": [
+    {"id": "HH5-C-Cities-883", "origin": "canonical_wwp", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 883, "original_Chinese_name": "奋斗", "lat_f32_bits": 1111134416, "lon_f32_bits": 1123662277, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "kind": "region", "layout": {"x": 202.5847222222219, "y": 362.12608161634853, "font_style": "regular", "font_size": 12, "lines": ["奋斗"]}},
+    {"id": "HH5-C-Cities-894", "origin": "canonical_wwp", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 894, "original_Chinese_name": "龙凤", "lat_f32_bits": 1111105649, "lon_f32_bits": 1123693861, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "kind": "region", "layout": {"x": 224, "y": 391.1939012438597, "font_style": "regular", "font_size": 12, "lines": ["龙凤"]}},
+    {"id": "HH5-C-Cities-913", "origin": "canonical_wwp", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 913, "original_Chinese_name": "红岗", "lat_f32_bits": 1111071455, "lon_f32_bits": 1123664949, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "kind": "region", "layout": {"x": 206.29583333332994, "y": 425.66917936007667, "font_style": "regular", "font_size": 12, "lines": ["红岗"]}}
+  ],
+  "legacy_suppressions": []
+}

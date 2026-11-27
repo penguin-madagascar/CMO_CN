@@ -1,0 +1,24 @@
+{
+  "id": "Amantea-z9-278-195",
+  "z": 9,
+  "x": 278,
+  "y": 195,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/278/195.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "Amantea-z9-278-195-Amantea", "kind": "city", "original": "Amantea", "original_bbox": [196, 102, 246, 119], "source_url": "@source/1aade44f7520cede", "source_glyph_complete": true, "source_printed_full_literal": "Amantea"}
+  ],
+  "translations": [
+    {"id": "Amantea-z9-278-195-Amantea", "zh": "阿曼泰亚", "status": "approved", "source": "@source/05d90ee5a5848c62", "review_notes": "Italian municipal site confirms Amantea of Cosenza. 阿曼泰亚 is an established Chinese transcription, checked against the GeoNames record for this exact place.", "record_sha256": "0d6b6b42a54805513a592bf6b1cb4de5f657ad06ec948cd31b6ab169829206d4"}
+  ],
+  "layouts": [
+    {"id": "Amantea-z9-278-195-Amantea", "x": 221.0, "y": 110.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

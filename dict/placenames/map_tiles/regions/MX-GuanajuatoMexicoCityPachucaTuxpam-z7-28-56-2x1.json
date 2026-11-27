@@ -1,0 +1,72 @@
+{
+  "id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1",
+  "z": 7,
+  "x": 28,
+  "y": 56,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/28/56.png",
+    "7/29/56.png"
+  ],
+  "context_tiles": [
+    "7/27/56.png",
+    "7/28/55.png",
+    "7/28/57.png"
+  ],
+  "features": [
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-SanLuisPotos", "original": "San Luis Potosí", "original_bbox": [25, -23, 69, 10], "kind": "city", "source_url": "@source/546dab844438fa0c", "source_glyph_complete": true, "source_printed_full_literal": "San Luis Potosí"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Guanajuato", "original": "Guanajuato", "original_bbox": [2, 89, 58, 108], "kind": "city", "source_url": "@source/546dab844438fa0c", "source_glyph_complete": true, "source_printed_full_literal": "Guanajuato"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Salamanca", "original": "Salamanca", "original_bbox": [7, 132, 60, 149], "kind": "city", "source_url": "@source/546dab844438fa0c", "source_glyph_complete": true, "source_printed_full_literal": "Salamanca"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Quertaro", "original": "Querétaro", "original_bbox": [79, 129, 129, 149], "kind": "city", "source_url": "@source/546dab844438fa0c", "source_glyph_complete": true, "source_printed_full_literal": "Querétaro"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Pachuca", "original": "Pachuca", "original_bbox": [231, 176, 272, 193], "kind": "city", "source_url": "@source/546dab844438fa0c", "source_glyph_complete": true, "source_printed_full_literal": "Pachuca"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Morelia", "original": "Morelia", "original_bbox": [7, 216, 46, 233], "kind": "city", "source_url": "@source/546dab844438fa0c", "source_glyph_complete": true, "source_printed_full_literal": "Morelia"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Toluca", "original": "Toluca", "original_bbox": [141, 253, 181, 273], "kind": "city", "source_url": "@source/546dab844438fa0c", "source_glyph_complete": true, "source_printed_full_literal": "Toluca"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-MexicoCity", "original": "Mexico City", "original_bbox": [196, 243, 247, 290], "kind": "city", "source_url": "@source/546dab844438fa0c", "source_glyph_complete": true, "source_printed_full_literal": "Mexico City"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Txpam", "original": "Túxpam", "original_bbox": [351, 94, 393, 114], "kind": "city", "source_url": "@source/a8dd2e3940c1d295", "source_glyph_complete": true, "source_printed_full_literal": "Túxpam"}
+  ],
+  "translations": [
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-SanLuisPotos", "zh": "圣路易斯波托西", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "a9f2fa795f2aa4e01aee94300bf79b91198a33cfaaaca363e6d2cd24d5af5ac5", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Guanajuato", "zh": "瓜纳华托", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "e4817bc452bebbe3573bd0c36e2e8ade247381fd40c375b8c69e1adb8d8882cd", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Salamanca", "zh": "萨拉曼卡", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "3df8a79f8003ef0b6d79e35f3d131f275a59b69b1c2980a93e9b31618575308c", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Quertaro", "zh": "克雷塔罗", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "71fa39423c67c33681a24a96b3c7fbc7b0b49ec80389267a71b55eeef9d09877", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Pachuca", "zh": "帕丘卡", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "23903c4dfe1f561d58b6660f6fe3eda1a4f39e970544d379b9bc8cfa03785aa2", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Morelia", "zh": "莫雷利亚", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "723bdd7effe42a4f1a71989a316567437cf0b691ebd049f045a765b4c7e99b70", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Toluca", "zh": "托卢卡", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "0cb66353570c4d73419b55dac8dfc213311bbd423ab3b45d0066b43c9d9f8575", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-MexicoCity", "zh": "墨西哥城", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "47815aaa081b938349d9a4080e73286cae67b569c80bb5f00be3c15e240c8801", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Txpam", "zh": "图斯潘", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "d8c6a4aa76c60ab637379ef393137739e04c3581cb74a263a77a3349479102cd", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"}
+  ],
+  "layouts": [
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-SanLuisPotos", "x": 54, "y": 12, "font_style": "regular", "font_size": 12},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Guanajuato", "x": 38, "y": 100, "font_style": "regular", "font_size": 12},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Salamanca", "x": 38, "y": 140.5, "font_style": "regular", "font_size": 12},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Quertaro", "x": 110, "y": 139.0, "font_style": "regular", "font_size": 12},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Pachuca", "x": 235, "y": 194, "font_style": "regular", "font_size": 12},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Morelia", "x": 38, "y": 224.5, "font_style": "regular", "font_size": 12},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Toluca", "x": 145, "y": 239, "font_style": "regular", "font_size": 12},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-MexicoCity", "x": 224, "y": 246, "font_style": "regular", "font_size": 12},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Txpam", "x": 376, "y": 104.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Guanajuato-circle", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Guanajuato", "kind": "circle", "x": 5.0, "y": 90.5, "original_bbox": [-5, 86, 5, 95], "size": 10, "outline_width": 1},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Salamanca-circle", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Salamanca", "kind": "circle", "x": 6.0, "y": 135.5, "original_bbox": [1, 130, 11, 141], "size": 11, "outline_width": 1},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Quertaro-circle", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Quertaro", "kind": "circle", "x": 78.0, "y": 132.0, "original_bbox": [73, 127, 83, 137], "size": 10, "outline_width": 1},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Pachuca-circle", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Pachuca", "kind": "circle", "x": 229.5, "y": 179.0, "original_bbox": [224, 174, 235, 184], "size": 11, "outline_width": 1},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Morelia-circle", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Morelia", "kind": "circle", "x": 6.0, "y": 219.0, "original_bbox": [1, 214, 11, 224], "size": 10, "outline_width": 1},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Toluca-circle", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Toluca", "kind": "circle", "x": 146.5, "y": 250.5, "original_bbox": [141, 253, 152, 263], "size": 11, "outline_width": 1},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-MexicoCity-circle", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-MexicoCity", "kind": "circle", "x": 193.0, "y": 245.5, "original_bbox": [188, 240, 198, 251], "size": 11, "outline_width": 1},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Txpam-circle", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Txpam", "kind": "circle", "x": 350.5, "y": 97.0, "original_bbox": [346, 92, 355, 102], "size": 10, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-C-Cities-2682", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2682, "original_Chinese_name": "阿尔瓦罗·奥夫雷贡区", "lat_f32_bits": 1100668558, "lon_f32_bits": 3267782678, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 180, "y": 221, "font_style": "regular", "font_size": 12, "lines": ["阿尔瓦罗·奥夫雷贡区"]}},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-C-Cities-2694", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2694, "original_Chinese_name": "库奥蒂特兰伊斯卡伊", "lat_f32_bits": 1100818091, "lon_f32_bits": 3267784341, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 160, "y": 201, "font_style": "regular", "font_size": 12, "lines": ["库奥蒂特兰伊斯卡伊"]}},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-C-Cities-2702", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2702, "original_Chinese_name": "滨河圣胡安", "lat_f32_bits": 1101208119, "lon_f32_bits": 3267886586, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 115, "y": 163, "font_style": "regular", "font_size": 12, "lines": ["滨河圣胡安"]}},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-C-Cities-2688", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2688, "original_Chinese_name": "图兰辛戈", "lat_f32_bits": 1101048646, "lon_f32_bits": 3267672581, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 283, "y": 161, "font_style": "regular", "font_size": 12, "lines": ["图兰辛戈"]}},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-C-Cities-2698", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2698, "original_Chinese_name": "坦托尤卡", "lat_f32_bits": 1101712924, "lon_f32_bits": 3267654543, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 282, "y": 59, "font_style": "regular", "font_size": 12, "lines": ["坦托尤卡"]}},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-C-Cities-2706", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2706, "original_Chinese_name": "波萨里卡", "lat_f32_bits": 1101284324, "lon_f32_bits": 3267554110, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 345, "y": 138, "font_style": "regular", "font_size": 12, "lines": ["波萨里卡"]}},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-C-Cities-2719", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2719, "original_Chinese_name": "马丁内斯德拉托雷", "lat_f32_bits": 1101041930, "lon_f32_bits": 3267501855, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 380, "y": 182, "font_style": "regular", "font_size": 12, "lines": ["马丁内斯德拉托雷"]}},
+    {"id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-C-Cities-2724", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2724, "original_Chinese_name": "哈拉帕", "lat_f32_bits": 1100759035, "lon_f32_bits": 3267482864, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 393, "y": 234, "font_style": "regular", "font_size": 12, "lines": ["哈拉帕"]}}
+  ]
+}

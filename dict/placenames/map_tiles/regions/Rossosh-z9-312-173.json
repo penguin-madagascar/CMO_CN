@@ -1,0 +1,30 @@
+{
+  "id": "Rossosh-z9-312-173",
+  "z": 9,
+  "x": 312,
+  "y": 173,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/312/173.png"
+  ],
+  "context_tiles": [
+    "9/311/172.png",
+    "9/312/172.png",
+    "9/311/173.png"
+  ],
+  "features": [
+    {"id": "Rossosh173-Rossosh", "kind": "city", "original": "Rossosh", "original_bbox": [50, 45, 97, 61], "source_url": "@source/168a886de07bf48e", "source_glyph_complete": true, "source_printed_full_literal": "Rossosh"}
+  ],
+  "translations": [
+    {"id": "Rossosh173-Rossosh", "zh": "罗索希", "status": "approved", "source": "@source/6a683a9f29a5b234", "record_sha256": "a9e9e713fb64ad70a46e99209d46aed81b416a458f068bfb07e0faaae5b8ea3b", "review_notes": "The frozen Source prints Rossosh. PRC Embassy Economic and Commercial Office gives the exact Chinese stem and Russian city name in the Voronezh regional report, matching the geographic area. The original omits City and a separate location marker."}
+  ],
+  "layouts": [
+    {"id": "Rossosh173-Rossosh", "x": 73.5, "y": 53.0, "font_size": 12, "font_style": "regular", "lines": ["罗索希"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "Rossosh173-existing-Olkhovatka", "kind": "city", "original": "Olkhovatka", "source_url": "@source/ed4dd31fa2cd828b", "original_bbox": [-59, -4, 3, 13], "owner_region": "UA-East-z9-304-168", "feature_id": "UAE9-092", "review_notes": "Exact existing Olkhovatka Source instance, identical whole world box and immutable four-tile Source frame. The existing owner alone renders the whole Chinese place name; 39 Source positive pixels are accounted in this continuation output."}
+  ],
+  "legacy_suppressions": []
+}

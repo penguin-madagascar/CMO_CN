@@ -1,0 +1,98 @@
+{
+  "id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1",
+  "z": 7,
+  "x": 90,
+  "y": 58,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/90/58.png",
+    "7/91/58.png",
+    "7/92/58.png"
+  ],
+  "context_tiles": [
+    "7/90/57.png",
+    "7/90/59.png",
+    "7/91/59.png",
+    "7/93/58.png"
+  ],
+  "features": [
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N00", "kind": "admin1", "original": "GOA", "original_bbox": [67, 115, 109, 133], "source_url": "@source/569ce1f4dc9a0db0", "source_glyph_complete": true, "source_printed_full_literal": "GOA"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N01", "kind": "city", "original": "Belagavi", "original_bbox": [121, 69, 170, 92], "source_url": "@source/569ce1f4dc9a0db0", "source_glyph_complete": true, "source_printed_full_literal": "Belagavi"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N02", "kind": "city", "original": "Hubli", "original_bbox": [179, 117, 213, 136], "source_url": "@source/569ce1f4dc9a0db0", "source_glyph_complete": true, "source_printed_full_literal": "Hubli"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N03", "kind": "admin1", "original": "KARNATAKA", "original_bbox": [178, 188, 296, 206], "source_url": "@source/569ce1f4dc9a0db0", "source_glyph_complete": true, "source_printed_full_literal": "KARNATAKA"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N04", "kind": "city", "original": "Shivamogga", "original_bbox": [218, 251, 286, 273], "source_url": "@source/569ce1f4dc9a0db0", "source_glyph_complete": true, "source_printed_full_literal": "Shivamogga"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N05", "kind": "city", "original": "Raichur", "original_bbox": [380, 37, 426, 56], "source_url": "@source/aa44faa0600205e7", "source_glyph_complete": true, "source_printed_full_literal": "Raichur"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N06", "kind": "city", "original": "Kurnool", "original_bbox": [443, 72, 490, 91], "source_url": "@source/aa44faa0600205e7", "source_glyph_complete": true, "source_printed_full_literal": "Kurnool"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N07", "kind": "city", "original": "Nandyal", "original_bbox": [483, 106, 531, 127], "source_url": "@source/aa44faa0600205e7", "source_glyph_complete": true, "source_printed_full_literal": "Nandyal"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N08", "kind": "city", "original": "Ballari", "original_bbox": [341, 137, 380, 156], "source_url": "@source/aa44faa0600205e7", "source_glyph_complete": true, "source_printed_full_literal": "Ballari"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N09", "kind": "city", "original": "Proddatur", "original_bbox": [489, 173, 545, 193], "source_url": "@source/aa44faa0600205e7", "source_glyph_complete": true, "source_printed_full_literal": "Proddatur"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N10", "kind": "city", "original": "Amaravati", "original_bbox": [668, 7, 724, 27], "source_url": "@source/1c3d4604ab0e28db", "source_glyph_complete": true, "source_printed_full_literal": "Amaravati"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N11", "kind": "admin1", "original": "ANDHRA PRADESH", "original_bbox": [598, 45, 688, 85], "source_url": "@source/1c3d4604ab0e28db", "source_glyph_complete": true, "source_printed_full_literal": "ANDHRA PRADESH"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N12", "kind": "city", "original": "Machilipatnam", "original_bbox": [725, 39, 803, 60], "source_url": "@source/1c3d4604ab0e28db", "source_glyph_complete": true, "source_printed_full_literal": "Machilipatnam"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N13", "kind": "city", "original": "Ongole", "original_bbox": [626, 103, 670, 125], "source_url": "@source/1c3d4604ab0e28db", "source_glyph_complete": true, "source_printed_full_literal": "Ongole"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N14", "kind": "city", "original": "Nellore", "original_bbox": [620, 202, 663, 221], "source_url": "@source/1c3d4604ab0e28db", "source_glyph_complete": true, "source_printed_full_literal": "Nellore"}
+  ],
+  "translations": [
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N00", "zh": "果阿邦", "status": "approved", "source": "@source/c99418598e3d79b5", "record_sha256": "3c78d5b2ecea4f4b336a7e0fd50fb90d184be45d2399dde0c6d8e8314976399f", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N01", "zh": "贝尔高姆", "status": "approved", "source": "@source/aed95dc18b4599a3", "record_sha256": "8acfe461fb8c82ddf35db2be8473a086fb629e1dbde77c694896227a6ac07b3b", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N02", "zh": "胡布利", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "2bd35248b9c48ce958011588b22842037984107af2513f710c6b1b9ee7a1e150", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N03", "zh": "卡纳塔克邦", "status": "approved", "source": "@source/c99418598e3d79b5", "record_sha256": "caccff61d508dba304b5f6e3b9c3d952feb527c296e07d7446b76edbd83c5a6d", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N04", "zh": "希莫加", "status": "approved", "source": "@source/c8bac9f890fc9d97", "record_sha256": "be30d610a6e362d225ad897beda5f986670009e3c90d5d5b8abd503267bfdc69", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N05", "zh": "赖久尔", "status": "approved", "source": "@source/27744e21ea794646", "record_sha256": "ea7d58f962e02ee53cf1673522f877dbb945286684940c2841317f914d5661ae", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N06", "zh": "卡努尔", "status": "approved", "source": "@source/8a530a08d4d66544", "record_sha256": "d69686ed3c920e15f242f92e0e3f1b6b40c609fced4bc3431bb1569b64972c82", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N07", "zh": "纳恩迪亚尔", "status": "approved", "source": "@source/8f1ec6d0a64b1135", "record_sha256": "2a374bca1293f24da1a5ea9e29b97bca9f610436e7ae3ca21d8900c246d871a2", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N08", "zh": "贝拉里", "status": "approved", "source": "@source/92db7d784ac78e73", "record_sha256": "3671a3faa58dd765ed06e3b0f52d911f2b5cb74917d27d8c9c0cb332421982fd", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N09", "zh": "普罗德达图尔", "status": "approved", "source": "@source/1173acb7cb29587a", "record_sha256": "4d04adbd542be340c2171a751c5ec4f91f9d7c1d113ffe06406f2e73b185e6f1", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N10", "zh": "阿马拉瓦蒂", "status": "approved", "source": "@source/c9fd8e7146cc25b4", "record_sha256": "60a028ff125c53e85ed8150a2522b95e1fbead5a89e947bdd9b71fa172372d58", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N11", "zh": "安得拉邦", "status": "approved", "source": "@source/c99418598e3d79b5", "record_sha256": "d3e9e39bf7861e2aca383c87f6b29bee0d907d3ae71b5946cf59e729b961cfc1", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N12", "zh": "默吉利伯德讷姆", "status": "approved", "source": "@source/4f0446386f8e2aae", "record_sha256": "036b030b5621317dc275cabdf63d633ba06d759d619ab7068271034c7f3fcd44", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N13", "zh": "翁果尔", "status": "approved", "source": "@source/599c86620bd04651", "record_sha256": "53bb7e377e9a024b52a1df67643304b49022f4ffd6a463ddaf54aeff6d8d6f6a", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N14", "zh": "内洛尔", "status": "approved", "source": "@source/314ec159b20d2397", "record_sha256": "d8d4e3fab434a628d74dd44c06dbb1b25c880a8d259e1092b0de5b055e392497", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N00", "x": 88.0, "y": 124.0, "font_size": 14, "font_style": "bold", "lines": ["果阿邦"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N01", "x": 153, "y": 85, "font_size": 12, "font_style": "regular", "lines": ["贝尔高姆"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N02", "x": 201, "y": 134, "font_size": 12, "font_style": "regular", "lines": ["胡布利"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N03", "x": 237.0, "y": 197.0, "font_size": 14, "font_style": "bold", "lines": ["卡纳塔克邦"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N04", "x": 223, "y": 240, "font_size": 12, "font_style": "regular", "lines": ["希莫加"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N05", "x": 409, "y": 50, "font_size": 12, "font_style": "regular", "lines": ["赖久尔"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N06", "x": 472, "y": 85, "font_size": 12, "font_style": "regular", "lines": ["卡努尔"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N07", "x": 479, "y": 123, "font_size": 12, "font_style": "regular", "lines": ["纳恩迪亚尔"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N08", "x": 366, "y": 153, "font_size": 12, "font_style": "regular", "lines": ["贝拉里"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N09", "x": 473, "y": 189, "font_size": 12, "font_style": "regular", "lines": ["普罗德达图尔"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N10", "x": 709, "y": 21, "font_size": 12, "font_style": "regular", "lines": ["阿马拉瓦蒂"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N11", "x": 643.0, "y": 65.0, "font_size": 14, "font_style": "bold", "lines": ["安得拉邦"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N12", "x": 716, "y": 56, "font_size": 12, "font_style": "regular", "lines": ["默吉利伯德讷姆"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N13", "x": 656, "y": 115, "font_size": 12, "font_style": "regular", "lines": ["翁果尔"]},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N14", "x": 650, "y": 215, "font_size": 12, "font_style": "regular", "lines": ["内洛尔"]}
+  ],
+  "symbols": [
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N01-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N01", "kind": "circle", "x": 126.0, "y": 74.0, "original_bbox": [121, 69, 131, 79], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N02-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N02", "kind": "circle", "x": 184.5, "y": 122.5, "original_bbox": [179, 117, 190, 128], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N04-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N04", "kind": "circle", "x": 223.5, "y": 252, "original_bbox": [218, 251, 229, 262], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N05-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N05", "kind": "circle", "x": 385.5, "y": 41.0, "original_bbox": [380, 37, 391, 45], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N06-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N06", "kind": "circle", "x": 449.0, "y": 77.0, "original_bbox": [443, 72, 455, 82], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N07-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N07", "kind": "circle", "x": 489.0, "y": 111.5, "original_bbox": [483, 106, 495, 117], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N08-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N08", "kind": "circle", "x": 346.5, "y": 142.0, "original_bbox": [341, 137, 352, 147], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N09-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N09", "kind": "circle", "x": 495.0, "y": 178.0, "original_bbox": [489, 173, 501, 183], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N10-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N10", "kind": "circle", "x": 674.0, "y": 12.5, "original_bbox": [668, 7, 680, 18], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N12-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N12", "kind": "circle", "x": 730.5, "y": 44.5, "original_bbox": [725, 39, 736, 50], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N13-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N13", "kind": "circle", "x": 631.5, "y": 108.0, "original_bbox": [626, 103, 637, 113], "size": 7, "outline_width": 1},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N14-symbol", "feature_id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-N14", "kind": "circle", "x": 625.5, "y": 207.5, "original_bbox": [620, 202, 631, 213], "size": 7, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Shared-0", "owner_region": "IND7-MaharashtraTelanganaSouth-z7-90-57", "feature_id": "IND7-N025", "kind": "city", "original": "Kolhapur", "original_bbox": [97, -11, 149, 11], "source_url": "@source/5c3d9ad81320d802", "review_notes": "跨片原文用完整墨迹连接到既有中文。"}
+  ],
+  "canonical_captions": [
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Cities1710", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 62.86736111111168, "y": 108.46050370116973, "font_style": "regular", "font_size": 12, "lines": ["瓦斯科·达伽马"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1710, "original_Chinese_name": "瓦斯科·达伽马", "lat_f32_bits": 1098274151, "lon_f32_bits": 1116971425, "flags": 0, "level": 1}},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Cities1928", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 296.9236111111095, "y": 129.38187614201343, "font_style": "regular", "font_size": 12, "lines": ["霍斯佩特"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1928, "original_Chinese_name": "霍斯佩特", "lat_f32_bits": 1098141705, "lon_f32_bits": 1117308466, "flags": 0, "level": 1}},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Cities1947", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 385.99305555555475, "y": 138.65273010523924, "font_style": "regular", "font_size": 12, "lines": ["贡塔卡尔"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1947, "original_Chinese_name": "贡塔卡尔", "lat_f32_bits": 1098038651, "lon_f32_bits": 1117436726, "flags": 0, "level": 1}},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Cities1986", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 418.2423611111117, "y": 209.8552966789939, "font_style": "regular", "font_size": 12, "lines": ["达尔马瓦拉姆"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1986, "original_Chinese_name": "达尔马瓦拉姆", "lat_f32_bits": 1097245592, "lon_f32_bits": 1117483165, "flags": 0, "level": 1}},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Cities2004", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 298.1326388888883, "y": 227.92193302861233, "font_style": "regular", "font_size": 12, "lines": ["奇特拉杜尔嘎"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2004, "original_Chinese_name": "奇特拉杜尔嘎", "lat_f32_bits": 1097043930, "lon_f32_bits": 1117310207, "flags": 0, "level": 1}},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Cities2103", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 377.77500000000146, "y": 95.80597916167972, "font_style": "regular", "font_size": 12, "lines": ["阿多尼"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2103, "original_Chinese_name": "阿多尼", "lat_f32_bits": 1098514526, "lon_f32_bits": 1117424892, "flags": 0, "level": 1}},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Cities1705", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 683.1666666666679, "y": 36.10314727017794, "font_style": "regular", "font_size": 12, "lines": ["维杰亚瓦达"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1705, "original_Chinese_name": "维杰亚瓦达", "lat_f32_bits": 1099179900, "lon_f32_bits": 1117864656, "flags": 0, "level": 1}},
+    {"id": "India-Goa-Karnataka-AndhraPradesh-z7-90-58-3x1-Cities1998", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 539.6930555555555, "y": 203.97501740441658, "font_style": "regular", "font_size": 12, "lines": ["丘德达帕"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1998, "original_Chinese_name": "丘德达帕", "lat_f32_bits": 1097311191, "lon_f32_bits": 1117627814, "flags": 0, "level": 1}}
+  ],
+  "legacy_suppressions": []
+}

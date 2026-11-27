@@ -1,0 +1,25 @@
+{
+  "id": "PR7-Taketomi-z10-864-440-1x1",
+  "z": 10,
+  "x": 864,
+  "y": 440,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    {"path": "10/864/440.png", "origin": "historical_attested_original", "source_alpha_count": 767}
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "PR7-S001", "kind": "city", "original": "Taketomi", "original_bbox": [29, 156, 82, 172], "source_url": "@source/10abc894ada497ab"}
+  ],
+  "translations": [
+    {"id": "PR7-S001", "zh": "竹富", "status": "approved", "source": "@source/10abc894ada497ab", "record_sha256": "4fef9466745beac5217f7996db796d58d00050d7c0b3e56f3d26c53bcefb6590", "review_notes": "UNRENDERED PROPOSAL. original_Japanese_Han_lexeme_stem_竹富_from_raw_GN_alias_竹富町_not_a_language_tagged_Chinese_claim. Full原GN1850820 nameTaketomi Chō/aliases竹富町 provides the Japanese Han lexeme stem竹富. PrintedTaketomi has no行政suffix; do not add町 or assert recovered supplier featureclass. Raw1851939 primaryShirahama=白浜 only has a legacyTaketomi alias; raw1850821=武富 is another locality; raw1850822=竹富 is an eastern island settlement. These are not silently joined or raster anchor points. Author SELF private Chinese review only; different actual TARGET pending."}
+  ],
+  "layouts": [
+    {"id": "PR7-S001", "x": 55.5, "y": 164.0, "font_size": 12, "font_style": "regular", "lines": ["竹富"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

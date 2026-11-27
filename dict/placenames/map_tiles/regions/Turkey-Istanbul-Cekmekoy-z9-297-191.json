@@ -1,0 +1,36 @@
+{
+  "id": "Turkey-Istanbul-Cekmekoy-z9-297-191",
+  "z": 9,
+  "x": 297,
+  "y": 191,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/297/191.png"
+  ],
+  "context_tiles": [
+    "9/296/191.png",
+    "9/296/192.png",
+    "9/297/192.png"
+  ],
+  "features": [
+    {"id": "Turkey-Istanbul-Cekmekoy-z9-297-191-Cekmekoy", "kind": "city", "original": "Çekmeköy", "original_bbox": [98, 221, 155, 240], "source_url": "@source/ddb09241a8680a22", "source_glyph_complete": true, "source_printed_full_literal": "Çekmeköy"}
+  ],
+  "translations": [
+    {"id": "Turkey-Istanbul-Cekmekoy-z9-297-191-Cekmekoy", "zh": "切克梅柯伊", "source": "@source/3b7cae2d55d2fb45", "status": "approved", "record_sha256": "2f32a8cf88c05d83498c0dec66409b85d35092e6547701a1b8fef3d47b700f79", "review_notes": "按地方政府所载地名及位置核对，沿用切克梅柯伊译名。"}
+  ],
+  "layouts": [
+    {"id": "Turkey-Istanbul-Cekmekoy-z9-297-191-Cekmekoy", "x": 126.5, "y": 229, "font_style": "regular", "font_size": 12, "lines": ["切克梅柯伊"]}
+  ],
+  "shared_sources": [
+    {"id": "Turkey-Istanbul-Cekmekoy-z9-297-191-KucukcekmeceShared", "owner_region": "GR16-EastN-z9-296-191", "feature_id": "GR16-N-039", "kind": "city", "original": "Küçükçekmece", "original_bbox": [-61, 242, 20, 261], "source_url": "@source/ea09d2c7aad6437c", "review_notes": "跨片原文沿用现有屈曲克切克梅杰。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "Turkey-Istanbul-Cekmekoy-z9-297-191-Cities3690", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3690, "original_Chinese_name": "宰廷布尔努", "lat_f32_bits": 1109654087, "lon_f32_bits": 1105673149, "flags": 0, "level": 1}, "layout": {"x": 33.18680555555329, "y": 247.99977373102593, "font_style": "regular", "font_size": 12, "lines": ["宰廷布尔努"]}},
+    {"id": "Turkey-Istanbul-Cekmekoy-z9-297-191-Cities3697", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3697, "original_Chinese_name": "希什利", "lat_f32_bits": 1109671401, "lon_f32_bits": 1105716665, "flags": 0, "level": 1}, "layout": {"x": 57.90625, "y": 217.1236154165963, "font_style": "regular", "font_size": 12, "lines": ["希什利"]}},
+    {"id": "Turkey-Istanbul-Cekmekoy-z9-297-191-Cities3721", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3721, "original_Chinese_name": "苏丹加济", "lat_f32_bits": 1109683476, "lon_f32_bits": 1105654432, "flags": 0, "level": 1}, "layout": {"x": 15.188888888893416, "y": 194.8738342245997, "font_style": "regular", "font_size": 12, "lines": ["苏丹", "加济"]}},
+    {"id": "Turkey-Istanbul-Cekmekoy-z9-297-191-Cities3723", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3723, "original_Chinese_name": "桑贾克泰佩", "lat_f32_bits": 1109656192, "lon_f32_bits": 1105844959, "flags": 0, "level": 1}, "layout": {"x": 146.9993055555533, "y": 245.12604349316098, "font_style": "regular", "font_size": 12, "lines": ["桑贾克泰佩"]}}
+  ]
+}

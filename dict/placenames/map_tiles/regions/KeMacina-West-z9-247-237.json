@@ -1,0 +1,39 @@
+{
+  "id": "KeMacina-West-z9-247-237",
+  "z": 9,
+  "x": 247,
+  "y": 237,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/247/237.png"
+  ],
+  "context_tiles": [
+    "9/248/237.png"
+  ],
+  "features": [
+    {"id": "KM-N-03", "kind": "city", "original": "Samine", "original_bbox": [68, 30, 111, 47], "source_url": "@source/27aea21df75a0883"},
+    {"id": "KM-N-06", "kind": "city", "original": "Tiemana", "original_bbox": [114, 87, 163, 103], "source_url": "@source/27aea21df75a0883"},
+    {"id": "KM-N-07", "kind": "city", "original": "Bla", "original_bbox": [195, 100, 218, 118], "source_url": "@source/27aea21df75a0883"},
+    {"id": "KM-N-08", "kind": "city", "original": "Falo", "original_bbox": [20, 115, 45, 131], "source_url": "@source/27aea21df75a0883"},
+    {"id": "KM-N-15", "kind": "city", "original": "Miena", "original_bbox": [103, 220, 138, 236], "source_url": "@source/27aea21df75a0883"}
+  ],
+  "translations": [
+    {"id": "KM-N-03", "zh": "萨米内", "status": "approved", "source": "@source/27aea21df75a0883", "record_sha256": "818322eb20e7038f7f0c51ff7441c627f1dbcc824b29da40c2868d78c3601450", "review_notes": "Different reviewer personally inspected the complete printed Source name, project Chinese phonetic mapping and actual Chinese glyphs/layout. This project mapping is not claimed as an official Chinese national name standard. Root authorized new15 finite independent review."},
+    {"id": "KM-N-06", "zh": "蒂耶马纳", "status": "approved", "source": "@source/27aea21df75a0883", "record_sha256": "e1f1a5442e0cf21640c35cfc75db8e36ed6ca31de151c8310b581d4fee03afed", "review_notes": "Different reviewer personally inspected the complete printed Source name, project Chinese phonetic mapping and actual Chinese glyphs/layout. This project mapping is not claimed as an official Chinese national name standard. Root authorized new15 finite independent review."},
+    {"id": "KM-N-07", "zh": "布拉", "status": "approved", "source": "@source/27aea21df75a0883", "record_sha256": "f27f121a461bf4cb49e6e482dc462182d17ffbafe92755ad6323e8f65468bebe", "review_notes": "Different reviewer personally inspected the complete printed Source name, project Chinese phonetic mapping and actual Chinese glyphs/layout. This project mapping is not claimed as an official Chinese national name standard. Root authorized new15 finite independent review."},
+    {"id": "KM-N-08", "zh": "法洛", "status": "approved", "source": "@source/27aea21df75a0883", "record_sha256": "b5f25d408151884e6559429c4212e100e270a6fbb4ace77dd7d598fe075d3fbe", "review_notes": "Different reviewer personally inspected the complete printed Source name, project Chinese phonetic mapping and actual Chinese glyphs/layout. This project mapping is not claimed as an official Chinese national name standard. Root authorized new15 finite independent review."},
+    {"id": "KM-N-15", "zh": "米耶纳", "status": "approved", "source": "@source/27aea21df75a0883", "record_sha256": "0e72bddfc95f0cb78251d79891de26390b38acc6f446ad1ec02288b4dfc6d1ab", "review_notes": "Different reviewer personally inspected the complete printed Source name, project Chinese phonetic mapping and actual Chinese glyphs/layout. This project mapping is not claimed as an official Chinese national name standard. Root authorized new15 finite independent review."}
+  ],
+  "layouts": [
+    {"id": "KM-N-03", "x": 89.5, "y": 38.5, "font_size": 12, "font_style": "regular"},
+    {"id": "KM-N-06", "x": 138.5, "y": 95.0, "font_size": 12, "font_style": "regular"},
+    {"id": "KM-N-07", "x": 206.5, "y": 109.0, "font_size": 12, "font_style": "regular"},
+    {"id": "KM-N-08", "x": 32.5, "y": 123.0, "font_size": 12, "font_style": "regular"},
+    {"id": "KM-N-15", "x": 120.5, "y": 228.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "KM-S-KM-N-13", "owner_region": "KeMacina-Central-z9-248-236-1x2", "feature_id": "KM-N-13", "kind": "city", "original": "Fonfona", "source_url": "@source/d85c0c1528d40165", "original_bbox": [239, 205, 285, 221], "review_notes": "Complete actual Source word crosses output ownership. Existing/new unique normal remains at its owner; this row accounts original ink without duplicate Chinese."}
+  ]
+}

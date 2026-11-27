@@ -12,6 +12,7 @@ import struct
 import subprocess
 import sys
 import tempfile
+from types import SimpleNamespace
 import unittest
 
 from PIL import Image, ImageDraw
@@ -98,6 +99,70 @@ class TilePackBuilderTests(unittest.TestCase):
         self.assertFalse(report["ready"])
         self.assertIn(reason, json.dumps(report, ensure_ascii=False))
         return report
+
+    def add_original_slash(self):
+        frame = Image.new("RGBA", (5, 6), (43, 56, 72, 0))
+        ImageDraw.Draw(frame).line((4, 0, 0, 5), fill=(33, 100, 179, 38), width=2)
+        box = [254, 205, 259, 211]
+        self.region["source_punctuation"] = [dict(id="seam-slash", kind="slash", status="approved",
+            original_bbox=box, source_rgba_sha256=self.builder.sha256(frame.tobytes()),
+            review_notes="Verified isolated punctuation on the two source tiles")]
+        for t in self.region["original_tiles"]:
+            path = self.original / t["path"]
+            with Image.open(path) as im:
+                tile = im.convert("RGBA")
+            tile.paste(frame, (box[0] - 256 * t["x"], box[1]))
+            tile.save(path)
+            t["sha256"] = sha(path)
+        self.approve()
+        self.sign_render()
+        return frame
+
+    def test_original_punctuation_preserves_only_visible_rgba_and_keeps_counts(self):
+        _, before = self.compile(preview=True)
+        preview = self.base / "preview/fixture.zh.png"
+        with Image.open(preview) as im:
+            expected = im.convert("RGBA")
+        frame = self.add_original_slash()
+        expected.paste(frame, (254, 205), frame.getchannel("A").point(lambda a: 255 if a else 0))
+        wire, report = self.compile(preview=True)
+        self.assertIsNotNone(wire, report["gaps"])
+        with Image.open(preview) as im:
+            self.assertEqual(expected.tobytes(), im.convert("RGBA").tobytes())
+        current, previous = report["regions"][0], before["regions"][0]
+        self.assertEqual(previous["labels"], current["labels"])
+        self.assertEqual(previous["symbols"], current["symbols"])
+        self.assertEqual([t["label_count"] for t in previous["tiles"]], [t["label_count"] for t in current["tiles"]])
+        self.assertEqual([[3, 0, 0], [3, 1, 0]], current["source_punctuation"][0]["tiles"])
+        self.assertEqual(0, current["source_alpha"]["unaccounted_pixels"])
+
+    def test_original_punctuation_rejects_unapproved_changed_cut_or_overlapping_marks(self):
+        frame = self.add_original_slash()
+        approved = copy.deepcopy(self.region)
+        for case in ("unapproved", "unknown_kind", "named", "wrong_hash", "cut", "tile", "collision", "claimed_source"):
+            with self.subTest(case=case):
+                self.region = copy.deepcopy(approved)
+                self.manifest["regions"] = [self.region]
+                mark = self.region["source_punctuation"][0]
+                if case == "unapproved":
+                    mark["status"] = "pending"
+                elif case == "unknown_kind":
+                    mark["kind"] = "unknown"
+                elif case == "named":
+                    mark["name"] = "an unverified name"
+                elif case == "wrong_hash":
+                    mark["source_rgba_sha256"] = "0" * 64
+                elif case == "cut":
+                    mark["original_bbox"][2] -= 1
+                    mark["source_rgba_sha256"] = self.builder.sha256(frame.crop((0, 0, 4, 6)).tobytes())
+                elif case == "tile":
+                    self.region["original_tiles"][1]["sha256"] = "0" * 64
+                elif case == "collision":
+                    self.region["symbols"][0].update(x=256, y=207)
+                else:
+                    self.region["features"][1]["original_bbox"] = [240, 80, 272, 211]
+                self.approve()
+                self.rejected("source_punctuation")
 
     def elevation_only_peak(self):
         feature = self.region["features"][0]
@@ -241,6 +306,51 @@ class TilePackBuilderTests(unittest.TestCase):
         report = self.rejected("unaccounted_alpha")
         self.assertEqual(1, report["regions"][0]["source_alpha"]["unaccounted_pixels"])
 
+    def add_unclassified_source(self, points):
+        path = self.original / "0.png"
+        with Image.open(path) as source:
+            image = source.convert("RGBA")
+        mask = Image.new("L", (512, 256))
+        for point in points:
+            image.putpixel(point, (38, 82, 145, 2))
+            mask.putpixel(point, 255)
+        image.save(path)
+        self.region["original_tiles"][0]["sha256"] = sha(path)
+        self.region["source_unclassified"] = dict(
+            pixels=len(points), bbox=list(mask.getbbox()),
+            mask_sha256=hashlib.sha256(mask.tobytes()).hexdigest())
+
+    def test_reviewed_unclassified_source_has_separate_accounting_and_no_render(self):
+        previous_pack, previous = self.compile()
+        render_sha = self.region["review"]["render_sha256"]
+        self.add_unclassified_source([(10, 10), (11, 10), (12, 12)])
+        self.approve()
+        self.region["review"]["render_sha256"] = render_sha
+        pack, report = self.compile()
+        self.assertTrue(report["ready"], report["gaps"])
+        self.assertEqual(previous_pack, pack)
+        original = previous["regions"][0]["source_alpha"]
+        audit = report["regions"][0]["source_alpha"]
+        self.assertEqual(original["total_pixels"] + 3, audit["total_pixels"])
+        self.assertEqual(original["accounted_pixels"], audit["accounted_pixels"])
+        self.assertEqual(0, audit["background_pixels"])
+        self.assertEqual(0, audit["unaccounted_pixels"])
+        self.assertEqual(self.region["source_unclassified"], audit["unclassified"])
+
+    def test_unclassified_source_mask_rejects_same_count_and_bounds_when_shape_changes(self):
+        self.add_unclassified_source([(10, 10), (11, 10), (12, 12)])
+        path = self.original / "0.png"
+        with Image.open(path) as source:
+            image = source.convert("RGBA")
+        image.putpixel((11, 10), (0, 0, 0, 0))
+        image.putpixel((10, 11), (38, 82, 145, 2))
+        image.save(path)
+        self.region["original_tiles"][0]["sha256"] = sha(path)
+        self.approve()
+        self.sign_render()
+        audit = self.rejected("source_unclassified")["regions"][0]["source_alpha"]
+        self.assertEqual(3, audit["unaccounted_pixels"])
+
     def test_missing_and_duplicate_record_sets(self):
         for field in ("features", "translations", "layouts"):
             for duplicate in (False, True):
@@ -279,6 +389,159 @@ class TilePackBuilderTests(unittest.TestCase):
         self.assertIsNotNone(wire, report)
         self.assertEqual("triangle", report["regions"][0]["symbols"][0]["kind"])
         self.assertEqual([2, 1], [t["label_count"] for t in report["regions"][0]["tiles"]])
+
+    def source_rgba_triangle(self):
+        self.region["features"] = self.region["features"][:1]
+        self.region["translations"] = self.region["translations"][:1]
+        self.region["layouts"] = self.region["layouts"][:1]
+        frame = Image.new("RGBA", (10, 9), (71, 112, 76, 0))
+        ImageDraw.Draw(frame).polygon([(5, 0), (9, 8), (0, 8)], fill="white")
+        frame.putpixel((0, 0), (33, 44, 55, 1))
+        atlas = Image.new("RGBA", (512, 256))
+        ImageDraw.Draw(atlas).rectangle((80, 20, 119, 39), fill="white")
+        atlas.paste(frame, (252, 180))  # Exact crop crosses an official XYZ seam.
+        for tile in self.region["original_tiles"]:
+            tile.update(path=f"3/{tile['x']}/0.png",
+                        source_url=f"http://warfaresims.slitherine.com/MapTiles/Labels/3/{tile['x']}/0.png")
+            path = self.original / tile["path"]
+            path.parent.mkdir(parents=True, exist_ok=True)
+            atlas.crop((tile["x"] * 256, 0, (tile["x"] + 1) * 256, 256)).save(path)
+            tile["sha256"] = sha(path)
+        self.region["symbols"] = [dict(id="triangle", feature_id="peak", kind="triangle",
+            x=257, y=184.5, original_bbox=[252, 180, 262, 189], render_mode="source_rgba",
+            source_rgba_sha256=hashlib.sha256(frame.tobytes()).hexdigest(), source_symbol_only=True,
+            review_notes="Synthetic independently reviewed triangle-only crop; source text is separate.")]
+        self.approve()
+        return frame
+
+    def test_source_rgba_triangle_preserves_every_channel_across_tile_seam(self):
+        frame = self.source_rgba_triangle()
+        try:
+            self.sign_render()
+        except ValueError as error:
+            self.fail(f"source_rgba triangle must bypass vector size/outline rendering: {error}")
+        wire, report = self.compile(preview=True)
+        self.assertTrue(report["ready"], report["gaps"])
+        self.assertIsNotNone(wire)
+        actual = Image.open(self.base / "preview/fixture.zh.png").convert("RGBA")
+        self.assertEqual(frame.tobytes(), actual.crop((252, 180, 262, 189)).tobytes())
+        self.assertEqual((71, 112, 76, 0), actual.getpixel((253, 180)))
+        stream = io.BytesIO(wire[73:])
+        joined = Image.new("RGBA", actual.size)
+        for _ in range(struct.unpack("<i", stream.read(4))[0]):
+            _, x, y, _, length = struct.unpack("<iiiii", stream.read(20))
+            tile = Image.open(io.BytesIO(stream.read(length))).convert("RGBA")
+            joined.paste(tile, (x * 256, y * 256))
+        self.assertEqual(actual.tobytes(), joined.tobytes())
+        row = report["regions"][0]["symbols"][0]
+        self.assertEqual("source_rgba", row["native_mode"])
+        self.assertEqual(hashlib.sha256(frame.tobytes()).hexdigest(), row["source_rgba_sha256"])
+        self.assertEqual([[3, 0, 0], [3, 1, 0]], row["tiles"])
+        self.assertEqual((1, 1), (report["label_count"], report["symbol_count"]))
+
+    def test_source_rgba_requires_exact_qualified_triangle_and_source(self):
+        self.source_rgba_triangle()
+        original = copy.deepcopy(self.region)
+        changes = [dict(source_symbol_only=False), dict(source_symbol_only=1),
+                   dict(review_notes=""), dict(kind="circle"), dict(feature_id="city"),
+                   dict(unlabeled=True), dict(shared_source_id="absent"),
+                   dict(source_rgba_sha256="0" * 64), dict(x=257.25),
+                   dict(original_bbox=[252.0, 180, 262, 189]),
+                   dict(original_bbox=[252, 180, 600, 189]),
+                   dict(original_bbox=[252, 180, 262]), dict(size=10), dict(outline_width=1)]
+        for changeset in changes:
+            with self.subTest(changes=changeset):
+                self.region = copy.deepcopy(original)
+                self.manifest["regions"] = [self.region]
+                self.region["symbols"][0].update(changeset)
+                self.approve()
+                self.rejected("source_rgba")
+        for field in ("source_symbol_only", "source_rgba_sha256"):
+            with self.subTest(missing=field):
+                self.region = copy.deepcopy(original)
+                self.manifest["regions"] = [self.region]
+                del self.region["symbols"][0][field]
+                self.approve()
+                self.rejected("source_rgba")
+        self.region = copy.deepcopy(original)
+        self.manifest["regions"] = [self.region]
+        self.region["features"][0]["kind"] = "city"
+        self.region["translations"][0]["record_sha256"] = record_fingerprint(self.region["features"][0])
+        self.approve()
+        self.rejected("source_rgba")
+        for field, value in (("sha256", "0" * 64), ("path", "missing.png"),
+                             ("source_url", "https://example.com/source")):
+            with self.subTest(source_field=field):
+                self.region = copy.deepcopy(original)
+                self.manifest["regions"] = [self.region]
+                self.region["original_tiles"][0][field] = value
+                self.approve()
+                self.rejected("source_rgba")
+        self.region = copy.deepcopy(original)
+        self.manifest["regions"] = [self.region]
+        (self.original / self.region["original_tiles"][0]["path"]).unlink()
+        self.approve()
+        self.rejected("source_rgba")
+
+    def test_source_rgba_never_falls_back_or_overwrites_even_low_alpha(self):
+        from unittest.mock import patch
+        frame = self.source_rgba_triangle()
+        symbols = {row["id"]: row for row in self.region["symbols"]}
+        features = {row["id"]: row for row in self.region["features"]}
+        gaps = []
+        args = (self.region, features, {}, {}, symbols, {}, {}, lambda code, **kw: gaps.append(code))
+        atlas, _, rows, _ = self.builder.render_region(*args)
+        self.assertIn("source_rgba", gaps)
+        self.assertEqual([], rows)
+        self.assertIsNone(atlas.getchannel("A").getbbox())
+        symbols["ordinary"] = dict(id="ordinary", feature_id="peak", kind="triangle",
+                                    x=252.5, y=180.5, size=1, outline_width=.5)
+        gaps.clear()
+        with patch.object(self.builder, "symbol_patch", return_value=Image.new("RGBA", (1, 1), (2, 3, 4, 1))):
+            atlas, _, rows, _ = self.builder.render_region(*args, source_rgba_frames={"triangle": frame})
+        self.assertIn("source_rgba", gaps)
+        self.assertEqual((2, 3, 4, 1), atlas.getpixel((252, 180)))
+        self.assertEqual(["ordinary"], [row["id"] for row in rows])
+
+    def test_source_rgba_final_hash_detects_later_transparent_RGB_overwrite(self):
+        self.source_rgba_triangle()
+        first = Image.new("RGBA", (10, 9), (71, 112, 76, 0))
+        first.putpixel((0, 0), (255, 255, 255, 1))
+        second = Image.new("RGBA", (10, 9), (11, 22, 33, 0))
+        second.putpixel((9, 0), (255, 255, 255, 1))
+        symbol = self.region["symbols"][0]
+        symbol["source_rgba_sha256"] = hashlib.sha256(first.tobytes()).hexdigest()
+        other = dict(symbol, id="later", x=266, original_bbox=[261, 180, 271, 189],
+                     source_rgba_sha256=hashlib.sha256(second.tobytes()).hexdigest())
+        gaps = []
+        self.builder.render_region(self.region, {"peak": self.region["features"][0]}, {}, {},
+            {"triangle": symbol, "later": other}, {}, {}, lambda code, **kw: gaps.append((code, kw)),
+            source_rgba_frames={"triangle": first, "later": second})
+        self.assertTrue(any(code == "source_rgba" and row["id"] == "triangle"
+                            and "final" in row.get("reason", "") for code, row in gaps))
+
+    def test_source_rgba_compound_peak_source_bbox_is_not_text_pollution_evidence(self):
+        self.source_rgba_triangle()
+        feature = self.region["features"][0]
+        feature["original_bbox"] = [80, 20, 262, 189]
+        self.region["translations"][0]["record_sha256"] = record_fingerprint(feature)
+        self.approve()
+        self.sign_render()
+        wire, report = self.compile()
+        self.assertIsNotNone(wire, report["gaps"])
+        self.assertTrue(report["ready"])
+
+    def test_symbol_render_mode_is_explicit_and_legacy_output_bytes_stay_fixed(self):
+        wire, report = self.compile()
+        self.assertEqual("5d6f12c903a44c3645a2dc135574fb648d670ac56d55e1157f3348a3e8615853",
+                         report["regions"][0]["atlas_rgba_sha256"])
+        self.assertEqual("5eba8a81613681c2f5ba43c3ec00430d8425ca5232afc498d4bb6c8887f51aa4",
+                         hashlib.sha256(wire).hexdigest())
+        self.region["symbols"][0]["render_mode"] = "typo"
+        self.approve()
+        self.rejected("symbol_render_mode")
+        with self.assertRaises(ValueError):
+            self.builder.symbol_patch(self.region["symbols"][0])
 
     def test_preview_cannot_overwrite_later_region_source(self):
         later = copy.deepcopy(self.region)
@@ -736,6 +999,84 @@ class TilePackBuilderTests(unittest.TestCase):
         with Image.open(self.base / "preview/borrower.zh.png") as preview:
             self.assertIsNone(preview.getchannel("A").getbbox())
 
+    def native_circle_source_fixture(self, named):
+        atlas = Image.new("RGBA", (512, 256))
+        draw = ImageDraw.Draw(atlas)
+        draw.ellipse((252, 80, 260, 88), fill="white")
+        owner = self.region
+        feature = dict(id="city", kind="city", original="Original City", original_bbox=[20, 30, 50, 44],
+                       source_url="https://example.com/city")
+        translation = dict(id="city", zh="城市", status="approved", source="https://example.com/translation",
+                           review_notes="Synthetic translation fixture", record_sha256=record_fingerprint(feature))
+        if named:
+            draw.rectangle((20, 30, 49, 43), fill="white")
+        tiles = []
+        for x in range(2):
+            relative = f"3/{x}/0.png"
+            path = self.original / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            atlas.crop((x * 256, 0, (x + 1) * 256, 256)).save(path)
+            tiles.append(dict(x=x, y=0, path=relative, sha256=sha(path),
+                source_url=f"https://warfaresims.slitherine.com/MapTiles/Labels/{relative}"))
+        left, right = tiles
+        symbol = dict(id="dot", kind="circle", x=248, y=84, size=9, outline_width=1,
+                      original_bbox=[252, 80, 261, 89])
+        if named:
+            symbol["feature_id"] = "city"
+        else:
+            symbol.update(unlabeled=True, source_url=left["source_url"], review_notes="Unlabeled complete circle")
+        owner.update(id="owner", width_tiles=1, original_tiles=[left], context_tiles=[right],
+                     features=[feature] if named else [], translations=[translation] if named else [],
+                     layouts=[dict(id="city", x=90, y=100, font_size=22, font_style="bold")] if named else [],
+                     symbols=[symbol])
+        source = dict(id="borrowed-circle", owner_region="owner", owner_symbol_id="dot",
+            original_bbox=[-4, 80, 5, 89], owner_symbol_record_sha256=record_fingerprint(symbol),
+            source_rgba_sha256=hashlib.sha256(atlas.crop((252, 80, 261, 89)).tobytes()).hexdigest(),
+            review_notes="Same complete supplier circle across the source seam")
+        borrower = dict(id="borrower", z=3, x=1, y=0, width_tiles=1, height_tiles=1,
+                        original_tiles=[right], context_tiles=[left], features=[], translations=[],
+                        layouts=[], symbols=[], shared_sources=[source])
+        self.manifest["regions"] = [borrower, owner]
+        self.sign_shared_regions()
+        return borrower, symbol, source
+
+    def test_borrowed_native_circle_accounts_source_without_rendering_again(self):
+        for named in (False, True):
+            with self.subTest(named=named):
+                self.native_circle_source_fixture(named)
+                wire, report = self.compile(preview=True)
+                self.assertIsNotNone(wire, report["gaps"])
+                self.assertEqual(int(named), report["label_count"])
+                self.assertEqual(1, report["symbol_count"])
+                borrower, owner = report["regions"]
+                self.assertEqual(0, borrower["source_alpha"]["unaccounted_pixels"])
+                self.assertGreater(borrower["source_alpha"]["accounted_pixels"], 0)
+                self.assertEqual([], borrower["symbols"])
+                self.assertEqual([[3, 0, 0]], owner["symbols"][0]["tiles"])
+                self.assertEqual(0, borrower["tiles"][0]["label_count"])
+                with Image.open(self.base / "preview/borrower.zh.png") as preview:
+                    self.assertIsNone(preview.getchannel("A").getbbox())
+
+    def test_borrowed_native_circle_rejects_identity_frame_or_target_mismatch(self):
+        for change in ("owner_hash", "raw_hash", "bbox", "target_crossing", "duplicate", "named_alias"):
+            with self.subTest(change=change):
+                borrower, symbol, source = self.native_circle_source_fixture(named=True)
+                if change == "owner_hash":
+                    source["owner_symbol_record_sha256"] = "a" * 64
+                elif change == "raw_hash":
+                    source["source_rgba_sha256"] = "a" * 64
+                elif change == "bbox":
+                    source["original_bbox"] = [-4, 80, 6, 89]
+                elif change == "target_crossing":
+                    symbol["x"] = 255
+                    source["owner_symbol_record_sha256"] = record_fingerprint(symbol)
+                elif change == "duplicate":
+                    borrower["shared_sources"].append(dict(source, id="second-circle"))
+                else:
+                    source["feature_id"] = "city"
+                self.sign_shared_regions()
+                self.rejected("owner_native_source")
+
     def test_shared_source_rejects_wrong_owner_identity_bbox_and_notes(self):
         borrower = self.shared_source_fixture()
         source = borrower["shared_sources"][0]
@@ -1188,6 +1529,95 @@ class CanonicalCaptionTests(unittest.TestCase):
         selection["instances"][0]["evidence"] = dict(model_selection=None, manifest=None, review=None, target_signature=None)
         with self.assertRaisesRegex(ValueError, "exact original canonical evidence reference"):
             self.builder.audit_canonical_captions([self.region], selection)
+
+    def translated_initial_fixture(self, original="古斯塔沃·A.马德罗"):
+        from wwp import save
+        scope = tempfile.TemporaryDirectory(prefix="canonical-initial-")
+        self.addCleanup(scope.cleanup)
+        base = Path(scope.name)
+        path = base / "assets/placenames/Cities.wwp"
+        path.parent.mkdir(parents=True)
+        save(path, [dict(name=original, lat=22.8694, lon=-98.75886, flags=0),
+                    dict(name=original, lat=19.49, lon=-99.11, flags=0)])
+        self.builder.__file__ = str(base / "scripts/build_map_tile_pack.py")
+        self.caption["canonical_record"].update(original_Chinese_name=original, flags=0,
+            lat_f32_bits=self.builder.float32_bits(22.8694), lon_f32_bits=self.builder.float32_bits(-98.75886))
+        self.caption["canonical_record"]["wwp_file"]["sha256"] = sha(path)
+        self.caption["display_translation"] = dict(zh="古斯塔沃·阿道夫·马德罗", source="https://example.com/translated-name",
+                                                   review_notes="Fixture exact legacy initial expanded in Chinese.")
+        self.caption["layout"]["lines"] = ["古斯塔沃·阿道夫·马德罗"]
+        return base
+
+    def test_explicit_legacy_initial_translation_keeps_exact_raw_identity(self):
+        self.translated_initial_fixture()
+        original = copy.deepcopy(self.caption["canonical_record"])
+        captions, _ = self.builder.audit_canonical_captions([self.region], self.selection())
+        caption = captions[self.region["id"]][self.caption["id"]]
+        self.assertEqual(caption["canonical_record"], original)
+        self.assertEqual(caption["layout"]["lines"], ["古斯塔沃·阿道夫·马德罗"])
+
+    def test_untranslated_mixed_original_still_fails(self):
+        self.translated_initial_fixture()
+        del self.caption["display_translation"]
+        self.caption["layout"]["lines"] = [self.caption["canonical_record"]["original_Chinese_name"]]
+        with self.assertRaisesRegex(ValueError, "exact selected original WWP member"):
+            self.builder.audit_canonical_captions([self.region], self.selection())
+
+    def test_explicit_translation_does_not_loosen_selection_or_identity(self):
+        self.translated_initial_fixture()
+        selected = self.selection()
+        original = copy.deepcopy(self.caption)
+        self.caption["display_translation"]["review_notes"] = "Changed after exact selection."
+        with self.assertRaisesRegex(ValueError, "selection must exactly equal"):
+            self.builder.audit_canonical_captions([self.region], selected)
+        for field, value in (("record_index_zero_based", 1), ("lat_f32_bits", 0), ("flags", 1),
+                             ("original_Chinese_name", "古斯塔沃·阿道夫·马德罗")):
+            with self.subTest(field=field):
+                self.caption.clear()
+                self.caption.update(copy.deepcopy(original))
+                self.caption["canonical_record"][field] = value
+                with self.assertRaisesRegex(ValueError, "exact selected original WWP member"):
+                    self.builder.audit_canonical_captions([self.region], self.selection())
+
+    def test_explicit_translation_is_limited_to_one_legacy_initial(self):
+        for raw in ("古斯塔沃·阿道夫·马德罗", "Gustavo A. Madero", "古斯塔沃·a.马德罗",
+                    "古斯塔沃·A.B.马德罗", "古斯塔沃·Ａ.马德罗", "古斯塔沃·A."):
+            with self.subTest(raw=raw):
+                self.translated_initial_fixture(raw)
+                with self.assertRaisesRegex(ValueError, "legacy initial"):
+                    self.builder.audit_canonical_captions([self.region], self.selection())
+
+    def test_explicit_translation_requires_checked_display_and_review_evidence(self):
+        self.translated_initial_fixture()
+        proposed = copy.deepcopy(self.caption["display_translation"])
+        for field, value in (("zh", "古斯塔沃·A.马德罗"), ("source", "not-a-url"),
+                             ("review_notes", "  "), ("unexpected", True)):
+            with self.subTest(field=field):
+                self.caption["display_translation"] = dict(proposed, **{field: value})
+                with self.assertRaisesRegex(ValueError, "reviewed Chinese display translation"):
+                    self.builder.audit_canonical_captions([self.region], self.selection())
+        self.caption["display_translation"] = proposed
+        self.caption["layout"]["lines"] = ["古斯塔沃·阿道弗·马德罗"]
+        with self.assertRaisesRegex(ValueError, "exactly the selected Chinese display"):
+            self.builder.audit_canonical_captions([self.region], self.selection())
+
+    def test_source_package_rejects_forged_translated_caption_display(self):
+        base = self.translated_initial_fixture()
+        model = dict(schema_version=1, regions=[self.region])
+        path = base / "manifest.json"
+        raw = json.dumps(model).encode("utf-8")
+        path.write_bytes(raw)
+        selection = base / "canonical_selection.json"
+        selection.write_text(json.dumps(self.selection()), encoding="utf-8")
+        args = SimpleNamespace(manifest=path, canonical_caption_approvals=selection,
+                               canonical_caption_approvals_sha256=sha(selection))
+        marked = dict(id=self.caption["id"], origin="canonical_wwp", canonical_record=self.caption["canonical_record"],
+                      source_bbox=None, elevation=None, zh="伪造显示")
+        report = dict(regions=[dict(id=self.region["id"], canonical_captions=[marked])], canonical_caption_count=1,
+                      canonical_sources=[dict(file="Cities.wwp", sha256=self.caption["canonical_record"]["wwp_file"]["sha256"], level=1)])
+        with self.assertRaisesRegex(ValueError, "report must match exact selected captions"):
+            self.builder.write_map_source_package(base / "bundle", args, model, raw, report)
+        self.assertFalse((base / "bundle").exists())
 
 if __name__ == "__main__":
     unittest.main()

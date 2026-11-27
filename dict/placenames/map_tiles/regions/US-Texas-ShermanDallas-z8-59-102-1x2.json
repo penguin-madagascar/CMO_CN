@@ -1,0 +1,39 @@
+{
+  "id": "US-Texas-ShermanDallas-z8-59-102-1x2",
+  "z": 8,
+  "x": 59,
+  "y": 102,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "8/59/102.png",
+    "8/59/103.png"
+  ],
+  "context_tiles": [
+    "8/58/102.png"
+  ],
+  "features": [
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-Sherman", "original": "Sherman", "original_bbox": [79, 146, 123, 161], "kind": "city", "source_url": "@source/47f93c51b11da622", "source_glyph_complete": true, "source_printed_full_literal": "Sherman"},
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-Dallas", "original": "Dallas", "original_bbox": [45, 333, 88, 354], "kind": "city", "source_url": "@source/6ec79f2b7deedd04", "source_glyph_complete": true, "source_printed_full_literal": "Dallas"}
+  ],
+  "translations": [
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-Sherman", "zh": "谢尔曼", "status": "approved", "source": "@source/cd0fb09697891d5d", "record_sha256": "c2840ec8590ca57d8e3b541559152f412c2a2bacb7c5434093199b8d11ebc081", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-Dallas", "zh": "达拉斯", "status": "approved", "source": "@source/1d3f023441dee183", "record_sha256": "d6f6dba5b118722b276178e9d099b0a09e4cfb99d1e735a90eb9fdfe191f556d", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"}
+  ],
+  "layouts": [
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-Sherman", "x": 102, "y": 153.5, "font_style": "regular", "font_size": 12},
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-Dallas", "x": 68, "y": 343.5, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-Sherman-circle", "feature_id": "US-Texas-ShermanDallas-z8-59-102-1x2-Sherman", "kind": "circle", "x": 76.5, "y": 146.5, "original_bbox": [72, 142, 81, 151], "size": 9, "outline_width": 1},
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-Dallas-circle", "feature_id": "US-Texas-ShermanDallas-z8-59-102-1x2-Dallas", "kind": "circle", "x": 42.5, "y": 334.5, "original_bbox": [38, 330, 47, 339], "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-shared-US-Texas-Denton-z8-58-102-Denton", "owner_region": "US-Texas-Denton-z8-58-102", "feature_id": "US-Texas-Denton-z8-58-102-Denton", "original": "Denton", "kind": "city", "original_bbox": [-15, 239, 26, 256], "source_url": "@source/cfd9bf19549a3690", "review_notes": "完整原文字框对应同一层级相同世界坐标，RGBA 逐字节对应正式所属区。已有中文与符号保持其原输出。"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-C-Cities-3898", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3898, "original_Chinese_name": "弗里斯科", "lat_f32_bits": 1107597897, "lon_f32_bits": 3267470768, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 39, "y": 244, "font_style": "regular", "font_size": 12, "lines": ["弗里斯科"]}},
+    {"id": "US-Texas-ShermanDallas-z8-59-102-1x2-C-Cities-3893", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3893, "original_Chinese_name": "卡罗尔顿", "lat_f32_bits": 1107546271, "lon_f32_bits": 3267479507, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 29, "y": 296, "font_style": "regular", "font_size": 12, "lines": ["卡罗尔顿"]}}
+  ]
+}

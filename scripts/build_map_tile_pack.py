@@ -303,6 +303,53 @@ def audit_owner_native_source_refs(region, source, owner, target, gap, approvals
     return result
 
 
+def audit_shared_native_circle(region, source, owner, owner_features, gap, original_root, input_paths):
+    """Account for the source part of an existing circle without drawing it here."""
+    identity = source["id"]
+
+    def invalid(reason):
+        gap("owner_native_source", id=identity, reason=reason)
+        return None
+
+    if set(source) != {"id", "owner_region", "owner_symbol_id", "original_bbox", "owner_symbol_record_sha256",
+                      "source_rgba_sha256", "review_notes"}:
+        return invalid("requires only the exact source-only circle fields")
+    symbol_id = source["owner_symbol_id"]
+    if not isinstance(symbol_id, str) or not symbol_id:
+        return invalid("requires a direct owner symbol ID")
+    if not all(isinstance(source[key], str) and re.fullmatch("[0-9a-f]{64}", source[key])
+               for key in ("owner_symbol_record_sha256", "source_rgba_sha256")):
+        return invalid("requires exact owner symbol and raw RGBA SHA values")
+    matches = [symbol for symbol in records(owner.get("symbols"), "owner symbols") if symbol.get("id") == symbol_id]
+    if len(matches) != 1:
+        return invalid("requires one existing direct owner circle")
+    symbol = matches[0]
+    unlabeled = symbol.get("unlabeled", False)
+    feature = owner_features.get(symbol.get("feature_id"))
+    direct_city = feature is not None and feature.get("kind") == "city"
+    valid_binding = symbol.get("feature_id") is None if unlabeled else direct_city
+    if (symbol.get("kind") != "circle" or symbol.get("render_mode", "vector") != "vector"
+            or "shared_source_id" in symbol or type(unlabeled) is not bool or not valid_binding
+            or record_fingerprint(symbol) != source["owner_symbol_record_sha256"]):
+        return invalid("requires an unchanged direct named or explicitly unlabeled owner circle")
+    world = world_original_bbox(owner, symbol.get("original_bbox"), "owner circle original_bbox")
+    if world_original_bbox(region, source["original_bbox"], "shared circle original_bbox") != world:
+        return invalid("requires complete exact world native frame")
+    if any(symbol.get("shared_source_id") == identity
+           or world_original_bbox(region, symbol["original_bbox"], "borrower circle original_bbox") == world
+           for symbol in region.get("symbols", [])):
+        return invalid("source-only borrower cannot render the same circle")
+    try:
+        paths = input_paths if input_paths is not None else set()
+        raw = native_source_frame(region, world, original_root, paths)
+        owner_raw = native_source_frame(owner, world, original_root, paths)
+    except (ValueError, OSError) as error:
+        return invalid(str(error))
+    if raw.tobytes() != owner_raw.tobytes() or sha256(raw.tobytes()) != source["source_rgba_sha256"]:
+        return invalid("complete native raw RGBA differs from the locked owner source")
+    return dict(source, world_original_bbox=world)
+
+
 def audit_shared_sources(region, features, region_index, feature_index, gap, owner_native_source_approvals=None,
                          original_root=None, input_paths=None):
     sources = indexed(region.get("shared_sources", []), "shared_sources", gap)
@@ -314,6 +361,21 @@ def audit_shared_sources(region, features, region_index, feature_index, gap, own
         owner_id, feature_id = source.get("owner_region"), source.get("feature_id")
         owner = region_index.get(owner_id)
         target = feature_index.get(owner_id, {}).get(feature_id)
+        if "owner_symbol_id" in source:
+            if (identity in features or owner is None or owner_id == region["id"] or owner.get("z") != region["z"]
+                    or not isinstance(source.get("review_notes"), str) or not source["review_notes"].strip()):
+                gap("owner_native_source", id=identity, reason="invalid source-only circle owner or review evidence")
+                continue
+            item = audit_shared_native_circle(region, source, owner, feature_index[owner_id], gap, original_root, input_paths)
+            if item is None:
+                continue
+            key = owner_id, item["owner_symbol_id"]
+            if key in native_owners:
+                gap("owner_native_source", id=identity, reason="one existing native source cannot have duplicate aliases")
+                continue
+            native_owners.add(key)
+            valid[identity] = item
+            continue
         if (identity in features or owner is None or owner_id == region["id"]
                 or owner.get("z") != region["z"] or target is None
                 or not isinstance(source.get("review_notes"), str) or not source["review_notes"].strip()
@@ -340,6 +402,15 @@ def audit_shared_sources(region, features, region_index, feature_index, gap, own
             item["owner_native_sources"] = native
         valid[identity] = item
     return valid
+
+
+def shared_source_has_rendered_owner(source, owner):
+    if owner["gaps"]:
+        return False
+    if "owner_symbol_id" in source:
+        return any(symbol["id"] == source["owner_symbol_id"] and symbol["kind"] == "circle"
+                   and symbol["bounds"] is not None and symbol["tiles"] for symbol in owner["symbols"])
+    return any(label["id"] == source["feature_id"] and label["bounds"] is not None and label["tiles"] for label in owner["labels"])
 
 
 def mask_count(mask):
@@ -464,7 +535,59 @@ def audit_source_backgrounds(region, atlas, verified_sources, gap):
     return background, audits
 
 
-def audit_original(region, atlas, contexts, features, symbols, gap, shared_sources=None, background=None):
+def preserve_source_punctuation(region, original, verified_sources, target, gap):
+    """Copy reviewed, isolated punctuation at native resolution without assigning a name."""
+    rows = indexed(region["source_punctuation"], "source_punctuation", gap)
+    accounted = Image.new("L", original.size)
+    reports = []
+    for identity, row in rows.items():
+        fields = {"id", "kind", "status", "original_bbox", "source_rgba_sha256", "review_notes"}
+        if (set(row) != fields or row.get("kind") != "slash" or row.get("status") != "approved"
+                or not isinstance(row.get("review_notes"), str) or not row["review_notes"].strip()):
+            gap("source_punctuation", id=identity, reason="requires reviewed standalone slash evidence")
+            continue
+        box = row["original_bbox"]
+        if (not isinstance(box, list) or len(box) != 4 or any(type(v) is not int for v in box)
+                or not 0 < box[0] < box[2] < original.width or not 0 < box[1] < box[3] < original.height
+                or box[2] - box[0] > 32 or box[3] - box[1] > 32):
+            gap("source_punctuation", id=identity, reason="requires complete small integer bounds and a source margin")
+            continue
+        left, top, right, bottom = box
+        # The one-pixel margin must come from verified original tiles too.
+        tiles = [(region["x"] + tx, region["y"] + ty)
+                 for ty in range((top - 1) // TILE_SIZE, bottom // TILE_SIZE + 1)
+                 for tx in range((left - 1) // TILE_SIZE, right // TILE_SIZE + 1)]
+        frame = original.crop(box)
+        if any(tile not in verified_sources for tile in tiles) or sha256(frame.tobytes()) != row["source_rgba_sha256"]:
+            gap("source_punctuation", id=identity, reason="requires verified source tiles and exact source RGBA")
+            continue
+        alpha = original.crop((left - 1, top - 1, right + 1, bottom + 1)).getchannel("A")
+        if alpha.getbbox() != (1, 1, frame.width + 1, frame.height + 1):
+            gap("source_punctuation", id=identity, reason="source bounds must tightly enclose the complete mark")
+            continue
+        ink = frame.getchannel("A").point(lambda value: 255 if value else 0)
+        component = ink.copy()
+        start_x = next(x for x in range(frame.width) if ink.getpixel((x, 0)))
+        ImageDraw.floodfill(component, (start_x, 0), 0)
+        if component.getbbox() or target.crop(box).getchannel("A").getbbox():
+            gap("source_punctuation", id=identity, reason="requires one isolated mark with a clear destination")
+            continue
+        # A binary mask preserves all four source channels without modifying
+        # destination pixels under the transparent parts of the source frame.
+        target.paste(frame, (left, top), ink)
+        accounted.paste(ink, (left, top))
+        touched = []
+        for x, y in tiles:
+            dx, dy = (x - region["x"]) * TILE_SIZE - left, (y - region["y"]) * TILE_SIZE - top
+            if ink.crop((dx, dy, dx + TILE_SIZE, dy + TILE_SIZE)).getbbox():
+                touched.append([region["z"], x, y])
+        reports.append(dict(id=identity, kind=row["kind"], bounds=box, pixels=mask_count(ink),
+                            source_rgba_sha256=row["source_rgba_sha256"], tiles=touched))
+    return accounted, reports
+
+
+def audit_original(region, atlas, contexts, features, symbols, gap, shared_sources=None, background=None,
+                   punctuation=None):
     width, height = atlas.size
     alpha = atlas.getchannel("A").point(lambda value: 255 if value else 0)
     accounted = Image.new("L", atlas.size) if background is None else background.copy()
@@ -491,13 +614,32 @@ def audit_original(region, atlas, contexts, features, symbols, gap, shared_sourc
                     key = (region["x"] + tx, region["y"] + ty)
                     if key not in contexts:
                         gap("context_incomplete", id=identity, tile=list(key))
+    if punctuation is not None:
+        if ImageChops.multiply(accounted, punctuation).getbbox():
+            gap("source_punctuation", reason="source punctuation overlaps another source record")
+        accounted = ImageChops.lighter(accounted, punctuation)
     unaccounted = ImageChops.subtract(alpha, accounted)
     count = mask_count(unaccounted)
-    if count:
-        gap("unaccounted_alpha", pixels=count, bbox=unaccounted.getbbox())
-    return dict(total_pixels=mask_count(alpha), accounted_pixels=mask_count(alpha) - count,
-                unaccounted_pixels=count, unaccounted_bbox=unaccounted.getbbox(),
+    bounds = unaccounted.getbbox()
+    total = mask_count(alpha)
+    report = dict(total_pixels=total, accounted_pixels=total - count,
+                unaccounted_pixels=count, unaccounted_bbox=bounds,
                 background_pixels=0 if background is None else mask_count(background))
+    if "source_unclassified" in region:
+        declared = region["source_unclassified"]
+        if (count and isinstance(declared, dict)
+                and set(declared) == {"pixels", "bbox", "mask_sha256"}
+                and type(declared["pixels"]) is int and declared["pixels"] == count
+                and isinstance(declared["bbox"], list)
+                and all(type(value) is int for value in declared["bbox"])
+                and declared["bbox"] == list(bounds)
+                and declared["mask_sha256"] == sha256(unaccounted.tobytes())):
+            report.update(unclassified=declared, unaccounted_pixels=0, unaccounted_bbox=None)
+        else:
+            gap("source_unclassified", reason="signed residual must exactly match the unclassified source pixels")
+    if report["unaccounted_pixels"]:
+        gap("unaccounted_alpha", pixels=count, bbox=bounds)
+    return report
 
 
 def text_patch(lines, path, font_size):
@@ -524,6 +666,8 @@ def text_patch(lines, path, font_size):
 
 
 def symbol_patch(symbol):
+    if symbol.get("render_mode", "vector") != "vector":
+        raise ValueError("symbol_patch requires vector render_mode")
     size = number(symbol.get("size"), "symbol size", 1, 128)
     outline = number(symbol.get("outline_width"), "symbol outline_width", 0.5, size / 2)
     side = math.ceil(size * SCALE)
@@ -541,7 +685,49 @@ def symbol_patch(symbol):
     return patch.resize((math.ceil(size), math.ceil(size)), Image.Resampling.LANCZOS)
 
 
-def render_region(region, features, translations, layouts, symbols, font_paths, cmaps, gap, shared_sources=None, canonical_captions=None):
+def source_rgba_box(region, symbol, features):
+    """Validate explicit triangle-only qualification, never infer text semantics."""
+    feature = features.get(symbol.get("feature_id"))
+    box = symbol.get("original_bbox")
+    if (symbol.get("kind") != "triangle" or feature is None or feature.get("kind") != "peak"
+            or "shared_source_id" in symbol or "unlabeled" in symbol
+            or symbol.get("source_symbol_only") is not True
+            or not isinstance(symbol.get("review_notes"), str) or not symbol["review_notes"].strip()
+            or any(key in symbol for key in ("size", "outline_width"))):
+        raise ValueError("requires independently reviewed direct peak triangle-only source, without vector sizing")
+    if (not isinstance(box, list) or len(box) != 4 or any(type(v) is not int for v in box)
+            or not 0 <= box[0] < box[2] <= region["width_tiles"] * TILE_SIZE
+            or not 0 <= box[1] < box[3] <= region["height_tiles"] * TILE_SIZE
+            or box[2] - box[0] > 32 or box[3] - box[1] > 32):
+        raise ValueError("requires complete integer source bbox no larger than 32 by 32")
+    if any(type(symbol.get(axis)) not in (int, float) or not math.isfinite(symbol[axis])
+           or symbol[axis] != (box[index] + box[index + 2]) / 2
+           for index, axis in enumerate(("x", "y"))):
+        raise ValueError("source bbox center must exactly match symbol x/y")
+    if not isinstance(symbol.get("source_rgba_sha256"), str) or not re.fullmatch("[0-9a-f]{64}", symbol["source_rgba_sha256"]):
+        raise ValueError("requires exact complete source RGBA SHA256")
+    return tuple(box)
+
+
+def prepare_source_rgba_frames(region, features, symbols, root, input_paths, gap):
+    frames = {}
+    for identity, symbol in symbols.items():
+        if symbol.get("render_mode", "vector") != "source_rgba":
+            continue
+        try:
+            box = source_rgba_box(region, symbol, features)
+            world = [value + region[axis] * TILE_SIZE for value, axis in zip(box, ("x", "y", "x", "y"))]
+            frame = native_source_frame(region, world, root, input_paths)
+            if sha256(frame.tobytes()) != symbol["source_rgba_sha256"]:
+                raise ValueError("complete source RGBA SHA256 differs")
+        except (ValueError, OSError) as error:
+            gap("source_rgba", id=identity, reason=str(error))
+            continue
+        frames[identity] = frame
+    return frames
+
+
+def render_region(region, features, translations, layouts, symbols, font_paths, cmaps, gap, shared_sources=None, canonical_captions=None, source_rgba_frames=None):
     size = (region["width_tiles"] * TILE_SIZE, region["height_tiles"] * TILE_SIZE)
     atlas, occupied = Image.new("RGBA", size), Image.new("L", size)
     labels, symbol_reports, instances = [], [], []
@@ -654,7 +840,26 @@ def render_region(region, features, translations, layouts, symbols, font_paths, 
             bounds=bounds, line_bounds=[[b[0]+origin[0], b[1]+origin[1], b[2]+origin[0], b[3]+origin[1]] for b in line_bounds],
             font_style=style, font_size=font_size, tiles=touched))
 
+    native = []
     for identity, symbol in symbols.items():
+        mode = symbol.get("render_mode", "vector")
+        if mode not in ("vector", "source_rgba"):
+            gap("symbol_render_mode", id=identity, mode=mode)
+            continue
+        if mode == "source_rgba":
+            try:
+                box = source_rgba_box(region, symbol, features)
+                frame = (source_rgba_frames or {}).get(identity)
+                if (not isinstance(frame, Image.Image) or frame.mode != "RGBA"
+                        or frame.size != (box[2] - box[0], box[3] - box[1])
+                        or frame.getchannel("A").getbbox() is None
+                        or sha256(frame.tobytes()) != symbol["source_rgba_sha256"]):
+                    raise ValueError("requires unchanged prepared complete source RGBA frame")
+            except ValueError as error:
+                gap("source_rgba", id=identity, reason=str(error))
+                continue
+            native.append((identity, symbol, box, frame))
+            continue
         unlabeled = symbol.get("unlabeled", False)
         if ("unlabeled" in symbol and type(unlabeled) is not bool
                 or unlabeled and (symbol.get("feature_id") is not None or not http_url(symbol.get("source_url"))
@@ -664,7 +869,7 @@ def render_region(region, features, translations, layouts, symbols, font_paths, 
         if "shared_source_id" in symbol:
             shared_id = symbol["shared_source_id"]
             source = shared_sources.get(shared_id) if isinstance(shared_id, str) else None
-            if (unlabeled or "feature_id" in symbol or source is None
+            if (unlabeled or "feature_id" in symbol or source is None or "owner_symbol_id" in source
                     or (source["kind"], symbol.get("kind")) not in (("city", "circle"), ("peak", "triangle"))):
                 gap("symbol_binding", id=identity, reason="requires exactly one valid named shared source")
                 continue
@@ -676,6 +881,30 @@ def render_region(region, features, translations, layouts, symbols, font_paths, 
                                    **(dict(shared_source_id=shared_id) if "shared_source_id" in symbol else {}),
                                    **(dict(unlabeled=True) if unlabeled else {}),
                                    bounds=bounds, tiles=touched))
+    for identity, symbol, box, frame in native:
+        if atlas.getchannel("A").crop(box).getbbox():
+            gap("source_rgba", id=identity, reason="source frame would overwrite existing positive alpha")
+            continue
+        # No mask/compositing: even RGB under alpha zero is part of the source.
+        atlas.paste(frame, box[:2])
+        touched = []
+        for ty in range(box[1] // TILE_SIZE, (box[3] - 1) // TILE_SIZE + 1):
+            for tx in range(box[0] // TILE_SIZE, (box[2] - 1) // TILE_SIZE + 1):
+                local = (max(box[0], tx*TILE_SIZE)-box[0], max(box[1], ty*TILE_SIZE)-box[1],
+                         min(box[2], (tx+1)*TILE_SIZE)-box[0], min(box[3], (ty+1)*TILE_SIZE)-box[1])
+                if frame.getchannel("A").crop(local).getbbox():
+                    touched.append([region["z"], region["x"] + tx, region["y"] + ty])
+        if len(touched) > 1:
+            instances.append(dict(id=identity, category="symbol", tiles=touched))
+        symbol_reports.append(dict(id=identity, feature_id=symbol["feature_id"], kind="triangle",
+                                   native_mode="source_rgba", source_rgba_sha256=symbol["source_rgba_sha256"],
+                                   bounds=list(box), tiles=touched))
+    # Check after every ordinary and native drawing operation, not just on load.
+    for rendered in symbol_reports:
+        if rendered.get("native_mode") == "source_rgba":
+            actual = sha256(atlas.crop(rendered["bounds"]).tobytes())
+            if actual != rendered["source_rgba_sha256"]:
+                gap("source_rgba", id=rendered["id"], reason="final complete source frame changed", actual=actual)
     return atlas, labels, symbol_reports, instances
 
 
@@ -725,7 +954,7 @@ def audit_canonical_captions(region_rows, approval):
             raise ValueError("canonical caption ID overlaps Source feature/native/shared ID")
         captions[region["id"]] = local
         for identity, caption in local.items():
-            if (set(caption) != fields or caption["origin"] != "canonical_wwp"
+            if (set(caption) - {"display_translation"} != fields or caption["origin"] != "canonical_wwp"
                     or any(caption[key] is not None for key in ("source_bbox", "source_png", "source_native"))
                     or caption["kind"] not in ("admin0", "region")):
                 raise ValueError("requires separate canonical text with null Source fields and no native/height")
@@ -808,10 +1037,26 @@ def audit_canonical_captions(region_rows, approval):
                 raise ValueError("duplicate canonical WWP member under different caption IDs")
             members.add(member)
             point = points[index]
-            if (record["original_Chinese_name"] != point["name"] or not chinese_name(point["name"])
+            if (record["original_Chinese_name"] != point["name"]
                     or record["lat_f32_bits"] != float32_bits(point["lat"])
                     or record["lon_f32_bits"] != float32_bits(point["lon"])
                     or record["flags"] != point["flags"]):
+                raise ValueError("canonical caption is not the exact selected original WWP member")
+            display_name = point["name"]
+            layout_error = "canonical caption must render exactly the original Chinese with explicit layout"
+            if "display_translation" in caption:
+                # The full-body selection binds the review and display. Exact WWP identity remains above.
+                parts = re.split(r"·[A-Z][.·]", display_name)
+                if len(parts) != 2 or not all(chinese_name(part) for part in parts):
+                    raise ValueError("canonical display translation requires exactly one legacy initial between Chinese name parts")
+                translation = caption["display_translation"]
+                if (not isinstance(translation, dict) or set(translation) != {"zh", "source", "review_notes"}
+                        or not chinese_name(translation["zh"]) or not http_url(translation["source"])
+                        or not isinstance(translation["review_notes"], str) or not translation["review_notes"].strip()):
+                    raise ValueError("canonical caption requires reviewed Chinese display translation and source")
+                display_name = translation["zh"]
+                layout_error = "canonical caption must render exactly the selected Chinese display with explicit layout"
+            elif not chinese_name(display_name):
                 raise ValueError("canonical caption is not the exact selected original WWP member")
             z = integer(region["z"], "canonical owner z", 3, 10)
             n = 1 << z
@@ -827,8 +1072,8 @@ def audit_canonical_captions(region_rows, approval):
             if (not isinstance(layout, dict) or set(layout) != {"x", "y", "font_style", "font_size", "lines"}
                     or not isinstance(layout["lines"], list) or not 1 <= len(layout["lines"]) <= 16
                     or any(not isinstance(line, str) or not line or "\n" in line or "\r" in line for line in layout["lines"])
-                    or "".join(layout["lines"]) != point["name"]):
-                raise ValueError("canonical caption must render exactly the original Chinese with explicit layout")
+                    or "".join(layout["lines"]) != display_name):
+                raise ValueError(layout_error)
     return captions, sources
 
 
@@ -899,8 +1144,8 @@ def compile_manifest(manifest, original_root, font_path, bold_font_path, preview
                 if isinstance(relative, str):
                     input_paths.add((root / relative).resolve())
     previews = preview_paths(region_rows, preview_dir, input_paths)
-    # A reference can precede its owner. Index only normal source features, so
-    # shared references and symbols cannot form reference chains or cycles.
+    # A reference can precede its owner. Resolve only directly owned features
+    # and symbols, without following an owner's shared references.
     region_index = {region["id"]: region for region in region_rows}
     feature_index = {region["id"]: {feature.get("id"): feature
                                    for feature in records(region.get("features"), "features")}
@@ -947,10 +1192,19 @@ def compile_manifest(manifest, original_root, font_path, bold_font_path, preview
         background, background_audits = audit_source_backgrounds(region, original, verified_sources, gap)
         if "source_backgrounds" in region:
             region_report["source_backgrounds"] = background_audits
-        region_report["source_alpha"] = audit_original(
-            region, original, contexts, features, symbols, gap, shared_sources, background)
+        source_rgba_frames = prepare_source_rgba_frames(region, features, symbols, root, input_paths, gap)
+        accounting_symbols = {key: symbol for key, symbol in symbols.items()
+                              if symbol.get("render_mode", "vector") != "source_rgba" or key in source_rgba_frames}
         atlas, labels, symbol_reports, crossing = render_region(
-            region, features, translations, layouts, symbols, font_paths, cmaps, gap, shared_sources, canonical_by_region.get(identity))
+            region, features, translations, layouts, symbols, font_paths, cmaps, gap, shared_sources, canonical_by_region.get(identity), source_rgba_frames)
+        punctuation = None
+        if "source_punctuation" in region:
+            punctuation, region_report["source_punctuation"] = preserve_source_punctuation(
+                region, original, verified_sources, atlas, gap)
+            crossing.extend(dict(id=p["id"], category="punctuation", tiles=p["tiles"])
+                            for p in region_report["source_punctuation"] if len(p["tiles"]) > 1)
+        region_report["source_alpha"] = audit_original(
+            region, original, contexts, features, accounting_symbols, gap, shared_sources, background, punctuation)
         # Native identity is physical, independent of feature/shared aliases.
         # Use actual raster bounds for center aliases after pixel rounding.
         for rendered in symbol_reports:
@@ -1003,11 +1257,14 @@ def compile_manifest(manifest, original_root, font_path, bold_font_path, preview
     rendered_regions = {region["id"]: region for region in report["regions"]}
     for borrower, source in shared_references:
         owner = rendered_regions[source["owner_region"]]
-        if (owner["gaps"] or not any(label["id"] == source["feature_id"] and label["bounds"] is not None
-                                     and label["tiles"] for label in owner["labels"])):
-            entry = dict(code="shared_source_owner", region=borrower["id"], id=source["id"],
-                         owner_region=source["owner_region"], feature_id=source["feature_id"],
-                         reason="owner must have valid source/render approval and actual Chinese output")
+        if not shared_source_has_rendered_owner(source, owner):
+            entry = dict(region=borrower["id"], id=source["id"], owner_region=source["owner_region"])
+            if "owner_symbol_id" in source:
+                entry.update(code="owner_native_source", owner_symbol_id=source["owner_symbol_id"],
+                             reason="approved owner must render the complete existing native circle")
+            else:
+                entry.update(code="shared_source_owner", feature_id=source["feature_id"],
+                             reason="owner must have valid source/render approval and actual Chinese output")
             borrower["gaps"].append(entry)
             report["gaps"].append(entry)
     report["legacy_suppressions"] = [suppression_records[key] for key in sorted(suppression_records)]
@@ -1100,6 +1357,9 @@ def write_map_source_package(directory, args, manifest, manifest_wire, report, m
         captions, sources = audit_canonical_captions(records(manifest.get("regions"), "regions"), selected)
         wanted = {(region_id, identity): record_fingerprint(caption["canonical_record"])
                   for region_id, local in captions.items() for identity, caption in local.items()}
+        translated = {(region_id, identity): (caption["display_translation"]["zh"], caption["layout"]["lines"])
+                      for region_id, local in captions.items() for identity, caption in local.items()
+                      if "display_translation" in caption}
         rendered = {}
         for region in records(report.get("regions"), "report regions"):
             for caption in records(region.get("canonical_captions", []), "report canonical_captions"):
@@ -1107,6 +1367,8 @@ def write_map_source_package(directory, args, manifest, manifest_wire, report, m
                 if (key in rendered or caption.get("origin") != "canonical_wwp"
                         or caption.get("source_bbox") is not None or caption.get("elevation") is not None):
                     raise ValueError("source package report has invalid or duplicate canonical caption identity")
+                if key in translated and (caption.get("zh"), caption.get("lines")) != translated[key]:
+                    raise ValueError("source package report must match exact selected captions and original WWP sources")
                 rendered[key] = record_fingerprint(caption["canonical_record"])
         if (rendered != wanted or type(report.get("canonical_caption_count")) is not int
                 or report["canonical_caption_count"] != len(wanted)

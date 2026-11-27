@@ -1,0 +1,33 @@
+{
+  "id": "Pacific-FijiLabasa-z6-63-34-1x2",
+  "z": 6,
+  "x": 63,
+  "y": 34,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "6/63/34.png",
+    "6/63/35.png"
+  ],
+  "context_tiles": [
+    "6/0/34.png",
+    "6/0/35.png"
+  ],
+  "features": [
+    {"id": "Pacific-FijiLabasa-z6-63-34-1x2-Labasa", "kind": "city", "original": "Labasa", "original_bbox": [223, 242, 256, 261], "source_url": "@source/84058feb3fe797f1", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null, "source_observation": {"available_readable_lines": ["Labas"], "complete_supplier_glyph": false, "printed_full_literal": null, "visible_world_bbox": [16351, 8946, 16384, 8965], "source_facts": {"path": "evidence/parallel_map/reviews/AM_OCEANIA_8918_AUTHOR_20261123/FIJI_LABASA_RAW_EXACT_BOUNDARY.json", "sha256": "5776991b3f34fa3f1e8414b63416ac2b721637b18d5b997293262bab7fc98caf", "bytes": 13662}, "last_source_column_world_x": 16383, "opposite_source_column_world_x": 0, "opposite_aligned_intervals_are_transparent": true}},
+    {"id": "Pacific-FijiLabasa-z6-63-34-1x2-Fiji", "kind": "admin0", "original": "FIJI", "original_bbox": [185, 312, 238, 335], "source_url": "@source/de41430c1844ae4c", "source_glyph_complete": true, "source_printed_full_literal": "FIJI"}
+  ],
+  "translations": [
+    {"id": "Pacific-FijiLabasa-z6-63-34-1x2-Labasa", "zh": "拉巴萨", "status": "approved", "source": "@source/4a5c149e4c336fa9", "record_sha256": "401c199098b2ecc84de25f9da99c04ef81041b9e53c32c609c2f30687e016a61", "review_notes": "World-wrap supplier fragment and original town point observed. Official Fiji gazette coordinate and division map identify Labasa. Chinese Embassy uses 拉巴萨."},
+    {"id": "Pacific-FijiLabasa-z6-63-34-1x2-Fiji", "zh": "斐济", "status": "approved", "source": "@source/5b64d1b0479084ff", "record_sha256": "7bbf83a42f07a9e136542e3586bf52ac7f0a1852e2e03ac94e8a5ae963ae4999", "review_notes": "Complete printed country label. Chinese name matches the sole old visible Synoptic WWP fallback."}
+  ],
+  "layouts": [
+    {"id": "Pacific-FijiLabasa-z6-63-34-1x2-Labasa", "x": 204, "y": 249, "lines": ["拉巴萨"], "font_style": "regular", "font_size": 12},
+    {"id": "Pacific-FijiLabasa-z6-63-34-1x2-Fiji", "x": 210, "y": 324, "lines": ["斐济"], "font_style": "bold", "font_size": 20}
+  ],
+  "symbols": [
+    {"id": "Pacific-FijiLabasa-z6-63-34-1x2-Labasa-point", "feature_id": "Pacific-FijiLabasa-z6-63-34-1x2-Labasa", "kind": "circle", "x": 227.5, "y": 246.5, "original_bbox": [223, 242, 232, 251], "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

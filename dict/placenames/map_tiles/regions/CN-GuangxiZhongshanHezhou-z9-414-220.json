@@ -1,0 +1,53 @@
+{
+  "id": "CN-GuangxiZhongshanHezhou-z9-414-220",
+  "z": 9,
+  "x": 414,
+  "y": 220,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/414/220.png"
+  ],
+  "context_tiles": [
+    "9/414/219.png",
+    "9/413/220.png",
+    "9/413/221.png",
+    "9/414/221.png"
+  ],
+  "features": [
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Zhongshan", "kind": "city", "original": "Zhongshan", "original_bbox": [48, 0, 110, 8], "source_url": "@source/ea62a84343ece6db", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null, "source_observation": {"available_readable_lines": ["Lower outlines only"], "complete_supplier_glyph": false, "printed_full_literal": null, "visible_world_bbox": [106032, 56320, 106094, 56328], "source_facts": {"path": "evidence/parallel_map/reviews/CN_GUANGXI_414220_AUTHOR_20261123/ZHONGSHAN_EXACT_BOUNDED_SOURCE.json", "sha256": "4ba016e9d71adac31d37e87247093b7defe8fd047383e64c373774bad253ecfc", "bytes": 7899}, "boundary_axis": "north", "source_first_row_world_y": 56320, "opposite_source_last_row_world_y": 56319}},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Hezhou", "kind": "city", "original": "Hezhou", "original_bbox": [147, 39, 195, 57], "source_url": "@source/ea62a84343ece6db", "source_glyph_complete": true, "source_printed_full_literal": "Hezhou"},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Tonggu", "kind": "city", "original": "Tonggu", "original_bbox": [20, 52, 65, 71], "source_url": "@source/ea62a84343ece6db", "source_glyph_complete": true, "source_printed_full_literal": "Tonggu"},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Hejie", "kind": "city", "original": "Hejie", "original_bbox": [190, 70, 220, 90], "source_url": "@source/ea62a84343ece6db", "source_glyph_complete": true, "source_printed_full_literal": "Hejie"},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Gonghui", "kind": "city", "original": "Gonghui", "original_bbox": [59, 107, 106, 127], "source_url": "@source/ea62a84343ece6db", "source_glyph_complete": true, "source_printed_full_literal": "Gonghui"},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Butou", "kind": "city", "original": "Butou", "original_bbox": [199, 114, 234, 131], "source_url": "@source/ea62a84343ece6db", "source_glyph_complete": true, "source_printed_full_literal": "Butou"},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Fuluo", "kind": "city", "original": "Fuluo", "original_bbox": [0, 199, 33, 216], "source_url": "@source/ea62a84343ece6db", "source_glyph_complete": true, "source_printed_full_literal": "Fuluo"},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Majiang", "kind": "city", "original": "Majiang", "original_bbox": [-44, 250, 1, 270], "source_url": "@source/a5bcabbc8cb3b90d", "source_glyph_complete": true, "source_printed_full_literal": "Majiang"},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Cangwu", "kind": "city", "original": "Cangwu", "original_bbox": [138, 253, 189, 275], "source_url": "@source/5cc1f248d22f6cb8", "source_glyph_complete": true, "source_printed_full_literal": "Cangwu"}
+  ],
+  "translations": [
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Zhongshan", "zh": "钟山", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "80b77c06df09984e0fd861da2c0e731e13aa3b8ff86bcd7d6f4f77c49a374012", "review_notes": "Physical z9 north-edge excerpt. Complete same-supplier Zhongshan from verified z10 join and official 贺州钟山县 reference establish 钟山."},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Hezhou", "zh": "贺州", "status": "approved", "source": "@source/861e6645d2af6bc2", "record_sha256": "6275cba12d063bfda3bf0b1a519d257a9200e291c30af86fc3fd96fa3a8e20b5", "review_notes": "Observed official supplier Roman glyph with primary administrative name reference."},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Tonggu", "zh": "同古", "status": "approved", "source": "@source/c6106a86e8ff653c", "record_sha256": "616add117f3797c7b1d1dde3f32bbbd47d46374a0855c6959c08bd9c451b9b48", "review_notes": "Observed official supplier Roman glyph with primary administrative name reference."},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Hejie", "zh": "贺街", "status": "approved", "source": "@source/c6106a86e8ff653c", "record_sha256": "b513a4703f33f48cbf2ac20fc583d65fc65004d6eb5f85d714727d44b4244262", "review_notes": "Observed official supplier Roman glyph with primary administrative name reference."},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Gonghui", "zh": "公会", "status": "approved", "source": "@source/c6106a86e8ff653c", "record_sha256": "c03d8bbae9dea0658de542ba48c230683d6c28691cfa3197b475adfc8c5d6298", "review_notes": "Observed official supplier Roman glyph with primary administrative name reference."},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Butou", "zh": "步头", "status": "approved", "source": "@source/c6106a86e8ff653c", "record_sha256": "1ff0a215da67df8fe5c8e1015b601355d526b3a90c8df7ef1c8a550f821c91fe", "review_notes": "Observed official supplier Roman glyph with primary administrative name reference."},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Fuluo", "zh": "富罗", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "17e1cb8a43b9275e4b29eb49205faade23542128db7f74ad8177ac162da07a3a", "review_notes": "Observed official supplier Roman glyph with primary administrative name reference."},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Majiang", "zh": "马江", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "557fca82f3df64df811d1022a1140ff4af82bb0c9ec1dbb6797dc41a61ae95dc", "review_notes": "Observed official supplier Roman glyph with primary administrative name reference."},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Cangwu", "zh": "苍梧", "status": "approved", "source": "@source/e0d16f62f29a3a22", "record_sha256": "258ef17159decac95f239b7444396cf321f7e787c0a39113809f0a4fe01ef9d7", "review_notes": "Observed official supplier Roman glyph with primary administrative name reference."}
+  ],
+  "layouts": [
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Zhongshan", "x": 77, "y": 16, "lines": ["钟山"], "font_style": "regular", "font_size": 16},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Hezhou", "x": 170, "y": 46, "lines": ["贺州"], "font_style": "regular", "font_size": 16},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Tonggu", "x": 42, "y": 61, "lines": ["同古"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Hejie", "x": 207, "y": 80, "lines": ["贺街"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Gonghui", "x": 83, "y": 116, "lines": ["公会"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Butou", "x": 217, "y": 122, "lines": ["步头"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Fuluo", "x": 20, "y": 207, "lines": ["富罗"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Majiang", "x": 23, "y": 244, "lines": ["马江"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangxiZhongshanHezhou-z9-414-220-Cangwu", "x": 160, "y": 244, "lines": ["苍梧"], "font_style": "regular", "font_size": 16}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

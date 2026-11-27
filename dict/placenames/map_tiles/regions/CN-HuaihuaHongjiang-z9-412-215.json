@@ -1,0 +1,45 @@
+{
+  "id": "CN-HuaihuaHongjiang-z9-412-215",
+  "x": 412,
+  "y": 215,
+  "z": 9,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/412/215.png"
+  ],
+  "context_tiles": [
+    "9/411/215.png",
+    "9/413/215.png"
+  ],
+  "features": [
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N01", "kind": "city", "original": "Huaihua", "source_url": "@source/bc1d3ddb51081386", "original_bbox": [87, 37, 139, 55], "source_glyph_complete": true, "source_printed_full_literal": "Huaihua"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N02", "kind": "city", "original": "Zhijiang", "source_url": "@source/bc1d3ddb51081386", "original_bbox": [-29, 88, 23, 110], "source_glyph_complete": true, "source_printed_full_literal": "Zhijiang"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N03", "kind": "city", "original": "Maodu", "source_url": "@source/bc1d3ddb51081386", "original_bbox": [166, 120, 206, 136], "source_glyph_complete": true, "source_printed_full_literal": "Maodu"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N04", "kind": "city", "original": "Hongjiang", "source_url": "@source/bc1d3ddb51081386", "original_bbox": [21, 184, 84, 206], "source_glyph_complete": true, "source_printed_full_literal": "Hongjiang"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N05", "kind": "city", "original": "Jiangshi", "source_url": "@source/bc1d3ddb51081386", "original_bbox": [0, 220, 40, 239], "source_glyph_complete": false, "source_printed_full_literal": null, "source_visible_fragment": "iangshi", "resolved_semantic_name": "Jiangshi", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"type": "SOURCE_SUFFIX_AND_COLOCATED_BILINGUAL_VECTOR_PLACE", "source_visible": "iangshi", "vector_Chinese": "江市镇", "vector_English": "Jiangshi", "facing_tile_original_alpha_in_name_frame": 0, "source_url": "@source/be573e591055eaaf"}},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N06", "kind": "city", "original": "Hongjiang", "source_url": "@source/bc1d3ddb51081386", "original_bbox": [85, 224, 148, 246], "source_glyph_complete": true, "source_printed_full_literal": "Hongjiang"}
+  ],
+  "translations": [
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N01", "zh": "怀化", "source": "@source/21354d38e1d1e75c", "status": "approved", "record_sha256": "431e23fde3088d807ae797dfe26085f04a62c992a90a8376ba5a6e8f08b2a943", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N02", "zh": "芷江", "source": "@source/251c315d80c628fc", "status": "approved", "record_sha256": "c55f047acca96202abb80bc12c731f5857fee17cb27b30f84bbe2785ce9fcb22", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N03", "zh": "茅渡", "source": "@source/d3ae5e59e8695dbb", "status": "approved", "record_sha256": "55043a90ab6935ab5624ef3dbb6aaea240d3047a59014f97472ac0fbcdc01de7", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N04", "zh": "洪江市", "source": "@source/e9f12fab461c4e32", "status": "approved", "record_sha256": "94735e10c001d02f6b72d9393365dc7b5e62ae1a5c5f27ba18b52e6bd0dbc4f0", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N05", "zh": "江市", "source": "@source/be573e591055eaaf", "status": "approved", "record_sha256": "1643aa993c7518d0f4faea9d9af5430512a29a14b27e0fd62d7e0ca1bb36506b", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N06", "zh": "洪江区", "source": "@source/bfde6658ee8e2ecf", "status": "approved", "record_sha256": "8da8ea66221b741afa87c2463d834ed2ad51deee348e2360830c0f37d28221dc", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"}
+  ],
+  "layouts": [
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N01", "x": 113.0, "y": 46.0, "font_style": "regular", "font_size": 12, "lines": ["怀化"]},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N02", "x": 13.5, "y": 99.0, "font_style": "regular", "font_size": 12, "lines": ["芷江"]},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N03", "x": 186.0, "y": 128.0, "font_style": "regular", "font_size": 12, "lines": ["茅渡"]},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N04", "x": 52.5, "y": 195.0, "font_style": "regular", "font_size": 12, "lines": ["洪江市"]},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N05", "x": 20.0, "y": 229.5, "font_style": "regular", "font_size": 12, "lines": ["江市"]},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-N06", "x": 116.5, "y": 235.0, "font_style": "regular", "font_size": 12, "lines": ["洪江区"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-shared-CN-DongkouLaotian-z9-413-215-N02", "owner_region": "CN-DongkouLaotian-z9-413-215", "feature_id": "CN-DongkouLaotian-z9-413-215-N02", "kind": "city", "original": "Jielong", "original_bbox": [224, 51, 264, 70], "source_url": "@source/3fce764605b23ca9", "review_notes": "原字跨片，中文沿用相邻瓦片中已绘制的同一地名。"},
+    {"id": "CN-HuaihuaHongjiang-z9-412-215-shared-CN-DongkouLaotian-z9-413-215-N03", "owner_region": "CN-DongkouLaotian-z9-413-215", "feature_id": "CN-DongkouLaotian-z9-413-215-N03", "kind": "city", "original": "Tiepo", "original_bbox": [240, 84, 273, 103], "source_url": "@source/3fce764605b23ca9", "review_notes": "原字跨片，中文沿用相邻瓦片中已绘制的同一地名。"}
+  ],
+  "legacy_suppressions": []
+}

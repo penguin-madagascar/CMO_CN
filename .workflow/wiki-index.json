@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generatedAt": 1792403476383,
+  "generatedAt": 1794191270597,
   "entries": [
     {
       "id": "knowhow-dcs-20261012-2009",
@@ -1031,6 +1031,79 @@
       "createdBy": null,
       "sourceRef": "evidence:session:ksyn-2107ce852f0cfe00,docs/BUG_REGISTRY.md:589,src/engine/CMOLocalizer.cs:617",
       "parent": "knowhow-tip-20261018-ece485f8bf1f18e4",
+      "related": [],
+      "repoId": null
+    },
+    {
+      "id": "knowhow-tip-20261028-comments",
+      "type": "knowhow",
+      "title": "数据库查看器 Comments 显示在列表行尾：模板里查不到不等于不显示",
+      "summary": "- `assets/db_templates/*.html`（8 个详情面板模板）都没有 `Comments` 字段； - 游戏自带 `DB/Templates/*.html` 同样没有； - `Command.exe` 里 `Comments` 只出现 4 次（1 次是 MemberRecords 表结构、2 次是 INI 解析器成员名、 1 次是版本资源）——没有任何 UI 标签。",
+      "tags": [
+        "数据库查看器",
+        "Comments",
+        "可见性",
+        "实机对照",
+        "静态误判"
+      ],
+      "status": "active",
+      "created": "2026-10-27T20:48:23.740Z",
+      "updated": "2026-10-27T23:02:00.893Z",
+      "scope": null,
+      "category": "tip",
+      "specCategory": null,
+      "createdBy": null,
+      "sourceRef": null,
+      "parent": null,
+      "related": [],
+      "repoId": null
+    },
+    {
+      "id": "knowhow-tip-20261109-scen-scendescription-campaign-descriptio",
+      "type": "knowhow",
+      "title": "战役正文有两层：.scen ScenDescription 与 .campaign Description/EndingText",
+      "summary": "用户反馈「某两个 DLC 战役没汉化」，截图是**系列战役选单**右侧的介绍面板。",
+      "tags": [
+        "DLC 战役",
+        "系列战役",
+        "campaign",
+        "ScenDescription",
+        "盘点覆盖面"
+      ],
+      "status": "active",
+      "created": "2026-11-09T02:27:45.059Z",
+      "updated": "2026-11-09T02:27:45.059Z",
+      "scope": null,
+      "category": "tip",
+      "specCategory": null,
+      "createdBy": null,
+      "sourceRef": "BUG_REGISTRY R83",
+      "parent": null,
+      "related": [],
+      "repoId": null
+    },
+    {
+      "id": "knowhow-tip-20261109-webview2",
+      "type": "knowhow",
+      "title": "WebView2 桥：页→宿主通道必须用真实回执证明（单向可用是真实形态）",
+      "summary": "界面某处仍是英文，但词典里明明有整段译文（`XLATE` 的 `briefing` 通道返回中文）。 本项目实测案例：`CampaignPlayWindow/WebBrowser1`（系列战役描述面板）。",
+      "tags": [
+        "WebView2",
+        "postMessage",
+        "WebMessageReceived",
+        "WEBVIEW_DIAG",
+        "通道存活",
+        "轮询兜底"
+      ],
+      "status": "active",
+      "created": "2026-11-09T02:27:33.892Z",
+      "updated": "2026-11-09T02:27:33.892Z",
+      "scope": null,
+      "category": "tip",
+      "specCategory": null,
+      "createdBy": null,
+      "sourceRef": "BUG_REGISTRY R84",
+      "parent": null,
       "related": [],
       "repoId": null
     },

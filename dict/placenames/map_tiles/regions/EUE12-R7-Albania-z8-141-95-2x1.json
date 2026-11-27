@@ -1,0 +1,46 @@
+{
+  "id": "EUE12-R7-Albania-z8-141-95-2x1",
+  "z": 8,
+  "x": 141,
+  "y": 95,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/141/95.png",
+    "8/142/95.png"
+  ],
+  "context_tiles": [
+    "8/141/94.png",
+    "8/142/94.png",
+    "8/143/94.png",
+    "8/143/95.png"
+  ],
+  "features": [
+    {"id": "EUE12-N15", "kind": "city", "original": "Durrës", "original_bbox": [208, 171, 252, 192], "source_url": "@source/cf04b679292d5f56"},
+    {"id": "EUE12-N16", "kind": "city", "original": "Tirana", "original_bbox": [275, 167, 321, 189], "source_url": "@source/fff148c11a6c4762"},
+    {"id": "EUE12-N17", "kind": "city", "original": "Elbasan", "original_bbox": [323, 220, 374, 241], "source_url": "@source/fff148c11a6c4762"}
+  ],
+  "translations": [
+    {"id": "EUE12-N15", "zh": "都拉斯", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "6d3731d4acd9f9ba233d986b7d26d360b98935d07e752520b3a6aa49c6422767", "review_notes": "ORIGINAL_NE_NAME_ZH_EXACT_NAME_NAME_EN_WITH_ORIGINAL_GN19_LOCALITY_CONTEXT; verbatim qualified Source Chinese. Metadata only; Root model and actual different TARGET pending. Root e094 actual private model, author SELF only; different /root/caribbean_author TARGET pending. Personally viewed all22 new complete glyphs (17 Source Chinese+5 separate original WWP captions),7 new whole owners,18 original mixed raw9-frame/target73 native pairs,5 internal joins and2 cross-owner joins. All original Source18 full13400/core13141/real5px15 verified; old Tetovo259 retained in its complete existing normal with603=344+259. Measured initial Elbasan N17 and fixed Albania C03 low-alpha3pixel overlap; only ordinary Source N17 x+4 removes all positive/alpha/RGBA contamination. First evidence retained. All5 canonical exact bodies/layouts/nominal f32 points,all18 native midpoints and complete Source boxes unchanged. Source1=None; new Tetovo rendered private1 is newly selected,not borrowed current19/future21. Old3 complete145 objects/reviews remain exact. No old preview exports,formal promotion,new Source HTTP,unknown15 or fullrunner. This author SELF receipt is not different TARGET approval or full_current canonical/rendered authority."},
+    {"id": "EUE12-N16", "zh": "地拉那", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "0d603a14747aa5c9d7e51ffe04e35a4f61672645ca3430ec23f7053032a55c72", "review_notes": "ORIGINAL_NE_NAME_ZH_EXACT_NAME_NAME_EN_WITH_ORIGINAL_GN19_LOCALITY_CONTEXT; verbatim qualified Source Chinese. Metadata only; Root model and actual different TARGET pending. Root e094 actual private model, author SELF only; different /root/caribbean_author TARGET pending. Personally viewed all22 new complete glyphs (17 Source Chinese+5 separate original WWP captions),7 new whole owners,18 original mixed raw9-frame/target73 native pairs,5 internal joins and2 cross-owner joins. All original Source18 full13400/core13141/real5px15 verified; old Tetovo259 retained in its complete existing normal with603=344+259. Measured initial Elbasan N17 and fixed Albania C03 low-alpha3pixel overlap; only ordinary Source N17 x+4 removes all positive/alpha/RGBA contamination. First evidence retained. All5 canonical exact bodies/layouts/nominal f32 points,all18 native midpoints and complete Source boxes unchanged. Source1=None; new Tetovo rendered private1 is newly selected,not borrowed current19/future21. Old3 complete145 objects/reviews remain exact. No old preview exports,formal promotion,new Source HTTP,unknown15 or fullrunner. This author SELF receipt is not different TARGET approval or full_current canonical/rendered authority."},
+    {"id": "EUE12-N17", "zh": "爱尔巴桑", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "d1960119a917eb3d07bfc23182d0ea73fef0ee270ce54c1f29d7ef5cc735fcef", "review_notes": "ORIGINAL_NE_NAME_ZH_EXACT_NAME_NAME_EN_WITH_ORIGINAL_GN19_LOCALITY_CONTEXT; verbatim qualified Source Chinese. Metadata only; Root model and actual different TARGET pending. Root e094 actual private model, author SELF only; different /root/caribbean_author TARGET pending. Personally viewed all22 new complete glyphs (17 Source Chinese+5 separate original WWP captions),7 new whole owners,18 original mixed raw9-frame/target73 native pairs,5 internal joins and2 cross-owner joins. All original Source18 full13400/core13141/real5px15 verified; old Tetovo259 retained in its complete existing normal with603=344+259. Measured initial Elbasan N17 and fixed Albania C03 low-alpha3pixel overlap; only ordinary Source N17 x+4 removes all positive/alpha/RGBA contamination. First evidence retained. All5 canonical exact bodies/layouts/nominal f32 points,all18 native midpoints and complete Source boxes unchanged. Source1=None; new Tetovo rendered private1 is newly selected,not borrowed current19/future21. Old3 complete145 objects/reviews remain exact. No old preview exports,formal promotion,new Source HTTP,unknown15 or fullrunner. This author SELF receipt is not different TARGET approval or full_current canonical/rendered authority."}
+  ],
+  "layouts": [
+    {"id": "EUE12-N15", "x": 238.5, "y": 186.5, "font_size": 12, "font_style": "regular", "lines": ["都拉斯"]},
+    {"id": "EUE12-N16", "x": 305.5, "y": 182.5, "font_size": 12, "font_style": "regular", "lines": ["地拉那"]},
+    {"id": "EUE12-N17", "x": 363.5, "y": 235.5, "font_size": 12, "font_style": "regular", "lines": ["爱尔巴桑"]}
+  ],
+  "symbols": [
+    {"id": "EUE12-P15", "kind": "circle", "original_bbox": [208, 171, 217, 180], "x": 212.5, "y": 175.5, "size": 9, "outline_width": 1, "source_url": "@source/cf04b679292d5f56", "feature_id": "EUE12-N15"},
+    {"id": "EUE12-P16", "kind": "circle", "original_bbox": [275, 167, 284, 176], "x": 279.5, "y": 171.5, "size": 9, "outline_width": 1, "source_url": "@source/fff148c11a6c4762", "feature_id": "EUE12-N16"},
+    {"id": "EUE12-P17", "kind": "circle", "original_bbox": [323, 220, 332, 229], "x": 327.5, "y": 224.5, "size": 9, "outline_width": 1, "source_url": "@source/fff148c11a6c4762", "feature_id": "EUE12-N17"},
+    {"id": "EUE12-P18", "kind": "circle", "original_bbox": [485, 2, 494, 11], "x": 489.5, "y": 6.5, "size": 9, "outline_width": 1, "source_url": "@source/fff148c11a6c4762", "shared_source_id": "EUE12-ALIAS-OLD-Tetovo"}
+  ],
+  "shared_sources": [
+    {"id": "EUE12-ALIAS-OLD-Tetovo", "owner_region": "AM-EastMediterranean-z8-143-95", "feature_id": "AM13-1-Tetovo", "kind": "city", "original": "Tetovo", "source_url": "@source/5c636afc23e48b0c", "original_bbox": [484, 1, 533, 24], "review_notes": "Proposed exact old full normal alias: full603 qualified,259 outside new12 retained in old81 owner with actual complete 泰托沃 CN. No old Tetovo symbol exists; separate new rendered shared-native9/1 requires Root named model and different actual TARGET. No owner_native_source_refs."},
+    {"id": "EUE12-INTERNAL-Shkoder", "owner_region": "EUE12-R6-AdriaticUpper-z8-140-94-3x1", "feature_id": "EUE12-N11", "kind": "city", "original": "Shkoder", "source_url": "@source/048e5a8724266597", "original_bbox": [220, -13, 274, 8], "review_notes": "Proposed new-to-new internal normal reference: all348 lower-row original Shkoder samples accounted; full Chinese and single native rendered only in upper owner. Preserve complete Source world box, no duplicate normal or native."}
+  ],
+  "canonical_captions": [
+    {"id": "EUE12-C03-Synoptic4", "origin": "canonical_wwp", "canonical_record": {"layer": "Synoptic", "wwp_file": {"path": "assets/placenames/Synoptic.wwp", "sha256": "3dfa0cc94649684dadadaee84f00c758b7d6bca10fa25175f0fb88aa32a41f53"}, "record_index_zero_based": 4, "original_Chinese_name": "阿尔巴尼亚", "lat_f32_bits": 1109655552, "lon_f32_bits": 1101004800, "flags": 0, "level": 0}, "source_bbox": null, "source_png": null, "source_native": null, "kind": "region", "layout": {"x": 304.8888888888905, "y": 245.0, "font_size": 12, "font_style": "regular", "lines": ["阿尔巴尼亚"]}}
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "TR-SirnakHakkariCilo-z9-316-198-3x1",
+  "z": 9,
+  "x": 316,
+  "y": 198,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/316/198.png",
+    "9/317/198.png",
+    "9/318/198.png"
+  ],
+  "context_tiles": [
+    "9/315/198.png",
+    "9/317/199.png",
+    "9/319/198.png"
+  ],
+  "features": [
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S01", "kind": "city", "original": "Shrnak", "original_bbox": [76, 81, 121, 99], "source_url": "@source/edf6fb64ff6462d2", "source_glyph_complete": true, "source_printed_full_literal": "Shrnak"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S02", "kind": "city", "original": "Cizre", "original_bbox": [-15, 168, 14, 185], "source_url": "@source/edf6fb64ff6462d2", "source_glyph_complete": true, "source_printed_full_literal": "Cizre"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S03", "kind": "city", "original": "Uludere", "original_bbox": [220, 117, 264, 133], "source_url": "@source/edf6fb64ff6462d2", "source_glyph_complete": true, "source_printed_full_literal": "Uludere"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S04", "kind": "city", "original": "Silopi", "original_bbox": [86, 207, 120, 226], "source_url": "@source/edf6fb64ff6462d2", "source_glyph_complete": true, "source_printed_full_literal": "Silopi"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S05", "kind": "city", "original": "Beytüşşebap", "original_bbox": [323, 60, 393, 79], "source_url": "@source/427ae4d99c0ed2b3", "source_glyph_complete": true, "source_printed_full_literal": "Beytüşşebap"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S06", "kind": "city", "original": "Çukurca", "original_bbox": [495, 208, 541, 227], "source_url": "@source/c6632996700f1df8", "source_glyph_complete": true, "source_printed_full_literal": "Çukurca"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S07", "kind": "city", "original": "Hakkâri", "original_bbox": [541, 56, 588, 74], "source_url": "@source/c6632996700f1df8", "source_glyph_complete": true, "source_printed_full_literal": "Hakkâri"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S08", "kind": "peak", "original": "Cilo Dağı", "original_bbox": [609, 69, 661, 100], "source_url": "@source/c6632996700f1df8", "source_glyph_complete": true, "source_printed_full_literal": "Cilo Dağı", "original_elevation_m": "4050"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S09", "kind": "city", "original": "Yüksekova", "original_bbox": [733, 59, 792, 76], "source_url": "@source/c6632996700f1df8", "source_glyph_complete": true, "source_printed_full_literal": "Yüksekova"}
+  ],
+  "translations": [
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S01", "zh": "舍尔纳克", "status": "approved", "source": "@source/43d30ff74df97dcb", "record_sha256": "a98dcde36fd42e810407cb0fa7e21417045ec9959caf434b63556142647cffb9", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S02", "zh": "吉兹雷", "status": "approved", "source": "@source/43d30ff74df97dcb", "record_sha256": "39727dca3b7f4a2f15ba6a709e9ea651344aee677bbdc8e4015b1a56950384ac", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S03", "zh": "乌卢代雷", "status": "approved", "source": "@source/fd2f1b60d91aab02", "record_sha256": "d801205f2a9a97d86565669dc9c34673d62996666584efe0c04f69cf1345a2ce", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S04", "zh": "锡洛皮", "status": "approved", "source": "@source/43d30ff74df97dcb", "record_sha256": "299ba8696da5beba132d49870d48deca02ffba1639db848b324ce1eea8354072", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S05", "zh": "贝伊蒂谢巴普", "status": "approved", "source": "@source/fd2f1b60d91aab02", "record_sha256": "ad75d189fdbd4aa30671835edb7ad255facdf4db723352cb39c266f1de6ad6d5", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S06", "zh": "丘库尔贾", "status": "approved", "source": "@source/a194fab2fb3fb6a3", "record_sha256": "0bce680c85c627e84e8998ac6f29177d9c351bdeac8f41d34665763831bb467b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S07", "zh": "哈卡里", "status": "approved", "source": "@source/a194fab2fb3fb6a3", "record_sha256": "504e542f894baabffc32a8ff777d6e042416a4cda2a1588ebdcc1e624066f756", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S08", "zh": "吉洛山", "status": "approved", "source": "@source/a194fab2fb3fb6a3", "record_sha256": "d09459078b31c502bced42349bdc4570fb3e403b0a0d4ee26bff6295312788d6", "review_notes": "核对原图吉洛山地名、海拔4050米。保留原图海拔，与山峰符号独立记账。"},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S09", "zh": "于克塞科瓦", "status": "approved", "source": "@source/a194fab2fb3fb6a3", "record_sha256": "0c8d996d77737841fbef9e086d85dfa9810524f3dc544d23aa81a8be0def2a24", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S01", "x": 99, "y": 92, "font_style": "regular", "font_size": 12, "lines": ["舍尔纳克"]},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S02", "x": 23, "y": 178, "font_style": "regular", "font_size": 12, "lines": ["吉兹雷"]},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S03", "x": 241, "y": 125, "font_style": "regular", "font_size": 12, "lines": ["乌卢代雷"]},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S04", "x": 102, "y": 214, "font_style": "regular", "font_size": 12, "lines": ["锡洛皮"]},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S05", "x": 360, "y": 68, "font_style": "regular", "font_size": 12, "lines": ["贝伊蒂谢巴普"]},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S06", "x": 519, "y": 218, "font_style": "regular", "font_size": 12, "lines": ["丘库尔贾"]},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S07", "x": 565, "y": 66, "font_style": "regular", "font_size": 12, "lines": ["哈卡里"]},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S08", "x": 630, "y": 85, "font_style": "regular", "font_size": 12, "lines": ["吉洛山"]},
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S09", "x": 733, "y": 69, "font_style": "regular", "font_size": 12, "lines": ["于克塞科瓦"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Batifa", "source_url": "@source/f9f8bc920a5509cc", "id": "TR-SirnakHakkariCilo-z9-316-198-3x1-shared-Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N03", "original_bbox": [284, 242, 318, 258], "owner_region": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1", "feature_id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N03", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [
+    {"id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S08-triangle", "feature_id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S08", "kind": "triangle", "x": 661.0, "y": 106.5, "size": 8, "outline_width": 1, "original_bbox": [656, 102, 666, 111]}
+  ],
+  "legacy_suppressions": []
+}

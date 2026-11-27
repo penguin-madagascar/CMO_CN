@@ -1,0 +1,67 @@
+{
+  "id": "N8-PREFIX-z9-415-198",
+  "z": 9,
+  "x": 415,
+  "y": 198,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/415/198.png",
+    "9/415/199.png"
+  ],
+  "context_tiles": [
+    "9/414/198.png",
+    "9/414/199.png",
+    "9/416/198.png",
+    "9/416/199.png"
+  ],
+  "features": [
+    {"id": "N8-PFX-045", "kind": "city", "original": "Qingxu", "original_bbox": [180, 43, 226, 65], "source_url": "@source/597330167a4686eb"},
+    {"id": "N8-PFX-046", "kind": "city", "original": "Huili", "original_bbox": [-3, 44, 25, 60], "source_url": "@source/597330167a4686eb"},
+    {"id": "N8-PFX-047", "kind": "city", "original": "Jiaocheng", "original_bbox": [99, 66, 160, 88], "source_url": "@source/597330167a4686eb"},
+    {"id": "N8-PFX-048", "kind": "city", "original": "Wenshui", "original_bbox": [57, 123, 112, 140], "source_url": "@source/597330167a4686eb"},
+    {"id": "N8-PFX-050", "kind": "city", "original": "Qi", "original_bbox": [182, 156, 198, 178], "source_url": "@source/597330167a4686eb"},
+    {"id": "N8-PFX-051", "kind": "city", "original": "Fenyang", "original_bbox": [-31, 198, 21, 219], "source_url": "@source/597330167a4686eb"},
+    {"id": "N8-PFX-052", "kind": "city", "original": "Xiangle", "original_bbox": [42, 214, 86, 233], "source_url": "@source/597330167a4686eb"},
+    {"id": "N8-PFX-054", "kind": "city", "original": "Jiexiu", "original_bbox": [24, 306, 61, 324], "source_url": "@source/1c5e773740b21edc"},
+    {"id": "N8-PFX-055", "kind": "city", "original": "Mengshan", "original_bbox": [193, 315, 250, 335], "source_url": "@source/1c5e773740b21edc"},
+    {"id": "N8-PFX-056", "kind": "city", "original": "Liangdu", "original_bbox": [-32, 355, 14, 375], "source_url": "@source/1c5e773740b21edc"},
+    {"id": "N8-PFX-057", "kind": "city", "original": "Lingshi", "original_bbox": [-32, 390, 14, 411], "source_url": "@source/1c5e773740b21edc"},
+    {"id": "N8-PFX-058", "kind": "city", "original": "Guodao", "original_bbox": [166, 469, 209, 486], "source_url": "@source/1c5e773740b21edc"},
+    {"id": "N8-PFX-053", "kind": "city", "original": "Lai…", "original_bbox": [238, 243, 256, 262], "source_url": "@source/597330167a4686eb", "source_glyph_complete": false, "source_printed_full_literal": null, "source_visible_fragment": "Lai…", "providerpoint": null}
+  ],
+  "translations": [
+    {"id": "N8-PFX-045", "zh": "清徐", "status": "approved", "source": "@source/597330167a4686eb", "record_sha256": "10736de395388f6126fba88bf12d17ac714d6a6da7d04cf286a8fb8f3bc73c30", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-046", "zh": "会立", "status": "approved", "source": "@source/952bd2330004a075", "record_sha256": "fc90608ed026f67b277a6a6fd68c148a4ec361317342cab50c2d3f0f21da3899", "review_notes": "吕梁市统计年鉴列交城县会立乡；原 GeoNames 的 Huili 同区，标签中心与会立乡坐标约 1 像素。"},
+    {"id": "N8-PFX-047", "zh": "交城", "status": "approved", "source": "@source/597330167a4686eb", "record_sha256": "4281b2c336342284c95faaee9ba7665d45e9a55eac0e1b6f859b89fa240d8f79", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-048", "zh": "文水", "status": "approved", "source": "@source/597330167a4686eb", "record_sha256": "e2c60df8d0d53f22a0fd355b6ca5356ff2a8189ee78e09ae84f675d2181e26dc", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-050", "zh": "祁", "status": "approved", "source": "@source/597330167a4686eb", "record_sha256": "f84c2a6a2021960bf9ced9c6a1dd5b175c08f40b0c43e3eb0bd4ac92e8251a07", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-051", "zh": "汾阳", "status": "approved", "source": "@source/597330167a4686eb", "record_sha256": "2946fa1a56190627ed6b3aea600c6296dafb63321c17f597ca627d035310c36f", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-052", "zh": "香乐", "status": "approved", "source": "@source/597330167a4686eb", "record_sha256": "ce9fa82396ce586cbef5f6e849f82f9e809a7f727ddbf7e51c8a6ec710926bbe", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-054", "zh": "介休", "status": "approved", "source": "@source/1c5e773740b21edc", "record_sha256": "485d81c5d146d8c287ef975a827631d540dababdc0b0d08501828b079f69c505", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-055", "zh": "孟山", "status": "approved", "source": "@source/1c5e773740b21edc", "record_sha256": "46d7b7a68779bf37570dcfe10ab9c837db01ab392c5a4219fc6639516497007e", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-056", "zh": "两渡", "status": "approved", "source": "@source/e3ab4a6380c1728a", "record_sha256": "e68f7af65403fef8477fcb11c95e3ea705402805c3b8696a4ea81afcdb75ae87", "review_notes": "农业部公告列灵石县两渡镇；原 GeoNames 的 Liangdu 旧记录与原图标签约 3 像素。"},
+    {"id": "N8-PFX-057", "zh": "灵石", "status": "approved", "source": "@source/1c5e773740b21edc", "record_sha256": "90355ab1f138c9d7b3649d205264f457013612954409cf5e60e80e495345c67f", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-058", "zh": "郭道", "status": "approved", "source": "@source/1c5e773740b21edc", "record_sha256": "87d5d49c65f33bcd8277b54f2e67458e2b65b994c42c9620a70a8e959dd4408d", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-053", "zh": "来远", "status": "approved", "source": "@source/597330167a4686eb", "record_sha256": "a496af2ccd0ad49dfcdc69a5521a49f725a51455420237cc3918afd6702170bc", "review_notes": "原图显示的边缘裁词按来源保存；使用已审核原始双语资料及同地关联，采用中性中文地名。"}
+  ],
+  "shared_sources": [
+    {"id": "NC12-SOURCE-PH-049-SHARED", "kind": "city", "original": "Taigu", "original_bbox": [254, 125, 291, 147], "source_url": "@source/8393988b2c5b5986", "review_notes": "DRAFT exact same physical print; preserve existing complete old owner and normal without a second caption or native. Root selection and independent Source/Target qualification remain pending.", "owner_region": "CN-NORTHWEST-z9-416-192", "feature_id": "CNW9-285"}
+  ],
+  "symbols": [],
+  "layouts": [
+    {"id": "N8-PFX-045", "x": 203.0, "y": 54.0, "font_size": 12, "font_style": "regular", "lines": ["清徐"]},
+    {"id": "N8-PFX-046", "x": 18.0, "y": 52.0, "font_size": 12, "font_style": "regular", "lines": ["会立"]},
+    {"id": "N8-PFX-047", "x": 129.5, "y": 77.0, "font_size": 12, "font_style": "regular", "lines": ["交城"]},
+    {"id": "N8-PFX-048", "x": 84.5, "y": 131.5, "font_size": 12, "font_style": "regular", "lines": ["文水"]},
+    {"id": "N8-PFX-050", "x": 190.0, "y": 167.0, "font_size": 12, "font_style": "regular", "lines": ["祁"]},
+    {"id": "N8-PFX-051", "x": 18.0, "y": 208.5, "font_size": 12, "font_style": "regular", "lines": ["汾阳"]},
+    {"id": "N8-PFX-052", "x": 64.0, "y": 223.5, "font_size": 12, "font_style": "regular", "lines": ["香乐"]},
+    {"id": "N8-PFX-054", "x": 42.5, "y": 315.0, "font_size": 12, "font_style": "regular", "lines": ["介休"]},
+    {"id": "N8-PFX-055", "x": 221.5, "y": 325.0, "font_size": 12, "font_style": "regular", "lines": ["孟山"]},
+    {"id": "N8-PFX-056", "x": 18.0, "y": 365.0, "font_size": 12, "font_style": "regular", "lines": ["两渡"]},
+    {"id": "N8-PFX-057", "x": 18.0, "y": 400.5, "font_size": 12, "font_style": "regular", "lines": ["灵石"]},
+    {"id": "N8-PFX-058", "x": 187.5, "y": 477.5, "font_size": 12, "font_style": "regular", "lines": ["郭道"]},
+    {"id": "N8-PFX-053", "x": 238.0, "y": 252.5, "font_size": 12, "font_style": "regular", "lines": ["来远"]}
+  ]
+}

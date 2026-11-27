@@ -1,0 +1,44 @@
+{
+  "id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2",
+  "z": 7,
+  "x": 94,
+  "y": 56,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "7/94/56.png",
+    "7/94/57.png"
+  ],
+  "context_tiles": [
+    "7/93/56.png"
+  ],
+  "features": [
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N00", "kind": "city", "original": "Bhubaneshwar", "original_bbox": [129, 160, 207, 179], "source_url": "@source/b1939632b80277a3", "source_glyph_complete": true, "source_printed_full_literal": "Bhubaneshwar"},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N01", "kind": "city", "original": "Puri", "original_bbox": [128, 204, 155, 223], "source_url": "@source/b1939632b80277a3", "source_glyph_complete": true, "source_printed_full_literal": "Puri"},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N02", "kind": "city", "original": "Brahmapur", "original_bbox": [34, 252, 95, 273], "source_url": "@source/b1939632b80277a3", "source_glyph_complete": true, "source_printed_full_literal": "Brahmapur"}
+  ],
+  "translations": [
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N00", "zh": "布巴内什瓦尔", "status": "approved", "source": "@source/25ae788dfaf60a4c", "record_sha256": "b1bff5876271df1159439f587039cc1ff3ab38e1f547dc9f86d921a7f45eb88d", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N01", "zh": "布里", "status": "approved", "source": "@source/a402c4e025e5a414", "record_sha256": "44c71a0a896b09a0b9b13a4798f8c0b635d64d37f4ee8c84fd98d91230b7ba5e", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N02", "zh": "布拉赫马普尔", "status": "approved", "source": "@source/5b2803581fcf45f7", "record_sha256": "a7ec056478b5801b76b1c6fe32fb820998503d38fc5e31d9e43071787a756751", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N00", "x": 179, "y": 176, "font_size": 12, "font_style": "regular", "lines": ["布巴内什瓦尔"]},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N01", "x": 148, "y": 220, "font_size": 12, "font_style": "regular", "lines": ["布里"]},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N02", "x": 74, "y": 244, "font_size": 12, "font_style": "regular", "lines": ["布拉赫马普尔"]}
+  ],
+  "symbols": [
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N00-symbol", "feature_id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N00", "kind": "circle", "x": 135.0, "y": 164.0, "original_bbox": [129, 160, 141, 168], "size": 7, "outline_width": 1},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N01-symbol", "feature_id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N01", "kind": "circle", "x": 133.0, "y": 208.0, "original_bbox": [128, 204, 138, 212], "size": 7, "outline_width": 1},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N02-symbol", "feature_id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-N02", "kind": "circle", "x": 39.5, "y": 257.0, "original_bbox": [34, 252, 45, 262], "size": 7, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-Shared-0", "owner_region": "India-Nagpur-Chhattisgarh-z7-92-56-2x1", "feature_id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Sambalpur", "kind": "city", "original": "Sambalpur", "original_bbox": [-41, 42, 19, 63], "source_url": "@source/5a0e50ad0da5be4e", "review_notes": "跨片原文用完整墨迹连接到既有中文。"},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-Shared-1", "owner_region": "India-Nagpur-Chhattisgarh-z7-92-56-2x1", "feature_id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-ODISHA", "kind": "admin1", "original": "ODISHA", "original_bbox": [-9, 125, 67, 143], "source_url": "@source/5a0e50ad0da5be4e", "review_notes": "跨片原文用完整墨迹连接到既有中文。"}
+  ],
+  "canonical_captions": [
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-Cities1997", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 136.92222222222335, "y": 144.31279905272095, "font_style": "regular", "font_size": 12, "lines": ["克塔克"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1997, "original_Chinese_name": "克塔克", "lat_f32_bits": 1101248578, "lon_f32_bits": 1118552624, "flags": 0, "level": 1}},
+    {"id": "India-Odisha-Bhubaneswar-Puri-Brahmapur-z7-94-56-1x2-Cities2070", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 229.87847222222263, "y": 44.12746986196362, "font_style": "regular", "font_size": 12, "lines": ["巴拉索尔"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2070, "original_Chinese_name": "巴拉索尔", "lat_f32_bits": 1101787384, "lon_f32_bits": 1118690801, "flags": 0, "level": 1}}
+  ],
+  "legacy_suppressions": []
+}

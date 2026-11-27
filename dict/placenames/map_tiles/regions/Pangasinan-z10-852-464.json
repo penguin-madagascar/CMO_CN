@@ -1,0 +1,29 @@
+{
+  "id": "Pangasinan-z10-852-464",
+  "z": 10,
+  "x": 852,
+  "y": 464,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/852/464.png",
+    "10/853/464.png"
+  ],
+  "context_tiles": [
+    "10/853/465.png"
+  ],
+  "features": [
+    {"id": "Pang-z10-Bolinao", "kind": "city", "original": "Bolinao", "original_bbox": [242, 180, 286, 196], "source_printed_full_literal": "Bolinao", "source_glyph_complete": true, "source_url": "@source/4e1c92b98c51a14e"}
+  ],
+  "translations": [
+    {"id": "Pang-z10-Bolinao", "zh": "博利瑙", "status": "approved", "source": "@source/8ee1740f207a89e8", "record_sha256": "74f822ba22de1d745b379bb3cad0342e82ccebfbc7622d356ec11d69beb0b008", "review_notes": "Scholarly Chinese geographic usage 博利瑙（Bolinao）角 corroborates the name stem. Philippine registry confirms the municipality."}
+  ],
+  "layouts": [
+    {"id": "Pang-z10-Bolinao", "x": 264.0, "y": 188.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "Pang-z10-Anda-shared", "owner_region": "Pangasinan-z10-853-465", "feature_id": "Pang-z10-Anda", "kind": "city", "original": "Anda", "original_bbox": [291, 255, 319, 270], "source_url": "@source/8458f8421dfe0027", "review_notes": "The six original alpha pixels in the preceding row belong to this single complete Anda label."}
+  ],
+  "legacy_suppressions": []
+}

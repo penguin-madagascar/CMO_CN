@@ -1,0 +1,51 @@
+{
+  "id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190",
+  "z": 9,
+  "x": 427,
+  "y": 190,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/427/190.png"
+  ],
+  "context_tiles": [
+    "9/426/190.png",
+    "9/428/190.png",
+    "9/427/191.png"
+  ],
+  "features": [
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S01", "kind": "city", "original": "Jinchanggouliang", "original_bbox": [-34, 17, 61, 37], "source_url": "@source/6bef219a4782d6df", "source_glyph_complete": true, "source_printed_full_literal": "Jinchanggouliang"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S02", "kind": "city", "original": "Quanjuyong", "original_bbox": [205, 21, 256, 42], "source_url": "@source/6bef219a4782d6df", "source_glyph_complete": false, "source_printed_full_literal": null},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S03", "kind": "city", "original": "Longtan", "original_bbox": [39, 56, 86, 75], "source_url": "@source/6bef219a4782d6df", "source_glyph_complete": true, "source_printed_full_literal": "Longtan"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S04", "kind": "city", "original": "Beipiao", "original_bbox": [170, 105, 218, 126], "source_url": "@source/6bef219a4782d6df", "source_glyph_complete": true, "source_printed_full_literal": "Beipiao"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S05", "kind": "city", "original": "Damiao", "original_bbox": [-15, 160, 32, 177], "source_url": "@source/6bef219a4782d6df", "source_glyph_complete": true, "source_printed_full_literal": "Damiao"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S06", "kind": "city", "original": "Shaoduba", "original_bbox": [32, 161, 87, 178], "source_url": "@source/6bef219a4782d6df", "source_glyph_complete": true, "source_printed_full_literal": "Shaoduba"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S07", "kind": "city", "original": "Shangyuan", "original_bbox": [240, 198, 302, 218], "source_url": "@source/6bef219a4782d6df", "source_glyph_complete": true, "source_printed_full_literal": "Shangyuan"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S08", "kind": "city", "original": "Chaoyang", "original_bbox": [44, 214, 105, 236], "source_url": "@source/6bef219a4782d6df", "source_glyph_complete": true, "source_printed_full_literal": "Chaoyang"}
+  ],
+  "translations": [
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S01", "zh": "金厂沟梁", "status": "approved", "source": "@source/3650ec3ddb8785c9", "record_sha256": "0f2b68b41cf7103dd84e60ef0f4814e0f63a6f7fb49b4c132ed84e49e444ed04", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S02", "zh": "泉巨永", "status": "approved", "source": "@source/1a48f0466dd0b363", "record_sha256": "5df60514a3965ef9355f41bd72cbccb3c0ef0fb659810ea6ebecc12ce47a1ab0", "review_notes": "据北票市泉巨永乡政府公开指南与同地坐标记录，采用地名原有词干。"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S03", "zh": "龙潭", "status": "approved", "source": "@source/be4f215da050da6e", "record_sha256": "f812459666a33e688fc218671dee369216a106ba89165c3d4cbbe4e5986f2458", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S04", "zh": "北票", "status": "approved", "source": "@source/703abff67fc1efc8", "record_sha256": "08c13a3057d656bf60b6bc4187b96a9ffddf1e85751edebe8880a1eb7560bb1e", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S05", "zh": "大庙", "status": "approved", "source": "@source/b4531f5b747bc9c7", "record_sha256": "53157c301a4d476c2e8c420443917828ee2ec2c972f7d61096d2f9343c69abe0", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S06", "zh": "召都巴", "status": "approved", "source": "@source/ef5bb2d4398749fb", "record_sha256": "9a1dc7c2ab8ccd12b7bf653adcc95291f757163f4fa4c1281c5c9cc26ff48daf", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S07", "zh": "上园", "status": "approved", "source": "@source/703abff67fc1efc8", "record_sha256": "9d38e0e194d8880eb1694d538d7ff5a6869e8570514b5bb941a8255acfbdf205", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S08", "zh": "朝阳", "status": "approved", "source": "@source/7cc46ce2fd056a89", "record_sha256": "890e15e238e1ba1d48972ee4824ea1ff43e5b1bd7ed77bcf0ad81476e084e7af", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S01", "x": 40, "y": 27, "font_style": "regular", "font_size": 12, "lines": ["金厂沟梁"]},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S02", "x": 230, "y": 31, "font_style": "regular", "font_size": 12, "lines": ["泉巨永"]},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S03", "x": 64, "y": 65, "font_style": "regular", "font_size": 12, "lines": ["龙潭"]},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S04", "x": 194, "y": 114, "font_style": "regular", "font_size": 12, "lines": ["北票"]},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S05", "x": 16, "y": 168, "font_style": "regular", "font_size": 12, "lines": ["大庙"]},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S06", "x": 60, "y": 168, "font_style": "regular", "font_size": 12, "lines": ["召都巴"]},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S07", "x": 234, "y": 207, "font_style": "regular", "font_size": 12, "lines": ["上园"]},
+    {"id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S08", "x": 73, "y": 225, "font_style": "regular", "font_size": 12, "lines": ["朝阳"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Chaoyang", "source_url": "@source/fffbc55d885d74b7", "id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-shared-NC4-MODEL-N02", "original_bbox": [24, 253, 85, 275], "owner_region": "NC4-MODEL-R1", "feature_id": "NC4-MODEL-N02", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

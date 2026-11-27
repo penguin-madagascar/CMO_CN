@@ -1,0 +1,36 @@
+{
+  "id": "G157-z9-308-176-complete2",
+  "z": 9,
+  "x": 308,
+  "y": 176,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/308/176.png"
+  ],
+  "context_tiles": [
+    "9/308/177.png",
+    "9/308/175.png",
+    "9/307/176.png",
+    "9/309/176.png"
+  ],
+  "features": [
+    {"id": "G157-N-01", "kind": "region", "original": "Bilozerske", "original_bbox": [152, 207, 209, 223], "source_url": "@source/5bc21a9c9f6e89cb", "source_printed_full_literal": "Bilozerske", "source_glyph_complete": true, "providerpoint": null},
+    {"id": "G157-N-02", "kind": "region", "original": "Dobropillia", "original_bbox": [162, 242, 223, 261], "source_url": "@source/5bc21a9c9f6e89cb", "source_printed_full_literal": "Dobropillia", "source_glyph_complete": true, "providerpoint": null}
+  ],
+  "translations": [
+    {"id": "G157-N-01", "zh": "比洛泽尔斯凯", "status": "approved", "source": "@source/5bc21a9c9f6e89cb", "record_sha256": "fe2ec684dc48f16080ff7287ebc0bdfefbea03b51abe9e875dff69853ec94e56", "review_notes": "Root selected this bare C project transliteration and exact fixed center in the delegated record. Artwork Source URL and bounded physical qualification do not assert official Chinese, provider/native layer or global entity authority."},
+    {"id": "G157-N-02", "zh": "多布罗皮利亚", "status": "approved", "source": "@source/5bc21a9c9f6e89cb", "record_sha256": "2d7d48fd1a4f619547f1daf448a628946db79102f1a3ca9de5ac05d61a3c6c1f", "review_notes": "Root selected this bare C project transliteration and exact fixed center in the delegated record. Artwork Source URL and bounded physical qualification do not assert official Chinese, provider/native layer or global entity authority."}
+  ],
+  "layouts": [
+    {"id": "G157-N-01", "x": 180.5, "y": 215, "font_size": 12, "font_style": "regular", "lines": ["比洛泽尔斯凯"]},
+    {"id": "G157-N-02", "x": 192.5, "y": 242, "font_size": 12, "font_style": "regular", "lines": ["多布罗皮利亚"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G157-AS-UAE9-162", "owner_region": "UA-East-z9-304-168", "feature_id": "UAE9-162", "kind": "city", "original": "Barvinkove", "source_url": "@source/5bc21a9c9f6e89cb", "original_bbox": [138, -2, 199, 14], "review_notes": "Source-only ordinary alias to the sole existing full normal feature. Complete owner/TR/layout/review remain verbatim and are replayed once; no duplicate normal caption in G157."},
+    {"id": "G157-AS-UAS16-053", "owner_region": "UA-SouthBoundary-z9-306-176", "feature_id": "UAS16-053", "kind": "city", "original": "Blyzniuky", "source_url": "@source/4a717215f2cce5da", "original_bbox": [-31, 30, 24, 49], "review_notes": "Source-only ordinary alias to the sole existing full normal feature. Complete owner/TR/layout/review remain verbatim and are replayed once; no duplicate normal caption in G157."},
+    {"id": "G157-AS-UAS16-057", "owner_region": "UA-SouthBoundary-z9-309-176", "feature_id": "UAS16-057", "kind": "city", "original": "Novomykolaivka", "source_url": "@source/7cc080196e0b33f3", "original_bbox": [251, 189, 341, 209], "review_notes": "Source-only ordinary alias to the sole existing full normal feature. Complete owner/TR/layout/review remain verbatim and are replayed once; no duplicate normal caption in G157."}
+  ],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "Asia-NyingchiDibrugarh-z7-97-53",
+  "z": 7,
+  "x": 97,
+  "y": 53,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/97/53.png"
+  ],
+  "context_tiles": [
+    "7/97/52.png",
+    "7/97/54.png"
+  ],
+  "features": [
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N01", "kind": "city", "original": "Nyingchi", "original_bbox": [143, -12, 186, 6], "source_url": "@source/c81e44b7dd4a0670", "source_glyph_complete": true, "source_printed_full_literal": "Nyingchi"},
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N02", "kind": "admin1", "original": "Arunachal Pradesh", "original_bbox": [103, 128, 222, 167], "source_url": "@source/c81e44b7dd4a0670", "source_glyph_complete": true, "source_printed_full_literal": "Arunachal Pradesh"},
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N03", "kind": "city", "original": "Dibrugarh", "original_bbox": [193, 209, 242, 230], "source_url": "@source/c81e44b7dd4a0670", "source_glyph_complete": true, "source_printed_full_literal": "Dibrugarh"}
+  ],
+  "translations": [
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N01", "zh": "林芝", "status": "approved", "source": "@source/1a72554c59b766b6", "record_sha256": "74dd638913d11ea1865d0c47d18de173b1264becf720265ad5cfded76683aaa5", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N02", "zh": "阿鲁纳恰尔邦", "status": "approved", "source": "@source/c99418598e3d79b5", "record_sha256": "fa88c4d8fe28bbf36866c193d61a4faad75231c34daafe7730e790d49c7e5a70", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N03", "zh": "迪布鲁加尔", "status": "approved", "source": "@source/23aa89aa561ebd4a", "record_sha256": "cc4e4f1f55202d6557905645a285d228194233827b8b5ac100606f932b2368e7", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N01", "x": 164, "y": 12, "font_size": 12, "font_style": "regular", "lines": ["林芝"]},
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N02", "x": 162, "y": 148, "font_size": 14, "font_style": "bold", "lines": ["阿鲁纳恰尔邦"]},
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N03", "x": 222, "y": 224, "font_size": 12, "font_style": "regular", "lines": ["迪布鲁加尔"]}
+  ],
+  "symbols": [
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-N03-symbol", "feature_id": "Asia-NyingchiDibrugarh-z7-97-53-N03", "kind": "circle", "x": 190.77083333333212, "y": 212.9121691217515, "original_bbox": [186, 208, 193, 217], "size": 7, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "Asia-NyingchiDibrugarh-z7-97-53-shared-India-Assam-Meghalaya-Nagaland-Manipur-z7-96-54-2x1-N03", "owner_region": "India-Assam-Meghalaya-Nagaland-Manipur-z7-96-54-2x1", "feature_id": "India-Assam-Meghalaya-Nagaland-Manipur-z7-96-54-2x1-N03", "kind": "city", "original": "Itanagar", "source_url": "@source/264d5b9a3e6f9ab0", "original_bbox": [69, 248, 118, 270], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

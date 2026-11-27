@@ -27,6 +27,10 @@ namespace CMOLocalizer
         private static string logPath = "";
         private static Dictionary<int, string> offsetMap = new Dictionary<int, string>();
         private static Dictionary<string, string> exactMap = new Dictionary<string, string>(StringComparer.Ordinal);
+        // R72：数据库列表行尾 Comments 专用词表。**不能**塞进 exactMap——
+        // Comments 里的 `Tank`(油箱) / `Mount`(挂架) / `Group`(编组) 与界面同名词条
+        // 含义不同（界面上 Tank=坦克、Group=编队），共用一张表会把界面译坏。
+        private static Dictionary<string, string> commentsMap = new Dictionary<string, string>(StringComparer.Ordinal);
         private static Dictionary<string, string> partialMap = new Dictionary<string, string>(StringComparer.Ordinal);
         private static Dictionary<string, string> wordsMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         private static Dictionary<string, string> normExactMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
@@ -35,6 +39,7 @@ namespace CMOLocalizer
         private static readonly Dictionary<string, string> dynamicCache = new Dictionary<string, string>(StringComparer.Ordinal);
         private static readonly object cacheLock = new object();
         private const int MAX_CACHE_SIZE = 16384;
+        private static readonly HashSet<string> translationTerminals = new HashSet<string>(StringComparer.Ordinal);
 
         private static void Log(string msg)
         {
@@ -360,36 +365,20 @@ namespace CMOLocalizer
                     }
                 }
                 mapPlaces.Clear();
-                string synWwp = Path.Combine(baseDir, @"WW\PlacenameSets\Synoptic\0000_0000.wwp");
-                string citWwp = Path.Combine(baseDir, @"WW\PlacenameSets\Cities\0000_0000.wwp");
-                Action<string, int> loadWwp = (path, lvl) =>
-                {
-                    if (!File.Exists(path)) return;
-                    try
-                    {
-                        using (BinaryReader br = new BinaryReader(File.OpenRead(path), Encoding.UTF8))
-                        {
-                            int count = br.ReadInt32();
-                            for (int i = 0; i < count; i++)
-                            {
-                                string name = br.ReadString();
-                                float lat = br.ReadSingle();
-                                float lon = br.ReadSingle();
-                                br.ReadUInt32();
-                                mapPlaces.Add(new CMOShared.MapLabelPlace { Name = name, Lat = lat, Lon = lon, Level = lvl });
-                            }
-                        }
-                    }
-                    catch { }
-                };
+                mapPlaces.AddRange(CMOShared.MapLabelCatalog.LoadBasePlaces(baseDir));
 
-                string catalogPath = Path.Combine(baseDir, "ChineseMapLabels.dat");
-                if (File.Exists(catalogPath))
-                    mapPlaces.AddRange(CMOShared.MapLabelCatalog.Load(catalogPath).Places);
-                else
+                // 省/州级标签（R88）：原版 Stamen 标签层里有省级名字，而两套 WWP 只有
+                // 城市与国家，重绘后省级标签整体消失。数据放在词典 `places` 分区（不新增资产）。
+                try
                 {
-                    loadWwp(synWwp, 0);
-                    loadWwp(citWwp, 1);
+                    string dictPath = Path.Combine(baseDir, "CMOLocalizer.json");
+                    List<CMOShared.MapLabelPlace> regions = CMOShared.MapLabelRegions.LoadFromDictionary(dictPath);
+                    if (regions.Count > 0) mapPlaces.AddRange(regions);
+                    Log("Region labels: " + regions.Count + " 省/州级标签已并入（原版深度对齐）。");
+                }
+                catch (Exception regionError)
+                {
+                    Log("Region labels failed: " + regionError.GetBaseException().Message);
                 }
 
                 if (mapTilePack != null)
@@ -410,6 +399,7 @@ namespace CMOLocalizer
                 offsetMap[21564] = "zh-CN";
                 offsetMap[62636] = "zh-CN";
                 Log("LocalTileServer started on " + localUrl + " with " + mapPlaces.Count + " Chinese landmarks.");
+                RecordStatus("label_server", localUrl + " landmarks=" + mapPlaces.Count);
 
                 // Game downloads also use the CLR pool. Keep both accepting and
                 // serving independent, with bounded workers and queued sockets.
@@ -514,6 +504,10 @@ namespace CMOLocalizer
                     bw.Flush();
                     LogTileRequest(string.Format("z={0} x={1} y={2} candidates={3} rendered={4} bytes={5} ms={6}",
                         z, x, y, candidates, rendered, pngBytes.Length, elapsed.ElapsedMilliseconds));
+                    int served = Interlocked.Increment(ref labelTilesServed);
+                    // 只在少数节点写盘（1/10/100/1000/10000），否则每个瓦片都写一次会拖慢服务。
+                    if (served == 1 || served == 10 || served == 100 || served == 1000 || served == 10000)
+                        RecordStatus("label_tiles_served", served.ToString());
                 }
             }
             catch (Exception ex) { LogTileRequest("error " + ex.GetType().Name + ": " + ex.Message); }
@@ -525,21 +519,65 @@ namespace CMOLocalizer
                 z, x, y, out candidates, out rendered);
         }
 
+        /// <summary>
+        /// 本地化自检状态（写到游戏目录 CMOLocalizer_Status.txt）。
+        /// 用户报「顶部状态栏/地形提示/地图标签还是英文」时，靠这三个数字就能分清：
+        /// 池注入是否生效、标签服务是否起来、游戏有没有真的来请求标签瓦片。
+        /// 日志要翻十几万行，状态文件只要几行。
+        /// </summary>
+        private static readonly Dictionary<string, string> statusFields =
+            new Dictionary<string, string>(StringComparer.Ordinal);
+        private static string poolFailureNote = "";
+        private static int poolFailureAttempts;
+        private static int labelTilesServed;
+        private static bool gameWindowRecorded;
+
+        private static void RecordStatus(string key, string value)
+        {
+            try
+            {
+                lock (statusFields)
+                {
+                    statusFields[key] = value ?? "";
+                    StringBuilder sb = new StringBuilder();
+                    foreach (KeyValuePair<string, string> kv in statusFields)
+                        sb.Append(kv.Key).Append('=').Append(kv.Value).Append("\r\n");
+                    File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CMOLocalizer_Status.txt"),
+                        sb.ToString(), Encoding.UTF8);
+                }
+            }
+            catch { }
+        }
+
         private static void HookWorker()
         {
             try
             {
                 string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+                string gameExe = Path.Combine(baseDir, "Command.exe");
+                try
+                {
+                    if (File.Exists(gameExe))
+                    {
+                        System.Diagnostics.FileVersionInfo vi = System.Diagnostics.FileVersionInfo.GetVersionInfo(gameExe);
+                        RecordStatus("game", (vi.FileVersion ?? "?") + " product=" + (vi.ProductVersion ?? "?"));
+                    }
+                }
+                catch { }
+
                 string dictPath = Path.Combine(baseDir, "CMOLocalizer.json");
                 if (File.Exists(dictPath))
                 {
                     LoadDictionaries(dictPath);
                     Log(string.Format("Loaded dictionaries: {0} offsets, {1} exact texts, {2} partial terms, {3} word roots.",
                         offsetMap.Count, exactMap.Count, partialMap.Count, wordsMap.Count));
+                    RecordStatus("dictionary", string.Format("offsets={0} exact={1} words={2}",
+                        offsetMap.Count, exactMap.Count, wordsMap.Count));
                 }
                 else
                 {
                     Log("Warning: CMOLocalizer.json not found at " + dictPath);
+                    RecordStatus("dictionary", "MISSING at " + dictPath);
                 }
 
                 // Start UI watcher loop in a background thread to translate WinForms controls
@@ -550,23 +588,33 @@ namespace CMOLocalizer
                 // 地图端点仍须先写入 URL 偏移；其数据准备不再阻塞界面发现。
                 StartLocalTileServer(baseDir);
 
-                // Wait for target assembly and types to load
+                // 池注入要等到游戏的解密类/字段真正就绪：先 500ms 密集重试 2 分钟，
+                // 之后降到 15s 一次但**永不放弃**。报告人那台机器上池注入整体没生效
+                // （状态栏/地形提示/地图标签一起英文），我们拿不到它的构建，
+                // 唯一能做且无风险的事就是把「晚就绪 / 稍后才发现」这些情况自动救回来。
                 int tries = 0;
                 bool injectedEngine = false;
-                while (tries < 120)
+                bool warnedDegraded = false;
+                while (true)
                 {
                     tries++;
-
-                    if (!injectedEngine)
-                    {
-                        injectedEngine = TryInjectCoreDecryption();
-                    }
-
+                    injectedEngine = TryInjectCoreDecryption();
                     if (injectedEngine)
                     {
+                        if (warnedDegraded)
+                            Log("本地化恢复：字符串池注入在第 " + tries + " 次重试后生效。");
+                        RecordStatus("pool_retries", tries.ToString());
                         break;
                     }
-                    Thread.Sleep(500);
+                    if (!warnedDegraded && tries >= 120)
+                    {
+                        warnedDegraded = true;
+                        string why = string.IsNullOrEmpty(poolFailureNote) ? "pool discovery failed" : poolFailureNote;
+                        Log("本地化降级：字符串池注入暂未生效（" + why + "）"
+                            + "——顶部状态栏/地形提示/地图标签会保持英文；将继续每 15 秒重试。"
+                            + "请核对游戏内部版本与汉化包是否匹配（见 CMOLocalizer_Status.txt 的 build_check）。");
+                    }
+                    Thread.Sleep(tries < 120 ? 500 : 15000);
                 }
             }
             catch (Exception ex)
@@ -600,7 +648,16 @@ namespace CMOLocalizer
                 string note;
                 if (!TryFindPool(out tDecrypt, out fStrings, out fOffsets, out buf, out fBuf, out note))
                 {
-                    Log("CoreDecryption: string pool not available on this game build — offset injection disabled. " + note);
+                    poolFailureAttempts++;
+                    bool firstOrChanged = note != poolFailureNote;
+                    poolFailureNote = note;
+                    RecordStatus("pool", "FAILED attempts=" + poolFailureAttempts + " reason=" + note);
+                    // 以前每次重试都打一行，坏构建上会刷 120 行同样的话，现场反而更难读。
+                    if (firstOrChanged || poolFailureAttempts % 30 == 0)
+                    {
+                        Log("CoreDecryption: string pool not available on this game build — offset injection disabled (attempt "
+                            + poolFailureAttempts + "). " + note);
+                    }
                     return false;
                 }
 
@@ -620,6 +677,8 @@ namespace CMOLocalizer
                 List<int> offList = (List<int>)fOffsets.GetValue(null);
                 if (strList == null || offList == null || offsetMap.Count == 0)
                 {
+                    poolFailureNote = string.Format("pool not ready (strList={0} offList={1} offsetMap={2})",
+                        strList != null, offList != null, offsetMap.Count);
                     Log(string.Format("CoreDecryption: pool not ready (strList={0} offList={1} offsetMap={2}) — offset injection skipped.",
                         strList != null, offList != null, offsetMap.Count));
                     return false;
@@ -657,6 +716,9 @@ namespace CMOLocalizer
                 }
                 Log(string.Format("Successfully pre-populated {0} translated strings into {1} string pool! (offsets out of range: {2})",
                     count, tDecrypt.Name, outOfRange));
+                RecordStatus("pool", string.Format("OK injected={0}/{1} outOfRange={2} class={3}",
+                    count, offsetMap.Count, outOfRange, tDecrypt.Name));
+                RecordStatus("label_layer_url", offsetMap.ContainsKey(1789870) ? "injected@1789870" : "NOT injected");
                 return true;
             }
             catch (Exception ex)
@@ -720,7 +782,43 @@ namespace CMOLocalizer
             }
             if (tDecrypt == null)
             {
+                // 第二轮（R89）：Command 程序集里没找到时，按结构特征在**其余已加载程序集**里再找一遍。
+                // 只在第一轮失败后才跑，健康构建（第一轮命中）完全不受影响；
+                // 目的：游戏把解密类挪到别的程序集/改名时不用等我们出补丁。
+                Type[] others = null;
+                foreach (Assembly other in AppDomain.CurrentDomain.GetAssemblies())
+                {
+                    if (ReferenceEquals(other, host)) continue;
+                    string otherName = "";
+                    try { otherName = other.GetName().Name ?? ""; } catch (Exception) { continue; }
+                    if (otherName.Length == 0 || otherName == "mscorlib"
+                        || otherName.StartsWith("System", StringComparison.Ordinal)
+                        || otherName.StartsWith("Microsoft", StringComparison.Ordinal)) continue;
+                    Type[] types = null;
+                    try { types = other.GetTypes(); }
+                    catch (ReflectionTypeLoadException rtle) { types = rtle.Types; }
+                    catch (Exception) { continue; }
+                    if (types == null) continue;
+                    foreach (Type candidate in types)
+                    {
+                        if (candidate != null && HasPoolShape(candidate))
+                        {
+                            others = new Type[] { candidate };
+                            break;
+                        }
+                    }
+                    if (others != null) break;
+                }
+                if (others != null && others.Length > 0)
+                {
+                    tDecrypt = others[0];
+                    Log("CoreDecryption: pool class found outside the Command assembly: " + tDecrypt.FullName);
+                }
+            }
+            if (tDecrypt == null)
+            {
                 note = "pool class not found（游戏更新后需重做注入点探测，见 docs/BUG_REGISTRY.md R31）.";
+                poolFailureNote = note;
                 return false;
             }
 
@@ -737,6 +835,7 @@ namespace CMOLocalizer
             {
                 note = string.Format("pool fields incomplete in {0} (strings={1} offsets={2} byte[]={3}).",
                     tDecrypt.FullName, fStrings != null, fOffsets != null, bufFields.Count);
+                poolFailureNote = note;
                 return false;
             }
 
@@ -858,10 +957,28 @@ namespace CMOLocalizer
                     }
                     catch { }
 
-                    FormCollection openForms = Application.OpenForms;
-                    if (openForms != null && openForms.Count > 0)
+                    Form[] openFormsSnapshot = OpenFormsSnapshot();
+                    if (openFormsSnapshot.Length > 0)
                     {
-                        foreach (Form frm in openForms)
+                        // 游戏标识只能从主窗体标题拿到（Command.exe 的 File/Assembly 版本恒为 1.0.0.0）：
+                        // 标题里的「内部版本 1900.24」是判断「包与游戏是否匹配」的唯一现场。
+                        if (!gameWindowRecorded)
+                        {
+                            foreach (Form probe in openFormsSnapshot)
+                            {
+                                if (probe == null || probe.IsDisposed) continue;
+                                if (probe.GetType().Name != "MainForm" && probe.Name != "MainForm") continue;
+                                // 标题一开始只是 "Command"，要等它带上「内部版本/Build」再记，
+                                // 否则状态文件里留下的是一句没用的占位。
+                                string title = probe.Text ?? "";
+                                if (title.IndexOf("内部版本", StringComparison.Ordinal) < 0
+                                    && title.IndexOf("Build", StringComparison.OrdinalIgnoreCase) < 0) continue;
+                                try { RecordStatus("game_window", title); } catch { }
+                                gameWindowRecorded = true;
+                                break;
+                            }
+                        }
+                        foreach (Form frm in openFormsSnapshot)
                         {
                             if (frm != null && !frm.IsDisposed)
                             {
@@ -964,6 +1081,15 @@ namespace CMOLocalizer
         [DllImport("user32.dll")]
         private static extern bool IsWindowVisible(IntPtr hWnd);
 
+        [StructLayout(LayoutKind.Sequential)]
+        private struct RECT_I
+        {
+            public int Left, Top, Right, Bottom;
+        }
+
+        [DllImport("user32.dll")]
+        private static extern bool GetWindowRect(IntPtr hWnd, out RECT_I lpRect);
+
         [DllImport("user32.dll")]
         private static extern bool EnumWindows(EnumWindowsProc enumProc, IntPtr lParam);
 
@@ -1059,70 +1185,66 @@ namespace CMOLocalizer
             }
         }
 
+        // ── R53：全树补扫的调度与预算 ───────────────────────────────────
+        //
+        // 历史 bug（R53，2026-10-22 实测，用户报「大想定卡到电脑不能动」）：
+        //
+        // 旧 TranslateWpfWindows() 对**每个** HwndWrapper 窗口都 BeginInvoke 一次全树翻译。
+        // 而它被 CompositionTarget.Rendering（渲染帧钩子）以每 8 帧的频率调用。
+        // 实测渲染帧 103/s ⇒ 每秒向 UI 线程排队 103/8 × 窗口数 个委托。
+        // 进程里还留着 22 个「想定特性与拟真度选项」僵尸窗口（关闭后未销毁），
+        // 于是排队量进一步放大到 2200+/s，且每个委托都要遍历 153~541 个节点。
+        // UI 线程被自己的补扫任务淹没 ⇒ 游戏主循环抢不到消息泵 ⇒ 整机卡死。
+        //
+        // 单位数量越多的想定，消息日志/单位面板节点越多，单次遍历越贵，
+        // 所以这条缺陷的严重度随想定规模非线性增长——这解释了为什么教程想定只是「有点卡」，
+        // 而战争链 Blue Dawn 这类大想定会「卡到电脑不能动」。
+        //
+        // 修复三件事：
+        //   ① 全树补扫只由 40ms/200ms 定时器驱动，渲染帧不再触发全树遍历；
+        //   ② 在 UI 线程上**同步**执行，不再 BeginInvoke 排队（排队正是淹没的来源）；
+        //   ③ 单拍带时间预算（默认 4ms）与游标续扫：扫不完就记住位置，下一拍接着扫，
+        //      绝不让单拍吃掉整帧。窗口本身按可见性 + 尺寸排序，优先扫用户看得见的。
+        private const int WPF_SWEEP_BUDGET_MS = 4;
+
+        private static long _wpfSweepWindowCount;
+        private static long _wpfMaxStepTicks;
+        private static string _wpfMaxStepNode = "";     // 待处理根总数（跨 Dispatcher）
+
+        // R53 性能诊断：累计统计，供 TRACE_DUMP 输出。
+        // 为什么需要它：补扫频率只说明「扫了多少次」，不说明「每次多贵」。
+        // 用户报卡顿时真正要看的是单次耗时是否超一帧（≈16ms）。
+        private static long _sweepCalls;
+        private static long _sweepTotalMs;
+        private static long _sweepMaxMs;
+        private static long _sweepWindowsVisited;
+        private static long _sweepFullPasses;
+
+        /// <summary>
+        /// 翻译单个 WPF 窗口（标题 + 视觉树）。调用方必须已确保在该窗口的 Dispatcher 上。
+        /// </summary>
         private static void TranslateWpfWindows()
         {
-            try
+            if (currentPid == 0) currentPid = (uint)System.Diagnostics.Process.GetCurrentProcess().Id;
+            EnumWindows(delegate(IntPtr hwnd, IntPtr unused)
             {
-                if (currentPid == 0)
+                try
                 {
-                    currentPid = (uint)System.Diagnostics.Process.GetCurrentProcess().Id;
+                    uint pid;
+                    GetWindowThreadProcessId(hwnd, out pid);
+                    if (pid != currentPid || !IsWindowVisible(hwnd)) return true;
+                    StringBuilder name = new StringBuilder(64);
+                    GetClassName(hwnd, name, name.Capacity);
+                    if (!name.ToString().StartsWith("HwndWrapper")) return true;
+                    RECT_I rectangle;
+                    if (!GetWindowRect(hwnd, out rectangle) || rectangle.Right <= rectangle.Left
+                        || rectangle.Bottom <= rectangle.Top) return true;
+                    System.Windows.Interop.HwndSource source = System.Windows.Interop.HwndSource.FromHwnd(hwnd);
+                    QueueWpfSource(source);
                 }
-
-                // Enumerate all HwndWrapper windows in current process (covers all WPF windows across any UI thread)
-                EnumWindows(delegate(IntPtr hWnd, IntPtr lParam)
-                {
-                    try
-                    {
-                        uint pid;
-                        GetWindowThreadProcessId(hWnd, out pid);
-                        if (pid == currentPid)
-                        {
-                            StringBuilder sb = new StringBuilder(256);
-                            GetClassName(hWnd, sb, sb.Capacity);
-                            string cls = sb.ToString();
-                            if (cls.StartsWith("HwndWrapper"))
-                            {
-                                System.Windows.Interop.HwndSource src = System.Windows.Interop.HwndSource.FromHwnd(hWnd);
-                                if (src != null && src.Dispatcher != null)
-                                {
-                                    src.Dispatcher.BeginInvoke(new Action(delegate
-                                    {
-                                        try
-                                        {
-                                            InstallWpfRenderHook();
-                                            if (src.RootVisual != null)
-                                            {
-                                                System.Windows.DependencyObject rootDep = src.RootVisual as System.Windows.DependencyObject;
-                                                System.Windows.Window win = rootDep != null ? System.Windows.Window.GetWindow(rootDep) : null;
-                                                if (win != null)
-                                                {
-                                                    string wt = win.Title;
-                                                    string trWt = TranslateTitleText(wt);
-                                                    if (!string.IsNullOrEmpty(trWt) && trWt != wt) win.Title = trWt;
-                                                }
-                                                TranslateWpfElement(src.RootVisual);
-                                            }
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            Log("WPF Dispatcher invoke error: " + ex.Message);
-                                        }
-                                    }));
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Log("EnumWindows item error: " + ex.Message);
-                    }
-                    return true;
-                }, IntPtr.Zero);
-            }
-            catch (Exception ex)
-            {
-                Log("TranslateWpfWindows outer error: " + ex.Message);
-            }
+                catch (Exception error) { Log("WPF sweep discovery failed: " + error.Message); }
+                return true;
+            }, IntPtr.Zero);
         }
 
         private static int wpfTranslatedCount = 0;
@@ -1257,6 +1379,12 @@ namespace CMOLocalizer
                         System.Windows.EventManager.RegisterClassHandler(typeof(System.Windows.FrameworkElement),
                             System.Windows.FrameworkElement.LoadedEvent,
                             new System.Windows.RoutedEventHandler(OnWpfElementLoaded));
+                        // R64：Run/Span 是 FrameworkContentElement（不是 FrameworkElement），
+                        // 上面的类处理器收不到；单元武器/燃油块的行文本在 Run 里，
+                        // 必须再挂一拿才能在生成时就翻译。
+                        System.Windows.EventManager.RegisterClassHandler(typeof(System.Windows.FrameworkContentElement),
+                            System.Windows.FrameworkContentElement.LoadedEvent,
+                            new System.Windows.RoutedEventHandler(OnWpfElementLoaded));
                         wpfLoadedHookInstalled = true;
                     }
                 }
@@ -1286,82 +1414,31 @@ namespace CMOLocalizer
         /// </summary>
         private static void TranslateWpfElementHostsNow()
         {
-            lock (traceLock) { elementHostScanCount++; }
-            FormCollection forms = Application.OpenForms;
-            if (forms == null) return;
-            for (int i = 0; i < forms.Count; i++)
+            using (new UiPerfScope("elementHosts", false))
             {
-                Form f = forms[i];
-                if (f == null || f.IsDisposed) continue;
-                TranslateElementHostsInControl(f, 0);
+                lock (traceLock) { elementHostScanCount++; }
+                if (registeredElementHosts == null) return;
+                for (int i = registeredElementHosts.Count - 1; i >= 0; i--)
+                {
+                    Control host = registeredElementHosts[i].Target as Control;
+                    if (host == null || host.IsDisposed) { registeredElementHosts.RemoveAt(i); continue; }
+                    try { RequestElementHost(host); }
+                    catch (Exception error) { Log("ElementHost discovery failed: " + error.Message); }
+                }
             }
         }
 
-        private static readonly HashSet<int> layoutHooked = new HashSet<int>();
-
-        /// <summary>
-        /// 给 ElementHost 的 WPF 根挂 LayoutUpdated（R46）。
-        ///
-        /// 单位状态面板的元素是**被游戏周期性重建**的：旧元素作废、新元素带着英文出现。
-        /// 依赖属性钩子对"新建即带初值"的元素不会触发，定时补扫又要等下一拍（几十毫秒），
-        /// 于是英文总有机会被画到屏幕上——这就是用户反复看到的"蓝字雷达在闪"。
-        /// LayoutUpdated 在布局完成后、绘制之前同步触发，此时改写仍在同一帧内完成，
-        /// 英文不会上屏。重入保护避免翻译自身引起的布局再次进入。
-        /// </summary>
         private static void HookElementHostLayout(System.Windows.DependencyObject root)
         {
-            if (root == null) return;
-            try
-            {
-                System.Windows.FrameworkElement fe = root as System.Windows.FrameworkElement;
-                if (fe == null) return;
-                int h = fe.GetHashCode();
-                if (layoutHooked.Contains(h)) return;
-                layoutHooked.Add(h);
-                fe.LayoutUpdated += delegate
-                {
-                    if (_inLayoutPass) return;
-                    _inLayoutPass = true;
-                    try { TranslateWpfElement(root); }
-                    catch { }
-                    finally { _inLayoutPass = false; }
-                };
-            }
-            catch { }
-        }
-
-        private static bool _inLayoutPass;
-
-        private static void TranslateElementHostsInControl(Control c, int depth)
-        {
-            if (c == null || depth > 12) return;
-            try
-            {
-                if (c.GetType().Name.IndexOf("ElementHost", StringComparison.OrdinalIgnoreCase) >= 0)
-                {
-                    PropertyInfo piChild = c.GetType().GetProperty("Child");
-                    object childObj = piChild != null ? piChild.GetValue(c, null) : null;
-                    System.Windows.DependencyObject depChild = childObj as System.Windows.DependencyObject;
-                    if (depChild != null)
-                    {
-                        HookElementHostLayout(depChild);
-                        TranslateWpfElement(depChild);
-                    }
-                }
-                foreach (Control sub in c.Controls)
-                {
-                    TranslateElementHostsInControl(sub, depth + 1);
-                }
-            }
-            catch { }
+            System.Windows.FrameworkElement element = root as System.Windows.FrameworkElement;
+            if (element == null || !element.Dispatcher.CheckAccess()) return;
+            wpfLayoutRequests.GetValue(element,
+                delegate(System.Windows.FrameworkElement owner) { return new WpfLayoutRequest(owner); });
         }
 
         private static System.Threading.Timer wpfRepaintTimer;
         private static int _repaintBusy;
         private static int _repaintChanged;   // 本拍实际改写了多少处文本
-        private static int _idleTicks;        // 连续空转拍数（用于退避）
-        private static long _repaintPeriod = 40;   // 当前补扫周期（ms），空闲时退避到 200
-        private static long _lastRepaintMs;       // 上次真正补扫的时刻（ms）
 
         /// <summary>
         /// 与 WPF 渲染无关的固定节拍：每 40ms 主动补扫一次 ElementHost 子树。
@@ -1371,75 +1448,51 @@ namespace CMOLocalizer
         private static void StartWpfRepaintTick()
         {
             if (wpfRepaintTimer != null) return;
-            try
+            // Native discovery never waits for a disposable WinForms anchor.
+            // The owning Dispatcher queue coalesces all actual translation work.
+            wpfRepaintTimer = new System.Threading.Timer(delegate(object unused)
             {
-                // 历史 bug（R47，2026-10-20 实测两处）：
-                // ① 原来对**每个窗体**各投递一次补扫，而补扫本身又遍历全部窗体——
-                //    打开任务编辑器后窗体变多，投递数被放大到 67 次/秒（设计 25 次/秒），
-                //    每次走完整棵 WPF 视觉树 ⇒ 明显卡顿。
-                // ② 第一版修复用 Timer.Change 动态改周期来退避，结果把节拍整个停掉了
-                //    （实测补扫 0 次）。所以周期固定，退避改成"到点才做"的自限流，
-                //    并且 busy 标志一律在 finally 里释放，绝不跨线程持有。
-                wpfRepaintTimer = new System.Threading.Timer(delegate(object st)
-                {
-                    try
-                    {
-                        // 自限流：空闲时不必每 40ms 都扫整棵树
-                        long period = Interlocked.Read(ref _repaintPeriod);
-                        long now = DateTime.UtcNow.Ticks / 10000;   // ms
-                        long last = Interlocked.Read(ref _lastRepaintMs);
-                        if (last != 0 && now - last < period) return;
-
-                        if (System.Threading.Interlocked.CompareExchange(ref _repaintBusy, 1, 0) != 0) return;
-                        Interlocked.Exchange(ref _lastRepaintMs, now);
-
-                        FormCollection forms = Application.OpenForms;
-                        if (forms == null) { Interlocked.Exchange(ref _repaintBusy, 0); return; }
-                        Control anchor = null;
-                        for (int i = 0; i < forms.Count; i++)
-                        {
-                            Form f = forms[i];
-                            if (f == null || f.IsDisposed) continue;
-                            try { if (!f.IsHandleCreated) continue; } catch { continue; }
-                            anchor = f;
-                            break;   // 只用一个锚点，避免按窗体数放大
-                        }
-                        if (anchor == null) { Interlocked.Exchange(ref _repaintBusy, 0); return; }
-
-                        anchor.BeginInvoke((MethodInvoker)delegate
-                        {
-                            try
-                            {
-                                int before = Interlocked.CompareExchange(ref _repaintChanged, 0, 0);
-                                TranslateWpfElementHostsNow();
-                                int after = Interlocked.CompareExchange(ref _repaintChanged, 0, 0);
-                                if (after > before)
-                                {
-                                    Interlocked.Exchange(ref _idleTicks, 0);
-                                    Interlocked.Exchange(ref _repaintPeriod, 40);
-                                }
-                                else if (Interlocked.Increment(ref _idleTicks) >= 5)
-                                {
-                                    Interlocked.Exchange(ref _repaintPeriod, 200);
-                                }
-                            }
-                            catch { }
-                            finally { System.Threading.Interlocked.Exchange(ref _repaintBusy, 0); }
-                        });
-                    }
-                    catch { System.Threading.Interlocked.Exchange(ref _repaintBusy, 0); }
-                }, null, 40, 40);
-                Log("WPF repaint tick started (40ms, timer-driven)");
-            }
-            catch (Exception ex) { Log("WPF repaint tick failed: " + ex.Message); }
+                if (Interlocked.CompareExchange(ref _repaintBusy, 1, 0) != 0) return;
+                try { TranslateWpfWindows(); }
+                catch (Exception error) { Log("WPF sweep discovery failed: " + error.Message); }
+                finally { Interlocked.Exchange(ref _repaintBusy, 0); }
+            }, null, 200, 200);
+            Log("WPF repaint discovery started (200ms, owning Dispatcher queue)");
         }
 
         private static void OnWpfElementLoaded(object sender, System.Windows.RoutedEventArgs e)
         {
             System.Windows.DependencyObject target = sender as System.Windows.DependencyObject;
-            if (target is System.Windows.Controls.TextBlock || target is System.Windows.Controls.ContentControl
-                || target is System.Windows.Controls.RichTextBox)
-                TranslateWpfElement(target);
+            RecordWeaponsDiagnosticNode(target, "loaded_before_translation");
+            if (!(target is System.Windows.Controls.TextBlock || target is System.Windows.Controls.ContentControl
+                || target is System.Windows.Controls.RichTextBox || target is System.Windows.Documents.Run
+                || target is System.Windows.Documents.Span || target is System.Windows.Controls.ItemsControl)) return;
+            // R65：实测（build/weapons-flicker/order/wpf-weapons-first-frame-order.log）事件顺序是
+            // `loaded -> render -> text`：Loaded 确实早于首个绘制帧，但 TranslateWpfElement 会先入
+            // 有界队列（96 步/4ms 分片，且排在已有工作之后），翻译落在首帧之后 ⇒ 英文必然上屏一帧。
+            // 所以武器行改成在 Loaded 里**同步**翻译；其余元素仍走队列，
+            // 全树同步会把 UI 线程淹没（R53）。
+            if (IsWeaponsDisplayNode(target) && !IsEditableWpfTarget(target))
+            {
+                TranslateWpfNode(target);
+                return;
+            }
+            TranslateWpfElement(target);
+        }
+
+        /// <summary>
+        /// 该节点是否属于单位武器显示子树（`UnitWeapons_WPF`）。只做父链上溯（限 64 层），
+        /// 不遍历子树，代价与想定规模无关。
+        /// </summary>
+        private static bool IsWeaponsDisplayNode(System.Windows.DependencyObject target)
+        {
+            int depth = 0;
+            for (System.Windows.DependencyObject current = target; current != null && depth++ < 64; )
+            {
+                if (current.GetType().Name == "UnitWeapons_WPF") return true;
+                current = WeaponsParent(current);
+            }
+            return false;
         }
 
         private static bool IsEditableWpfTarget(System.Windows.DependencyObject target)
@@ -1460,18 +1513,22 @@ namespace CMOLocalizer
         {
             if (_inRenderPass) return;
             _inRenderPass = true;
+            using (new UiPerfScope("wpfRender", false))
             try
             {
-                // ElementHost 中替换 Document/追加 Run 不保证在下一帧前触发 Loaded。
-                // 保留 R43 的子树补扫，避免新的正文等待 600/1500ms 慢扫才翻译。
+                RecordWeaponsDiagnosticFrame("render_before_translation");
                 _renderFrame++;
-                // 顶层窗口同样可能只替换 FlowDocument/Run，沿用 master 的八帧补扫。
                 lock (traceLock) { renderTickCount++; }
-                if ((_renderFrame & 7) == 0)
-                {
-                    try { TranslateWpfWindows(); } catch { }
-                }
-                try { TranslateWpfElementHostsNow(); } catch { }
+                // R53：渲染帧里**不再**做全树遍历。
+                //
+                // 历史 bug：这里原本每 8 帧调一次 TranslateWpfWindows()，而该函数对
+                // 每个 HwndWrapper 窗口都 BeginInvoke 一次全树翻译。渲染帧 103/s 下，
+                // 即使只有 3 个窗口也是 38 次全树/秒；实测进程里有 22 个僵尸窗口，
+                // 排队量放大到 2200+/s，UI 线程被自己的任务淹没 ⇒ 整机卡死。
+                //
+                // 全树补扫现在完全交给 StartWpfRepaintTick 的定时器（带 4ms 预算 + 游标续扫）。
+                // 渲染帧只保留“已登记目标的轻量重写”，它只看 liveWpfTargets（上限 400 个
+                // 具体元素，不做树遍历），代价与想定规模无关。
                 if (liveWpfTargets == null || liveWpfTargets.Count == 0) return;
                 WeakReference[] snapshot = liveWpfTargets.ToArray();
                 for (int i = 0; i < snapshot.Length; i++)
@@ -1492,13 +1549,17 @@ namespace CMOLocalizer
                         if (string.IsNullOrEmpty(cur) || !HasAsciiLetter(cur)) continue;
                         System.Windows.Documents.Run run = dep as System.Windows.Documents.Run;
                         if (run != null) TranslateFlowInline(run);
-                        else TranslateWpfElement(dep);
+                        else TranslateWpfNode(dep);
                     }
                     catch { }
                 }
             }
             catch { }
-            finally { _inRenderPass = false; }
+            finally
+            {
+                RecordWeaponsDiagnosticFrame("render_after_translation");
+                _inRenderPass = false;
+            }
         }
 
         /// <summary>把控件树（类型/名称/可见/尺寸/文本）导出为 JSON，用于定位自绘或数据绑定控件。</summary>
@@ -1532,33 +1593,88 @@ namespace CMOLocalizer
             StringBuilder sb = new StringBuilder();
             sb.Append("{\"status\":\"ok\",\"filter\":\"").Append(JsonEsc(filter)).Append("\",\"nodes\":[");
             bool first = true;
-            FormCollection forms = Application.OpenForms;
-            if (forms != null)
+            Form[] forms = OpenFormsSnapshot();
+            foreach (Form f in forms)
             {
-                foreach (Form f in forms)
+                if (f == null || f.IsDisposed) continue;
+                if (filter.Length > 0)
                 {
-                    if (f == null || f.IsDisposed) continue;
-                    if (filter.Length > 0)
-                    {
-                        string ft = f.Text ?? "";
-                        string fn = f.Name ?? "";
-                        if (ft.IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0 &&
-                            fn.IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0) continue;
-                    }
-                    DumpControlTree(f, sb, ref first, 0);
+                    string ft = f.Text ?? "";
+                    string fn = f.Name ?? "";
+                    if (ft.IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0 &&
+                        fn.IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0) continue;
+                }
+                DumpControlTree(f, sb, ref first, 0);
+            }
+            sb.Append("]}");
+            return sb.ToString();
+        }
+
+        // 只读：取控件完整文本（CTRL_TREE 会把每个 text 截到 120 字符）。多行富文本
+        // （快捷键窗口正文）靠 CTRL_TREE 拿不到原文，也就做不成整段译文键（R91）。
+        private static string HandleCtrlText(string cmd)
+        {
+            string rest = cmd.Length > "CTRL_TEXT".Length ? cmd.Substring("CTRL_TEXT".Length).Trim() : "";
+            int sp = rest.IndexOf(' ');
+            string filter = sp < 0 ? rest : rest.Substring(0, sp).Trim();
+            string want = sp < 0 ? "" : rest.Substring(sp + 1).Trim();
+            StringBuilder sb = new StringBuilder();
+            sb.Append("{\"status\":\"ok\",\"filter\":\"").Append(JsonEsc(filter))
+              .Append("\",\"want\":\"").Append(JsonEsc(want)).Append("\",\"items\":[");
+            bool first = true;
+            int count = 0;
+            Form[] forms = OpenFormsSnapshot();
+            foreach (Form f in forms)
+            {
+                if (f == null || f.IsDisposed) continue;
+                string ft = f.Text ?? "";
+                string fn = f.Name ?? "";
+                if (filter.Length > 0 &&
+                    ft.IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0 &&
+                    fn.IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0) continue;
+                if (want.Length == 0)
+                {
+                    AppendControlTexts(f, sb, ref first, ref count);
+                }
+                else
+                {
+                    Control c = FindControlByTypeOrName(f, want);
+                    if (c != null) AppendControlText(c, sb, ref first, ref count);
                 }
             }
             sb.Append("]}");
             return sb.ToString();
         }
 
+        private static void AppendControlTexts(Control root, StringBuilder sb, ref bool first, ref int count)
+        {
+            if (root == null || count >= 200) return;
+            AppendControlText(root, sb, ref first, ref count);
+            foreach (Control child in root.Controls) AppendControlTexts(child, sb, ref first, ref count);
+        }
+
+        private static void AppendControlText(Control c, StringBuilder sb, ref bool first, ref int count)
+        {
+            if (c == null) return;
+            string t = "";
+            try { t = c.Text ?? ""; } catch { }
+            if (t.Length == 0) return;
+            if (!first) sb.Append(',');
+            first = false;
+            count++;
+            sb.Append("{\"name\":\"").Append(JsonEsc(c.Name))
+              .Append("\",\"type\":\"").Append(JsonEsc(c.GetType().Name))
+              .Append("\",\"len\":").Append(t.Length)
+              .Append(",\"text\":\"").Append(JsonEsc(t)).Append("\"}");
+        }
+
         private static void TranslateWpfElement(System.Windows.DependencyObject dep)
         {
             if (dep == null || IsEditableWpfTarget(dep)) return;
-            TranslateWpfElementInner(dep);
+            QueueWpfElement(dep, true);
         }
 
-        private static void TranslateWpfElementInner(System.Windows.DependencyObject dep)
+        private static void TranslateWpfNode(System.Windows.DependencyObject dep)
         {
             try
             {
@@ -1576,7 +1692,7 @@ namespace CMOLocalizer
                     }
                     else if (hc.Header is System.Windows.DependencyObject)
                     {
-                        TranslateWpfElement((System.Windows.DependencyObject)hc.Header);
+                        // Header content is queued by WpfNodeExtras.
                     }
                 }
                 if (dep is System.Windows.Controls.HeaderedItemsControl)
@@ -1593,7 +1709,7 @@ namespace CMOLocalizer
                     }
                     else if (hic.Header is System.Windows.DependencyObject)
                     {
-                        TranslateWpfElement((System.Windows.DependencyObject)hic.Header);
+                        // Header content is queued by WpfNodeExtras.
                     }
                 }
                 if (dep is System.Windows.Controls.TextBlock)
@@ -1607,32 +1723,10 @@ namespace CMOLocalizer
                     // A bound Text creates an implicit Run. Editing that Run
                     // clears Text's binding, so translate the bound value below.
                     if (!System.Windows.Data.BindingOperations.IsDataBound(tb, System.Windows.Controls.TextBlock.TextProperty)
+                        && string.IsNullOrEmpty(tb.Text)
                         && tb.Inlines != null && tb.Inlines.Count > 0)
                     {
-                        List<System.Windows.Documents.Inline> inlines =
-                            new List<System.Windows.Documents.Inline>();
-                        foreach (System.Windows.Documents.Inline inl in tb.Inlines) inlines.Add(inl);
-                        foreach (System.Windows.Documents.Inline inl in inlines)
-                        {
-                            System.Windows.Documents.Hyperlink hl = inl as System.Windows.Documents.Hyperlink;
-                            if (hl != null)
-                            {
-                                List<System.Windows.Documents.Inline> subs =
-                                    new List<System.Windows.Documents.Inline>();
-                                foreach (System.Windows.Documents.Inline sub in hl.Inlines) subs.Add(sub);
-                                foreach (System.Windows.Documents.Inline sub in subs)
-                                {
-                                    System.Windows.Documents.Run subRun = sub as System.Windows.Documents.Run;
-                                    if (subRun != null && !string.IsNullOrEmpty(subRun.Text))
-                                    {
-                                        string trSub = TranslateCellText(subRun.Text);
-                                        if (trSub != subRun.Text) SetRunTextKeepBinding(subRun, trSub);
-                                    }
-                                }
-                                continue;
-                            }
-                            TranslateFlowInline(inl);
-                        }
+                        // Inline children are processed individually by the queue.
                     }
                     else if (!string.IsNullOrEmpty(tb.Text))
                     {
@@ -1640,22 +1734,31 @@ namespace CMOLocalizer
                         if (cur.Contains("kg") && (cur.Contains("fuel") || cur.Contains("燃油") || cur.Contains("Tank") || cur.Contains("坦克") || cur.Contains("reserve")))
                         {
                             string trF = TranslateFuelPanelText(cur);
-                            if (trF != cur)
+                            if (trF != cur && tb.Text == cur)
                             {
                                 SetTextKeepBinding(tb, trF);
                                 return;
                             }
                         }
-                        string trans = TranslateString(tb.Text);
-                        if (string.IsNullOrEmpty(trans) || trans == tb.Text)
+                        string trans = TranslateString(cur);
+                        if (string.IsNullOrEmpty(trans) || trans == cur)
                         {
-                            trans = TranslateMilitaryUnitName(tb.Text);
+                            trans = TranslateMilitaryUnitName(cur);
                         }
-                        if (trans != tb.Text)
+                        // R64c：只要这个节点里还有 ASCII 字母，就登记为「实时目标」。
+                        // 历史缺陷：旧代码只在**写入成功**时登记，于是「游戏每拍重建、
+                        // 我们读到的已经是中文」的那批节点永远进不了 liveWpfTargets，
+                        // 渲染帧也就管不到它们；一旦游戏用英文重绘就有一帧英文上屏
+                        // （抓屏实测 60~70ms、每秒 2 次，而 WPF_TEXTLOG 增量为 0）。
+                        // 登记与写入解耦后，这类节点会在渲染帧里被持续盯住。
+                        TrackLiveWpfTarget(tb);
+                        // R63：游戏每 0.2~0.3 秒就重建一次面板文本（燃油/武器块）。
+                        // 翻译基于较早的快照，若期间文本已变，写回旧快照就会把多行块
+                        // 截成前缀并引发频闪。写入前复核快照仍是当前值，否则丢弃本拍。
+                        if (trans != cur && tb.Text == cur)
                         {
-                            string old = tb.Text;
+                            string old = cur;
                             SetTextKeepBinding(tb, trans);
-                            TrackLiveWpfTarget(tb);
                             LogWpfWrite("TextBlock", old, trans);
                             wpfTranslatedCount++;
                             if (wpfTranslatedCount <= 20) Log("WPF TextBlock Translated: " + old + " -> " + trans);
@@ -1673,7 +1776,8 @@ namespace CMOLocalizer
                         if (!string.IsNullOrEmpty(s))
                         {
                             string trans = TranslateString(s);
-                            if (trans != s)
+                            // R63：同上——快照失效就不写，避免把旧内容覆盖回面板。
+                            if (trans != s && (string)cc.Content == s)
                             {
                                 LogWpfWrite("ContentControl", s, trans);
                                 TrackLiveWpfTarget(cc);
@@ -1685,7 +1789,7 @@ namespace CMOLocalizer
                     }
                     else if (cc.Content is System.Windows.DependencyObject)
                     {
-                        TranslateWpfElement((System.Windows.DependencyObject)cc.Content);
+                        // Content descendants are queued by WpfNodeExtras.
                     }
                 }
 
@@ -1714,7 +1818,7 @@ namespace CMOLocalizer
                         try { flowDoc = piDoc.GetValue(dep, null) as System.Windows.Documents.FlowDocument; } catch { }
                     }
                 }
-                if (flowDoc != null) TranslateFlowDocument(flowDoc);
+                // Document blocks and Runs are queued, not traversed on this node stack.
 
                 // Window captions live outside the visual tree.
                 System.Windows.Window wnd = dep as System.Windows.Window;
@@ -1728,13 +1832,40 @@ namespace CMOLocalizer
                     }
                 }
 
-                int count = System.Windows.Media.VisualTreeHelper.GetChildrenCount(dep);
-                for (int i = 0; i < count; i++)
+                System.Windows.Controls.ItemsControl items = dep as System.Windows.Controls.ItemsControl;
+                if (items != null) AttachWeaponsContainerProjection(items);
+
+                System.Windows.Documents.Run leaf = dep as System.Windows.Documents.Run;
+                if (leaf != null)
                 {
-                    TranslateWpfElement(System.Windows.Media.VisualTreeHelper.GetChild(dep, i));
+                    // R66：带绑定的武器行 Run 必须在值变更时就同步翻译，
+                    // 否则游戏推英文后要等到下一轮补扫，英文必然先上屏。
+                    AttachWeaponsRunTranslation(leaf);
+                    TranslateFlowInline(leaf);
                 }
             }
             catch { }
+        }
+
+        private static System.Windows.DependencyObject[] WpfNodeExtras(System.Windows.DependencyObject dep)
+        {
+            List<System.Windows.DependencyObject> extra = new List<System.Windows.DependencyObject>(3);
+            System.Windows.Controls.HeaderedContentControl header = dep as System.Windows.Controls.HeaderedContentControl;
+            if (header != null && header.Header is System.Windows.DependencyObject)
+                extra.Add((System.Windows.DependencyObject)header.Header);
+            System.Windows.Controls.HeaderedItemsControl itemHeader = dep as System.Windows.Controls.HeaderedItemsControl;
+            if (itemHeader != null && itemHeader.Header is System.Windows.DependencyObject)
+                extra.Add((System.Windows.DependencyObject)itemHeader.Header);
+            System.Windows.Controls.ContentControl content = dep as System.Windows.Controls.ContentControl;
+            if (content != null && content.Content is System.Windows.DependencyObject)
+                extra.Add((System.Windows.DependencyObject)content.Content);
+            PropertyInfo document = Reflect.Prop(dep.GetType(), "Document", BindingFlags.Public | BindingFlags.Instance);
+            if (document != null && document.PropertyType == typeof(System.Windows.Documents.FlowDocument))
+            {
+                System.Windows.DependencyObject value = document.GetValue(dep, null) as System.Windows.DependencyObject;
+                if (value != null) extra.Add(value);
+            }
+            return extra.ToArray();
         }
 
 
@@ -1838,7 +1969,7 @@ namespace CMOLocalizer
                     string tr = TranslateString(txt);
                     if (string.IsNullOrEmpty(tr) || tr == txt) tr = TranslateMilitaryUnitName(txt);
                     if (string.IsNullOrEmpty(tr) || tr == txt) tr = TranslateCellText(txt);
-                    if (!string.IsNullOrEmpty(tr) && tr != txt)
+                    if (!string.IsNullOrEmpty(tr) && tr != txt && run.Text == txt)
                     {
                         SetRunTextKeepBinding(run, tr);
                                     TrackLiveWpfTarget(run);
@@ -2072,8 +2203,7 @@ namespace CMOLocalizer
         // 只读定位「加载想定」窗口；仅由 SCEN_CTRL_TREE 探针使用。
         private static Form FindLoadScenarioForm()
         {
-            FormCollection forms = Application.OpenForms;
-            if (forms == null) return null;
+            Form[] forms = OpenFormsSnapshot();
             foreach (Form f in forms)
             {
                 if (f == null || f.IsDisposed) continue;
@@ -2201,7 +2331,27 @@ namespace CMOLocalizer
             s = s.Replace("to base:", "至基地:");
             s = s.Replace("to Bingo", "到达返航油量(Bingo)");
 
+            // R69：游戏用「有小数才显示小数」的格式输出重量，于是 5870.0 显示成 "5870"，
+            // 比 "5870.3" 窄两个字符宽度；该行随值刷新时宽度来回跳，视觉上就是向左缩进一格
+            // （用户截图：预留备用油量那一行）。这里只**补全被省略的小数位**，不改数值，
+            // 使同一行的字符宽度恒定。严格限定为「数字 + 空格 + kg」形式，
+            // 且必须恰好是一个整数，避免误伤 "22.6 nm"、"14 分钟" 之类。
+            s = NormalizeFuelWeightDecimals(s);
+
             return s;
+        }
+
+        /// <summary>
+        /// 把 "5870 kg" 补成 "5870.0 kg"，只动整数重量，不碰已有小数、不碰其他单位。
+        /// 宽度恒定后，折行位置不再随数值变化。
+        /// </summary>
+        private static string NormalizeFuelWeightDecimals(string s)
+        {
+            if (string.IsNullOrEmpty(s) || s.IndexOf("kg", StringComparison.Ordinal) < 0) return s;
+            return Regex.Replace(s, @"(?<![\d.,])(\d{1,7})(\s+kg)", delegate(Match m)
+            {
+                return m.Groups[1].Value + ".0" + m.Groups[2].Value;
+            });
         }
 
         private static void TranslateControlTree(Control ctrl)
@@ -2377,7 +2527,11 @@ namespace CMOLocalizer
             else if (ctrl is WebBrowser)
             {
                 WebBrowser wb = (WebBrowser)ctrl;
-                TranslateWebBrowser(wb);
+                // 富文本简报（阵营简报/想定说明）是 HtmlEditorControl 里的内部浏览器，
+                // 内容是一整篇 HTML；它需要的不是「英文 + 【中文】」标注，而是把
+                // 叶子节点的正文整段换成中文（词典里已有数千条简报行）。
+                if (IsHtmlEditorBrowser(wb)) TranslateHtmlEditorBrowser(wb);
+                else TranslateWebBrowser(wb);
             }
             else if (ctrl.GetType().Name.IndexOf("WebView2", StringComparison.OrdinalIgnoreCase) >= 0)
             {
@@ -2385,19 +2539,8 @@ namespace CMOLocalizer
             }
             else if (ctrl.GetType().Name.IndexOf("ElementHost", StringComparison.OrdinalIgnoreCase) >= 0)
             {
-                try
-                {
-                    PropertyInfo piChild = ctrl.GetType().GetProperty("Child");
-                    if (piChild != null)
-                    {
-                        object childObj = piChild.GetValue(ctrl, null);
-                        if (childObj is System.Windows.DependencyObject)
-                        {
-                            TranslateWpfElement((System.Windows.DependencyObject)childObj);
-                        }
-                    }
-                }
-                catch { }
+                try { RequestElementHost(ctrl); }
+                catch (Exception error) { Log("ElementHost discovery failed: " + error.Message); }
             }
             else if (ctrl.GetType().Name.Contains("ChromiumWebBrowser"))
             {
@@ -2498,7 +2641,21 @@ namespace CMOLocalizer
 
         private static string TranslateBriefingText(string text)
         {
+            if (string.IsNullOrEmpty(text) || IsTranslationTerminal(text)) return text;
+            return FinishTranslation(text, TranslateBriefingTextCore(text));
+        }
+
+        private static string TranslateBriefingTextCore(string text)
+        {
             if (string.IsNullOrEmpty(text)) return text;
+            if (ContainsChinese(text))
+            {
+                string mixed = FixMixedEnglishPrefix(text);
+                if (mixed != null) return mixed;
+                string bracketOnly = TranslateBracketSegments(text);
+                string fixedTail = TranslateMixedValueTail(bracketOnly);
+                if (fixedTail != text) return fixedTail;
+            }
 
             // 0. 词库整句/整行优先。数据库描述正文（DB/Descriptions 的每一行）
             //    以纯查表命中，命中即直接采用，避免被下方的启发式规则拆解。
@@ -2729,6 +2886,227 @@ namespace CMOLocalizer
             catch { }
         }
 
+        /// <summary>
+        /// 这个 WebBrowser 是不是富文本编辑器（MSDN HtmlEditorControl）内部的浏览器。
+        /// 判据看控件名与祖先类型：editorWebBrowser / HtmlEditorControl。
+        /// </summary>
+        private static bool IsHtmlEditorBrowser(WebBrowser wb)
+        {
+            try
+            {
+                if (wb == null) return false;
+                if ((wb.Name ?? "").IndexOf("editorWebBrowser", StringComparison.OrdinalIgnoreCase) >= 0)
+                    return true;
+                Control parent = wb.Parent;
+                for (int depth = 0; parent != null && depth < 6; depth++)
+                {
+                    if ((parent.GetType().Name ?? "").IndexOf("HtmlEditor", StringComparison.OrdinalIgnoreCase) >= 0)
+                        return true;
+                    parent = parent.Parent;
+                }
+            }
+            catch { }
+            return false;
+        }
+
+        /// <summary>
+        /// 把富文本简报的正文整段换成中文（不是双语标注）。
+        /// 只写叶子元素（它唯一的子节点是 #text），否则会把嵌套结构吃掉；
+        /// 先收集再回写，避免边遍历边改 DOM。
+        /// </summary>
+        private static void TranslateHtmlEditorBrowser(WebBrowser wb)
+        {
+            if (wb == null) return;
+            try
+            {
+                if (wb.Document == null || wb.Document.Body == null) return;
+                // 只记第一次：此后的调用拿到的是已翻译内容（RAW_BRIEFING_DUMP 依赖原始英文串）。
+                try { RememberRawBriefingOnce(wb, wb.Document.Body.InnerHtml); } catch { }
+                HtmlElementCollection all = wb.Document.Body.All;
+                if (all == null) return;
+                List<HtmlElement> targets = new List<HtmlElement>();
+                List<string> sources = new List<string>();
+                List<HtmlElement> htmlTargets = new List<HtmlElement>();
+                List<string> htmlSources = new List<string>();
+                // ⓪ 整段替换：<P>…<I>USS John F Kennedy</I>…</P> 这类段落被内联标签切成
+                //    多个 #text，逐节点查表永远落空（词典键是整段英文）。实测这是 DLC 简报
+                //    半中半英的主因：译文存在，但通道拿不到整段。
+                //    条件收紧：只碰内联格式标签、不含链接/图片/表格/输入框，避免破坏结构。
+                for (int i = 0; i < all.Count; i++)
+                {
+                    HtmlElement el = all[i];
+                    if (!IsParagraphBlock(el)) continue;
+                    if (HasRichDescendant(el)) continue;
+                    string inner = null;
+                    try { inner = el.InnerText; } catch { }
+                    string normalized = NormalizeBriefingWhitespace(inner);
+                    if (!WantsBriefingTranslation(normalized)) continue;
+                    string translated = TranslateBriefingText(normalized);
+                    if (string.IsNullOrEmpty(translated) || translated == normalized) continue;
+                    if (!ContainsChinese(translated) || !HasAsciiLetter(normalized)) continue;
+                    htmlTargets.Add(el);
+                    htmlSources.Add(EscapeHtmlText(translated));
+                }
+                bool byHtml = false;
+                // ① 叶子元素（唯一子节点是 #text）：这是最常见形态，实测有效。
+                for (int i = 0; i < all.Count; i++)
+                {
+                    HtmlElement el = all[i];
+                    if (el == null) continue;
+                    HtmlElement first = el.FirstChild;
+                    if (first != null && first.TagName != "#text") continue;
+                    string text = null;
+                    try { text = el.InnerText; } catch { }
+                    if (!WantsBriefingTranslation(text)) continue;
+                    string translated = TranslateBriefingText(text);
+                    if (string.IsNullOrEmpty(translated) || translated == text) continue;
+                    if (!ContainsChinese(translated)) continue;
+                    targets.Add(el);
+                    sources.Add(translated);
+                }
+                // ② 混排父元素里的直接文本节点（「· <SPAN>·</SPAN> 617 Sqn RAF - …」）。
+                //    #text 节点不能用 InnerText 读写（实测无效），改走 InnerHtml + 转义。
+                for (int i = 0; i < all.Count; i++)
+                {
+                    HtmlElement el = all[i];
+                    if (el == null) continue;
+                    HtmlElementCollection kids = null;
+                    try { kids = el.Children; } catch { }
+                    if (kids == null || kids.Count == 0) continue;
+                    for (int k = 0; k < kids.Count; k++)
+                    {
+                        HtmlElement node = kids[k];
+                        if (node == null || node.TagName != "#text") continue;
+                        string text = null;
+                        try { text = node.InnerHtml; } catch { }
+                        if (!WantsBriefingTranslation(text)) continue;
+                        string translated = TranslateBriefingText(text);
+                        if (string.IsNullOrEmpty(translated) || translated == text) continue;
+                        if (!ContainsChinese(translated)) continue;
+                        targets.Add(node);
+                        sources.Add(EscapeHtmlText(translated));
+                        byHtml = true;
+                    }
+                }
+                for (int i = 0; i < targets.Count; i++)
+                {
+                    try
+                    {
+                        HtmlElement node = targets[i];
+                        if (node.TagName == "#text") node.InnerHtml = sources[i];
+                        else node.InnerText = sources[i];
+                    }
+                    catch { }
+                }
+                for (int i = 0; i < htmlTargets.Count; i++)
+                {
+                    try { htmlTargets[i].InnerHtml = htmlSources[i]; }
+                    catch { }
+                }
+                if (htmlTargets.Count > 0)
+                    Log("Briefing paragraphs replaced: " + htmlTargets.Count + " blocks (" + wb.Name + ")");
+                if (targets.Count > 0)
+                    Log("Briefing HTML translated: " + targets.Count + " nodes (" + wb.Name
+                        + (byHtml ? ", html mode" : "") + ")");
+            }
+            catch { }
+        }
+
+        /// <summary>
+        /// 保留「翻译前」的简报 HTML，供只读探针 RAW_BRIEFING_DUMP 使用。
+        /// 没有它就无法拿到被游戏切碎的原始英文串，也就无法为池片段拼出的简报建键（R81）。
+        /// </summary>
+        private static void RememberRawBriefingOnce(WebBrowser wb, string html)
+        {
+            if (wb == null || string.IsNullOrEmpty(html)) return;
+            try
+            {
+                lock (rawBriefingLock)
+                {
+                    int key = wb.GetHashCode();
+                    if (rawBriefingHtml.ContainsKey(key)) return;
+                    rawBriefingHtml[key] = html;
+                    while (rawBriefingOrder.Count >= 6)
+                    {
+                        int oldest = rawBriefingOrder[0];
+                        rawBriefingOrder.RemoveAt(0);
+                        rawBriefingHtml.Remove(oldest);
+                    }
+                    int hash = wb.GetHashCode();
+                    if (!rawBriefingOrder.Contains(hash)) rawBriefingOrder.Add(hash);
+                }
+            }
+            catch { }
+        }
+
+        private static readonly object rawBriefingLock = new object();
+        private static readonly Dictionary<int, string> rawBriefingHtml = new Dictionary<int, string>();
+        private static readonly List<int> rawBriefingOrder = new List<int>();
+
+        /// <summary>简报里的「段落容器」：只认承载整段正文的块标签。</summary>
+        private static bool IsParagraphBlock(HtmlElement el)
+        {
+            if (el == null) return false;
+            string tag = el.TagName;
+            if (string.IsNullOrEmpty(tag)) return false;
+            tag = tag.ToUpperInvariant();
+            return tag == "P" || tag == "LI" || tag == "TD" || tag == "TH"
+                || tag == "H1" || tag == "H2" || tag == "H3" || tag == "H4" || tag == "H5" || tag == "H6";
+        }
+
+        /// <summary>段落里出现链接、图片、表格、控件、嵌套段落时不能整段覆盖（会丢结构）。</summary>
+        private static bool HasRichDescendant(HtmlElement el)
+        {
+            try
+            {
+                HtmlElementCollection kids = el.All;
+                if (kids == null) return false;
+                for (int i = 0; i < kids.Count; i++)
+                {
+                    HtmlElement kid = kids[i];
+                    if (kid == null) continue;
+                    string tag = kid.TagName;
+                    if (string.IsNullOrEmpty(tag)) continue;
+                    tag = tag.ToUpperInvariant();
+                    if (tag == "A" || tag == "IMG" || tag == "TABLE" || tag == "INPUT"
+                        || tag == "SELECT" || tag == "TEXTAREA" || tag == "BUTTON"
+                        || tag == "P" || tag == "DIV" || tag == "LI" || tag == "TD"
+                        || tag == "H1" || tag == "H2" || tag == "H3" || tag == "H4"
+                        || tag == "H5" || tag == "H6" || tag == "OBJECT" || tag == "IFRAME")
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch { }
+            return false;
+        }
+
+        /// <summary>整段查表前的归一化：换行/多空格/不换行空格都压成单空格。</summary>
+        private static string NormalizeBriefingWhitespace(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            string s = text.Replace('\u00a0', ' ').Replace("\r", " ").Replace("\n", " ").Replace("\t", " ");
+            s = Regex.Replace(s, "\\s+", " ").Trim();
+            return s;
+        }
+
+        /// <summary>简报文本是否值得送翻译：有字母、且不是「已中文且残留英文不超过 1 个词」。</summary>
+        private static bool WantsBriefingTranslation(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return false;
+            if (!HasAsciiLetter(text)) return false;
+            if (ContainsChinese(text) && Regex.Matches(text, @"[A-Za-z]{2,}").Count < 2) return false;
+            return true;
+        }
+
+        /// <summary>写回 #text 节点的 InnerHtml 前做最小转义，避免 &lt; &amp; 破坏结构。</summary>
+        private static string EscapeHtmlText(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            return text.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;");
+        }
+
         private static void TranslateWebBrowser(WebBrowser wb)
         {
             if (wb == null) return;
@@ -2744,6 +3122,10 @@ namespace CMOLocalizer
                         {
                             // 针对实时生成的 HTML (如数据库详情/简报)，动态替换英文字段
                             string html = wb.Document.Body.InnerHtml;
+                            // 已经是纯中文的页面直接收手：本仓库随包发布的「快速战斗」
+                            // Form.html 本身就是中文，这里再插「英文 + 【中文】」只会把
+                            // 英文塞回中文里（且属性值也可能被子串替换误伤）。
+                            if (LooksLocalizedChinese(html)) return;
                             if (!string.IsNullOrEmpty(html) && !html.Contains("<!-- CMO_ZH_INJECTED -->"))
                             {
                                 // 替换常见数据库英文字段
@@ -2808,9 +3190,40 @@ namespace CMOLocalizer
             }
         }
 
+        /// <summary>
+        /// 页面是否已翻译成中文（决定是否跳过【】双语注入）。
+        /// 判据是**汉字占绝对多数**：快速战斗页面是纯中文正文加少量型号代号，
+        /// 而数据库/简报的英文页面即使被我们加过几个中文标签，汉字也不会占多数。
+        /// </summary>
+        private static bool LooksLocalizedChinese(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return false;
+            int han = 0;
+            int latinWords = 0;
+            bool inWord = false;
+            for (int i = 0; i < text.Length; i++)
+            {
+                char c = text[i];
+                if (c >= '\u4e00' && c <= '\u9fff') { han++; inWord = false; }
+                else if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+                {
+                    if (!inWord) { latinWords++; inWord = true; }
+                }
+                else inWord = false;
+            }
+            return han > 20 && han > latinWords * 2;
+        }
+
         private static string TranslateMilitaryUnitName(string raw)
         {
             if (string.IsNullOrEmpty(raw)) return raw;
+            // R64：本函数是纯英文军名的**兜底**规则（整串词典未命中时才该跑）。
+            // 若输入已含中文（例如词典整串命中的「F-16I 战隼 [Sufa]」），再跑下面的
+            // .Replace("Sufa","苏法/风暴") 就会产出第二种译法「F-16I 战隼 [苏法/风暴]」；
+            // 200ms 补扫与同步钩子各写一种，逐拍互相覆盖——单元状态面板的机型行
+            // 因此中英（两种中文变体）频闪（FLICKER_PROBE 实抓 20 样本严格交替）。
+            // 词典是唯一事实源：含中文的串一律原样返回，兜底只处理纯英文军名。
+            if (ContainsChinese(raw)) return raw;
             string s = raw;
 
             // 1. 如果有数量前缀如 "2x ", "6x "
@@ -3073,13 +3486,10 @@ namespace CMOLocalizer
         /// </summary>
         private static Form FindDBViewerForm()
         {
-            FormCollection forms = Application.OpenForms;
-            if (forms != null)
+            Form[] forms = OpenFormsSnapshot();
+            foreach (Form f in forms)
             {
-                foreach (Form f in forms)
-                {
-                    if (f != null && !f.IsDisposed && IsDBViewerForm(f)) return f;
-                }
+                if (f != null && !f.IsDisposed && IsDBViewerForm(f)) return f;
             }
 
             Form found = null;
@@ -3324,6 +3734,9 @@ namespace CMOLocalizer
         {
             if (string.IsNullOrEmpty(t)) return t;
             string s = t;
+            // `名称 -- 国家 (兵种), …` 是 DB 行独有的结构，第 2 步命中即置位。
+            // 行尾逻辑靠它区分真 DB 行与恰好含 ` -- ` 的普通列表行（R75）。
+            bool structuredRow = false;
 
             // 1. 替换方括号内的平台子类型 [Bomber], [Fighter], [Tanker] 等
             s = Regex.Replace(s, @"\[([A-Za-z0-9\s/\-]+)\]", m =>
@@ -3348,6 +3761,7 @@ namespace CMOLocalizer
                     string countryStr = rightPart.Substring(0, parenIdx).Trim();
                     string trCountry = TranslateString(countryStr);
                     string rest = rightPart.Substring(parenIdx);
+                    string restBefore = rest;
 
                     rest = rest.Replace("(Air Force)", "(空军)")
                                .Replace("(Navy)", "(海军)")
@@ -3363,7 +3777,24 @@ namespace CMOLocalizer
                                .Replace("(Commercial)", "(商业民航)")
                                .Replace("(Border Guard)", "(边防部队)")
                                .Replace("(Royal Air Force)", "(皇家空军)")
-                               .Replace("(Royal Navy)", "(皇家海军)");
+                               .Replace("(Royal Navy)", "(皇家海军)")
+                               // 兵种在原引擎里只有这一张写死的替换表，词库 exact 里的
+                               // 军种名永远进不来（R75：实机 24 行 `(IRGC Aerospace Force)`
+                               // `(Air National Guard)` `(Royal Army)` 一直原样显示）。
+                               .Replace("(IRGC Aerospace Force)", "(伊斯兰革命卫队航天部队)")
+                               .Replace("(IRGC Ground Forces)", "(伊斯兰革命卫队地面部队)")
+                               .Replace("(IRGC Navy)", "(伊斯兰革命卫队海军)")
+                               .Replace("(Air National Guard)", "(空军国民警卫队)")
+                               .Replace("(Ground Self-Defense Force)", "(陆上自卫队)")
+                               .Replace("(National Guard)", "(国民警卫队)")
+                               .Replace("(Royal Army)", "(皇家陆军)")
+                               .Replace("(Civilian)", "(民用)")
+                               .Replace("(Air Defence Troops [PVO])", "(国土防空军 [PVO])")
+                               .Replace("(PLANAF)", "(海军航空兵 [PLANAF])");
+
+                    // 兵种命中写死表才置位：表外的行（含显式兵种的普通列表行）
+                    // 仍回到「必须有年份」的旧闸门，不因此变宽（R75）。
+                    structuredRow = rest != restBefore;
 
                     rightPart = trCountry + rest;
                 }
@@ -3385,7 +3816,242 @@ namespace CMOLocalizer
                  .Replace("Beluga", "Beluga [大白鲸]")
                  .Replace("Atlas", "Atlas [阿特拉斯]");
 
+            // 4. 行尾的 Comments（型号批次/年代/备注）：游戏把它拼在最后一个年份之后，
+            //    实机形态 `A-300-600ST Beluga -- 民用/商用机 (商业民航), 1995, 5x, Super Guppy Replacement`。
+            s = TranslateDBRowCommentsTail(s, structuredRow);
+
             return s;
+        }
+
+        /// <summary>
+        /// 数据库列表行末尾的 Comments（R72）。游戏把 Comments 直接拼在行尾，
+        /// 而 Comments 自身可能带逗号（`5x, Super Guppy Replacement`），所以不能按逗号逐段翻译。
+        /// 唯一安全的做法是「后缀整段命中」：从行内最早的分隔点起逐个试，
+        /// 命中就整段替换并停止（最长优先），未命中则原样返回。
+        /// 只有译文含中文才采信——避免把纯代号段拿去组合翻译产出垃圾串。
+        /// </summary>
+        private static string TranslateDBRowCommentsTail(string s, bool structuredRow)
+        {
+            if (string.IsNullOrEmpty(s) || commentsMap.Count == 0) return s;
+            // 只对**数据库查看器行格式**动手（`名称 -- 国家 (兵种), 年份, Comments`）。
+            // TranslateDarkListView 对游戏里所有 DarkListView 都跑（兵种编成、任务列表…），
+            // 所以闸门要卡两个特征，缺一不可：
+            //   ① ` -- ` 分隔（DB 行才有）；
+            //   ② 行内必须出现**四位年份**（DB 行必有服役年份区间）。
+            // 只卡 ① 不够：`Alpha Team -- Bravo, Charlie, Delta` 这类非 DB 行也含 ` -- `，
+            // 词表里的通用词（Charlie=查理级、Active=主动）会把它误译（R72 复查 F2 实测）。
+            // ② 真 DB 行必有四位年份——但**不是所有 DB 行都有年份**：`AB.412EP -- 土耳其
+            // (海岸警卫队), 14x, Agusta-Bell`、`Ababil-3 UAV … -- 伊拉克 (陆军), IS Unkn`
+            // 这类无年份行被年份闸门整行挡住，词表里明明有译文却不生效（R75 实测 11 行）。
+            // 故年份之外再认 **DB 行结构**（`名称 -- 国家 (兵种)`，由第 2 步判定）。
+            if (s.IndexOf(" -- ", StringComparison.Ordinal) < 0) return s;
+            if (!structuredRow && !Regex.IsMatch(s, @"\b(?:1[89]|20)\d{2}\b")) return s;
+
+            const string SEP = ", ";
+            string[] parts = s.Split(new string[] { SEP }, StringSplitOptions.None);
+            bool changed = false;
+
+            // ① 整段后缀优先（Comments 自带逗号时只有整段才对得上，如 `5x, Super Guppy Replacement`）。
+            //   **命中后不能直接 return**：实机行
+            //   `A-29B … 2018, 6x Planned, 4x Delivered, 1x Lost 2020` 里
+            //   `1x Lost 2020` 整段命中词表，早返回会让前面的 `6x Planned`、`4x Delivered`
+            //   永远不译（2026-10-28 实机 DB_LIST_TEXT 导出抓到的真缺陷）。
+            //   正确做法：命中后把该范围**标记已替换**，再继续逐段处理它前面的部分。
+            int segEnd = parts.Length;   // parts[segEnd..] 已由整段命中处理
+            for (int i = 1; i < parts.Length; i++)
+            {
+                string tail = string.Join(SEP, parts, i, parts.Length - i).Trim();
+                if (tail.Length < 2 || tail.Length > 160) continue;
+                string tailHit;
+                if (commentsMap.TryGetValue(tail, out tailHit) && ContainsChinese(tailHit))
+                {
+                    parts[i] = tailHit;
+                    for (int j = i + 1; j < parts.Length; j++) parts[j] = null;
+                    segEnd = i;
+                    changed = true;
+                    break;
+                }
+            }
+
+            // ② 再按逗号分段逐段查：Comments 多为 `2x Mounts` / `Export` / 年份 这类短段。
+            //   年份与纯代号查不到表就原样保留。
+            for (int i = 1; i < segEnd; i++)   // parts[0] 是名称+国家+兵种，交给前面的步骤
+            {
+                string seg = parts[i].Trim();
+                if (seg.Length == 0) continue;
+                // 数量段是**结构**（`4x Mounts`、`3x Bty`、`120 Rounds`），逐个枚举永远追不上，
+                // 交给规则；规则只认数字 + 固定单位/编制词，范围极窄，不会把型号吃进去。
+                // 必须在 IsYearOrCount 之前跑：`3x Bty` 这种"数字开头 + 短"的段会被
+                // 年份/数量守卫提前跳过（实机踩过：规则写了却不生效）。
+                string ruled = TranslateCommentQuantity(seg);
+                if (ruled != null)
+                {
+                    parts[i] = ruled;
+                    changed = true;
+                    continue;
+                }
+                if (IsYearOrCount(seg)) continue;
+                string hit;
+                if (commentsMap.TryGetValue(seg, out hit) && ContainsChinese(hit))
+                {
+                    parts[i] = hit;
+                    changed = true;
+                }
+            }
+            if (!changed) return s;
+            // 被整段命中吃掉的分段已置 null，重组时跳过（保持 `, ` 分隔不变）。
+            StringBuilder joined = new StringBuilder();
+            for (int i = 0; i < parts.Length; i++)
+            {
+                if (parts[i] == null) continue;
+                if (joined.Length > 0) joined.Append(SEP);
+                joined.Append(parts[i]);
+            }
+            return joined.ToString();
+        }
+
+        /// <summary>
+        /// Comments 里的数量+单位/编制（`4x Mounts`、`3x pr Bty`、`2 tons`、`8k lb`）。
+        /// 返回 null 表示不匹配（调用方保持原文）。范围窄到只有数字 + 少数单位词，
+        /// 型号（`SA-6`、`Tu-16`）永远匹配不上。
+        /// </summary>
+        private static string TranslateCommentQuantity(string seg)
+        {
+            Match m = Regex.Match(seg, @"^(\d{1,3})x\s+Mounts?$", RegexOptions.IgnoreCase);
+            if (m.Success) return m.Groups[1].Value + "x 挂架";
+            m = Regex.Match(seg, @"^(\d{1,3})x\s+Pylons?$", RegexOptions.IgnoreCase);
+            if (m.Success) return m.Groups[1].Value + "x 挂架";
+            m = Regex.Match(seg, @"^(\d{1,3})x\s+pr\s+(Bty|Plt|Bn|Coy|Sec|Rgt)$", RegexOptions.IgnoreCase);
+            if (m.Success)
+            {
+                string unit = m.Groups[2].Value.ToLowerInvariant();
+                string zh = unit == "bty" ? "连" : unit == "plt" ? "排" : unit == "bn" ? "营"
+                          : unit == "coy" ? "连" : unit == "sec" ? "班" : "团";
+                return "每" + zh + " " + m.Groups[1].Value + "x";
+            }
+            m = Regex.Match(seg, @"^(\d{1,4}(?:\.\d)?)\s+tons?$", RegexOptions.IgnoreCase);
+            if (m.Success) return m.Groups[1].Value + " 吨";
+            m = Regex.Match(seg, @"^(\d{1,3}(?:\.\d)?)k\s+lb$", RegexOptions.IgnoreCase);
+            if (m.Success) return m.Groups[1].Value + "k 磅";
+            m = Regex.Match(seg, @"^(\d{1,4}(?:\.\d)?)\s*lb$", RegexOptions.IgnoreCase);
+            if (m.Success) return m.Groups[1].Value + " 磅";
+
+            // 句首模板 + 尾部原样保留：`Retired 1977`、`Operational 1971`、
+            // `Reactor boosted to high orbit 22-10-1985`（这类在 Comments 里成批出现，
+            // 逐个枚举不现实；模板锚定句首，尾部（年份/日期/编号）不译，安全）。
+            return TranslateCommentTemplate(seg);
+        }
+
+        /// <summary>
+        /// Comments 里的「句首模板 + 尾部」形态。只认**固定模板**，尾部原样保留；
+        /// 不匹配返回 null（调用方保持原文）。模板里不含任何装备代号，故不会误伤型号。
+        /// </summary>
+        private static string TranslateCommentTemplate(string seg)
+        {
+            Match m = Regex.Match(seg, @"^(\d{4})\s*[-–]\s*(\d{4})$");
+            if (m.Success) return seg;                       // 纯年份区间，保留
+            m = Regex.Match(seg, @"^(Retired|Operational|Cancelled|Delivered|Ordered)\s+(\d{4})$",
+                            RegexOptions.IgnoreCase);
+            if (m.Success)
+            {
+                string verb = m.Groups[1].Value.ToLowerInvariant();
+                string zh = verb == "retired" ? "退役" : verb == "operational" ? "服役"
+                          : verb == "cancelled" ? "取消" : verb == "delivered" ? "交付" : "订购";
+                return m.Groups[2].Value + " 年" + zh;
+            }
+            m = Regex.Match(seg, @"^Reactor boosted to high orbit\s+(.+)$", RegexOptions.IgnoreCase);
+            if (m.Success) return "反应堆推入高轨 " + m.Groups[1].Value;
+            m = Regex.Match(seg, @"^Reactor ejected but failed to boost to high orbit\s+(.+)$",
+                            RegexOptions.IgnoreCase);
+            if (m.Success) return "反应堆已弹出但未能推入高轨 " + m.Groups[1].Value;
+            m = Regex.Match(seg, @"^(?:Was\s+)?[Bb]oosted to high orbit\s+(.+)$");
+            if (m.Success) return "推入高轨 " + m.Groups[1].Value;
+            m = Regex.Match(seg, @"^(\d{1,3})\s+years?\s+in\s+service$", RegexOptions.IgnoreCase);
+            if (m.Success) return "服役 " + m.Groups[1].Value + " 年";
+
+            // `Assoc w/ X` 家族（Associat­ed with）：电子战/声呐/数据链的配套关系，
+            // 系统性形态——前缀翻「配」，设备名（多为型号）原样保留。拼写变体 8 种都在实测清单里。
+            m = Regex.Match(seg,
+                @"^Asso[a-z]*\.?\s*w(?:ith|/|\.)?\s+(.+)$", RegexOptions.IgnoreCase);
+            if (m.Success) return "配 " + m.Groups[1].Value;
+
+            // 数量+单位/编制（`4x Mounts`、`3x Bty`、`120 Rounds`）：逐个枚举永远追不上。
+            // `Nx 连/排/营/团`、`N 发`、`Nx 发射管/导弹/箔条` —— Comments 里最常见的两种形态。
+            // 只认**固定少数单位词**，锚定整段，型号（`Tu-16`、`SA-6`）永远匹配不上。
+            m = Regex.Match(seg, @"^(\d{1,3})x\s+(Bty|Btys|Plt|Plts|Bn|Bns|Coy|Coys|Sec|Secs|Regt|Regts)$",
+                            RegexOptions.IgnoreCase);
+            if (m.Success)
+            {
+                string u = m.Groups[2].Value.ToLowerInvariant().TrimEnd('s');
+                string zh = u == "bty" ? "连" : u == "plt" ? "排" : u == "bn" ? "营"
+                          : u == "coy" ? "连" : u == "sec" ? "班" : "团";
+                return m.Groups[1].Value + "x " + zh;
+            }
+            m = Regex.Match(seg, @"^(\d{1,4})\s+(Rnds?|rounds?|Rounds?|rnds?)$", RegexOptions.IgnoreCase);
+            if (m.Success) return m.Groups[1].Value + " 发";
+            // `Nx Ordered/Planned/Lost/…`（交付/损失/出售类动词）——Comments 里成批出现。
+            // 数量允许区间写法（实机行里出现过 `40-75x Planned`、`255x Planned`）；
+            // 动词后面允许跟年份（`1x lost 2001`）或引号年份（`8x Loaned '24`）——
+            // 实机 2026-10-28 导出里这类写法成批出现。
+            m = Regex.Match(seg,
+                @"^(\d{1,4}(?:\s*[-–]\s*\d{1,4})?)x\s+(Ordered|Planned|Lost|Sold|Leased|Loaned|Captured|Delivered|Built|Laid Down|Sunk|Crashed|Transferred|Claimed|Retired)(?:\s+(\d{4}|'\d{2}))?$",
+                            RegexOptions.IgnoreCase);
+            if (m.Success)
+            {
+                string v = m.Groups[2].Value.ToLowerInvariant();
+                string zh = v == "ordered" ? "订购" : v == "planned" ? "计划" : v == "lost" ? "损失"
+                          : v == "sold" ? "售出" : v == "leased" || v == "loaned" ? "租用"
+                          : v == "captured" ? "缴获" : v == "delivered" ? "交付" : v == "built" ? "建成"
+                          : v == "laid down" ? "开工" : v == "sunk" ? "沉没" : v == "crashed" ? "坠毁"
+                          : v == "transferred" ? "转隶" : v == "claimed" ? "声称" : "退役";
+                string year = m.Groups[3].Value;
+                if (year.Length == 0) return m.Groups[1].Value + "x " + zh;
+                if (year[0] == '\'') return m.Groups[1].Value + "x " + zh + " ('" + year.Substring(1) + ")";
+                return m.Groups[1].Value + "x " + zh + " " + year;
+            }
+            // `96x in '26`（未来交付计划）：数量 + in + 引号年份
+            m = Regex.Match(seg, @"^(\d{1,4})x\s+in\s+'(\d{2})$", RegexOptions.IgnoreCase);
+            if (m.Success) return m.Groups[1].Value + "x（'" + m.Groups[2].Value + " 年）";
+            // `Upgraded to AH-1F` / `Upgraded to D Standard`：固定句首模板，尾部保留
+            m = Regex.Match(seg, @"^Upgraded\s+to\s+(.+)$", RegexOptions.IgnoreCase);
+            if (m.Success) return "升级至 " + m.Groups[1].Value;
+            // `Nx 发射管/炮管/深水炸弹/导弹/箔条/齐射/阵地/编组/发射装置`
+            m = Regex.Match(seg,
+                @"^(\d{1,3})x\s+(Tubes?|Tube|Barrels?|DCs?|Missiles?|Chaff|Salvos?|Sites?|Groups?|Lnchrs?|Launchers?)$",
+                            RegexOptions.IgnoreCase);
+            if (m.Success)
+            {
+                string u = m.Groups[2].Value.ToLowerInvariant();
+                string zh = u.StartsWith("tube") ? "发射管"
+                          : u.StartsWith("barrel") ? "炮管"
+                          : u.StartsWith("dc") ? "深水炸弹"
+                          : u.StartsWith("missile") ? "导弹"
+                          : u.StartsWith("chaff") ? "箔条"
+                          : u.StartsWith("salvo") ? "齐射"
+                          : u.StartsWith("site") ? "阵地"
+                          : u.StartsWith("group") ? "编组" : "发射装置";
+                return m.Groups[1].Value + "x " + zh;
+            }
+            return null;
+        }
+
+        /// <summary>`1992`、`1992-1996`、`2x`、`4k lb` 这类纯年份/数量段不进词表替换。</summary>
+        private static bool IsYearOrCount(string seg)
+        {
+            if (seg.Length == 0) return true;
+            bool hasDigit = false, hasLetter = false;
+            for (int i = 0; i < seg.Length; i++)
+            {
+                char c = seg[i];
+                if (c >= '0' && c <= '9') { hasDigit = true; continue; }
+                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) hasLetter = true;
+                else if (c == ' ' || c == '-' || c == '/' || c == '.' || c == ',') continue;
+                else hasLetter = true;
+            }
+            if (!hasDigit) return false;
+            if (!hasLetter) return true;
+            // `2x`、`4k lb`、`12x`：数字开头的短数量段
+            return seg.Length <= 6 && (seg[0] >= '0' && seg[0] <= '9');
         }
 
         private static void TranslateDarkListView(Control ctrl)
@@ -4058,6 +4724,28 @@ namespace CMOLocalizer
             if (ctrl is TextBoxBase)
             {
                 TextBoxBase tb = (TextBoxBase)ctrl;
+                // 只读富文本是纯显示区（快捷键窗口的 8 个 DarkRichTextBox）：走整段 exact 译文，
+                // 制表符排版原样保留。可编辑富文本（Lua 脚本控制台）一律不碰——R19 输入保护不变量。
+                // 不看焦点/选区：只读=不能输入，用户点进去看也不会变成「正在输入」；
+                // 反过来要求未聚焦会让开窗默认聚焦的那个框永远漏译（R91 实测：目标接触框英文）。
+                RichTextBox rtb = tb as RichTextBox;
+                if (rtb != null && rtb.ReadOnly)
+                {
+                    // 只认整段 exact 译文，**不走** TranslateString 的混合/组合管道：这类正文靠制表符
+                    // 排两列，走通用管道会把 “F2\t\t\tThrottle - Altitude/Depth” 拼成
+                    // “F2油门档位 - Altitude/Depth”（R91 实测：标、列、尾部全毁）。
+                    string richText = tb.Text;
+                    if (!string.IsNullOrEmpty(richText))
+                    {
+                        string hit;
+                        if (exactMap.TryGetValue(richText, out hit)
+                            && !string.IsNullOrEmpty(hit) && hit != richText)
+                        {
+                            tb.Text = hit;
+                        }
+                    }
+                    return;
+                }
                 if (!string.IsNullOrEmpty(tb.Text) && tb.Text.StartsWith("Enter Database ID for this "))
                 {
                     tb.Text = "输入该型装备的数据库 ID...";
@@ -4256,6 +4944,30 @@ namespace CMOLocalizer
 
         public static string TranslateString(string raw)
         {
+            if (string.IsNullOrEmpty(raw) || IsTranslationTerminal(raw)) return raw;
+            return FinishTranslation(raw, TranslateStringCore(raw));
+        }
+
+        private static bool IsTranslationTerminal(string text)
+        {
+            if (!ContainsChinese(text)) return false;
+            lock (cacheLock) return translationTerminals.Contains(text.Trim());
+        }
+
+        private static string FinishTranslation(string raw, string result)
+        {
+            if (!string.IsNullOrEmpty(result) && result != raw && ContainsChinese(raw)
+                && result.Length > raw.Length && result.IndexOf(raw, StringComparison.Ordinal) >= 0) return raw;
+            if (!string.IsNullOrEmpty(result) && result != raw && ContainsChinese(result))
+            {
+                lock (cacheLock)
+                    if (translationTerminals.Count < exactMap.Count + MAX_CACHE_SIZE) translationTerminals.Add(result.Trim());
+            }
+            return result;
+        }
+
+        private static string TranslateStringCore(string raw)
+        {
             if (string.IsNullOrEmpty(raw)) return raw;
             // 1. Exact match & Trimmed exact match (highest priority before path filtering)
             if (exactMap.ContainsKey(raw)) return exactMap[raw];
@@ -4354,7 +5066,6 @@ namespace CMOLocalizer
             if (ContainsChinese(raw))
             {
                 string bracketOnly = TranslateBracketSegments(raw);
-                if (bracketOnly != raw) return bracketOnly;
                 return TranslateMixedValueTail(bracketOnly);
             }
 
@@ -4670,32 +5381,46 @@ namespace CMOLocalizer
             string s = Regex.Replace(spec.Trim(), @"\s+", " ");
             if (s.Length == 0) return null;
 
-            // `105mm/37 L118 Towed Light Gun x 6`、`100mm KS-19 x 4, Fire Can FCR`
-            // —— 数据库里的数量写在后缀（有时后面还有逗号续接的内容），
-            // 而下面的 QTY 规则只认前缀（`6 x Gun`）。不处理后缀就会让 `x`
-            // 当成生词把整条名字拖回英文（实测近 200 条）。
-            Match qtyTail = Regex.Match(s,
-                @"^(?<rest>.+?)\s+x\s*(?<n>\d+)(?<tail>\s*[,;].*)?$", RegexOptions.IgnoreCase);
-            if (qtyTail.Success)
-            {
-                string restZh = TranslateComposedSpec(qtyTail.Groups["rest"].Value);
-                string tailZh = null;
-                string tail = qtyTail.Groups["tail"].Value;
-                if (tail.Length > 0)
-                    tailZh = TranslateComposedSpec(tail.Substring(1));
-                if (restZh != null && (tailZh != null || tail.Length == 0))
-                {
-                    string joined = restZh + " × " + qtyTail.Groups["n"].Value;
-                    return tailZh != null ? joined + "，" + tailZh : joined;
-                }
-            }
-
             Match qty = Regex.Match(s, @"^(?<n>\d+)\s*x\s*(?<rest>.+)$", RegexOptions.IgnoreCase);
             if (qty.Success)
             {
                 string rest = TranslateComposedSpec(qty.Groups["rest"].Value);
                 if (rest == null) return null;
                 return qty.Groups["n"].Value + " 个" + rest;
+            }
+
+            // `105mm/37 L118 Towed Light Gun x 6`、`100mm KS-19 x 4, Fire Can FCR`
+            // —— 数据库里的数量写在后缀（有时后面还有逗号续接的内容），
+            // 而下面的 QTY 规则只认前缀（`6 x Gun`）。不处理后缀就会让 `x`
+            // 当成生词把整条名字拖回英文（实测近 200 条）。
+            // `105mm/37 L118 Towed Light Gun x 6`、`10 MIRV x 550kT Nuclear`，
+            // 以及「数量之后还有内容」的形态：`100mm KS-19 x 4, Fire Can FCR`、
+            // `3 MIRV x W58 200kT Nuclear] RV`（尾部续接再跟一个名字片段）。
+            // 这里不再要求右侧是纯数字——`x 550kT`、`x W58`、`x BLU-92/B` 都是
+            // 「<数量/代号> x <代号>」的弹头计数写法。tail 允许任意非空续接。
+            // 若不认这种形态，`x` 会被当成生词把整条弹头描述拖回英文（实测 78 条）。
+            Match qtyTail = Regex.Match(s,
+                @"^(?<rest>.+?)\s+x\s+(?<n>[A-Za-z0-9][A-Za-z0-9\-/.\[\]]*)(?<tail>\s*[\s,;].*)?$",
+                RegexOptions.IgnoreCase);
+            if (qtyTail.Success)
+            {
+                string restZh = TranslateComposedSpec(qtyTail.Groups["rest"].Value);
+                string rightZh = TranslateComposedSpec(qtyTail.Groups["n"].Value);
+                string tailZh = null;
+                string tail = qtyTail.Groups["tail"].Value.Trim();
+                if (tail.Length > 0)
+                {
+                    string tailBody = tail;
+                    if (tailBody.Length > 0 && (tailBody[0] == ',' || tailBody[0] == ';'))
+                        tailBody = tailBody.Substring(1).Trim();
+                    if (tailBody.Length > 0)
+                        tailZh = TranslateComposedSpec(tailBody);
+                }
+                if (restZh != null && rightZh != null && (tailZh != null || tail.Length == 0))
+                {
+                    string joined = restZh + " × " + rightZh;
+                    return tailZh != null ? joined + "，" + tailZh : joined;
+                }
             }
 
             Match units = Regex.Match(s, @"^(?<n>\d[\d,]*)\s*units?$", RegexOptions.IgnoreCase);
@@ -4848,13 +5573,18 @@ namespace CMOLocalizer
             {
                 if (string.IsNullOrEmpty(raw)) return raw;
                 int colon = raw.IndexOf(':');
+                int fullColon = raw.IndexOf('：');
+                if (colon < 0 || (fullColon >= 0 && fullColon < colon)) colon = fullColon;
                 if (colon <= 0 || colon >= raw.Length - 1 || colon > 40) return raw;
                 string left = raw.Substring(0, colon);
                 string right = raw.Substring(colon + 1).Trim();
                 if (!ContainsChinese(left)) return raw;
                 if (right.Length == 0 || right.Length > 64) return raw;
                 if (ContainsChinese(right)) return raw;
-                if (!Regex.IsMatch(right, "^[A-Za-z][A-Za-z0-9 ,./()&+%-]*$")) return raw;
+                // R63：右值可能是「子键: 值」的复合串（`挂载方案: A/A: AIM-7M Sparrow III, Heavy`）。
+                // 旧正则不允许冒号，这类半译串被原样返回并钉在屏幕上，游戏刷新时与整译
+                // 版本交替出现——用户看到的就是频闪。
+                if (!Regex.IsMatch(right, "^[A-Za-z][A-Za-z0-9 ,./()&+%:\\-]*$")) return raw;
                 string trRight = TranslateString(right);
                 if (string.IsNullOrEmpty(trRight) || trRight == right) return raw;
                 return left.TrimEnd() + "：" + trRight;
@@ -4962,11 +5692,17 @@ namespace CMOLocalizer
                 if (target.Length == 0)
                 {
                     Log("GameBuild: 安装清单未记录适配构建号（旧版安装包）——无法比对。");
+                    RecordStatus("build_check", "UNKNOWN detected=" + detectedGameBuild + " pack=<none>");
                 }
                 else if (target != detectedGameBuild)
                 {
                     Log("GameBuild: 警告！游戏已更新到 " + detectedGameBuild + "，本汉化适配的是 " + target
                         + " —— 部分界面可能退回英文或行为异常，请等待对应版本的汉化补丁。");
+                    RecordStatus("build_check", "MISMATCH detected=" + detectedGameBuild + " pack=" + target);
+                }
+                else
+                {
+                    RecordStatus("build_check", "OK detected=" + detectedGameBuild);
                 }
             }
             catch (Exception ex)
@@ -5437,13 +6173,47 @@ namespace CMOLocalizer
             // 新增装备只要由已有词组成就自动成句，不必再逐条手写。
             if (!ContainsChinese(raw))
             {
-                string composed;
-                if (TryComposeTranslate(raw, out composed) && !string.IsNullOrEmpty(composed) && composed != raw)
+                // 散文不参与“词表拼接”：词表覆盖得足够广时，逐词拼凑会把英文句
+                // 子拼成中英夹生串（实测「The 五国联防安排 … are a number of defense
+                // accords」）。名字/型号才是组合对象，句子只认整句查表。
+                if (!LooksLikeProseSentence(raw))
                 {
-                    return composed;
+                    string composed;
+                    if (TryComposeTranslate(raw, out composed) && !string.IsNullOrEmpty(composed) && composed != raw)
+                    {
+                        return composed;
+                    }
                 }
             }
             return raw;
+        }
+
+        /// <summary>
+        /// 是否是一句「散文」（而不是名字/型号）：句子只能整句查表翻译，不能靠词表拼接。
+        /// 判据取保守值——命中任意一条就算散文：句末句号/问号/叹号、含 ". " 分隔、
+        /// 含常见虚词作为独立词。名字（`USS John F Kennedy`）不会命中。
+        /// </summary>
+        private static bool LooksLikeProseSentence(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return false;
+            string t = text.Trim();
+            int words = 0;
+            foreach (Match m in Regex.Matches(t, "[A-Za-z][A-Za-z'-]+"))
+            {
+                words++;
+                string w = m.Value.ToLowerInvariant();
+                if (w == "the" || w == "are" || w == "was" || w == "were" || w == "have" || w == "been"
+                    || w == "this" || w == "that" || w == "with" || w == "from" || w == "will"
+                    || w == "would" || w == "which" || w == "their" || w == "there" || w == "into"
+                    || w == "they" || w == "will" || w == "should")
+                {
+                    return true;
+                }
+            }
+            if (words >= 7) return true;
+            if (t.EndsWith(".") || t.EndsWith("?") || t.EndsWith("!")) return true;
+            if (t.IndexOf(". ") >= 0) return true;
+            return false;
         }
 
         private static void LoadDictionaries(string jsonPath)
@@ -5452,6 +6222,12 @@ namespace CMOLocalizer
             {
                 string jsonText = File.ReadAllText(jsonPath, Encoding.UTF8);
                 ParseJsonSections(jsonText);
+                lock (cacheLock)
+                {
+                    translationTerminals.Clear();
+                    foreach (string value in exactMap.Values)
+                        if (ContainsChinese(value)) translationTerminals.Add(value.Trim());
+                }
             }
             catch (Exception ex)
             {
@@ -5468,12 +6244,16 @@ namespace CMOLocalizer
             int idxExact = FindTopLevelKey(text, "exact");
             int idxPartial = FindTopLevelKey(text, "partial");
             int idxWords = FindTopLevelKey(text, "words");
+            int idxComments = FindTopLevelKey(text, "comments");
 
             List<SectionPos> sections = new List<SectionPos>();
             if (idxOffsets >= 0) sections.Add(new SectionPos { Name = "offsets", Pos = idxOffsets });
             if (idxExact >= 0) sections.Add(new SectionPos { Name = "exact", Pos = idxExact });
             if (idxPartial >= 0) sections.Add(new SectionPos { Name = "partial", Pos = idxPartial });
             if (idxWords >= 0) sections.Add(new SectionPos { Name = "words", Pos = idxWords });
+            // comments 排在文件最前：老引擎看不到它（第一个已知分区之前的内容会被忽略），
+            // 因此新词典仍能被旧引擎正常读取——向后兼容是硬要求。
+            if (idxComments >= 0) sections.Add(new SectionPos { Name = "comments", Pos = idxComments });
 
             sections.Sort((a, b) => a.Pos.CompareTo(b.Pos));
 
@@ -5484,7 +6264,8 @@ namespace CMOLocalizer
                 string block = text.Substring(start, end - start);
                 string name = sections[i].Name;
 
-                ParsePairs(block, name == "offsets", name == "exact", name == "partial", name == "words");
+                ParsePairs(block, name == "offsets", name == "exact", name == "partial",
+                           name == "words", name == "comments");
             }
         }
 
@@ -5531,7 +6312,8 @@ namespace CMOLocalizer
             return -1;
         }
 
-        private static void ParsePairs(string block, bool isOffset, bool isExact, bool isPartial, bool isWords)
+        private static void ParsePairs(string block, bool isOffset, bool isExact, bool isPartial,
+                                       bool isWords, bool isComments)
         {
             int p = 0;
             while (p < block.Length)
@@ -5643,7 +6425,8 @@ namespace CMOLocalizer
                 }
                 string val = sbVal.ToString();
 
-                if (key == "offsets" || key == "exact" || key == "partial" || key == "words") continue;
+                if (key == "offsets" || key == "exact" || key == "partial" || key == "words"
+                    || key == "comments") continue;
 
                 if (isOffset)
                 {
@@ -5669,6 +6452,10 @@ namespace CMOLocalizer
                 else if (isWords)
                 {
                     wordsMap[key] = val;
+                }
+                else if (isComments)
+                {
+                    commentsMap[key] = val;
                 }
             }
         }
@@ -5724,8 +6511,7 @@ namespace CMOLocalizer
         private static MenuStrip FindMainMenuStrip(out Form ownerForm)
         {
             ownerForm = null;
-            FormCollection forms = Application.OpenForms;
-            if (forms == null) return null;
+            Form[] forms = OpenFormsSnapshot();
             foreach (Form frm in forms)
             {
                 if (frm == null || frm.IsDisposed) continue;
@@ -5803,6 +6589,160 @@ namespace CMOLocalizer
                     if (sub != null) return sub;
                 }
             }
+            return null;
+        }
+
+        /// <summary>
+        /// BRIEFING_RAW_DUMP：导出翻译前的简报 HTML（含标签结构），并报出英文行数与样本。
+        /// 它回答「原始英文串到底长什么样」——整段键能不能建、有没有被标签/链接切断。
+        /// </summary>
+        private static string HandleBriefingRawDump()
+        {
+            WebBrowser target = null;
+            string formName = "";
+            foreach (Form f in OpenFormsSnapshot())
+            {
+                if (f == null || f.IsDisposed) continue;
+                WebBrowser wb = FindHtmlEditorBrowser(f);
+                if (wb == null) continue;
+                target = wb;
+                formName = f.Name;
+                break;
+            }
+            if (target == null) return "{\"status\":\"error\",\"message\":\"no briefing editor open\"}";
+            string html = null;
+            lock (rawBriefingLock)
+            {
+                string cached;
+                if (rawBriefingHtml.TryGetValue(target.GetHashCode(), out cached)) html = cached;
+            }
+            if (string.IsNullOrEmpty(html))
+            {
+                try
+                {
+                    target.Invoke((MethodInvoker)delegate
+                    {
+                        try
+                        {
+                            if (target.Document != null && target.Document.Body != null)
+                                html = target.Document.Body.InnerHtml ?? "";
+                        }
+                        catch { }
+                    });
+                }
+                catch { }
+            }
+            html = html ?? "";
+            string text = Regex.Replace(html, "<[^>]*>", "\n");
+            text = Regex.Replace(text, "&nbsp;", " ");
+            string outFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CMOLocalizer_Briefing_RAW.html");
+            try { File.WriteAllText(outFile, html, new UTF8Encoding(false)); } catch { }
+            int englishLines = 0;
+            string[] lines = text.Replace("\r", "").Split('\n');
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string line = lines[i].Trim();
+                if (line.Length < 4 || ContainsChinese(line) || !HasAsciiLetter(line)) continue;
+                englishLines++;
+            }
+            StringBuilder jb = new StringBuilder();
+            jb.Append("{\"status\":\"ok\",\"form\":\"").Append(JsonEsc(formName)).Append('"');
+            jb.Append(",\"file\":\"").Append(JsonEsc(outFile)).Append('"');
+            jb.Append(",\"bytes\":").Append(html.Length);
+            jb.Append(",\"englishLines\":").Append(englishLines);
+            jb.Append('}');
+            return jb.ToString();
+        }
+
+        /// <summary>
+        /// BRIEFING_DUMP：导出富文本简报正文到 CMOLocalizer_Briefing.txt，并返回
+        /// 字符数/汉字数/英文行数与英文行样本。只读：不修改任何控件。
+        /// </summary>
+        private static string HandleBriefingDump()
+        {
+            WebBrowser target = null;
+            string formName = "";
+            foreach (Form f in OpenFormsSnapshot())
+            {
+                if (f == null || f.IsDisposed) continue;
+                WebBrowser wb = FindHtmlEditorBrowser(f);
+                if (wb == null) continue;
+                target = wb;
+                formName = f.Name;
+                break;
+            }
+            if (target == null) return "{\"status\":\"error\",\"message\":\"no briefing editor open\"}";
+            string text = "";
+            try
+            {
+                target.Invoke((MethodInvoker)delegate
+                {
+                    try
+                    {
+                        if (target.Document != null && target.Document.Body != null)
+                            text = target.Document.Body.InnerText ?? "";
+                    }
+                    catch { }
+                });
+            }
+            catch { }
+            string outFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CMOLocalizer_Briefing.txt");
+            try { File.WriteAllText(outFile, text, new UTF8Encoding(false)); } catch { }
+
+            int han = 0, latinWords = 0;
+            bool inWord = false;
+            for (int i = 0; i < text.Length; i++)
+            {
+                char c = text[i];
+                if (c >= '\u4e00' && c <= '\u9fff') { han++; inWord = false; }
+                else if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+                {
+                    if (!inWord) { latinWords++; inWord = true; }
+                }
+                else inWord = false;
+            }
+            List<string> englishLines = new List<string>();
+            string[] lines = text.Replace("\r", "").Split('\n');
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string line = lines[i].Trim();
+                if (line.Length < 4) continue;
+                if (ContainsChinese(line)) continue;
+                if (!HasAsciiLetter(line)) continue;
+                englishLines.Add(line);
+            }
+            StringBuilder jb = new StringBuilder();
+            jb.Append("{\"status\":\"ok\",\"form\":\"").Append(JsonEsc(formName)).Append('"');
+            jb.Append(",\"file\":\"").Append(JsonEsc(outFile)).Append('"');
+            jb.Append(",\"chars\":").Append(text.Length);
+            jb.Append(",\"han\":").Append(han);
+            jb.Append(",\"latinWords\":").Append(latinWords);
+            jb.Append(",\"englishLines\":").Append(englishLines.Count);
+            jb.Append(",\"samples\":[");
+            for (int i = 0; i < englishLines.Count && i < 8; i++)
+            {
+                if (i > 0) jb.Append(',');
+                jb.Append('"').Append(JsonEsc(englishLines[i])).Append('"');
+            }
+            jb.Append("]}");
+            return jb.ToString();
+        }
+
+        /// <summary>在窗体里找富文本简报的内部浏览器（editorWebBrowser / HtmlEditorControl 里）。</summary>
+        private static WebBrowser FindHtmlEditorBrowser(Control root)
+        {
+            if (root == null) return null;
+            try
+            {
+                WebBrowser wb = root as WebBrowser;
+                if (wb != null && IsHtmlEditorBrowser(wb)) return wb;
+                foreach (Control child in root.Controls)
+                {
+                    WebBrowser found = FindHtmlEditorBrowser(child);
+                    if (found != null) return found;
+                }
+            }
+            catch { }
             return null;
         }
 
@@ -5897,6 +6837,11 @@ namespace CMOLocalizer
             {
                 cmd = rawCmd.Trim().ToUpperInvariant();
             }
+
+            if (cmd == "PING")
+                return "{\"status\":\"ok\",\"action\":\"PING\"}";
+
+            if (cmd == "WEAPONS_DIAG") return ExecuteWeaponsDiagnostic(arg);
 
             if (cmd == "RELOAD_DICT")
             {
@@ -6043,35 +6988,45 @@ namespace CMOLocalizer
                 return "{\"status\":\"ok\",\"action\":\"CLICK_MENU\",\"name\":\"" + JsonEsc(foundName) + "\",\"text\":\"" + JsonEsc(foundText) + "\"}";
             }
 
+            if (cmd == "BRIEFING_DUMP")
+            {
+                // 只读诊断：把当前打开的富文本简报（阵营简报/想定说明）正文导出，
+                // 并报出「还剩多少英文行」。没有这个数字，简报汉化就只能靠肉眼截图判断。
+                return HandleBriefingDump();
+            }
+
+            if (cmd == "BRIEFING_RAW_DUMP")
+            {
+                // 只读诊断：导出「翻译发生之前」的简报 HTML，用于给池片段拼接的简报建键（R81）。
+                return HandleBriefingRawDump();
+            }
+
             if (cmd == "DUMP_OPEN_FORMS")
             {
                 StringBuilder sb = new StringBuilder();
                 sb.Append("{\"status\":\"ok\",\"forms\":[");
-                FormCollection forms = Application.OpenForms;
+                Form[] forms = OpenFormsSnapshot();
                 bool first = true;
-                if (forms != null)
+                foreach (Form f in forms)
                 {
-                    foreach (Form f in forms)
+                    if (f == null || f.IsDisposed) continue;
+                    if (!first) sb.Append(",");
+                    first = false;
+                    List<string> ctrls = new List<string>();
+                    try { CollectControlTexts(f, ctrls); } catch { }
+                    sb.Append("{\"name\":\"").Append(JsonEsc(f.Name))
+                      .Append("\",\"type\":\"").Append(JsonEsc(f.GetType().FullName))
+                      .Append("\",\"text\":\"").Append(JsonEsc(f.Text))
+                      .Append("\",\"visible\":").Append(f.Visible ? "true" : "false")
+                      .Append(",\"hwnd\":").Append(f.Handle.ToInt64())
+                      .Append(",\"bounds\":\"").Append(f.Bounds.ToString())
+                      .Append("\",\"controls\":[");
+                    for (int i = 0; i < ctrls.Count && i < 200; i++)
                     {
-                        if (f == null || f.IsDisposed) continue;
-                        if (!first) sb.Append(",");
-                        first = false;
-                        List<string> ctrls = new List<string>();
-                        try { CollectControlTexts(f, ctrls); } catch { }
-                        sb.Append("{\"name\":\"").Append(JsonEsc(f.Name))
-                          .Append("\",\"type\":\"").Append(JsonEsc(f.GetType().FullName))
-                          .Append("\",\"text\":\"").Append(JsonEsc(f.Text))
-                          .Append("\",\"visible\":").Append(f.Visible ? "true" : "false")
-                          .Append(",\"hwnd\":").Append(f.Handle.ToInt64())
-                          .Append(",\"bounds\":\"").Append(f.Bounds.ToString())
-                          .Append("\",\"controls\":[");
-                        for (int i = 0; i < ctrls.Count && i < 200; i++)
-                        {
-                            if (i > 0) sb.Append(",");
-                            sb.Append("\"").Append(JsonEsc(ctrls[i])).Append("\"");
-                        }
-                        sb.Append("]}");
+                        if (i > 0) sb.Append(",");
+                        sb.Append("\"").Append(JsonEsc(ctrls[i])).Append("\"");
                     }
+                    sb.Append("]}");
                 }
                 sb.Append("]}");
                 return sb.ToString();
@@ -6102,35 +7057,32 @@ namespace CMOLocalizer
                     {
                         try
                         {
-                            FormCollection forms = Application.OpenForms;
-                            if (forms != null)
+                            Form[] forms = OpenFormsSnapshot();
+                            for (int i = 0; i < forms.Length; i++)
                             {
-                                for (int i = 0; i < forms.Count; i++)
+                                Form f = forms[i];
+                                if (f == null || f.IsDisposed) continue;
+                                Control snap = f;
+                                Control[] kids = null;
+                                try { kids = CollectElementHosts(snap); } catch { }
+                                if (kids == null) continue;
+                                for (int k = 0; k < kids.Length; k++)
                                 {
-                                    Form f = forms[i];
-                                    if (f == null || f.IsDisposed) continue;
-                                    Control snap = f;
-                                    Control[] kids = null;
-                                    try { kids = CollectElementHosts(snap); } catch { }
-                                    if (kids == null) continue;
-                                    for (int k = 0; k < kids.Length; k++)
+                                    Control eh = kids[k];
+                                    if (eh == null) continue;
+                                    try
                                     {
-                                        Control eh = kids[k];
-                                        if (eh == null) continue;
-                                        try
+                                        eh.BeginInvoke((MethodInvoker)delegate
                                         {
-                                            eh.BeginInvoke((MethodInvoker)delegate
+                                            try
                                             {
-                                                try
-                                                {
-                                                    lock (flickerLock) { flickerTicks++; }
-                                                    ProbeElementHostOnce(eh);
-                                                }
-                                                catch { }
-                                            });
-                                        }
-                                        catch { }
+                                                lock (flickerLock) { flickerTicks++; }
+                                                ProbeElementHostOnce(eh);
+                                            }
+                                            catch { }
+                                        });
                                     }
+                                    catch { }
                                 }
                             }
                         }
@@ -6143,6 +7095,13 @@ namespace CMOLocalizer
                 th.Start();
                 return "{\"status\":\"ok\",\"action\":\"FLICKER_PROBE\",\"ms\":" + captured
                        + ",\"hint\":\"wait then run FLICKER_RESULT\"}";
+            }
+
+            if (cmd == "UI_PERF_RESET")
+            {
+                return ResetUiPerfMetrics()
+                    ? "{\"status\":\"ok\",\"action\":\"UI_PERF_RESET\"}"
+                    : "{\"status\":\"busy\",\"message\":\"UI work is pending or active\"}";
             }
 
             if (cmd == "TRACE_START")
@@ -6164,10 +7123,29 @@ namespace CMOLocalizer
                 lock (traceLock) { arr = traceLog.ToArray(); }
                 long rt; long eh;
                 lock (traceLock) { rt = renderTickCount; eh = elementHostScanCount; }
+                long sweepCalls, sweepTotal, sweepMax, sweepVisited, sweepFull;
+                lock (traceLock)
+                {
+                    sweepCalls = _sweepCalls; sweepTotal = _sweepTotalMs; sweepMax = _sweepMaxMs;
+                    sweepVisited = _sweepWindowsVisited; sweepFull = _sweepFullPasses;
+                }
                 tb.Append("{\"status\":\"ok\",\"n\":").Append(arr.Length)
                   .Append(",\"renderTicks\":").Append(rt)
                   .Append(",\"elementHostScans\":").Append(eh)
-                  .Append(",\"lines\":[");
+                  // R53：单次补扫耗时（ms）。avg/max 直接回答「卡不卡」；
+                  // fullPasses 计「一轮之内把全部窗口都扫完」的次数。
+                  .Append(",\"sweepCalls\":").Append(sweepCalls)
+                  .Append(",\"sweepTotalMs\":").Append(sweepTotal)
+                  .Append(",\"sweepMaxMs\":").Append(sweepMax)
+                  .Append(",\"sweepAvgMs\":").Append(sweepCalls > 0 ? sweepTotal / sweepCalls : 0)
+                  .Append(",\"sweepWindowsVisited\":").Append(sweepVisited)
+                  .Append(",\"sweepFullPasses\":").Append(sweepFull)
+                  .Append(",\"sweepWindowsTotal\":").Append(Interlocked.Read(ref _wpfSweepWindowCount))
+                  .Append(",\"wpfMaxStepMs\":").Append((_wpfMaxStepTicks * 1000.0 / System.Diagnostics.Stopwatch.Frequency)
+                      .ToString("F3", CultureInfo.InvariantCulture))
+                  .Append(",\"wpfMaxStepNode\":\"").Append(JsonEsc(_wpfMaxStepNode)).Append("\"");
+                AppendUiPerfMetrics(tb);
+                tb.Append(",\"lines\":[");
                 for (int i = 0; i < arr.Length; i++)
                 {
                     if (i > 0) tb.Append(",");
@@ -6226,13 +7204,19 @@ namespace CMOLocalizer
                 return HandleCtrlTree(rawCmd);
             }
 
+            if (cmd.StartsWith("CTRL_TEXT"))
+            {
+                // 同 CTRL_TREE：过滤词与控件名在后续 token 里，必须传原始命令。
+                return HandleCtrlText(rawCmd);
+            }
+
             if (cmd == "CLOSE_FORM")
             {
-                FormCollection forms = Application.OpenForms;
+                Form[] forms = OpenFormsSnapshot();
                 int closedCount = 0;
                 if (forms != null)
                 {
-                    for (int i = forms.Count - 1; i >= 0; i--)
+                    for (int i = forms.Length - 1; i >= 0; i--)
                     {
                         Form f = forms[i];
                         if (f == null || f.IsDisposed || f == mainFrm) continue;
@@ -6252,7 +7236,7 @@ namespace CMOLocalizer
 
             if (cmd == "CLICK_BUTTON")
             {
-                FormCollection forms = Application.OpenForms;
+                Form[] forms = OpenFormsSnapshot();
                 string clickedInfo = null;
                 if (forms != null)
                 {
@@ -6292,6 +7276,76 @@ namespace CMOLocalizer
                 return "{\"status\":\"error\",\"message\":\"Button not found: " + JsonEsc(arg) + "\"}";
             }
 
+            if (cmd == "DUMP_FORM_BUTTONS" || cmd == "CLICK_FORM_BUTTON")
+            {
+                // Self-drawn card lists expose unlabeled Buttons only; index+Tag is
+                // the only safe identity, so discovery and activation live together.
+                int splitAt = arg.IndexOf(' ');
+                string formFilter = splitAt > 0 ? arg.Substring(0, splitAt).Trim() : arg.Trim();
+                int wantedIndex = -1;
+                if (splitAt > 0) int.TryParse(arg.Substring(splitAt + 1).Trim(), out wantedIndex);
+                Form buttonForm = null;
+                Form[] allForms = OpenFormsSnapshot();
+                if (allForms != null)
+                {
+                    for (int i = 0; i < allForms.Length; i++)
+                    {
+                        Form candidate = allForms[i];
+                        if (candidate == null || candidate.IsDisposed) continue;
+                        if (candidate.Name.IndexOf(formFilter, StringComparison.OrdinalIgnoreCase) >= 0
+                            || (candidate.Text ?? "").IndexOf(formFilter, StringComparison.OrdinalIgnoreCase) >= 0)
+                        {
+                            buttonForm = candidate;
+                            break;
+                        }
+                    }
+                }
+                if (buttonForm == null) return "{\"status\":\"error\",\"message\":\"form not found\"}";
+                List<Control> cardButtons = new List<Control>();
+                CollectButtonControls(buttonForm, cardButtons, 0);
+                if (cmd == "DUMP_FORM_BUTTONS")
+                {
+                    StringBuilder bb = new StringBuilder();
+                    bb.Append("{\"status\":\"ok\",\"form\":\"").Append(JsonEsc(buttonForm.Name))
+                      .Append("\",\"buttons\":[");
+                    for (int i = 0; i < cardButtons.Count; i++)
+                    {
+                        Control b = cardButtons[i];
+                        if (i > 0) bb.Append(",");
+                        bb.Append("{\"i\":").Append(i)
+                          .Append(",\"type\":\"").Append(JsonEsc(b.GetType().Name))
+                          .Append("\",\"name\":\"").Append(JsonEsc(b.Name))
+                          .Append("\",\"text\":\"").Append(JsonEsc(Trunc(b.Text, 60)))
+                          .Append("\",\"tag\":\"").Append(JsonEsc(b.Tag == null ? "" : Trunc(b.Tag.ToString(), 80)))
+                          .Append("\",\"enabled\":").Append(b.Enabled ? "true" : "false")
+                          .Append(",\"visible\":").Append(b.Visible ? "true" : "false")
+                          .Append(",\"x\":").Append(b.Bounds.X).Append(",\"y\":").Append(b.Bounds.Y)
+                          .Append(",\"w\":").Append(b.Bounds.Width).Append(",\"h\":").Append(b.Bounds.Height)
+                          .Append("}");
+                    }
+                    bb.Append("]}");
+                    return bb.ToString();
+                }
+                if (wantedIndex < 0 || wantedIndex >= cardButtons.Count)
+                    return "{\"status\":\"error\",\"message\":\"button index out of range\"}";
+                Control chosenCard = cardButtons[wantedIndex];
+                if (!chosenCard.Enabled || !chosenCard.Visible)
+                    return "{\"status\":\"error\",\"message\":\"button is not clickable\"}";
+                string cardLabel = chosenCard.Tag == null ? "" : chosenCard.Tag.ToString();
+                buttonForm.BeginInvoke((MethodInvoker)delegate
+                {
+                    try
+                    {
+                        MethodInfo perform = chosenCard.GetType().GetMethod("PerformClick",
+                            BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        if (perform != null) perform.Invoke(chosenCard, null);
+                    }
+                    catch (Exception error) { Log("CLICK_FORM_BUTTON failed: " + error.Message); }
+                });
+                return "{\"status\":\"ok\",\"action\":\"CLICK_FORM_BUTTON\",\"index\":" + wantedIndex
+                    + ",\"tag\":\"" + JsonEsc(cardLabel) + "\"}";
+            }
+
             if (cmd == "SELECT_TAB")
             {
                 // SELECT_TAB <窗体过滤> <索引或页签标题片段>：只读切页签（UI 线程），
@@ -6306,21 +7360,18 @@ namespace CMOLocalizer
                 }
                 Form tabForm = null;
                 TabControl tabCtl = null;
-                FormCollection tabForms = Application.OpenForms;
-                if (tabForms != null)
+                Form[] tabForms = OpenFormsSnapshot();
+                foreach (Form f in tabForms)
                 {
-                    foreach (Form f in tabForms)
-                    {
-                        if (f == null || f.IsDisposed) continue;
-                        if (filter.Length > 0 &&
-                            (f.Text ?? "").IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0 &&
-                            (f.Name ?? "").IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0) continue;
-                        TabControl tc = FindTabControlIn(f);
-                        if (tc == null) continue;
-                        tabForm = f;
-                        tabCtl = tc;
-                        break;
-                    }
+                    if (f == null || f.IsDisposed) continue;
+                    if (filter.Length > 0 &&
+                        (f.Text ?? "").IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0 &&
+                        (f.Name ?? "").IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0) continue;
+                    TabControl tc = FindTabControlIn(f);
+                    if (tc == null) continue;
+                    tabForm = f;
+                    tabCtl = tc;
+                    break;
                 }
                 if (tabCtl == null)
                 {
@@ -6398,9 +7449,10 @@ namespace CMOLocalizer
 
             if (cmd == "CLICK_TOOLBAR")
             {
-                int targetIdx = 0;
-                int.TryParse(arg, out targetIdx);
-                ToolStripItem tsi = FindToolbarButtonByIndex(mainFrm, targetIdx);
+                int targetIdx;
+                bool byIndex = int.TryParse(arg, out targetIdx);
+                ToolStripItem tsi = byIndex ? FindToolbarButtonByIndex(mainFrm, targetIdx)
+                    : FindToolStripItemInControl(mainFrm, arg);
                 if (tsi != null && mainFrm != null)
                 {
                     mainFrm.BeginInvoke((MethodInvoker)delegate
@@ -6485,6 +7537,58 @@ namespace CMOLocalizer
                 return "{\"status\":\"ok\",\"id\":" + objId + ",\"name\":\"" + JsonEsc(objName) + "\",\"sot\":\"" + JsonEsc(sotVal) + "\",\"html_len\":" + (html != null ? html.Length : 0) + ",\"html_sample\":\"" + JsonEsc(html != null ? html.Substring(0, Math.Min(350, html.Length)) : "") + "\"}";
             }
 
+            if (cmd == "OOB_SELECT")
+            {
+                // OOB_SELECT <搜索词>：在「作战序列」窗口的搜索框写入关键词，
+                // 然后在 TV_ByGroup 里选中首个匹配节点（双击 = 游戏自己的选中动作）。
+                //
+                // 存在的理由：地图上的飞机一直在动，用屏幕坐标点选不可靠（实测连续
+                // 4 次点偏，还误点地图把已选单位取消了）。从 OoB 搜索选中是确定性路径，
+                // 让「选中一架在飞的飞机」变成可重复的前置步骤。
+                Form orb = null;
+                Form[] orbForms = OpenFormsSnapshot();
+                foreach (Form f in orbForms)
+                {
+                    if (f == null || f.IsDisposed) continue;
+                    if (f.Name == "ORBAT" || f.GetType().Name == "ORBAT") { orb = f; break; }
+                }
+                if (orb == null) return "{\"status\":\"error\",\"message\":\"ORBAT window not open\"}";
+
+                string oobQuery = arg.Trim();
+                string oobFound = null;
+                orb.BeginInvoke((MethodInvoker)delegate
+                {
+                    try
+                    {
+                        Control search = FindControlByTypeOrName(orb, "TB_SearchOOB");
+                        Control tree = FindControlByTypeOrName(orb, "TV_ByGroup");
+                        if (search != null && !string.IsNullOrEmpty(oobQuery))
+                        {
+                            search.Text = oobQuery;
+                            MethodInfo onText = search.GetType().GetMethod("OnTextChanged",
+                                BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+                            if (onText != null) onText.Invoke(search, new object[] { EventArgs.Empty });
+                            else
+                            {
+                                EventHandler eh = delegate { };
+                                search.TextChanged += eh;
+                                search.Text = oobQuery;
+                            }
+                        }
+                        if (tree != null)
+                        {
+                            PropertyInfo piNodes = tree.GetType().GetProperty("Nodes");
+                            var nodes = piNodes != null ? piNodes.GetValue(tree, null) as System.Collections.IEnumerable : null;
+                            if (nodes != null) oobFound = SelectDarkNodeRecursive(tree, nodes, oobQuery);
+                            tree.Invalidate();
+                        }
+                    }
+                    catch (Exception ex) { Log("OOB_SELECT error: " + ex.Message); }
+                });
+                return "{\"status\":\"ok\",\"action\":\"OOB_SELECT\",\"query\":\"" + JsonEsc(oobQuery)
+                       + "\",\"match\":\"" + JsonEsc(oobFound ?? "") + "\"}";
+            }
+
             if (cmd == "DB_NAVIGATE_ID")
             {
                 Form dbForm = FindDBViewerForm();
@@ -6493,6 +7597,21 @@ namespace CMOLocalizer
                 string[] parts = arg.Split(' ');
                 string objType = parts.Length > 0 ? parts[0] : "Sensor";
                 string objIdStr = parts.Length > 1 ? parts[1] : "1438";
+                // 类型名本身可能含空格（"Ground Unit"）。旧写法按空格切分，
+                // 于是 `DB_NAVIGATE_ID Ground Unit 3` 被拆成 type="Ground" / id="Unit"，
+                // 搜索框收到 "Unit" 后找不到任何对象，表现为“Ground Unit 无法用 ID 定位”。
+                // 约定：最后一个 token 是 ID，前面的全部拼回类型名。
+                if (parts.Length > 2)
+                {
+                    objIdStr = parts[parts.Length - 1];
+                    StringBuilder typeBuilder = new StringBuilder();
+                    for (int ti = 0; ti < parts.Length - 1; ti++)
+                    {
+                        if (ti > 0) typeBuilder.Append(' ');
+                        typeBuilder.Append(parts[ti]);
+                    }
+                    objType = typeBuilder.ToString();
+                }
 
                 dbForm.BeginInvoke((MethodInvoker)delegate
                 {
@@ -6644,6 +7763,12 @@ namespace CMOLocalizer
                 return "{\"status\":\"ok\",\"action\":\"DB_DOM_DUMP\",\"file\":\"CMOLocalizer_DBDOM.json\"}";
             }
 
+            if (cmd == "WEBVIEW_DIAG")
+            {
+                // 只读诊断：WebView2 桥为何不落字（消息是否接上、批次为何被丢）。
+                return HandleWebViewDiag(arg.Trim());
+            }
+
             // 只读探针：导出任意窗口里 WebView2 的文本 / 执行一段 JS（默认只读）。
             // 为什么需要它：阵营选择面板（ChooseSide）的「进入想定」按钮是 WebView2 里的 HTML 元素，
             // CTRL_TREE / WPF_DUMP 都看不到它，也没有 Win32 几何信息可供按坐标点击；
@@ -6657,18 +7782,15 @@ namespace CMOLocalizer
                     : (wparts.Length > 1 ? wparts[1] : "");
                 if (wscript.Length == 0) return "{\"status\":\"error\",\"message\":\"no script\"}";
                 Form whost = null;
-                FormCollection wforms = Application.OpenForms;
-                if (wforms != null)
+                Form[] wforms = OpenFormsSnapshot();
+                foreach (Form f in wforms)
                 {
-                    foreach (Form f in wforms)
-                    {
-                        if (f == null || f.IsDisposed) continue;
-                        if (wfilter.Length > 0
-                            && (f.Text ?? "").IndexOf(wfilter, StringComparison.OrdinalIgnoreCase) < 0
-                            && (f.Name ?? "").IndexOf(wfilter, StringComparison.OrdinalIgnoreCase) < 0) continue;
-                        whost = f;
-                        break;
-                    }
+                    if (f == null || f.IsDisposed) continue;
+                    if (wfilter.Length > 0
+                        && (f.Text ?? "").IndexOf(wfilter, StringComparison.OrdinalIgnoreCase) < 0
+                        && (f.Name ?? "").IndexOf(wfilter, StringComparison.OrdinalIgnoreCase) < 0) continue;
+                    whost = f;
+                    break;
                 }
                 // 注意：这里只选窗体（读 Form.Text/Name 在后台线程是被容的）；
                 // WebView2 控件本身的搜索也必须放到 UI 线程（见下），
@@ -6718,6 +7840,56 @@ namespace CMOLocalizer
                 sb.Append("{\"status\":\"ok\",\"tree\":[");
                 bool firstNode = true;
                 CollectControlTree(dbForm, 0, sb, ref firstNode);
+                sb.Append("]}");
+                return sb.ToString();
+            }
+
+            // 只读探针：导出数据库列表**行的显示文本**（R72 实机验收用）。
+            // 列表是虚拟列表，`DUMP_LISTS` 的 items 恒为空、控件树也不含行文本，
+            // 所以必须直接读 item.Text —— 那是引擎翻译后写回界面、用户真正看到的东西。
+            if (cmd == "DB_LIST_TEXT")
+            {
+                Form dbForm = FindDBViewerForm();
+                if (dbForm == null) return "{\"status\":\"error\",\"message\":\"InternalDBViewer not open\"}";
+                FieldInfo fListDump = dbForm.GetType().GetField("dXkHcikCGK6",
+                    BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                if (fListDump == null)
+                {
+                    foreach (FieldInfo fi in dbForm.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance))
+                    {
+                        if (!typeof(Control).IsAssignableFrom(fi.FieldType)) continue;
+                        object v = null;
+                        try { v = fi.GetValue(dbForm); } catch (Exception) { }
+                        if (v != null && v.GetType().GetProperty("SelectedIndices") != null) { fListDump = fi; break; }
+                    }
+                }
+                if (fListDump == null) return "{\"status\":\"error\",\"message\":\"list field not found\"}";
+                object lvObj = fListDump.GetValue(dbForm);
+                if (lvObj == null) return "{\"status\":\"error\",\"message\":\"list is null\"}";
+                PropertyInfo piItemsDump = lvObj.GetType().GetProperty("Items");
+                if (piItemsDump == null) return "{\"status\":\"error\",\"message\":\"Items not found\"}";
+                System.Collections.IList itemsDump = piItemsDump.GetValue(lvObj, null) as System.Collections.IList;
+                if (itemsDump == null) return "{\"status\":\"error\",\"message\":\"Items null\"}";
+                // 不分页：虚拟列表按偏移读取会触发游戏侧 realize，实测把命令通道卡住（timeout）。
+                // 需要其它对象类型时，先用 `DB_NAVIGATE_ID <type> <id>` 切换列表类型再 dump。
+                int start = 0;
+                const int limit = 500;
+                StringBuilder sb = new StringBuilder();
+                sb.Append("{\"status\":\"ok\",\"action\":\"DB_LIST_TEXT\",\"count\":").Append(itemsDump.Count)
+                  .Append(",\"rows\":[");
+                for (int i = start; i < itemsDump.Count && i < start + limit; i++)
+                {
+                    object it = itemsDump[i];
+                    string txt = "";
+                    try
+                    {
+                        PropertyInfo piText = it != null ? it.GetType().GetProperty("Text") : null;
+                        txt = piText != null ? Convert.ToString(piText.GetValue(it, null)) : Convert.ToString(it);
+                    }
+                    catch (Exception) { }
+                    if (i > 0) sb.Append(",");
+                    sb.Append("\"").Append(JsonEsc(txt)).Append("\"");
+                }
                 sb.Append("]}");
                 return sb.ToString();
             }
@@ -6791,19 +7963,16 @@ namespace CMOLocalizer
                 Control dtvCtrl = null;
                 Button btnLoad = null;
 
-                FormCollection forms = Application.OpenForms;
-                if (forms != null)
+                Form[] forms = OpenFormsSnapshot();
+                foreach (Form f in forms)
                 {
-                    foreach (Form f in forms)
+                    if (f == null || f.IsDisposed) continue;
+                    if (f.GetType().Name.IndexOf("LoadScenario", StringComparison.OrdinalIgnoreCase) >= 0 || f.Name.IndexOf("LoadScenario", StringComparison.OrdinalIgnoreCase) >= 0)
                     {
-                        if (f == null || f.IsDisposed) continue;
-                        if (f.GetType().Name.IndexOf("LoadScenario", StringComparison.OrdinalIgnoreCase) >= 0 || f.Name.IndexOf("LoadScenario", StringComparison.OrdinalIgnoreCase) >= 0)
-                        {
-                            loadScenForm = f;
-                            dtvCtrl = FindControlByTypeOrName(f, "DarkTreeView");
-                            btnLoad = FindControlByTypeOrName(f, "Button2") as Button;
-                            break;
-                        }
+                        loadScenForm = f;
+                        dtvCtrl = FindControlByTypeOrName(f, "DarkTreeView");
+                        btnLoad = FindControlByTypeOrName(f, "Button2") as Button;
+                        break;
                     }
                 }
 
@@ -6865,25 +8034,22 @@ namespace CMOLocalizer
                 string want = arg.Trim();
                 ComboBox hit = null;
                 string ownerName = "";
-                FormCollection fc2 = Application.OpenForms;
-                if (fc2 != null)
+                Form[] fc2s = OpenFormsSnapshot();
+                foreach (Form f3 in fc2s)
                 {
-                    foreach (Form f3 in fc2)
+                    if (f3 == null || f3.IsDisposed || !f3.Visible) continue;
+                    foreach (Control c3 in AllControls(f3))
                     {
-                        if (f3 == null || f3.IsDisposed || !f3.Visible) continue;
-                        foreach (Control c3 in AllControls(f3))
+                        ComboBox c3b = c3 as ComboBox;
+                        if (c3b == null) continue;
+                        if (want.Length == 0 || c3b.Name.IndexOf(want, StringComparison.OrdinalIgnoreCase) >= 0)
                         {
-                            ComboBox c3b = c3 as ComboBox;
-                            if (c3b == null) continue;
-                            if (want.Length == 0 || c3b.Name.IndexOf(want, StringComparison.OrdinalIgnoreCase) >= 0)
-                            {
-                                hit = c3b;
-                                ownerName = f3.GetType().Name;
-                                break;
-                            }
+                            hit = c3b;
+                            ownerName = f3.GetType().Name;
+                            break;
                         }
-                        if (hit != null) break;
                     }
+                    if (hit != null) break;
                 }
                 if (hit == null) return "{\"status\":\"error\",\"message\":\"combo not found: " + JsonEsc(want) + "\"}";
                 ComboBox target = hit;
@@ -6979,8 +8145,7 @@ namespace CMOLocalizer
                     jb.Append("{\"status\":\"ok\",\"combos\":[");
                     bool first = true;
                     List<Form> forms = new List<Form>();
-                    FormCollection fc = Application.OpenForms;
-                    if (fc != null) foreach (Form f in fc) if (f != null && !f.IsDisposed) forms.Add(f);
+                    foreach (Form f in OpenFormsSnapshot()) if (f != null && !f.IsDisposed) forms.Add(f);
                     foreach (Form f2 in forms)
                     {
                         try
@@ -7001,14 +8166,10 @@ namespace CMOLocalizer
                     StringBuilder lb2 = new StringBuilder();
                     lb2.Append("{\"status\":\"ok\",\"lists\":[");
                     bool lbFirst = true;
-                    FormCollection lfc = Application.OpenForms;
-                    if (lfc != null)
+                    foreach (Form lf in OpenFormsSnapshot())
                     {
-                        foreach (Form lf in lfc)
-                        {
-                            if (lf == null || lf.IsDisposed) continue;
-                            try { CollectLists(lf, lb2, ref lbFirst); } catch { }
-                        }
+                        if (lf == null || lf.IsDisposed) continue;
+                        try { CollectLists(lf, lb2, ref lbFirst); } catch { }
                     }
                     lb2.Append("]}");
                     return lb2.ToString();
@@ -7069,7 +8230,7 @@ namespace CMOLocalizer
                         if (pid3 != currentPid) return true;
                         StringBuilder sb = new StringBuilder(256);
                         GetClassName(hWnd, sb, sb.Capacity);
-                        if (!sb.ToString().StartsWith("HwndWrapper")) return true;
+                        if (!sb.ToString().StartsWith("HwndWrapper") || !IsWindowVisible(hWnd) || clicked != 0) return true;
                         System.Windows.Interop.HwndSource src3 = System.Windows.Interop.HwndSource.FromHwnd(hWnd);
                         if (src3 == null || src3.Dispatcher == null || src3.RootVisual == null) return true;
                         src3.Dispatcher.Invoke(new Action(delegate
@@ -7100,10 +8261,12 @@ namespace CMOLocalizer
                 if (btn != null)
                 {
                     string content = btn.Content as string;
-                    if (!string.IsNullOrEmpty(content) && content.IndexOf(want, StringComparison.OrdinalIgnoreCase) >= 0)
+                    if (btn.IsEnabled && btn.IsVisible && (string.Equals(btn.Name, want, StringComparison.Ordinal)
+                        || (!string.IsNullOrEmpty(content) && content.IndexOf(want, StringComparison.OrdinalIgnoreCase) >= 0)))
                     {
-                        btn.RaiseEvent(new System.Windows.RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
-                        n++;
+                        // RaiseEvent skips ButtonBase.OnClick and its ICommand.
+                        MethodInfo click = btn.GetType().GetMethod("OnClick", BindingFlags.Instance | BindingFlags.NonPublic);
+                        if (click != null) { click.Invoke(btn, null); return 1; }
                     }
                 }
             }
@@ -7113,8 +8276,39 @@ namespace CMOLocalizer
             for (int i = 0; i < count; i++)
             {
                 try { n += ClickWpfButton(System.Windows.Media.VisualTreeHelper.GetChild(dep, i), want); } catch { }
+                if (n != 0) break;
             }
             return n;
+        }
+
+        /// <summary>
+        /// WinForms 的 OpenForms 是活集合：游戏在同时增删窗体时直接 foreach 会抛
+        /// 「Collection was modified」。诊断/自动化命令必须先取快照，否则一次窗体切换
+        /// 就会把整次观测变成失败（实测 R59）。
+        /// </summary>
+        private static Form[] OpenFormsSnapshot()
+        {
+            try
+            {
+                FormCollection forms = Application.OpenForms;
+                if (forms == null) return new Form[0];
+                Form[] copy = new Form[forms.Count];
+                for (int i = 0; i < copy.Length; i++) copy[i] = forms[i];
+                return copy;
+            }
+            catch { return new Form[0]; }
+        }
+
+        private static void CollectButtonControls(Control root, List<Control> found, int depth)
+        {
+            if (root == null || depth > 12) return;
+            try
+            {
+                if (root is Button || root.GetType().Name.IndexOf("Button", StringComparison.OrdinalIgnoreCase) >= 0)
+                    found.Add(root);
+                foreach (Control child in root.Controls) CollectButtonControls(child, found, depth + 1);
+            }
+            catch { }
         }
 
         private static IEnumerable<Control> AllControls(Control root)
@@ -7243,9 +8437,9 @@ namespace CMOLocalizer
         /// </summary>
         private static void DumpElementHostWpf(ref StringBuilder json, ref bool first)
         {
-            FormCollection forms = Application.OpenForms;
-            if (forms == null) return;
-            for (int i = 0; i < forms.Count; i++)
+            Form[] forms = OpenFormsSnapshot();
+            if (forms.Length == 0) return;
+            for (int i = 0; i < forms.Length; i++)
             {
                 Form f = forms[i];
                 if (f == null || f.IsDisposed) continue;
@@ -7385,7 +8579,11 @@ namespace CMOLocalizer
                         }
                         if (seq.Count < 400)
                         {
-                            seq.Add(DateTime.Now.ToString("ss.fff") + "|" + (text.Length > 60 ? text.Substring(0, 60) : text));
+                            // 截断长度必须能覆盖燃油面板整块（总燃油/任务燃油/预留/消耗率/到达返航/至基地
+                            // 共 6 行，实测约 180 字符）。旧值 60 只能看到前两行，
+                            // 导致「油耗率被写死」这类问题在探针里完全不可见（探针自己成了盲区）。
+                            int cap = text.Length > 400 ? 400 : text.Length;
+                            seq.Add(DateTime.Now.ToString("ss.fff") + "|" + text.Substring(0, cap));
                         }
                     }
                 }

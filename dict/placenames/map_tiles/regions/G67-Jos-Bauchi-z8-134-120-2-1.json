@@ -1,0 +1,35 @@
+{
+  "id": "G67-Jos-Bauchi-z8-134-120-2-1",
+  "z": 8,
+  "x": 134,
+  "y": 120,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/134/120.png",
+    "8/135/120.png"
+  ],
+  "context_tiles": [
+    "8/136/120.png"
+  ],
+  "features": [
+    {"id": "G67-Jos", "kind": "city", "original": "Jos", "original_bbox": [79, 229, 106, 250], "source_url": "@source/fede61fa1b17603b"},
+    {"id": "G67-Bauchi", "kind": "city", "original": "Bauchi", "original_bbox": [252, 155, 297, 177], "source_url": "@source/fede61fa1b17603b"}
+  ],
+  "translations": [
+    {"id": "G67-Jos", "zh": "乔斯", "status": "approved", "source": "@source/fede61fa1b17603b", "record_sha256": "83959f2e766bc10a845b12c7793be3e4b14c6cacbfc02b0c31c01e80ea99aa5a", "review_notes": "Root word-only fe0208fea3b4181014d27137d363fb40620743f86d3130ec724d8f44b4e88efb; model72b2b7 selected bare Chinese only, no entity/admin suffix; actual Source physical6824; renderer city genre not supplied class."},
+    {"id": "G67-Bauchi", "zh": "包奇", "status": "approved", "source": "@source/fede61fa1b17603b", "record_sha256": "89d53f5d63731567b8ec1785e0851b6ec05d7bb764c3023fe57d3cce57c317e8", "review_notes": "Root word-only fe0208fea3b4181014d27137d363fb40620743f86d3130ec724d8f44b4e88efb; model72b2b7 selected bare Chinese only, no entity/admin suffix; actual Source physical6824; renderer city genre not supplied class."}
+  ],
+  "layouts": [
+    {"id": "G67-Jos", "x": 106.5, "y": 239.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G67-Bauchi", "x": 279.5, "y": 166.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "G67-Jos-PROJECT-CIRCLE", "feature_id": "G67-Jos", "kind": "circle", "size": 9, "outline_width": 1, "x": 83.5, "y": 233.5, "original_bbox": [79, 229, 88, 238]},
+    {"id": "G67-Bauchi-PROJECT-CIRCLE", "feature_id": "G67-Bauchi", "kind": "circle", "size": 9, "outline_width": 1, "x": 256.5, "y": 160.0, "original_bbox": [252, 155, 261, 165]}
+  ],
+  "shared_sources": [
+    {"id": "G67-Kumo-SHARED-NORMAL-ONLY", "kind": "city", "original": "Kumo", "source_url": "@source/230e952e616b2e9e", "original_bbox": [500, 205, 537, 224], "owner_region": "CAF8-z8-136-120-5-2", "feature_id": "CAF8-005-Kumo", "review_notes": "Root72b2b7 selected exact sole-normal Source alias. Original441=borrower132+old309; preserve oldChinese/native0, no second label/point."}
+  ],
+  "legacy_suppressions": []
+}

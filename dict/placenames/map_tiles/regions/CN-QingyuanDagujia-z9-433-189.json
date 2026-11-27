@@ -1,0 +1,46 @@
+{
+  "id": "CN-QingyuanDagujia-z9-433-189",
+  "z": 9,
+  "x": 433,
+  "y": 189,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/433/189.png"
+  ],
+  "context_tiles": [
+    "9/432/189.png",
+    "9/433/188.png",
+    "9/434/188.png",
+    "9/434/189.png"
+  ],
+  "features": [
+    {"id": "CN-QingyuanDagujia-z9-433-189-N01", "kind": "city", "original": "Bakeshu", "original_bbox": [-2, 35, 46, 51], "source_url": "@source/5f85f711199be384", "source_glyph_complete": true, "source_printed_full_literal": "Bakeshu"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N02", "kind": "city", "original": "Lijiatai", "original_bbox": [58, 84, 96, 104], "source_url": "@source/5f85f711199be384", "source_glyph_complete": true, "source_printed_full_literal": "Lijiatai"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N03", "kind": "city", "original": "Dagujia", "original_bbox": [120, 79, 164, 99], "source_url": "@source/5f85f711199be384", "source_glyph_complete": true, "source_printed_full_literal": "Dagujia"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N04", "kind": "city", "original": "Xiajiabao", "original_bbox": [59, 140, 112, 159], "source_url": "@source/5f85f711199be384", "source_glyph_complete": true, "source_printed_full_literal": "Xiajiabao"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N05", "kind": "city", "original": "Gounaidian", "original_bbox": [134, 168, 197, 185], "source_url": "@source/5f85f711199be384", "source_glyph_complete": true, "source_printed_full_literal": "Gounaidian"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N06", "kind": "city", "original": "Qingyuan", "original_bbox": [138, 215, 199, 237], "source_url": "@source/5f85f711199be384", "source_glyph_complete": true, "source_printed_full_literal": "Qingyuan"}
+  ],
+  "translations": [
+    {"id": "CN-QingyuanDagujia-z9-433-189-N01", "zh": "八棵树", "status": "approved", "source": "@source/e931b455cea1f246", "record_sha256": "f7294aaff65a8e689ecf6d298c9387f790c612564b163f09f2fdba851f410c7e", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N02", "zh": "李家台", "status": "approved", "source": "@source/e931b455cea1f246", "record_sha256": "840584205ccb6a22705041cecc6655d04432fd6fa311347e88858df455eaebb7", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N03", "zh": "大孤家", "status": "approved", "source": "@source/fc150053560f5b47", "record_sha256": "ae13daaeff81b774ddd99ba078a731e22c027ee6d4a249d7386690c8da305caa", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N04", "zh": "夏家堡", "status": "approved", "source": "@source/fc150053560f5b47", "record_sha256": "47087328c01400a61046cb4b5f583c6e1426c0d4b7581494ee5ed25ce0854237", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N05", "zh": "枸乃甸", "status": "approved", "source": "@source/fc150053560f5b47", "record_sha256": "fe0b605b3d709f402538810749d5d99a2b5673a28c249debbcf7075627d2919f", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N06", "zh": "清原", "status": "approved", "source": "@source/fc150053560f5b47", "record_sha256": "83e1784a501ef1204afb9e630f37a2e1a16f98a0ac21924dc9622e7748ab6808", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-QingyuanDagujia-z9-433-189-N01", "x": 22, "y": 44, "font_size": 12, "font_style": "regular", "lines": ["八棵树"]},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N02", "x": 77.0, "y": 94.0, "font_size": 12, "font_style": "regular", "lines": ["李家台"]},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N03", "x": 142.0, "y": 89.0, "font_size": 12, "font_style": "regular", "lines": ["大孤家"]},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N04", "x": 85.5, "y": 149.5, "font_size": 12, "font_style": "regular", "lines": ["夏家堡"]},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N05", "x": 165.5, "y": 176.5, "font_size": 12, "font_style": "regular", "lines": ["枸乃甸"]},
+    {"id": "CN-QingyuanDagujia-z9-433-189-N06", "x": 168.5, "y": 226.0, "font_size": 12, "font_style": "regular", "lines": ["清原"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-QingyuanDagujia-z9-433-189-shared-S52-C4B7-N26", "owner_region": "S52-C4-Base7-z9-434-189-1-1", "feature_id": "S52-C4B7-N26", "kind": "city", "original": "Xiaosiping", "source_url": "@source/e56365aa59e69aba", "original_bbox": [218, -1, 278, 18], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

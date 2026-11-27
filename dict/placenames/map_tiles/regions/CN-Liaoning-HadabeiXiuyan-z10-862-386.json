@@ -1,0 +1,33 @@
+{
+  "id": "CN-Liaoning-HadabeiXiuyan-z10-862-386",
+  "z": 10,
+  "x": 862,
+  "y": 386,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/862/386.png"
+  ],
+  "context_tiles": [
+    "10/863/386.png",
+    "10/862/387.png",
+    "10/863/387.png"
+  ],
+  "features": [
+    {"id": "CN-Liaoning-HadabeiXiuyan-z10-862-386-Hadabei", "kind": "city", "original": "Hadabei", "original_bbox": [60, 78, 101, 93], "source_url": "@source/a61e10b39cc67c0d", "source_glyph_complete": true, "source_printed_full_literal": "Hadabei"},
+    {"id": "CN-Liaoning-HadabeiXiuyan-z10-862-386-Xiuyan", "kind": "city", "original": "Xiuyan", "original_bbox": [143, 143, 190, 164], "source_url": "@source/a61e10b39cc67c0d", "source_glyph_complete": true, "source_printed_full_literal": "Xiuyan"}
+  ],
+  "translations": [
+    {"id": "CN-Liaoning-HadabeiXiuyan-z10-862-386-Hadabei", "zh": "哈达碑", "status": "approved", "source": "@source/60051e77774d489b", "record_sha256": "be7aec9a7fd2feebe8a89d3a1ac71d10927aea4758587254a0b360dbd79ca5db", "review_notes": "完整原图地名、辽宁官方中文及同地地理坐标已核对。地图仍用简明地名。"},
+    {"id": "CN-Liaoning-HadabeiXiuyan-z10-862-386-Xiuyan", "zh": "岫岩", "status": "approved", "source": "@source/7cc46ce2fd056a89", "record_sha256": "b32d6e5597b17a2c06975d4f634abfba412559a9d5bda0a7e342680d87fa7c22", "review_notes": "完整原图地名、辽宁官方中文及同地地理坐标已核对。地图仍用简明地名。"}
+  ],
+  "layouts": [
+    {"id": "CN-Liaoning-HadabeiXiuyan-z10-862-386-Hadabei", "x": 80.5, "y": 85.5, "font_style": "regular", "font_size": 12, "lines": ["哈达碑"]},
+    {"id": "CN-Liaoning-HadabeiXiuyan-z10-862-386-Xiuyan", "x": 166.5, "y": 153.5, "font_style": "regular", "font_size": 12, "lines": ["岫岩"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Liaoning-HadabeiXiuyan-z10-862-386-Linggou", "owner_region": "DL11-Column-z10-863-383-1-6", "feature_id": "DL11-N019", "kind": "city", "original": "Linggou", "source_url": "@source/a61e10b39cc67c0d", "original_bbox": [255, 251, 302, 270], "review_notes": "岭沟的完整原版跨片字形及原有译名归既有区域，此片核算角落的五个原版像素。"}
+  ],
+  "legacy_suppressions": []
+}

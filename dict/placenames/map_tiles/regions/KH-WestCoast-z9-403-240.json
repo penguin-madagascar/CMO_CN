@@ -1,0 +1,37 @@
+{
+  "id": "KH-WestCoast-z9-403-240",
+  "z": 9,
+  "x": 403,
+  "y": 240,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/403/240.png"
+  ],
+  "context_tiles": [
+    "9/403/239.png"
+  ],
+  "features": [
+    {"id": "KH-WestCoast-z9-403-240-sre-ambel", "kind": "city", "original": "Sre Ambel", "original_bbox": [113, 11, 172, 28], "source_url": "@source/4c02589394180d8c", "source_printed_full_literal": "Sre Ambel", "source_glyph_complete": true},
+    {"id": "KH-WestCoast-z9-403-240-kampong-seila", "kind": "city", "original": "Kampong Seila", "original_bbox": [172, 12, 224, 46], "source_url": "@source/4c02589394180d8c", "source_printed_full_literal": "Kampong Seila", "source_glyph_complete": true},
+    {"id": "KH-WestCoast-z9-403-240-prey-nob", "kind": "city", "original": "Prey Nob", "original_bbox": [134, 186, 185, 206], "source_url": "@source/4c02589394180d8c", "source_printed_full_literal": "Prey Nob", "source_glyph_complete": true},
+    {"id": "KH-WestCoast-z9-403-240-sihanoukville", "kind": "city", "original": "Sihanoukville", "original_bbox": [17, 197, 101, 215], "source_url": "@source/4c02589394180d8c", "source_printed_full_literal": "Sihanoukville", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "KH-WestCoast-z9-403-240-sre-ambel", "zh": "盐田", "source": "@source/6991efdbd76094d6", "status": "approved", "record_sha256": "5bd52fda8814c70dddac60af2f9109e05967ba4fe07b03ccf31f2d8a5b582c88", "review_notes": "Official gazetteer identifies Srae Ambel district 0906. Local bilingual usage pairs 盐田县 with Srae Ambel, and an original Sino-Cambodian project uses variant 斯雷温贝. The Source town label lacks a suffix."},
+    {"id": "KH-WestCoast-z9-403-240-kampong-seila", "zh": "甘榜塞拉", "source": "@source/3f58d3fb57f90fcb", "status": "approved", "record_sha256": "ee9616e7b21b3ca412d47787251540547ada8cec8a647754df5960f5168ef587", "review_notes": "Government planning paragraph pairs 甘榜塞拉镇中心 and Kampong Seila town center across its Chinese and English editions. The Source wraps one name onto two lines."},
+    {"id": "KH-WestCoast-z9-403-240-prey-nob", "zh": "普雷诺", "source": "@source/3f58d3fb57f90fcb", "status": "approved", "record_sha256": "5966d382626aaeae96be8b4c49f1a7e5913f13e18c23bb81877358e0f1d72cf3", "review_notes": "Cambodian government Chinese planning uses 普雷诺 repeatedly and also has a 波罗诺 variant. The actual site occupant lists the same address as Prey Nob and 普雷诺县 in its bilingual catalogue."},
+    {"id": "KH-WestCoast-z9-403-240-sihanoukville", "zh": "西哈努克市", "source": "@source/e1861108549269df", "status": "approved", "record_sha256": "3bd453648f294d7476080914f3eaeebcdfcb87f54ebf5fcde9b491c685c6e2d9", "review_notes": "The Chinese commerce guide uses the exact bilingual name. Keep the identical Chinese name already visible here from the Cities.wwp fallback."}
+  ],
+  "layouts": [
+    {"id": "KH-WestCoast-z9-403-240-sre-ambel", "x": 142.5, "y": 19.5, "font_size": 12, "font_style": "regular", "lines": ["盐田"]},
+    {"id": "KH-WestCoast-z9-403-240-kampong-seila", "x": 198, "y": 29, "font_size": 12, "font_style": "regular", "lines": ["甘榜塞拉"]},
+    {"id": "KH-WestCoast-z9-403-240-prey-nob", "x": 159.5, "y": 196, "font_size": 12, "font_style": "regular", "lines": ["普雷诺"]},
+    {"id": "KH-WestCoast-z9-403-240-sihanoukville", "x": 59, "y": 206, "font_size": 12, "font_style": "regular", "lines": ["西哈努克市"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Botum Sakor", "source_url": "@source/6041ad33690e99c2", "id": "KH-WestCoast-z9-403-240-shared-botum-sakor", "original_bbox": [19, -22, 57, 12], "owner_region": "Indochina-West-z9-400-232", "feature_id": "ICW9-216", "review_notes": "Same complete World frame, north Botum and the south-edge Sakor continuation. Chinese output remains solely in the published owner tile."}
+  ],
+  "legacy_suppressions": []
+}

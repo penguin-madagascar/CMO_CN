@@ -1,0 +1,34 @@
+{
+  "id": "F4-CLOSED-G230-z10-870-405",
+  "z": 10,
+  "x": 870,
+  "y": 405,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/870/405.png",
+    "10/871/405.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "F4-G230-W03", "kind": "city", "original": "Jido-eup", "original_bbox": [230, 88, 273, 105], "source_url": "@source/4501fc3c5f87bb4c"},
+    {"id": "F4-G230-W01", "kind": "city", "original": "Mangun-myeon", "original_bbox": [347, 135, 392, 167], "source_url": "@source/b286aaf35493490a"},
+    {"id": "F4-G230-W02", "kind": "city", "original": "Eomda-myeon", "original_bbox": [454, 124, 499, 161], "source_url": "@source/b286aaf35493490a"},
+    {"id": "F4-CTX230-UPPER", "kind": "city", "original": "Imja-myeon", "original_bbox": [135, 65, 201, 84], "source_url": "@source/4501fc3c5f87bb4c"}
+  ],
+  "translations": [
+    {"id": "F4-G230-W03", "zh": "智岛邑", "status": "approved", "source": "@source/7e18fa1c4405d75a", "record_sha256": "0c1ab62567c21e7ac7870f8250d44fcd316694b9fd3c3fb2c856712361301d7a", "review_notes": "Root lexical a7032e1f05c452897a4bcbba0dce181109f4718b8d0aec6e851fad583a87dfba; PUBLIC_RESEARCH_HAN_LITERAL_SIMPLIFIED; Root selected exact Chinese lexeme; project/public-source grade retained. No supplier entity/admin/renderer-epoch inference."},
+    {"id": "F4-G230-W01", "zh": "望云面", "status": "approved", "source": "@source/1c82928408781988", "record_sha256": "a71c113d83a27a295dbe298b9f36a942aac1695f137fc227312c3a286a4d6b93", "review_notes": "Root lexical a7032e1f05c452897a4bcbba0dce181109f4718b8d0aec6e851fad583a87dfba; PUBLIC_RESEARCH_HAN_LITERAL_SIMPLIFIED; Root selected exact Chinese lexeme; project/public-source grade retained. No supplier entity/admin/renderer-epoch inference."},
+    {"id": "F4-G230-W02", "zh": "严多面", "status": "approved", "source": "@source/78aa1e6d3fe12a28", "record_sha256": "5cb7e1f1a51ac9bb476b0f77f43e5ce300948fc5ff56164f6060cc5ca85e6ec1", "review_notes": "Root lexical a7032e1f05c452897a4bcbba0dce181109f4718b8d0aec6e851fad583a87dfba; GOVERNMENT_ORIGINAL_HAN_LITERAL_SIMPLIFIED; Root selected exact Chinese lexeme; project/public-source grade retained. No supplier entity/admin/renderer-epoch inference."},
+    {"id": "F4-CTX230-UPPER", "zh": "荏子面", "status": "approved", "source": "@source/7e18fa1c4405d75a", "record_sha256": "269d3e3ce6b269ca34f2dde2d1c610b865cd26d0530e70c8c5427d508bed54b8", "review_notes": "Root lexical a7032e1f05c452897a4bcbba0dce181109f4718b8d0aec6e851fad583a87dfba; PUBLIC_RESEARCH_ORIGINAL_HAN_LITERAL_NO_OFFICIAL_CHINESE_STANDARD_CLAIM; Root selected exact Chinese lexeme; project/public-source grade retained. No supplier entity/admin/renderer-epoch inference."}
+  ],
+  "layouts": [
+    {"id": "F4-G230-W03", "x": 251.5, "y": 96.5, "font_size": 12, "font_style": "regular"},
+    {"id": "F4-G230-W01", "x": 369.5, "y": 151.0, "font_size": 12, "font_style": "regular"},
+    {"id": "F4-G230-W02", "x": 476.5, "y": 142.5, "font_size": 12, "font_style": "regular"},
+    {"id": "F4-CTX230-UPPER", "x": 168.0, "y": 74.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

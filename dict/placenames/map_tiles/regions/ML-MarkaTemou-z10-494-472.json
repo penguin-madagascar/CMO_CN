@@ -1,0 +1,31 @@
+{
+  "id": "ML-MarkaTemou-z10-494-472",
+  "z": 10,
+  "x": 494,
+  "y": 472,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/494/472.png"
+  ],
+  "context_tiles": [
+    "10/494/471.png"
+  ],
+  "features": [
+    {"id": "ML-MarkaTemou-z10-494-472-N01", "kind": "city", "original": "Temou", "original_bbox": [118, 130, 159, 146], "source_url": "@source/a27eba957a038f81", "source_glyph_complete": true, "source_printed_full_literal": "Temou"},
+    {"id": "ML-MarkaTemou-z10-494-472-N02", "kind": "city", "original": "Markala", "original_bbox": [167, 170, 212, 186], "source_url": "@source/a27eba957a038f81", "source_glyph_complete": true, "source_printed_full_literal": "Markala"}
+  ],
+  "translations": [
+    {"id": "ML-MarkaTemou-z10-494-472-N01", "zh": "泰穆", "status": "approved", "source": "@source/68d840e0fe19964b", "record_sha256": "e4f668ddd8a0f2cf9142231e022a9d5853476418b33708a777c1e26c3b217f4f", "review_notes": "原图实见地名，地理位置及所列资料确认；采用现有译名或地名音译。"},
+    {"id": "ML-MarkaTemou-z10-494-472-N02", "zh": "马尔卡拉", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "7dc15f5b62f9730ef0d9f5872544b4c9a02c91a63bc42312f5e54818069cf4d8", "review_notes": "原图实见地名，地理位置及所列资料确认；采用现有译名或地名音译。"}
+  ],
+  "layouts": [
+    {"id": "ML-MarkaTemou-z10-494-472-N01", "x": 138.5, "y": 138.0, "font_style": "regular", "font_size": 12, "lines": ["泰穆"]},
+    {"id": "ML-MarkaTemou-z10-494-472-N02", "x": 189.5, "y": 178.0, "font_style": "regular", "font_size": 12, "lines": ["马尔卡拉"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "ML-MarkaTemou-z10-494-472-shared-ML10-MadinaNionoDoura-z10-494-470-N03", "owner_region": "ML10-MadinaNionoDoura-z10-494-470", "feature_id": "ML10-MadinaNionoDoura-z10-494-470-N03", "kind": "region", "original": "Doura", "source_url": "@source/7920f7998867c811", "original_bbox": [70, -12, 106, 4], "review_notes": "同一供应商跨接字形及已实际渲染译名，沿用唯一既有归属。"}
+  ],
+  "legacy_suppressions": []
+}

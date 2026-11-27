@@ -1,0 +1,44 @@
+{
+  "id": "G150-SUPPORT-SixNormals-z9-297-255",
+  "z": 9,
+  "x": 297,
+  "y": 255,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/297/255.png"
+  ],
+  "context_tiles": [
+    "9/296/255.png",
+    "9/298/255.png"
+  ],
+  "features": [
+    {"id": "D4-G150-W01", "kind": "city", "original": "Mangina", "original_bbox": [150, 28, 199, 48], "source_url": "@source/1c32bbf08d32b685"},
+    {"id": "D4-G150-W02", "kind": "city", "original": "Bingo", "original_bbox": [162, 58, 196, 77], "source_url": "@source/1c32bbf08d32b685"},
+    {"id": "D4-G150-W03", "kind": "city", "original": "Aloya", "original_bbox": [97, 62, 131, 81], "source_url": "@source/1c32bbf08d32b685"},
+    {"id": "D4-G150-W04", "kind": "city", "original": "Beni", "original_bbox": [217, 67, 247, 85], "source_url": "@source/1c32bbf08d32b685"},
+    {"id": "D4-G150-W06", "kind": "city", "original": "Butembo", "original_bbox": [138, 201, 201, 220], "source_url": "@source/1c32bbf08d32b685"},
+    {"id": "D4-C2-G150-W01", "kind": "city", "original": "Mbau", "original_bbox": [228, 10, 261, 26], "source_url": "@source/1c32bbf08d32b685"}
+  ],
+  "translations": [
+    {"id": "D4-G150-W01", "zh": "曼吉纳", "status": "approved", "source": "@source/1c32bbf08d32b685", "record_sha256": "9614ae909758263daf31f62456a495da1219f8767cefe2a1345306c4e2677287", "review_notes": "Root lexical 9a3ab33e0b04c99b0458cbdf3fc53d84e6d481bf6bc7e15bc1cc16e1eeee9069; PROJECT_ROMAN_APPROX_NOT_OFFICIAL_OR_PHONETICALLY_VERIFIED; Lexical proposal only. Project transliterations are not official Chinese or supplier identity; Root must explicitly adopt all seven in actual selection."},
+    {"id": "D4-G150-W02", "zh": "宾戈", "status": "approved", "source": "@source/1c32bbf08d32b685", "record_sha256": "ae1993d0f9b4b514b059fb57b0e60a0caaf39c15a488f45703de11479f21f6c7", "review_notes": "Root lexical 9a3ab33e0b04c99b0458cbdf3fc53d84e6d481bf6bc7e15bc1cc16e1eeee9069; PROJECT_ROMAN_APPROX_NOT_OFFICIAL_OR_PHONETICALLY_VERIFIED; Lexical proposal only. Project transliterations are not official Chinese or supplier identity; Root must explicitly adopt all seven in actual selection."},
+    {"id": "D4-G150-W03", "zh": "阿洛亚", "status": "approved", "source": "@source/1c32bbf08d32b685", "record_sha256": "86ac12d1f52e5abb65a68692140b4be0968856ba1079f80d74cf528caf1e7c6b", "review_notes": "Root lexical 9a3ab33e0b04c99b0458cbdf3fc53d84e6d481bf6bc7e15bc1cc16e1eeee9069; PROJECT_ROMAN_APPROX_NOT_OFFICIAL_OR_PHONETICALLY_VERIFIED; Lexical proposal only. Project transliterations are not official Chinese or supplier identity; Root must explicitly adopt all seven in actual selection."},
+    {"id": "D4-G150-W04", "zh": "贝尼", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "5825b038c4f0fb1ecf798e2ee7e57ea6c7c5a30eb16e7a8b076e8b12e7f1bd1e", "review_notes": "Root lexical 9a3ab33e0b04c99b0458cbdf3fc53d84e6d481bf6bc7e15bc1cc16e1eeee9069; NE10M_DATABASE_CHINESE_CAPTION_NOT_OFFICIAL_OR_VENDOR_ID; Lexical proposal only. Project transliterations are not official Chinese or supplier identity; Root must explicitly adopt all seven in actual selection."},
+    {"id": "D4-G150-W06", "zh": "布滕博", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "57b2478120ba70f9350ea6d9425bf82c0a2f4612062a7af58691cbf1c00676c0", "review_notes": "Root lexical 9a3ab33e0b04c99b0458cbdf3fc53d84e6d481bf6bc7e15bc1cc16e1eeee9069; NE10M_DATABASE_CHINESE_CAPTION_NOT_OFFICIAL_OR_VENDOR_ID; Lexical proposal only. Project transliterations are not official Chinese or supplier identity; Root must explicitly adopt all seven in actual selection."},
+    {"id": "D4-C2-G150-W01", "zh": "姆鲍", "status": "approved", "source": "@source/1c32bbf08d32b685", "record_sha256": "b366b7d90a7684dbed8cfa43a3a35d317b8c9c41d8449d994cc1a8c8a1d47a8d", "review_notes": "Root lexical 9a3ab33e0b04c99b0458cbdf3fc53d84e6d481bf6bc7e15bc1cc16e1eeee9069; PROJECT_ROMAN_APPROX_NOT_OFFICIAL_OR_PHONETICALLY_VERIFIED; Lexical proposal only. Project transliterations are not official Chinese or supplier identity; Root must explicitly adopt all seven in actual selection."}
+  ],
+  "layouts": [
+    {"id": "D4-G150-W01", "x": 174.5, "y": 38.0, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-G150-W02", "x": 179.0, "y": 67.5, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-G150-W03", "x": 114.0, "y": 71.5, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-G150-W04", "x": 232.0, "y": 76.0, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-G150-W06", "x": 169.5, "y": 210.5, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-C2-G150-W01", "x": 238.5, "y": 18.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G150-Manguredjipa-source-borrow-219", "kind": "city", "original": "Manguredjipa", "source_url": "@source/ebb28215efcc63d5", "original_bbox": [-60, 119, 15, 139], "owner_region": "G150-ORIGINAL-Manguredjipa-z9-296-255", "feature_id": "D4-G150-W05", "review_notes": "One complete Manguredjipa Chinese normal in original296 owner;297 borrows the same original full world bbox for219 support. No duplicate normal/native/Source1."}
+  ],
+  "legacy_suppressions": []
+}

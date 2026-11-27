@@ -1,0 +1,43 @@
+{
+  "id": "G160-z9-311-176-complete5",
+  "z": 9,
+  "x": 311,
+  "y": 176,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/311/176.png"
+  ],
+  "context_tiles": [
+    "9/310/176.png",
+    "9/312/176.png",
+    "9/310/177.png",
+    "9/311/177.png"
+  ],
+  "features": [
+    {"id": "G160-N-01", "kind": "city", "original": "Shchastia", "original_bbox": [178, 93, 232, 110], "source_url": "@source/7e4ba0d0c82b46d4"},
+    {"id": "G160-N-02", "kind": "city", "original": "Zymohiria", "original_bbox": [71, 182, 128, 201], "source_url": "@source/7e4ba0d0c82b46d4"},
+    {"id": "G160-N-03", "kind": "city", "original": "Luhansk", "original_bbox": [202, 185, 255, 203], "source_url": "@source/7e4ba0d0c82b46d4"},
+    {"id": "G160-N-04", "kind": "city", "original": "Bile", "original_bbox": [117, 231, 140, 247], "source_url": "@source/7e4ba0d0c82b46d4"},
+    {"id": "G160-N-05", "kind": "city", "original": "Alchevsk", "original_bbox": [19, 240, 76, 258], "source_url": "@source/7e4ba0d0c82b46d4"}
+  ],
+  "translations": [
+    {"id": "G160-N-01", "zh": "夏斯季亚", "status": "approved", "source": "@source/7e4ba0d0c82b46d4", "record_sha256": "7fa34d3ebe241ae447427f408a1cd3364ae1d98cac1ea2d5bcd2ab0ceca1b6be", "review_notes": "Root selected this bare Chinese word and fixed seed. Grade is recorded separately; Source URLs and physical Qs do not assert provider entity, pure native layer or official transliteration bridge."},
+    {"id": "G160-N-02", "zh": "济莫希里亚", "status": "approved", "source": "@source/7e4ba0d0c82b46d4", "record_sha256": "09c1957999b63be45074c39d0b57b65dce7071e2bac51a934d9b2dd57c4b37e9", "review_notes": "Root selected this bare Chinese word and fixed seed. Grade is recorded separately; Source URLs and physical Qs do not assert provider entity, pure native layer or official transliteration bridge."},
+    {"id": "G160-N-03", "zh": "卢甘斯克", "status": "approved", "source": "@source/7e4ba0d0c82b46d4", "record_sha256": "ffca791e88d1d5a104be66e0a4eb53b09b0b9f3c1f9ea08844e41b88be50ef22", "review_notes": "Root selected this bare Chinese word and fixed seed. Grade is recorded separately; Source URLs and physical Qs do not assert provider entity, pure native layer or official transliteration bridge."},
+    {"id": "G160-N-04", "zh": "比莱", "status": "approved", "source": "@source/7e4ba0d0c82b46d4", "record_sha256": "b5d85a48e30426bbdb03f2377d5db7ca3d06e767c0595f2b0a4da7292406b7f4", "review_notes": "Root selected this bare Chinese word and fixed seed. Grade is recorded separately; Source URLs and physical Qs do not assert provider entity, pure native layer or official transliteration bridge."},
+    {"id": "G160-N-05", "zh": "阿尔切夫斯克", "status": "approved", "source": "@source/7e4ba0d0c82b46d4", "record_sha256": "1559bc6be4c4938798a8fb08c0e3685ce7fc317d75659304eae1435d9623d804", "review_notes": "Root selected this bare Chinese word and fixed seed. Grade is recorded separately; Source URLs and physical Qs do not assert provider entity, pure native layer or official transliteration bridge."}
+  ],
+  "layouts": [
+    {"id": "G160-N-01", "x": 205, "y": 101.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G160-N-02", "x": 99.5, "y": 191.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G160-N-03", "x": 226.5, "y": 194, "font_size": 12, "font_style": "regular"},
+    {"id": "G160-N-04", "x": 128.5, "y": 239, "font_size": 12, "font_style": "regular"},
+    {"id": "G160-N-05", "x": 47.5, "y": 242, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G160-AS-UAS16-065", "owner_region": "UA-SouthBoundary-z9-309-176", "feature_id": "UAS16-065", "kind": "city", "original": "Kadiivka", "source_url": "@source/fffd4ec5fd8400db", "original_bbox": [-32, 192, 16, 208], "review_notes": "Ordinary shared erasure only to exact same-z/full-bbox sole normal Kadiivka. Existing 卡季伊夫卡 and full owner/TR/layout/review remain verbatim; no new caption is drawn for this shared row."}
+  ],
+  "legacy_suppressions": []
+}

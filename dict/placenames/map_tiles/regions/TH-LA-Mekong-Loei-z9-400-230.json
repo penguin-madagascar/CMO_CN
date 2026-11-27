@@ -1,0 +1,44 @@
+{
+  "id": "TH-LA-Mekong-Loei-z9-400-230",
+  "z": 9,
+  "x": 400,
+  "y": 230,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/400/230.png"
+  ],
+  "context_tiles": [
+    "9/400/231.png",
+    "9/401/230.png"
+  ],
+  "features": [
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S01", "kind": "city", "original": "Xanakham", "source_url": "@source/d199608f13820ab9", "original_bbox": [127, 16, 187, 33], "source_printed_full_literal": "Xanakham", "source_glyph_complete": true},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S02", "kind": "city", "original": "Kenthao", "source_url": "@source/d199608f13820ab9", "original_bbox": [29, 87, 76, 103], "source_printed_full_literal": "Kenthao", "source_glyph_complete": true},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S03", "kind": "city", "original": "Tha Li", "source_url": "@source/d199608f13820ab9", "original_bbox": [44, 128, 80, 144], "source_printed_full_literal": "Tha Li", "source_glyph_complete": true},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S04", "kind": "city", "original": "Loei", "source_url": "@source/d199608f13820ab9", "original_bbox": [162, 179, 187, 195], "source_printed_full_literal": "Loei", "source_glyph_complete": true},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S05", "kind": "city", "original": "Chiang Klom", "source_url": "@source/d199608f13820ab9", "original_bbox": [234, 50, 273, 84], "source_printed_full_literal": "Chiang Klom", "source_glyph_complete": true},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S06", "kind": "city", "original": "Wang Saphung", "source_url": "@source/d199608f13820ab9", "original_bbox": [164, 242, 213, 280], "source_printed_full_literal": "Wang Saphung", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S01", "zh": "沙那坎", "source": "@source/39a597cc886beeeb", "status": "approved", "record_sha256": "1dfa0b317d30af854286bdf53cf3170219834a88c07bcea799631c6ad3c50259", "review_notes": "Chinese name and geographic identity checked against source and bilingual evidence."},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S02", "zh": "根陶", "source": "@source/1b6a96d581882d73", "status": "approved", "record_sha256": "97da98033296f8f4bac2f8bd7a51d55fc7bde32d6eefb4d0225520f3dd0c2f32", "review_notes": "Chinese name and geographic identity checked against source and bilingual evidence."},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S03", "zh": "塔利", "source": "@source/cb6a5e4b25463397", "status": "approved", "record_sha256": "6bd8724cf892552ec7ebb3f6370fa0a07bbd1a2db4ae9ec25c542d4ac65b6bcc", "review_notes": "Chinese name and geographic identity checked against source and bilingual evidence."},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S04", "zh": "黎", "source": "@source/cb6a5e4b25463397", "status": "approved", "record_sha256": "0f4019581b3ea16d227cc3bbb57de1a1978d28e74e202ff924dd5c94ee8aa85f", "review_notes": "Chinese name and geographic identity checked against source and bilingual evidence."},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S05", "zh": "清克隆", "source": "@source/b11d0012b4a5b4cf", "status": "approved", "record_sha256": "937316576d3ebea24f44d6717342552fcae1872d107e2d91a3ba882b59ab3afb", "review_notes": "Project Chinese transliteration for exact confirmed native locality."},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S06", "zh": "旺沙蓬", "source": "@source/cb6a5e4b25463397", "status": "approved", "record_sha256": "a6b983ad0ddd9f4e2c5279ab10ad7c7176353474960e72c679e0f567850f3682", "review_notes": "Chinese name and geographic identity checked against source and bilingual evidence."}
+  ],
+  "layouts": [
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S01", "x": 157, "y": 24.5, "font_style": "regular", "font_size": 12, "lines": ["沙那坎"]},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S02", "x": 52.5, "y": 95, "font_style": "regular", "font_size": 12, "lines": ["根陶"]},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S03", "x": 62, "y": 136, "font_style": "regular", "font_size": 12, "lines": ["塔利"]},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S04", "x": 174.5, "y": 187, "font_style": "regular", "font_size": 12, "lines": ["黎"]},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S05", "x": 233, "y": 67, "font_style": "regular", "font_size": 12, "lines": ["清克隆"]},
+    {"id": "TH-LA-Mekong-Loei-z9-400-230-S06", "x": 188.5, "y": 246, "font_style": "regular", "font_size": 12, "lines": ["旺沙蓬"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Na Duang", "source_url": "@source/39148b66853d13e0", "id": "TH-LA-Mekong-Loei-z9-400-230-shared-TH-LA-Mekong-Vientiane-Udon-z9-401-230-S07", "original_bbox": [241, 182, 295, 202], "owner_region": "TH-LA-Mekong-Vientiane-Udon-z9-401-230", "feature_id": "TH-LA-Mekong-Vientiane-Udon-z9-401-230-S07", "review_notes": "Na Duang is the single complete source owner in the eastern tile."}
+  ],
+  "legacy_suppressions": []
+}

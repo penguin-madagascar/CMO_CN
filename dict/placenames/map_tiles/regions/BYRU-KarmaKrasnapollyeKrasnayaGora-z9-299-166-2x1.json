@@ -1,0 +1,38 @@
+{
+  "id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1",
+  "z": 9,
+  "x": 299,
+  "y": 166,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/299/166.png",
+    "9/300/166.png"
+  ],
+  "context_tiles": [
+    "9/300/165.png",
+    "9/301/166.png",
+    "9/299/167.png",
+    "9/300/167.png"
+  ],
+  "features": [
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S01", "kind": "city", "original": "Karma", "original_bbox": [187, 112, 224, 128], "source_url": "@source/daded4f2b5d3edb3", "source_glyph_complete": true, "source_printed_full_literal": "Karma"},
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S02", "kind": "city", "original": "Krasnapollye", "original_bbox": [390, -11, 460, 8], "source_url": "@source/3ec2e70656de2c9e", "source_glyph_complete": true, "source_printed_full_literal": "Krasnapollye"},
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S03", "kind": "city", "original": "Krasnaya Gora", "original_bbox": [473, 181, 524, 214], "source_url": "@source/3ec2e70656de2c9e", "source_glyph_complete": true, "source_printed_full_literal": "Krasnaya Gora"}
+  ],
+  "translations": [
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S01", "zh": "卡尔马", "status": "approved", "source": "@source/5276f22493e47df3", "record_sha256": "3cc60b079e8fea43e3a9f1974ad8a6e1d56c7bf0eee9c9946c24cbd2a27cb553", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S02", "zh": "克拉斯纳波利耶", "status": "approved", "source": "@source/5276f22493e47df3", "record_sha256": "b48a439de69ebb3e3de1a999b0959c33dc2e0d1f461ff9a23788669a38bebaaa", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S03", "zh": "克拉斯纳亚戈拉", "status": "approved", "source": "@source/1dad6c8afbd2bde9", "record_sha256": "f35c71ffb75f1dca201ab0ebb841809aeb85a8e6d2975e9576fb89d8e9cc38a3", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S01", "x": 207, "y": 121, "font_style": "regular", "font_size": 12, "lines": ["卡尔马"]},
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S02", "x": 426, "y": 15, "font_style": "regular", "font_size": 12, "lines": ["克拉斯纳波利耶"]},
+    {"id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-S03", "x": 465, "y": 196, "font_style": "regular", "font_size": 12, "lines": ["克拉斯纳亚戈拉"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Chachersk", "source_url": "@source/7715010668660a52", "id": "BYRU-KarmaKrasnapollyeKrasnayaGora-z9-299-166-2x1-shared-BY-BudaKashalyovaChacherskVetka-z9-299-167-2x1-S01", "original_bbox": [220, 245, 277, 261], "owner_region": "BY-BudaKashalyovaChacherskVetka-z9-299-167-2x1", "feature_id": "BY-BudaKashalyovaChacherskVetka-z9-299-167-2x1-S01", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

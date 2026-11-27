@@ -1,0 +1,56 @@
+{
+  "id": "JFF-CLOSED-C-z10-842-441-3x1",
+  "z": 10,
+  "x": 842,
+  "y": 441,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/842/441.png",
+    "10/843/441.png",
+    "10/844/441.png"
+  ],
+  "context_tiles": [
+    "10/842/440.png"
+  ],
+  "features": [
+    {"id": "JFF-CLOSED-N-Longgang", "kind": "city", "original": "Longgang", "original_bbox": [135, 159, 184, 177], "source_url": "@source/f553fb4b05e519b6"},
+    {"id": "JFF-CLOSED-N-Huangjin", "kind": "city", "original": "Huangjin", "original_bbox": [244, 166, 290, 184], "source_url": "@source/f553fb4b05e519b6"},
+    {"id": "JFF-CLOSED-N-Shatian", "kind": "city", "original": "Shatian", "original_bbox": [292, 44, 336, 61], "source_url": "@source/35189c778fd20bbe"},
+    {"id": "JFF-CLOSED-N-Tanjiang", "kind": "city", "original": "Tanjiang", "original_bbox": [345, 80, 389, 98], "source_url": "@source/35189c778fd20bbe"},
+    {"id": "JFF-CLOSED-N-Taoyuan", "kind": "city", "original": "Taoyuan", "original_bbox": [432, 88, 482, 107], "source_url": "@source/35189c778fd20bbe"},
+    {"id": "JFF-CLOSED-N-Guangde", "kind": "city", "original": "Guangde", "original_bbox": [501, 42, 548, 62], "source_url": "@source/35189c778fd20bbe"},
+    {"id": "JFF-CLOSED-N-Fenghuang", "kind": "city", "original": "Fenghuang", "original_bbox": [470, 232, 525, 250], "source_url": "@source/35189c778fd20bbe"},
+    {"id": "JFF-CLOSED-N-Shangrao", "kind": "city", "original": "Shangrao", "original_bbox": [624, 38, 672, 56], "source_url": "@source/62951bdf4cd7709b"},
+    {"id": "JFF-CLOSED-N-Sanrao", "kind": "city", "original": "Sanrao", "original_bbox": [570, 168, 611, 185], "source_url": "@source/62951bdf4cd7709b"},
+    {"id": "JFF-CLOSED-N-Dongshan", "kind": "city", "original": "Dongshan", "original_bbox": [643, 235, 693, 252], "source_url": "@source/62951bdf4cd7709b"}
+  ],
+  "translations": [
+    {"id": "JFF-CLOSED-N-Longgang", "zh": "龙岗", "status": "approved", "source": "@source/29bfde349e1b5c7b", "record_sha256": "354e9ae08e0390a4a86e4598b47576074f219380adc30c21416f886625997a78", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 梅州丰顺龙岗，东邻黄金. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Huangjin", "zh": "黄金", "status": "approved", "source": "@source/ecc82a99a378fe74", "record_sha256": "3413db46b0d0479042aa561a33d20aab9062da22246ff5283aebcd75a953afef", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 梅州丰顺黄金，西邻龙岗. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Shatian", "zh": "砂田", "status": "approved", "source": "@source/138c6ed5293bdb33", "record_sha256": "01015ef4fb235cea35bd8cd6b7f7aecdafd0c9f49a7eb205ce53eb0702e4a8a9", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 丰顺砂田，东邻潭江；不采用沙田. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Tanjiang", "zh": "潭江", "status": "approved", "source": "@source/05154bb0052ae474", "record_sha256": "49f3c3f050ee9246c60a87f5444f3fabab8911fae384ef78014adeb1c035a45e", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 梅州丰顺潭江，毗邻桃源及潮安凤凰. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Taoyuan", "zh": "桃源", "status": "approved", "source": "@source/5d1e6ff70740512a", "record_sha256": "cc5e543d2fc40fbc6c397dc27417a06169efc72152198991208d17a399cf48a9", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 梅州大埔桃源，另有潭江镇正文邻接证. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Guangde", "zh": "光德", "status": "approved", "source": "@source/a656675c49aadc4f", "record_sha256": "5896ba576f5c662bb80977293edcd67ccc58b12db38d4154b1a7b4f89a91ab3d", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 大埔南片桃源、光德；完整字框位于桃源东北、上饶以西；不采用无目标区域正文的广德. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Fenghuang", "zh": "凤凰", "status": "approved", "source": "@source/05154bb0052ae474", "record_sha256": "802a8d2e870207c6a35929a6c361bc0fc2ff410e68a6c29cafc4ac98964695b2", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 潮州潮安凤凰；实拼完整Fenghuang，原左片Fenghua不再当全词. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Shangrao", "zh": "上饶", "status": "approved", "source": "@source/50c90d51e70cd478", "record_sha256": "80831fb66de807793a19fa60730f12893d62c1598564a90e07607b81a0c02103", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 潮州饶平上饶，不采用江西上饶；文字子代理实取HTML SHA ce8e9fafbf44ef8431849a10bf5578f73f4896cb5c766ca5f8844e4bb4701b62. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Sanrao", "zh": "三饶", "status": "approved", "source": "@source/7865e20690a4bfc4", "record_sha256": "083e113ea5272e4ab020948744b72be82c8527517f1f3bd5e0de36c5b4bda8cf", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 潮州饶平三饶镇. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."},
+    {"id": "JFF-CLOSED-N-Dongshan", "zh": "东山", "status": "approved", "source": "@source/22031ca2f1f0ba4f", "record_sha256": "0da829bc68d2ab30c0ed0048b6971af11f437682ae8f45418fc2256e41bb6a41", "review_notes": "Actual full Source glyphs personally read, exact tight bbox measured. 潮州饶平东山镇. Chinese words child personally opened official Han/regional body; Roman-to-Han bridge is editorial, not official bilingual or supplier entity/anchor proof. Author private candidate only, different Source/Target review pending; no formal integration."}
+  ],
+  "layouts": [
+    {"id": "JFF-CLOSED-N-Longgang", "x": 159.5, "y": 168.0, "font_size": 12, "font_style": "regular", "lines": ["龙岗"]},
+    {"id": "JFF-CLOSED-N-Huangjin", "x": 267.0, "y": 175.0, "font_size": 12, "font_style": "regular", "lines": ["黄金"]},
+    {"id": "JFF-CLOSED-N-Shatian", "x": 314.0, "y": 52.5, "font_size": 12, "font_style": "regular", "lines": ["砂田"]},
+    {"id": "JFF-CLOSED-N-Tanjiang", "x": 367.0, "y": 89.0, "font_size": 12, "font_style": "regular", "lines": ["潭江"]},
+    {"id": "JFF-CLOSED-N-Taoyuan", "x": 457.0, "y": 97.5, "font_size": 12, "font_style": "regular", "lines": ["桃源"]},
+    {"id": "JFF-CLOSED-N-Guangde", "x": 524.5, "y": 52.0, "font_size": 12, "font_style": "regular", "lines": ["光德"]},
+    {"id": "JFF-CLOSED-N-Fenghuang", "x": 497.5, "y": 241.0, "font_size": 12, "font_style": "regular", "lines": ["凤凰"]},
+    {"id": "JFF-CLOSED-N-Shangrao", "x": 648.0, "y": 47.0, "font_size": 12, "font_style": "regular", "lines": ["上饶"]},
+    {"id": "JFF-CLOSED-N-Sanrao", "x": 590.5, "y": 176.5, "font_size": 12, "font_style": "regular", "lines": ["三饶"]},
+    {"id": "JFF-CLOSED-N-Dongshan", "x": 668.0, "y": 243.5, "font_size": 12, "font_style": "regular", "lines": ["东山"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "JFF-CLOSED-SH-Changsha", "owner_region": "JFF5-MODEL-R3", "feature_id": "JFF5-MODEL-N027", "kind": "city", "original": "Changsha", "original_bbox": [50, -16, 105, 4], "source_url": "@source/258a86f8ffd393ac", "review_notes": "Complete Source frame of north new normal Changsha.72 south-tail alpha accounted; no second caption/native; unique north owner retained."}
+  ]
+}

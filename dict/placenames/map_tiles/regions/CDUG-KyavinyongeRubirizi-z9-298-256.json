@@ -1,0 +1,29 @@
+{
+  "id": "CDUG-KyavinyongeRubirizi-z9-298-256",
+  "z": 9,
+  "x": 298,
+  "y": 256,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/298/256.png"
+  ],
+  "context_tiles": [
+    "9/297/256.png"
+  ],
+  "features": [
+    {"id": "CDUG-KyavinyongeRubirizi-z9-298-256-N01", "kind": "city", "original": "Kyavinyonge", "original_bbox": [-27, 47, 44, 67], "source_url": "@source/3d87fb0be25c6e8e", "source_glyph_complete": true, "source_printed_full_literal": "Kyavinyonge"},
+    {"id": "CDUG-KyavinyongeRubirizi-z9-298-256-N02", "kind": "city", "original": "Rubirizi", "original_bbox": [189, 93, 232, 109], "source_url": "@source/3d87fb0be25c6e8e", "source_glyph_complete": true, "source_printed_full_literal": "Rubirizi"}
+  ],
+  "translations": [
+    {"id": "CDUG-KyavinyongeRubirizi-z9-298-256-N01", "zh": "基亚维尼翁盖", "status": "approved", "source": "@source/60c6f3ec09bfc20e", "record_sha256": "51428ba7543f5e9e3d832fea71fb9b7bb4fed74b34fad2a5b4a45ec6e88fab4f", "review_notes": "原图实见地名，地理位置及所列资料确认；采用现有译名或地名音译。"},
+    {"id": "CDUG-KyavinyongeRubirizi-z9-298-256-N02", "zh": "鲁比里济", "status": "approved", "source": "@source/8b99608c33714c82", "record_sha256": "2ee2f511fd38d1e522449ed53cb990257003510cec0216cdb7531cc1e7bdb5ce", "review_notes": "原图实见地名，地理位置及所列资料确认；采用现有译名或地名音译。"}
+  ],
+  "layouts": [
+    {"id": "CDUG-KyavinyongeRubirizi-z9-298-256-N01", "x": 38, "y": 57.0, "font_style": "regular", "font_size": 12, "lines": ["基亚维尼翁盖"]},
+    {"id": "CDUG-KyavinyongeRubirizi-z9-298-256-N02", "x": 210.5, "y": 101.0, "font_style": "regular", "font_size": 12, "lines": ["鲁比里济"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

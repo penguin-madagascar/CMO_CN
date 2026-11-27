@@ -1,0 +1,32 @@
+{
+  "id": "MEAL-UlcinjVelipojeLezhe-z9-283-190",
+  "z": 9,
+  "x": 283,
+  "y": 190,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/283/190.png"
+  ],
+  "context_tiles": [
+    "9/284/190.png"
+  ],
+  "features": [
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S01", "kind": "city", "original": "Ulcinj - Ulqin", "original_bbox": [60, 35, 101, 72], "source_url": "@source/68995ea6ff3e76ea", "source_glyph_complete": true, "source_printed_full_literal": "Ulcinj - Ulqin"},
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S02", "kind": "city", "original": "Velipojë", "original_bbox": [137, 75, 184, 95], "source_url": "@source/68995ea6ff3e76ea", "source_glyph_complete": true, "source_printed_full_literal": "Velipojë"},
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S03", "kind": "city", "original": "Lezhë", "original_bbox": [223, 115, 257, 131], "source_url": "@source/68995ea6ff3e76ea", "source_glyph_complete": true, "source_printed_full_literal": "Lezhë"}
+  ],
+  "translations": [
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S01", "zh": "乌尔齐尼（乌尔钦）", "status": "approved", "source": "@source/f6ee29abd922f886", "record_sha256": "159427a495defb3eeab0e2492ab381529840f5f504499ad324351243392c30d5", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S02", "zh": "韦利波耶", "status": "approved", "source": "@source/f84afb09601a371b", "record_sha256": "064cb1c742e61bf101eeb7d67295a458070084286f582d5fbd262672e4bb71ed", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S03", "zh": "莱什", "status": "approved", "source": "@source/f84afb09601a371b", "record_sha256": "4892ecd6f4dc5a4c2c341f3f05c40030c0c0eef296decc4f8806fbf3545e8f5c", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S01", "x": 83, "y": 51, "font_style": "regular", "font_size": 12, "lines": ["乌尔齐尼（乌尔钦）"]},
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S02", "x": 160, "y": 84, "font_style": "regular", "font_size": 12, "lines": ["韦利波耶"]},
+    {"id": "MEAL-UlcinjVelipojeLezhe-z9-283-190-S03", "x": 240, "y": 123, "font_style": "regular", "font_size": 12, "lines": ["莱什"]}
+  ],
+  "shared_sources": [],
+  "symbols": [],
+  "legacy_suppressions": []
+}

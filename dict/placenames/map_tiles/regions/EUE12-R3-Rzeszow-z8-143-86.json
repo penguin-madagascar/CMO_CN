@@ -1,0 +1,25 @@
+{
+  "id": "EUE12-R3-Rzeszow-z8-143-86",
+  "z": 8,
+  "x": 143,
+  "y": 86,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/143/86.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "EUE12-N04", "kind": "city", "original": "Rzeszów", "original_bbox": [161, 195, 218, 216], "source_url": "@source/cdc3cab55d92784a"}
+  ],
+  "translations": [
+    {"id": "EUE12-N04", "zh": "热舒夫", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "307b5ab1bdef88ed6fc152c3771fb81900d9f8541096123752436c283b84f12b", "review_notes": "ORIGINAL_NE_NAME_ZH_FIELD_WITH_COMPLETE_NAME_EN_OR_NAME_LEXICAL_MATCH; verbatim qualified Source Chinese. Metadata only; Root model and actual different TARGET pending. Root e094 actual private model, author SELF only; different /root/caribbean_author TARGET pending. Personally viewed all22 new complete glyphs (17 Source Chinese+5 separate original WWP captions),7 new whole owners,18 original mixed raw9-frame/target73 native pairs,5 internal joins and2 cross-owner joins. All original Source18 full13400/core13141/real5px15 verified; old Tetovo259 retained in its complete existing normal with603=344+259. Measured initial Elbasan N17 and fixed Albania C03 low-alpha3pixel overlap; only ordinary Source N17 x+4 removes all positive/alpha/RGBA contamination. First evidence retained. All5 canonical exact bodies/layouts/nominal f32 points,all18 native midpoints and complete Source boxes unchanged. Source1=None; new Tetovo rendered private1 is newly selected,not borrowed current19/future21. Old3 complete145 objects/reviews remain exact. No old preview exports,formal promotion,new Source HTTP,unknown15 or fullrunner. This author SELF receipt is not different TARGET approval or full_current canonical/rendered authority."}
+  ],
+  "layouts": [
+    {"id": "EUE12-N04", "x": 191.5, "y": 210.5, "font_size": 12, "font_style": "regular", "lines": ["热舒夫"]}
+  ],
+  "symbols": [
+    {"id": "EUE12-P04", "kind": "circle", "original_bbox": [161, 195, 170, 204], "x": 165.5, "y": 199.5, "size": 9, "outline_width": 1, "source_url": "@source/cdc3cab55d92784a", "feature_id": "EUE12-N04"}
+  ],
+  "shared_sources": []
+}

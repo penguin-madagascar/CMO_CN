@@ -1,0 +1,32 @@
+{
+  "id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383",
+  "z": 10,
+  "x": 853,
+  "y": 383,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/853/383.png"
+  ],
+  "context_tiles": [
+    "10/853/384.png"
+  ],
+  "features": [
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S01", "kind": "city", "original": "Shengli", "original_bbox": [98, 3, 136, 21], "source_url": "@source/87210e232488eb72", "source_glyph_complete": true, "source_printed_full_literal": "Shengli"},
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S02", "kind": "city", "original": "Yangjuegou", "original_bbox": [28, 44, 88, 61], "source_url": "@source/87210e232488eb72", "source_glyph_complete": true, "source_printed_full_literal": "Yangjuegou"},
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S03", "kind": "city", "original": "Guzhangzi", "original_bbox": [119, 243, 170, 256], "source_url": "@source/87210e232488eb72", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S01", "zh": "胜利", "status": "approved", "source": "@source/73c974e79dc4b744", "record_sha256": "01cc4010ed30629b882aa9af6849eb8bee76285d33d663208571dff2907e71c7", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S02", "zh": "羊角沟", "status": "approved", "source": "@source/73c974e79dc4b744", "record_sha256": "09009bcc8fde3d004ea24a0acf7e433f7e9bbe936347f840c6a1cab72c5b0c59", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S03", "zh": "谷杖子", "status": "approved", "source": "@source/7d20f916cd276f56", "record_sha256": "3094d8ef02e0cd318f55696b27c98ac15dfeed8a7cc1fd532d4490951d63593d", "review_notes": "原图可读为 Guzhangzi，紧贴南缘裁断。正式原图南邻对应范围无字形，按同地建昌县谷杖子乡和谷杖子村地名确认。"}
+  ],
+  "layouts": [
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S01", "x": 117, "y": 12, "font_style": "regular", "font_size": 12, "lines": ["胜利"]},
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S02", "x": 58, "y": 52, "font_style": "regular", "font_size": 12, "lines": ["羊角沟"]},
+    {"id": "CN-ShengliYangjuegouGuzhangzi-z10-853-383-S03", "x": 145, "y": 248, "font_style": "regular", "font_size": 12, "lines": ["谷杖子"]}
+  ],
+  "shared_sources": [],
+  "symbols": [],
+  "legacy_suppressions": []
+}

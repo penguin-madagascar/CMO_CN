@@ -1,0 +1,70 @@
+{
+  "id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1",
+  "z": 9,
+  "x": 428,
+  "y": 190,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/428/190.png",
+    "9/429/190.png"
+  ],
+  "context_tiles": [
+    "9/427/190.png",
+    "9/428/189.png",
+    "9/429/189.png"
+  ],
+  "features": [
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S01", "kind": "city", "original": "Huashige", "original_bbox": [35, -16, 87, 3], "source_url": "@source/82035cd5ba429172", "source_glyph_complete": true, "source_printed_full_literal": "Huashige"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S02", "kind": "city", "original": "Fosi", "original_bbox": [172, 39, 196, 55], "source_url": "@source/82035cd5ba429172", "source_glyph_complete": true, "source_printed_full_literal": "Fosi"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S03", "kind": "city", "original": "Changgao", "original_bbox": [12, 103, 67, 123], "source_url": "@source/82035cd5ba429172", "source_glyph_complete": true, "source_printed_full_literal": "Changgao"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S04", "kind": "city", "original": "Qinghemen", "original_bbox": [139, 112, 211, 135], "source_url": "@source/82035cd5ba429172", "source_glyph_complete": true, "source_printed_full_literal": "Qinghemen"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S05", "kind": "city", "original": "Jiudaoling", "original_bbox": [104, 208, 161, 227], "source_url": "@source/82035cd5ba429172", "source_glyph_complete": true, "source_printed_full_literal": "Jiudaoling"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S06", "kind": "city", "original": "Yixian", "original_bbox": [90, 234, 131, 252], "source_url": "@source/82035cd5ba429172", "source_glyph_complete": true, "source_printed_full_literal": "Yixian"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S07", "kind": "city", "original": "Fuxin", "original_bbox": [240, 0, 276, 18], "source_url": "@source/3f148a2171b1187b", "source_glyph_complete": true, "source_printed_full_literal": "Fuxin"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S08", "kind": "city", "original": "Xinmin", "original_bbox": [257, 66, 299, 81], "source_url": "@source/3f148a2171b1187b", "source_glyph_complete": true, "source_printed_full_literal": "Xinmin"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S09", "kind": "city", "original": "Xinlitun", "original_bbox": [423, 6, 469, 22], "source_url": "@source/3f148a2171b1187b", "source_glyph_complete": true, "source_printed_full_literal": "Xinlitun"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S10", "kind": "city", "original": "Hujia", "original_bbox": [444, 123, 475, 143], "source_url": "@source/3f148a2171b1187b", "source_glyph_complete": true, "source_printed_full_literal": "Hujia"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S11", "kind": "city", "original": "Heishan", "original_bbox": [404, 160, 455, 178], "source_url": "@source/3f148a2171b1187b", "source_glyph_complete": true, "source_printed_full_literal": "Heishan"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S12", "kind": "city", "original": "Beizhen", "original_bbox": [287, 204, 337, 222], "source_url": "@source/3f148a2171b1187b", "source_glyph_complete": true, "source_printed_full_literal": "Beizhen"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S13", "kind": "city", "original": "Zhong'an", "original_bbox": [351, 202, 404, 222], "source_url": "@source/3f148a2171b1187b", "source_glyph_complete": true, "source_printed_full_literal": "Zhong'an"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S14", "kind": "city", "original": "Cangtu", "original_bbox": [432, 0, 442, 3], "source_url": "@source/3f148a2171b1187b", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S01", "zh": "化石戈", "status": "approved", "source": "@source/53499d0da3e6f332", "record_sha256": "8582bc79873713e78a48b6149c4268d5d76c762008dda4c1f22efdea39e19bf9", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S02", "zh": "佛寺", "status": "approved", "source": "@source/53499d0da3e6f332", "record_sha256": "3fbf281a4f19a7a331f70739e48011ab22595a8a59822bb84abb0ba68da0ca5a", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S03", "zh": "长皋", "status": "approved", "source": "@source/e31d48b89dc4a226", "record_sha256": "29cf7d1601408a5afc365d3df6010651528a86c8a960b6e70e332bbc57b9e9c4", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S04", "zh": "清河门", "status": "approved", "source": "@source/f30b80995319fb43", "record_sha256": "11c0471708b805bd5e6723e397210d01ef177e84ff9e2ab727a23c52d5a68272", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S05", "zh": "九道岭", "status": "approved", "source": "@source/c962d2a8b661da9a", "record_sha256": "3f642f234b9099c92f9251f31adab089a613ac26cd794404a91671a4e486846d", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S06", "zh": "义县", "status": "approved", "source": "@source/c962d2a8b661da9a", "record_sha256": "80b736d64700d4c5ff59178adf1d0ce726b98aa78fbbde8088fdce9e948d04cd", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S07", "zh": "阜新", "status": "approved", "source": "@source/f30b80995319fb43", "record_sha256": "11ad9adfe6333d19f35951ad4c436ad2e560d6b268e5caef00c3d872b4c1c145", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S08", "zh": "新民", "status": "approved", "source": "@source/53499d0da3e6f332", "record_sha256": "4aba3c00debfdd5b871f34e1f5ce6025cc6b24d760725b40dfdf2980f42d1937", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S09", "zh": "新立屯", "status": "approved", "source": "@source/125e48a8538094a5", "record_sha256": "bbbabed71b9d9bb62ac26dd59cd685c5b757af3957aac54d64d9345778d3c3ed", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S10", "zh": "胡家", "status": "approved", "source": "@source/125e48a8538094a5", "record_sha256": "720e45c678a18ba11683cd3bcdfd9ec41f2c41d36ed2a28cf6a6421061ff36c0", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S11", "zh": "黑山", "status": "approved", "source": "@source/125e48a8538094a5", "record_sha256": "3bd374a68c6f0b2fdb5794fc0d742cc4a85d5009730722d206279dda6e871784", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S12", "zh": "北镇", "status": "approved", "source": "@source/d540ac4a395ae410", "record_sha256": "f82ac3af1c8ed521ed10bb7e7d5290510597c1792588cba8127bfc89d971f64e", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S13", "zh": "中安", "status": "approved", "source": "@source/d540ac4a395ae410", "record_sha256": "60debc5498c28a1638012d27e1efb009d5333feb753b569c09fa649b59bcad73", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S14", "zh": "苍土", "status": "approved", "source": "@source/b16411e4a588b4ab", "record_sha256": "947936a56c6a871d512a69afbdf6954711672a9383fd571a5279a2dd21728024", "review_notes": "原图北缘只保留 g 的下伸笔画，北邻同版原图对应处为空。历史地名点只支持此处的苍土乡，西苍土村的确证拼写 Xicangtucun 与笔画位置不符。"}
+  ],
+  "layouts": [
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S01", "x": 60, "y": 9, "font_style": "regular", "font_size": 12, "lines": ["化石戈"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S02", "x": 184, "y": 47, "font_style": "regular", "font_size": 12, "lines": ["佛寺"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S03", "x": 39, "y": 112, "font_style": "regular", "font_size": 12, "lines": ["长皋"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S04", "x": 175, "y": 123, "font_style": "regular", "font_size": 12, "lines": ["清河门"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S05", "x": 132, "y": 217, "font_style": "regular", "font_size": 12, "lines": ["九道岭"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S06", "x": 110.625, "y": 243.125, "font_style": "regular", "font_size": 12, "lines": ["义县"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S07", "x": 262.65, "y": 8.54, "font_style": "regular", "font_size": 12, "lines": ["阜新"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S08", "x": 278, "y": 74, "font_style": "regular", "font_size": 12, "lines": ["新民"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S09", "x": 446, "y": 23, "font_style": "regular", "font_size": 12, "lines": ["新立屯"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S10", "x": 459, "y": 132, "font_style": "regular", "font_size": 12, "lines": ["胡家"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S11", "x": 429, "y": 169, "font_style": "regular", "font_size": 12, "lines": ["黑山"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S12", "x": 311.4, "y": 213.4, "font_style": "regular", "font_size": 12, "lines": ["北镇"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S13", "x": 377, "y": 211, "font_style": "regular", "font_size": 12, "lines": ["中安"]},
+    {"id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-S14", "x": 433.3069, "y": 8, "font_style": "regular", "font_size": 12, "lines": ["苍土"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Shangyuan", "source_url": "@source/6bef219a4782d6df", "id": "CN-FuxinQinghemenHeishan-z9-428-190-2x1-shared-CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S07", "original_bbox": [-16, 198, 46, 218], "owner_region": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190", "feature_id": "CN-Liaoning-BeipiaoQuanjuyong-z9-427-190-S07", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

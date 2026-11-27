@@ -1,0 +1,51 @@
+{
+  "id": "NW-Luzon-z10-854-464",
+  "z": 10,
+  "x": 854,
+  "y": 464,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/854/464.png",
+    "10/855/464.png"
+  ],
+  "context_tiles": [
+    "10/854/463.png",
+    "10/855/463.png"
+  ],
+  "features": [
+    {"id": "NWPH10-San-Fernando", "kind": "city", "original": "San Fernando", "original_bbox": [31, -5, 90, 34], "source_printed_full_literal": "San Fernando", "source_glyph_complete": true, "source_url": "@source/b3a4a9838ea5210c"},
+    {"id": "NWPH10-Bauang", "kind": "city", "original": "Bauang", "original_bbox": [48, 75, 91, 95], "source_printed_full_literal": "Bauang", "source_glyph_complete": true, "source_url": "@source/d79bd1790d597cc2"},
+    {"id": "NWPH10-Agoo", "kind": "city", "original": "Agoo", "original_bbox": [82, 230, 111, 249], "source_printed_full_literal": "Agoo", "source_glyph_complete": true, "source_url": "@source/d79bd1790d597cc2"},
+    {"id": "NWPH10-Kapangan", "kind": "city", "original": "Kapangan", "original_bbox": [240, 39, 290, 57], "source_printed_full_literal": "Kapangan", "source_glyph_complete": true, "source_url": "@source/d79bd1790d597cc2"},
+    {"id": "NWPH10-La-Trinidad", "kind": "city", "original": "La Trinidad", "original_bbox": [230, 125, 286, 140], "source_printed_full_literal": "La Trinidad", "source_glyph_complete": true, "source_url": "@source/d79bd1790d597cc2"},
+    {"id": "NWPH10-Baguio", "kind": "city", "original": "Baguio", "original_bbox": [237, 160, 287, 185], "source_printed_full_literal": "Baguio", "source_glyph_complete": true, "source_url": "@source/d79bd1790d597cc2"},
+    {"id": "NWPH10-Bokod", "kind": "city", "original": "Bokod", "original_bbox": [417, 103, 450, 118], "source_printed_full_literal": "Bokod", "source_glyph_complete": true, "source_url": "@source/cd149eca01b9c90e"},
+    {"id": "NWPH10-Kayapa", "kind": "city", "original": "Kayapa", "original_bbox": [455, 203, 497, 222], "source_printed_full_literal": "Kayapa", "source_glyph_complete": true, "source_url": "@source/cd149eca01b9c90e"}
+  ],
+  "translations": [
+    {"id": "NWPH10-San-Fernando", "zh": "圣费尔南多", "status": "approved", "source": "@source/6c2162f941db47c3", "record_sha256": "a09d60f9e1c7dd35800abdb651607533679483c64acae8f373203f972f40a0c3", "review_notes": "Reuses existing Chinese map spelling for the same locality PH9-000."},
+    {"id": "NWPH10-Bauang", "zh": "包昂", "status": "approved", "source": "@source/c778b69e0b819888", "record_sha256": "c833bac3efdd2fc6bb733e46945a08174cd68606ec5d7d118e96a2083d9cefd9", "review_notes": "Reuses existing Chinese map spelling for the same locality PH9-002."},
+    {"id": "NWPH10-Agoo", "zh": "阿古", "status": "approved", "source": "@source/cd6cc221ceaf05c8", "record_sha256": "dbfd961e70b6ebb2a83150a13010b5747ae1e109ad7db2425786a1aa211e9350", "review_notes": "Exact same locality Chinese spelling verified."},
+    {"id": "NWPH10-Kapangan", "zh": "卡潘甘", "status": "approved", "source": "@source/b4701280402b5849", "record_sha256": "79d7a7a11bda6ab3fb2c5dc1ec150135380f44709e4d2c7bad309f2ac616e188", "review_notes": "Project transliteration, exact Philippine municipality checked."},
+    {"id": "NWPH10-La-Trinidad", "zh": "拉特立尼达", "status": "approved", "source": "@source/8971c4ef10113814", "record_sha256": "64fb14831a75c7346a9573272c98760b626b2c39db0371ca019722c53a3a49f9", "review_notes": "Exact same locality Chinese spelling verified."},
+    {"id": "NWPH10-Baguio", "zh": "碧瑶", "status": "approved", "source": "@source/8971c4ef10113814", "record_sha256": "108460c598448dfaf368c9476d3b5bd47bc691f3072156c7c36f75e34a71b91b", "review_notes": "Reuses existing Chinese map spelling for the same locality PH9-004."},
+    {"id": "NWPH10-Bokod", "zh": "博科德", "status": "approved", "source": "@source/b4701280402b5849", "record_sha256": "ad8784136526397484c108e1e2c980c14d31c5bc26907b34923d72d29a6bd758", "review_notes": "Project transliteration, exact Philippine municipality checked."},
+    {"id": "NWPH10-Kayapa", "zh": "卡亚帕", "status": "approved", "source": "@source/a5f588a5d3c84379", "record_sha256": "3a0c5690c766b96b6a8e61d1759a6725144042511ad919dc29af1a4505cbab29", "review_notes": "Reuses existing Chinese map spelling for the same locality PH9-007."}
+  ],
+  "layouts": [
+    {"id": "NWPH10-San-Fernando", "x": 60.5, "y": 14.5, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Bauang", "x": 69.5, "y": 85.0, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Agoo", "x": 96.5, "y": 239.5, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Kapangan", "x": 265.0, "y": 48.0, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-La-Trinidad", "x": 258.0, "y": 132.5, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Baguio", "x": 262.0, "y": 172.5, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Bokod", "x": 433.5, "y": 110.5, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Kayapa", "x": 476.0, "y": 212.5, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "NWPH10-shared-PHL12-N003", "owner_region": "PHL12-R01-Benguet-z10-855-463", "feature_id": "PHL12-N003", "original": "Atok", "kind": "region", "original_bbox": [377, -2, 403, 13], "source_url": "@source/8eeabaabdf88c2f3", "review_notes": "Whole Source crosses into this exact same-zoom adjacent tile. One Chinese normal remains with its owner."}
+  ],
+  "legacy_suppressions": []
+}

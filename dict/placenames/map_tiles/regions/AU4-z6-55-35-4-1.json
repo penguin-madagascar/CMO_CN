@@ -1,0 +1,65 @@
+{
+  "id": "AU4-z6-55-35-4-1",
+  "z": 6,
+  "x": 55,
+  "y": 35,
+  "width_tiles": 4,
+  "height_tiles": 1,
+  "original_tiles": [
+    "6/55/35.png",
+    "6/56/35.png",
+    "6/57/35.png",
+    "6/58/35.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "AU10-01", "kind": "city", "original": "Tennant Creek", "original_bbox": [215, 140, 263, 174], "source_url": "@source/8f899c8fdfc55ab2"},
+    {"id": "AU10-02", "kind": "city", "original": "Mount Isa", "original_bbox": [456, 192, 497, 227], "source_url": "@source/9ab12fcd51d7677f"},
+    {"id": "AU10-03", "kind": "city", "original": "Cloncurry", "original_bbox": [502, 191, 556, 213], "source_url": "@source/9ab12fcd51d7677f"},
+    {"id": "AU10-04", "kind": "city", "original": "Karumba", "original_bbox": [517, 36, 569, 55], "source_url": "@source/3f59a40257607ea2"},
+    {"id": "AU10-05", "kind": "city", "original": "Georgetown", "original_bbox": [641, 74, 706, 97], "source_url": "@source/3f59a40257607ea2"},
+    {"id": "AU10-06", "kind": "city", "original": "Hughenden", "original_bbox": [670, 198, 733, 220], "source_url": "@source/3f59a40257607ea2"},
+    {"id": "AU10-07", "kind": "city", "original": "Cairns", "original_bbox": [742, 9, 780, 28], "source_url": "@source/3f59a40257607ea2"},
+    {"id": "AU10-08", "kind": "city", "original": "Innisfail", "original_bbox": [754, 38, 801, 57], "source_url": "@source/3f59a40257607ea2"},
+    {"id": "AU10-09", "kind": "city", "original": "Townsville", "original_bbox": [790, 121, 850, 140], "source_url": "@source/3e51577a712323cd"},
+    {"id": "AU10-10", "kind": "city", "original": "Bowen", "original_bbox": [854, 157, 896, 177], "source_url": "@source/3e51577a712323cd"}
+  ],
+  "translations": [
+    {"id": "AU10-01", "zh": "滕南特克里克", "status": "approved", "source": "@source/8f899c8fdfc55ab2", "record_sha256": "a3996952ae09086efedbcec36bfa3e33603c911acf1403644fe3f5f382e4f519", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer=/lexical_choices/3. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-02", "zh": "伊萨山", "status": "approved", "source": "@source/9ab12fcd51d7677f", "record_sha256": "b786b47c631dc12fe4c0cc2662d722e13818a45dad6f0d18e9e2fbac3e372460", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer=/lexical_choices/4. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-03", "zh": "克朗克里", "status": "approved", "source": "@source/9ab12fcd51d7677f", "record_sha256": "b600e7eeeee668c875fd88da212c18947aae721930583d6345c13e7ca1d735af", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_continuity7_Chinese_lexical_actual_selection_20261104/Root_SELECTED_CONTINUITY7_COMPLETE_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=837578f311b888d248ecad830ccf2428af6070f15dccf89df4e7e71048c77228 pointer=/lexical_choices/1. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-04", "zh": "卡伦巴", "status": "approved", "source": "@source/3f59a40257607ea2", "record_sha256": "6a14cbbd85e24ee4cfbe2b1d9d1c1231fbb94275dbf228e007a372c89c651c1a", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_residual8707_complete8_Chinese_actual_selection_20261104/Root_SELECTED_RESIDUAL_COMPLETE8_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=5b8bec296ec33968bd0e4b4879ffee2a29bd8c3402801af67ef9360bad712237 pointer=/rows8/1. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-05", "zh": "乔治敦", "status": "approved", "source": "@source/3f59a40257607ea2", "record_sha256": "eeb1216699ee68bf267c69ce2d4b73cbe27a89ec0cb3261a86f23a401205ba1b", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_residual8707_complete8_Chinese_actual_selection_20261104/Root_SELECTED_RESIDUAL_COMPLETE8_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=5b8bec296ec33968bd0e4b4879ffee2a29bd8c3402801af67ef9360bad712237 pointer=/rows8/2. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-06", "zh": "休恩登", "status": "approved", "source": "@source/3f59a40257607ea2", "record_sha256": "83d4377971350e2f322745ac880c24cf3ee81df9f098f5ffb0b92b746e26962f", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_residual8707_complete8_Chinese_actual_selection_20261104/Root_SELECTED_RESIDUAL_COMPLETE8_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=5b8bec296ec33968bd0e4b4879ffee2a29bd8c3402801af67ef9360bad712237 pointer=/rows8/3. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-07", "zh": "凯恩斯", "status": "approved", "source": "@source/3f59a40257607ea2", "record_sha256": "53b3e4066b2472ca4f7cfd59ed42238ab304d275adb273ffee0192ac667c0c66", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_Source39_complete5_Chinese_actual_selection_20261104/Root_SELECTED_COMPLETE5_ALL_CHINESE_FOR_OBSERVED39_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=605ea63f1ecf3ca82335708fa27c47c82976bfda6c6e10600cebb7ce198d903b pointer=/rows5/0. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-08", "zh": "英尼斯费尔", "status": "approved", "source": "@source/3f59a40257607ea2", "record_sha256": "72bc4d2de360f646f60dad1be3996de95b2201110def84a5d4bde7d41b162b12", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_Source39_complete5_Chinese_actual_selection_20261104/Root_SELECTED_COMPLETE5_ALL_CHINESE_FOR_OBSERVED39_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=605ea63f1ecf3ca82335708fa27c47c82976bfda6c6e10600cebb7ce198d903b pointer=/rows5/1. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-09", "zh": "汤斯维尔", "status": "approved", "source": "@source/3e51577a712323cd", "record_sha256": "04f8a25ddc3d0254b7e211eda7589d4f425a37653c8627d82a597dd2ee77e0bc", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_Source42_complete3_Chinese_actual_selection_20261104/Root_SELECTED_COMPLETE3_ALL_CHINESE_FOR_OBSERVED42_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=c811a61cf727fcd41acb95e53948c20d71ba27525069b3718dc43a19abfa1c9c pointer=/rows3/0. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "AU10-10", "zh": "鲍恩", "status": "approved", "source": "@source/3e51577a712323cd", "record_sha256": "6aa68b345a2f80bde0aa6bf0415482efd5f19e6231f279f9a1012045631d0916", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_Source42_complete3_Chinese_actual_selection_20261104/Root_SELECTED_COMPLETE3_ALL_CHINESE_FOR_OBSERVED42_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=c811a61cf727fcd41acb95e53948c20d71ba27525069b3718dc43a19abfa1c9c pointer=/rows3/1. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."}
+  ],
+  "layouts": [
+    {"id": "AU10-01", "x": 248, "y": 157, "font_size": 12, "font_style": "regular", "lines": ["滕南特", "克里克"]},
+    {"id": "AU10-02", "x": 477, "y": 213, "font_size": 12, "font_style": "regular", "lines": ["伊萨山"]},
+    {"id": "AU10-03", "x": 529, "y": 212, "font_size": 12, "font_style": "regular", "lines": ["克朗克里"]},
+    {"id": "AU10-04", "x": 550, "y": 46, "font_size": 12, "font_style": "regular", "lines": ["卡伦巴"]},
+    {"id": "AU10-05", "x": 674, "y": 86, "font_size": 12, "font_style": "regular", "lines": ["乔治敦"]},
+    {"id": "AU10-06", "x": 703, "y": 209, "font_size": 12, "font_style": "regular", "lines": ["休恩登"]},
+    {"id": "AU10-07", "x": 775, "y": 19, "font_size": 12, "font_style": "regular", "lines": ["凯恩斯"]},
+    {"id": "AU10-08", "x": 778, "y": 59, "font_size": 12, "font_style": "regular", "lines": ["英尼斯费尔"]},
+    {"id": "AU10-09", "x": 829, "y": 131, "font_size": 12, "font_style": "regular", "lines": ["汤斯维尔"]},
+    {"id": "AU10-10", "x": 881, "y": 167, "font_size": 12, "font_style": "regular", "lines": ["鲍恩"]}
+  ],
+  "symbols": [
+    {"id": "AU10-01-point", "feature_id": "AU10-01", "kind": "circle", "original_bbox": [215, 140, 224, 149], "x": 219.5, "y": 144.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-02-point", "feature_id": "AU10-02", "kind": "circle", "original_bbox": [456, 192, 465, 201], "x": 460.5, "y": 196.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-03-point", "feature_id": "AU10-03", "kind": "circle", "original_bbox": [502, 191, 511, 200], "x": 506.5, "y": 195.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-04-point", "feature_id": "AU10-04", "kind": "circle", "original_bbox": [517, 36, 526, 45], "x": 521.5, "y": 40.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-05-point", "feature_id": "AU10-05", "kind": "circle", "original_bbox": [641, 74, 650, 83], "x": 645.5, "y": 78.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-06-point", "feature_id": "AU10-06", "kind": "circle", "original_bbox": [670, 198, 679, 207], "x": 674.5, "y": 202.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-07-point", "feature_id": "AU10-07", "kind": "circle", "original_bbox": [742, 9, 751, 18], "x": 746.5, "y": 13.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-08-point", "feature_id": "AU10-08", "kind": "circle", "original_bbox": [754, 38, 763, 47], "x": 758.5, "y": 42.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-09-point", "feature_id": "AU10-09", "kind": "circle", "original_bbox": [790, 121, 799, 130], "x": 794.5, "y": 125.5, "size": 9, "outline_width": 1},
+    {"id": "AU10-10-point", "feature_id": "AU10-10", "kind": "circle", "original_bbox": [854, 157, 863, 166], "x": 858.5, "y": 161.5, "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

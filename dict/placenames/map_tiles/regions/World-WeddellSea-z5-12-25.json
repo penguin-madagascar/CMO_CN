@@ -1,0 +1,24 @@
+{
+  "id": "World-WeddellSea-z5-12-25",
+  "z": 5,
+  "x": 12,
+  "y": 25,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "5/12/25.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "World-WeddellSea-z5-12-25-WeddellSea", "original": "Weddell Sea", "kind": "marine", "original_bbox": [128, 11, 230, 27], "source_url": "@source/64b9a865a0f1c82b", "source_glyph_complete": true, "source_printed_full_literal": "Weddell Sea"}
+  ],
+  "translations": [
+    {"id": "World-WeddellSea-z5-12-25-WeddellSea", "zh": "威德尔海", "status": "approved", "source": "@source/f252d52f294e6292", "record_sha256": "2cffd70c5aa9f56535e486e0d650ff1db64d2d99d05684ed4ffa0fde14efeda6", "review_notes": "原版跨片拼合后实读完整名称，中文按所列地名资料或既有审定词条。"}
+  ],
+  "layouts": [
+    {"id": "World-WeddellSea-z5-12-25-WeddellSea", "x": 179.0, "y": 19.0, "font_style": "bold", "font_size": 14, "lines": ["威德尔海"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

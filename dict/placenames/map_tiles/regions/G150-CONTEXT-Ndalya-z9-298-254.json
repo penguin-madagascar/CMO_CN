@@ -1,0 +1,24 @@
+{
+  "id": "G150-CONTEXT-Ndalya-z9-298-254",
+  "z": 9,
+  "x": 298,
+  "y": 254,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/298/254.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "G150-CONTEXT9-01", "kind": "city", "original": "Ndalya", "original_bbox": [8, 151, 48, 171], "source_url": "@source/779858926d371f94"}
+  ],
+  "translations": [
+    {"id": "G150-CONTEXT9-01", "zh": "恩达利亚", "status": "approved", "source": "@source/779858926d371f94", "record_sha256": "df52b82acbaa01840da54d55ee8be47a051508e748894878401a79a238a977c2", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Ndalya\", \"Chinese\": \"恩达利亚\", \"evidence_grade_preserved\": \"C\", \"lexical_confidence_preserved\": \"中低\", \"evidence_role_preserved\": \"PROJECT_SIMPLIFIED_CHINESE_TRANSLITERATION_FROM_COMPLETE_LATIN_NOT_ATTESTED_CHINESE_OR_LOCAL_PRONUNCIATION\", \"original_row_pointer\": \"/rows/0\"}; display enum only, no supplier entity/class/point inference."}
+  ],
+  "layouts": [
+    {"id": "G150-CONTEXT9-01", "x": 32.0, "y": 161.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

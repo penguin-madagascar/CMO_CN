@@ -1,0 +1,38 @@
+{
+  "id": "TR-DargecitGuclukonakIdil-z9-315-198",
+  "z": 9,
+  "x": 315,
+  "y": 198,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/315/198.png"
+  ],
+  "context_tiles": [
+    "9/314/197.png",
+    "9/315/197.png",
+    "9/314/198.png",
+    "9/316/198.png"
+  ],
+  "features": [
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S01", "kind": "city", "original": "Dargeçit", "original_bbox": [63, 71, 110, 91], "source_url": "@source/fc82b3b19583e996", "source_glyph_complete": true, "source_printed_full_literal": "Dargeçit"},
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S02", "kind": "city", "original": "Güçlükonak", "original_bbox": [124, 105, 188, 125], "source_url": "@source/fc82b3b19583e996", "source_glyph_complete": true, "source_printed_full_literal": "Güçlükonak"},
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S03", "kind": "city", "original": "İdil", "original_bbox": [139, 163, 160, 182], "source_url": "@source/fc82b3b19583e996", "source_glyph_complete": true, "source_printed_full_literal": "İdil"}
+  ],
+  "translations": [
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S01", "zh": "达尔盖奇特", "status": "approved", "source": "@source/c00f16406d363fa1", "record_sha256": "50e32fa672114b4c35b61d62a22c8a623c3632ebb115a02f8d28f185a9e3e1e2", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S02", "zh": "居奇吕科纳克", "status": "approved", "source": "@source/43d30ff74df97dcb", "record_sha256": "bb7f5a9415c2e2c602eaa1b1d9ec93cb51f7c62f94ef3af6b908a8da7f027e07", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S03", "zh": "伊迪尔", "status": "approved", "source": "@source/43d30ff74df97dcb", "record_sha256": "53923872b585749ca4c0eb43eadc35162ca4e0193691dbb997044b05ac84d73c", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S01", "x": 86, "y": 82, "font_style": "regular", "font_size": 12, "lines": ["达尔盖奇特"]},
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S02", "x": 156, "y": 114, "font_style": "regular", "font_size": 12, "lines": ["居奇吕科纳克"]},
+    {"id": "TR-DargecitGuclukonakIdil-z9-315-198-S03", "x": 149, "y": 173, "font_style": "regular", "font_size": 12, "lines": ["伊迪尔"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Hasankeyf", "source_url": "@source/8d9beaff707b61da", "id": "TR-DargecitGuclukonakIdil-z9-315-198-shared-TR-BatmanHasankeyf-z9-314-197-S06", "original_bbox": [-53, -14, 5, 5], "owner_region": "TR-BatmanHasankeyf-z9-314-197", "feature_id": "TR-BatmanHasankeyf-z9-314-197-S06", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Cizre", "source_url": "@source/edf6fb64ff6462d2", "id": "TR-DargecitGuclukonakIdil-z9-315-198-shared-TR-SirnakHakkariCilo-z9-316-198-3x1-S02", "original_bbox": [241, 168, 270, 185], "owner_region": "TR-SirnakHakkariCilo-z9-316-198-3x1", "feature_id": "TR-SirnakHakkariCilo-z9-316-198-3x1-S02", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,35 @@
+{
+  "id": "G52-Nogales-Cananea-AguaPrieta-z8-49-104-2x1",
+  "z": 8,
+  "x": 49,
+  "y": 104,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/49/104.png",
+    "8/50/104.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "G52-C01", "kind": "city", "original": "Nogales", "original_bbox": [24, 126, 74, 150], "source_url": "@source/5e4c63f39884eee8"},
+    {"id": "G52-C02", "kind": "city", "original": "Cananea", "original_bbox": [142, 202, 190, 221], "source_url": "@source/5e4c63f39884eee8"},
+    {"id": "G52-C03", "kind": "city", "original": "Agua Prieta", "original_bbox": [278, 131, 319, 170], "source_url": "@source/e0e2e2a95ab37ca9"}
+  ],
+  "translations": [
+    {"id": "G52-C01", "zh": "诺加莱斯", "status": "approved", "source": "@source/5e4c63f39884eee8", "record_sha256": "c3595e476d5a3c12d44e95a21685cb7fc4aa654280b42d56d87800d3b905af7b", "review_notes": "Root word-only evidence/tile_recovery/root_G23_G52_FIVE_BARE_CHINESE_WORDS_TRUSTED_DELEGATED_SELECTION_20261105/Root_SELECTED_G23_G52_FIVE_BARE_CHINESE_WORDS_ONLY_NOT_MODEL_NATIVE_TARGET.json #742664ec580de17e78c8939e2484a40ac2d922f9a5b4bc368e4bd65563e7d18a /selected5_words_only/2; grade C_PROJECT_TRANSLITERATION. Source URL is only a fixed official locator, not cached coordinate or HTTP identity proof. Feature bbox includes original printed point ink; city is renderer primitive, not provider identity."},
+    {"id": "G52-C02", "zh": "卡纳内阿", "status": "approved", "source": "@source/5e4c63f39884eee8", "record_sha256": "d42ce5a05ddcc5b2c6e3bd72f6c5a02e4cf1a877dd7fbd6dda08bcd9cdea3cd8", "review_notes": "Root word-only evidence/tile_recovery/root_G23_G52_FIVE_BARE_CHINESE_WORDS_TRUSTED_DELEGATED_SELECTION_20261105/Root_SELECTED_G23_G52_FIVE_BARE_CHINESE_WORDS_ONLY_NOT_MODEL_NATIVE_TARGET.json #742664ec580de17e78c8939e2484a40ac2d922f9a5b4bc368e4bd65563e7d18a /selected5_words_only/3; grade A_OFFICIAL_BARE_STEM_FROM_CITY_FORM. Source URL is only a fixed official locator, not cached coordinate or HTTP identity proof. Feature bbox includes original printed point ink; city is renderer primitive, not provider identity."},
+    {"id": "G52-C03", "zh": "阿瓜普列塔", "status": "approved", "source": "@source/e0e2e2a95ab37ca9", "record_sha256": "480da2e9bf6806d92ba58202e4b87e7064b1de3fe0cc5286726983a33bfef85b", "review_notes": "Root word-only evidence/tile_recovery/root_G23_G52_FIVE_BARE_CHINESE_WORDS_TRUSTED_DELEGATED_SELECTION_20261105/Root_SELECTED_G23_G52_FIVE_BARE_CHINESE_WORDS_ONLY_NOT_MODEL_NATIVE_TARGET.json #742664ec580de17e78c8939e2484a40ac2d922f9a5b4bc368e4bd65563e7d18a /selected5_words_only/4; grade C_PROJECT_TRANSLITERATION. Source URL is only a fixed official locator, not cached coordinate or HTTP identity proof. Feature bbox includes original printed point ink; city is renderer primitive, not provider identity."}
+  ],
+  "layouts": [
+    {"id": "G52-C01", "x": 64, "y": 144, "font_size": 12, "font_style": "regular", "lines": ["诺加莱斯"]},
+    {"id": "G52-C02", "x": 182, "y": 215, "font_size": 12, "font_style": "regular", "lines": ["卡纳内阿"]},
+    {"id": "G52-C03", "x": 312, "y": 157, "font_size": 12, "font_style": "regular", "lines": ["阿瓜", "普列塔"]}
+  ],
+  "symbols": [
+    {"id": "G52-C01-point", "feature_id": "G52-C01", "kind": "circle", "original_bbox": [24, 126, 33, 135], "x": 28.5, "y": 130.5, "size": 9, "outline_width": 1, "review_notes": "Root selected ordinary project circle at the independently observed raw9 frame midpoint. Composite Source pixels remain mixed; no pure layer, provider coordinate, ideal inverse or Source/Target equality claim."},
+    {"id": "G52-C02-point", "feature_id": "G52-C02", "kind": "circle", "original_bbox": [142, 202, 151, 211], "x": 146.5, "y": 206.5, "size": 9, "outline_width": 1, "review_notes": "Root selected ordinary project circle at the independently observed raw9 frame midpoint. Composite Source pixels remain mixed; no pure layer, provider coordinate, ideal inverse or Source/Target equality claim."},
+    {"id": "G52-C03-point", "feature_id": "G52-C03", "kind": "circle", "original_bbox": [278, 131, 287, 140], "x": 282.5, "y": 135.5, "size": 9, "outline_width": 1, "review_notes": "Root selected ordinary project circle at the independently observed raw9 frame midpoint. Composite Source pixels remain mixed; no pure layer, provider coordinate, ideal inverse or Source/Target equality claim."}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

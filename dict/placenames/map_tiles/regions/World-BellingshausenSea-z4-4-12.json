@@ -1,0 +1,24 @@
+{
+  "id": "World-BellingshausenSea-z4-4-12",
+  "z": 4,
+  "x": 4,
+  "y": 12,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "4/4/12.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "World-BellingshausenSea-z4-4-12-BellingshausenSea", "original": "Bellingshausen Sea", "kind": "marine", "original_bbox": [21, 111, 133, 140], "source_url": "@source/bba68b127617f298", "source_glyph_complete": true, "source_printed_full_literal": "Bellingshausen Sea"}
+  ],
+  "translations": [
+    {"id": "World-BellingshausenSea-z4-4-12-BellingshausenSea", "zh": "别林斯高晋海", "status": "approved", "source": "@source/e35e1184e45a47e8", "record_sha256": "942ffe7413bd3ffe5f9df533ff356c270bc2fd0d6dc29a171f89bbfba57df28c", "review_notes": "原版跨片拼合后实读完整名称，中文按所列地名资料或既有审定词条。"}
+  ],
+  "layouts": [
+    {"id": "World-BellingshausenSea-z4-4-12-BellingshausenSea", "x": 77.0, "y": 125.5, "font_style": "bold", "font_size": 14, "lines": ["别林斯高晋海"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

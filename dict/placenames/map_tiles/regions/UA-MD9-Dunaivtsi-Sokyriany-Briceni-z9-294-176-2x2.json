@@ -1,0 +1,75 @@
+{
+  "id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2",
+  "z": 9,
+  "x": 294,
+  "y": 176,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/294/176.png",
+    "9/294/177.png",
+    "9/295/176.png",
+    "9/295/177.png"
+  ],
+  "context_tiles": [
+    "9/296/176.png"
+  ],
+  "features": [
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Dunaivtsi", "kind": "city", "original": "Dunaivtsi", "original_bbox": [21, 12, 73, 28], "source_url": "@source/744417b778c32f13", "source_glyph_complete": true, "source_printed_full_literal": "Dunaivtsi"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-NovaUshytsia", "kind": "city", "original": "Nova Ushytsia", "original_bbox": [176, 33, 224, 70], "source_url": "@source/744417b778c32f13", "source_glyph_complete": true, "source_printed_full_literal": "Nova Ushytsia"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Kopaihorod", "kind": "city", "original": "Kopaihorod", "original_bbox": [361, 28, 426, 47], "source_url": "@source/29cca351bc04f477", "source_glyph_complete": true, "source_printed_full_literal": "Kopaihorod"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-MurovaniKurylivtsi", "kind": "city", "original": "Murovani Kurylivtsi", "original_bbox": [271, 99, 323, 135], "source_url": "@source/29cca351bc04f477", "source_glyph_complete": true, "source_printed_full_literal": "Murovani Kurylivtsi"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-StaraUshytsia", "kind": "city", "original": "Stara Ushytsia", "original_bbox": [106, 162, 154, 199], "source_url": "@source/744417b778c32f13", "source_glyph_complete": true, "source_printed_full_literal": "Stara Ushytsia"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Novodnistrovsk", "kind": "city", "original": "Novodnistrovsk", "original_bbox": [217, 178, 303, 195], "source_url": "@source/29cca351bc04f477", "source_glyph_complete": true, "source_printed_full_literal": "Novodnistrovsk"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Vendychany", "kind": "city", "original": "Vendychany", "original_bbox": [355, 165, 423, 184], "source_url": "@source/29cca351bc04f477", "source_glyph_complete": true, "source_printed_full_literal": "Vendychany"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Kelmentsi", "kind": "city", "original": "Kelmentsi", "original_bbox": [13, 244, 68, 260], "source_url": "@source/744417b778c32f13", "source_glyph_complete": true, "source_printed_full_literal": "Kelmentsi"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Sokyriany", "kind": "city", "original": "Sokyriany", "original_bbox": [224, 254, 280, 274], "source_url": "@source/33b25ccced1678b8", "source_glyph_complete": true, "source_printed_full_literal": "Sokyriany"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Mohyliv-Podilskyi", "kind": "city", "original": "Mohyliv-Podilskyi", "original_bbox": [368, 248, 418, 284], "source_url": "@source/de37598e46837260", "source_glyph_complete": true, "source_printed_full_literal": "Mohyliv-Podilskyi"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Briceni", "kind": "city", "original": "Briceni", "original_bbox": [114, 301, 153, 317], "source_url": "@source/33b25ccced1678b8", "source_glyph_complete": true, "source_printed_full_literal": "Briceni"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Lipcani", "kind": "city", "original": "Lipcani", "original_bbox": [12, 354, 52, 373], "source_url": "@source/33b25ccced1678b8", "source_glyph_complete": true, "source_printed_full_literal": "Lipcani"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Edinet", "kind": "city", "original": "Edinet", "original_bbox": [191, 406, 233, 427], "source_url": "@source/33b25ccced1678b8", "source_glyph_complete": true, "source_printed_full_literal": "Edinet"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Donduseni", "kind": "city", "original": "Donduseni", "original_bbox": [295, 369, 354, 388], "source_url": "@source/de37598e46837260", "source_glyph_complete": true, "source_printed_full_literal": "Donduseni"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Drochia", "kind": "city", "original": "Drochia", "original_bbox": [378, 481, 421, 497], "source_url": "@source/de37598e46837260", "source_glyph_complete": true, "source_printed_full_literal": "Drochia"}
+  ],
+  "translations": [
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Dunaivtsi", "zh": "杜纳伊夫齐", "status": "approved", "source": "@source/de2c03d9e59e88ed", "record_sha256": "2cdb18ab0c2645a447fbc5f52144eb1509d5fb62a354ed873299e809d240b8df", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-NovaUshytsia", "zh": "新乌希察", "status": "approved", "source": "@source/4f35f45c11293638", "record_sha256": "2d76e223e7f9e79ce9740017637bb401dd266acbd939f0ccf06241e08f748963", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Kopaihorod", "zh": "科派霍罗德", "status": "approved", "source": "@source/1efcf0bcfb9dc1ae", "record_sha256": "7275e5b99cc40631c3357b3e5850c349008a70da9cef9ba155ccc71e109d6064", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-MurovaniKurylivtsi", "zh": "穆罗瓦尼库里利夫齐", "status": "approved", "source": "@source/507f9970dc8cd263", "record_sha256": "807d6ea26bc8d5e1c71a19194e81fbf7a15901d6c8c4d956f605a2d1065ece07", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-StaraUshytsia", "zh": "旧乌希察", "status": "approved", "source": "@source/40b03183c1c3f737", "record_sha256": "938d04e4ccb89d36fbd5c9a1512ae1904b087e4d45e38eb5f75b3c173d8c200c", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Novodnistrovsk", "zh": "新德涅斯特罗夫斯克", "status": "approved", "source": "@source/db280f1f35b97787", "record_sha256": "d835605fe12c8c0ee980d3eadc82da1789998d26bfa657e509c543340e08aadd", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Vendychany", "zh": "文德恰内", "status": "approved", "source": "@source/ee01877124226c2b", "record_sha256": "c29a167da550d612d483c7f4b8a0cadc5674d5f84f27fe76df6ed81b70e93f48", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Kelmentsi", "zh": "克利缅齐", "status": "approved", "source": "@source/01baa926860d0e48", "record_sha256": "4871ff09494ecc5f1aa58b415d7522290f0e24ca1fd65720f2e01921a98ce7fe", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Sokyriany", "zh": "索基里亚内", "status": "approved", "source": "@source/7e1c8704cdb056a6", "record_sha256": "e573c934d81ee33437883d36808eb8e065e553b4ddcc80439b87120518146042", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Mohyliv-Podilskyi", "zh": "莫希利夫-波迪利斯基", "status": "approved", "source": "@source/8077f3af0c738d1c", "record_sha256": "28dbf6c3fd647893fa4e938707a92b667e395ec1891bcbb2ba2af3f031a31bc5", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Briceni", "zh": "布里恰内", "status": "approved", "source": "@source/45ad9abeed0c2ac0", "record_sha256": "f461252bcb6fbed6bdd704417850dff67f22302e3decc141578922f1cd1d445b", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Lipcani", "zh": "利普卡尼", "status": "approved", "source": "@source/34f5ab4b35219d42", "record_sha256": "616bf160a44274919d869acb7f33679e2a987d7a715ba732d0e4fa04473d18db", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Edinet", "zh": "埃迪内茨", "status": "approved", "source": "@source/a9bee67fd69575bc", "record_sha256": "21d4dabda3cfa9a2665e9e89cf29343d80f2b4cf8222a1782e7e5ff013aa0af2", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Donduseni", "zh": "栋杜谢尼", "status": "approved", "source": "@source/267cafa582a0184d", "record_sha256": "b35ac59996e33b48628cd70bff27b9641accd060801b83005514f1f384b0b97b", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Drochia", "zh": "德罗基亚", "status": "approved", "source": "@source/f81720d724b018c8", "record_sha256": "ed402f790bbe27e4c27e3435f9c5906f5ba5f7c69ab3801ec972dcd08fe5744f", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"}
+  ],
+  "layouts": [
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Dunaivtsi", "x": 47.0, "y": 20.0, "font_style": "regular", "font_size": 12, "lines": ["杜纳伊夫齐"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-NovaUshytsia", "x": 200.0, "y": 51.5, "font_style": "regular", "font_size": 12, "lines": ["新乌希察"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Kopaihorod", "x": 393.5, "y": 37.5, "font_style": "regular", "font_size": 12, "lines": ["科派霍罗德"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-MurovaniKurylivtsi", "x": 297.0, "y": 117.0, "font_style": "regular", "font_size": 12, "lines": ["穆罗瓦尼", "库里利夫齐"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-StaraUshytsia", "x": 130.0, "y": 180.5, "font_style": "regular", "font_size": 12, "lines": ["旧乌希察"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Novodnistrovsk", "x": 260.0, "y": 186.5, "font_style": "regular", "font_size": 12, "lines": ["新德涅斯特罗夫斯克"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Vendychany", "x": 389.0, "y": 174.5, "font_style": "regular", "font_size": 12, "lines": ["文德恰内"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Kelmentsi", "x": 40.5, "y": 252.0, "font_style": "regular", "font_size": 12, "lines": ["克利缅齐"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Sokyriany", "x": 252.0, "y": 264.0, "font_style": "regular", "font_size": 12, "lines": ["索基里亚内"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Mohyliv-Podilskyi", "x": 393.0, "y": 266.0, "font_style": "regular", "font_size": 12, "lines": ["莫希利夫-", "波迪利斯基"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Briceni", "x": 133.5, "y": 309.0, "font_style": "regular", "font_size": 12, "lines": ["布里恰内"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Lipcani", "x": 32.0, "y": 363.5, "font_style": "regular", "font_size": 12, "lines": ["利普卡尼"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Edinet", "x": 212.0, "y": 416.5, "font_style": "regular", "font_size": 12, "lines": ["埃迪内茨"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Donduseni", "x": 324.5, "y": 378.5, "font_style": "regular", "font_size": 12, "lines": ["栋杜谢尼"]},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-Drochia", "x": 399.5, "y": 489.0, "font_style": "regular", "font_size": 12, "lines": ["德罗基亚"]}
+  ],
+  "shared_sources": [
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-existing-Sharhorod", "owner_region": "UA-SouthBoundary-z9-296-176", "feature_id": "UAS16-016", "kind": "city", "original": "Sharhorod", "original_bbox": [468, 87, 526, 104], "source_url": "@source/29cca351bc04f477", "review_notes": "保留既有同一原字的完整所属区及已核验中文输出。"},
+    {"id": "UA-MD9-Dunaivtsi-Sokyriany-Briceni-z9-294-176-2x2-existing-Chernivtsi", "owner_region": "UA-SouthBoundary-z9-296-176", "feature_id": "UAS16-017", "kind": "city", "original": "Chernivtsi", "original_bbox": [484, 202, 538, 219], "source_url": "@source/29cca351bc04f477", "review_notes": "保留既有同一原字的完整所属区及已核验中文输出。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

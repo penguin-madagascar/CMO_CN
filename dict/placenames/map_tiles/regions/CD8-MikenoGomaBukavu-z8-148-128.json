@@ -1,0 +1,35 @@
+{
+  "id": "CD8-MikenoGomaBukavu-z8-148-128",
+  "z": 8,
+  "x": 148,
+  "y": 128,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "8/148/128.png",
+    "8/148/129.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N01", "kind": "peak", "original": "Mount Mikeno", "original_bbox": [154, 229, 236, 260], "source_url": "@source/c9a48a6cfbf622b9", "source_glyph_complete": true, "source_printed_full_literal": "Mount Mikeno", "original_elevation_m": "4437"},
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N02", "kind": "city", "original": "Goma", "original_bbox": [204, 301, 239, 321], "source_url": "@source/3384a4e79c1ba591", "source_glyph_complete": true, "source_printed_full_literal": "Goma"},
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N03", "kind": "city", "original": "Bukavu", "original_bbox": [137, 454, 179, 473], "source_url": "@source/3384a4e79c1ba591", "source_glyph_complete": true, "source_printed_full_literal": "Bukavu"}
+  ],
+  "translations": [
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N01", "zh": "米凯诺山", "status": "approved", "source": "@source/cad88c0a15ce2a20", "record_sha256": "97d72f64ce245520dc76d3821e097c044df0f8b93a110f8f33f6eba81762325f", "review_notes": "联合国教科文组织资料同山名和海拔，中文为项目音译。"},
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N02", "zh": "戈马", "status": "approved", "source": "@source/3384a4e79c1ba591", "record_sha256": "9a48cad49c3837c788804f4c834c756f623d4a6bb8d6cee4c869a1bc03621ea4", "review_notes": "沿用实际 WWP 地名，源图有同一城市和原点。"},
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N03", "zh": "布卡武", "status": "approved", "source": "@source/3384a4e79c1ba591", "record_sha256": "29af88e54707968e33adb61d378e50ae5b7fba8c81edca0d6bae35576810b967", "review_notes": "沿用实际 WWP 地名，源图有同一城市和原点。"}
+  ],
+  "layouts": [
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N01", "x": 193, "y": 245, "font_size": 12, "font_style": "regular"},
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N02", "x": 222, "y": 314, "font_size": 12, "font_style": "regular"},
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N03", "x": 158, "y": 466, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N01-triangle", "feature_id": "CD8-MikenoGomaBukavu-z8-148-128-N01", "kind": "triangle", "original_bbox": [231, 262, 241, 271], "x": 236.0, "y": 266.5, "render_mode": "source_rgba", "source_symbol_only": true, "source_rgba_sha256": "00f0e1773c2da346b8dc6553f2fac683b5df22319c41475b27a12fededcab4ec", "review_notes": "原图完整独立三角形，保留原像素。"},
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N02-circle", "feature_id": "CD8-MikenoGomaBukavu-z8-148-128-N02", "kind": "circle", "original_bbox": [196, 299, 204, 308], "x": 200.0, "y": 303.5, "size": 9, "outline_width": 1},
+    {"id": "CD8-MikenoGomaBukavu-z8-148-128-N03-circle", "feature_id": "CD8-MikenoGomaBukavu-z8-148-128-N03", "kind": "circle", "original_bbox": [129, 452, 137, 461], "x": 133.0, "y": 456.5, "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

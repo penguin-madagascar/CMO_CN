@@ -1,0 +1,42 @@
+{
+  "id": "E4-PROPOSED-G10-PERU-z6-17-33-2-1",
+  "z": 6,
+  "x": 17,
+  "y": 33,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "6/17/33.png",
+    "6/18/33.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "E4-EXT-G10-P01", "kind": "admin0", "original": "PERU", "original_bbox": [387, 42, 463, 66], "source_url": "@source/20058854bd7fc162"},
+    {"id": "E4-EXT-G10-P02", "kind": "city", "original": "Pacasmayo", "original_bbox": [214, 77, 275, 99], "source_url": "@source/20058854bd7fc162"},
+    {"id": "E4-EXT-G10-P03", "kind": "city", "original": "Trujillo", "original_bbox": [239, 110, 282, 132], "source_url": "@source/20058854bd7fc162"},
+    {"id": "E4-EXT-G10-P04", "kind": "city", "original": "Pucallpa", "original_bbox": [443, 122, 492, 144], "source_url": "@source/20058854bd7fc162"},
+    {"id": "E4-EXT-G10-P05", "kind": "city", "original": "Chimbote", "original_bbox": [259, 154, 313, 174], "source_url": "@source/20058854bd7fc162"}
+  ],
+  "translations": [
+    {"id": "E4-EXT-G10-P01", "zh": "秘鲁", "status": "approved", "source": "@source/9b6f59ba99ffa1e2", "record_sha256": "02d495341c4346c3aed546db666320185ffb3515966b6908c4cd86358850f132", "review_notes": "Root lexical 45508b91a8135a22c309e95deb5f1368daebf9191800154dd8713d40290cba77; PRIMARY_OFFICIAL_OR_PUBLIC_INSTITUTION_EXPLICIT_ROMAN_HAN_LEXEME; Root selected exact Chinese; source supplier entity/class remains unknown."},
+    {"id": "E4-EXT-G10-P02", "zh": "帕卡斯马约", "status": "approved", "source": "@source/fa2f6e9e35dfc4dc", "record_sha256": "f849eec169aa6a6536a7b713a857db3ac137bfab56ddea917533ad6732590e73", "review_notes": "Root lexical 45508b91a8135a22c309e95deb5f1368daebf9191800154dd8713d40290cba77; PRIMARY_LOCAL_CHINESE_COMMUNITY_FIRSTHAND_BILINGUAL_REPORT_NOT_STATE_STANDARD; Root selected exact Chinese; source supplier entity/class remains unknown."},
+    {"id": "E4-EXT-G10-P03", "zh": "特鲁希略", "status": "approved", "source": "@source/b13e24733a6394f7", "record_sha256": "cd0a87c3603d5b1313b0639d50421592bbc30d84cbe0c254c5a513ae92a0c0ac", "review_notes": "Root lexical 45508b91a8135a22c309e95deb5f1368daebf9191800154dd8713d40290cba77; PRIMARY_OFFICIAL_OR_PUBLIC_INSTITUTION_EXPLICIT_ROMAN_HAN_LEXEME; Root selected exact Chinese; source supplier entity/class remains unknown."},
+    {"id": "E4-EXT-G10-P04", "zh": "普卡尔帕", "status": "approved", "source": "@source/b13e24733a6394f7", "record_sha256": "47963a3e300ed653a6f66da3685bdcdae04f05e53532ab0dd59de9e7bd9b2a62", "review_notes": "Root lexical 45508b91a8135a22c309e95deb5f1368daebf9191800154dd8713d40290cba77; PRIMARY_OFFICIAL_OR_PUBLIC_INSTITUTION_EXPLICIT_ROMAN_HAN_LEXEME; Root selected exact Chinese; source supplier entity/class remains unknown."},
+    {"id": "E4-EXT-G10-P05", "zh": "钦博特", "status": "approved", "source": "@source/b13e24733a6394f7", "record_sha256": "1a5f61b8fbe683780c78c02501b93c031ee881a5211f9474b027138a0abb462d", "review_notes": "Root lexical 45508b91a8135a22c309e95deb5f1368daebf9191800154dd8713d40290cba77; PRIMARY_OFFICIAL_OR_PUBLIC_INSTITUTION_EXPLICIT_ROMAN_HAN_LEXEME; Root selected exact Chinese; source supplier entity/class remains unknown."}
+  ],
+  "layouts": [
+    {"id": "E4-EXT-G10-P01", "x": 425.0, "y": 54.0, "font_size": 18, "font_style": "regular"},
+    {"id": "E4-EXT-G10-P02", "x": 244.5, "y": 98.0, "font_size": 12, "font_style": "regular"},
+    {"id": "E4-EXT-G10-P03", "x": 260.5, "y": 131.0, "font_size": 12, "font_style": "regular"},
+    {"id": "E4-EXT-G10-P04", "x": 467.5, "y": 143.0, "font_size": 12, "font_style": "regular"},
+    {"id": "E4-EXT-G10-P05", "x": 292.0, "y": 164.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "E4-EXT-G10-P02-point", "feature_id": "E4-EXT-G10-P02", "kind": "circle", "x": 218.5, "y": 81.5, "size": 9, "outline_width": 1, "original_bbox": [214, 77, 223, 86]},
+    {"id": "E4-EXT-G10-P03-point", "feature_id": "E4-EXT-G10-P03", "kind": "circle", "x": 243.5, "y": 114.5, "size": 9, "outline_width": 1, "original_bbox": [239, 110, 248, 119]},
+    {"id": "E4-EXT-G10-P04-point", "feature_id": "E4-EXT-G10-P04", "kind": "circle", "x": 447.5, "y": 126.5, "size": 9, "outline_width": 1, "original_bbox": [443, 122, 452, 131]},
+    {"id": "E4-EXT-G10-P05-point", "feature_id": "E4-EXT-G10-P05", "kind": "circle", "x": 263.5, "y": 158.5, "size": 9, "outline_width": 1, "original_bbox": [259, 154, 268, 163]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

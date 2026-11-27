@@ -45,5 +45,8 @@
     {"id": "WUS2-SH-003", "owner_region": "AM-SoCalBorder-z9-88-200", "feature_id": "AM9-25-Pasadena", "kind": "city", "original": "Pasadena", "original_bbox": [219, 316, 280, 336], "source_url": "@source/a070a6cc8b3d5e65", "review_notes": "@note/shared_sources"},
     {"id": "WUS2-SH-004", "owner_region": "AM-SoCalBorder-z9-88-200", "feature_id": "AM9-38-Seal-Beach", "kind": "city", "original": "Seal Beach", "original_bbox": [233, 495, 294, 512], "source_url": "@source/a070a6cc8b3d5e65", "review_notes": "@note/shared_sources"}
   ],
-  "legacy_suppressions": []
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "WWP-Cities-4024-z9", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 4024, "original_Chinese_name": "好莱坞", "lat_f32_bits": 1107846323, "lon_f32_bits": 3270289226, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 183.0, "y": 348.0, "font_style": "regular", "font_size": 12, "lines": ["好莱坞"]}}
+  ]
 }

@@ -1,0 +1,31 @@
+{
+  "id": "D4-G68-z8-134-122-2-1",
+  "z": 8,
+  "x": 134,
+  "y": 122,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/134/122.png",
+    "8/135/122.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "D4-G68-W01", "kind": "city", "original": "Wukari", "original_bbox": [240, 94, 286, 115], "source_url": "@source/a6ce1cf286fa76ca"},
+    {"id": "D4-G68-W02", "kind": "city", "original": "Makurdi", "original_bbox": [14, 120, 69, 142], "source_url": "@source/ebbb2f868b89a902"}
+  ],
+  "translations": [
+    {"id": "D4-G68-W01", "zh": "武卡里", "status": "approved", "source": "@source/a6ce1cf286fa76ca", "record_sha256": "4b4cd91befb2fc3d9a53651d91078c20eaeed0b0ce8e2065eb58baec52bed8f9", "review_notes": "Root lexical selection 9fa6926e811c3d2ca3e30332bf1fd447e799598ca0311647493e33110be755ac; PRIMARY_PUBLISHED_CHINESE_USAGE_NOT_NATIONAL_NAMING_STANDARD_OR_VENDOR_ENTITY; Original image literal; Chinese authority is separate exact Root lexical selection, not image-Chinese or supplier entity; Root lexical evidence {\"path\": \"evidence/parallel_map/reviews/C4_D4_closed25_Chinese_lexical_PROPOSAL_PRIMARY_TEXT_ONLY_20261028/CHINESE25_LEXICAL_PROPOSALS_NOT_ROOT_SELECTION_OR_SOURCE_IDENTITY.json\", \"sha256\": \"ddeef1bff36bcd793ee2502a7043f53f8471f5c5b8f11111e8ba8b13a9199e88\"}. Supplier entity/point remain unassigned."},
+    {"id": "D4-G68-W02", "zh": "马库尔迪", "status": "approved", "source": "@source/ebbb2f868b89a902", "record_sha256": "bc531de7a2f02115503050ed2d75a38fef1e98e6e9e983eae85a9e8a83751d33", "review_notes": "Root lexical selection 9fa6926e811c3d2ca3e30332bf1fd447e799598ca0311647493e33110be755ac; PRIMARY_PUBLISHED_CHINESE_USAGE_NOT_NATIONAL_NAMING_STANDARD_OR_VENDOR_ENTITY; Original image literal; Chinese authority is separate exact Root lexical selection, not image-Chinese or supplier entity; Root lexical evidence {\"path\": \"evidence/parallel_map/reviews/C4_D4_closed25_Chinese_lexical_PROPOSAL_PRIMARY_TEXT_ONLY_20261028/CHINESE25_LEXICAL_PROPOSALS_NOT_ROOT_SELECTION_OR_SOURCE_IDENTITY.json\", \"sha256\": \"ddeef1bff36bcd793ee2502a7043f53f8471f5c5b8f11111e8ba8b13a9199e88\"}. Supplier entity/point remain unassigned."}
+  ],
+  "layouts": [
+    {"id": "D4-G68-W01", "x": 273.0, "y": 104.5, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-G68-W02", "x": 41.5, "y": 141.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "D4-G68-W01-point", "feature_id": "D4-G68-W01", "kind": "circle", "x": 244.5, "y": 98.5, "size": 9, "outline_width": 1, "original_bbox": [240, 94, 249, 103]},
+    {"id": "D4-G68-W02-point", "feature_id": "D4-G68-W02", "kind": "circle", "x": 18.5, "y": 124.5, "size": 9, "outline_width": 1, "original_bbox": [14, 120, 23, 129]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,24 @@
+{
+  "id": "World-DrakePassage-z5-10-22",
+  "z": 5,
+  "x": 10,
+  "y": 22,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "5/10/22.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "World-DrakePassage-z5-10-22-DrakePassage", "original": "Drake Passage", "kind": "marine", "original_bbox": [87, 125, 154, 161], "source_url": "@source/9f806d49bbf5d11b", "source_glyph_complete": true, "source_printed_full_literal": "Drake Passage"}
+  ],
+  "translations": [
+    {"id": "World-DrakePassage-z5-10-22-DrakePassage", "zh": "德雷克海峡", "status": "approved", "source": "@source/a9608f1aeabfcb6b", "record_sha256": "2808d4f7aa1f48509f75f8c6c83d68b8ef7d23e15fc3737de00ae5e09af29e1c", "review_notes": "原版跨片拼合后实读完整名称，中文按所列地名资料或既有审定词条。"}
+  ],
+  "layouts": [
+    {"id": "World-DrakePassage-z5-10-22-DrakePassage", "x": 120.5, "y": 143.0, "font_style": "bold", "font_size": 14, "lines": ["德雷克海峡"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "F530-G44-Dunhuang-z7-97-48",
+  "z": 7,
+  "x": 97,
+  "y": 48,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/97/48.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "F5-N01", "kind": "city", "original": "Dunhuang", "original_bbox": [164, 96, 221, 118], "source_url": "@source/da5c4138cc2647c5"}
+  ],
+  "symbols": [
+    {"id": "F5-N01-circle", "feature_id": "F5-N01", "kind": "circle", "x": 168.5, "y": 100.5, "size": 9, "outline_width": 1, "original_bbox": [164, 96, 173, 105]}
+  ],
+  "translations": [
+    {"id": "F5-N01", "zh": "敦煌", "status": "approved", "source": "@source/da5c4138cc2647c5", "record_sha256": "fee59ed3099c33f319da9ecd33f193c66686c819bb1deab506a4bec6fa97cba1", "review_notes": "Original supplier PNG URI proves the original printed label only. Chinese uses the different-SOURCE effective lexical grade in the bound per-ID contract: ORIGINAL_NE_NAME_ZH_COMMUNITY_CHINESE_LEXICAL_EVIDENCE_NOT_OFFICIAL_OR_SUPPLIER_ID. NE GEONAMESID=-1 is not a record bridge; valid NE/GN links are database context only. Supplier ID/admin/vector remain null. Actual Target is pending Root selection and different review. Root61be actual author SELF model only; different TARGET pending."}
+  ],
+  "layouts": [
+    {"id": "F5-N01", "x": 197, "y": 110, "font_size": 12, "font_style": "regular", "lines": ["敦煌"]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

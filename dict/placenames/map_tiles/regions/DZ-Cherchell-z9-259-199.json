@@ -1,0 +1,26 @@
+{
+  "id": "DZ-Cherchell-z9-259-199",
+  "z": 9,
+  "x": 259,
+  "y": 199,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/259/199.png"
+  ],
+  "context_tiles": [
+    "9/259/200.png"
+  ],
+  "features": [
+    {"id": "DZ-Cherchell-z9-259-199-00", "kind": "city", "original": "Cherchell", "original_bbox": [4, 243, 56, 260], "source_url": "@source/c18cfb048785ac33", "source_glyph_complete": true, "source_printed_full_literal": "Cherchell"}
+  ],
+  "translations": [
+    {"id": "DZ-Cherchell-z9-259-199-00", "zh": "舍尔沙勒", "status": "approved", "source": "@source/eb57bee1f85e4dfa", "review_notes": "Exact dual-language port name.", "record_sha256": "24ddfad722564a5a38d0aca0e94a301b7cd7f15230b54241d6398e572d66e3ca"}
+  ],
+  "layouts": [
+    {"id": "DZ-Cherchell-z9-259-199-00", "x": 30, "y": 247, "font_size": 12, "font_style": "regular", "lines": ["舍尔沙勒"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

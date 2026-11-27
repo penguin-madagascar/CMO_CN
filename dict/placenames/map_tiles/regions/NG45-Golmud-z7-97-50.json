@@ -1,0 +1,36 @@
+{
+  "id": "NG45-Golmud-z7-97-50",
+  "z": 7,
+  "x": 97,
+  "y": 50,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "notes": "完整原字、原点位及中文的纯元数据候选；实际 Target 尚未授权或验证。",
+  "original_tiles": [
+    "7/97/50.png"
+  ],
+  "context_tiles": [
+    "7/96/49.png",
+    "7/97/49.png",
+    "7/98/49.png",
+    "7/96/50.png",
+    "7/98/50.png",
+    "7/96/51.png",
+    "7/97/51.png",
+    "7/98/51.png"
+  ],
+  "features": [
+    {"id": "NG45-Golmud", "kind": "city", "original": "Golmud", "original_bbox": [186, 18, 232, 37], "source_url": "@source/9260ded96959e5ba"}
+  ],
+  "translations": [
+    {"id": "NG45-Golmud", "zh": "格尔木", "status": "approved", "source": "@source/c8fcb8b1cb22d405", "record_sha256": "75ddc134f22145191926215271130d1e608ebdcea417978e910b5669b9bcf16b", "review_notes": "完整原字、原 mixed frame 与中文词形已获不同 Source 核验；本件只选择实际 Target 模型，渲染结果仍待核验。 AUTHOR ACTUAL SELF PRIVATE ONLY /root/fujian_target_author; different TARGET C3 pending. Personally inspected all8 boards: both complete original words and actual Chinese 格尔木/瓦迪哈勒法, full5px, both whole1x1 canvases, original mixed72 frames vs actual Target73 frames, all4 external edges each. No missing glyph, clipping or collision; measured native-to-glyph positive bbox gap5px each. Glyphfirst exact measurements moved only textx Golmud196.5→219.0 and WadiHalfa81.5→116.0, y unchanged; font12regular and native9/outline1 and original midpoints unchanged. Source complete positive579+982 exact to qualified Source rows. Original rawcropSHA is distinct from author zeroRGB illustrationSHA. The mixed72 frames are not isolated native layers; diagnostic69 subset is covered69/69 by actual73 but is not Source native paint ownership. Raw72 coverage by new native frame is70/72; adjacent original glyph pixels are not declared native paint. Source2/N2/C0/H0/alias0/newrules0/oldruntime0. Source16 exact; unknown2 unread/GET0. Old27/29epochs full metadata, published738/742, READY237, WWP4608/f32 and953 original order preserved; old PNG/DAT not read. No formal or Root READY approval."}
+  ],
+  "layouts": [
+    {"id": "NG45-Golmud", "x": 219.0, "y": 25.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "NG45-Golmud-point", "feature_id": "NG45-Golmud", "kind": "circle", "x": 190.5, "y": 22.5, "size": 9, "outline_width": 1, "original_bbox": [186, 18, 195, 27]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

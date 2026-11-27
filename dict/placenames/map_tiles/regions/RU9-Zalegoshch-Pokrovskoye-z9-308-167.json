@@ -1,0 +1,33 @@
+{
+  "id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167",
+  "z": 9,
+  "x": 308,
+  "y": 167,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/308/167.png"
+  ],
+  "context_tiles": [
+    "9/308/166.png",
+    "9/309/167.png"
+  ],
+  "features": [
+    {"id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167-Zalegoshch", "kind": "city", "original": "Залегощь", "original_bbox": [93, -5, 148, 14], "source_url": "@source/2b6f84ed045592fd", "source_glyph_complete": true, "source_printed_full_literal": "Залегощь"},
+    {"id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167-Pokrovskoye", "kind": "city", "original": "Pokrovskoye", "original_bbox": [76, 173, 146, 192], "source_url": "@source/2b6f84ed045592fd", "source_glyph_complete": true, "source_printed_full_literal": "Pokrovskoye"}
+  ],
+  "translations": [
+    {"id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167-Zalegoshch", "zh": "扎列戈希", "status": "approved", "source": "@source/0316e124c9bd69f8", "record_sha256": "d057888a2616214eb84e72f9a7eaf322450b358ca7a668104edbdde9a6285db6", "review_notes": "用完整原版字样和奥廖尔州坐标核对实体，按可核验的既有译名或项目音译。"},
+    {"id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167-Pokrovskoye", "zh": "波克罗夫斯科耶", "status": "approved", "source": "@source/31b4d488718ba270", "record_sha256": "9e7b57090095703ea0fc7e031ce7d52a54b3be2fc6a71fa15331c41e699c8df2", "review_notes": "用完整原版字样和奥廖尔州坐标核对实体，按可核验的既有译名或项目音译。"}
+  ],
+  "layouts": [
+    {"id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167-Zalegoshch", "x": 120.5, "y": 9.5, "font_size": 12, "font_style": "regular"},
+    {"id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167-Pokrovskoye", "x": 111, "y": 182.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "shared_sources": [
+    {"id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167-share-UA20-N011", "owner_region": "UA20-OryolLipetsk-309-167", "feature_id": "UA20-N011", "original": "Verkhovye", "kind": "city", "source_url": "@source/2b6f84ed045592fd", "original_bbox": [217, 51, 276, 70], "review_notes": "保留原文跨片，中文只由明确归属提供。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

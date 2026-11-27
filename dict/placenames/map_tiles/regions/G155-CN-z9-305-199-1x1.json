@@ -1,0 +1,32 @@
+{
+  "id": "G155-CN-z9-305-199-1x1",
+  "z": 9,
+  "x": 305,
+  "y": 199,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/305/199.png"
+  ],
+  "context_tiles": [
+    "9/305/198.png"
+  ],
+  "features": [
+    {"id": "G155-N-01", "kind": "region", "original": "Çamlıyayla", "original_bbox": [21, -12, 82, 8], "source_url": "@source/3b5c57f5ccab139d", "source_printed_full_literal": "Çamlıyayla", "source_glyph_complete": true, "providerpoint": null},
+    {"id": "G155-N-02", "kind": "region", "original": "Tarsus", "original_bbox": [142, 103, 180, 119], "source_url": "@source/3b5c57f5ccab139d", "source_printed_full_literal": "Tarsus", "source_glyph_complete": true, "providerpoint": null},
+    {"id": "G155-N-03", "kind": "region", "original": "Mersin", "original_bbox": [43, 156, 86, 174], "source_url": "@source/3b5c57f5ccab139d", "source_printed_full_literal": "Mersin", "source_glyph_complete": true, "providerpoint": null}
+  ],
+  "translations": [
+    {"id": "G155-N-01", "zh": "恰姆勒亚伊拉", "status": "approved", "source": "@source/3b5c57f5ccab139d", "record_sha256": "16c707857b6e96319969c931926606272c94f695281541364ec148bdd808cf6f", "review_notes": "Root explicitly selected this bare Chinese display caption and fixed layout in the current parent instruction. Grade C project transliteration; not an official Chinese or entity claim. Source URL identifies printed artwork only. Provider/entity/admin/point remain NULL."},
+    {"id": "G155-N-02", "zh": "塔尔苏斯", "status": "approved", "source": "@source/3b5c57f5ccab139d", "record_sha256": "356dee2a2dbb9ac6effed55994bf6a94b08f1220c978755dad3c41605d4221c7", "review_notes": "Root explicitly selected this bare Chinese display caption and fixed layout in the current parent instruction. Existing approved EM8 caption reused lexically only. Source URL identifies printed artwork only. Provider/entity/admin/point remain NULL."},
+    {"id": "G155-N-03", "zh": "梅尔辛", "status": "approved", "source": "@source/3b5c57f5ccab139d", "record_sha256": "34eb70c7b1cf742faea2a12e02fcc771b425f9a9e6e95162bb8c4c85e378078f", "review_notes": "Root explicitly selected this bare Chinese display caption and fixed layout in the current parent instruction. Existing approved EM8 caption reused lexically only. Source URL identifies printed artwork only. Provider/entity/admin/point remain NULL."}
+  ],
+  "layouts": [
+    {"id": "G155-N-01", "x": 51.5, "y": 14.0, "font_size": 12, "font_style": "regular", "lines": ["恰姆勒亚伊拉"]},
+    {"id": "G155-N-02", "x": 161.0, "y": 111.0, "font_size": 12, "font_style": "regular", "lines": ["塔尔苏斯"]},
+    {"id": "G155-N-03", "x": 64.5, "y": 165.0, "font_size": 12, "font_style": "regular", "lines": ["梅尔辛"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "RU-KhantyMansiyskOkrugUgra-z6-44-17-1x2",
+  "z": 6,
+  "x": 44,
+  "y": 17,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "6/44/17.png",
+    "6/44/18.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "RU-KhantyMansiyskOkrugUgra-z6-44-17-1x2-S01", "kind": "admin1", "original": "KHANTY-MANSIYSK AUTONOMOUS OKRUG - UGRA", "original_bbox": [2, 191, 102, 265], "source_url": "@source/2dac64bc200daa76", "source_glyph_complete": true, "source_printed_full_literal": "KHANTY-MANSIYSK AUTONOMOUS OKRUG - UGRA"}
+  ],
+  "translations": [
+    {"id": "RU-KhantyMansiyskOkrugUgra-z6-44-17-1x2-S01", "zh": "汉特-曼西自治区-尤格拉", "status": "approved", "source": "@source/26494083afc21328", "record_sha256": "59e1b37b6aef8b16e8791b8e6b882ca2d935500039cb38fceb07d686671c987b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "RU-KhantyMansiyskOkrugUgra-z6-44-17-1x2-S01", "x": 54, "y": 249, "font_style": "bold", "font_size": 14, "lines": ["汉特-曼西", "自治区-尤格拉"]}
+  ],
+  "shared_sources": [],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "RU-KhantyMansiyskOkrugUgra-z6-44-17-1x2-Cities3471", "kind": "region", "origin": "canonical_wwp", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3471, "original_Chinese_name": "涅夫捷尤甘斯克", "lat_f32_bits": 1114924591, "lon_f32_bits": 1116812541, "flags": 0, "level": 1}, "layout": {"x": 205, "y": 304, "font_style": "regular", "font_size": 12, "lines": ["涅夫捷尤甘斯克"]}}
+  ]
+}

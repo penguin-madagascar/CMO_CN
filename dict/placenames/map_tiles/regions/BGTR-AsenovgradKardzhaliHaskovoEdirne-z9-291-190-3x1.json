@@ -1,0 +1,63 @@
+{
+  "id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1",
+  "z": 9,
+  "x": 291,
+  "y": 190,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/291/190.png",
+    "9/292/190.png",
+    "9/293/190.png"
+  ],
+  "context_tiles": [
+    "9/291/191.png",
+    "9/293/191.png"
+  ],
+  "features": [
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S01", "kind": "city", "original": "Asenovgrad", "original_bbox": [64, 4, 130, 24], "source_url": "@source/ccec1630c12ebd16", "source_glyph_complete": true, "source_printed_full_literal": "Asenovgrad"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S02", "kind": "city", "original": "Laki", "original_bbox": [68, 90, 92, 106], "source_url": "@source/ccec1630c12ebd16", "source_glyph_complete": true, "source_printed_full_literal": "Laki"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S03", "kind": "city", "original": "Chepelare", "original_bbox": [1, 141, 55, 161], "source_url": "@source/ccec1630c12ebd16", "source_glyph_complete": true, "source_printed_full_literal": "Chepelare"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S04", "kind": "city", "original": "Smolyan", "original_bbox": [6, 213, 61, 235], "source_url": "@source/ccec1630c12ebd16", "source_glyph_complete": true, "source_printed_full_literal": "Smolyan"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S05", "kind": "city", "original": "Ardino", "original_bbox": [172, 212, 210, 229], "source_url": "@source/ccec1630c12ebd16", "source_glyph_complete": true, "source_printed_full_literal": "Ardino"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S06", "kind": "city", "original": "Kardzhali", "original_bbox": [249, 181, 307, 199], "source_url": "@source/8be973285025eb5e", "source_glyph_complete": true, "source_printed_full_literal": "Kardzhali"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S07", "kind": "city", "original": "Haskovo", "original_bbox": [318, 39, 372, 57], "source_url": "@source/8be973285025eb5e", "source_glyph_complete": true, "source_printed_full_literal": "Haskovo"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S08", "kind": "city", "original": "Harmanli", "original_bbox": [445, 42, 496, 58], "source_url": "@source/8be973285025eb5e", "source_glyph_complete": true, "source_printed_full_literal": "Harmanli"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S09", "kind": "city", "original": "Lyubimets", "original_bbox": [508, 84, 565, 103], "source_url": "@source/94133431c6352201", "source_glyph_complete": true, "source_printed_full_literal": "Lyubimets"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S10", "kind": "city", "original": "Svilengrad", "original_bbox": [550, 120, 610, 141], "source_url": "@source/94133431c6352201", "source_glyph_complete": true, "source_printed_full_literal": "Svilengrad"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S11", "kind": "city", "original": "Edirne", "original_bbox": [690, 166, 731, 183], "source_url": "@source/94133431c6352201", "source_glyph_complete": true, "source_printed_full_literal": "Edirne"}
+  ],
+  "translations": [
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S01", "zh": "阿塞诺夫格勒", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "fc7ffa08115e908be0f4d69f55e1346822064731d4d9f9c62b1696146b33f099", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S02", "zh": "拉基", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "080c86ba90fc59e0554dce76963d60870b83ba4f3e03723376ed189041b9b57d", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S03", "zh": "切佩拉雷", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "19d08ddb747fcc9774b7bc5ef550d914df81458a0703f89fdde01bc48a3f072e", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S04", "zh": "斯莫梁", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "4cea99584e31876221eae6e1309825c2dda5d0c239cfd4c4048b2d56e1205591", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S05", "zh": "阿尔迪诺", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "af54a5882790235ea0d60b7788d419ae45f6daed316476240362399b592e2a51", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S06", "zh": "克尔贾利", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "19cf6b7c127e7117f8301f2efd19336ee853436a85268856b864804bc6aaef48", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S07", "zh": "哈斯科沃", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "975cb5fe1e2f89c0ec2a7f5258fcba95ec076b8af607a1600826b8ba61a2763b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S08", "zh": "哈曼利", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "a6b8824be0f0b2fbea8748449f10e9d7c5097f1c4bfa4db1dd1dfe188502c537", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S09", "zh": "柳比梅茨", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "cad6eeefd63f188ec0be975c227e28f8a202ec89b4c9a6e4394b438876819bf4", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S10", "zh": "斯维伦格勒", "status": "approved", "source": "@source/caf2e6a24b7a6f6d", "record_sha256": "df74e43a445855f784cdac81f456113bea85a9b4c81c1d82d66124d962eb46d5", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S11", "zh": "埃迪尔内", "status": "approved", "source": "@source/ed7de8a776cc10ea", "record_sha256": "9f7a4b359c565c5b68cc66de05254170ab8c5cf5c8706714b865c4a7ec079a8e", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S01", "x": 98, "y": 14, "font_style": "regular", "font_size": 12, "lines": ["阿塞诺夫格勒"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S02", "x": 82, "y": 99, "font_style": "regular", "font_size": 12, "lines": ["拉基"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S03", "x": 33, "y": 150, "font_style": "regular", "font_size": 12, "lines": ["切佩拉雷"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S04", "x": 35, "y": 223, "font_style": "regular", "font_size": 12, "lines": ["斯莫梁"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S05", "x": 192, "y": 220, "font_style": "regular", "font_size": 12, "lines": ["阿尔迪诺"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S06", "x": 279, "y": 189, "font_style": "regular", "font_size": 12, "lines": ["克尔贾利"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S07", "x": 345, "y": 47, "font_style": "regular", "font_size": 12, "lines": ["哈斯科沃"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S08", "x": 472, "y": 51, "font_style": "regular", "font_size": 12, "lines": ["哈曼利"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S09", "x": 538, "y": 93, "font_style": "regular", "font_size": 12, "lines": ["柳比梅茨"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S10", "x": 584, "y": 128, "font_style": "regular", "font_size": 12, "lines": ["斯维伦格勒"]},
+    {"id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-S11", "x": 713, "y": 175, "font_style": "regular", "font_size": 12, "lines": ["埃迪尔内"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Madan", "source_url": "@source/cc28c21d0a569b7e", "id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-shared-GR16-N-006", "original_bbox": [101, 253, 140, 269], "owner_region": "GR16-NC-z9-289-191", "feature_id": "GR16-N-006", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Ivaylovgrad", "source_url": "@source/26ff6a8ca8d9d693", "id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-shared-GR16-N-001", "original_bbox": [519, 240, 584, 259], "owner_region": "GR16-NE-z9-293-191", "feature_id": "GR16-N-001", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Orestiada", "source_url": "@source/26ff6a8ca8d9d693", "id": "BGTR-AsenovgradKardzhaliHaskovoEdirne-z9-291-190-3x1-shared-GR16-N-005", "original_bbox": [674, 250, 727, 267], "owner_region": "GR16-NE-z9-293-191", "feature_id": "GR16-N-005", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

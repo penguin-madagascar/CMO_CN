@@ -1,0 +1,41 @@
+{
+  "id": "NC4-MODEL-R2",
+  "z": 9,
+  "x": 432,
+  "y": 191,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/432/191.png"
+  ],
+  "context_tiles": [
+    "9/431/191.png",
+    "9/433/191.png"
+  ],
+  "features": [
+    {"id": "NC4-MODEL-N04", "kind": "city", "original": "Qinghecheng", "original_bbox": [137, 17, 209, 38], "source_url": "@source/f8769924af8358dc"},
+    {"id": "NC4-MODEL-N06", "kind": "city", "original": "Benxi Manchu Autonomous County", "original_bbox": [97, 62, 176, 143], "source_url": "@source/f8769924af8358dc"},
+    {"id": "NC4-MODEL-N10", "kind": "city", "original": "Benxi", "original_bbox": [-15, 96, 21, 114], "source_url": "@source/f8769924af8358dc"},
+    {"id": "NC4-MODEL-N23", "kind": "city", "original": "Nanfen", "original_bbox": [-24, 185, 22, 203], "source_url": "@source/f8769924af8358dc"},
+    {"id": "NC4-MODEL-N26", "kind": "city", "original": "Caoheczhang", "original_bbox": [70, 205, 142, 225], "source_url": "@source/f8769924af8358dc"}
+  ],
+  "translations": [
+    {"id": "NC4-MODEL-N04", "zh": "清河城", "status": "approved", "source": "@source/f8769924af8358dc", "record_sha256": "7ac3fe7ec80001e974359614432003db65c2d87077c3490f76bb6471875ac739", "review_notes": "Source candidate grade ORIGINAL_GN_OR_NE_HAN_FIELD_EXPLICIT_BARE_STEM_IF_SUFFIXED retained. Source semantic class plain_geographic_label remains separate from city/12regular text display adapter. No source point/native, official bilingual identity or Target review is implied. Different Source Q and Root model pending. Root8b9 effective18 new Chinese,4 complete Source normal aliases,3new owners4cores. Author Secondary personally viewed all18 full glyph/Source pairs,3whole owners and1new internal join; allalpha and positiveRGBA pristine with complete Source boxes/CJK grades, no crop, overlap or xy change. ManpoN20/JianN21 distinct; Dongyingfang and Rokrim soleREADY owners retain their full approved aliases/Chinese. No C/native/H/newrule; only SELF_PRIVATE_MODEL_ONLY technical acceptance, different Target Primary pending. CurrentP128 and READY6 are separate readonly provenances, neither is new coverage or duplicate output. ParentHOLD8 unchanged. No Root window/fullcurrent/formal authority."},
+    {"id": "NC4-MODEL-N06", "zh": "本溪满族自治县", "status": "approved", "source": "@source/f8769924af8358dc", "record_sha256": "9330f11c73840b3a6dad004a58065f9f83f6b1e024a86c662d3b9dfa6cc49e28", "review_notes": "Source candidate grade ORIGINAL_GN_OR_NE_HAN_FIELD_EXPLICIT_BARE_STEM_IF_SUFFIXED retained. Source semantic class autonomous_county remains separate from city/12regular text display adapter. No source point/native, official bilingual identity or Target review is implied. Different Source Q and Root model pending. Root8b9 effective18 new Chinese,4 complete Source normal aliases,3new owners4cores. Author Secondary personally viewed all18 full glyph/Source pairs,3whole owners and1new internal join; allalpha and positiveRGBA pristine with complete Source boxes/CJK grades, no crop, overlap or xy change. ManpoN20/JianN21 distinct; Dongyingfang and Rokrim soleREADY owners retain their full approved aliases/Chinese. No C/native/H/newrule; only SELF_PRIVATE_MODEL_ONLY technical acceptance, different Target Primary pending. CurrentP128 and READY6 are separate readonly provenances, neither is new coverage or duplicate output. ParentHOLD8 unchanged. No Root window/fullcurrent/formal authority."},
+    {"id": "NC4-MODEL-N10", "zh": "本溪", "status": "approved", "source": "@source/f8769924af8358dc", "record_sha256": "ad27810387f5d53db70d956bca584bbdebc246b6e8f4113b2b887e3d5cf994a8", "review_notes": "Source candidate grade ORIGINAL_GN_OR_NE_HAN_FIELD_EXPLICIT_BARE_STEM_IF_SUFFIXED retained. Source semantic class plain_geographic_label remains separate from city/12regular text display adapter. No source point/native, official bilingual identity or Target review is implied. Different Source Q and Root model pending. Root8b9 effective18 new Chinese,4 complete Source normal aliases,3new owners4cores. Author Secondary personally viewed all18 full glyph/Source pairs,3whole owners and1new internal join; allalpha and positiveRGBA pristine with complete Source boxes/CJK grades, no crop, overlap or xy change. ManpoN20/JianN21 distinct; Dongyingfang and Rokrim soleREADY owners retain their full approved aliases/Chinese. No C/native/H/newrule; only SELF_PRIVATE_MODEL_ONLY technical acceptance, different Target Primary pending. CurrentP128 and READY6 are separate readonly provenances, neither is new coverage or duplicate output. ParentHOLD8 unchanged. No Root window/fullcurrent/formal authority."},
+    {"id": "NC4-MODEL-N23", "zh": "南芬", "status": "approved", "source": "@source/f8769924af8358dc", "record_sha256": "04d9755179c1db5c03aa20d88e58c9266894c4c19543579ce613115648ee6db5", "review_notes": "Source candidate grade ORIGINAL_GN_OR_NE_HAN_FIELD_EXPLICIT_BARE_STEM_IF_SUFFIXED retained. Source semantic class plain_geographic_label remains separate from city/12regular text display adapter. No source point/native, official bilingual identity or Target review is implied. Different Source Q and Root model pending. Root8b9 effective18 new Chinese,4 complete Source normal aliases,3new owners4cores. Author Secondary personally viewed all18 full glyph/Source pairs,3whole owners and1new internal join; allalpha and positiveRGBA pristine with complete Source boxes/CJK grades, no crop, overlap or xy change. ManpoN20/JianN21 distinct; Dongyingfang and Rokrim soleREADY owners retain their full approved aliases/Chinese. No C/native/H/newrule; only SELF_PRIVATE_MODEL_ONLY technical acceptance, different Target Primary pending. CurrentP128 and READY6 are separate readonly provenances, neither is new coverage or duplicate output. ParentHOLD8 unchanged. No Root window/fullcurrent/formal authority."},
+    {"id": "NC4-MODEL-N26", "zh": "草河掌", "status": "approved", "source": "@source/f8769924af8358dc", "record_sha256": "8e86e7eb6c77eca715759e0939748fefcfb07008007713d9f02a5db1794b67e2", "review_notes": "Source candidate grade ORIGINAL_GN_OR_NE_HAN_FIELD_EXPLICIT_BARE_STEM_IF_SUFFIXED retained. Source semantic class plain_geographic_label remains separate from city/12regular text display adapter. No source point/native, official bilingual identity or Target review is implied. Different Source Q and Root model pending. Root8b9 effective18 new Chinese,4 complete Source normal aliases,3new owners4cores. Author Secondary personally viewed all18 full glyph/Source pairs,3whole owners and1new internal join; allalpha and positiveRGBA pristine with complete Source boxes/CJK grades, no crop, overlap or xy change. ManpoN20/JianN21 distinct; Dongyingfang and Rokrim soleREADY owners retain their full approved aliases/Chinese. No C/native/H/newrule; only SELF_PRIVATE_MODEL_ONLY technical acceptance, different Target Primary pending. CurrentP128 and READY6 are separate readonly provenances, neither is new coverage or duplicate output. ParentHOLD8 unchanged. No Root window/fullcurrent/formal authority."}
+  ],
+  "layouts": [
+    {"id": "NC4-MODEL-N04", "x": 173.0, "y": 27.5, "font_size": 12, "font_style": "regular", "lines": ["清河城"]},
+    {"id": "NC4-MODEL-N06", "x": 136.5, "y": 102.5, "font_size": 12, "font_style": "regular", "lines": ["本溪满族自治县"]},
+    {"id": "NC4-MODEL-N10", "x": 20, "y": 105.0, "font_size": 12, "font_style": "regular", "lines": ["本溪"]},
+    {"id": "NC4-MODEL-N23", "x": 20, "y": 194.0, "font_size": 12, "font_style": "regular", "lines": ["南芬"]},
+    {"id": "NC4-MODEL-N26", "x": 106.0, "y": 215.0, "font_size": 12, "font_style": "regular", "lines": ["草河掌"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "NC4-MODEL-A15", "owner_region": "NEB7-Huanren-z9-433-191-2-1", "feature_id": "NEB7-N15", "kind": "city", "original": "Dongyingfang", "source_url": "@source/f8769924af8358dc", "original_bbox": [243, 132, 320, 152], "review_notes": "NEW metadata correction proposal only: exact same physical Source word uses the READY sole normal owner. Preserve complete original bbox/literal/Source URL and existing Chinese/layout/review; no duplicate normal, Chinese or native. Root v2 model/context authority still required."}
+  ],
+  "legacy_suppressions": []
+}

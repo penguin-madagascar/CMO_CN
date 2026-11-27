@@ -1,0 +1,54 @@
+{
+  "id": "KH-VN-KampotBorder-z9-404-240",
+  "z": 9,
+  "x": 404,
+  "y": 240,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/404/240.png",
+    "9/405/240.png"
+  ],
+  "context_tiles": [
+    "9/404/241.png",
+    "9/406/240.png"
+  ],
+  "features": [
+    {"id": "KH-VN-KampotBorder-z9-404-240-chhuk", "kind": "city", "original": "Chhuk", "original_bbox": [125, 118, 162, 135], "source_url": "@source/dc00c4d5eab58212", "source_printed_full_literal": "Chhuk", "source_glyph_complete": true},
+    {"id": "KH-VN-KampotBorder-z9-404-240-banteay-meas", "kind": "city", "original": "Banteay Meas", "original_bbox": [158, 170, 203, 204], "source_url": "@source/dc00c4d5eab58212", "source_printed_full_literal": "Banteay Meas", "source_glyph_complete": true},
+    {"id": "KH-VN-KampotBorder-z9-404-240-kampot", "kind": "city", "original": "Kampot", "original_bbox": [18, 199, 68, 220], "source_url": "@source/dc00c4d5eab58212", "source_printed_full_literal": "Kampot", "source_glyph_complete": true},
+    {"id": "KH-VN-KampotBorder-z9-404-240-peam-chor", "kind": "city", "original": "Peam Chor", "original_bbox": [394, 17, 454, 34], "source_url": "@source/12a85ea596ac6866", "source_printed_full_literal": "Peam Chor", "source_glyph_complete": true},
+    {"id": "KH-VN-KampotBorder-z9-404-240-doun-kaev", "kind": "city", "original": "Doun Kaev", "original_bbox": [245, 52, 280, 90], "source_url": "@source/12a85ea596ac6866", "source_printed_full_literal": "Doun Kaev", "source_glyph_complete": true},
+    {"id": "KH-VN-KampotBorder-z9-404-240-long-binh", "kind": "city", "original": "Long Bình", "original_bbox": [344, 77, 401, 97], "source_url": "@source/12a85ea596ac6866", "source_printed_full_literal": "Long Bình", "source_glyph_complete": true},
+    {"id": "KH-VN-KampotBorder-z9-404-240-sa-rai", "kind": "city", "original": "Sa Rài", "original_bbox": [491, 104, 527, 121], "source_url": "@source/12a85ea596ac6866", "source_printed_full_literal": "Sa Rài", "source_glyph_complete": true},
+    {"id": "KH-VN-KampotBorder-z9-404-240-chau-doc", "kind": "city", "original": "Châu Đốc", "original_bbox": [369, 154, 401, 193], "source_url": "@source/12a85ea596ac6866", "source_printed_full_literal": "Châu Đốc", "source_glyph_complete": true},
+    {"id": "KH-VN-KampotBorder-z9-404-240-tinh-bien", "kind": "city", "original": "Tịnh Biên", "original_bbox": [296, 202, 350, 222], "source_url": "@source/12a85ea596ac6866", "source_printed_full_literal": "Tịnh Biên", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "KH-VN-KampotBorder-z9-404-240-chhuk", "zh": "速富", "status": "approved", "source": "@source/d071df422dc70c57", "review_notes": "NCDD source-era map fixes Chhuk. A former principal gives the same settlement as 速富市 in his firsthand account, and a bilingual Cambodian administrative table confirms the stem.", "record_sha256": "89ab2ba040045d4ac9306c3b07ee3f3bab15c3dc61b1c8bcd7ca8339acd97f87"},
+    {"id": "KH-VN-KampotBorder-z9-404-240-banteay-meas", "zh": "磅地铭", "status": "approved", "source": "@source/852835b364b21c86", "review_notes": "The Cambodia National Museum object catalogue pairs the toponym with 磅地铭县. Supplier prints one base place over two lines.", "record_sha256": "d2157b5922e9f2e922042b2c337191d7df4dab1993858600bce2237d236b5734"},
+    {"id": "KH-VN-KampotBorder-z9-404-240-kampot", "zh": "贡布", "status": "approved", "source": "@source/9f41a886689d65c9", "review_notes": "NCDD map and Chinese commerce guide jointly identify the place. Preserve the existing z7 and z8 project name 贡布.", "record_sha256": "ec7f67b12d42eb4b39f2790f7365a6b3b062d29e81c93406fd6bf70b886a3214"},
+    {"id": "KH-VN-KampotBorder-z9-404-240-peam-chor", "zh": "边佐", "status": "approved", "source": "@source/01375c290067c5fe", "review_notes": "Cambodian national directory fixes Peam Chor. Local Chinese reporting uses 边佐县 and bilingual geocode 1406 confirms the same stem.", "record_sha256": "52b7a682ac9abd8e18b0a0c92c05efd975a36f71fcd4c334970cc8484ee9cb52"},
+    {"id": "KH-VN-KampotBorder-z9-404-240-doun-kaev", "zh": "茶胶", "status": "approved", "source": "@source/657cb6b8c9d5a53d", "review_notes": "NCDD maps the exact town. Keep current actual Cities.wwp Chinese 茶胶 where the child tile owned this existing location; z8 Source uses alternate 敦胶.", "record_sha256": "04df83484e499ed67aeefad6100006e184016e94ccecc649658f35f68f844f6d"},
+    {"id": "KH-VN-KampotBorder-z9-404-240-long-binh", "zh": "龙平", "status": "approved", "source": "@source/5f4ff1bfa072aeaf", "review_notes": "Vietnam News Agency uses 安富县龙平镇 for the exact same border town.", "record_sha256": "87f61eec8beb4e703d9933cd44d77707bdd00ce6d9101104925b882e8693dd62"},
+    {"id": "KH-VN-KampotBorder-z9-404-240-sa-rai", "zh": "沙涞", "status": "approved", "source": "@source/3edbf4a2a21c7271", "review_notes": "Đồng Tháp identifies the historical Sa Rài settlement. Use the attested Chinese phonetic form 沙涞; no official Chinese standard is asserted.", "record_sha256": "a24871423cea22c684cfb5c3558291435d6eb0681167515143df4fc3d9ffaaee"},
+    {"id": "KH-VN-KampotBorder-z9-404-240-chau-doc", "zh": "朱笃", "status": "approved", "source": "@source/5f4ff1bfa072aeaf", "review_notes": "Vietnam News Agency uses 朱笃市 in its Chinese source, matching the formal z7 and z8 labels.", "record_sha256": "81a12d0afb828b1f1ba1f27cc148bf3fc2836722dcc235f36b00084af00c0d80"},
+    {"id": "KH-VN-KampotBorder-z9-404-240-tinh-bien", "zh": "靖边", "status": "approved", "source": "@source/067662f8c75b0b51", "review_notes": "Vietnam News Agency uses 靖边 in its Chinese border coverage, and the bilingual historical table matches Tịnh Biên.", "record_sha256": "650324618782d6bcbfe610d366b7c182bf82587b6589cbb98d2ffd8a27ada7f3"}
+  ],
+  "layouts": [
+    {"id": "KH-VN-KampotBorder-z9-404-240-chhuk", "x": 143.5, "y": 126.5, "font_size": 12, "font_style": "regular", "lines": ["速富"]},
+    {"id": "KH-VN-KampotBorder-z9-404-240-banteay-meas", "x": 180.5, "y": 187, "font_size": 12, "font_style": "regular", "lines": ["磅地铭"]},
+    {"id": "KH-VN-KampotBorder-z9-404-240-kampot", "x": 43, "y": 209.5, "font_size": 12, "font_style": "regular", "lines": ["贡布"]},
+    {"id": "KH-VN-KampotBorder-z9-404-240-peam-chor", "x": 424, "y": 25.5, "font_size": 12, "font_style": "regular", "lines": ["边佐"]},
+    {"id": "KH-VN-KampotBorder-z9-404-240-doun-kaev", "x": 272, "y": 71, "font_size": 12, "font_style": "regular", "lines": ["茶胶"]},
+    {"id": "KH-VN-KampotBorder-z9-404-240-long-binh", "x": 372.5, "y": 87, "font_size": 12, "font_style": "regular", "lines": ["龙平"]},
+    {"id": "KH-VN-KampotBorder-z9-404-240-sa-rai", "x": 496, "y": 112.5, "font_size": 12, "font_style": "regular", "lines": ["沙涞"]},
+    {"id": "KH-VN-KampotBorder-z9-404-240-chau-doc", "x": 385, "y": 173.5, "font_size": 12, "font_style": "regular", "lines": ["朱笃"]},
+    {"id": "KH-VN-KampotBorder-z9-404-240-tinh-bien", "x": 323, "y": 212, "font_size": 12, "font_style": "regular", "lines": ["靖边"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Kep", "source_url": "@source/d004975dd43acb24", "id": "KH-VN-KampotBorder-z9-404-240-shared-kep", "owner_region": "KH-VN-KepKienLuong-z9-404-241", "feature_id": "KH-VN-KepKienLuong-z9-404-241-kep", "original_bbox": [79, 248, 105, 269], "review_notes": "The lower edge contains the upper part of the same complete Kep frame. The single Chinese label is fully visible in the lower output tile."}
+  ],
+  "legacy_suppressions": []
+}

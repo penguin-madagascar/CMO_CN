@@ -1,0 +1,37 @@
+{
+  "id": "TH-LA-Mekong-PakKhat-z9-402-229",
+  "z": 9,
+  "x": 402,
+  "y": 229,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/402/229.png"
+  ],
+  "context_tiles": [
+    "9/401/229.png",
+    "9/401/230.png",
+    "9/402/230.png",
+    "9/403/229.png"
+  ],
+  "features": [
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S01", "kind": "city", "original": "Longxan", "original_bbox": [105, 28, 153, 47], "source_url": "@source/5251e5c1747c74c9", "source_printed_full_literal": "Longxan", "source_glyph_complete": true},
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S02", "kind": "city", "original": "Pak Khat", "original_bbox": [211, 123, 262, 139], "source_url": "@source/5251e5c1747c74c9", "source_printed_full_literal": "Pak Khat", "source_glyph_complete": true},
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S03", "kind": "city", "original": "Hai", "original_bbox": [136, 175, 156, 191], "source_url": "@source/5251e5c1747c74c9", "source_printed_full_literal": "Hai", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S01", "zh": "隆灿", "source": "@source/cd7390838e495cd2", "status": "approved", "record_sha256": "09d2fb7b81321448651d7f250b8b3442fbc7d164b310999a74ef79ca23908f61", "review_notes": "Published bilingual Chinese base name and authoritative source-era identity."},
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S02", "zh": "巴卡", "source": "@source/34556e3cb54812b9", "status": "approved", "record_sha256": "364cafb35f2532250991e1e012c574db534a9715bf483c48ab6e1cc4206adddd", "review_notes": "Published bilingual Chinese base name and authoritative source-era identity."},
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S03", "zh": "海", "source": "@source/20aa4041cb1d6e36", "status": "approved", "record_sha256": "0d62829fb6c3d0d062a44cc36d6187532fde44991f36c1aa59b4e8c1207b7bdf", "review_notes": "Exact local name appears in original UNOSAT geographic map. 海 is a project phonetic Chinese form."}
+  ],
+  "layouts": [
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S01", "x": 129, "y": 37.5, "font_style": "regular", "font_size": 12, "lines": ["隆灿"]},
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S02", "x": 233, "y": 131, "font_style": "regular", "font_size": 12, "lines": ["巴卡"]},
+    {"id": "TH-LA-Mekong-PakKhat-z9-402-229-S03", "x": 146, "y": 183, "font_style": "regular", "font_size": 12, "lines": ["海"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Vientiane", "source_url": "@source/39148b66853d13e0", "id": "TH-LA-Mekong-PakKhat-z9-402-229-shared-TH-LA-Mekong-Vientiane-Udon-z9-401-230-S08", "original_bbox": [-49, 252, 18, 271], "owner_region": "TH-LA-Mekong-Vientiane-Udon-z9-401-230", "feature_id": "TH-LA-Mekong-Vientiane-Udon-z9-401-230-S08", "review_notes": "Existing official single Vientiane owner; 15 terminal ink pixels here."}
+  ],
+  "legacy_suppressions": []
+}

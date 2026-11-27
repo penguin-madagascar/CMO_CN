@@ -1,0 +1,38 @@
+{
+  "id": "JP9-FukuiNagahama-z9-449-201",
+  "z": 9,
+  "x": 449,
+  "y": 201,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/449/201.png"
+  ],
+  "context_tiles": [
+    "9/448/201.png",
+    "9/449/202.png"
+  ],
+  "features": [
+    {"id": "JP9-449201-Echizen", "original": "Echizen", "kind": "city", "original_bbox": [146, 49, 194, 66], "source_url": "@source/a4732045595d3901", "source_glyph_complete": true, "source_printed_full_literal": "Echizen"},
+    {"id": "JP9-449201-Ikeda", "original": "Ikeda", "kind": "city", "original_bbox": [217, 55, 249, 71], "source_url": "@source/a4732045595d3901", "source_glyph_complete": true, "source_printed_full_literal": "Ikeda"},
+    {"id": "JP9-449201-Tsuruga", "original": "Tsuruga", "kind": "city", "original_bbox": [109, 165, 161, 186], "source_url": "@source/a4732045595d3901", "source_glyph_complete": true, "source_printed_full_literal": "Tsuruga"},
+    {"id": "JP9-449201-Nagahama", "original": "Nagahama", "kind": "city", "original_bbox": [183, 235, 248, 257], "source_url": "@source/a4732045595d3901", "source_glyph_complete": true, "source_printed_full_literal": "Nagahama"}
+  ],
+  "translations": [
+    {"id": "JP9-449201-Echizen", "zh": "越前", "status": "approved", "source": "@source/d3f89430cd171078", "record_sha256": "3852c51556c75e6fab69cde046767c83bbf40944d0e22e472bd5f485a3144d88", "review_notes": "原版地名完整字形及日本市町资料核对，使用简体中文地名。"},
+    {"id": "JP9-449201-Ikeda", "zh": "池田", "status": "approved", "source": "@source/aab5576a1c314e19", "record_sha256": "a438cda9e09a534b4102e6208292a9291f76193c158a2bd045100e294fdd9f21", "review_notes": "原版地名完整字形及日本市町资料核对，使用简体中文地名。"},
+    {"id": "JP9-449201-Tsuruga", "zh": "敦贺", "status": "approved", "source": "@source/b41243e6b04d45aa", "record_sha256": "e0b7a3c9260f085394d898005127cbb6a046ce72aeb98529b4662f2dce1b1008", "review_notes": "原版地名完整字形及日本市町资料核对，使用简体中文地名。"},
+    {"id": "JP9-449201-Nagahama", "zh": "长滨", "status": "approved", "source": "@source/f45fcfeea426195c", "record_sha256": "3b4339b56971b8858dbb0e12bfdf20fc1adc8f7c5abd99f27163ef6d3f2ac766", "review_notes": "原版地名完整字形及日本市町资料核对，使用简体中文地名。"}
+  ],
+  "layouts": [
+    {"id": "JP9-449201-Echizen", "x": 170.0, "y": 57.5, "font_style": "regular", "font_size": 12, "lines": ["越前"]},
+    {"id": "JP9-449201-Ikeda", "x": 233.0, "y": 63.0, "font_style": "regular", "font_size": 12, "lines": ["池田"]},
+    {"id": "JP9-449201-Tsuruga", "x": 135.0, "y": 175.5, "font_style": "regular", "font_size": 12, "lines": ["敦贺"]},
+    {"id": "JP9-449201-Nagahama", "x": 215.5, "y": 245, "font_style": "regular", "font_size": 12, "lines": ["长滨"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "JP9-449201-SH-Obama", "owner_region": "JP9-Ine-Wakasa-z9-448-201", "feature_id": "JP9-448201-Obama", "original": "Obama", "kind": "city", "original_bbox": [-7, 231, 38, 250], "source_url": "@source/d514ab2db69afbbe", "review_notes": "原版小滨跨西侧边界，现有精确所属区仍唯一绘制完整译文。"}
+  ],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,36 @@
+{
+  "id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384",
+  "z": 10,
+  "x": 853,
+  "y": 384,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/853/384.png"
+  ],
+  "context_tiles": [
+    "10/852/384.png",
+    "10/854/384.png"
+  ],
+  "features": [
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S01", "kind": "city", "original": "Shifu", "original_bbox": [-23, 110, 9, 127], "source_url": "@source/c6d0beb3cc96b2a7", "source_glyph_complete": true, "source_printed_full_literal": "Shifu"},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S02", "kind": "city", "original": "Bashenhan", "original_bbox": [84, 146, 139, 161], "source_url": "@source/c6d0beb3cc96b2a7", "source_glyph_complete": true, "source_printed_full_literal": "Bashenhan"},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S03", "kind": "city", "original": "Gezidong", "original_bbox": [205, 179, 257, 199], "source_url": "@source/c6d0beb3cc96b2a7", "source_glyph_complete": true, "source_printed_full_literal": "Gezidong"},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S04", "kind": "city", "original": "Leijiadian", "original_bbox": [-14, 235, 35, 253], "source_url": "@source/c6d0beb3cc96b2a7", "source_glyph_complete": true, "source_printed_full_literal": "Leijiadian"}
+  ],
+  "translations": [
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S01", "zh": "石佛", "status": "approved", "source": "@source/a95230bae7b772fd", "record_sha256": "120d88d56406cf24ae68de354915a6cefadcea3a674923b39c4d75506739ec66", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S02", "zh": "巴什罕", "status": "approved", "source": "@source/a95230bae7b772fd", "record_sha256": "c0c4efb8df8e56917ca835fcfcb155be7193fe33a491d339b8e049568f1012ff", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S03", "zh": "鸽子洞", "status": "approved", "source": "@source/d2f266fa43c82baf", "record_sha256": "da446cd2600ce32d38f1dc44fe175c3442149b3ec123a264b00e64ae755dd614", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S04", "zh": "雷家店", "status": "approved", "source": "@source/a95230bae7b772fd", "record_sha256": "f3dbb4cc4c02d271ff6bf4e155fc2642b20d15951652899f15ec1cbfc952edd9", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S01", "x": 14, "y": 118, "font_style": "regular", "font_size": 12, "lines": ["石佛"]},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S02", "x": 111, "y": 154, "font_style": "regular", "font_size": 12, "lines": ["巴什罕"]},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S03", "x": 233, "y": 190, "font_style": "regular", "font_size": 12, "lines": ["鸽子洞"]},
+    {"id": "CN-ShifuBashenhanGezidongLeijiadian-z10-853-384-S04", "x": 19, "y": 242, "font_style": "regular", "font_size": 12, "lines": ["雷家店"]}
+  ],
+  "shared_sources": [],
+  "symbols": [],
+  "legacy_suppressions": []
+}

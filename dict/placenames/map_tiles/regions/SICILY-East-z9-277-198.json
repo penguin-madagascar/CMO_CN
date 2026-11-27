@@ -1,0 +1,36 @@
+{
+  "id": "SICILY-East-z9-277-198",
+  "z": 9,
+  "x": 277,
+  "y": 198,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/277/198.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "SIC9-277198-Adrano", "kind": "city", "original": "Adrano", "original_bbox": [4, 17, 45, 34], "source_url": "@source/1e7150ea5d899013"},
+    {"id": "SIC9-277198-Acireale", "kind": "city", "original": "Acireale", "original_bbox": [123, 40, 169, 57], "source_url": "@source/1e7150ea5d899013"},
+    {"id": "SIC9-277198-Catania", "kind": "city", "original": "Catania", "original_bbox": [91, 89, 144, 109], "source_url": "@source/1e7150ea5d899013"},
+    {"id": "SIC9-277198-Lentini", "kind": "city", "original": "Lentini", "original_bbox": [65, 191, 104, 207], "source_url": "@source/1e7150ea5d899013"},
+    {"id": "SIC9-277198-Augusta", "kind": "city", "original": "Augusta", "original_bbox": [142, 212, 189, 232], "source_url": "@source/1e7150ea5d899013"}
+  ],
+  "translations": [
+    {"id": "SIC9-277198-Adrano", "zh": "阿德拉诺", "status": "approved", "source": "@source/1194e506d67646d8", "record_sha256": "4a374ad8a78339d9093f6c5b63e24e9d1451854bd739d3ad303f3289bbbd1658", "review_notes": "Published Chinese transcription; the municipal site confirms the Italian place name, not its Chinese spelling."},
+    {"id": "SIC9-277198-Acireale", "zh": "阿奇雷亚莱", "status": "approved", "source": "@source/2b76f9eb34cd3901", "record_sha256": "986d4154c39556afb95f1f590451803eee070624fd3781981777844cfc73e543", "review_notes": "Published Chinese transcription; the municipal site confirms the Italian place name, not its Chinese spelling."},
+    {"id": "SIC9-277198-Catania", "zh": "卡塔尼亚", "status": "approved", "source": "@source/3d7cd17d47ddcb71", "record_sha256": "a42b0be056d77e19d1054a0ac1ebe6686e99abf708df6e2dd8a8aecbdb68cb2f", "review_notes": "Chinese government usage identifies Catania in eastern Sicily, consistent with the project city catalog and z7/z8 names."},
+    {"id": "SIC9-277198-Lentini", "zh": "伦蒂尼", "status": "approved", "source": "@source/d348810aa8af86a4", "record_sha256": "7a7a8bccd5aeb0992d3a4a12da81944b0ce67d67c7be08e36c769331c7d23a89", "review_notes": "Published Chinese transcription; the municipal site confirms the Italian place name, not its Chinese spelling."},
+    {"id": "SIC9-277198-Augusta", "zh": "奥古斯塔", "status": "approved", "source": "@source/fead3d145f21d15d", "record_sha256": "bba2b39382c108f9a2d98c5e6f785254e1f565f429bca7561b888d92fe724b6a", "review_notes": "Chinese peer-reviewed publication uses this Roman and Chinese name for the port city in eastern Sicily."}
+  ],
+  "layouts": [
+    {"id": "SIC9-277198-Adrano", "x": 27.5, "y": 25.5, "font_size": 12, "font_style": "regular"},
+    {"id": "SIC9-277198-Acireale", "x": 146.0, "y": 48.5, "font_size": 12, "font_style": "regular"},
+    {"id": "SIC9-277198-Catania", "x": 117.5, "y": 99.0, "font_size": 14, "font_style": "bold"},
+    {"id": "SIC9-277198-Lentini", "x": 84.5, "y": 199.0, "font_size": 12, "font_style": "regular"},
+    {"id": "SIC9-277198-Augusta", "x": 165.5, "y": 222.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

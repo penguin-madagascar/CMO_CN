@@ -1,0 +1,45 @@
+{
+  "id": "CN-XintaiYedian-z9-423-201",
+  "z": 9,
+  "x": 423,
+  "y": 201,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/423/201.png"
+  ],
+  "context_tiles": [
+    "9/422/201.png",
+    "9/424/201.png"
+  ],
+  "features": [
+    {"id": "CN-XintaiYedian-z9-423-201-N01", "kind": "city", "original": "Yangliu", "original_bbox": [20, 9, 64, 28], "source_url": "@source/5c1963cbd5688016", "source_glyph_complete": true, "source_printed_full_literal": "Yangliu"},
+    {"id": "CN-XintaiYedian-z9-423-201-N02", "kind": "city", "original": "Tianbao", "original_bbox": [-43, 27, 3, 43], "source_url": "@source/5c1963cbd5688016", "source_glyph_complete": true, "source_printed_full_literal": "Tianbao"},
+    {"id": "CN-XintaiYedian-z9-423-201-N03", "kind": "city", "original": "Xintai", "original_bbox": [104, 46, 143, 64], "source_url": "@source/5c1963cbd5688016", "source_glyph_complete": true, "source_printed_full_literal": "Xintai"},
+    {"id": "CN-XintaiYedian-z9-423-201-N04", "kind": "city", "original": "Yedian", "original_bbox": [224, 60, 256, 76], "source_url": "@source/5c1963cbd5688016", "source_glyph_complete": false, "source_printed_full_literal": null},
+    {"id": "CN-XintaiYedian-z9-423-201-N05", "kind": "city", "original": "Dongdu", "original_bbox": [85, 77, 130, 96], "source_url": "@source/5c1963cbd5688016", "source_glyph_complete": true, "source_printed_full_literal": "Dongdu"},
+    {"id": "CN-XintaiYedian-z9-423-201-N06", "kind": "city", "original": "Taoxu", "original_bbox": [199, 175, 235, 191], "source_url": "@source/5c1963cbd5688016", "source_glyph_complete": true, "source_printed_full_literal": "Taoxu"},
+    {"id": "CN-XintaiYedian-z9-423-201-N07", "kind": "city", "original": "Pingyi", "original_bbox": [49, 222, 88, 243], "source_url": "@source/5c1963cbd5688016", "source_glyph_complete": true, "source_printed_full_literal": "Pingyi"}
+  ],
+  "translations": [
+    {"id": "CN-XintaiYedian-z9-423-201-N01", "zh": "羊流", "status": "approved", "source": "@source/b23c7fbef3142d61", "record_sha256": "781037cda1d30188015b726481496a58783c3433cb88a83645929e36ba1a477e", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XintaiYedian-z9-423-201-N02", "zh": "天宝", "status": "approved", "source": "@source/b23c7fbef3142d61", "record_sha256": "bfb5cb4b61e2be882245ea7121a9b2035ab52f5accdb85de2db13e29fbee11a3", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XintaiYedian-z9-423-201-N03", "zh": "新泰", "status": "approved", "source": "@source/b23c7fbef3142d61", "record_sha256": "d862dc544b72fb31914f53d08c7481a0c7735c684d3269a02224ef45162fe0f0", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XintaiYedian-z9-423-201-N04", "zh": "野店", "status": "approved", "source": "@source/5c189d0cb1a7f96a", "record_sha256": "fa2c639e5c0b4c369fb10c24afc3a2aa463dffbb6c5fc3044d89a7add3029693", "review_notes": "留存拼写及原位置与同地官方中文核对，邻片无续笔。"},
+    {"id": "CN-XintaiYedian-z9-423-201-N05", "zh": "东都", "status": "approved", "source": "@source/b23c7fbef3142d61", "record_sha256": "ac1d5583ebd82792f1fec46c07d52fc464676d95d776c84b1ad13f90ee22d6d8", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XintaiYedian-z9-423-201-N06", "zh": "桃墟", "status": "approved", "source": "@source/02eac67e8d0d1675", "record_sha256": "fed7ad5f9d8ac974fd8805ccd0434642db75835b99a70c8ba7e80ba3c8914643", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XintaiYedian-z9-423-201-N07", "zh": "平邑", "status": "approved", "source": "@source/e44030d58f421ac5", "record_sha256": "7b86c3cb65ef94a4fa2748952ff0c1a5bfd1abbb590d634d342284b001a6eb16", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-XintaiYedian-z9-423-201-N01", "x": 42.0, "y": 18.5, "font_size": 12, "font_style": "regular", "lines": ["羊流"]},
+    {"id": "CN-XintaiYedian-z9-423-201-N02", "x": 15, "y": 36.5, "font_size": 12, "font_style": "regular", "lines": ["天宝"]},
+    {"id": "CN-XintaiYedian-z9-423-201-N03", "x": 120.17222222221608, "y": 58.827669884238276, "font_size": 12, "font_style": "regular", "lines": ["新泰"]},
+    {"id": "CN-XintaiYedian-z9-423-201-N04", "x": 242, "y": 68, "font_size": 12, "font_style": "regular", "lines": ["野店"]},
+    {"id": "CN-XintaiYedian-z9-423-201-N05", "x": 107.5, "y": 86.5, "font_size": 12, "font_style": "regular", "lines": ["东都"]},
+    {"id": "CN-XintaiYedian-z9-423-201-N06", "x": 217.0, "y": 183.0, "font_size": 12, "font_style": "regular", "lines": ["桃墟"]},
+    {"id": "CN-XintaiYedian-z9-423-201-N07", "x": 68.5, "y": 232.5, "font_size": 12, "font_style": "regular", "lines": ["平邑"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

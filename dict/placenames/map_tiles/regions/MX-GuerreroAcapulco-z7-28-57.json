@@ -1,0 +1,39 @@
+{
+  "id": "MX-GuerreroAcapulco-z7-28-57",
+  "z": 7,
+  "x": 28,
+  "y": 57,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/28/57.png"
+  ],
+  "context_tiles": [
+    "7/28/56.png",
+    "7/29/57.png"
+  ],
+  "features": [
+    {"id": "MX-GuerreroAcapulco-z7-28-57-Acapulco", "kind": "city", "original": "Acapulco", "original_bbox": [119, 229, 171, 251], "source_url": "@source/b08d116cff8a74c4", "source_glyph_complete": true, "source_printed_full_literal": "Acapulco"}
+  ],
+  "translations": [
+    {"id": "MX-GuerreroAcapulco-z7-28-57-Acapulco", "zh": "阿卡普尔科", "status": "approved", "source": "@source/65476abd5c0b45d1", "record_sha256": "a99302c8ea3bdde40f88324b8be0630b084e9b4acb86258028d8bbf4ff837390", "review_notes": "核对同级供应商原图的完整名称与地点，已有实际可见译名采用原字。"}
+  ],
+  "layouts": [
+    {"id": "MX-GuerreroAcapulco-z7-28-57-Acapulco", "x": 156, "y": 245, "lines": ["阿卡普尔科"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "MX-GuerreroAcapulco-z7-28-57-Acapulco-circle", "feature_id": "MX-GuerreroAcapulco-z7-28-57-Acapulco", "kind": "circle", "x": 123.5, "y": 233.5, "size": 9, "outline_width": 1, "original_bbox": [119, 229, 128, 238], "source_url": "@source/b08d116cff8a74c4", "review_notes": "独立核对原图圆点中心与完整边界。"}
+  ],
+  "canonical_captions": [
+    {"id": "MX-GuerreroAcapulco-z7-28-57-C-Cities2680", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2680, "original_Chinese_name": "霍奇米尔科", "lat_f32_bits": 1100615700, "lon_f32_bits": 3267769812, "flags": 0, "level": 1}, "layout": {"x": 196, "y": 12, "font_style": "regular", "font_size": 12, "lines": ["霍奇米尔科"]}},
+    {"id": "MX-GuerreroAcapulco-z7-28-57-C-Cities2723", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2723, "original_Chinese_name": "休特佩克", "lat_f32_bits": 1100418326, "lon_f32_bits": 3267779334, "flags": 0, "level": 1}, "layout": {"x": 189, "y": 42, "font_style": "regular", "font_size": 12, "lines": ["休特佩克"]}},
+    {"id": "MX-GuerreroAcapulco-z7-28-57-C-Cities2728", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2728, "original_Chinese_name": "伊瓜拉", "lat_f32_bits": 1100139347, "lon_f32_bits": 3267826727, "flags": 0, "level": 1}, "layout": {"x": 156, "y": 94, "font_style": "regular", "font_size": 12, "lines": ["伊瓜拉"]}},
+    {"id": "MX-GuerreroAcapulco-z7-28-57-C-Cities2744", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2744, "original_Chinese_name": "奇尔潘辛戈", "lat_f32_bits": 1099720609, "lon_f32_bits": 3267822326, "flags": 0, "level": 1}, "layout": {"x": 159, "y": 170, "font_style": "regular", "font_size": 12, "lines": ["奇尔潘辛戈"]}}
+  ],
+  "shared_sources": [
+    {"id": "MX-GuerreroAcapulco-z7-28-57-SharedNative-Ometepec-circle", "owner_region": "MX-PueblaVeracruzOaxacaOmetepec-z7-29-57-1x2", "owner_symbol_id": "MX-PueblaVeracruzOaxacaOmetepec-z7-29-57-1x2-Ometepec-circle", "original_bbox": [255, 247, 266, 256], "owner_symbol_record_sha256": "7a41d6d17f87052ed4f990d40cf1255210a52287a112627f2de904296a2ab758", "source_rgba_sha256": "77a1e27cc91ccd6fd9b6b694e342557c196c59debebc9885b53358020c1f9867", "review_notes": "当前正式邻片保持已批准的同一个完整圆形标记；本片仅计入跨缝原图证据。"},
+    {"id": "MX-GuerreroAcapulco-z7-28-57-SharedText-Toluca", "owner_region": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Toluca", "original": "Toluca", "kind": "city", "original_bbox": [141, -3, 181, 17], "source_url": "@source/546dab844438fa0c", "review_notes": "原区域保持完整的跨缝地名及当前输出，本片不重复绘制。"},
+    {"id": "MX-GuerreroAcapulco-z7-28-57-SharedText-MexicoCity", "owner_region": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-MexicoCity", "original": "Mexico City", "kind": "city", "original_bbox": [196, -13, 247, 34], "source_url": "@source/546dab844438fa0c", "review_notes": "原区域保持完整的跨缝地名及当前输出，本片不重复绘制。"}
+  ],
+  "legacy_suppressions": []
+}

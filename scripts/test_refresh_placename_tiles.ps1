@@ -258,17 +258,24 @@ Check ($counted -is [int] -and $counted -eq 0 -and [IO.File]::Exists($copyFailur
 Check ([IO.File]::ReadAllText($copyFailure.Terrain) -eq 'terrain sentinel') 'failure and retry never change terrain'
 
 # A verified pack may add paths absent from the previous cache, including an entirely missing cache.
-function Add-TilePack($Fixture) {
+function Add-TilePack($Fixture, [switch]$V2) {
     $tileBytes = [IO.File]::ReadAllBytes($normal.Tile)
     $payload = [IO.MemoryStream]::new()
     $writer = [IO.BinaryWriter]::new($payload)
     $writer.Write([int]1); $writer.Write([int]3); $writer.Write([int]4); $writer.Write([int]4)
-    $writer.Write([int]2); $writer.Write([int]$tileBytes.Length); $writer.Write($tileBytes); $writer.Flush()
+    $writer.Write([int]2); $writer.Write([int]$tileBytes.Length); $writer.Write($tileBytes)
+    $format = 'CMOTIL01'
+    if ($V2) {
+        $format = 'CMOTIL02'
+        $writer.Write([int]1); $writer.Write([int]3); $writer.Write([string][char]0x5E02)
+        $writer.Write([float]0); $writer.Write([float]0); $writer.Write([int]1)
+    }
+    $writer.Flush()
     $sha = [Security.Cryptography.SHA256]::Create()
     try { $fingerprint = [BitConverter]::ToString($sha.ComputeHash($payload.ToArray())).Replace('-', '').ToLowerInvariant() }
     finally { $sha.Dispose() }
     $packWriter = [IO.BinaryWriter]::new([IO.File]::Create((Join-Path $Fixture.Game 'ChineseMapTiles.dat')))
-    try { $packWriter.Write([Text.Encoding]::ASCII.GetBytes('CMOTIL01')); $packWriter.Write($fingerprint); $packWriter.Write($payload.ToArray()) }
+    try { $packWriter.Write([Text.Encoding]::ASCII.GetBytes($format)); $packWriter.Write($fingerprint); $packWriter.Write($payload.ToArray()) }
     finally { $packWriter.Dispose(); $writer.Dispose(); $payload.Dispose() }
 }
 $packMissing = Fixture 'pack-missing-cache' -NoCache
@@ -291,6 +298,42 @@ Add-TilePack $packOnly
 foreach ($set in @('Synoptic', 'Cities')) { [IO.File]::Delete((Join-Path $packOnly.Game "WW\PlacenameSets\$set\0000_0000.wwp")) }
 $result = Refresh $packOnly
 Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 1 PNG')) 'pack-only refresh works without legacy WWP'
+$regionPack = Fixture 'v2-dictionary-regions'
+Add-TilePack $regionPack -V2
+foreach ($set in @('Synoptic', 'Cities')) { [IO.File]::Delete((Join-Path $regionPack.Game "WW\PlacenameSets\$set\0000_0000.wwp")) }
+$regionName = [string][char]0x7701
+$dictionary = '{"places":[["' + $regionName + '",-8,8,3],["' + $regionName + '",47.72,128.88,7]]}'
+[IO.File]::WriteAllText((Join-Path $regionPack.Game 'CMOLocalizer.json'), $dictionary, [Text.Encoding]::UTF8)
+$result = Refresh $regionPack
+Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 2 PNG')) 'dictionary-only refresh counts composed v2 tile and fallback tile'
+$packedPath = Join-Path $regionPack.Cache '3\4\4.png'
+$composed = [Convert]::ToBase64String([IO.File]::ReadAllBytes($packedPath))
+function Has-AddedInk([string]$BeforePath, [string]$AfterPath) {
+    $before = [Drawing.Bitmap]::new($BeforePath)
+    $after = [Drawing.Bitmap]::new($AfterPath)
+    try {
+        for ($y = 0; $y -lt $after.Height; $y++) {
+            for ($x = 0; $x -lt $after.Width; $x++) {
+                if ($after.GetPixel($x, $y).A -gt 0 -and $before.GetPixel($x, $y).A -eq 0) { return $true }
+            }
+        }
+        return $false
+    }
+    finally { $before.Dispose(); $after.Dispose() }
+}
+Check (Has-AddedInk $normal.Tile $packedPath) 'dictionary label adds ink to packed PNG'
+Check (Has-AddedInk $emptyTile.Tile $regionPack.Tile) 'dictionary-only fallback has visible labels'
+$result = Refresh $regionPack
+Check ($result.Code -eq 0 -and $result.Text.Contains('refreshed 1 PNG') -and
+    $composed -ceq [Convert]::ToBase64String([IO.File]::ReadAllBytes($packedPath))) 'repeat v2 refresh preserves composed bytes and counts only fallback'
+$lockedDict = Fixture 'locked-dictionary' -NoCache
+Add-TilePack $lockedDict -V2
+$dictionaryPath = Join-Path $lockedDict.Game 'CMOLocalizer.json'
+[IO.File]::WriteAllText($dictionaryPath, $dictionary, [Text.Encoding]::UTF8)
+$handle = [IO.File]::Open($dictionaryPath, [IO.FileMode]::Open, [IO.FileAccess]::ReadWrite, [IO.FileShare]::None)
+try { $result = Refresh $lockedDict }
+finally { $handle.Dispose() }
+Check ($result.Code -ne 0 -and -not [IO.Directory]::Exists($lockedDict.Cache + '.orig')) 'locked dictionary fails before backup or rendering'
 $badPack = Fixture 'corrupt-pack' -NoCache
 [IO.File]::WriteAllBytes((Join-Path $badPack.Game 'ChineseMapTiles.dat'), [byte[]](1,2,3))
 $result = Refresh $badPack

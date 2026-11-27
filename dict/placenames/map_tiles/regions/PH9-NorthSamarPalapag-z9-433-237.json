@@ -1,0 +1,55 @@
+{
+  "id": "PH9-NorthSamarPalapag-z9-433-237",
+  "z": 9,
+  "x": 433,
+  "y": 237,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/433/237.png",
+    "9/433/238.png",
+    "9/434/237.png",
+    "9/434/238.png"
+  ],
+  "context_tiles": [
+    "9/432/238.png"
+  ],
+  "features": [
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S01", "original": "Palapag", "kind": "city", "original_bbox": [219, 251, 263, 271], "source_url": "@source/aee4e9681bf97f5b", "source_glyph_complete": true, "source_printed_full_literal": "Palapag"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S02", "original": "Catarman", "kind": "city", "original_bbox": [41, 268, 94, 285], "source_url": "@source/aee4e9681bf97f5b", "source_glyph_complete": true, "source_printed_full_literal": "Catarman"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S03", "original": "Las Navas", "kind": "city", "original_bbox": [183, 328, 238, 345], "source_url": "@source/aee4e9681bf97f5b", "source_glyph_complete": true, "source_printed_full_literal": "Las Navas"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S04", "original": "Calbayog", "kind": "city", "original_bbox": [23, 428, 80, 450], "source_url": "@source/aee4e9681bf97f5b", "source_glyph_complete": true, "source_printed_full_literal": "Calbayog"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S05", "original": "Gandara", "kind": "city", "original_bbox": [108, 449, 154, 466], "source_url": "@source/aee4e9681bf97f5b", "source_glyph_complete": true, "source_printed_full_literal": "Gandara"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S06", "original": "Tarangnan", "kind": "city", "original_bbox": [77, 491, 137, 510], "source_url": "@source/aee4e9681bf97f5b", "source_glyph_complete": true, "source_printed_full_literal": "Tarangnan"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S07", "original": "Maslog", "kind": "city", "original_bbox": [269, 396, 310, 415], "source_url": "@source/a5798ad06bfca63b", "source_glyph_complete": true, "source_printed_full_literal": "Maslog"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S08", "original": "Dolores", "kind": "city", "original_bbox": [354, 441, 397, 457], "source_url": "@source/a5798ad06bfca63b", "source_glyph_complete": true, "source_printed_full_literal": "Dolores"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S09", "original": "Taft", "kind": "city", "original_bbox": [338, 490, 364, 506], "source_url": "@source/a5798ad06bfca63b", "source_glyph_complete": true, "source_printed_full_literal": "Taft"}
+  ],
+  "translations": [
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S01", "zh": "帕拉帕格", "status": "approved", "source": "@source/711168bf586bc9fa", "record_sha256": "15e4550a2c4290e722f67538103680b6ca1a94a8e776541f5eb6e1f87307e5a4", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S02", "zh": "卡塔曼", "status": "approved", "source": "@source/711168bf586bc9fa", "record_sha256": "ab51bbccccfb5ce2daa2e84d6ed4449fa01982130dbd3c719f7734ce77b91967", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S03", "zh": "拉斯纳瓦斯", "status": "approved", "source": "@source/711168bf586bc9fa", "record_sha256": "5185cb61572ea6a63d695ee8a66aeef63adbba4ebe658d4d0fad02363ef42385", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S04", "zh": "卡尔巴约格", "status": "approved", "source": "@source/b70ec9ddc193827f", "record_sha256": "ffe4af683129a2ecf0678f948d0e472ae41f527f3d8377d14a876291e2856c55", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S05", "zh": "甘达拉", "status": "approved", "source": "@source/b70ec9ddc193827f", "record_sha256": "5a7ba37c3d9eb60d27483ea4f55c40306a513a87e08c68406d0556e24d2ed8e7", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S06", "zh": "塔朗南", "status": "approved", "source": "@source/b70ec9ddc193827f", "record_sha256": "adf920feb57bf41564d7acb16a8d3a75642ff9b2fcb98f328a4bf1a13cacc302", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S07", "zh": "马斯洛格", "status": "approved", "source": "@source/bb46d21734d76851", "record_sha256": "72fa8532bad5d372f732afb985e4faf4cb925daee48ddffc152b5530f980454f", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S08", "zh": "多洛雷斯", "status": "approved", "source": "@source/bb46d21734d76851", "record_sha256": "aaf9f6cefb61413dac5af22c27701f896ef9cc3296f4d87457e9e7e2116d5f06", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S09", "zh": "塔夫特", "status": "approved", "source": "@source/bb46d21734d76851", "record_sha256": "f077bc943498d165654b74a5315923675caf804e7c685286dc9af2b6797c2220", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"}
+  ],
+  "layouts": [
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S01", "x": 241.0, "y": 261.0, "font_style": "regular", "font_size": 12, "lines": ["帕拉帕格"]},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S02", "x": 67.5, "y": 276.5, "font_style": "regular", "font_size": 12, "lines": ["卡塔曼"]},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S03", "x": 210.5, "y": 336.5, "font_style": "regular", "font_size": 12, "lines": ["拉斯纳瓦斯"]},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S04", "x": 51.5, "y": 439.0, "font_style": "regular", "font_size": 12, "lines": ["卡尔巴约格"]},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S05", "x": 131.0, "y": 457.5, "font_style": "regular", "font_size": 12, "lines": ["甘达拉"]},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S06", "x": 107.0, "y": 500.5, "font_style": "regular", "font_size": 12, "lines": ["塔朗南"]},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S07", "x": 289.5, "y": 405.5, "font_style": "regular", "font_size": 12, "lines": ["马斯洛格"]},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S08", "x": 375.5, "y": 449.0, "font_style": "regular", "font_size": 12, "lines": ["多洛雷斯"]},
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-S09", "x": 351.0, "y": 498.0, "font_style": "regular", "font_size": 12, "lines": ["塔夫特"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "PH9-NorthSamarPalapag-z9-433-237-SH1", "owner_region": "PH9-SorsogonBiri-z9-432-237", "feature_id": "PH9-SorsogonBiri-z9-432-237-S10", "original_bbox": [-33, 481, 29, 498], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "city", "original": "Santo Niño", "source_url": "@source/a5127eeecab08133"}
+  ],
+  "legacy_suppressions": []
+}

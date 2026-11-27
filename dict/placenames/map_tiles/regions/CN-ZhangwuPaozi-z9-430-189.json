@@ -1,0 +1,49 @@
+{
+  "id": "CN-ZhangwuPaozi-z9-430-189",
+  "z": 9,
+  "x": 430,
+  "y": 189,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/430/189.png"
+  ],
+  "context_tiles": [
+    "9/429/189.png",
+    "9/430/188.png",
+    "9/431/189.png",
+    "9/430/190.png"
+  ],
+  "features": [
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S01", "kind": "city", "original": "Dade", "original_bbox": [85, -15, 115, 2], "source_url": "@source/71dd81aaced81aed", "source_glyph_complete": true, "source_printed_full_literal": "Dade"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S02", "kind": "city", "original": "Woniushi", "original_bbox": [231, 8, 284, 24], "source_url": "@source/71dd81aaced81aed", "source_glyph_complete": true, "source_printed_full_literal": "Woniushi"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S03", "kind": "city", "original": "Baojiatun", "original_bbox": [190, 30, 243, 50], "source_url": "@source/71dd81aaced81aed", "source_glyph_complete": true, "source_printed_full_literal": "Baojiatun"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S04", "kind": "city", "original": "Zhangwu", "original_bbox": [39, 76, 98, 98], "source_url": "@source/71dd81aaced81aed", "source_glyph_complete": true, "source_printed_full_literal": "Zhangwu"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S05", "kind": "city", "original": "Xinnongcun", "original_bbox": [186, 148, 253, 167], "source_url": "@source/71dd81aaced81aed", "source_glyph_complete": true, "source_printed_full_literal": "Xinnongcun"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S06", "kind": "city", "original": "Paozi", "original_bbox": [0, 161, 5, 177], "source_url": "@source/71dd81aaced81aed", "source_glyph_complete": false, "source_printed_full_literal": null},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S07", "kind": "city", "original": "Zhoutuozi", "original_bbox": [56, 194, 113, 210], "source_url": "@source/71dd81aaced81aed", "source_glyph_complete": true, "source_printed_full_literal": "Zhoutuozi"}
+  ],
+  "translations": [
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S01", "zh": "大德", "status": "approved", "source": "@source/f30b80995319fb43", "record_sha256": "53689ec10177ac2c7c0a7726e90226e4d22a01d3b916b47494e0faf512637d1c", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S02", "zh": "卧牛石", "status": "approved", "source": "@source/7fc257e50f527116", "record_sha256": "e530ba3d30fd65934f766fdc9e92fd0eb2de4de3b4c0b8292ca9d11aad7dba73", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S03", "zh": "包家屯", "status": "approved", "source": "@source/7fc257e50f527116", "record_sha256": "dd952e3258cef1f71a00096d80ed949f02c68efb86bc54ed12f2f7c555de7e99", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S04", "zh": "彰武", "status": "approved", "source": "@source/f30b80995319fb43", "record_sha256": "d41b356358418957faf1cb5eb57124e7c9a26e50f879b14668c86f9aa090f9a7", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S05", "zh": "新农村", "status": "approved", "source": "@source/76f0d94c0492a003", "record_sha256": "5844b0336cae55128a1ca9525c917633704e37a14d3a896d273d997b791a9957", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S06", "zh": "泡子", "status": "approved", "source": "@source/53499d0da3e6f332", "record_sha256": "eac67a8428e5da61fabb386cb68fa650e69222351f48636bb9af78d1b4f5c3f8", "review_notes": "第九级西缘仅存末尾 i，相邻原图对应带为空。第十级官方原图同位置完整标为 Paozi，与阜新县行政区划的泡子镇一致。"},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S07", "zh": "周坨子", "status": "approved", "source": "@source/76f0d94c0492a003", "record_sha256": "a176d458a9bae227223f289e0256829f291e712c3582b46afee63ca5e9ca39f8", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S01", "x": 100, "y": 9, "font_style": "regular", "font_size": 12, "lines": ["大德"]},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S02", "x": 235, "y": 15, "font_style": "regular", "font_size": 12, "lines": ["卧牛石"]},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S03", "x": 217, "y": 40, "font_style": "regular", "font_size": 12, "lines": ["包家屯"]},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S04", "x": 68, "y": 87, "font_style": "regular", "font_size": 12, "lines": ["彰武"]},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S05", "x": 234, "y": 156, "font_style": "regular", "font_size": 12, "lines": ["新农村"]},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S06", "x": 14, "y": 169, "font_style": "regular", "font_size": 12, "lines": ["泡子"]},
+    {"id": "CN-ZhangwuPaozi-z9-430-189-S07", "x": 84, "y": 202, "font_style": "regular", "font_size": 12, "lines": ["周坨子"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Liangshan", "source_url": "@source/c3fa0fa5e9745a1e", "id": "CN-ZhangwuPaozi-z9-430-189-shared-CN-HeishanXinmin-z9-430-190-S02", "original_bbox": [82, 238, 139, 257], "owner_region": "CN-HeishanXinmin-z9-430-190", "feature_id": "CN-HeishanXinmin-z9-430-190-S02", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

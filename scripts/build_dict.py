@@ -3,10 +3,14 @@
 
 Sources, merged in order (later wins):
 
-    dict/CMOLocalizer.json          base — previously shipped entries
-    dict/glossary.json              authoritative terminology seed
-    dict/src/*.json                 curated translation batches ({"en": "zh"})
+    dict/src/legacy_preserved.json  lowest-priority explicit legacy translations
+    dict/glossary.json              terminology seed (fills missing keys)
+    dict/src/*.json                 curated translation batches (sorted; later wins)
+    dict/src/labels.json            UI-only translations, never pool-injected
     dict/src/blacklist.json         English keys to purge from every section
+
+The output file is never an input. Removing the sole source of a translation
+therefore removes it from the next build, regardless of any old output bytes.
 
 Placement
 ---------
@@ -23,11 +27,11 @@ between `offsets[off]` and `exact[pool[off]]` would surface as the same English
 text rendering two different Chinese strings.  After merging, the two sections are
 therefore reconciled:
 
-    curated  entry -> the curated translation wins in both sections
-    base     entry -> the offset value is propagated into `exact`
+    curated    entry -> the curated translation wins in both sections
+    preserved  entry -> explicit pool locations use the surviving exact value
 
-`words` is intentionally empty: word-by-word composition produced garbled output
-and is no longer used by the engine.
+`partial` is intentionally empty; `words` comes only from `dict/src/terms.json`
+and retains the engine's longest-phrase composition vocabulary.
 
 Output is byte-stable: two runs over identical sources produce identical files.
 """
@@ -37,6 +41,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,7 +51,7 @@ MAIN = DICT / "CMOLocalizer.json"
 # The engine's own scanner (scripts/verify_engine_parse.py) and the offset
 # injection path require exactly these top-level sections.  Any other producer
 # (see the legacy engines) must fail loudly rather than ship a foreign schema.
-TOP_LEVEL_SECTIONS = frozenset({"_meta", "offsets", "exact", "partial", "words"})
+TOP_LEVEL_SECTIONS = frozenset({"_meta", "places", "comments", "offsets", "exact", "partial", "words"})
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from triage import classify, is_script_or_schema  # noqa: E402
@@ -64,6 +69,13 @@ HAN = re.compile(r"[\u4e00-\u9fff]")
 HAN_GAP = re.compile(r"(?<=[\u4e00-\u9fff])[ \t]+(?=[\u4e00-\u9fff])")
 BRACKET_PAIRS = ("()", "[]", "（）：", "【】", "〔〕")
 BRACKET_PAIRS = (("(", ")"), ("[", "]"), ("（", "）"), ("【", "】"), ("〔", "〕"))
+# 中文译文把 ASCII 括号写成全角是完全正常的写法（`Bomb Wing) (B-2A)` →
+# `轰炸机联队）（B-2A）`），但逐形状比对会把这当成结构差而**丢掉整条译文**（R76）。
+# 真正的契约是「**括号不平衡度**不变」：全角/ASCII 互写、以及译文为澄清补一对
+# 成对括号，都不改变不平衡度；而源缺括号（`HMS Brazen (F 88`）/译文多补单个
+# 括号（`AAA Plt (Korkut (…` → 只留一对）会改变不平衡度，仍丢弃。
+OPEN_BRACKETS = "([（【〔"
+CLOSE_BRACKETS = ")]）】〕"
 
 
 def load(path: Path):
@@ -78,7 +90,10 @@ def iter_source_maps():
     for p in sorted(SRC.glob("*.json")):
         if p.name in ("blacklist.json", "labels.json", "identifiers.json",
                       "force_offsets.json", "dlc_briefing_fixes.json",
-                      "term_replacements.json", "terms.json"):
+                      "term_replacements.json", "terms.json", "legacy_preserved.json",
+                      # R72：Comments 词表走独立 `comments` 分区，绝不能并进 exact
+                      # （Tank/Mount/Group 与界面同名词条含义不同）
+                      "db_comments.json"):
             continue
         data = load(p)
         if isinstance(data, dict):
@@ -104,6 +119,52 @@ def load_terms() -> dict:
             continue
         terms[k] = v
     return terms
+
+
+def load_region_places() -> list:
+    """省/州级地图标签（R88）：[中文, lat, lon, min_zoom]。
+
+    放在词典里而不是新增引擎资产，是为了不扩大安装/打包/入包对账的接口面；
+    该分区刻意排在 `comments` 之前，旧引擎（只认 comments/offsets/exact/partial/words）
+    会连同 `_meta` 一起忽略，向后兼容不受影响。
+    """
+    path = ROOT / "dict/placenames/regions.json"
+    if not path.is_file():
+        return []
+    rows = json.loads(path.read_text(encoding="utf-8"))
+    out = []
+    for row in rows:
+        zh = row.get("zh")
+        if not zh or row.get("lat") is None or row.get("lon") is None:
+            continue
+        out.append([zh, round(float(row["lat"]), 4), round(float(row["lon"]), 4),
+                    round(float(row.get("min_zoom") or 0), 1)])
+    # 确定性：同 zoom 内按名字/坐标排序，构建两次字节一致
+    out.sort(key=lambda e: (e[3], e[0], e[1], e[2]))
+    return out
+
+
+def load_comments() -> dict:
+    """数据库列表行尾 Comments 专用词表（R72）。
+
+    单独成表，**不能**并进 `exact`：Comments 里的 `Tank`(油箱)、`Mount`(挂架)、
+    `Group`(编组) 与界面同名词条含义不同（界面上 Tank=坦克、Group=编队），
+    共用一张表会把界面译坏（实测冲突 47 条）。引擎只在 DB 列表行尾查这张表。
+    """
+    p = SRC / "db_comments.json"
+    if not p.is_file():
+        return {}
+    data = load(p)
+    if not isinstance(data, dict):
+        return {}
+    out = {}
+    for k, v in data.items():
+        if k.startswith("_") or not isinstance(v, str) or not v.strip():
+            continue
+        if not re.search(r"[一-鿿]", v):
+            continue          # 译文必须含中文，否则保留原文更安全
+        out[k] = v
+    return out
 
 
 def normalize_ellipsis(en: str, zh: str) -> str:
@@ -146,9 +207,13 @@ def sanitize(en: str, zh: str, allow_sensitive: bool = False) -> str | None:
     if not HAN.search(zh):
         return None
     # Bracket balance must match the source's balance.
-    for o, c in BRACKET_PAIRS:
-        if (en.count(o) - en.count(c)) != (zh.count(o) - zh.count(c)):
-            return None
+    # 按**不平衡度**而不是逐形状比对（见 OPEN_BRACKETS 注释）。
+    en_open = sum(en.count(c) for c in OPEN_BRACKETS)
+    zh_open = sum(zh.count(c) for c in OPEN_BRACKETS)
+    en_close = sum(en.count(c) for c in CLOSE_BRACKETS)
+    zh_close = sum(zh.count(c) for c in CLOSE_BRACKETS)
+    if (en_open - en_close) != (zh_open - zh_close):
+        return None
     # Line structure is part of the string contract.
     if en.count("\n") != zh.count("\n"):
         return None
@@ -174,15 +239,35 @@ def apply_naming_standard(text: str, rules: list[tuple[re.Pattern, str]]) -> str
     return text
 
 
-def build() -> dict:
-    base = load(MAIN)
-    offsets: dict[int, str] = {}
-    for k, v in base.get("offsets", {}).items():
-        try:
-            offsets[int(k)] = v
-        except (TypeError, ValueError):
+def load_preserved() -> tuple[dict[str, str], dict[int, str]]:
+    """Explicit legacy facts, not an artifact fallback or automatic migration.
+
+    Offset entries are locations -> original English, never duplicate translations.
+    Both pool identity and the surviving exact source are checked at placement.
+    Named batches remain authoritative over these lowest-priority translations.
+    """
+    path = SRC / "legacy_preserved.json"
+    if not path.is_file():
+        return {}, {}
+    data = load(path)
+    if not isinstance(data, dict) or not isinstance(data.get("exact"), dict) \
+            or not isinstance(data.get("offsets"), dict):
+        raise ValueError(f"invalid explicit legacy source: {path}")
+    exact = {k: v for k, v in data["exact"].items()
+             if k and not k.startswith("_") and isinstance(v, str)}
+    locations: dict[int, str] = {}
+    for key, en in data["offsets"].items():
+        if key.startswith("_"):
             continue
-    exact: dict[str, str] = dict(base.get("exact", {}))
+        if not isinstance(en, str) or not en or not key.isdigit():
+            raise ValueError(f"invalid legacy pool location {key!r}")
+        locations[int(key)] = en
+    return exact, locations
+
+
+def build() -> dict:
+    exact, preserved_locations = load_preserved()
+    offsets: dict[int, str] = {}
     # `partial` is retained for file-format compatibility but is intentionally
     # empty: the engine no longer performs word-level composition, and the
     # inherited entries contained split-word artifacts ("海里 到达返航油量").
@@ -272,6 +357,11 @@ def build() -> dict:
                 curated.add(en)
                 labels_only.add(en)
 
+    # --- explicit legacy locations (not a second source of translations) ---
+    for off, en in preserved_locations.items():
+        if pool.get(str(off)) == en and en not in blacklist and en in exact:
+            offsets.setdefault(off, exact[en])
+
     # --- reconcile offsets <-> exact -------------------------------------
     for off, zh in list(offsets.items()):
         en = pool.get(str(off))
@@ -294,6 +384,9 @@ def build() -> dict:
     brief1_file = DICT / "briefing_dict.json"
     brief2_file = DICT / "brief_translations.json"
     brief3_file = SRC / "dlc_briefing_fixes.json"
+    # DLC 简报整段译文（R81）：简报正文是散文，会被 is_script_or_schema 误判成
+    # 脚本/模式串（型号里的括号、数字），所以必须与其它简报源一样走 allow_sensitive=True。
+    brief4_file = SRC / "dlc_briefing_paragraphs.json"
     all_briefs: dict[str, str] = {}
     if brief1_file.is_file():
         all_briefs.update(load(brief1_file))
@@ -301,6 +394,8 @@ def build() -> dict:
         all_briefs.update(load(brief2_file))
     if brief3_file.is_file():
         all_briefs.update(load(brief3_file))
+    if brief4_file.is_file():
+        all_briefs.update(load(brief4_file))
 
     for en, zh in all_briefs.items():
         if not en or not zh or en in blacklist:
@@ -314,6 +409,25 @@ def build() -> dict:
         if fixed is not None:
             exact[en] = fixed
             labels_only.add(en)
+
+    # --- 快捷键窗口正文（R91）------------------------------------------
+    # 6 段 DarkRichTextBox 的整段文本，靠「键列 + 制表符/补空格」排两列。只做 HAN_GAP 与
+    # sanitize(allow_sensitive)：简报批次的「多空格合并 / 虚词剔除」是散文启发式，会把
+    # 列位置挤歪、把标题里的 -- 分隔符吃掉。这 6 段的英文原文不在字符串池里，运行时只能
+    # 靠引擎的「只读富文本整段 exact 查表」写入。
+    hotkeys_file = SRC / "hotkeys_ui.json"
+    if hotkeys_file.is_file():
+        hotkey_count = 0
+        for en, zh in load(hotkeys_file).items():
+            if not en or not zh or en in blacklist:
+                continue
+            fixed = sanitize(en, HAN_GAP.sub("", zh), allow_sensitive=True)
+            if fixed is None:
+                continue
+            exact[en] = fixed
+            labels_only.add(en)
+            hotkey_count += 1
+        print(f"[hotkeys] 快捷键窗口正文 {hotkey_count} 段")
 
     # --- sanitize: repair or drop every surviving entry ------------------
     for en in list(exact):
@@ -338,11 +452,7 @@ def build() -> dict:
             offsets.pop(bad_off, None)
 
     # --- 污染自愈 -------------------------------------------------------
-    # 构建以**上一版词典为底座**（下面 `base = load(MAIN)`），所以从源批次里
-    # 删掉的条目并不会消失：它们会一直留在 exact 里。历史批量生成器曾把短标签
-    # 拼成电报体句子（`PLAN Changsha [Type 052D DDG]: Z-9C ASW` →
-    # `PLAN Changsha[...]辖Z-9C ASW如令查收。`），这类值比不翻译更糟。
-    # 这里按形状主动清掉，不依赖人记得去改底座。
+    # 源条目删除不会回生；仍对所有来源统一清理历史「短标签拼成电报体句子」污染。
     TELEGRAPH = ("如令查收", "收悉", "如令办理", "所部须", "兹令", "电悉", "奉此")
     _purged = 0
     for en in list(exact):
@@ -364,10 +474,10 @@ def build() -> dict:
     # other string is still served through `exact`.
     offsets = {k: v for k, v in offsets.items()
                if bucket_of.get(k) == "display"
+               and pool.get(str(k)) in exact
                and pool.get(str(k)) not in identifiers}
 
-    # 形状安全不变量（R38）：即使基座词典里已经带着危险条目（build 以上一版已发布词典为基，
-    # 累积不删），也要在这里剪掉，否则会永久地留在产物里。
+    # 形状安全不变量（R38）：所有来源（含显式 legacy）统一剪掉危险注入。
     # 真实事故：`LongName ASC` 注入后数据库查看器 ORDER BY 全废、列表 0 项。
     # force_offsets（人工实机核验的函数型注入）在这之后重新加回，不受此限。
     _unsafe = []
@@ -486,8 +596,21 @@ def build() -> dict:
         exact = {k: apply_naming_standard(v, name_rules) for k, v in exact.items()}
         offsets = {k: apply_naming_standard(v, name_rules) for k, v in offsets.items()}
 
+    # --- fragment guard: a mid-word key can only damage live text ---------
+    # History（R81）：`ort`（来自 p|ort）、`orthern`（N|orthern）这类「半个单词」键
+    # 一旦进入词库，就会在运行时被拼进别的英文词里，产出 `p残文ort电`、`n部地区`
+    # 这种不可读的串。它们永远不可能是游戏单独显示的一个字符串，所以直接拒绝。
+    # 判据：小写单词 + 无数字 + 只在更长的英文单词里作为**后缀**出现（从不独立成词）。
+    fragment_keys = find_fragment_keys(exact)
+    if fragment_keys:
+        raise SystemExit("build_dict: 发现半词碎片键，会破碎实机文本，请从数据源删除："
+                         + ", ".join(repr(k) for k in fragment_keys))
+
     terms = load_terms()
     ordered_words = {k: terms[k] for k in sorted(terms)}
+    commented = load_comments()
+    ordered_comments = {k: commented[k] for k in sorted(commented)}
+    ordered_places = load_region_places()
 
     ordered_offsets = {str(k): offsets[k] for k in sorted(offsets)}
     ordered_exact = {k: exact[k] for k in sorted(exact)}
@@ -507,11 +630,34 @@ def build() -> dict:
                 "n_words": len(ordered_words),
             },
         },
+        # `places`（省/州地图标签，R88）与 `comments` 都必须排在第一个已知分区之前：
+        # 旧引擎的分区扫描只认 offsets/exact/partial/words，它会忽略第一个已知分区
+        # 之前的所有内容，因此新词典仍能被旧引擎正常读取（向后兼容是硬要求，R72/R88）。
+        "places": ordered_places,
+        "comments": ordered_comments,
         "offsets": ordered_offsets,
         "exact": ordered_exact,
         "partial": ordered_partial,
         "words": ordered_words,
     }
+
+
+def find_fragment_keys(exact: dict[str, str]) -> list[str]:
+    """找出「半个单词」键：只作为更长英文单词的后缀出现、从不独立成词的小写单键。"""
+    corpus = "\n".join(k for k in exact if isinstance(k, str) and len(k) > 12)
+    if not corpus:
+        return []
+    found = []
+    for key in exact:
+        if not isinstance(key, str) or " " in key or not (1 <= len(key) <= 10):
+            continue
+        if not re.fullmatch(r"[a-z]+", key):
+            continue
+        if re.search(r"(?<![A-Za-z])" + re.escape(key) + r"(?![A-Za-z])", corpus):
+            continue          # 在句子中独立成词 → 真词
+        if re.search(r"[A-Za-z]" + re.escape(key) + r"(?![A-Za-z])", corpus):
+            found.append(key)  # 只作为别的单词的后缀出现 → 半个词
+    return sorted(found)
 
 
 def write(doc: dict, path: Path) -> None:
@@ -540,20 +686,16 @@ def write(doc: dict, path: Path) -> None:
             raise ValueError(
                 f"refusing to install {path.name}: top-level sections "
                 f"{sorted(probe)} != {sorted(TOP_LEVEL_SECTIONS)}")
-        # Windows 下若有杀毒软件、索引器或游戏刚读完持有瞬时句柄，
-        # os.replace 会抛 WinError 5（拒绝访问）。重试 5 次并带退避，
-        # 仍被锁定时退避到截断覆盖写（truncate write）。
-        replaced = False
+        # Windows 下瞬时句柄可能拒绝原子替换；有界重试，仍失败则保全旧产物。
+        # 不退回 truncate write，否则验证过的旧词典也可能被中断写入毁掉。
         for attempt in range(6):
             try:
                 os.replace(tmp, path)
-                replaced = True
                 break
             except PermissionError:
+                if attempt == 5:
+                    raise
                 time.sleep(0.25)
-        if not replaced:
-            path.write_bytes(tmp.read_bytes())
-            tmp.unlink(missing_ok=True)
     except BaseException:
         # Never leave a partial staging file behind, even on Ctrl+C / SIGTERM.
         tmp.unlink(missing_ok=True)

@@ -1,0 +1,50 @@
+{
+  "id": "CN-JinchengYangcheng-z9-416-201",
+  "z": 9,
+  "x": 416,
+  "y": 201,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/416/201.png"
+  ],
+  "context_tiles": [
+    "9/417/201.png",
+    "9/415/201.png",
+    "9/416/200.png",
+    "9/415/202.png",
+    "9/416/202.png"
+  ],
+  "features": [
+    {"id": "CN-JinchengYangcheng-z9-416-201-N01", "kind": "city", "original": "Gaoping", "original_bbox": [128, 95, 180, 117], "source_url": "@source/16a1e45e44246b1e", "source_glyph_complete": true, "source_printed_full_literal": "Gaoping"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N02", "kind": "city", "original": "Lingchuan", "original_bbox": [249, 106, 314, 127], "source_url": "@source/16a1e45e44246b1e", "source_glyph_complete": true, "source_printed_full_literal": "Lingchuan"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N03", "kind": "city", "original": "Hudi", "original_bbox": [23, 137, 51, 153], "source_url": "@source/16a1e45e44246b1e", "source_glyph_complete": true, "source_printed_full_literal": "Hudi"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N04", "kind": "city", "original": "Zhengcun", "original_bbox": [2, 181, 58, 201], "source_url": "@source/16a1e45e44246b1e", "source_glyph_complete": true, "source_printed_full_literal": "Zhengcun"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N05", "kind": "city", "original": "Duohuo", "original_bbox": [255, 208, 300, 224], "source_url": "@source/16a1e45e44246b1e", "source_glyph_complete": true, "source_printed_full_literal": "Duohuo"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N06", "kind": "city", "original": "Jincheng", "original_bbox": [98, 233, 152, 255], "source_url": "@source/16a1e45e44246b1e", "source_glyph_complete": true, "source_printed_full_literal": "Jincheng"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N07", "kind": "city", "original": "Yangcheng", "original_bbox": [-6, 242, 5, 260], "source_url": "@source/16a1e45e44246b1e", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "CN-JinchengYangcheng-z9-416-201-N01", "zh": "高平", "status": "approved", "source": "@source/8d00b2ac6555c6cf", "record_sha256": "1d67d7125f8047b43f50b418a355da1b5a90396d58f1b6e2902fadb626d073a0", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N02", "zh": "陵川", "status": "approved", "source": "@source/958f2adcb6db56c9", "record_sha256": "41ae44714a28ff43ec27bd20b9db2bb89d1592be1134bbdb57e5737cb2afbbb6", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N03", "zh": "胡底", "status": "approved", "source": "@source/dfd5517b66232d8d", "record_sha256": "c2c04f8d46bf9bf86750e93f4f5e8a432b93c66d74e749b7629ea0b3cdbd2199", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N04", "zh": "郑村", "status": "approved", "source": "@source/dfd5517b66232d8d", "record_sha256": "793fe378fb8dffda16e9789904438d44d8b32d612a9546feeb57035e594ce427", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N05", "zh": "夺火", "status": "approved", "source": "@source/958f2adcb6db56c9", "record_sha256": "5d9ee5f1856d812d9dae164f2f52b3324480f47d10fd3b506fa0be3d40f69989", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N06", "zh": "晋城", "status": "approved", "source": "@source/1aecda227cfd5280", "record_sha256": "ab811606fca276b902cb673c6f5f1dfe509fa6e9a2dd0d42276c788e7b9c02f1", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N07", "zh": "阳城", "status": "approved", "source": "@source/63d9c6a3da52c24e", "record_sha256": "d641d1bd028e4458bee0cadc99d7e1af43bf3d27bbc639a1df2b97af16f9201b", "review_notes": "核对西缘留存字形与南侧两个相邻原片的连续描边，并以同供应商高一级完整拼写确认阳城。"}
+  ],
+  "layouts": [
+    {"id": "CN-JinchengYangcheng-z9-416-201-N01", "x": 154.0, "y": 106.0, "font_size": 12, "font_style": "regular", "lines": ["高平"]},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N02", "x": 240, "y": 114.5, "font_size": 12, "font_style": "regular", "lines": ["陵川"]},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N03", "x": 37.0, "y": 145.0, "font_size": 12, "font_style": "regular", "lines": ["胡底"]},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N04", "x": 30.0, "y": 191.0, "font_size": 12, "font_style": "regular", "lines": ["郑村"]},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N05", "x": 241, "y": 216, "font_size": 12, "font_style": "regular", "lines": ["夺火"]},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N06", "x": 121.1611111111124, "y": 237.4222006391792, "font_size": 12, "font_style": "regular", "lines": ["晋城"]},
+    {"id": "CN-JinchengYangcheng-z9-416-201-N07", "x": 15, "y": 245, "font_size": 12, "font_style": "regular", "lines": ["阳城"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-JinchengYangcheng-z9-416-201-shared-CN-ChangzhiLiangma-z9-416-200-N09", "owner_region": "CN-ChangzhiLiangma-z9-416-200", "feature_id": "CN-ChangzhiLiangma-z9-416-200-N09", "kind": "city", "original": "Shangdang", "source_url": "@source/ef14f06842b01569", "original_bbox": [164, -18, 234, 4], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

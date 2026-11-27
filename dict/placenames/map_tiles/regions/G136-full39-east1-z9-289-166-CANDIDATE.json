@@ -1,0 +1,37 @@
+{
+  "id": "G136-full39-east1-z9-289-166-CANDIDATE",
+  "z": 9,
+  "x": 289,
+  "y": 166,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/289/166.png"
+  ],
+  "context_tiles": [
+    "9/288/166.png"
+  ],
+  "features": [
+    {"id": "G136-C20", "kind": "city", "original": "Czarna Białostocka", "original_bbox": [-2, 2, 62, 37], "source_url": "@source/3b819df0cc8807f8"},
+    {"id": "G136-C23", "kind": "city", "original": "Krynki", "original_bbox": [189, 32, 225, 51], "source_url": "@source/3b819df0cc8807f8"},
+    {"id": "G136-C24", "kind": "city", "original": "Zabłudów", "original_bbox": [21, 183, 78, 200], "source_url": "@source/3b819df0cc8807f8"},
+    {"id": "G136-C25", "kind": "city", "original": "Michałowo", "original_bbox": [117, 173, 178, 189], "source_url": "@source/3b819df0cc8807f8"}
+  ],
+  "translations": [
+    {"id": "G136-C20", "zh": "黑比亚沃斯托茨卡", "status": "approved", "source": "@source/923ad3c6dab2769c", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "4e9650f65df50391683c8936ef641946a72ce69f07efb7886bf3201ecbed4235"},
+    {"id": "G136-C23", "zh": "克伦基", "status": "approved", "source": "@source/deab78d6aa108a3e", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "afd6bd0c73c85600da290a05ba6059a94c940b6695a2c158d21cc9eab716f993"},
+    {"id": "G136-C24", "zh": "扎布武杜夫", "status": "approved", "source": "@source/034fd7b72db800cf", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "97f6593c00d0b5b5e6656a425d2fd11d97d0675732b49fd20c3220a093b1feae"},
+    {"id": "G136-C25", "zh": "米哈沃沃", "status": "approved", "source": "@source/194fed2202b7252a", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "8cc3d20b0f570cad9cf385cb0c05f4850a7646059f4c9591aa59fa1bc6cf7237"}
+  ],
+  "layouts": [
+    {"id": "G136-C20", "x": 30.0, "y": 19.5, "font_size": 12, "font_style": "regular", "lines": ["黑比亚沃", "斯托茨卡"]},
+    {"id": "G136-C23", "x": 207.0, "y": 41.5, "font_size": 12, "font_style": "regular", "lines": ["克伦基"]},
+    {"id": "G136-C24", "x": 49.5, "y": 191.5, "font_size": 12, "font_style": "regular", "lines": ["扎布武杜夫"]},
+    {"id": "G136-C25", "x": 147.5, "y": 181.0, "font_size": 12, "font_style": "regular", "lines": ["米哈沃沃"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G136-full39-east1-z9-289-166-CANDIDATE-shared-G136-C21", "owner_region": "G136-full39-top4-z9-287-166-CANDIDATE", "feature_id": "G136-C21", "kind": "city", "original": "Wasilków", "original_bbox": [-27, 72, 29, 89], "source_url": "@source/4ea12cf0dca7148e", "review_notes": "Full observed original instance accounted across both output owners; only the normal owner renders Chinese. Complete source bbox and exact name/kind/URL match the normal owner."},
+    {"id": "G136-full39-east1-z9-289-166-CANDIDATE-shared-G136-C22", "owner_region": "G136-full39-top4-z9-287-166-CANDIDATE", "feature_id": "G136-C22", "kind": "city", "original": "Białystok", "original_bbox": [-44, 112, 14, 133], "source_url": "@source/4ea12cf0dca7148e", "review_notes": "Full observed original instance accounted across both output owners; only the normal owner renders Chinese. Complete source bbox and exact name/kind/URL match the normal owner."}
+  ]
+}

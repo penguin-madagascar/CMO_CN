@@ -1,0 +1,40 @@
+{
+  "id": "SA2-MODEL-z7-72-70-1-2",
+  "z": 7,
+  "x": 72,
+  "y": 70,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "notes": "两格完整原文字与圆点的元数据模型候选；须不同 Source 资格及 Root 实际选择后另作 Target。",
+  "original_tiles": [
+    "7/72/70.png",
+    "7/72/71.png"
+  ],
+  "context_tiles": [
+    "7/71/69.png",
+    "7/72/69.png",
+    "7/70/70.png",
+    "7/71/70.png",
+    "7/71/71.png",
+    "7/71/72.png",
+    "7/72/72.png"
+  ],
+  "features": [
+    {"id": "SA2-001-KatimaMulilo", "kind": "city", "original": "Katima Mulilo", "original_bbox": [158, 79, 200, 113], "source_url": "@source/7ba42db31a9088f9"},
+    {"id": "SA2-002-Maun", "kind": "city", "original": "Maun", "original_bbox": [79, 317, 116, 336], "source_url": "@source/3f9764f735cb0778"}
+  ],
+  "translations": [
+    {"id": "SA2-001-KatimaMulilo", "zh": "卡蒂马穆利洛", "status": "approved", "source": "@source/0b59d53bd66d91e4", "record_sha256": "7ec856cd2ce61d1da13eaf79d4130cf9ac471cebe30e0be8ffd965280ebfe304", "review_notes": "完整原字与中文词形已获不同 Source 核验；实际 Target 渲染仍待核验。 AUTHOR SELF ACTUAL PRIVATE VIEW /root/fujian_target_author; different TARGET Primary pending. Actually viewed all7 boards: complete Source2 actual5px/Chinese, whole1, both actual mixed raw native frames/new target frames, internal y256 join and all external edges. Both Chinese captions 卡蒂马穆利洛/马翁 are complete and clear, no missingglyph/collision/clipping. Roote2d159/Ma95f and true SourceQf302/mandatory0a6 are exact. Source2 complete boxes/literals/URLs/Chinese preserved. Both original native midpoints remain exact, Root9/1 fixed; each actual target73 covers all original69 geometric support points. Original raw frame72/71 includes adjacent glyph antialiasing and is never a pure native paint template. Root textxy retained without adjustments. Source9 exact, unknown4 unread/GET0. Rundu/Ghanzi context1013 remains old SCAF71 output; extra232 oldSCAF69 only. Full protected8/236+P660/953/WWP4608 unchanged. N2/C0/H0/newalias0/newrules0/oldruntime0. No formal approval."},
+    {"id": "SA2-002-Maun", "zh": "马翁", "status": "approved", "source": "@source/f0bcbfd89dc32f43", "record_sha256": "7fd3a57754bbaff6ea96c0b8a713f9e6b190e556781d648611e8ab210f9772b5", "review_notes": "完整原字与中文词形已获不同 Source 核验；实际 Target 渲染仍待核验。 AUTHOR SELF ACTUAL PRIVATE VIEW /root/fujian_target_author; different TARGET Primary pending. Actually viewed all7 boards: complete Source2 actual5px/Chinese, whole1, both actual mixed raw native frames/new target frames, internal y256 join and all external edges. Both Chinese captions 卡蒂马穆利洛/马翁 are complete and clear, no missingglyph/collision/clipping. Roote2d159/Ma95f and true SourceQf302/mandatory0a6 are exact. Source2 complete boxes/literals/URLs/Chinese preserved. Both original native midpoints remain exact, Root9/1 fixed; each actual target73 covers all original69 geometric support points. Original raw frame72/71 includes adjacent glyph antialiasing and is never a pure native paint template. Root textxy retained without adjustments. Source9 exact, unknown4 unread/GET0. Rundu/Ghanzi context1013 remains old SCAF71 output; extra232 oldSCAF69 only. Full protected8/236+P660/953/WWP4608 unchanged. N2/C0/H0/newalias0/newrules0/oldruntime0. No formal approval."}
+  ],
+  "layouts": [
+    {"id": "SA2-001-KatimaMulilo", "x": 182.5, "y": 104.5, "font_size": 12, "font_style": "regular"},
+    {"id": "SA2-002-Maun", "x": 109.5, "y": 329.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "SA2-001-KatimaMulilo-point", "feature_id": "SA2-001-KatimaMulilo", "kind": "circle", "x": 162.5, "y": 83.5, "size": 9, "outline_width": 1, "original_bbox": [158, 79, 167, 88]},
+    {"id": "SA2-002-Maun-point", "feature_id": "SA2-002-Maun", "kind": "circle", "x": 83.5, "y": 321.5, "size": 9, "outline_width": 1, "original_bbox": [79, 317, 88, 326]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

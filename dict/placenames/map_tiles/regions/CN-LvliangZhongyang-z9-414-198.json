@@ -1,0 +1,39 @@
+{
+  "id": "CN-LvliangZhongyang-z9-414-198",
+  "z": 9,
+  "x": 414,
+  "y": 198,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/414/198.png"
+  ],
+  "context_tiles": [
+    "9/413/198.png",
+    "9/415/198.png"
+  ],
+  "features": [
+    {"id": "CN-LvliangZhongyang-z9-414-198-N01", "kind": "city", "original": "Lüliang", "original_bbox": [-7, 83, 39, 105], "source_url": "@source/9db9ac11c55c0663", "source_glyph_complete": true, "source_printed_full_literal": "Lüliang"},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N02", "kind": "city", "original": "Xinyi", "original_bbox": [55, 67, 86, 86], "source_url": "@source/9db9ac11c55c0663", "source_glyph_complete": true, "source_printed_full_literal": "Xinyi"},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N03", "kind": "city", "original": "Zhongyang", "original_bbox": [-6, 157, 63, 179], "source_url": "@source/9db9ac11c55c0663", "source_glyph_complete": true, "source_printed_full_literal": "Zhongyang"},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N04", "kind": "city", "original": "Ducun", "original_bbox": [141, 230, 178, 246], "source_url": "@source/9db9ac11c55c0663", "source_glyph_complete": true, "source_printed_full_literal": "Ducun"}
+  ],
+  "translations": [
+    {"id": "CN-LvliangZhongyang-z9-414-198-N01", "zh": "吕梁", "status": "approved", "source": "@source/5123455536c14dce", "record_sha256": "b3af96cd7b7d44fafb76a211859054611eb263af2f9dee77fa44584028fe88b4", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N02", "zh": "信义", "status": "approved", "source": "@source/5123455536c14dce", "record_sha256": "045b97d3e433d8310287ab0c2beb33697e25f8b39917366fb67fc23270a257f2", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N03", "zh": "中阳", "status": "approved", "source": "@source/5123455536c14dce", "record_sha256": "a161c1e251ebe0989da41030dcd993e9bb6b2a3afe348b3c45a0aaf64eaa0ad2", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N04", "zh": "杜村", "status": "approved", "source": "@source/cddbefb388c0b0c9", "record_sha256": "f6de05cc9cb179ff6f71c45cd787b0b0d6dd46c35fca593f85343e03e4d38739", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-LvliangZhongyang-z9-414-198-N01", "x": 16.0, "y": 94.0, "font_size": 12, "font_style": "regular", "lines": ["吕梁"]},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N02", "x": 70.5, "y": 76.5, "font_size": 12, "font_style": "regular", "lines": ["信义"]},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N03", "x": 28.5, "y": 168.0, "font_size": 12, "font_style": "regular", "lines": ["中阳"]},
+    {"id": "CN-LvliangZhongyang-z9-414-198-N04", "x": 159.5, "y": 238.0, "font_size": 12, "font_style": "regular", "lines": ["杜村"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-LvliangZhongyang-z9-414-198-shared-N8-PFX-046", "owner_region": "N8-PREFIX-z9-415-198", "feature_id": "N8-PFX-046", "kind": "city", "original": "Huili", "source_url": "@source/597330167a4686eb", "original_bbox": [253, 44, 281, 60], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"},
+    {"id": "CN-LvliangZhongyang-z9-414-198-shared-N8-PFX-051", "owner_region": "N8-PREFIX-z9-415-198", "feature_id": "N8-PFX-051", "kind": "city", "original": "Fenyang", "source_url": "@source/597330167a4686eb", "original_bbox": [225, 198, 277, 219], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

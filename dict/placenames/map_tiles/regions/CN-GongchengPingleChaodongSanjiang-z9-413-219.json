@@ -1,0 +1,53 @@
+{
+  "id": "CN-GongchengPingleChaodongSanjiang-z9-413-219",
+  "z": 9,
+  "x": 413,
+  "y": 219,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/413/219.png"
+  ],
+  "context_tiles": [
+    "9/412/219.png",
+    "9/414/219.png"
+  ],
+  "features": [
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N01", "kind": "city", "original": "Limu", "original_bbox": [170, 6, 200, 22], "source_url": "@source/4d3d093275e2d580", "source_glyph_complete": true, "source_printed_full_literal": "Limu"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N02", "kind": "city", "original": "Xingping", "original_bbox": [24, 91, 75, 110], "source_url": "@source/4d3d093275e2d580", "source_glyph_complete": true, "source_printed_full_literal": "Xingping"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N03", "kind": "city", "original": "Putao", "original_bbox": [-23, 93, 10, 109], "source_url": "@source/a530ef2dd0b07899", "source_glyph_complete": true, "source_printed_full_literal": "Putao"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N04", "kind": "city", "original": "Gongcheng", "original_bbox": [123, 123, 192, 145], "source_url": "@source/4d3d093275e2d580", "source_glyph_complete": true, "source_printed_full_literal": "Gongcheng"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N05", "kind": "city", "original": "Lianhua", "original_bbox": [153, 165, 198, 181], "source_url": "@source/4d3d093275e2d580", "source_glyph_complete": true, "source_printed_full_literal": "Lianhua"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N06", "kind": "city", "original": "Pingle", "original_bbox": [70, 203, 111, 225], "source_url": "@source/4d3d093275e2d580", "source_glyph_complete": true, "source_printed_full_literal": "Pingle"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N07", "kind": "city", "original": "Chaodong", "original_bbox": [254, 50, 256, 65], "source_url": "@source/4d3d093275e2d580", "source_glyph_complete": false, "source_printed_full_literal": null},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N08", "kind": "city", "original": "Sanjiang", "original_bbox": [233, 153, 256, 173], "source_url": "@source/4d3d093275e2d580", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N01", "zh": "栗木", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "bf3f4adea1e5c0cf15af5ea11059bd9526a7ede4103b5d3befd52ca81ec9a82c", "review_notes": "核对同供应商完整原字、位置及官方中文。"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N02", "zh": "兴坪", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "66f669251b69d81d6203c0c64a216baa7df1fb98b4d9b2ca18016beca8713185", "review_notes": "核对同供应商完整原字、位置及官方中文。"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N03", "zh": "葡萄", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "194c70470a092719f6bd6a1e83a3543c7cddea191b55fdeb01a6a9138a467223", "review_notes": "核对同供应商完整原字、位置及官方中文。"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N04", "zh": "恭城", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "7037c5c1189a9a60bb411b974ca665b03a7e47df8f72d787ca81143bbe2bb7b0", "review_notes": "核对同供应商完整原字、位置及官方中文。"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N05", "zh": "莲花", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "cdc049771f413578c0d2923407005eb365828fe6bcab418831602d014c7a7b95", "review_notes": "核对同供应商完整原字、位置及官方中文。"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N06", "zh": "平乐", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "32d4d6e78b0d15227b027724ef31714eb0420edccde075bd7c2120014ab5971b", "review_notes": "核对同供应商完整原字、位置及官方中文。"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N07", "zh": "朝东", "status": "approved", "source": "@source/c67bbe7afae6b9a2", "record_sha256": "1e57fadc31ab22cd27b94ed9fc8a8baa83644097003c483859028a6b3a31ae80", "review_notes": "按同供应商原图及当地地名资料核对。"},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N08", "zh": "三江", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "846070f701135adf6dfc828899a2d16c7d3504061557a061dfff017fd4189e13", "review_notes": "按同供应商原图及当地地名资料核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N01", "x": 185.0, "y": 14.0, "font_style": "regular", "font_size": 12, "lines": ["栗木"]},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N02", "x": 49.5, "y": 100.5, "font_style": "regular", "font_size": 12, "lines": ["兴坪"]},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N03", "x": 14.0, "y": 101.0, "font_style": "regular", "font_size": 12, "lines": ["葡萄"]},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N04", "x": 157.5, "y": 134.0, "font_style": "regular", "font_size": 12, "lines": ["恭城"]},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N05", "x": 175.5, "y": 173.0, "font_style": "regular", "font_size": 12, "lines": ["莲花"]},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N06", "x": 90.5, "y": 214.0, "font_style": "regular", "font_size": 12, "lines": ["平乐"]},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N07", "x": 242.0, "y": 57.65625, "font_style": "regular", "font_size": 12, "lines": ["朝东"]},
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-N08", "x": 242.0, "y": 161.78125, "font_style": "regular", "font_size": 12, "lines": ["三江"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-Taochuan", "owner_region": "CN-FuchuanJianghua-z9-414-219", "feature_id": "CN-FuchuanJianghua-z9-414-219-N02", "original_bbox": [232, 13, 286, 29], "kind": "city", "original": "Taochuan", "source_url": "@source/4a86ee0c0afb2397", "review_notes": "完整跨片原字沿用桃川的现有所属区。"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "CN-GongchengPingleChaodongSanjiang-z9-413-219-C-Cities595", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 595, "original_Chinese_name": "阳朔", "lat_f32_bits": 1103511321, "lon_f32_bits": 1121778358, "flags": 0, "level": 1}, "layout": {"x": 36.061111111106584, "y": 154.37612775654998, "font_style": "regular", "font_size": 12, "lines": ["阳朔"]}}
+  ]
+}

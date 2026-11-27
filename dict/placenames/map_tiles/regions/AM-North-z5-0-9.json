@@ -234,7 +234,7 @@
     {"id": "AM5-Colombia", "kind": "admin0", "original": "Colombia", "original_bbox": [2367, 1684, 2508, 1706], "source_url": "@source/f0d7a828ed2f1ca5"},
     {"id": "AM5-Guyana", "kind": "admin0", "original": "Guyana", "original_bbox": [2708, 1668, 2816, 1689], "source_url": "@source/9225b03da41a83d0"},
     {"id": "AM5-Roraima", "kind": "admin1", "original": "Roraima", "original_bbox": [2675, 1736, 2725, 1748], "source_url": "@source/9225b03da41a83d0"},
-    {"id": "AM5-Pacific-Ocean", "kind": "marine", "original": "Pacific Ocean", "original_bbox": [1304, 1787, 1382, 1825], "source_url": "@source/7d2e23c834197d93"}
+    {"id": "AM5-Pacific-Ocean", "kind": "marine", "original": "Pacific Ocean", "original_bbox": [1304, 1787, 1383, 1825], "source_url": "@source/7d2e23c834197d93"}
   ],
   "translations": [
     {"id": "AM5-Whitehorse", "zh": "白马", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "de2709d18c4a4202b70fc3739d4782127e0f262a5b59fc3eb4cab79bba2fd165", "review_notes": "@note/translations"},
@@ -382,7 +382,7 @@
     {"id": "AM5-Colombia", "zh": "哥伦比亚", "status": "approved", "source": "@source/ea9990d40022f156", "record_sha256": "fb477e8912ed16e58667a6d7a42fae1f696576d7ec88d163a2996a15a5cd264b", "review_notes": "@note/translations"},
     {"id": "AM5-Guyana", "zh": "圭亚那", "status": "approved", "source": "@source/ea9990d40022f156", "record_sha256": "1d711de2b580d94460cfd4992a923e78e06d7974b6e02a8354a3d1f34a9e385c", "review_notes": "@note/translations"},
     {"id": "AM5-Roraima", "zh": "罗赖马州", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "368bb1564099cbf53d5f96254c19ccc14e490ac9e45ce00c70d3c88b371d51db", "review_notes": "@note/translations"},
-    {"id": "AM5-Pacific-Ocean", "zh": "太平洋", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "4e543dfe6d43ceaecd54262defc1bdf71bd080fc7d199cf728e49a858032a79d", "review_notes": "@note/translations"}
+    {"id": "AM5-Pacific-Ocean", "zh": "太平洋", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "60ad9dadf824b8889cdce40ea65a5ad762f710eadd6ad9343eabda3a13d76682", "review_notes": "@note/translations"}
   ],
   "layouts": [
     {"id": "AM5-Whitehorse", "x": 1052.7459228699315, "y": 49.5, "font_size": 12, "font_style": "regular"},

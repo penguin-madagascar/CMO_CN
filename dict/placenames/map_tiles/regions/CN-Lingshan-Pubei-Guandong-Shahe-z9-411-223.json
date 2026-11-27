@@ -1,0 +1,47 @@
+{
+  "id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223",
+  "z": 9,
+  "x": 411,
+  "y": 223,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    {"path": "9/411/223.png", "z": 9, "origin": "official frozen tile HTTP", "source_alpha_count": 3039}
+  ],
+  "context_tiles": [
+    {"path": "9/410/223.png", "z": 9, "origin": "official frozen tile HTTP", "source_alpha_count": 3030},
+    "9/411/222.png",
+    {"path": "9/412/223.png", "z": 9, "origin": "official frozen tile HTTP", "source_alpha_count": 3579},
+    {"path": "9/411/224.png", "z": 9, "origin": "official frozen tile HTTP", "source_alpha_count": 5067}
+  ],
+  "features": [
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S01", "kind": "city", "original": "Lingshan", "source_url": "@source/8e835fd2e11f55a3", "original_bbox": [84, 59, 141, 80], "source_printed_full_literal": "Lingshan", "source_glyph_complete": true},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S02", "kind": "city", "original": "Pubei", "source_url": "@source/8e835fd2e11f55a3", "original_bbox": [189, 117, 225, 135], "source_printed_full_literal": "Pubei", "source_glyph_complete": true},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S03", "kind": "city", "original": "Beitong", "source_url": "@source/8e835fd2e11f55a3", "original_bbox": [103, 137, 147, 156], "source_printed_full_literal": "Beitong", "source_glyph_complete": true},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S04", "kind": "city", "original": "Nanxiang", "source_url": "@source/8e835fd2e11f55a3", "original_bbox": [30, -15, 82, 5], "source_printed_full_literal": "Nanxiang", "source_glyph_complete": true},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S05", "kind": "city", "original": "Guand…", "source_url": "@source/8e835fd2e11f55a3", "original_bbox": [224, 55, 256, 72], "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "Guand…", "resolved_semantic_name": "Guandong", "semantic_resolution": {"type": "VISIBLE_FIVE_CHARACTER_Z9_PREFIX_AND_PRIMARY_GEOGRAPHIC_ANCHORS", "complete_spelling": "Guandong", "administrative_name_source": "@source/f356f7ed39a79d86", "gazetteer_anchors": [{"source_url": "@source/296cc6c3f4bfa827", "source_pin": {"path": "evidence/parallel_map/reviews/SEA_GUANGXI_9077_INDEPENDENT_20261123/411_223_BOUNDED_AUTHOR/GUANDONG_OSM_PRIMARY.json", "sha256": "72e92ab84d3a569bb607870758cec934de86639b113b07ff2158ff986bdd2d5e", "bytes": 770}, "lonlat": [109.677504, 22.432465], "tile_xy": [252.36056746666145, 63.556931585284474]}, {"source_url": "@source/c8ec43196b1868d0", "source_pin": {"path": "evidence/parallel_map/reviews/SEA_GUANGXI_9077_INDEPENDENT_20261123/411_223_BOUNDED_AUTHOR/GUANDONG_GEONAMES_PRIMARY.rdf", "sha256": "771f4760f5bae3ec1f86d5f12a27106bb665b8f8a6d4b20bcadc6acbcbed9695", "bytes": 2328}, "lonlat": [109.66667, 22.43333], "tile_xy": [248.4160284444515, 63.21621140628122]}], "preferred": [252.36056746666145, 63.556931585284474], "supplier_full_print_observed": false, "limits": "精确 z9 只见 Guand 残字，东邻相同字高没有非透明像素。完整拼写用于关联真实地名。原字框归账仅含实见像素。", "exact_z9_opposite_world_bbox": [105472, 57133, 105496, 57174], "exact_z9_opposite_alpha": 0}, "original_is_support_not_full_glyph_transcription": true},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S06", "kind": "city", "original": "S", "source_url": "@source/8e835fd2e11f55a3", "original_bbox": [246, 199, 256, 216], "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "S", "resolved_semantic_name": "Shahe", "semantic_resolution": {"complete_spelling_source_z": 10, "complete_spelling_source_world_bbox": [210944, 114584, 210979, 114601], "complete_spelling_source_bbox": [0, 152, 35, 169], "complete_spelling_source_RGBA_sha256": "283f3f2e3cc608889e1aacae505648bd64425a9f0c65b44b64aad39423351291", "z9_visible_bbox": [246, 199, 256, 216], "z9_visible_world_bbox": [105462, 57287, 105472, 57304], "z10_complete_caption_center_divided_by_two_relative": [264.75, 208.25], "projected_unclipped_glyph_extent_at_z9_nominal_size": [247.25, 199.75, 282.25, 216.75], "best_visible_alpha_support_overlap": 0.9235668789808917, "observed_clip_side": "E", "best_fit_offset_z9": [247, 199], "original_is_visible_fragment_not_recovered_full_glyphs": true, "type": "ACTUAL_OTHER_ZOOM_COMPLETE_PRINT_AND_SAME_WORLD_CAPTION_ASSOCIATION", "complete_spelling": "Shahe", "complete_spelling_source_url": "@source/468ed8cf1fd54a6b", "complete_spelling_source_wire_sha256": "474fbab55e9730ea7359c6a32f1b3ced7ab59d99da2d6362f94936a425645a08", "administrative_name_source": "@source/c152265909983ca5", "preferred": [264.75, 208.25], "exact_z9_opposite_world_bbox": [105472, 57272, 105496, 57318], "exact_z9_opposite_alpha": 0}, "original_is_support_not_full_glyph_transcription": true}
+  ],
+  "translations": [
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S01", "zh": "灵山", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "c71d6149a8aa31ca523a254d07dcbf84cd85003b5bb23e246a3d3d9f877c022c", "review_notes": "实见图幅字形及地名经核对。"},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S02", "zh": "浦北", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "35fc4d3c5f244c73734a7c81e9242104899474c48c783c854656cb55eab904d7", "review_notes": "实见图幅字形及地名经核对。"},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S03", "zh": "北通", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "f052aeca210ec70bf7f55c42d2cdc25e976edb509a125a9be94c88222aa613f3", "review_notes": "实见图幅字形及地名经核对。"},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S04", "zh": "南乡", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "b5927cf87ecc914ca09c0ec9e8e90e2a1179fe3e100df4ddcb1a80047c477ea1", "review_notes": "实见图幅字形及地名经核对。"},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S05", "zh": "官垌", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "ce567d118e3a7fcffee840e09fb4b3573bbbe9323b0f1b697a1f3a0c208251c0", "review_notes": "实见图幅字形及地名经核对。"},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S06", "zh": "沙河", "status": "approved", "source": "@source/c152265909983ca5", "record_sha256": "984e29edf4677b462752b6f913074991ea0e55bb8088ddc70562504f4f6fa05d", "review_notes": "实见图幅字形及地名经核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S01", "x": 112.5, "y": 69.5, "font_style": "regular", "font_size": 12, "lines": ["灵山"]},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S02", "x": 207.0, "y": 126.0, "font_style": "regular", "font_size": 12, "lines": ["浦北"]},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S03", "x": 125.0, "y": 146.5, "font_style": "regular", "font_size": 12, "lines": ["北通"]},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S04", "x": 56.0, "y": 7.0, "font_style": "regular", "font_size": 12, "lines": ["南乡"]},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S05", "x": 242.5, "y": 63.556931585284474, "font_style": "regular", "font_size": 12, "lines": ["官垌"]},
+    {"id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-S06", "x": 242.5, "y": 208.25, "font_style": "regular", "font_size": 12, "lines": ["沙河"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Luwu", "source_url": "@source/1c9ead3693a92754", "id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-shared-SC14-N039", "original_bbox": [-28, 116, 4, 132], "owner_region": "SC14-R03-z9-410-223", "feature_id": "SC14-N039", "review_notes": "现有跨缝别名像素与原图一致。"},
+    {"kind": "city", "original": "Nasi", "source_url": "@source/3cc9ed71c4118d69", "id": "CN-Lingshan-Pubei-Guandong-Shahe-z9-411-223-shared-AP-VH9-002", "original_bbox": [4, 252, 30, 268], "owner_region": "AP-Vietnam-Hainan-z9-held2-411-224", "feature_id": "AP-VH9-002", "review_notes": "现有跨缝别名像素与原图一致。"}
+  ],
+  "legacy_suppressions": []
+}

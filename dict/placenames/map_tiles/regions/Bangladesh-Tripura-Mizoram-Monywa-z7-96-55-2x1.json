@@ -1,0 +1,61 @@
+{
+  "id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1",
+  "z": 7,
+  "x": 96,
+  "y": 55,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/96/55.png",
+    "7/97/55.png"
+  ],
+  "context_tiles": [
+    "7/98/55.png",
+    "7/97/56.png"
+  ],
+  "features": [
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Dhaka", "kind": "city", "original": "Dhaka", "original_bbox": [31, 72, 75, 93], "source_url": "@source/ba7b0a46079bfb2f", "source_glyph_complete": true, "source_printed_full_literal": "Dhaka"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-TRIPURA", "kind": "admin1", "original": "TRIPURA", "original_bbox": [112, 63, 199, 81], "source_url": "@source/ba7b0a46079bfb2f", "source_glyph_complete": true, "source_printed_full_literal": "TRIPURA"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Aizawl", "kind": "city", "original": "Aizawl", "original_bbox": [245, 74, 286, 93], "source_url": "@source/ba7b0a46079bfb2f", "source_glyph_complete": true, "source_printed_full_literal": "Aizawl"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Cumilla", "kind": "city", "original": "Cumilla", "original_bbox": [103, 102, 148, 121], "source_url": "@source/ba7b0a46079bfb2f", "source_glyph_complete": true, "source_printed_full_literal": "Cumilla"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-MIZORAM", "kind": "admin1", "original": "MIZORAM", "original_bbox": [215, 119, 307, 137], "source_url": "@source/ba7b0a46079bfb2f", "source_glyph_complete": true, "source_printed_full_literal": "MIZORAM"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Barishal", "kind": "city", "original": "Barishal", "original_bbox": [29, 177, 77, 197], "source_url": "@source/ba7b0a46079bfb2f", "source_glyph_complete": true, "source_printed_full_literal": "Barishal"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Chattogram", "kind": "city", "original": "Chattogram", "original_bbox": [162, 213, 234, 238], "source_url": "@source/ba7b0a46079bfb2f", "source_glyph_complete": true, "source_printed_full_literal": "Chattogram"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Monywa", "kind": "city", "original": "Monywa", "original_bbox": [463, 234, 512, 256], "source_url": "@source/c1dfbba366967d4b", "source_glyph_complete": true, "source_printed_full_literal": "Monywa"}
+  ],
+  "translations": [
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Dhaka", "zh": "达卡", "status": "approved", "source": "@source/2cfb281524e3b03e", "review_notes": "Exact complete supplier label. The Chinese wording is inherited from the same entity at an existing map zoom.", "record_sha256": "73b652b8587ef3bc370c3859c34e91d19b1e28691f81d0f8c96a15786834f770"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-TRIPURA", "zh": "特里普拉邦", "status": "approved", "source": "@source/c99418598e3d79b5", "review_notes": "Exact complete supplier label. The Chinese wording is inherited from the same entity at an existing map zoom.", "record_sha256": "3149a023629ce2f823f2b4299ec0110a3430bf7351e736b02d8521e867a0fe36"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Aizawl", "zh": "艾藻尔", "status": "approved", "source": "@source/de57b59c289acedb", "review_notes": "Exact complete supplier label. The Chinese wording is inherited from the same entity at an existing map zoom.", "record_sha256": "7660805b1b6742b027703a086b7f07a9dab96f88cedaa6b4cf5a3990ad1b0075"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Cumilla", "zh": "库米拉", "status": "approved", "source": "@source/de57b59c289acedb", "review_notes": "Exact complete supplier label. The Chinese wording is inherited from the same entity at an existing map zoom.", "record_sha256": "b6f3313cbe0dc5ae0eed0784cba3cfa6d35f6d025b8c87e891c4b9fbd65e0e52"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-MIZORAM", "zh": "米佐拉姆邦", "status": "approved", "source": "@source/c99418598e3d79b5", "review_notes": "Exact complete supplier label. The Chinese wording is inherited from the same entity at an existing map zoom.", "record_sha256": "b7f544e7c775d955b4ff71a61e36a32c7ffb6cfdb21ef47479761afef468e80f"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Barishal", "zh": "巴里萨尔", "status": "approved", "source": "@source/2cfb281524e3b03e", "review_notes": "Exact complete supplier label. The Chinese wording is inherited from the same entity at an existing map zoom. Chinese foreign-ministry wording retained; the prior same visible WWP city name uses a different transliteration.", "record_sha256": "9116d9512748c9aa63991409add483cda6b75ca257afc9d886afc634832beff1"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Chattogram", "zh": "吉大港", "status": "approved", "source": "@source/2cfb281524e3b03e", "review_notes": "Exact complete supplier label. The Chinese wording is inherited from the same entity at an existing map zoom.", "record_sha256": "9d453cd97ec18e498b8ec441fb072bf7a6772888917e99b2bba42bd4a3a66ceb"},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Monywa", "zh": "蒙育瓦", "status": "approved", "source": "@source/de57b59c289acedb", "review_notes": "Exact complete supplier label. The Chinese wording is inherited from the same entity at an existing map zoom. The original terminal outer halos touch east and south borders; both exact neighboring crops are fully transparent opposite the contact.", "record_sha256": "7e13f4e4180b3b16078eac26b5558815bdd46dfaadcb4f1c8d621e4d6c89ae2b"}
+  ],
+  "layouts": [
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Dhaka", "x": 56, "y": 85, "font_style": "regular", "font_size": 12, "lines": ["达卡"]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-TRIPURA", "x": 155.5, "y": 72, "font_style": "bold", "font_size": 12, "lines": ["特里普拉邦"]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Aizawl", "x": 274, "y": 86, "font_style": "regular", "font_size": 12, "lines": ["艾藻尔"]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Cumilla", "x": 130, "y": 113, "font_style": "regular", "font_size": 12, "lines": ["库米拉"]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-MIZORAM", "x": 261, "y": 128, "font_style": "bold", "font_size": 12, "lines": ["米佐拉姆邦"]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Barishal", "x": 60, "y": 190, "font_style": "regular", "font_size": 12, "lines": ["巴里萨尔"]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Chattogram", "x": 197, "y": 228, "font_style": "regular", "font_size": 12, "lines": ["吉大港"]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Monywa", "x": 490.5, "y": 248, "font_style": "regular", "font_size": 12, "lines": ["蒙育瓦"]}
+  ],
+  "symbols": [
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Dhaka-point", "feature_id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Dhaka", "kind": "circle", "x": 35.5, "y": 76.5, "size": 7, "outline_width": 1, "original_bbox": [31, 72, 40, 81]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Aizawl-point", "feature_id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Aizawl", "kind": "circle", "x": 249.5, "y": 78.5, "size": 7, "outline_width": 1, "original_bbox": [245, 74, 254, 83]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Cumilla-point", "feature_id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Cumilla", "kind": "circle", "x": 107.5, "y": 106.5, "size": 7, "outline_width": 1, "original_bbox": [103, 102, 112, 111]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Barishal-point", "feature_id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Barishal", "kind": "circle", "x": 33.5, "y": 181.5, "size": 7, "outline_width": 1, "original_bbox": [29, 177, 38, 186]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Chattogram-point", "feature_id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Chattogram", "kind": "circle", "x": 166.5, "y": 217.5, "size": 7, "outline_width": 1, "original_bbox": [162, 213, 171, 222]},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Monywa-point", "feature_id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Monywa", "kind": "circle", "x": 467.5, "y": 238.5, "size": 7, "outline_width": 1, "original_bbox": [463, 234, 472, 243]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Synoptic17", "origin": "canonical_wwp", "kind": "admin0", "canonical_record": {"layer": "Synoptic", "wwp_file": {"path": "assets/placenames/Synoptic.wwp", "sha256": "3dfa0cc94649684dadadaee84f00c758b7d6bca10fa25175f0fb88aa32a41f53"}, "record_index_zero_based": 17, "original_Chinese_name": "孟加拉国", "lat_f32_bits": 1103101952, "lon_f32_bits": 1119092736, "flags": 0, "level": 0}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 27.0, "y": 52.63033406696377, "font_style": "regular", "font_size": 12, "lines": ["孟加拉国"]}},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Cities102", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 102, "original_Chinese_name": "纳拉扬甘杰", "lat_f32_bits": 1102899325, "lon_f32_bits": 1119158663, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 45.78263888888978, "y": 100.08035911753541, "font_style": "regular", "font_size": 12, "lines": ["纳拉扬甘杰"]}},
+    {"id": "Bangladesh-Tripura-Mizoram-Monywa-z7-96-55-2x1-Cities2102", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2102, "original_Chinese_name": "阿加尔塔拉", "lat_f32_bits": 1103015995, "lon_f32_bits": 1119260428, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 116.45277777777665, "y": 58.955315479335695, "font_style": "regular", "font_size": 12, "lines": ["阿加尔塔拉"]}}
+  ]
+}

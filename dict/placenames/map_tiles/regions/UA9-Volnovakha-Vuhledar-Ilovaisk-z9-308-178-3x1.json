@@ -1,0 +1,57 @@
+{
+  "id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1",
+  "z": 9,
+  "x": 308,
+  "y": 178,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/308/178.png",
+    "9/309/178.png",
+    "9/310/178.png"
+  ],
+  "context_tiles": [
+    "9/308/177.png",
+    "9/309/177.png",
+    "9/309/179.png"
+  ],
+  "features": [
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-VelykaNovosilka", "kind": "city", "original": "Velyka Novosilka", "original_bbox": [70, 64, 125, 98], "source_url": "@source/85b90192d662ffd5", "source_glyph_complete": true, "source_printed_full_literal": "Velyka Novosilka"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Vuhledar", "kind": "city", "original": "Vuhledar", "original_bbox": [223, 105, 275, 121], "source_url": "@source/85b90192d662ffd5", "source_glyph_complete": true, "source_printed_full_literal": "Vuhledar"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Laryne", "kind": "city", "original": "Laryne", "original_bbox": [479, 46, 517, 65], "source_url": "@source/f771b7fe7d7d183f", "source_glyph_complete": true, "source_printed_full_literal": "Laryne"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Dokuchaievsk", "kind": "city", "original": "Dokuchaievsk", "original_bbox": [366, 122, 443, 138], "source_url": "@source/f771b7fe7d7d183f", "source_glyph_complete": true, "source_printed_full_literal": "Dokuchaievsk"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Volnovakha", "kind": "city", "original": "Volnovakha", "original_bbox": [306, 202, 372, 219], "source_url": "@source/f771b7fe7d7d183f", "source_glyph_complete": true, "source_printed_full_literal": "Volnovakha"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Donske", "kind": "city", "original": "Donske", "original_bbox": [334, 249, 376, 265], "source_url": "@source/f771b7fe7d7d183f", "source_glyph_complete": true, "source_printed_full_literal": "Donske"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Ilovaisk", "kind": "city", "original": "Ilovaisk", "original_bbox": [574, 27, 618, 43], "source_url": "@source/39c82453408e40d6", "source_glyph_complete": true, "source_printed_full_literal": "Ilovaisk"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Amvrosiivka", "kind": "city", "original": "Amvrosiivka", "original_bbox": [664, 97, 732, 114], "source_url": "@source/39c82453408e40d6", "source_glyph_complete": true, "source_printed_full_literal": "Amvrosiivka"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Komsomolskoe", "kind": "city", "original": "Komsomolskoe", "original_bbox": [509, 166, 592, 182], "source_url": "@source/39c82453408e40d6", "source_glyph_complete": true, "source_printed_full_literal": "Komsomolskoe"}
+  ],
+  "translations": [
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-VelykaNovosilka", "zh": "大诺沃西尔卡", "status": "approved", "source": "@source/b423a23b097c7974", "record_sha256": "81bb8993a486cb419e69498fbe157e49eb315f148a842f7f48e0a0e099de2c53", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Vuhledar", "zh": "武赫莱达尔", "status": "approved", "source": "@source/b7d1bbfedb38d47d", "record_sha256": "0887bcf1514a2aeff85a6ebd8e97979a5201e8d479b149e452ba2b163a9e9681", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Laryne", "zh": "拉里内", "status": "approved", "source": "@source/b6a91f4a09be08fc", "record_sha256": "151e3271f3f54d4cf8d4893c152faac3d0c3740d67ce5a8e64acdc504f2309ff", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Dokuchaievsk", "zh": "多库恰耶夫斯克", "status": "approved", "source": "@source/9bb731ba8e502bcb", "record_sha256": "1ae7293b76998e102db6d2a9b24fc73d4c92360f3532044989b9aa67441fed5a", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Volnovakha", "zh": "沃尔诺瓦哈", "status": "approved", "source": "@source/e083ada3dabc2898", "record_sha256": "1fc7e93322d69d501df3b192ddbe7403fba85d06bb14f3c1ce4eff5c333e50f0", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Donske", "zh": "顿斯凯", "status": "approved", "source": "@source/4b218e28049fc66f", "record_sha256": "f34f4a4f025e11713889e26520f486d6bc59a050cf836267322c692b694495c7", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Ilovaisk", "zh": "伊洛瓦伊斯克", "status": "approved", "source": "@source/ff2b16a5d1071e0e", "record_sha256": "c81d7e4603efb998a79858b53aeab6809f23b8e50bfdf263822308b317c4460f", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Amvrosiivka", "zh": "阿姆夫罗西伊夫卡", "status": "approved", "source": "@source/3830130d354eb8c7", "record_sha256": "216bd8d4ae69a707c1b2a5450cf62f01e82d9b2c2f1c90cadcae3adcb752940f", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Komsomolskoe", "zh": "科姆索莫利斯科耶", "status": "approved", "source": "@source/567729f2d68be4e2", "record_sha256": "93aa2944f203afa252fc3a4b3f1798399a1031bbc4716e5ba19ed41b136d8310", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"}
+  ],
+  "layouts": [
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-VelykaNovosilka", "x": 97.5, "y": 81.0, "font_style": "regular", "font_size": 12, "lines": ["大诺沃西尔卡"]},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Vuhledar", "x": 249.0, "y": 113.0, "font_style": "regular", "font_size": 12, "lines": ["武赫莱达尔"]},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Laryne", "x": 498.0, "y": 55.5, "font_style": "regular", "font_size": 12, "lines": ["拉里内"]},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Dokuchaievsk", "x": 404.5, "y": 130.0, "font_style": "regular", "font_size": 12, "lines": ["多库恰耶夫斯克"]},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Volnovakha", "x": 339.0, "y": 210.5, "font_style": "regular", "font_size": 12, "lines": ["沃尔诺瓦哈"]},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Donske", "x": 355.0, "y": 249.0, "font_style": "regular", "font_size": 12, "lines": ["顿斯凯"]},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Ilovaisk", "x": 596.0, "y": 35.0, "font_style": "regular", "font_size": 12, "lines": ["伊洛瓦伊斯克"]},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Amvrosiivka", "x": 698.0, "y": 105.5, "font_style": "regular", "font_size": 12, "lines": ["阿姆夫罗西伊夫卡"]},
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-Komsomolskoe", "x": 550.5, "y": 174.0, "font_style": "regular", "font_size": 12, "lines": ["科姆索莫利斯科耶"]}
+  ],
+  "shared_sources": [
+    {"id": "UA9-Volnovakha-Vuhledar-Ilovaisk-z9-308-178-3x1-existing-Kurakhove", "owner_region": "UA-RU9-Donetsk-Luhansk-Rostov-z9-308-177", "feature_id": "UA-RU9-Donetsk-Luhansk-Rostov-z9-308-177-S16", "kind": "city", "original": "Kurakhove", "original_bbox": [233, -5, 292, 12], "source_url": "@source/09a1c64621474c04", "review_notes": "保留既有同一原字的完整所属区及已核验中文输出。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

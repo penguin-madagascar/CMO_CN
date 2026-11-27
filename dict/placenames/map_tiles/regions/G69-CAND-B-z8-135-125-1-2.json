@@ -1,0 +1,44 @@
+{
+  "id": "G69-CAND-B-z8-135-125-1-2",
+  "z": 8,
+  "x": 135,
+  "y": 125,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "8/135/125.png",
+    "8/135/126.png"
+  ],
+  "context_tiles": [
+    "8/134/125.png",
+    "8/134/126.png",
+    "8/136/125.png"
+  ],
+  "features": [
+    {"id": "G69-Edea", "kind": "city", "original": "Edéa", "original_bbox": [47, 71, 83, 92], "source_url": "@source/a785a0ee10692cc1"},
+    {"id": "G69-Eseka", "kind": "city", "original": "Éséka", "original_bbox": [165, 100, 206, 121], "source_url": "@source/a785a0ee10692cc1"},
+    {"id": "G69-Kribi", "kind": "city", "original": "Kribi", "original_bbox": [8, 227, 43, 248], "source_url": "@source/a785a0ee10692cc1"}
+  ],
+  "translations": [
+    {"id": "G69-Edea", "zh": "埃代阿", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "010fe5ee48412de482bda7296ab90a0111df768ab88776f0d387574e906805e9", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."},
+    {"id": "G69-Eseka", "zh": "埃塞卡", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "e8dc3e16d07014a970c0f68919f23a06863112ae62a2932a8ae4e8c277da45c8", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."},
+    {"id": "G69-Kribi", "zh": "克里比", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "af362723635a896b9bd72839d4e62ab5d39ca32887e2c202e7b39dd44bb72ad3", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."}
+  ],
+  "layouts": [
+    {"id": "G69-Edea", "x": 72, "y": 86.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G69-Eseka", "x": 193, "y": 115.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G69-Kribi", "x": 32, "y": 244, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "G69-Edea-point", "feature_id": "G69-Edea", "kind": "circle", "x": 51.5, "y": 75.5, "size": 7, "outline_width": 1, "original_bbox": [47, 71, 56, 80]},
+    {"id": "G69-Eseka-point", "feature_id": "G69-Eseka", "kind": "circle", "x": 169.5, "y": 104.5, "size": 7, "outline_width": 1, "original_bbox": [165, 100, 174, 109]},
+    {"id": "G69-Kribi-point", "feature_id": "G69-Kribi", "kind": "circle", "x": 12.5, "y": 231.5, "size": 7, "outline_width": 1, "original_bbox": [8, 227, 17, 236]},
+    {"id": "G69-Ebolowa-shared-point", "shared_source_id": "G69-SHARED-Ebolowa", "kind": "circle", "x": 238.5, "y": 236.5, "size": 7, "outline_width": 1, "original_bbox": [234, 232, 243, 241]}
+  ],
+  "shared_sources": [
+    {"id": "G69-SHARED-G69-Douala", "owner_region": "G69-CAND-A-z8-134-124-1-3", "feature_id": "G69-Douala", "kind": "city", "original": "Douala", "source_url": "@source/2ae3829fc05bf754", "original_bbox": [-29, 27, 20, 49], "review_notes": "Actual source compound is owned by A; B only accounts for the cross-tile word part; no duplicate text or symbol output."},
+    {"id": "G69-SHARED-G69-Bata", "owner_region": "G69-CAND-A-z8-134-124-1-3", "feature_id": "G69-Bata", "kind": "city", "original": "Bata", "source_url": "@source/2ae3829fc05bf754", "original_bbox": [-18, 423, 17, 444], "review_notes": "Actual source compound is owned by A; B only accounts for the cross-tile word part; no duplicate text or symbol output."},
+    {"id": "G69-SHARED-Ebolowa", "owner_region": "CAF8-z8-136-122-3-6", "feature_id": "CAF8-048-Ebolowa", "kind": "city", "original": "Ebolowa", "source_url": "@source/a785a0ee10692cc1", "original_bbox": [234, 232, 292, 254], "review_notes": "Actual complete same-z8 Source compound and existing CAF8 normal verified. Existing owner alone outputs 埃博洛瓦; this borrower outputs its original circle through shared_source_id, without a second normal or Chinese caption."}
+  ],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,35 @@
+{
+  "id": "SS-AbyeiAbiemnhomMayom-z9-296-242",
+  "z": 9,
+  "x": 296,
+  "y": 242,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "features": [
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Abyei", "kind": "city", "original": "Abyei", "original_bbox": [98, 65, 131, 84], "source_url": "@source/6cba7225e23ace2a", "source_glyph_complete": true, "source_printed_full_literal": "Abyei"},
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Abiemnhom", "kind": "city", "original": "Abiemnhom", "original_bbox": [220, 139, 287, 156], "source_url": "@source/6cba7225e23ace2a", "source_glyph_complete": true, "source_printed_full_literal": "Abiemnhom"},
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Mayom", "kind": "city", "original": "Mayom", "original_bbox": [358, 202, 400, 221], "source_url": "@source/4786e8252efcefe9", "source_glyph_complete": true, "source_printed_full_literal": "Mayom"}
+  ],
+  "translations": [
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Abyei", "zh": "阿卜耶伊", "status": "approved", "source": "@source/bad469c2fdd95af7", "review_notes": "Exact Chinese usage from the United Nations for the same geographical name. Bound entirety of the original printed name.", "record_sha256": "0caebb12ac66b15d68ec6e7268571dc6ae99ddf7ef5e73058f7bc14c64fa1c89"},
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Abiemnhom", "zh": "阿比恩诺姆", "status": "approved", "source": "@source/3700b931d6653a4b", "review_notes": "Exact Chinese usage from the United Nations for the same geographical name. Bound entirety of the original printed name.", "record_sha256": "beed4eb9db8222a0bb6811ee417f33f05772c3ae31aba6cf026428e9a4dcb953"},
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Mayom", "zh": "马约姆", "status": "approved", "source": "@source/3700b931d6653a4b", "review_notes": "Exact Chinese usage from the United Nations for the same geographical name. Bound entirety of the original printed name.", "record_sha256": "20a1836d7c87e73044f52c5f9466e65bbe58bdba61e8c71f22d02749b6bb790d"}
+  ],
+  "layouts": [
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Abyei", "x": 114.5, "y": 74.5, "font_size": 12, "font_style": "regular"},
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Abiemnhom", "x": 253.5, "y": 147.5, "font_size": 12, "font_style": "regular"},
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Mayom", "x": 379.0, "y": 211.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "original_tiles": [
+    "9/296/242.png",
+    "9/297/242.png"
+  ],
+  "context_tiles": [
+    "9/296/243.png"
+  ],
+  "shared_sources": [
+    {"id": "SS-AbyeiAbiemnhomMayom-z9-296-242-Turalei-shared", "kind": "city", "original": "Turalei", "original_bbox": [91, 251, 131, 267], "source_url": "@source/49ae132438e358af", "owner_region": "C2-Africa-Closed19-z9-296-243", "feature_id": "C2-G013", "review_notes": "The same original joined Turalei spans the south seam. The old south Chinese title remains complete."}
+  ],
+  "legacy_suppressions": []
+}

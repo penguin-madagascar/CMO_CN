@@ -1,0 +1,33 @@
+{
+  "id": "IDS2-PROPOSAL-R1-z7-104-67-2-1",
+  "z": 7,
+  "x": 104,
+  "y": 67,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/104/67.png",
+    "7/105/67.png"
+  ],
+  "context_tiles": [
+    "7/105/66.png"
+  ],
+  "features": [
+    {"id": "IDS2-S01", "kind": "city", "original": "Denpasar", "original_bbox": [243, 18, 297, 40], "source_url": "@source/6e98807bfee6a982"},
+    {"id": "IDS2-S02", "kind": "region", "original": "WEST NUSA TENGGARA", "original_bbox": [371, 2, 476, 63], "source_url": "@source/78dc6b35fbbb940b"}
+  ],
+  "translations": [
+    {"id": "IDS2-S01", "zh": "登巴萨", "status": "approved", "source": "@source/e9fe3a8cfffcf905", "record_sha256": "44fb2f3be1f68c8a4e3ce46f5d3482f3d3af8c65f6060bfe53eb21a80040761a", "review_notes": "Root-selected original Natural Earth lexical project stem only, genuine different Source/CJK Q bound externally. No supplier GNID, administrative class, vector or official bilingual identity join. WEST removes province suffix 省 by explicit Root project selection. Target/font/layout/native rendering approval is absent."},
+    {"id": "IDS2-S02", "zh": "西努沙登加拉", "status": "approved", "source": "@source/e9fe3a8cfffcf905", "record_sha256": "8557d0d79616a1745efdfcf13c13bf9840cee7cae0fafb028434a0e05be0d5a1", "review_notes": "Root-selected original Natural Earth lexical project stem only, genuine different Source/CJK Q bound externally. No supplier GNID, administrative class, vector or official bilingual identity join. WEST removes province suffix 省 by explicit Root project selection. Target/font/layout/native rendering approval is absent."}
+  ],
+  "layouts": [
+    {"id": "IDS2-S01", "x": 276.0, "y": 33.0, "font_size": 12, "font_style": "regular"},
+    {"id": "IDS2-S02", "x": 423.5, "y": 32.5, "font_size": 18, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "IDS2-S01-circle", "feature_id": "IDS2-S01", "kind": "circle", "x": 247.5, "y": 22.5, "size": 9, "outline_width": 1, "original_bbox": [243, 18, 252, 27]}
+  ],
+  "shared_sources": [],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

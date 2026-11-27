@@ -1,0 +1,26 @@
+{
+  "id": "Zambezi-z7-72-68",
+  "z": 7,
+  "x": 72,
+  "y": 68,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/72/68.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "Zambezi-z7-72-68-name", "kind": "city", "original": "Zambezi", "original_bbox": [51, 217, 100, 236], "source_url": "@source/3eca047e06b8fb7c", "source_glyph_complete": true, "source_printed_full_literal": "Zambezi"}
+  ],
+  "translations": [
+    {"id": "Zambezi-z7-72-68-name", "zh": "赞比希", "status": "approved", "source": "@source/f0b6c2d3f43370a5", "review_notes": "PRC Embassy in Zambia names the North-Western locality 赞比希（Zambezi）. The Zambezi Town Council distinguishes its place from Zambezi River. The place dot corroborates the gazetteer PPL; its river alias 赞比西河 is rejected.", "record_sha256": "40779e5d277a1724b6d4f53e1a1d24e65a4df6c803853311eea6f8d5ad33bbb2"}
+  ],
+  "layouts": [
+    {"id": "Zambezi-z7-72-68-name", "x": 82.5, "y": 228.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "Zambezi-z7-72-68-point", "feature_id": "Zambezi-z7-72-68-name", "kind": "circle", "x": 55.5, "y": 221.5, "size": 7, "outline_width": 1, "original_bbox": [51, 217, 60, 226]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

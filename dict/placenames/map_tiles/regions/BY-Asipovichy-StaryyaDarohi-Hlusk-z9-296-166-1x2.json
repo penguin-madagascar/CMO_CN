@@ -1,0 +1,36 @@
+{
+  "id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2",
+  "z": 9,
+  "x": 296,
+  "y": 166,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/296/166.png",
+    "9/296/167.png"
+  ],
+  "context_tiles": [
+    "9/297/167.png"
+  ],
+  "features": [
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-Asipovichy", "kind": "city", "original": "Asipovichy", "original_bbox": [156, 5, 217, 24], "source_url": "@source/c00875920b81127f", "source_glyph_complete": true, "source_printed_full_literal": "Asipovichy"},
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-StaryyaDarohi", "kind": "city", "original": "Staryya Darohi", "original_bbox": [28, 159, 71, 194], "source_url": "@source/c00875920b81127f", "source_glyph_complete": true, "source_printed_full_literal": "Staryya Darohi"},
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-Hlusk", "kind": "city", "original": "Hlusk", "original_bbox": [188, 254, 222, 270], "source_url": "@source/8d574aa7d92dcced", "source_glyph_complete": true, "source_printed_full_literal": "Hlusk"}
+  ],
+  "translations": [
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-Asipovichy", "zh": "奥西波维奇", "status": "approved", "source": "@source/35bc5920ecd8b3f0", "record_sha256": "33dc0d653673eb279524d6b0628bb2f5aced65377f72dcec9e5306762beaea96", "review_notes": "原版地名和白俄罗斯现地同一实体，采用可核对的既有中文译名。"},
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-StaryyaDarohi", "zh": "旧多罗吉", "status": "approved", "source": "@source/cf63720b2aa8101c", "record_sha256": "1c45e56a56e93870eca10efc8dfb43abd53d3aca06de4ca41d4845fc0c83650d", "review_notes": "原版地名和白俄罗斯现地同一实体，采用可核对的既有中文译名。"},
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-Hlusk", "zh": "格卢斯克", "status": "approved", "source": "@source/825e6d0787ec7916", "record_sha256": "11a683b1e6bcc220b4d485a1e68823344a49f649d47e54deb9e01dc19a66932d", "review_notes": "原版地名和白俄罗斯现地同一实体，采用可核对的既有中文译名。"}
+  ],
+  "layouts": [
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-Asipovichy", "x": 186.5, "y": 14.5, "font_size": 12, "font_style": "regular"},
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-StaryyaDarohi", "x": 49.5, "y": 176.5, "font_size": 12, "font_style": "regular"},
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-Hlusk", "x": 205, "y": 262.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [],
+  "shared_sources": [
+    {"id": "BY-Asipovichy-StaryyaDarohi-Hlusk-z9-296-166-1x2-Akciabrski-shared", "owner_region": "UA20-BelarusEast-297-167", "feature_id": "UA20-N029", "kind": "city", "original": "Акцябрскі", "original_bbox": [246, 407, 303, 427], "source_url": "@source/d08fc915cd0b2efe", "review_notes": "阿克齐亚布尔斯基继续由东侧既有瓦片显示。"}
+  ]
+}

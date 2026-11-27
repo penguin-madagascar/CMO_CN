@@ -1,0 +1,63 @@
+{
+  "id": "VN-DongNai-BaRia-z10-816-480",
+  "z": 10,
+  "x": 816,
+  "y": 480,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "original_tiles": [
+    {"path": "10/816/480.png", "z": 10, "origin": "official frozen tile HTTP single attempt", "source_alpha_count": 2233},
+    {"path": "10/817/480.png", "z": 10, "origin": "official frozen tile HTTP single attempt", "source_alpha_count": 2151},
+    "10/816/481.png",
+    "10/817/481.png"
+  ],
+  "context_tiles": [
+    {"path": "10/816/479.png", "z": 10, "origin": "official frozen tile HTTP single attempt", "source_alpha_count": 849},
+    "10/816/482.png",
+    "10/817/482.png"
+  ],
+  "features": [
+    {"id": "VN-DongNai-BaRia-z10-816-480-S01", "kind": "city", "original": "Vĩnh An", "source_url": "@source/c4042e3c39655c4c", "original_bbox": [99, 58, 141, 74], "source_printed_full_literal": "Vĩnh An", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S02", "kind": "city", "original": "Dầu Giây", "source_url": "@source/c4042e3c39655c4c", "original_bbox": [166, 164, 220, 186], "source_printed_full_literal": "Dầu Giây", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S03", "kind": "city", "original": "Long Khánh", "source_url": "@source/b52a0318c42fc839", "original_bbox": [246, 162, 288, 201], "source_printed_full_literal": "Long Khánh", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S04", "kind": "city", "original": "Đức Tài", "source_url": "@source/b52a0318c42fc839", "original_bbox": [433, 16, 475, 33], "source_printed_full_literal": "Đức Tài", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S05", "kind": "city", "original": "Gia Ray", "source_url": "@source/b52a0318c42fc839", "original_bbox": [366, 181, 405, 199], "source_printed_full_literal": "Gia Ray", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S06", "kind": "city", "original": "Long Giao", "source_url": "@source/d411499120db8276", "original_bbox": [233, 254, 290, 275], "source_printed_full_literal": "Long Giao", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S07", "kind": "city", "original": "Long Thành", "source_url": "@source/7db479276431893c", "original_bbox": [23, 282, 89, 302], "source_printed_full_literal": "Long Thành", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S08", "kind": "city", "original": "Ngãi Giao", "source_url": "@source/d411499120db8276", "original_bbox": [245, 386, 293, 404], "source_printed_full_literal": "Ngãi Giao", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S09", "kind": "city", "original": "Phú Mỹ", "source_url": "@source/7db479276431893c", "original_bbox": [113, 429, 154, 447], "source_printed_full_literal": "Phú Mỹ", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S10", "kind": "city", "original": "Bà Rịa", "source_url": "@source/7db479276431893c", "original_bbox": [193, 495, 235, 517], "source_printed_full_literal": "Bà Rịa", "source_glyph_complete": true},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S11", "kind": "city", "original": "Đất Đỏ", "source_url": "@source/d411499120db8276", "original_bbox": [270, 503, 305, 518], "source_printed_full_literal": "Đất Đỏ", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "VN-DongNai-BaRia-z10-816-480-S01", "zh": "永安", "source": "@source/6725ffaede68e8c2", "status": "approved", "record_sha256": "951ed582b2e8d1917e7ae5b02b52811c794c9853822a361db2cd9039698889c4", "review_notes": "Local government bilingual urban center."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S02", "zh": "油曳", "source": "@source/8040df3c265d563c", "status": "approved", "record_sha256": "dec0576fc366ea64996976c9e6d9a0044fa52c58e49564c9c8229a8f78e01460", "review_notes": "Operator directly pairs 油曳 and Dầu Giây for this locality; 油之 is another published Chinese form."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S03", "zh": "隆庆", "source": "@source/ea6cc7ae2253cc10", "status": "approved", "record_sha256": "8c755f6a9728b5693b00eca5ed70fdd833fe3ebdb015d42a15cefbdecb8b8f80", "review_notes": "Chinese retains established z9 settlement name."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S04", "zh": "德才", "source": "@source/3cc780febc7c7a86", "status": "approved", "record_sha256": "9320cea8a2a10d7f728efa311647a26217cf04207371b8e35947f053e67125c2", "review_notes": "Provincial gazette confirms former Đức Linh town. Published Chinese 德才."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S05", "zh": "嘉来", "source": "@source/6725ffaede68e8c2", "status": "approved", "record_sha256": "9b9af54cfc620db37c656a0e491eb983f381194a1fa4e2bead10ac3878350b20", "review_notes": "Local government establishes historical Xuân Lộc seat; published base-town Chinese 嘉来."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S06", "zh": "隆交", "source": "@source/c496b3456967841d", "status": "approved", "record_sha256": "c78c0f0892a70d01f8a088b56e611f00a1f837e5d71d39958569da5fe559c2de", "review_notes": "Base name already published at z9. Source occupies four cells and Chinese stays in the lower one by its original anchor."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S07", "zh": "隆城", "source": "@source/d662928c90c33827", "status": "approved", "record_sha256": "b84c9e225cd9ea36a58e380d62b9adfee92e0261b1fdb73ffe142d62401c0ae0", "review_notes": "Same established name as z9, with Vietnamese official newspaper bilingual usage."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S08", "zh": "义交", "source": "@source/6e8f148a08431369", "status": "approved", "record_sha256": "469094dba3e783ab73da3affb55079f38b8927736df25d6b30a58c389a7a4898", "review_notes": "Vietnamese union report directly pairs the same locality with 义交."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S09", "zh": "富美", "source": "@source/ea6cc7ae2253cc10", "status": "approved", "record_sha256": "760b0f3577692c131913656d9f7b20116f229605ea32a5d2c8230b096ba574a4", "review_notes": "Direct bilingual Phú Mỹ township entry."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S10", "zh": "巴地", "source": "@source/8123fd7f0d9f2186", "status": "approved", "record_sha256": "aa022ce14c9cd22464083628acd934ab138bf627cd210a195bb09906193f6983", "review_notes": "Exact z9 name and bilingual local publication. Chinese remains in the main owner tile."},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S11", "zh": "红土", "source": "@source/5edceed8f7c7a6c2", "status": "approved", "record_sha256": "cd77b33c6b624eb35a575352d479a7b20e917c5e79de3aae1f5e220e7d8b00b3", "review_notes": "Source-era contemporary bilingual locality. The sixth raw tile contains only this name tail."}
+  ],
+  "layouts": [
+    {"id": "VN-DongNai-BaRia-z10-816-480-S01", "x": 120, "y": 66, "font_style": "regular", "font_size": 12, "lines": ["永安"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S02", "x": 193, "y": 175, "font_style": "regular", "font_size": 12, "lines": ["油曳"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S03", "x": 274, "y": 181.5, "font_style": "regular", "font_size": 12, "lines": ["隆庆"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S04", "x": 454, "y": 24.5, "font_style": "regular", "font_size": 12, "lines": ["德才"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S05", "x": 385.5, "y": 190, "font_style": "regular", "font_size": 12, "lines": ["嘉来"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S06", "x": 275, "y": 270, "font_style": "regular", "font_size": 12, "lines": ["隆交"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S07", "x": 56, "y": 292, "font_style": "regular", "font_size": 12, "lines": ["隆城"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S08", "x": 276, "y": 395, "font_style": "regular", "font_size": 12, "lines": ["义交"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S09", "x": 133.5, "y": 438, "font_style": "regular", "font_size": 12, "lines": ["富美"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S10", "x": 214, "y": 502, "font_style": "regular", "font_size": 12, "lines": ["巴地"]},
+    {"id": "VN-DongNai-BaRia-z10-816-480-S11", "x": 287.5, "y": 502, "font_style": "regular", "font_size": 12, "lines": ["红土"]}
+  ],
+  "shared_sources": [
+    {"kind": "water", "original": "Tri An Reservoir", "source_url": "@source/05ddba20485b77c8", "id": "VN-DongNai-BaRia-z10-816-480-shared-AP-VC10-082", "original_bbox": [174, -16, 231, 11], "owner_region": "AP-Vietnam-Central-z10-816-472", "feature_id": "AP-VC10-082", "review_notes": "治安水库 remains with its exact original established owner."}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

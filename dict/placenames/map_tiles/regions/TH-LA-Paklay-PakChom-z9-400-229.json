@@ -1,0 +1,32 @@
+{
+  "id": "TH-LA-Paklay-PakChom-z9-400-229",
+  "z": 9,
+  "x": 400,
+  "y": 229,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/400/229.png"
+  ],
+  "context_tiles": [
+    "9/399/229.png",
+    "9/401/229.png"
+  ],
+  "translations": [
+    {"id": "TH-LA-Paklay-PakChom-z9-400-229-S01", "zh": "巴莱", "source": "@source/a078254cb1b12d70", "status": "approved", "record_sha256": "a24d10f5725d8df1a68f3409570d52a373022434303076110c2490dc1b3fd274", "review_notes": "Exact named settlement in the source-era province with independently attested Chinese place stem."},
+    {"id": "TH-LA-Paklay-PakChom-z9-400-229-S02", "zh": "巴宗", "source": "@source/cb6a5e4b25463397", "status": "approved", "record_sha256": "e1ee277dbdbb43d6d6e55f3181df911693bc3a92f2096d0e3fea9023e5d3f893", "review_notes": "Exact named settlement in the source-era province with independently attested Chinese place stem."}
+  ],
+  "features": [
+    {"id": "TH-LA-Paklay-PakChom-z9-400-229-S01", "kind": "city", "original": "Paklay", "source_url": "@source/f96321018851070c", "original_bbox": [40, 155, 77, 173], "source_printed_full_literal": "Paklay", "source_glyph_complete": true},
+    {"id": "TH-LA-Paklay-PakChom-z9-400-229-S02", "kind": "city", "original": "Pak Chom", "source_url": "@source/f96321018851070c", "original_bbox": [202, 230, 258, 247], "source_printed_full_literal": "Pak Chom", "source_glyph_complete": true}
+  ],
+  "layouts": [
+    {"id": "TH-LA-Paklay-PakChom-z9-400-229-S01", "x": 58.5, "y": 164, "font_style": "regular", "font_size": 12, "lines": ["巴莱"]},
+    {"id": "TH-LA-Paklay-PakChom-z9-400-229-S02", "x": 230, "y": 238.5, "font_style": "regular", "font_size": 12, "lines": ["巴宗"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Thongmixai", "source_url": "@source/dd9b55acb7fc7b75", "id": "TH-LA-Paklay-PakChom-z9-400-229-shared-TH-LA-Thongmixai-NamPat-z9-399-229-S01", "original_bbox": [-59, 86, 6, 106], "owner_region": "TH-LA-Thongmixai-NamPat-z9-399-229", "feature_id": "TH-LA-Thongmixai-NamPat-z9-399-229-S01", "review_notes": "Prior official Thongmixai sole Chinese owner; exact source frame spans the west seam."}
+  ],
+  "legacy_suppressions": []
+}

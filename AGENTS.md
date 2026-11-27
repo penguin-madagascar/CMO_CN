@@ -30,6 +30,12 @@
 
 ## 3. 构建与验证
 
+### 地图源数据
+
+- `dict/placenames/tile_regions.json` 只维护有序索引；具体地图修改写入 `dict/placenames/map_tiles/regions/<区域ID>.json`，公共来源、原图及审核分别维护在该目录的三张 JSONL 表。
+- 使用 `scripts/map_tile_manifest.py` 的 `load_manifest` / `manifest_files` 读取完整数据与输入闭包。旧工具需要的展开清单只能生成到 `build/` 或临时目录，禁止重新提交巨型展开清单。
+- 正式数据保留必要来源、身份、几何和审核指纹，不重复写入长篇执行过程。修改后须重新核验；拆分或展开工具不自动批准数据。具体格式见 `docs/MAP_TILE_SOURCES.md`。
+
 ```bash
 bash scripts/build.sh                # 编译 + build_dict
 bash scripts/deploy.sh               # 装进游戏目录

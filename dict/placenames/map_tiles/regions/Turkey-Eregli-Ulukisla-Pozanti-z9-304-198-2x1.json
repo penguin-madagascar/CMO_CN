@@ -1,0 +1,42 @@
+{
+  "id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1",
+  "z": 9,
+  "x": 304,
+  "y": 198,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/304/198.png",
+    "9/305/198.png"
+  ],
+  "context_tiles": [
+    "9/305/199.png"
+  ],
+  "features": [
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N00", "kind": "city", "original": "Ereğli", "original_bbox": [92, 86, 125, 105], "source_url": "@source/6352ed40bd8a548b", "source_glyph_complete": true, "source_printed_full_literal": "Ereğli"},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N01", "kind": "city", "original": "Halkapınar", "original_bbox": [130, 123, 190, 142], "source_url": "@source/6352ed40bd8a548b", "source_glyph_complete": true, "source_printed_full_literal": "Halkapınar"},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N02", "kind": "city", "original": "Ulukışla", "original_bbox": [245, 70, 291, 89], "source_url": "@source/6352ed40bd8a548b", "source_glyph_complete": true, "source_printed_full_literal": "Ulukışla"},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N03", "kind": "city", "original": "Pozantı", "original_bbox": [388, 127, 430, 143], "source_url": "@source/b4aec281455edf81", "source_glyph_complete": true, "source_printed_full_literal": "Pozantı"},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N04", "kind": "city", "original": "Karaisalı", "original_bbox": [453, 204, 500, 220], "source_url": "@source/b4aec281455edf81", "source_glyph_complete": true, "source_printed_full_literal": "Karaisalı"}
+  ],
+  "translations": [
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N00", "zh": "埃雷利", "status": "approved", "source": "@source/e5621ea32901b599", "record_sha256": "61191d80757487fd5d768bcc0e9cb5d390c9d966d002e61ab5101d98f7ab41fb", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N01", "zh": "哈尔卡珀纳尔", "status": "approved", "source": "@source/80c714eb3c451056", "record_sha256": "a836d05176aaeb3e3bb07d6d45a8e689d677a4b64ca63797cbba3057948d5c06", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N02", "zh": "乌卢克什拉", "status": "approved", "source": "@source/686e2c03581f0575", "record_sha256": "fce20397f49e167d5a10984d45acc6c01f91814caf093e531e9d97103df937f1", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N03", "zh": "波赞特", "status": "approved", "source": "@source/f258e50bd09953df", "record_sha256": "718f8dcffa972f3183393041113dfebea2bbff473298746ea7b2fb5160404935", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N04", "zh": "卡拉伊萨勒", "status": "approved", "source": "@source/c9da467550f5822a", "record_sha256": "733f736842a458535fde56ccbc8a4fba27c69ccb4054f32a43011e354f614edf", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N00", "x": 108.5, "y": 95.5, "font_size": 12, "font_style": "regular", "lines": ["埃雷利"]},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N01", "x": 160.0, "y": 132.5, "font_size": 12, "font_style": "regular", "lines": ["哈尔卡珀纳尔"]},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N02", "x": 268.0, "y": 79.5, "font_size": 12, "font_style": "regular", "lines": ["乌卢克什拉"]},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N03", "x": 409.0, "y": 135.0, "font_size": 12, "font_style": "regular", "lines": ["波赞特"]},
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-N04", "x": 476.5, "y": 212.0, "font_size": 12, "font_style": "regular", "lines": ["卡拉伊萨勒"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "Turkey-Eregli-Ulukisla-Pozanti-z9-304-198-2x1-Shared-0", "owner_region": "G155-CN-z9-305-199-1x1", "feature_id": "G155-N-01", "kind": "region", "original": "Çamlıyayla", "original_bbox": [277, 244, 338, 264], "source_url": "@source/3b5c57f5ccab139d", "review_notes": "跨片原文用完整墨迹连接到既有中文。"}
+  ],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

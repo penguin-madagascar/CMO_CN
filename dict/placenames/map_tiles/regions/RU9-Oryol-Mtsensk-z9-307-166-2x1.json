@@ -1,0 +1,33 @@
+{
+  "id": "RU9-Oryol-Mtsensk-z9-307-166-2x1",
+  "z": 9,
+  "x": 307,
+  "y": 166,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/307/166.png",
+    "9/308/166.png"
+  ],
+  "context_tiles": [
+    "9/308/167.png"
+  ],
+  "features": [
+    {"id": "RU9-Oryol-Mtsensk-z9-307-166-2x1-Oryol", "kind": "city", "original": "Oryol", "original_bbox": [59, 210, 96, 232], "source_url": "@source/8df1d19b7dc7ddf2", "source_glyph_complete": true, "source_printed_full_literal": "Oryol"},
+    {"id": "RU9-Oryol-Mtsensk-z9-307-166-2x1-Mtsensk", "kind": "city", "original": "Mtsensk", "original_bbox": [238, 24, 285, 40], "source_url": "@source/8df1d19b7dc7ddf2", "source_glyph_complete": true, "source_printed_full_literal": "Mtsensk"}
+  ],
+  "translations": [
+    {"id": "RU9-Oryol-Mtsensk-z9-307-166-2x1-Oryol", "zh": "奥廖尔", "status": "approved", "source": "@source/6e59f38f118e223a", "record_sha256": "40efe133b22965c677b5d2a2801d91b94b7de9a2b7c968c98cc201c2dfa022d3", "review_notes": "用完整原版字样和奥廖尔州坐标核对实体，按可核验的既有译名或项目音译。"},
+    {"id": "RU9-Oryol-Mtsensk-z9-307-166-2x1-Mtsensk", "zh": "姆岑斯克", "status": "approved", "source": "@source/f0dd28ca3140e0ce", "record_sha256": "6ffebef1ecdcd0065f4fc079093b8af04c8b6eeda50166373b68fdedd9f84308", "review_notes": "用完整原版字样和奥廖尔州坐标核对实体，按可核验的既有译名或项目音译。"}
+  ],
+  "layouts": [
+    {"id": "RU9-Oryol-Mtsensk-z9-307-166-2x1-Oryol", "x": 77.5, "y": 221, "font_size": 12, "font_style": "regular"},
+    {"id": "RU9-Oryol-Mtsensk-z9-307-166-2x1-Mtsensk", "x": 261.5, "y": 32, "font_size": 12, "font_style": "regular"}
+  ],
+  "shared_sources": [
+    {"id": "RU9-Oryol-Mtsensk-z9-307-166-2x1-share-RU9-Zalegoshch-Pokrovskoye-z9-308-167-Zalegoshch", "owner_region": "RU9-Zalegoshch-Pokrovskoye-z9-308-167", "feature_id": "RU9-Zalegoshch-Pokrovskoye-z9-308-167-Zalegoshch", "original": "Залегощь", "kind": "city", "source_url": "@source/2b6f84ed045592fd", "original_bbox": [349, 251, 404, 270], "review_notes": "保留原文跨片，中文只由明确归属提供。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

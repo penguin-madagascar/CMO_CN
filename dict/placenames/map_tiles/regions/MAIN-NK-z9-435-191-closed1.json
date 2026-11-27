@@ -1,0 +1,33 @@
+{
+  "id": "MAIN-NK-z9-435-191-closed1",
+  "z": 9,
+  "x": 435,
+  "y": 191,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "symbols": [],
+  "legacy_suppressions": [],
+  "features": [
+    {"id": "NC4-MODEL-N20", "kind": "city", "original": "Manpo", "original_bbox": [134, 163, 178, 184], "source_url": "@source/840c9149d53d6b8d", "printed_full_literal": "Manpo", "sourceglyph_complete": true, "providerpoint": null, "pure_native_layer": null},
+    {"id": "NC4-MODEL-N21", "kind": "city", "original": "Ji'an", "original_bbox": [103, 177, 132, 195], "source_url": "@source/840c9149d53d6b8d", "printed_full_literal": "Ji'an", "sourceglyph_complete": true, "providerpoint": null, "pure_native_layer": null}
+  ],
+  "translations": [
+    {"id": "NC4-MODEL-N20", "zh": "满浦", "status": "approved", "source": "@source/2d05295c3de70823", "record_sha256": "0053c56354646ae84347c209ac4d4a1d20f0be6930cd2f13f426f9ee81b8611a", "review_notes": "Independent actual-source and Chinese review confirms Manpo/满浦 and Ji'an/集安, including printed apostrophe. Official PRC-DPRK treaty supports Chinese city names. No provider point or pure-native assertion."},
+    {"id": "NC4-MODEL-N21", "zh": "集安", "status": "approved", "source": "@source/2d05295c3de70823", "record_sha256": "84045f974cbebd30efccd5c59080456bf912b304f70c38010a8d303cdc153f09", "review_notes": "Independent actual-source and Chinese review confirms Manpo/满浦 and Ji'an/集安, including printed apostrophe. Official PRC-DPRK treaty supports Chinese city names. No provider point or pure-native assertion."}
+  ],
+  "layouts": [
+    {"id": "NC4-MODEL-N20", "x": 156.0, "y": 173.5, "font_size": 12, "font_style": "regular", "lines": ["满浦"]},
+    {"id": "NC4-MODEL-N21", "x": 117.5, "y": 186.0, "font_size": 12, "font_style": "regular", "lines": ["集安"]}
+  ],
+  "shared_sources": [
+    {"id": "MAIN-NK-S-Kanggye", "owner_region": "KR-peninsula-z9-432-192", "feature_id": "KR-P9-001", "kind": "city", "original": "Kanggye", "source_url": "@source/d654d1dd3de4a87d", "original_bbox": [242, 254, 296, 275], "review_notes": "Same exact world original as unchanged currentKR-P9-001. Only24 real source alpha occurs in this newtile; actual complete old Chinese remains in existing owner. Other crossed absent436/191 portion is verified0alpha; no new normal, relocation or background accounting."}
+  ],
+  "original_tiles": [
+    "9/435/191.png"
+  ],
+  "context_tiles": [
+    "9/436/191.png",
+    "9/435/192.png",
+    "9/436/192.png"
+  ]
+}

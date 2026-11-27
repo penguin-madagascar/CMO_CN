@@ -1,0 +1,66 @@
+{
+  "id": "CN-Longan-Nanning-Luoxu-z9-409-222",
+  "z": 9,
+  "x": 409,
+  "y": 222,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "features": [
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S01", "kind": "city", "original": "…", "source_url": "@source/c123a1fd708878d4", "original_bbox": [145, 0, 180, 1], "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "…", "resolved_semantic_name": "Luoxu", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"type": "ACTUAL_OTHER_ZOOM_COMPLETE_PRINT_AND_SAME_WORLD_BOUNDARY_SUPPORT", "complete_spelling": "Luoxu", "complete_spelling_source_inputs": [{"path": "evidence/tile_recovery/originals/10/819/443.png", "sha256": "2417e2f1fc2a3e4014bdf055bf41de90b5f94a0d80f3850db9fae09d4f22b4af", "bytes": 3774}, {"path": "evidence/tile_recovery/originals/10/819/444.png", "sha256": "c87bc9d23a98c809ae1844ceb323d3c552a0008e0095655b849a63f596a204c8", "bytes": 2772}], "low_source_inputs": [{"path": "evidence/tile_recovery/originals/9/409/222.png", "sha256": "52a290d088f1b8d307b91bdc3f67a421defe6306b9652323db4860807757d76e", "bytes": 4735}, {"path": "evidence/tile_recovery/originals/9/409/221.png", "sha256": "01361a91843afe392a33fcc97f0c652d5558f1f103046831ccd4ef10932186dc", "bytes": 6053}], "comparator_receipt": {"path": "evidence/parallel_map/reviews/SEA_151_RESIDUAL_IDENTITY_Z10_EXACT_COMPARATORS_20261123.json", "sha256": "127a308844b7ec86120d174e5f7ea482359fb723edd0bc91aa8d8ef7be31ce93", "bytes": 1098}, "complete_spelling_source_world_bbox": [209717, 113643, 209749, 113658], "complete_spelling_source_RGBA_sha256": "4e35416d0923086582aaff139ee65f9c792d25389fe49af1d46532621079343d", "projected_center": [162.5, -6.75], "nominal_glyph_extent": [146.5, -14.25, 178.5, 0.75], "best_binary_iou": 0.7714285714285715, "best_alpha_cosine": 0.9807145301551334, "best_fit_local_x_y_width": [145, -14, 35], "actual_z9_positive_pixels": 35, "actual_z9_positive_bbox": [145, 0, 180, 1], "administrative_name_source": "@source/af6a8e3e47e4bc96", "preview": {"path": "evidence/parallel_map/reviews/FULL_MAP_CLOSEOUT_9159_20261123/SEA_READBACK/LUOXU_BOUNDED_SUPPORT_EXACT.png", "sha256": "49f991731dff87d73080ea6eadba3e04384ae3bf4c6db5ab9127cd4fc86a32ef", "bytes": 5066}, "limits": "实见 z9 为 35 个同一行的残留字框像素。完整字形来自相同供应商的 z10 原图，未重建 z9 缺失笔画。", "exact_opposite_box": [136, -10, 188, 0], "exact_opposite_alpha": 0}},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S02", "kind": "city", "original": "Long'an", "source_url": "@source/c123a1fd708878d4", "original_bbox": [17, 20, 67, 41], "source_printed_full_literal": "Long'an", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S03", "kind": "city", "original": "Dingdang", "source_url": "@source/c123a1fd708878d4", "original_bbox": [114, 37, 167, 57], "source_printed_full_literal": "Dingdang", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S04", "kind": "city", "original": "Wuming", "source_url": "@source/c123a1fd708878d4", "original_bbox": [225, 23, 279, 44], "source_printed_full_literal": "Wuming", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S05", "kind": "city", "original": "Changping", "source_url": "@source/c123a1fd708878d4", "original_bbox": [86, 201, 145, 221], "source_printed_full_literal": "Changping", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S06", "kind": "city", "original": "Fusui", "source_url": "@source/c123a1fd708878d4", "original_bbox": [100, 229, 134, 247], "source_printed_full_literal": "Fusui", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S07", "kind": "city", "original": "Nanning", "source_url": "@source/c123a1fd708878d4", "original_bbox": [254, 155, 317, 182], "source_printed_full_literal": "Nanning", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S08", "kind": "city", "original": "Binyang", "source_url": "@source/ffccf78478ec8ca0", "original_bbox": [422, -1, 473, 21], "source_printed_full_literal": "Binyang", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S09", "kind": "city", "original": "Taiping", "source_url": "@source/ffccf78478ec8ca0", "original_bbox": [291, 43, 333, 62], "source_printed_full_literal": "Taiping", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S10", "kind": "city", "original": "Kunlun", "source_url": "@source/ffccf78478ec8ca0", "original_bbox": [382, 62, 423, 78], "source_printed_full_literal": "Kunlun", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S11", "kind": "city", "original": "Lingli", "source_url": "@source/ffccf78478ec8ca0", "original_bbox": [414, 145, 446, 164], "source_printed_full_literal": "Lingli", "source_glyph_complete": true},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S12", "kind": "city", "original": "Nama", "source_url": "@source/ffccf78478ec8ca0", "original_bbox": [277, 231, 311, 248], "source_printed_full_literal": "Nama", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S01", "zh": "锣圩", "source": "@source/af6a8e3e47e4bc96", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "9798bd070dc30010bd1b0217de3e143b620d68009ed135873d702534ce9ee581"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S02", "zh": "隆安", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "88ccd25514add1c06200b8b3de647b9133ca0cd320b38e3c1338aecdee256501"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S03", "zh": "丁当", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "83f86d70741013a408037c32670e6b6c3f39bfa4f00200bf6789c251cae90779"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S04", "zh": "武鸣", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "cf781e829107ccf4204aeccbb71d7959822d943059373a9d37ffcfbd62f488d4"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S05", "zh": "昌平", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "0940f2dccf128a06aa85c616271911e366b2962f9312fd09423a8093d13eab29"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S06", "zh": "扶绥", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "773411e904630f750981a89e8f64d51e87c8d407744d91c3e5c2ba6eaaac9b09"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S07", "zh": "南宁", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact observed place. Chinese preserves the prior visible game name.", "record_sha256": "3c882444f143898633a8efa15586d076ceeaf18c441e856c5304c64252a810ca"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S08", "zh": "宾阳", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "11b98ff731eedc07b0a3c7abfff551b82a0f9a85d9a08b09df8cdbc04d68d626"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S09", "zh": "太平", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "b15b42fdfe9767a17018e50447475fff1fd93bb9c7f0a9639cbbdabb4834bf62"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S10", "zh": "昆仑", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "99129ee2d8a486ebe8ddd7465bf3866184bbb766f78c35583646d3ae77af93c1"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S11", "zh": "伶俐", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "62890010c2de7534d4b3c9930481c0da19977e5d6dd70b1474a9584b2eec617b"},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S12", "zh": "那马", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "5e448d8e2d24ea9a886ebdcdde668c83042b5f022edb79d1bc42a57e9ade1122"}
+  ],
+  "layouts": [
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S01", "x": 162.5, "y": 7.5, "font_style": "regular", "font_size": 12, "lines": ["锣圩"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S02", "x": 42.0, "y": 30.5, "font_style": "regular", "font_size": 12, "lines": ["隆安"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S03", "x": 140.5, "y": 47.0, "font_style": "regular", "font_size": 12, "lines": ["丁当"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S04", "x": 252.0, "y": 33.5, "font_style": "regular", "font_size": 12, "lines": ["武鸣"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S05", "x": 115.5, "y": 211.0, "font_style": "regular", "font_size": 12, "lines": ["昌平"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S06", "x": 117.0, "y": 238.0, "font_style": "regular", "font_size": 12, "lines": ["扶绥"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S07", "x": 285.5, "y": 168.5, "font_style": "regular", "font_size": 12, "lines": ["南宁"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S08", "x": 447.5, "y": 10.0, "font_style": "regular", "font_size": 12, "lines": ["宾阳"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S09", "x": 312.0, "y": 52.5, "font_style": "regular", "font_size": 12, "lines": ["太平"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S10", "x": 402.5, "y": 70.0, "font_style": "regular", "font_size": 12, "lines": ["昆仑"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S11", "x": 430.0, "y": 154.5, "font_style": "regular", "font_size": 12, "lines": ["伶俐"]},
+    {"id": "CN-Longan-Nanning-Luoxu-z9-409-222-S12", "x": 294.0, "y": 239.5, "font_style": "regular", "font_size": 12, "lines": ["那马"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Nalong", "source_url": "@source/fe84d9ad0dfd4c46", "id": "CN-Longan-Nanning-Luoxu-z9-409-222-shared-CN-Tiandeng-Daxin-Shuolong-z9-408-222-S05", "original_bbox": [-32, 181, 8, 202], "owner_region": "CN-Tiandeng-Daxin-Shuolong-z9-408-222", "feature_id": "CN-Tiandeng-Daxin-Shuolong-z9-408-222-S05", "review_notes": "Complete original seam is attributed to the already-rendered Source owner."},
+    {"kind": "city", "original": "Zhonghua", "source_url": "@source/3b82910e81136e8e", "id": "CN-Longan-Nanning-Luoxu-z9-409-222-shared-CN-Hengzhou-Guigang-z9-411-222-S01", "original_bbox": [468, 34, 525, 53], "owner_region": "CN-Hengzhou-Guigang-z9-411-222", "feature_id": "CN-Hengzhou-Guigang-z9-411-222-S01", "review_notes": "Complete original seam is attributed to the already-rendered Source owner."}
+  ],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "9/409/222.png",
+    "9/410/222.png"
+  ],
+  "context_tiles": [
+    "9/408/222.png",
+    "9/409/221.png",
+    "9/410/221.png",
+    "9/411/222.png"
+  ]
+}

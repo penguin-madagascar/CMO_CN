@@ -1,0 +1,41 @@
+{
+  "id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66",
+  "z": 7,
+  "x": 72,
+  "y": 66,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/72/66.png"
+  ],
+  "context_tiles": [
+    "7/71/66.png"
+  ],
+  "features": [
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-KasaiOriental", "kind": "region", "original": "Kasaï-Oriental", "original_bbox": [96, 42, 143, 77], "source_url": "@source/166a9987077dbe6b", "source_glyph_complete": true, "source_printed_full_literal": "Kasaï-Oriental"},
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-Gandajika", "kind": "city", "original": "Ngandajika", "original_bbox": [128, 98, 189, 120], "source_url": "@source/166a9987077dbe6b", "source_glyph_complete": true, "source_printed_full_literal": "Ngandajika"},
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-MweneDitu", "kind": "city", "original": "Mwene-Ditu", "original_bbox": [82, 123, 129, 158], "source_url": "@source/166a9987077dbe6b", "source_glyph_complete": true, "source_printed_full_literal": "Mwene-Ditu"}
+  ],
+  "translations": [
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-KasaiOriental", "zh": "东开赛省", "status": "approved", "source": "@source/5c727f060640f1d4", "review_notes": "Province label anchored at its seat, Mbuji-Mayi. Use ministry 东开赛 province designation; preserve the separate old city caption.", "record_sha256": "cafb4472951cdf30ec4260f190f7063ade0725bdf997e865bf85e07d997ac46a"},
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-Gandajika", "zh": "甘达吉卡", "status": "approved", "source": "@source/054d9f4aa2bcd2c7", "review_notes": "The original uses the Ngandajika spelling and the same location as the verified Gandajika catalog town. Preserve exact existing Cities.wwp 甘达吉卡.", "record_sha256": "68624e0b81278e35c83b79238b9c2485ebd2d515abb73767112df4e3a12491ed"},
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-MweneDitu", "zh": "姆韦内迪图", "status": "approved", "source": "@source/709e26d5f7b85e45", "review_notes": "Preserve the matching existing Cities.wwp name, also used in the government travel notice.", "record_sha256": "1a00a9c830459fa0fa9d16e2d629962e5e6166ea958eff748fda17c97d7665cf"}
+  ],
+  "layouts": [
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-KasaiOriental", "x": 132.5, "y": 61.0, "font_size": 12, "font_style": "regular"},
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-Gandajika", "x": 160.5, "y": 112.5, "font_size": 12, "font_style": "regular"},
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-MweneDitu", "x": 117.5, "y": 142.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-KasaiOriental-point", "feature_id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-KasaiOriental", "kind": "circle", "x": 100.5, "y": 46.5, "size": 7, "outline_width": 1, "original_bbox": [96, 42, 105, 51]},
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-Gandajika-point", "feature_id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-Gandajika", "kind": "circle", "x": 132.5, "y": 102.5, "size": 7, "outline_width": 1, "original_bbox": [128, 98, 137, 107]},
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-MweneDitu-point", "feature_id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-MweneDitu", "kind": "circle", "x": 86.5, "y": 127.5, "size": 7, "outline_width": 1, "original_bbox": [82, 123, 91, 132]}
+  ],
+  "shared_sources": [
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-shared-Kananga", "kind": "city", "original": "Kananga", "original_bbox": [-13, 21, 37, 43], "source_url": "@source/88b706ee92aa5005", "owner_region": "SCAF-z7-71-64-1-8", "feature_id": "SCAF7-024-Kananga", "review_notes": "Exact original across the adjoining west and east PNGs. The source accounting reuses the current Kananga owner; the current Chinese is complete in west tile."}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "CD-KasaiOriental-Gandajika-MweneDitu-z7-72-66-C-Cities-456", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 456, "original_Chinese_name": "姆布吉马伊", "lat_f32_bits": 3234093660, "lon_f32_bits": 1102886884, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 99.19513888888832, "y": 35.5, "font_style": "regular", "font_size": 12, "lines": ["姆布吉马伊"]}}
+  ]
+}

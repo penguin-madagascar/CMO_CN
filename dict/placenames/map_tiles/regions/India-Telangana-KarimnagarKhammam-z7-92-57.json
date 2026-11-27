@@ -1,0 +1,42 @@
+{
+  "id": "India-Telangana-KarimnagarKhammam-z7-92-57",
+  "z": 7,
+  "x": 92,
+  "y": 57,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/92/57.png"
+  ],
+  "context_tiles": [
+    "7/91/57.png"
+  ],
+  "features": [
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Karimnagar", "kind": "city", "original": "Karimnagar", "original_bbox": [30, 80, 94, 102], "source_url": "@source/6bf8962710bae4b6", "source_glyph_complete": true, "source_printed_full_literal": "Karimnagar"},
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Khammam", "kind": "city", "original": "Khammam", "original_bbox": [123, 193, 182, 213], "source_url": "@source/6bf8962710bae4b6", "source_glyph_complete": true, "source_printed_full_literal": "Khammam"}
+  ],
+  "translations": [
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Karimnagar", "zh": "格里姆讷格尔", "status": "approved", "source": "@source/0e069e73fd78f642", "record_sha256": "d83903d6559d76b855996f7262aea066e07988fa6fd2892b69bccefa13ba8f72", "review_notes": "原版完整拼写、原版圆点、印度地方政府实体与现有游戏地名表编号位置对照。采用游戏已有同地中文。"},
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Khammam", "zh": "卡姆马姆", "status": "approved", "source": "@source/51ebba8a089336dd", "record_sha256": "63ef996b71e1265b3c012a2fa1a4d9ad6ccbd10f11a0f837f8e9220011177109", "review_notes": "原版完整拼写、原版圆点、印度地方政府实体与现有游戏地名表编号位置对照。采用游戏已有同地中文。"}
+  ],
+  "layouts": [
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Karimnagar", "x": 79, "y": 96, "font_style": "regular", "font_size": 12, "lines": ["格里姆讷格尔"]},
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Khammam", "x": 160.5, "y": 207, "font_style": "regular", "font_size": 12, "lines": ["卡姆马姆"]}
+  ],
+  "symbols": [
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Karimnagar-circle", "feature_id": "India-Telangana-KarimnagarKhammam-z7-92-57-Karimnagar", "kind": "circle", "x": 34.5, "y": 84.5, "size": 7, "outline_width": 1, "original_bbox": [30, 80, 39, 89]},
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Khammam-circle", "feature_id": "India-Telangana-KarimnagarKhammam-z7-92-57-Khammam", "kind": "circle", "x": 127.5, "y": 197.5, "size": 7, "outline_width": 1, "original_bbox": [123, 193, 132, 202]}
+  ],
+  "shared_sources": [
+    {"id": "TG7-IND7-N019-Source-tail", "owner_region": "IND7-MaharashtraTelanganaSouth-z7-90-57", "feature_id": "IND7-N019", "kind": "admin1", "original": "TELANGANA", "source_url": "@source/6275827f6d34c02b", "original_bbox": [-25, 129, 92, 147], "review_notes": "本片原版末尾字形沿用正式地图西邻已审译名，保持唯一中文归属。"},
+    {"id": "TG7-IND7-N022-Source-tail", "owner_region": "IND7-MaharashtraTelanganaSouth-z7-90-57", "feature_id": "IND7-N022", "kind": "city", "original": "Hyderabad", "source_url": "@source/6275827f6d34c02b", "original_bbox": [-30, 183, 38, 206], "review_notes": "本片原版末尾字形沿用正式地图西邻已审译名，保持唯一中文归属。"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Cities1701", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1701, "original_Chinese_name": "瓦朗加尔", "lat_f32_bits": 1099956224, "lon_f32_bits": 1117727402, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 90, "y": 126, "font_style": "regular", "font_size": 12, "lines": ["瓦朗加尔"]}},
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Cities1735", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1735, "original_Chinese_name": "塔德帕尔利古德姆", "lat_f32_bits": 1099333915, "lon_f32_bits": 1117982391, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 225, "y": 236, "font_style": "regular", "font_size": 12, "lines": ["塔德帕尔", "利古德姆"]}},
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Cities1736", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1736, "original_Chinese_name": "苏里亚佩特", "lat_f32_bits": 1099505619, "lon_f32_bits": 1117732268, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 77, "y": 206, "font_style": "regular", "font_size": 12, "lines": ["苏里亚佩特"]}},
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Cities1781", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1781, "original_Chinese_name": "拉马贡达姆", "lat_f32_bits": 1100376095, "lon_f32_bits": 1117710196, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 91, "y": 50, "font_style": "regular", "font_size": 12, "lines": ["拉马贡达姆"]}},
+    {"id": "India-Telangana-KarimnagarKhammam-z7-92-57-Cities1848", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1848, "original_Chinese_name": "米里亚尔古达", "lat_f32_bits": 1099364932, "lon_f32_bits": 1117724668, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 84, "y": 235, "font_style": "regular", "font_size": 12, "lines": ["米里亚尔古达"]}}
+  ]
+}

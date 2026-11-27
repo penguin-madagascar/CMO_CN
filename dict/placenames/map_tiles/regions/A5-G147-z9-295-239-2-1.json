@@ -1,0 +1,28 @@
+{
+  "id": "A5-G147-z9-295-239-2-1",
+  "z": 9,
+  "x": 295,
+  "y": 239,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/295/239.png",
+    "9/296/239.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "A147-01", "kind": "city", "original": "Al-Fula", "original_bbox": [313, 49, 359, 67], "source_url": "@source/ed7ad8fb9582665d"},
+    {"id": "A147-02", "kind": "city", "original": "Babanusah", "original_bbox": [107, 191, 176, 208], "source_url": "@source/d35462b6f76060c1"}
+  ],
+  "translations": [
+    {"id": "A147-01", "zh": "富拉", "status": "approved", "source": "@source/30a2b45e4c1db04b", "record_sha256": "44244b5945bfe78f4e335dc68c35b03041a2d04e3f0f00f3553850e4ba741617", "review_notes": "Root project lexical selection a164ffdbefb1b34ef361179cc6dda02cd0fe572f151bba7dd542fd453f96b2c3; COMMUNITY_VARIANT_BRIDGE_WITH_OFFICIAL_CHINESE_USAGE; Official project Chinese is not itself a Roman bridge. 弗莱医院(Al Fula) is an explicit alternative context; no hidden consensus claim. Supplier identity and provider point unassigned."},
+    {"id": "A147-02", "zh": "巴巴努萨", "status": "approved", "source": "@source/30a2b45e4c1db04b", "record_sha256": "f910f018f1f48fbfc4a292a2bde4502bcfcecd6bca3e4f5463cd1922083d2a02", "review_notes": "Root project lexical selection a164ffdbefb1b34ef361179cc6dda02cd0fe572f151bba7dd542fd453f96b2c3; PRIMARY_ROMAN_AND_CHINESE_DOCUMENT_RECORD_WITH_OFFICIAL_CHINESE_USAGE; Exact terminal h retained. UN indexed same-record texts available; no full PDF or paragraph-by-paragraph alignment claimed. Supplier identity and provider point unassigned."}
+  ],
+  "layouts": [
+    {"id": "A147-01", "x": 336.0, "y": 58.0, "font_size": 12, "font_style": "regular"},
+    {"id": "A147-02", "x": 141.5, "y": 199.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

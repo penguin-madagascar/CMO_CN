@@ -1,0 +1,44 @@
+{
+  "id": "CN-ZhengheJianouEast-z10-849-431-2x1",
+  "z": 10,
+  "x": 849,
+  "y": 431,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/849/431.png",
+    "10/850/431.png"
+  ],
+  "context_tiles": [
+    "10/848/431.png",
+    "10/849/430.png",
+    "10/850/430.png"
+  ],
+  "features": [
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N01", "kind": "city", "original": "Zhenghe", "original_bbox": [246, -14, 316, 15], "source_url": "@source/0ae08157b54fb358", "source_glyph_complete": true, "source_printed_full_literal": "Zhenghe"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N02", "kind": "city", "original": "Waitun", "original_bbox": [354, 23, 391, 38], "source_url": "@source/0ae08157b54fb358", "source_glyph_complete": true, "source_printed_full_literal": "Waitun"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N03", "kind": "city", "original": "Dongyou", "original_bbox": [89, 162, 141, 182], "source_url": "@source/8b92119783707146", "source_glyph_complete": true, "source_printed_full_literal": "Dongyou"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N04", "kind": "city", "original": "Shuiyuan", "original_bbox": [168, 165, 215, 182], "source_url": "@source/8b92119783707146", "source_glyph_complete": true, "source_printed_full_literal": "Shuiyuan"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N05", "kind": "city", "original": "Shunyang", "original_bbox": [50, 222, 107, 242], "source_url": "@source/8b92119783707146", "source_glyph_complete": true, "source_printed_full_literal": "Shunyang"}
+  ],
+  "translations": [
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N01", "status": "approved", "zh": "政和", "source": "@source/05a3f9c2e6661cbd", "record_sha256": "7576a5a713e39b848888c68904effb4cf972fdfa06f8030206178c9473f798d8", "review_notes": "与同地官方中文和完整原图原字核对。"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N02", "status": "approved", "zh": "外屯", "source": "@source/05a3f9c2e6661cbd", "record_sha256": "f838573c90d879b63193b3272b0b10a810271f9cf84944ee36ecc06a1ec51380", "review_notes": "与同地官方中文和完整原图原字核对。"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N03", "status": "approved", "zh": "东游", "source": "@source/05a3f9c2e6661cbd", "record_sha256": "9b8137d0bde369a59f69be2ee70e1b998850642146695bafd0b21704559b603d", "review_notes": "与同地官方中文和完整原图原字核对。"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N04", "status": "approved", "zh": "水源", "source": "@source/05a3f9c2e6661cbd", "record_sha256": "eca27438fa545671bc1216c79dccab0ffc31522e6ed808e045d1d1da8348b854", "review_notes": "与同地官方中文和完整原图原字核对。"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N05", "status": "approved", "zh": "顺阳", "source": "@source/05a3f9c2e6661cbd", "record_sha256": "4b78255e911ef2c6447a3d5b2bf7f6415632b04e0434e6c9b2728f66a3959eb4", "review_notes": "与同地官方中文和完整原图原字核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N01", "x": 274, "y": 12, "font_size": 12, "font_style": "regular", "lines": ["政和"]},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N02", "x": 373, "y": 31, "font_size": 12, "font_style": "regular", "lines": ["外屯"]},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N03", "x": 113, "y": 171, "font_size": 12, "font_style": "regular", "lines": ["东游"]},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N04", "x": 192, "y": 172, "font_size": 12, "font_style": "regular", "lines": ["水源"]},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-N05", "x": 78, "y": 230, "font_size": 12, "font_style": "regular", "lines": ["顺阳"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-shared-FJC17-P010", "owner_region": "FJC17-z10-848-431-1x1", "feature_id": "FJC17-P010", "kind": "city", "original": "Longcun", "original_bbox": [-9, 86, 34, 103], "source_url": "@source/d8df88c6efcc357a", "review_notes": "沿用正式西邻中文的唯一归属，本片只归账跨片原字。"},
+    {"id": "CN-ZhengheJianouEast-z10-849-431-2x1-shared-FJC17-P026", "owner_region": "FJC17-z10-848-431-1x1", "feature_id": "FJC17-P026", "kind": "city", "original": "Dongfeng", "original_bbox": [-8, 212, 40, 229], "source_url": "@source/d8df88c6efcc357a", "review_notes": "沿用正式西邻中文的唯一归属，本片只归账跨片原字。"}
+  ],
+  "legacy_suppressions": []
+}

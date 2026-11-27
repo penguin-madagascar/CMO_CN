@@ -1,0 +1,128 @@
+原名,中文,缩放,来源类型,原图或内置记录身份,原始瓦片 z/x/y,原位置,正式区域,标签ID,中文所在瓦片 z/x/y
+Chukchi Sea,楚科奇海,3,内置 WWP,Synoptic.wwp #306（从 0 编号）,3/0/1,纬度 69°，经度 -174°,GhostClear-z3-0-1-2x1,WWP-Synoptic-306-z3,3/0/1
+Beaufort Sea,波弗特海,3,内置 WWP,Synoptic.wwp #303（从 0 编号）,3/0/1 3/1/1,纬度 70°，经度 -135°,GhostClear-z3-0-1-2x1,WWP-Synoptic-303-z3,3/0/1 3/1/1
+Northwest Passage,西北航道,3,内置 WWP,Synoptic.wwp #300（从 0 编号）,3/1/1,纬度 75°，经度 -100°,GhostClear-z3-0-1-2x1,WWP-Synoptic-300-z3,3/1/1
+Lake Erie,伊利湖,3,内置 WWP,Synoptic.wwp #35（从 0 编号）,3/2/2,纬度 42.2501°，经度 -80.9997°,GhostClear-z3-2-2-1x1,WWP-Synoptic-35-z3,3/2/2
+Lincoln Sea,林肯海,4,内置 WWP,Synoptic.wwp #81（从 0 编号）,4/5/0,纬度 83°，经度 -58°,GhostClear-z4-5-0-1x1,WWP-Synoptic-81-z4,4/5/0
+Arctic Ocean,北冰洋,4,内置 WWP,Synoptic.wwp #291（从 0 编号）,4/7/0 4/8/0,纬度 85°，经度 0°,EU-West-z4-7-0,WWP-Synoptic-291-z4,4/7/0 4/8/0
+Lincoln Sea,林肯海,5,内置 WWP,Synoptic.wwp #81（从 0 编号）,5/10/1,纬度 83°，经度 -58°,GhostClear-z5-10-1-1x1,WWP-Synoptic-81-z5,5/10/1
+Arctic Ocean,北冰洋,5,内置 WWP,Synoptic.wwp #291（从 0 编号）,5/15/0 5/16/0,纬度 85°，经度 0°,CLEAR-Arctic-Ocean-z5-16-0,WWP-Synoptic-291-z5,5/16/0
+North Atlantic Ocean,北大西洋,6,内置 WWP,Synoptic.wwp #295（从 0 编号）,6/24/24,纬度 40°，经度 -40°,GhostClear-z6-24-24-1x1,WWP-Synoptic-295-z6,6/24/24
+Western Mediterranean,西地中海,8,内置 WWP,Synoptic.wwp #314（从 0 编号）,8/132/96,纬度 40.246°，经度 5.97656°,AM-AlgeriaTunisia-z8-North,WWP-Synoptic-314-z8,8/132/96
+Armenia,亚美尼亚,8,内置 WWP,Synoptic.wwp #5（从 0 编号）,8/159/96 8/160/96,纬度 40.25°，经度 45°,EM-East-Mediterranean-z8-152-95,WWP-Synoptic-5-z8,8/159/96 8/160/96
+Sea of Japan,日本海,8,内置 WWP,Synoptic.wwp #269（从 0 编号）,8/224/93,纬度 43.5°，经度 135.75°,GhostClear-z8-224-93-1x1,WWP-Synoptic-269-z8,8/224/93
+Mali,马里,9,内置 WWP,Synoptic.wwp #138（从 0 编号）,9/253/229,纬度 18°，经度 -2°,GhostClear-z9-253-229-1x1,WWP-Synoptic-138-z9,9/253/229
+Oakland,奥克兰,9,内置 WWP,Cities.wwp #4036（从 0 编号）,9/82/197,纬度 37.8044°，经度 -122.271°,AM-NorCalSierra-z9-80-192,WWP-Cities-4036-z9,9/82/197
+Hollywood,好莱坞,9,内置 WWP,Cities.wwp #4024（从 0 编号）,9/87/204,纬度 34.0983°，经度 -118.327°,WU-SealCorrectionPair-z9-87-203,WWP-Cities-4024-z9,9/87/204
+Mali,马里,10,内置 WWP,Synoptic.wwp #138（从 0 编号）,10/506/459,纬度 18°，经度 -2°,GaoNorth-z10-504-456,WWP-Synoptic-138-z10,10/506/459
+Eastern Mediterranean,东地中海,10,内置 WWP,Synoptic.wwp #315（从 0 编号）,10/575/406,纬度 34.8859°，经度 22.3682°,GhostClear-z10-575-406-1x1,WWP-Synoptic-315-z10,10/575/406
+Amundsen Sea,阿蒙森海,4,原版地图文字,MapTiles/Labels/4/2/12.png MapTiles/Labels/4/3/12.png,4/2/12 4/3/12,"该缩放世界像素框 [729, 3283, 805, 3312]",World-AmundsenSea-z4-2-12,World-AmundsenSea-z4-2-12-AmundsenSea,4/2/12 4/3/12
+Bellingshausen Sea,别林斯高晋海,4,原版地图文字,MapTiles/Labels/4/4/12.png,4/4/12,"该缩放世界像素框 [1045, 3183, 1157, 3212]",World-BellingshausenSea-z4-4-12,World-BellingshausenSea-z4-4-12-BellingshausenSea,4/4/12
+Ross Sea,罗斯海,4,原版地图文字,MapTiles/Labels/4/5/13.png MapTiles/Labels/4/6/13.png,4/5/13 4/6/13,"该缩放世界像素框 [1498, 3366, 1563, 3380]",World-RossSea-z4-5-13,World-RossSea-z4-5-13-RossSea,4/5/13 4/6/13
+Weddell Sea,威德尔海,4,原版地图文字,MapTiles/Labels/4/6/12.png,4/6/12,"该缩放世界像素框 [1581, 3202, 1671, 3216]",World-WeddellSea-z4-6-12,World-WeddellSea-z4-6-12-WeddellSea,4/6/12
+Puerto Deseado,德塞阿多港,5,原版地图文字,MapTiles/Labels/5/10/20.png,5/10/20,"该缩放世界像素框 [2599, 5335, 2641, 5366]",World-Patagonia-z5-9-20,World-Patagonia-z5-9-20-PuertoDeseado,5/10/20
+Comodoro Rivadavia,里瓦达维亚海军准将城,5,原版地图文字,MapTiles/Labels/5/10/20.png MapTiles/Labels/5/9/20.png,5/10/20 5/9/20,"该缩放世界像素框 [2563, 5273, 2614, 5303]",World-Patagonia-z5-9-20,World-Patagonia-z5-9-20-ComodoroRivadavia,5/10/20
+FALKLAND ISLANDS,福克兰群岛,5,原版地图文字,MapTiles/Labels/5/10/21.png,5/10/21,"该缩放世界像素框 [2673, 5459, 2810, 5503]",World-Patagonia-z5-9-20,World-Patagonia-z5-9-20-FalklandIslands,5/10/21
+Río Gallegos,里奥加耶戈斯,5,原版地图文字,MapTiles/Labels/5/10/21.png MapTiles/Labels/5/9/21.png,5/10/21 5/9/21,"该缩放世界像素框 [2523, 5472, 2566, 5505]",World-Patagonia-z5-9-20,World-Patagonia-z5-9-20-RioGallegos,5/9/21 5/10/21
+Drake Passage,德雷克海峡,5,原版地图文字,MapTiles/Labels/5/10/22.png,5/10/22,"该缩放世界像素框 [2647, 5757, 2714, 5793]",World-DrakePassage-z5-10-22,World-DrakePassage-z5-10-22-DrakePassage,5/10/22
+Ross Sea,罗斯海,5,原版地图文字,MapTiles/Labels/5/11/26.png MapTiles/Labels/5/12/26.png,5/11/26 5/12/26,"该缩放世界像素框 [3023, 6740, 3098, 6756]",World-RossSea-z5-11-26,World-RossSea-z5-11-26-RossSea,5/11/26 5/12/26
+Weddell Sea,威德尔海,5,原版地图文字,MapTiles/Labels/5/12/25.png,5/12/25,"该缩放世界像素框 [3200, 6411, 3302, 6427]",World-WeddellSea-z5-12-25,World-WeddellSea-z5-12-25-WeddellSea,5/12/25
+Southern Ocean,南大洋,5,原版地图文字,MapTiles/Labels/5/23/22.png MapTiles/Labels/5/24/22.png,5/23/22 5/24/22,"该缩放世界像素框 [6095, 5792, 6193, 5829]",World-SouthernOcean-z5-23-22,World-SouthernOcean-z5-23-22-SouthernOcean,5/23/22 5/24/22
+PITCAIRN,皮特凯恩,5,原版地图文字,MapTiles/Labels/5/4/18.png,5/4/18,"该缩放世界像素框 [1074, 4671, 1198, 4693]",World-Pitcairn-z5-4-18,World-Pitcairn-z5-4-18-Pitcairn,5/4/18
+Amundsen Sea,阿蒙森海,5,原版地图文字,MapTiles/Labels/5/5/25.png MapTiles/Labels/5/6/25.png,5/5/25 5/6/25,"该缩放世界像素框 [1492, 6580, 1578, 6613]",World-AmundsenSea-z5-5-25,World-AmundsenSea-z5-5-25-AmundsenSea,5/5/25 5/6/25
+Bellingshausen Sea,别林斯高晋海,5,原版地图文字,MapTiles/Labels/5/8/24.png MapTiles/Labels/5/8/25.png,5/8/24 5/8/25,"该缩放世界像素框 [2139, 6380, 2266, 6413]",World-BellingshausenSea-z5-8-24,World-BellingshausenSea-z5-8-24-BellingshausenSea,5/8/24 5/8/25
+Puerto Montt,蒙特港,5,原版地图文字,MapTiles/Labels/5/9/20.png,5/9/20,"该缩放世界像素框 [2439, 5134, 2472, 5165]",World-Patagonia-z5-9-20,World-Patagonia-z5-9-20-PuertoMontt,5/9/20
+El Calafate,卡拉法特,5,原版地图文字,MapTiles/Labels/5/9/21.png,5/9/21,"该缩放世界像素框 [2454, 5425, 2506, 5441]",World-Patagonia-z5-9-20,World-Patagonia-z5-9-20-ElCalafate,5/9/21
+Punta Arenas,蓬塔阿雷纳斯,5,原版地图文字,MapTiles/Labels/5/9/21.png,5/9/21,"该缩放世界像素框 [2484, 5529, 2519, 5560]",World-Patagonia-z5-9-20,World-Patagonia-z5-9-20-PuntaArenas,5/9/21 5/10/21
+Thule,图勒,5,原版地图文字,MapTiles/Labels/5/9/4.png,5/9/4,"该缩放世界像素框 [2523, 1215, 2552, 1231]",World-Thule-z5-9-4,World-Thule-z5-9-4-Thule,5/9/4
+RIO GRANDE DO SUL,南里奥格兰德州,6,原版地图文字,MapTiles/Labels/6/22/37.png,6/22/37,"该缩放世界像素框 [5702, 9600, 5788, 9629]",BR-RioGrandeDoSulCaxiasPortoAlegre-z6-22-37,BR-RioGrandeDoSulCaxiasPortoAlegre-z6-22-37-RIOGRANDEDOSUL,6/22/37
+Coimbatore,哥印拜陀,7,原版地图文字,MapTiles/Labels/7/91/60.png,7/91/60,"该缩放世界像素框 [23385, 15372, 23448, 15391]",IN-KeralaTamilNadu-z7-91-60,IN-KeralaTamilNadu-z7-91-60-Coimbatore,7/91/60
+KERALA,喀拉拉邦,7,原版地图文字,MapTiles/Labels/7/91/60.png,7/91/60,"该缩放世界像素框 [23311, 15425, 23387, 15442]",IN-KeralaTamilNadu-z7-91-60,IN-KeralaTamilNadu-z7-91-60-KERALA,7/91/60
+TAMIL NADU,泰米尔纳德邦,7,原版地图文字,MapTiles/Labels/7/91/60.png,7/91/60,"该缩放世界像素框 [23486, 15364, 23549, 15402]",IN-KeralaTamilNadu-z7-91-60,IN-KeralaTamilNadu-z7-91-60-TAMILNADU,7/91/60
+Okahandja,奥卡汉贾,8,原版地图文字,MapTiles/Labels/8/140/144.png,8/140/144,"该缩放世界像素框 [35842, 36867, 35909, 36891]",NA-OkahandjaWindhoek-z8-140-144,NA-OkahandjaWindhoek-z8-140-144-N01,8/140/144
+Esperance,埃斯佩兰斯,8,原版地图文字,MapTiles/Labels/8/214/153.png,8/214/153,"该缩放世界像素框 [54953, 39321, 55017, 39345]",AU-Esperance-z8-214-153,AU-Esperance-z8-214-153-N01,8/214/153
+Prince Albert,艾伯特亲王城,9,原版地图文字,MapTiles/Labels/9/105/166.png,9/105/166,"该缩放世界像素框 [27014, 42556, 27055, 42594]",CA-PrinceAlbertBirchHills-z9-105-166,CA-PrinceAlbertBirchHills-z9-105-166-N01,9/105/166
+Garupá,加鲁帕,9,原版地图文字,MapTiles/Labels/9/176/296.png,9/176/296,"该缩放世界像素框 [45189, 75941, 45229, 75961]",AR-PY-PosadasGarupa-z9-176-296,AR-PY-PosadasGarupa-z9-176-296-N05,9/176/296
+Tamanrasset,塔曼拉塞特,9,原版地图文字,MapTiles/Labels/9/263/222.png MapTiles/Labels/9/264/222.png,9/263/222 9/264/222,"该缩放世界像素框 [67506, 57002, 67594, 57022]",DZ-Tamanrasset-z9-263-222,DZ-Tamanrasset-z9-263-222-N01,9/263/222 9/264/222
+Yafran,耶夫兰,9,原版地图文字,MapTiles/Labels/9/273/207.png,9/273/207,"该缩放世界像素框 [70078, 53192, 70116, 53208]",LY-Yafran-z9-273-207,LY-Yafran-z9-273-207-Yafran,9/273/207
+Opoczno,奥波奇诺,9,原版地图文字,MapTiles/Labels/9/284/170.png,9/284/170,"该缩放世界像素框 [72900, 43651, 72950, 43671]",PL-TomaszowMazowiecki-z9-284-170,PL-TomaszowMazowiecki-z9-284-170-Opoczno,9/284/170
+Sulejów,苏莱尤夫,9,原版地图文字,MapTiles/Labels/9/284/170.png,9/284/170,"该缩放世界像素框 [72754, 43665, 72801, 43685]",PL-TomaszowMazowiecki-z9-284-170,PL-TomaszowMazowiecki-z9-284-170-Sulejw,9/284/170
+Tomaszów Mazowiecki,马佐夫舍地区托马舒夫,9,原版地图文字,MapTiles/Labels/9/284/170.png,9/284/170,"该缩放世界像素框 [72789, 43553, 72853, 43588]",PL-TomaszowMazowiecki-z9-284-170,PL-TomaszowMazowiecki-z9-284-170-TomaszwMazowiecki,9/284/170
+Ujazd,乌亚兹德,9,原版地图文字,MapTiles/Labels/9/284/170.png,9/284/170,"该缩放世界像素框 [72773, 43524, 72806, 43543]",PL-TomaszowMazowiecki-z9-284-170,PL-TomaszowMazowiecki-z9-284-170-Ujazd,9/284/170
+Kirkenes,希尔克内斯,9,原版地图文字,MapTiles/Labels/9/298/115.png,9/298/115,"该缩放世界像素框 [76451, 29614, 76499, 29631]",NO-Kirkenes-z9-298-115,NO-Kirkenes-z9-298-115-N01,9/298/115
+Bychaŭ,贝霍夫,9,原版地图文字,MapTiles/Labels/9/298/165.png MapTiles/Labels/9/299/165.png,9/298/165 9/299/165,"该缩放世界像素框 [76527, 42373, 76569, 42392]",BY-Bychau-z9-298-165,BY-Bychau-z9-298-165-1,9/298/165 9/299/165
+Ahad Rufaidah,阿哈德·拉菲达,9,原版地图文字,MapTiles/Labels/9/316/229.png MapTiles/Labels/9/317/229.png,9/316/229 9/317/229,"该缩放世界像素框 [81109, 58785, 81159, 58819]",SA-AbhaAhadRufaidah-z9-316-229,SA-AbhaAhadRufaidah-z9-316-229-N03,9/316/229 9/317/229
+Tais,塔伊斯,9,原版地图文字,MapTiles/Labels/9/401/261.png,9/401/261,"该缩放世界像素框 [102870, 67014, 102896, 67030]",ID-BengkuluTais-z9-401-261,ID-BengkuluTais-z9-401-261-N03,9/401/261
+Dahua,大化,9,原版地图文字,MapTiles/Labels/9/409/221.png,9/409/221,"该缩放世界像素框 [104835, 56626, 104876, 56644]",CN-DahuaMashan-z9-409-221,CN-DahuaMashan-z9-409-221-N02,9/409/221
+Fucheng,府城,9,原版地图文字,MapTiles/Labels/9/409/221.png,9/409/221,"该缩放世界像素框 [104909, 56750, 104956, 56770]",CN-DahuaMashan-z9-409-221,CN-DahuaMashan-z9-409-221-N07,9/409/221
+Jiucheng,旧城,9,原版地图文字,MapTiles/Labels/9/409/221.png,9/409/221,"该缩放世界像素框 [104717, 56695, 104765, 56714]",CN-DahuaMashan-z9-409-221,CN-DahuaMashan-z9-409-221-N04,9/409/221
+Lingma,灵马,9,原版地图文字,MapTiles/Labels/9/409/221.png,9/409/221,"该缩放世界像素框 [104803, 56766, 104845, 56785]",CN-DahuaMashan-z9-409-221,CN-DahuaMashan-z9-409-221-N06,9/409/221
+Mashan,马山,9,原版地图文字,MapTiles/Labels/9/409/221.png,9/409/221,"该缩放世界像素框 [104896, 56637, 104946, 56655]",CN-DahuaMashan-z9-409-221,CN-DahuaMashan-z9-409-221-N03,9/409/221
+Zhoulu,周鹿,9,原版地图文字,MapTiles/Labels/9/409/221.png,9/409/221,"该缩放世界像素框 [104836, 56699, 104877, 56716]",CN-DahuaMashan-z9-409-221,CN-DahuaMashan-z9-409-221-N05,9/409/221
+Dabaodang,大保当,9,原版地图文字,MapTiles/Labels/9/412/196.png,9/412/196,"该缩放世界像素框 [105552, 50256, 105614, 50275]",CN-YulinShenmu-z9-412-196,CN-YulinShenmu-z9-412-196-N03,9/412/196
+Gaojiabu,高家堡,9,原版地图文字,MapTiles/Labels/9/412/196.png,9/412/196,"该缩放世界像素框 [105666, 50294, 105717, 50314]",CN-YulinShenmu-z9-412-196,CN-YulinShenmu-z9-412-196-N05,9/412/196
+Mahuangliang,麻黄梁,9,原版地图文字,MapTiles/Labels/9/412/196.png,9/412/196,"该缩放世界像素框 [105529, 50342, 105606, 50362]",CN-YulinShenmu-z9-412-196,CN-YulinShenmu-z9-412-196-N06,9/412/196
+Maodu,茅渡,9,原版地图文字,MapTiles/Labels/9/412/215.png,9/412/215,"该缩放世界像素框 [105638, 55160, 105678, 55176]",CN-HuaihuaHongjiang-z9-412-215,CN-HuaihuaHongjiang-z9-412-215-N03,9/412/215
+Dapeng,大鹏,9,原版地图文字,MapTiles/Labels/9/412/221.png,9/412/221,"该缩放世界像素框 [105629, 56623, 105672, 56642]",CN-WuxuanGuiping-z9-412-221,CN-WuxuanGuiping-z9-412-221-N02,9/412/221
+Guiping,桂平,9,原版地图文字,MapTiles/Labels/9/412/221.png,9/412/221,"该缩放世界像素框 [105588, 56763, 105637, 56785]",CN-WuxuanGuiping-z9-412-221,CN-WuxuanGuiping-z9-412-221-N06,9/412/221
+Nanmu,南木,9,原版地图文字,MapTiles/Labels/9/412/221.png,9/412/221,"该缩放世界像素框 [105593, 56723, 105634, 56740]",CN-WuxuanGuiping-z9-412-221,CN-WuxuanGuiping-z9-412-221-N05,9/412/221
+Qingfeng,庆丰,9,原版地图文字,MapTiles/Labels/9/412/221.png,9/412/221,"该缩放世界像素框 [105473, 56816, 105525, 56832]",CN-WuxuanGuiping-z9-412-221,CN-WuxuanGuiping-z9-412-221-N07,9/412/221
+Siwang,思旺,9,原版地图文字,MapTiles/Labels/9/412/221.png,9/412/221,"该缩放世界像素框 [105676, 56649, 105718, 56669]",CN-WuxuanGuiping-z9-412-221,CN-WuxuanGuiping-z9-412-221-N03,9/412/221
+Youma,油麻,9,原版地图文字,MapTiles/Labels/9/412/221.png,9/412/221,"该缩放世界像素框 [105655, 56812, 105695, 56828]",CN-WuxuanGuiping-z9-412-221,CN-WuxuanGuiping-z9-412-221-N08,9/412/221
+Hejin,河津,9,原版地图文字,MapTiles/Labels/9/413/201.png,9/413/201,"该缩放世界像素框 [105826, 51643, 105860, 51664]",CN-XiangningHejin-z9-413-201,CN-XiangningHejin-z9-413-201-N05,9/413/201
+Weizhuang,尉庄,9,原版地图文字,MapTiles/Labels/9/413/201.png,9/413/201,"该缩放世界像素框 [105894, 51511, 105955, 51530]",CN-XiangningHejin-z9-413-201,CN-XiangningHejin-z9-413-201-N02,9/413/201
+Xiahua,下化,9,原版地图文字,MapTiles/Labels/9/413/201.png,9/413/201,"该缩放世界像素框 [105795, 51578, 105836, 51594]",CN-XiangningHejin-z9-413-201,CN-XiangningHejin-z9-413-201-N04,9/413/201
+Xiangning,乡宁,9,原版地图文字,MapTiles/Labels/9/413/201.png,9/413/201,"该缩放世界像素框 [105862, 51473, 105926, 51494]",CN-XiangningHejin-z9-413-201,CN-XiangningHejin-z9-413-201-N01,9/413/201
+Loude,楼德,9,原版地图文字,MapTiles/Labels/9/422/201.png,9/422/201,"该缩放世界像素框 [108232, 51523, 108267, 51539]",CN-QufuSishui-z9-422-201,CN-QufuSishui-z9-422-201-N03,9/422/201
+Ningyang,宁阳,9,原版地图文字,MapTiles/Labels/9/422/201.png,9/422/201,"该缩放世界像素框 [108032, 51569, 108091, 51591]",CN-QufuSishui-z9-422-201,CN-QufuSishui-z9-422-201-N04,9/422/201
+Qufu,曲阜,9,原版地图文字,MapTiles/Labels/9/422/201.png,9/422/201,"该缩放世界像素框 [108114, 51642, 108147, 51664]",CN-QufuSishui-z9-422-201,CN-QufuSishui-z9-422-201-N07,9/422/201
+Shimenshan,石门山,9,原版地图文字,MapTiles/Labels/9/422/201.png,9/422/201,"该缩放世界像素框 [108124, 51591, 108192, 51608]",CN-QufuSishui-z9-422-201,CN-QufuSishui-z9-422-201-N05,9/422/201
+Sishui,泗水,9,原版地图文字,MapTiles/Labels/9/422/201.png,9/422/201,"该缩放世界像素框 [108212, 51615, 108252, 51634]",CN-QufuSishui-z9-422-201,CN-QufuSishui-z9-422-201-N06,9/422/201
+Wenyang,汶阳,9,原版地图文字,MapTiles/Labels/9/422/201.png,9/422/201,"该缩放世界像素框 [108065, 51479, 108117, 51499]",CN-QufuSishui-z9-422-201,CN-QufuSishui-z9-422-201-N01,9/422/201
+Daming,大明,9,原版地图文字,MapTiles/Labels/9/425/190.png,9/425/190,"该缩放世界像素框 [108884, 48846, 108928, 48866]",CN-NingchengYuanbaoshan-z9-425-190,CN-NingchengYuanbaoshan-z9-425-190-N08,9/425/190
+Ningcheng,宁城,9,原版地图文字,MapTiles/Labels/9/425/190.png,9/425/190,"该缩放世界像素框 [108944, 48843, 109010, 48866]",CN-NingchengYuanbaoshan-z9-425-190,CN-NingchengYuanbaoshan-z9-425-190-N07,9/425/190
+Wujia,五家,9,原版地图文字,MapTiles/Labels/9/425/190.png,9/425/190,"该缩放世界像素框 [108909, 48667, 108943, 48686]",CN-NingchengYuanbaoshan-z9-425-190,CN-NingchengYuanbaoshan-z9-425-190-N02,9/425/190
+Xiqiao,西桥,9,原版地图文字,MapTiles/Labels/9/425/190.png,9/425/190,"该缩放世界像素框 [108892, 48716, 108930, 48735]",CN-NingchengYuanbaoshan-z9-425-190,CN-NingchengYuanbaoshan-z9-425-190-N03,9/425/190
+Xizi,汐子,9,原版地图文字,MapTiles/Labels/9/425/190.png,9/425/190,"该缩放世界像素框 [108945, 48750, 108968, 48766]",CN-NingchengYuanbaoshan-z9-425-190,CN-NingchengYuanbaoshan-z9-425-190-N04,9/425/190
+Aohan,敖汉旗,9,原版地图文字,MapTiles/Labels/9/426/189.png,9/426/189,"该缩放世界像素框 [109171, 48506, 109213, 48524]",CN-AohanFengshou-z9-426-189,CN-AohanFengshou-z9-426-189-N04,9/426/189
+Fengshou,丰收,9,原版地图文字,MapTiles/Labels/9/426/189.png,9/426/189,"该缩放世界像素框 [109247, 48526, 109301, 48546]",CN-AohanFengshou-z9-426-189,CN-AohanFengshou-z9-426-189-N05,9/426/189
+Machang,马场,9,原版地图文字,MapTiles/Labels/9/426/189.png,9/426/189,"该缩放世界像素框 [109093, 48611, 109143, 48631]",CN-AohanFengshou-z9-426-189,CN-AohanFengshou-z9-426-189-N07,9/426/189
+Manihan,玛尼罕,9,原版地图文字,MapTiles/Labels/9/426/189.png,9/426/189,"该缩放世界像素框 [109182, 48423, 109231, 48439]",CN-AohanFengshou-z9-426-189,CN-AohanFengshou-z9-426-189-N01,9/426/189
+Salbar,萨力巴,9,原版地图文字,MapTiles/Labels/9/426/189.png,9/426/189,"该缩放世界像素框 [109109, 48428, 109146, 48445]",CN-AohanFengshou-z9-426-189,CN-AohanFengshou-z9-426-189-N02,9/426/189
+Bolichengzi,玻璃城子,9,原版地图文字,MapTiles/Labels/9/432/186.png,9/432/186,"该缩放世界像素框 [110710, 47691, 110774, 47710]",CN-ShuangliaoBolichengzi-z9-432-186,CN-ShuangliaoBolichengzi-z9-432-186-N05,9/432/186
+Fuxian,服先,9,原版地图文字,MapTiles/Labels/9/432/186.png,9/432/186,"该缩放世界像素框 [110614, 47674, 110653, 47690]",CN-ShuangliaoBolichengzi-z9-432-186,CN-ShuangliaoBolichengzi-z9-432-186-N04,9/432/186
+Qianjin,前进,9,原版地图文字,MapTiles/Labels/9/432/186.png,9/432/186,"该缩放世界像素框 [110761, 47635, 110802, 47655]",CN-ShuangliaoBolichengzi-z9-432-186,CN-ShuangliaoBolichengzi-z9-432-186-N03,9/432/186
+Shiwu,十屋,9,原版地图文字,MapTiles/Labels/9/432/186.png,9/432/186,"该缩放世界像素框 [110747, 47761, 110784, 47778]",CN-ShuangliaoBolichengzi-z9-432-186,CN-ShuangliaoBolichengzi-z9-432-186-N06,9/432/186
+Xinli,新立,9,原版地图文字,MapTiles/Labels/9/432/186.png,9/432/186,"该缩放世界像素框 [110679, 47813, 110707, 47829]",CN-ShuangliaoBolichengzi-z9-432-186,CN-ShuangliaoBolichengzi-z9-432-186-N08,9/432/186
+Yongjia,永加,9,原版地图文字,MapTiles/Labels/9/432/186.png,9/432/186,"该缩放世界像素框 [110593, 47766, 110636, 47786]",CN-ShuangliaoBolichengzi-z9-432-186,CN-ShuangliaoBolichengzi-z9-432-186-N07,9/432/186
+Lao Khwan,劳宽,10,原版地图文字,MapTiles/Labels/10/795/470.png,10/795/470,"该缩放世界像素框 [203696, 120321, 203758, 120338]",TH-SuphanBuriKanchanaburi-z10-795-470,TH-SuphanBuriKanchanaburi-z10-795-470-S03,10/795/470
+Phanom Thuan,帕侬团,10,原版地图文字,MapTiles/Labels/10/795/471.png,10/795/471,"该缩放世界像素框 [203651, 120662, 203692, 120693]",TH-SuphanBuriKanchanaburi-z10-795-470,TH-SuphanBuriKanchanaburi-z10-795-470-S11,10/795/471
+Kho Wang,科旺,10,原版地图文字,MapTiles/Labels/10/796/470.png,10/796/470,"该缩放世界像素框 [203971, 120493, 204022, 120510]",TH-SuphanBuriKanchanaburi-z10-795-470,TH-SuphanBuriKanchanaburi-z10-795-470-S08,10/796/470
+Suan Taeng,宣登,10,原版地图文字,MapTiles/Labels/10/796/470.png,10/796/470,"该缩放世界像素框 [203859, 120442, 203917, 120460]",TH-SuphanBuriKanchanaburi-z10-795-470,TH-SuphanBuriKanchanaburi-z10-795-470-S06,10/796/470
+Suphan Buri,素攀武里,10,原版地图文字,MapTiles/Labels/10/796/470.png,10/796/470,"该缩放世界像素框 [203940, 120413, 204009, 120432]",TH-SuphanBuriKanchanaburi-z10-795-470,TH-SuphanBuriKanchanaburi-z10-795-470-S05,10/796/470
+U Thong,乌通,10,原版地图文字,MapTiles/Labels/10/796/470.png,10/796/470,"该缩放世界像素框 [203790, 120484, 203838, 120503]",TH-SuphanBuriKanchanaburi-z10-795-470,TH-SuphanBuriKanchanaburi-z10-795-470-S07,10/796/470
+Bang Luang,挽銮,10,原版地图文字,MapTiles/Labels/10/796/471.png,10/796/471,"该缩放世界像素框 [203947, 120678, 204005, 120696]",TH-SuphanBuriKanchanaburi-z10-795-470,TH-SuphanBuriKanchanaburi-z10-795-470-S12,10/796/471
+Thung Khok,通科,10,原版地图文字,MapTiles/Labels/10/796/471.png,10/796/471,"该缩放世界像素框 [203810, 120631, 203879, 120651]",TH-SuphanBuriKanchanaburi-z10-795-470,TH-SuphanBuriKanchanaburi-z10-795-470-S10,10/796/471
+Fucheng,府城,10,原版地图文字,MapTiles/Labels/10/819/443.png,10/819/443,"该缩放世界像素框 [209843, 113509, 209885, 113526]",CN-ZhouluLuoxu-z10-819-443,CN-ZhouluLuoxu-z10-819-443-N03,10/819/443
+Linxu,林圩,10,原版地图文字,MapTiles/Labels/10/819/443.png,10/819/443,"该缩放世界像素框 [209796, 113433, 209825, 113448]",CN-ZhouluLuoxu-z10-819-443,CN-ZhouluLuoxu-z10-819-443-N02,10/819/443
+Luoxu,锣圩,10,原版地图文字,MapTiles/Labels/10/819/443.png,10/819/443,"该缩放世界像素框 [209717, 113643, 209749, 113658]",CN-ZhouluLuoxu-z10-819-443,CN-ZhouluLuoxu-z10-819-443-N06,10/819/443
+Xianhu,仙湖,10,原版地图文字,MapTiles/Labels/10/819/443.png,10/819/443,"该缩放世界像素框 [209761, 113563, 209803, 113579]",CN-ZhouluLuoxu-z10-819-443,CN-ZhouluLuoxu-z10-819-443-N05,10/819/443
+Zhoulu,周鹿,10,原版地图文字,MapTiles/Labels/10/819/443.png,10/819/443,"该缩放世界像素框 [209691, 113407, 209733, 113423]",CN-ZhouluLuoxu-z10-819-443,CN-ZhouluLuoxu-z10-819-443-N01,10/819/443
+Gangcheng,钢城,10,原版地图文字,MapTiles/Labels/10/846/401.png MapTiles/Labels/10/847/401.png,10/846/401 10/847/401,"该缩放世界像素框 [216820, 102876, 216890, 102899]",CN-LaiwuGangcheng-z10-846-401,CN-LaiwuGangcheng-z10-846-401-3,10/847/401
+Antun,安屯,10,原版地图文字,MapTiles/Labels/10/857/383.png MapTiles/Labels/10/858/383.png,10/857/383 10/858/383,"该缩放世界像素框 [219620, 98220, 219651, 98235]",CN-LinghaiShixinAntun-z10-857-383,CN-LinghaiShixinAntun-z10-857-383-4,10/857/383 10/858/383
+Shixin,石新,10,原版地图文字,MapTiles/Labels/10/857/383.png MapTiles/Labels/10/858/383.png,10/857/383 10/858/383,"该缩放世界像素框 [219625, 98146, 219662, 98163]",CN-LinghaiShixinAntun-z10-857-383,CN-LinghaiShixinAntun-z10-857-383-3,10/857/383 10/858/383
+Liangjiazi,两家子,10,原版地图文字,MapTiles/Labels/10/860/379.png,10/860/379,"该缩放世界像素框 [220265, 97097, 220312, 97115]",CN-ZhangwuXinmin-z10-860-379,CN-ZhangwuXinmin-z10-860-379-S02,10/860/379
+Liangshan,梁山,10,原版地图文字,MapTiles/Labels/10/860/379.png,10/860/379,"该缩放世界像素框 [220355, 97252, 220406, 97270]",CN-ZhangwuXinmin-z10-860-379,CN-ZhangwuXinmin-z10-860-379-S05,10/860/379
+Yaobao,姚堡,10,原版地图文字,MapTiles/Labels/10/860/379.png,10/860/379,"该缩放世界像素框 [220234, 97254, 220278, 97270]",CN-ZhangwuXinmin-z10-860-379,CN-ZhangwuXinmin-z10-860-379-S04,10/860/379
+Zhoutuozi,周坨子,10,原版地图文字,MapTiles/Labels/10/860/379.png,10/860/379,"该缩放世界像素框 [220301, 97163, 220358, 97180]",CN-ZhangwuXinmin-z10-860-379,CN-ZhangwuXinmin-z10-860-379-S03,10/860/379
+Bay of Biscay,比斯开湾,5,内置 WWP,Synoptic.wwp #290（从 0 编号）,5/15/11,纬度 44°，经度 -4°,EU-West-z5-13-4,WWP-Synoptic-290-z5,5/15/11
+Antigua and Barbuda,安提瓜和巴布达,6,内置 WWP,Synoptic.wwp #3（从 0 编号）,6/21/28,纬度 17.0499992°，经度 -61.7999992°,OSNA11-S-z6-19-28,WWP-Synoptic-3-z6,6/21/28
+Aktau,阿克套,6,内置 WWP,Cities.wwp #2551（从 0 编号）,6/41/23,纬度 43.6480598°，经度 51.1722183°,AP-West-Asia-z6-41-19,WWP-Cities-2551-z6,6/41/23
+Zhanaozen,扎瑙津,6,内置 WWP,Cities.wwp #2546（从 0 编号）,6/41/23,纬度 43.3411598°，经度 52.8619194°,AP-West-Asia-z6-41-19,WWP-Cities-2546-z6,6/41/23
+Salalah,塞拉莱,6,内置 WWP,Cities.wwp #3012（从 0 编号）,6/41/28,纬度 17.0150509°，经度 54.0923691°,AP-Southern-Asia-z6-41-27,WWP-Cities-3012-z6,6/41/28
+Panalanoy,帕纳拉诺伊,6,内置 WWP,Cities.wwp #3069（从 0 编号）,6/54/29,纬度 11.2511101°，经度 125.006393°,AP-Southern-Asia-z6-41-27,WWP-Cities-3069-z6,6/54/29
+Kultali,库尔塔利,7,内置 WWP,Cities.wwp #2125（从 0 编号）,7/95/56,纬度 21.8999996°，经度 88.4000015°,S20-Haldia-continuation-z7-95-56,WWP-Cities-2125-z7,7/95/56
+Daly City,戴利城,8,内置 WWP,Cities.wwp #4010（从 0 编号）,8/40/99,纬度 37.7057686°，经度 -122.461922°,AM-SierraSouthwest-z8-40-95,WWP-Cities-4010-z8,8/40/99
+Turkey,土耳其,8,内置 WWP,Synoptic.wwp #207（从 0 编号）,8/152/97,纬度 39°，经度 35°,EM-East-Mediterranean-z8-152-95,WWP-Synoptic-207-z8,8/152/97
+Bao Loc,保禄市,8,内置 WWP,Cities.wwp #4207（从 0 编号）,8/204/119,纬度 11.5479803°，经度 107.807716°,AP-Indochina-z8-200-112,WWP-Cities-4207-z8,8/204/119
+Artem,阿尔乔姆,8,内置 WWP,Cities.wwp #3499（从 0 编号）,8/222/93,纬度 43.3595009°，经度 132.188873°,NEA18-Primorye-z8-222-93,WWP-Cities-3499-z8,8/222/93

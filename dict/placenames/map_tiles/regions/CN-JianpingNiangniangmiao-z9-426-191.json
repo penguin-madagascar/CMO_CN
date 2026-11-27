@@ -1,0 +1,41 @@
+{
+  "id": "CN-JianpingNiangniangmiao-z9-426-191",
+  "z": 9,
+  "x": 426,
+  "y": 191,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/426/191.png"
+  ],
+  "context_tiles": [
+    "9/426/192.png"
+  ],
+  "features": [
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Yangshuwan", "kind": "city", "original": "Yangshuwan", "original_bbox": [156, 10, 227, 29], "source_url": "@source/84d5cc9933138353", "source_glyph_complete": true, "source_printed_full_literal": "Yangshuwan"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Taizi", "kind": "city", "original": "Taizi", "original_bbox": [211, 43, 239, 59], "source_url": "@source/84d5cc9933138353", "source_glyph_complete": true, "source_printed_full_literal": "Taizi"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Shuiquan", "kind": "city", "original": "Shuiquan", "original_bbox": [116, 94, 169, 114], "source_url": "@source/84d5cc9933138353", "source_glyph_complete": true, "source_printed_full_literal": "Shuiquan"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Jianping", "kind": "city", "original": "Jianping", "original_bbox": [9, 44, 61, 66], "source_url": "@source/84d5cc9933138353", "source_glyph_complete": true, "source_printed_full_literal": "Jianping"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Harqin Zuoyi", "kind": "city", "original": "Harqin Zuoyi", "original_bbox": [52, 173, 95, 214], "source_url": "@source/84d5cc9933138353", "source_glyph_complete": true, "source_printed_full_literal": "Harqin Zuoyi"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Niangniangmiao", "kind": "city", "original": "Niangniangmiao", "original_bbox": [167, 255, 243, 256], "source_url": "@source/84d5cc9933138353", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null, "source_observation": {"available_readable_lines": ["Three tracked white or near-white cap segments on one clipped south-edge source row, with no visible source lettering."], "complete_supplier_glyph": false, "printed_full_literal": null, "visible_world_bbox": [109223, 49151, 109299, 49152], "source_facts": {"path": "evidence/parallel_map/reviews/NE_426191_WEST_INDEPENDENT_9281_20261124/NIANGNIANGMIAO_EXACT_SOUTH_CAP_BOUNDED_SOURCE.json", "sha256": "e36f3b08c3c7b10aaf60a04dd3864f5d8a2e486fe2113ccedc8538d5c6e236b4", "bytes": 21361}, "boundary_axis": "south"}}
+  ],
+  "translations": [
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Yangshuwan", "zh": "杨树湾", "status": "approved", "source": "@source/ae0d182e61336243", "record_sha256": "4d22bbcef29880aa7f33c1ae9681a71ecfc48e63202e4783a4498d7686bfb1b8", "review_notes": "核对供应商同级原字及同地官方中文。"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Taizi", "zh": "台子", "status": "approved", "source": "@source/ae0d182e61336243", "record_sha256": "7db6bd925d38ff09b79cb418824ca68b8030307b3498c6cfbd911fc4736b0438", "review_notes": "核对供应商同级原字及同地官方中文。"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Shuiquan", "zh": "水泉", "status": "approved", "source": "@source/b334146255909cdf", "record_sha256": "88f3cd2bd90183ebb9d45c29fa602f78379a8e5c67d0b30318326689b7b56077", "review_notes": "核对供应商同级原字及同地官方中文。"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Jianping", "zh": "建平县", "status": "approved", "source": "@source/c8a0c45de5c49223", "record_sha256": "e5752aa7ad00f69f6ab6994d74d1f092e85df6438e6057e45f038ff970a2750c", "review_notes": "核对供应商同级原字及同地官方中文。"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Harqin Zuoyi", "zh": "喀喇沁左翼", "status": "approved", "source": "@source/7f7e69e72cdd3cf0", "record_sha256": "0f928a90e5ba2d7681557380a65f4c2d68a0532cc7f7e109a5311627cf7d7130", "review_notes": "核对供应商同级原字及同地官方中文。"},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Niangniangmiao", "zh": "娘娘庙", "status": "approved", "source": "@source/9c587024e108f6d5", "record_sha256": "70b25e21231371a8f5f34646ba032369c24e2e672b2e7c1c39771f46ab40baca", "review_notes": "核对供应商同级原字及同地官方中文。"}
+  ],
+  "layouts": [
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Yangshuwan", "x": 191.5, "y": 19.5, "lines": ["杨树湾"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Taizi", "x": 225.0, "y": 51.0, "lines": ["台子"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Shuiquan", "x": 142.5, "y": 104.0, "lines": ["水泉"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Jianping", "x": 35.0, "y": 55.0, "lines": ["建平县"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Harqin Zuoyi", "x": 73.5, "y": 193.5, "lines": ["喀喇沁左翼"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-JianpingNiangniangmiao-z9-426-191-Niangniangmiao", "x": 211.58581589332607, "y": 244, "lines": ["娘娘庙"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

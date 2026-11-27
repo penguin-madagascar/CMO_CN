@@ -1,0 +1,38 @@
+{
+  "id": "VN-HungHoa-HoaBinh-z9-405-225",
+  "z": 9,
+  "x": 405,
+  "y": 225,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "features": [
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S01", "kind": "city", "original": "Hưng Hóa", "source_url": "@source/ddbbf8800494130b", "original_bbox": [163, 4, 221, 25], "source_printed_full_literal": "Hưng Hóa", "source_glyph_complete": true},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S02", "kind": "city", "original": "Hòa Bình", "source_url": "@source/ddbbf8800494130b", "original_bbox": [182, 171, 239, 190], "source_printed_full_literal": "Hòa Bình", "source_glyph_complete": true},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S03", "kind": "city", "original": "Mai Chau", "source_url": "@source/ddbbf8800494130b", "original_bbox": [90, 235, 142, 252], "source_printed_full_literal": "Mai Chau", "source_glyph_complete": true},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S04", "kind": "city", "original": "Mãn Đức", "source_url": "@source/ddbbf8800494130b", "original_bbox": [158, 252, 211, 270], "source_printed_full_literal": "Mãn Đức", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S01", "zh": "兴化", "source": "@source/8935675e302dcd1d", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "c6747b9d4213ba21f617c6b56a9a14149ed8ea54abce717ac701f7ab2ea3857a"},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S02", "zh": "和平市", "source": "@source/41bd62765babc3f8", "status": "approved", "review_notes": "Exact observed place. Chinese preserves the prior visible game name.", "record_sha256": "7ffe23eb7c4be64f06b86352d35c7141339879dc6fd6cf7e764a5655784f6c5d"},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S03", "zh": "枚州", "source": "@source/c2210e0ea48f01fc", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "aeb357cde5bc2c89f86d73667ad5027eba127fe61e03d3a7b754880f09ed38ef"},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S04", "zh": "满德", "source": "@source/c2210e0ea48f01fc", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "86c34cd42802081e7718afcc9e6eee469c08c341d1e62f1837f4b1082e95c9d0"}
+  ],
+  "layouts": [
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S01", "x": 192.0, "y": 14.5, "font_style": "regular", "font_size": 12, "lines": ["兴化"]},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S02", "x": 210.5, "y": 180.5, "font_style": "regular", "font_size": 12, "lines": ["和平市"]},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S03", "x": 116.0, "y": 243.5, "font_style": "regular", "font_size": 12, "lines": ["枚州"]},
+    {"id": "VN-HungHoa-HoaBinh-z9-405-225-S04", "x": 184.5, "y": 248.5, "font_style": "regular", "font_size": 12, "lines": ["满德"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Sơn Tây", "source_url": "@source/dc8107d58743c888", "id": "VN-HungHoa-HoaBinh-z9-405-225-shared-VN-Hanoi-ThaiNguyen-NinhBinh-z9-406-224-S06", "original_bbox": [245, 50, 294, 70], "owner_region": "VN-Hanoi-ThaiNguyen-NinhBinh-z9-406-224", "feature_id": "VN-Hanoi-ThaiNguyen-NinhBinh-z9-406-224-S06", "review_notes": "Complete original seam is attributed to the already-rendered Source owner."}
+  ],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "9/405/225.png"
+  ],
+  "context_tiles": [
+    "9/406/225.png",
+    "9/405/226.png"
+  ]
+}

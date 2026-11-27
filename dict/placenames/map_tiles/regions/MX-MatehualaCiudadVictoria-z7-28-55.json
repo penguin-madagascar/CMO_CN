@@ -1,0 +1,40 @@
+{
+  "id": "MX-MatehualaCiudadVictoria-z7-28-55",
+  "z": 7,
+  "x": 28,
+  "y": 55,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/28/55.png"
+  ],
+  "context_tiles": [
+    "7/28/56.png"
+  ],
+  "features": [
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-Matehuala", "kind": "city", "original": "Matehuala", "original_bbox": [56, 86, 109, 103], "source_url": "@source/fb45aafadd213999", "source_glyph_complete": true, "source_printed_full_literal": "Matehuala"},
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-CiudadVictoria", "kind": "city", "original": "Ciudad Victoria", "original_bbox": [193, 75, 233, 109], "source_url": "@source/fb45aafadd213999", "source_glyph_complete": true, "source_printed_full_literal": "Ciudad Victoria"}
+  ],
+  "symbols": [
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-SanLuisPotosi-circle", "shared_source_id": "MX-MatehualaCiudadVictoria-z7-28-55-SanLuisPotosi-shared", "kind": "circle", "x": 24.0, "y": 235.5, "size": 9, "outline_width": 1, "original_bbox": [20, 231, 28, 240]},
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-Matehuala-circle", "feature_id": "MX-MatehualaCiudadVictoria-z7-28-55-Matehuala", "kind": "circle", "x": 56.5, "y": 88.5, "size": 11, "outline_width": 1, "original_bbox": [51, 83, 62, 94]},
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-CiudadVictoria-circle", "feature_id": "MX-MatehualaCiudadVictoria-z7-28-55-CiudadVictoria", "kind": "circle", "x": 192.5, "y": 78.5, "size": 11, "outline_width": 1, "original_bbox": [187, 74, 198, 83]}
+  ],
+  "translations": [
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-Matehuala", "zh": "马特瓦拉", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "406f711d13c70e878347065395874045e9aba453660d223713b9680064d831f0", "review_notes": "原图全称和墨西哥统计地理局地名对应。"},
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-CiudadVictoria", "zh": "维多利亚城", "status": "approved", "source": "@source/f909c73ac75e0e9d", "record_sha256": "eb57c5d093c7b5d4a17e85d8b33345864a49f822795465ba2e9f2a0b511ac633", "review_notes": "原图全称和墨西哥统计地理局地名对应。"}
+  ],
+  "layouts": [
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-Matehuala", "x": 86, "y": 98, "font_style": "regular", "font_size": 12},
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-CiudadVictoria", "x": 217, "y": 99, "font_style": "regular", "font_size": 12}
+  ],
+  "shared_sources": [
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-SanLuisPotosi-shared", "owner_region": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1", "feature_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-SanLuisPotos", "kind": "city", "original": "San Luis Potosí", "original_bbox": [25, 233, 69, 266], "source_url": "@source/546dab844438fa0c", "review_notes": "整词同源同坐标，已有南侧中文文字保留。标记的原图落在新北片。"}
+  ],
+  "canonical_captions": [
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-C-Cities-2679", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2679, "original_Chinese_name": "古斯塔沃·A.马德罗", "lat_f32_bits": 1102509192, "lon_f32_bits": 3267724425, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 184, "y": 165, "font_style": "regular", "font_size": 12, "lines": ["古斯塔沃·阿道夫·马德罗"]}, "display_translation": {"zh": "古斯塔沃·阿道夫·马德罗", "source": "@source/160ff3cf1523e2f3", "review_notes": "INEGI 280120431 对应塔毛利帕斯州冈萨雷斯市农村聚落，原 WWP 指纹及坐标保持不变。墨西哥国立人类学与历史研究所列全名 Gustavo Adolfo Madero González。采用中国外交部同名墨西哥城辖区用名的人名译写。"}},
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-C-Cities-2738", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2738, "original_Chinese_name": "巴耶斯城", "lat_f32_bits": 1102044636, "lon_f32_bits": 3267758217, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 203, "y": 244, "font_style": "regular", "font_size": 12, "lines": ["巴耶斯城"]}},
+    {"id": "MX-MatehualaCiudadVictoria-z7-28-55-C-Cities-2770", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2770, "original_Chinese_name": "索莱达德-迪亚斯古铁雷斯", "lat_f32_bits": 1102151827, "lon_f32_bits": 3268010563, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 109, "y": 194, "font_style": "regular", "font_size": 12, "lines": ["索莱达德-迪亚斯古铁雷斯"]}}
+  ],
+  "legacy_suppressions": []
+}

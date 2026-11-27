@@ -1,0 +1,41 @@
+{
+  "id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1",
+  "z": 7,
+  "x": 115,
+  "y": 80,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/115/80.png",
+    "7/116/80.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N01", "kind": "city", "original": "Burnie", "source_glyph_complete": true, "source_printed_full_literal": "Burnie", "original_bbox": [220, 4, 260, 24], "source_url": "@source/ca687ef324ff8c6a"},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N02", "kind": "city", "original": "Launceston", "source_glyph_complete": true, "source_printed_full_literal": "Launceston", "original_bbox": [332, 50, 395, 70], "source_url": "@source/16b55879d9e47745"},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N03", "kind": "admin1", "original": "TASMANIA", "source_glyph_complete": true, "source_printed_full_literal": "TASMANIA", "original_bbox": [240, 117, 343, 135], "source_url": "@source/16b55879d9e47745"},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N04", "kind": "city", "original": "Hobart", "source_glyph_complete": true, "source_printed_full_literal": "Hobart", "original_bbox": [350, 228, 392, 248], "source_url": "@source/16b55879d9e47745"}
+  ],
+  "translations": [
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N01", "zh": "伯尼", "status": "approved", "source": "@source/c61357d6d1a142f6", "record_sha256": "bee780bd86fa08383d5c9afb0f08a6e5e01d1b1442d5bd2a26ff6bd7aad35e95", "review_notes": "对照原图拼接字样、当地行政名称及其中文资料。"},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N02", "zh": "朗塞斯顿", "status": "approved", "source": "@source/c61e5fa7a03df9a1", "record_sha256": "b5e9db65abc4b5a27475a994edecace1395c0af4310c761f8afa8c5b4267f030", "review_notes": "对照原图拼接字样、当地行政名称及其中文资料。"},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N03", "zh": "塔斯马尼亚州", "status": "approved", "source": "@source/c61e5fa7a03df9a1", "record_sha256": "8b0b9b6a9e2a5f8eff879d9926e90dbc7c5f54996fe3a8e148f54c37aa690135", "review_notes": "对照原图拼接字样、当地行政名称及其中文资料。"},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N04", "zh": "霍巴特", "status": "approved", "source": "@source/c61e5fa7a03df9a1", "record_sha256": "8aab7c99132a1a3573ab3de4b9a6b5e086390464c0fc1eb2dca3ea637b6c5540", "review_notes": "对照原图拼接字样、当地行政名称及其中文资料。"}
+  ],
+  "layouts": [
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N01", "x": 245, "y": 17, "font_style": "regular", "font_size": 12, "lines": ["伯尼"]},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N02", "x": 365, "y": 63, "font_style": "regular", "font_size": 12, "lines": ["朗塞斯顿"]},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N03", "x": 292, "y": 125, "font_style": "bold", "font_size": 14, "lines": ["塔斯马尼亚州"]},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N04", "x": 380, "y": 242, "font_style": "regular", "font_size": 12, "lines": ["霍巴特"]}
+  ],
+  "symbols": [
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N01-circle", "feature_id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N01", "kind": "circle", "x": 224.5, "y": 8.5, "size": 7, "outline_width": 1, "original_bbox": [220, 4, 229, 13]},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N02-circle", "feature_id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N02", "kind": "circle", "x": 336.5, "y": 54.5, "size": 7, "outline_width": 1, "original_bbox": [332, 50, 341, 59]},
+    {"id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N04-circle", "feature_id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N04", "kind": "circle", "x": 354.5, "y": 232.5, "size": 7, "outline_width": 1, "original_bbox": [350, 228, 359, 237]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": [
+    {"feature_id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N02", "name": "朗塞斯顿", "lat": -41.438758850097656, "lon": 147.13467407226562, "level": 1, "source": "@source/c61e5fa7a03df9a1", "review_notes": "游戏内置词表中原先可见的同一城镇由该原图点及中文标注保留。"},
+    {"feature_id": "AU-TasmaniaBurnieLauncestonHobart-z7-115-80-2x1-N04", "name": "霍巴特", "lat": -42.87936019897461, "lon": 147.32940673828125, "level": 1, "source": "@source/c61e5fa7a03df9a1", "review_notes": "游戏内置词表中原先可见的同一城镇由该原图点及中文标注保留。"}
+  ]
+}

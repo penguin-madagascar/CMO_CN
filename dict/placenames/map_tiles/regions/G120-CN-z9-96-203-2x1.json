@@ -1,0 +1,41 @@
+{
+  "id": "G120-CN-z9-96-203-2x1",
+  "z": 9,
+  "x": 96,
+  "y": 203,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/96/203.png",
+    "9/97/203.png"
+  ],
+  "context_tiles": [
+    "9/95/203.png",
+    "9/96/202.png",
+    "9/97/202.png"
+  ],
+  "features": [
+    {"id": "G120-N-01", "kind": "region", "original": "Cottonwood", "original_bbox": [145, 56, 213, 73], "source_url": "@source/abbfa46a6b763a02"},
+    {"id": "G120-N-02", "kind": "region", "original": "Prescott Valley", "original_bbox": [45, 105, 91, 142], "source_url": "@source/abbfa46a6b763a02"},
+    {"id": "G120-N-03", "kind": "region", "original": "Sedona", "original_bbox": [228, 1, 271, 18], "source_url": "@source/abbfa46a6b763a02"},
+    {"id": "G120-N-04", "kind": "region", "original": "Rimrock", "original_bbox": [238, 99, 284, 115], "source_url": "@source/4e45140380f90ac0"}
+  ],
+  "translations": [
+    {"id": "G120-N-01", "zh": "科顿伍德", "status": "approved", "source": "@source/abbfa46a6b763a02", "record_sha256": "d2b8003ed06dea7119340f9dcf236d2f1b1d7103720d4ad949b1d36f25454127", "review_notes": "Root trusted-parent instruction selected this bare Chinese form for the G120 component. source URL identifies original printed pixels only, not official Chinese or entity/provider identity. Actual named Root model selection remains pending."},
+    {"id": "G120-N-02", "zh": "普雷斯科特谷", "status": "approved", "source": "@source/abbfa46a6b763a02", "record_sha256": "3149e3868fcb8f7423cb0bae9b3cb58aeabc2c2ae349c7fccb862abe2aee4c6a", "review_notes": "Root trusted-parent instruction selected this bare Chinese form for the G120 component. source URL identifies original printed pixels only, not official Chinese or entity/provider identity. Actual named Root model selection remains pending."},
+    {"id": "G120-N-03", "zh": "塞多纳", "status": "approved", "source": "@source/abbfa46a6b763a02", "record_sha256": "567f7b86096aed0023f2496eed1c9b57798a29133a4b3d78dbc53afadacbae20", "review_notes": "Root trusted-parent instruction selected this bare Chinese form for the G120 component. source URL identifies original printed pixels only, not official Chinese or entity/provider identity. Actual named Root model selection remains pending."},
+    {"id": "G120-N-04", "zh": "里姆罗克", "status": "approved", "source": "@source/4e45140380f90ac0", "record_sha256": "d8291c569e6e38640df973fef97d8dfd9ef86a87940ddced0faa18a7f020b6cd", "review_notes": "Root trusted-parent instruction selected this bare Chinese form for the G120 component. source URL identifies original printed pixels only, not official Chinese or entity/provider identity. Actual named Root model selection remains pending."}
+  ],
+  "layouts": [
+    {"id": "G120-N-01", "x": 179, "y": 64.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G120-N-02", "x": 68, "y": 123.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G120-N-03", "x": 249.5, "y": 15.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G120-N-04", "x": 261, "y": 107, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G120-SHARED-01", "owner_region": "AM-SoCalBorder-z9-88-200", "feature_id": "AM9-17-Chino-Valley", "kind": "city", "original": "Chino Valley", "source_url": "@source/faf5d52a57adb17b", "original_bbox": [-3, 38, 36, 78], "review_notes": "Borrow original Source accounting from the genuine complete sole-normal owner. Keep its full approved padded bbox, Chinese/TR/layout/review and all64 old outputs; do not retighten, redraw as a new normal, stub owner, or exempt ordinary context. Printed tight support is a separate observed fact."},
+    {"id": "G120-SHARED-02", "owner_region": "AM-SoCalBorder-z9-88-200", "feature_id": "AM9-21-Prescott", "kind": "city", "original": "Prescott", "source_url": "@source/faf5d52a57adb17b", "original_bbox": [-15, 143, 39, 163], "review_notes": "Borrow original Source accounting from the genuine complete sole-normal owner. Keep its full approved padded bbox, Chinese/TR/layout/review and all64 old outputs; do not retighten, redraw as a new normal, stub owner, or exempt ordinary context. Printed tight support is a separate observed fact."}
+  ],
+  "legacy_suppressions": []
+}

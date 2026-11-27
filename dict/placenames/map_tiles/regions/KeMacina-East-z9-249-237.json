@@ -1,0 +1,31 @@
+{
+  "id": "KeMacina-East-z9-249-237",
+  "z": 9,
+  "x": 249,
+  "y": 237,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/249/237.png"
+  ],
+  "context_tiles": [
+    "9/248/237.png"
+  ],
+  "features": [
+    {"id": "KM-N-04", "kind": "city", "original": "Sourountouna", "original_bbox": [-35, 55, 43, 72], "source_url": "@source/ff2b7890924b4ea9"},
+    {"id": "KM-N-05", "kind": "city", "original": "Mandiakuy", "original_bbox": [137, 74, 198, 93], "source_url": "@source/ff2b7890924b4ea9"},
+    {"id": "KM-N-12", "kind": "city", "original": "Maréna", "original_bbox": [112, 183, 154, 200], "source_url": "@source/ff2b7890924b4ea9"}
+  ],
+  "translations": [
+    {"id": "KM-N-04", "zh": "苏伦图纳", "status": "approved", "source": "@source/ff2b7890924b4ea9", "record_sha256": "b0b5c9b300cbae01b4cd6dd02b9f40d5ac3e3b76b5b3e4d30048eed335f6b675", "review_notes": "Different reviewer personally inspected the complete printed Source name, project Chinese phonetic mapping and actual Chinese glyphs/layout. This project mapping is not claimed as an official Chinese national name standard. Root authorized new15 finite independent review."},
+    {"id": "KM-N-05", "zh": "曼迪亚库伊", "status": "approved", "source": "@source/ff2b7890924b4ea9", "record_sha256": "016240c10aba6d4b474e5e68e74a0f17f623e3281a025275518353364824d85f", "review_notes": "Different reviewer personally inspected the complete printed Source name, project Chinese phonetic mapping and actual Chinese glyphs/layout. This project mapping is not claimed as an official Chinese national name standard. Root authorized new15 finite independent review."},
+    {"id": "KM-N-12", "zh": "马雷纳", "status": "approved", "source": "@source/ff2b7890924b4ea9", "record_sha256": "10bda7668604193021b2e6127c48c1342b26d9a394c08a151fbcfb5c878e4a12", "review_notes": "Different reviewer personally inspected the complete printed Source name, project Chinese phonetic mapping and actual Chinese glyphs/layout. This project mapping is not claimed as an official Chinese national name standard. Root authorized new15 finite independent review."}
+  ],
+  "layouts": [
+    {"id": "KM-N-04", "x": 27.0, "y": 63.5, "font_size": 12, "font_style": "regular"},
+    {"id": "KM-N-05", "x": 167.5, "y": 83.5, "font_size": 12, "font_style": "regular", "lines": ["曼迪亚", "库伊"]},
+    {"id": "KM-N-12", "x": 133.0, "y": 191.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": []
+}

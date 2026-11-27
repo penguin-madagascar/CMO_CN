@@ -1,0 +1,32 @@
+{
+  "id": "CN-DaxinXialeiShuolongJinlong-z10-815-445",
+  "z": 10,
+  "x": 815,
+  "y": 445,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/815/445.png"
+  ],
+  "context_tiles": [
+    "10/815/444.png"
+  ],
+  "features": [
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N01", "kind": "city", "original": "Xialei", "original_bbox": [153, -5, 184, 10], "source_glyph_complete": true, "source_printed_full_literal": "Xialei", "source_url": "@source/f6fbee49329970f3"},
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N02", "kind": "city", "original": "Shuolong", "original_bbox": [192, 68, 240, 86], "source_glyph_complete": true, "source_printed_full_literal": "Shuolong", "source_url": "@source/f6fbee49329970f3"},
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N03", "kind": "city", "original": "Jinlong", "original_bbox": [194, 203, 236, 223], "source_glyph_complete": true, "source_printed_full_literal": "Jinlong", "source_url": "@source/f6fbee49329970f3"}
+  ],
+  "translations": [
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N01", "zh": "下雷", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "efd52edf49b4ac5049c984665deb385051d835673f2d7fccb8dd761a3b40a21b", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N02", "zh": "硕龙", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "f5299a607e25de8d5fc491cc8ebcb5ac08afe523c881355270c812c473709f16", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N03", "zh": "金龙", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "3fb68f9c77d9d232b3102dff0685f7c3ef6f00ff3fdb7e6ca269714093f4c32a", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"}
+  ],
+  "layouts": [
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N01", "x": 168.5, "y": 8.0, "font_style": "regular", "font_size": 12, "lines": ["下雷"]},
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N02", "x": 216.0, "y": 77.0, "font_style": "regular", "font_size": 12, "lines": ["硕龙"]},
+    {"id": "CN-DaxinXialeiShuolongJinlong-z10-815-445-N03", "x": 215.0, "y": 213.0, "font_style": "regular", "font_size": 12, "lines": ["金龙"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

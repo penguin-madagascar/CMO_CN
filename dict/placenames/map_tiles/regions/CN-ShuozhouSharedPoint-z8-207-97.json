@@ -1,0 +1,24 @@
+{
+  "id": "CN-ShuozhouSharedPoint-z8-207-97",
+  "z": 8,
+  "x": 207,
+  "y": 97,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/207/97.png"
+  ],
+  "context_tiles": [
+    "8/208/97.png"
+  ],
+  "features": [],
+  "translations": [],
+  "layouts": [],
+  "symbols": [
+    {"id": "CN-SHUOZHOU8-Point", "shared_source_id": "CN-SHUOZHOU8-Shared-CN-C8-016", "kind": "circle", "original_bbox": [238, 132, 247, 141], "x": 242.5, "y": 136.5, "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "CN-SHUOZHOU8-Shared-CN-C8-016", "owner_region": "CN-CentralEast-z8-208-96", "feature_id": "CN-C8-016", "original": "Shuozhou", "kind": "city", "source_url": "@source/de57b59c289acedb", "original_bbox": [238, 132, 301, 153], "review_notes": "原图点符号及跨瓦片完整字样 Shuozhou 已顺缝核对。CN-C8-016 保留正式中文名，左瓦片仅补回原图点符号。"}
+  ],
+  "legacy_suppressions": []
+}

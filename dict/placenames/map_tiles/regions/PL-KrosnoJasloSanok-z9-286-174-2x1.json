@@ -1,0 +1,53 @@
+{
+  "id": "PL-KrosnoJasloSanok-z9-286-174-2x1",
+  "z": 9,
+  "x": 286,
+  "y": 174,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/286/174.png",
+    "9/287/174.png"
+  ],
+  "context_tiles": [
+    "9/287/173.png"
+  ],
+  "features": [
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S01", "kind": "city", "original": "Jasło", "original_bbox": [123, 43, 153, 59], "source_url": "@source/de3ed8dd119b4464", "source_glyph_complete": true, "source_printed_full_literal": "Jasło"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S02", "kind": "city", "original": "Krosno", "original_bbox": [222, 72, 267, 90], "source_url": "@source/de3ed8dd119b4464", "source_glyph_complete": true, "source_printed_full_literal": "Krosno"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S03", "kind": "city", "original": "Gorlice", "original_bbox": [4, 92, 44, 109], "source_url": "@source/de3ed8dd119b4464", "source_glyph_complete": true, "source_printed_full_literal": "Gorlice"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S04", "kind": "city", "original": "Dukla", "original_bbox": [199, 150, 232, 167], "source_url": "@source/de3ed8dd119b4464", "source_glyph_complete": true, "source_printed_full_literal": "Dukla"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S05", "kind": "city", "original": "Dynów", "original_bbox": [395, 5, 436, 25], "source_url": "@source/d0e726f942663f73", "source_glyph_complete": true, "source_printed_full_literal": "Dynów"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S06", "kind": "city", "original": "Brzozów", "original_bbox": [313, 72, 362, 89], "source_url": "@source/d0e726f942663f73", "source_glyph_complete": true, "source_printed_full_literal": "Brzozów"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S07", "kind": "city", "original": "Rymanów", "original_bbox": [254, 139, 311, 158], "source_url": "@source/d0e726f942663f73", "source_glyph_complete": true, "source_printed_full_literal": "Rymanów"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S08", "kind": "city", "original": "Sanok", "original_bbox": [387, 147, 424, 164], "source_url": "@source/d0e726f942663f73", "source_glyph_complete": true, "source_printed_full_literal": "Sanok"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S09", "kind": "city", "original": "Lesko", "original_bbox": [434, 200, 467, 216], "source_url": "@source/d0e726f942663f73", "source_glyph_complete": true, "source_printed_full_literal": "Lesko"}
+  ],
+  "translations": [
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S01", "zh": "亚斯沃", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "ea03c99b79d761025d20af4ac3e2f1526ce6663f390ebb88e08c41089b575c7b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S02", "zh": "克罗斯诺", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "0009ff8707f2acb8b8be84dc147dcb22f47efb42b829f14df8f4182fa69b345e", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S03", "zh": "戈尔利采", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "8fbb5945b9ce4ae06b826726bdf3d55e1915a60af526a3d5f7ead02a1fbe80de", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S04", "zh": "杜克拉", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "4f7d4ca811912e6aff1aef23264eba754ee8269cd5c4b262a09faddecc1cc646", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S05", "zh": "德努夫", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "4039502fe57494e8f921236d4e38f40def843880522a31b2a3791ce800e0def9", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S06", "zh": "布若祖夫", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "bbccbbe5cbcace4788367371e2e501fc2735f9413d31693af0b2a44c365f5911", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S07", "zh": "雷马努夫", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "69b04a07397af0d2169fed7fa5db1ff5b45e1297e288d19b7c6f65642ad16b11", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S08", "zh": "萨诺克", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "b284384585d2d4f6f4c3890eb4ea02f11c4c24a38e01d154aa96d0e8e5b1f2fe", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S09", "zh": "莱斯科", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "330df164fc95c3459d1f387e4b3dc5c683c45acb76526888ce263cae685ee735", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S01", "x": 138, "y": 51, "font_style": "regular", "font_size": 12, "lines": ["亚斯沃"]},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S02", "x": 246, "y": 82, "font_style": "regular", "font_size": 12, "lines": ["克罗斯诺"]},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S03", "x": 28, "y": 101, "font_style": "regular", "font_size": 12, "lines": ["戈尔利采"]},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S04", "x": 218, "y": 159, "font_style": "regular", "font_size": 12, "lines": ["杜克拉"]},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S05", "x": 416, "y": 15, "font_style": "regular", "font_size": 12, "lines": ["德努夫"]},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S06", "x": 338, "y": 81, "font_style": "regular", "font_size": 12, "lines": ["布若祖夫"]},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S07", "x": 283, "y": 149, "font_style": "regular", "font_size": 12, "lines": ["雷马努夫"]},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S08", "x": 405, "y": 157, "font_style": "regular", "font_size": 12, "lines": ["萨诺克"]},
+    {"id": "PL-KrosnoJasloSanok-z9-286-174-2x1-S09", "x": 450, "y": 209, "font_style": "regular", "font_size": 12, "lines": ["莱斯科"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Dubiecko", "source_url": "@source/d0e726f942663f73", "id": "PL-KrosnoJasloSanok-z9-286-174-2x1-shared-UA20-N163", "original_bbox": [447, -1, 499, 15], "owner_region": "UA20-PolandSouth-287-173", "feature_id": "UA20-N163", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

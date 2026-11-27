@@ -1,0 +1,38 @@
+{
+  "id": "G225-Quezon-core-z10-859-472",
+  "z": 10,
+  "x": 859,
+  "y": 472,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/859/472.png",
+    "10/860/472.png"
+  ],
+  "context_tiles": [
+    "10/859/471.png",
+    "10/860/471.png"
+  ],
+  "features": [
+    {"id": "G225-Lopez", "kind": "city", "original": "Lopez", "original_bbox": [179, 22, 214, 42], "source_url": "@source/47dffba342868534"},
+    {"id": "G225-Macalelon", "kind": "city", "original": "Macalelon", "original_bbox": [83, 125, 134, 139], "source_url": "@source/47dffba342868534"},
+    {"id": "G225-Buenavista", "kind": "city", "original": "Buenavista", "original_bbox": [319, 132, 374, 147], "source_url": "@source/ecd2b8ec0903f2d8"},
+    {"id": "G225-Catanauan", "kind": "city", "original": "Catanauan", "original_bbox": [211, 239, 270, 256], "source_url": "@source/47dffba342868534"}
+  ],
+  "translations": [
+    {"id": "G225-Lopez", "zh": "洛佩斯", "source": "@source/0d508e11c8064dee", "status": "approved", "record_sha256": "599ef9cce35426ac62a7cb009b46e9815adb55c402f4ee4485b15305cfd3456b", "review_notes": "Independent finite Target accepts this complete-source spelling to Chinese project transliteration C. Not an official bilingual Chinese standard. Personally checked readable full Chinese and no Latin fallback."},
+    {"id": "G225-Macalelon", "zh": "马卡莱隆", "source": "@source/0d508e11c8064dee", "status": "approved", "record_sha256": "4c5a7153a0f6173a09173190d08a316bab0b126f61c8c93282470fd14f9c5e66", "review_notes": "Independent finite Target accepts this complete-source spelling to Chinese project transliteration C. Not an official bilingual Chinese standard. Personally checked readable full Chinese and no Latin fallback."},
+    {"id": "G225-Buenavista", "zh": "布埃纳维斯塔", "source": "@source/0d508e11c8064dee", "status": "approved", "record_sha256": "445d16c151c8da01afe0b8b6d369d420b78c0d57a265db12157fd8c91c3f05b6", "review_notes": "Independent finite Target accepts this complete-source spelling to Chinese project transliteration C. Not an official bilingual Chinese standard. Personally checked readable full Chinese and no Latin fallback."},
+    {"id": "G225-Catanauan", "zh": "卡塔瑙安", "source": "@source/0d508e11c8064dee", "status": "approved", "record_sha256": "c62882cd13553a62a4ce15e9b820638131b301a5b7df7331754db6b385e4659a", "review_notes": "Independent finite Target accepts this complete-source spelling to Chinese project transliteration C. Not an official bilingual Chinese standard. Personally checked readable full Chinese and no Latin fallback."}
+  ],
+  "layouts": [
+    {"id": "G225-Lopez", "x": 196.5, "y": 32, "font_size": 12, "font_style": "regular"},
+    {"id": "G225-Macalelon", "x": 108.5, "y": 132, "font_size": 12, "font_style": "regular"},
+    {"id": "G225-Buenavista", "x": 346.5, "y": 139.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G225-Catanauan", "x": 240.5, "y": 244, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G225-Gumaca-existing-owner-source", "owner_region": "AM-Luzon-z10-856-464", "feature_id": "AM23-70-Gumaca", "kind": "city", "original": "Gumaca", "original_bbox": [56, -9, 104, 11], "source_url": "@source/47dffba342868534", "review_notes": "Existing whole AM23-70-Gumaca owner retained. This borrower accounts only source ink; no duplicate Chinese name or symbol is painted."}
+  ]
+}

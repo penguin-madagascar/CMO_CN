@@ -1,0 +1,32 @@
+{
+  "id": "Sanya-Tianya-Jiyang-z10-823-459",
+  "z": 10,
+  "x": 823,
+  "y": 459,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/823/459.png"
+  ],
+  "context_tiles": [
+    "10/823/458.png"
+  ],
+  "features": [
+    {"id": "Sanya823459-Tianya", "kind": "region", "original": "Tianya District", "original_bbox": [59, -10, 106, 28], "source_url": "@source/26ee9061321dba41", "source_printed_full_literal": "Tianya District", "source_glyph_complete": true},
+    {"id": "Sanya823459-Jiyang", "kind": "region", "original": "Jiyang District", "original_bbox": [151, 4, 198, 42], "source_url": "@source/26ee9061321dba41", "source_printed_full_literal": "Jiyang District", "source_glyph_complete": true},
+    {"id": "Sanya823459-Sanya", "kind": "city", "original": "Sanya", "original_bbox": [102, 36, 142, 58], "source_url": "@source/26ee9061321dba41", "source_printed_full_literal": "Sanya", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "Sanya823459-Tianya", "zh": "天涯区", "status": "approved", "source": "@source/8acbd7f43ac43684", "record_sha256": "6dc0cc172157d9e48bc0055053a26d0825d2db508e6672e00d9208eeb9eba471", "review_notes": "Personally read complete original print from actual local official tile and exact northern context; municipal Chinese and English place names verify lexical identity. No supplier feature point asserted."},
+    {"id": "Sanya823459-Jiyang", "zh": "吉阳区", "status": "approved", "source": "@source/8acbd7f43ac43684", "record_sha256": "e893c446245e827ab1a8974ca801adedea95a4ecd2e17807b53cb926659ff449", "review_notes": "Personally read complete original print from actual local official tile and exact northern context; municipal Chinese and English place names verify lexical identity. No supplier feature point asserted."},
+    {"id": "Sanya823459-Sanya", "zh": "三亚", "status": "approved", "source": "@source/8acbd7f43ac43684", "record_sha256": "e6f8db181c987d724c724831f8805d079e35a54dd57c5f4e26221aeb001a7a57", "review_notes": "Personally read complete original print from actual local official tile and exact northern context; municipal Chinese and English place names verify lexical identity. No supplier feature point asserted."}
+  ],
+  "layouts": [
+    {"id": "Sanya823459-Tianya", "x": 82.5, "y": 12.5, "font_style": "regular", "font_size": 12, "lines": ["天涯区"]},
+    {"id": "Sanya823459-Jiyang", "x": 174.5, "y": 23.0, "font_style": "regular", "font_size": 12, "lines": ["吉阳区"]},
+    {"id": "Sanya823459-Sanya", "x": 122.0, "y": 47.0, "font_style": "regular", "font_size": 12, "lines": ["三亚"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

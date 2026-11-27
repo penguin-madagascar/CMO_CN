@@ -1,0 +1,47 @@
+{
+  "id": "BF10-OuahigouyaKoumbri-z10-504-472",
+  "z": 10,
+  "x": 504,
+  "y": 472,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "original_tiles": [
+    "10/504/472.png",
+    "10/505/472.png",
+    "10/504/473.png",
+    "10/505/473.png"
+  ],
+  "context_tiles": [
+    "10/504/474.png"
+  ],
+  "features": [
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N01", "kind": "region", "original": "Ninigui", "original_bbox": [306, 17, 348, 37], "source_url": "@source/30704907627c2117", "source_glyph_complete": true, "source_printed_full_literal": "Ninigui"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N02", "kind": "region", "original": "Koumbri", "original_bbox": [272, 51, 315, 66], "source_url": "@source/30704907627c2117", "source_glyph_complete": true, "source_printed_full_literal": "Koumbri"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N03", "kind": "region", "original": "You", "original_bbox": [478, 158, 500, 172], "source_url": "@source/30704907627c2117", "source_glyph_complete": true, "source_printed_full_literal": "You"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N04", "kind": "region", "original": "Namissiguima", "original_bbox": [398, 227, 476, 248], "source_url": "@source/30704907627c2117", "source_glyph_complete": true, "source_printed_full_literal": "Namissiguima"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N05", "kind": "region", "original": "Ouahigouya", "original_bbox": [254, 248, 322, 268], "source_url": "@source/287cb7d538fa9c70", "source_glyph_complete": true, "source_printed_full_literal": "Ouahigouya"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N06", "kind": "region", "original": "Kiembara", "original_bbox": [35, 504, 88, 520], "source_url": "@source/602823240ff8ed87", "source_glyph_complete": true, "source_printed_full_literal": "Kiembara"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N07", "kind": "region", "original": "Lankoué", "original_bbox": [145, 498, 188, 514], "source_url": "@source/602823240ff8ed87", "source_glyph_complete": true, "source_printed_full_literal": "Lankoué"}
+  ],
+  "translations": [
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N01", "zh": "尼尼吉", "status": "approved", "source": "@source/c3a82bd8b007a3d3", "record_sha256": "de52029071c55b3949ad1465b1ee99d361e8ec6dc9288783f6703564c71a54af", "review_notes": "与 z9 原版地图位置对应。 沿用既有译法 BF-OuahigouyaGourcy-z9-252-236/BF-OuahigouyaGourcy-z9-252-236-Ninigui。"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N02", "zh": "库姆布里", "status": "approved", "source": "@source/7e7ea5bf1660167c", "record_sha256": "027590ad4613584644964b373ae8f0b2b9e93edc3c1d43ce82e3700bd7df4073", "review_notes": "布基纳法索地方统计名录载有此地，中文为项目音译。"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N03", "zh": "尤", "status": "approved", "source": "@source/74f588d31efde68e", "record_sha256": "fff359efbcbfff21e7b2b5ffd50f62c0fb75c20b2e7c144a8ad63a6ce35b4f71", "review_notes": "非洲开发银行项目文件记载同名地点，中文为项目音译。"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N04", "zh": "纳米西吉马", "status": "approved", "source": "@source/d1f6065440daf0c9", "record_sha256": "ba434e122452877d943db67984c55eeea9ea26a9c7b5cf854a1eab024549d747", "review_notes": "与 z9 原版地图位置对应。 沿用既有译法 WA17-R05-z9-253-236/WA17-N021。"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N05", "zh": "瓦希古亚", "status": "approved", "source": "@source/7afd523a65d16523", "record_sha256": "df3d753204d6673bfabd10851dc1843a2f229acd764bbb0324033c0120b36887", "review_notes": "同一完整字形跨接东、西与下方瓦片。 沿用既有译法 BF-OuahigouyaGourcy-z9-252-236/BF-OuahigouyaGourcy-z9-252-236-Ouahigouya。"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N06", "zh": "基恩巴拉", "status": "approved", "source": "@source/d7689bcddd25a9ce", "record_sha256": "fb4e935c81c761ea7b9ed9418544e4d79ba4e83710a83d15d7c63d9de5f65a05", "review_notes": "与 z9 原版地图位置对应，中文略移入当前覆盖区。 沿用既有译法 BF-OuahigouyaGourcy-z9-252-236/BF-OuahigouyaGourcy-z9-252-236-Kiembara。"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N07", "zh": "兰库埃", "status": "approved", "source": "@source/7e7ea5bf1660167c", "record_sha256": "7f2413db162732f6da1beee148c551ad37147d9e3605fb4e14dfa45c72634208", "review_notes": "与地方统计名录地名相符，中文为项目音译。"}
+  ],
+  "layouts": [
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N01", "x": 326, "y": 26, "font_size": 12, "font_style": "regular"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N02", "x": 293, "y": 58, "font_size": 12, "font_style": "regular"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N03", "x": 489, "y": 165, "font_size": 12, "font_style": "regular"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N04", "x": 437, "y": 237, "font_size": 12, "font_style": "regular"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N05", "x": 276, "y": 257, "font_size": 12, "font_style": "regular"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N06", "x": 61, "y": 500, "font_size": 12, "font_style": "regular"},
+    {"id": "BF10-OuahigouyaKoumbri-z10-504-472-N07", "x": 166, "y": 500, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

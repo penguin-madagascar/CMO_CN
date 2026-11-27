@@ -1,0 +1,49 @@
+{
+  "id": "TH-KamphaengPhet-Phichit-z9-397-232",
+  "z": 9,
+  "x": 397,
+  "y": 232,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/397/232.png",
+    "9/398/232.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S01", "kind": "city", "original": "Lan Krabue", "source_printed_full_literal": "Lan Krabue", "source_glyph_complete": true, "source_url": "@source/614f545646fab875", "original_bbox": [229, 6, 292, 22]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S02", "kind": "city", "original": "Kamphaeng Phet", "source_printed_full_literal": "Kamphaeng Phet", "source_glyph_complete": true, "source_url": "@source/59da0d0e5e216ffe", "original_bbox": [109, 44, 173, 78]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S03", "kind": "city", "original": "Sai Ngam", "source_printed_full_literal": "Sai Ngam", "source_glyph_complete": true, "source_url": "@source/614f545646fab875", "original_bbox": [245, 56, 300, 76]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S04", "kind": "city", "original": "Khlong Khlung", "source_printed_full_literal": "Khlong Khlung", "source_glyph_complete": true, "source_url": "@source/59da0d0e5e216ffe", "original_bbox": [190, 142, 230, 179]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S05", "kind": "city", "original": "Salokbat", "source_printed_full_literal": "Salokbat", "source_glyph_complete": true, "source_url": "@source/59da0d0e5e216ffe", "original_bbox": [217, 233, 267, 250]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S06", "kind": "city", "original": "Phichit", "source_printed_full_literal": "Phichit", "source_glyph_complete": true, "source_url": "@source/614f545646fab875", "original_bbox": [419, 65, 459, 82]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S07", "kind": "city", "original": "Hua Dong", "source_printed_full_literal": "Hua Dong", "source_glyph_complete": true, "source_url": "@source/614f545646fab875", "original_bbox": [431, 102, 486, 121]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S08", "kind": "city", "original": "Taphan Hin", "source_printed_full_literal": "Taphan Hin", "source_glyph_complete": true, "source_url": "@source/614f545646fab875", "original_bbox": [435, 150, 499, 169]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S09", "kind": "city", "original": "Tha Sao", "source_printed_full_literal": "Tha Sao", "source_glyph_complete": true, "source_url": "@source/614f545646fab875", "original_bbox": [371, 232, 417, 249]}
+  ],
+  "translations": [
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S01", "zh": "兰甲伯", "status": "approved", "source": "@source/bf70356f9f990a56", "review_notes": "Exact official Thai/Latin entity, adopts attested Chinese stem 兰甲伯; regional alternative 兰咖迷.", "record_sha256": "9824e793da982c533298885067010bc12ef992b8b4d41c6ff468a47e6337113e"},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S02", "zh": "甘烹碧", "status": "approved", "source": "@source/05b425e32b553845", "review_notes": "China Commerce publication applies 甘烹碧 to the seat, matching the supplier city.", "record_sha256": "4494748933125ad9931c806fb5591416adbc9e60009d963cbebf19318b255b64"},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S03", "zh": "赛岸", "status": "approved", "source": "@source/bf70356f9f990a56", "review_notes": "Exact official Thai/Latin entity and documented Chinese stem 赛岸; regional alternative 西岩.", "record_sha256": "907dbf8d26d47bf48946f836414bb17a4a5173e00e96253212cbafe455919cac"},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S04", "zh": "空坤", "status": "approved", "source": "@source/bf70356f9f990a56", "review_notes": "Official district list, same entity identified in Thai and Latin, and two Chinese atlas sources agree on 空坤.", "record_sha256": "7bd17194fc43087a3ee75a126f55b0b309e735c5718862ae181c1ac18d0fc6a8"},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S05", "zh": "萨洛巴", "status": "approved", "source": "@source/265af830c579048e", "review_notes": "Local authority identifies the exact settlement. 萨洛巴 is a project transliteration.", "record_sha256": "80dc3a4c7a86ab216bd5498b43320ab9a2ac745c519ebb56240ecfd9232e3a59"},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S06", "zh": "披集", "status": "approved", "source": "@source/05b425e32b553845", "review_notes": "China Commerce official report names the seat 披集.", "record_sha256": "33f9ea1aa5c8e848cc344ec76ecfcc86972057936588a4266a491d5d8b80fdbf"},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S07", "zh": "华栋", "status": "approved", "source": "@source/28c88ff04c06c5fa", "review_notes": "Thai local authority identifies Phichit Hua Dong; project uses the same Chinese rendering for an identical Thai stem elsewhere.", "record_sha256": "ddbb506221585795ef0ec66515d797886c64796023d6a2f64e14731bc55995c2"},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S08", "zh": "竹板杏", "status": "approved", "source": "@source/69e06ef69fcb8ef4", "review_notes": "Bangkok Bank bilingual office document pairs exact city Taphan Hin with 竹板杏. 达潘欣 is another attested rendering.", "record_sha256": "08af81e9dcdb9de4671fe4f037d5215b4c56aa9ef65fa91217c3f1388f50aada"},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S09", "zh": "塔绍", "status": "approved", "source": "@source/f8fd6d1405f9b036", "review_notes": "Thai municipal code 5660601 fixes Tha Sao in Pho Thale, Phichit. 塔绍 is a project transliteration.", "record_sha256": "66f48791f64fd13f51a8d14dad1631af063ea48a215468a8392d8dfc598f3853"}
+  ],
+  "layouts": [
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S01", "x": 277, "y": 14, "font_style": "regular", "font_size": 12, "lines": ["兰甲伯"]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S02", "x": 141, "y": 61, "font_style": "regular", "font_size": 12, "lines": ["甘烹碧"]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S03", "x": 275, "y": 66, "font_style": "regular", "font_size": 12, "lines": ["赛岸"]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S04", "x": 210, "y": 160.5, "font_style": "regular", "font_size": 12, "lines": ["空坤"]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S05", "x": 234, "y": 241.5, "font_style": "regular", "font_size": 12, "lines": ["萨洛巴"]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S06", "x": 439, "y": 73.5, "font_style": "regular", "font_size": 12, "lines": ["披集"]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S07", "x": 458.5, "y": 111.5, "font_style": "regular", "font_size": 12, "lines": ["华栋"]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S08", "x": 467, "y": 159.5, "font_style": "regular", "font_size": 12, "lines": ["竹板杏"]},
+    {"id": "TH-KamphaengPhet-Phichit-z9-397-232-S09", "x": 394, "y": 240.5, "font_style": "regular", "font_size": 12, "lines": ["塔绍"]}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "shared_sources": []
+}

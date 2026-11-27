@@ -1,0 +1,42 @@
+{
+  "id": "CN-XinyuShanggao-z9-419-214",
+  "z": 9,
+  "x": 419,
+  "y": 214,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/419/214.png"
+  ],
+  "context_tiles": [
+    "9/418/214.png",
+    "9/419/215.png"
+  ],
+  "features": [
+    {"id": "CN-XinyuShanggao-z9-419-214-N01", "kind": "city", "original": "Shanggao", "original_bbox": [90, 17, 153, 39], "source_url": "@source/a5e5047f54b654c7", "source_glyph_complete": true, "source_printed_full_literal": "Shanggao"},
+    {"id": "CN-XinyuShanggao-z9-419-214-N02", "kind": "city", "original": "Jianshan", "original_bbox": [186, 65, 235, 81], "source_url": "@source/a5e5047f54b654c7", "source_glyph_complete": true, "source_printed_full_literal": "Jianshan"},
+    {"id": "CN-XinyuShanggao-z9-419-214-N03", "kind": "city", "original": "Dongcun", "original_bbox": [51, 112, 101, 131], "source_url": "@source/a5e5047f54b654c7", "source_glyph_complete": true, "source_printed_full_literal": "Dongcun"},
+    {"id": "CN-XinyuShanggao-z9-419-214-N04", "kind": "city", "original": "Xinyu", "original_bbox": [91, 190, 130, 211], "source_url": "@source/a5e5047f54b654c7", "source_glyph_complete": true, "source_printed_full_literal": "Xinyu"},
+    {"id": "CN-XinyuShanggao-z9-419-214-N05", "kind": "city", "original": "Fenyi", "original_bbox": [10, 192, 45, 213], "source_url": "@source/a5e5047f54b654c7", "source_glyph_complete": true, "source_printed_full_literal": "Fenyi"}
+  ],
+  "translations": [
+    {"id": "CN-XinyuShanggao-z9-419-214-N01", "zh": "上高", "status": "approved", "source": "@source/ad0b527663950110", "record_sha256": "4cd19c618d59b3166caf60e0510f8073da036e6c74066de57efa51a7c43779c2", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XinyuShanggao-z9-419-214-N02", "zh": "建山", "status": "approved", "source": "@source/6c0fb0c4030a31c5", "record_sha256": "81ec0d96585c5bee99e2b03d86392a1e50fbf3d68041f5dfcb4e1a2d55454cca", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XinyuShanggao-z9-419-214-N03", "zh": "洞村", "status": "approved", "source": "@source/4400f0f2932de2f4", "record_sha256": "24790e2da574f2d923d1e4e69a993d18f1bead5be04d96ec7321e2c97fa669f0", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XinyuShanggao-z9-419-214-N04", "zh": "新余", "status": "approved", "source": "@source/525d7293378d4775", "record_sha256": "c2ef085ef111408b53c5a06ad30f835b7cd6e7297fa910a4c9c16c71e5ddcbc4", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XinyuShanggao-z9-419-214-N05", "zh": "分宜", "status": "approved", "source": "@source/4400f0f2932de2f4", "record_sha256": "973d368fb56ef9ebf9fa84eef691094a79c688e4e9ea2d4452f542b51501a886", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-XinyuShanggao-z9-419-214-N01", "x": 121.5, "y": 28.0, "font_size": 12, "font_style": "regular", "lines": ["上高"]},
+    {"id": "CN-XinyuShanggao-z9-419-214-N02", "x": 210.5, "y": 73.0, "font_size": 12, "font_style": "regular", "lines": ["建山"]},
+    {"id": "CN-XinyuShanggao-z9-419-214-N03", "x": 76.0, "y": 121.5, "font_size": 12, "font_style": "regular", "lines": ["洞村"]},
+    {"id": "CN-XinyuShanggao-z9-419-214-N04", "x": 110.5, "y": 200.5, "font_size": 12, "font_style": "regular", "lines": ["新余"]},
+    {"id": "CN-XinyuShanggao-z9-419-214-N05", "x": 27.5, "y": 202.5, "font_size": 12, "font_style": "regular", "lines": ["分宜"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-XinyuShanggao-z9-419-214-shared-CN-YichunZhutan-z9-418-214-N03", "owner_region": "CN-YichunZhutan-z9-418-214", "feature_id": "CN-YichunZhutan-z9-418-214-N03", "kind": "city", "original": "Tianxin", "source_url": "@source/d3d9493e2a42e109", "original_bbox": [-23, 62, 20, 78], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"},
+    {"id": "CN-XinyuShanggao-z9-419-214-shared-CN-JianAnfuGuantian-z9-419-215-N01", "owner_region": "CN-JianAnfuGuantian-z9-419-215", "feature_id": "CN-JianAnfuGuantian-z9-419-215-N01", "kind": "city", "original": "Qianshan", "source_url": "@source/15fbe05da9f5c321", "original_bbox": [0, 243, 53, 263], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

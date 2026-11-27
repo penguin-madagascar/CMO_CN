@@ -1,0 +1,26 @@
+{
+  "id": "AU-Esperance-z8-214-153",
+  "z": 8,
+  "x": 214,
+  "y": 153,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/214/153.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "AU-Esperance-z8-214-153-N01", "kind": "city", "original": "Esperance", "original_bbox": [169, 153, 233, 177], "source_glyph_complete": true, "source_printed_full_literal": "Esperance", "source_url": "@source/8488e342a35c46ff"}
+  ],
+  "translations": [
+    {"id": "AU-Esperance-z8-214-153-N01", "zh": "埃斯佩兰斯", "status": "approved", "source": "@source/3eacf301d80d6a19", "record_sha256": "553ae5a4deb54e3aba0cba60b0b530201901fa0b830ac700760df0321a5acf02", "review_notes": "西澳旅游局中文名称。"}
+  ],
+  "layouts": [
+    {"id": "AU-Esperance-z8-214-153-N01", "x": 206, "y": 168, "font_style": "regular", "font_size": 12, "lines": ["埃斯佩兰斯"]}
+  ],
+  "symbols": [
+    {"id": "AU-Esperance-z8-214-153-N01-circle", "feature_id": "AU-Esperance-z8-214-153-N01", "kind": "circle", "x": 173.5, "y": 157.5, "size": 7, "outline_width": 1, "original_bbox": [169, 153, 178, 162]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

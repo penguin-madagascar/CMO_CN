@@ -1,0 +1,32 @@
+{
+  "id": "S156-UmmRuwaba-z8-150-118",
+  "z": 8,
+  "x": 150,
+  "y": 118,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/150/118.png"
+  ],
+  "context_tiles": [
+    "8/150/117.png",
+    "8/151/117.png",
+    "8/151/118.png"
+  ],
+  "features": [
+    {"id": "S156-N-R6-02", "kind": "city", "original": "Umm Ruwaba", "original_bbox": [46, 186, 99, 224], "source_url": "@source/f753225320458106"}
+  ],
+  "translations": [
+    {"id": "S156-N-R6-02", "zh": "乌姆鲁瓦巴", "status": "approved", "source": "@source/f753225320458106", "review_notes": "METADATA PROPOSAL ONLY. ORIGINAL_NE_CHINESE_EXPLICIT_GN_JOIN_NOT_OFFICIAL; exact Source supplier entity/admin/vector remain null. Chinese evidence: Source mandatory48d6 per-instance R6-02. Supplier PNG is the physical label evidence, not an official Chinese source. Root-selected AUTHOR SELF technical only; different actual Target pending. Different actual TARGET /root/identity_holds_research; actual Target author /root/remaining_secondary_research. This reviewer also performed the earlier distinct SOURCE review, disclosed; no Target authorship. Rootc9eefa selects intact natural components1/5/6 only: new3 whole/4core, Chinese乌姆鲁瓦巴/马迪亚马/伊内卡尔, four exact old normal aliases and one new local circle9/outline1. Personally viewed all8 frozen Source/whole/CJK/native/internaljoin boards and four RAM old-alias seam boards. Independently reconstructed all3 pristine Chinese alpha/positiveRGBA and whole composition; no clipping, missing glyph, positive collision or xy change. All7 original words6304/full5px inherit qualified Source with exact rawRGBA verification; Ed Dueim rawbbox1010 includes word830 plus180 historical exact1111 readonlycontext, no threshold or new format exemption. Umm raw9frame71 is mixed and fully retained as original evidence; target73 supports70/71, sole uncovered original pointworld38454,30402 white alpha130 atrelative8,8. Glyph/native ownership of that point and pure69 mask remain unknown. Explicit project display9/1 is visually accepted at unchanged nominal and actual midpoint38450.5/30398.5, delta0, not full SourceRGBA reproduction. Ed Dueim old Chinese/native and all old normals are preserved by exact aliases without duplicate caption or circle. Exact finite67=old4whole63+new4, Source106 is real runtime input scope;15 only minimum fullword evidence. Old4 complete bodies including review, old63 encoded/count/fullRGBA/wholeRGBA and21 finite legacy rules/global953 original order/actual footer remain exact; old63 no preview export. Exactly one different finite67, first report/wire persisted before guards; one standard checked_batch(new3), no producer call inside standard. Frozen direct1c1a/standarda1c; Source1/canonical approvalsNone, nonexistent rendered_preservation keyword omitted. Parent13/unknown334/output8/DonglingC1 remain HOLD and excluded. Private Target only; no Root window/formal/global/publication permission.", "record_sha256": "844e59cbbd939d77acf7a89031da4d6fd772a9c410ccf1833493ebee91a78db2"}
+  ],
+  "layouts": [
+    {"id": "S156-N-R6-02", "x": 92.5, "y": 190.5, "font_size": 12, "font_style": "regular", "lines": ["乌姆鲁瓦巴"]}
+  ],
+  "symbols": [
+    {"id": "S156-C-UmmRuwaba", "kind": "circle", "original_bbox": [46, 186, 55, 195], "x": 50.5, "y": 190.5, "size": 9, "outline_width": 1, "feature_id": "S156-N-R6-02", "review_notes": "PROPOSED project display style9/1, fixed observed9x9 raster frame/midpoint. Source raw71 is mixed; pure69 role mask and original vector are null. Future actual Target must report the exact mixed-source support/intersection and any difference; metadata does not accept it in advance."}
+  ],
+  "shared_sources": [
+    {"id": "S156-A-R6-01", "owner_region": "SD3-ExteriorNorth-z8-150-117", "feature_id": "SD3-001-EdDueim", "kind": "city", "original": "Ed Dueim", "original_bbox": [245, -18, 290, 20], "source_url": "@source/80750db7e63eb05f", "review_notes": "PROPOSED exact existing normal alias only. Complete existing normal/CN/layout/review/native and owner body immutable. No borrower copy of its Chinese caption or native. Root must explicitly select this alias model."}
+  ],
+  "legacy_suppressions": []
+}

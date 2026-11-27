@@ -1,0 +1,50 @@
+{
+  "id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1",
+  "z": 9,
+  "x": 302,
+  "y": 177,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/302/177.png",
+    "9/303/177.png",
+    "9/304/177.png"
+  ],
+  "context_tiles": [
+    "9/302/178.png",
+    "9/303/176.png",
+    "9/303/178.png",
+    "9/305/177.png"
+  ],
+  "features": [
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Novhorodka", "kind": "city", "original": "Novhorodka", "original_bbox": [81, 42, 148, 59], "source_url": "@source/e00f7931f304e149", "source_glyph_complete": true, "source_printed_full_literal": "Novhorodka"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Dolynska", "kind": "city", "original": "Dolynska", "original_bbox": [128, 179, 179, 198], "source_url": "@source/e00f7931f304e149", "source_glyph_complete": true, "source_printed_full_literal": "Dolynska"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-ZhovtiVody", "kind": "city", "original": "Zhovti Vody", "original_bbox": [388, 53, 456, 72], "source_url": "@source/22eb464e5ba3f580", "source_glyph_complete": true, "source_printed_full_literal": "Zhovti Vody"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Piatykhatky", "kind": "city", "original": "Piatykhatky", "original_bbox": [464, 17, 528, 36], "source_url": "@source/22eb464e5ba3f580", "source_glyph_complete": true, "source_printed_full_literal": "Piatykhatky"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Sofiivka", "kind": "city", "original": "Sofiivka", "original_bbox": [531, 215, 578, 232], "source_url": "@source/cb6589cd028f6bdd", "source_glyph_complete": true, "source_printed_full_literal": "Sofiivka"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Khrystoforivka", "kind": "city", "original": "Khrystoforivka", "original_bbox": [233, 252, 312, 271], "source_url": "@source/22eb464e5ba3f580", "source_glyph_complete": true, "source_printed_full_literal": "Khrystoforivka"}
+  ],
+  "translations": [
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Novhorodka", "zh": "诺沃霍罗德卡", "status": "approved", "source": "@source/8e96177db0ea7d61", "record_sha256": "84f160a5a087c7ad96119e12dc20dec0484a6c61130a532e8ae46f50f041ad28", "review_notes": "按冻结原版拼合完整地名，核对同一实体；采用通行中文或项目音译。"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Dolynska", "zh": "多林斯卡", "status": "approved", "source": "@source/fe9baaaa25e95bcf", "record_sha256": "9764e62edcfce5d1c01cb9c93fd7aa61d92afa8b005c474be27bb2b73407a964", "review_notes": "按冻结原版拼合完整地名，核对同一实体；采用通行中文或项目音译。"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-ZhovtiVody", "zh": "若夫季沃德", "status": "approved", "source": "@source/84ab283f5a0f141b", "record_sha256": "b13d3cfe51519b5a15e6d3d57f74896c176c8da56db168b7cdb6a9fee2ceabc2", "review_notes": "按冻结原版拼合完整地名，核对同一实体；采用通行中文或项目音译。"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Piatykhatky", "zh": "皮亚季哈特基", "status": "approved", "source": "@source/a561a65816f901ee", "record_sha256": "7bf4536c5a83096cd95f35d369e08459054d2e139d357b99e4f1321890aa1148", "review_notes": "按冻结原版拼合完整地名，核对同一实体；采用通行中文或项目音译。"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Sofiivka", "zh": "索菲伊夫卡", "status": "approved", "source": "@source/4b496cb69da57075", "record_sha256": "13251f68c6695cd04e3e41595d2bc6100e412170efc5a1be2fdb1c8e767598a8", "review_notes": "按冻结原版拼合完整地名，核对同一实体；采用通行中文或项目音译。"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Khrystoforivka", "zh": "赫里斯托福里夫卡", "status": "approved", "source": "@source/528c0c9e75560b0d", "record_sha256": "9a863a694cd9274ffc42a8e98e85eff013a0f1445e458faab19d87588183f5fb", "review_notes": "按冻结原版拼合完整地名，核对同一实体；采用通行中文或项目音译。"}
+  ],
+  "layouts": [
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Novhorodka", "x": 114.5, "y": 50.5, "font_size": 12, "font_style": "regular"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Dolynska", "x": 153.5, "y": 188.5, "font_size": 12, "font_style": "regular"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-ZhovtiVody", "x": 422, "y": 62.5, "font_size": 12, "font_style": "regular"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Piatykhatky", "x": 496, "y": 26.5, "font_size": 12, "font_style": "regular"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Sofiivka", "x": 554.5, "y": 223.5, "font_size": 12, "font_style": "regular"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Khrystoforivka", "x": 272.5, "y": 247, "font_size": 12, "font_style": "regular"}
+  ],
+  "shared_sources": [
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-share-UAR2-004", "owner_region": "UA-RecoveredPair-z9-302-176", "feature_id": "UAR2-004", "original": "Balakhivka", "kind": "city", "original_bbox": [274, -12, 335, 4], "source_url": "@source/00290ffd4cf81881", "review_notes": "同一完整跨片原字，继续由已明确的相邻区域定位。"},
+    {"id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-share-UA9-Kamianske-Dnipro-z9-305-176-1x2-Krynychky", "owner_region": "UA9-Kamianske-Dnipro-z9-305-176-1x2", "feature_id": "UA9-Kamianske-Dnipro-z9-305-176-1x2-Krynychky", "original": "Krynychky", "kind": "city", "original_bbox": [741, 38, 798, 57], "source_url": "@source/0c77179bf0bc8f4c", "review_notes": "同一完整跨片原字，继续由已明确的相邻区域定位。"}
+  ],
+  "symbols": [],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

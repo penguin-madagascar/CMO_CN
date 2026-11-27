@@ -1,0 +1,43 @@
+{
+  "id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2",
+  "z": 9,
+  "x": 96,
+  "y": 194,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/96/194.png",
+    "9/96/195.png"
+  ],
+  "context_tiles": [
+    "9/97/194.png",
+    "9/97/195.png"
+  ],
+  "features": [
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Nephi", "original": "Nephi", "original_bbox": [225, 86, 258, 105], "kind": "city", "source_url": "@source/44c10217888a7821", "source_glyph_complete": true, "source_printed_full_literal": "Nephi"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Levan", "original": "Levan", "original_bbox": [216, 158, 250, 174], "kind": "city", "source_url": "@source/44c10217888a7821", "source_glyph_complete": true, "source_printed_full_literal": "Levan"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Scipio", "original": "Scipio", "original_bbox": [126, 305, 162, 325], "kind": "city", "source_url": "@source/fcc51689b8e81ee2", "source_glyph_complete": true, "source_printed_full_literal": "Scipio"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Gunnison", "original": "Gunnison", "original_bbox": [222, 347, 275, 364], "kind": "city", "source_url": "@source/fcc51689b8e81ee2", "source_glyph_complete": true, "source_printed_full_literal": "Gunnison"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Holden", "original": "Holden", "original_bbox": [63, 375, 104, 391], "kind": "city", "source_url": "@source/fcc51689b8e81ee2", "source_glyph_complete": true, "source_printed_full_literal": "Holden"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Fillmore", "original": "Fillmore", "original_bbox": [41, 436, 88, 452], "kind": "city", "source_url": "@source/fcc51689b8e81ee2", "source_glyph_complete": true, "source_printed_full_literal": "Fillmore"}
+  ],
+  "translations": [
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Nephi", "zh": "尼法", "status": "approved", "source": "@source/664c5a44103b7b5b", "record_sha256": "8e61dc1ce1daf75143f42c4a5b9e884f558983d0243e9aa1f41d15da56eb251b", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Levan", "zh": "利万", "status": "approved", "source": "@source/664c5a44103b7b5b", "record_sha256": "ab143f9676349a8b679fc89c11799e819a368f33421dfa8846c6aa4897ed06a6", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Scipio", "zh": "西皮奥", "status": "approved", "source": "@source/664c5a44103b7b5b", "record_sha256": "96a2bcbcbfa94f7392e9b5468a08be0b189478d7583d82d9a811dd38ed233320", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Gunnison", "zh": "冈尼森", "status": "approved", "source": "@source/664c5a44103b7b5b", "record_sha256": "1df5daae0cdbdc1f7729727754f45537647993017abc1b7bb853f1a3695d4735", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Holden", "zh": "霍尔登", "status": "approved", "source": "@source/664c5a44103b7b5b", "record_sha256": "09ddd1dfce35216c0e318abca3c8b748715cd4b95a8ed46a69df2a927d486452", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Fillmore", "zh": "菲尔莫尔", "status": "approved", "source": "@source/664c5a44103b7b5b", "record_sha256": "3ce9ed03d4f08ed11c076a288fd32ee1e6ebe172e06d22ca57ebc63c890d68c4", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"}
+  ],
+  "layouts": [
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Nephi", "x": 240, "y": 95.5, "font_style": "regular", "font_size": 12},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Levan", "x": 233.0, "y": 166.0, "font_style": "regular", "font_size": 12},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Scipio", "x": 144.0, "y": 315.0, "font_style": "regular", "font_size": 12},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Gunnison", "x": 234, "y": 355.5, "font_style": "regular", "font_size": 12},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Holden", "x": 83.5, "y": 383.0, "font_style": "regular", "font_size": 12},
+    {"id": "US-Utah-NephiLevanScipioGunnisonHoldenFillmore-z9-96-194-1x2-Fillmore", "x": 64.5, "y": 444.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

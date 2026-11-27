@@ -1,0 +1,63 @@
+{
+  "id": "PH9-SamarLeyte-z9-433-239",
+  "z": 9,
+  "x": 433,
+  "y": 239,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/433/239.png",
+    "9/433/240.png"
+  ],
+  "context_tiles": [
+    "9/432/239.png",
+    "9/432/240.png",
+    "9/432/241.png",
+    "9/433/241.png",
+    "9/434/240.png"
+  ],
+  "features": [
+    {"id": "PH9-SamarLeyte-z9-433-239-S01", "original": "Catbalogan", "kind": "city", "original_bbox": [122, 25, 192, 47], "source_url": "@source/86a821eb388c7310", "source_glyph_complete": true, "source_printed_full_literal": "Catbalogan"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S02", "original": "Daram", "kind": "city", "original_bbox": [106, 78, 144, 94], "source_url": "@source/86a821eb388c7310", "source_glyph_complete": true, "source_printed_full_literal": "Daram"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S03", "original": "Santa Rita", "kind": "city", "original_bbox": [148, 146, 206, 163], "source_url": "@source/86a821eb388c7310", "source_glyph_complete": true, "source_printed_full_literal": "Santa Rita"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S04", "original": "Tacloban", "kind": "city", "original_bbox": [173, 223, 231, 241], "source_url": "@source/86a821eb388c7310", "source_glyph_complete": true, "source_printed_full_literal": "Tacloban"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S05", "original": "Kananga", "kind": "city", "original_bbox": [15, 246, 64, 265], "source_url": "@source/86a821eb388c7310", "source_glyph_complete": true, "source_printed_full_literal": "Kananga"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S06", "original": "Tanauan", "kind": "city", "original_bbox": [181, 273, 230, 289], "source_url": "@source/2b40c3b74f317ffe", "source_glyph_complete": true, "source_printed_full_literal": "Tanauan"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S07", "original": "Ormoc", "kind": "city", "original_bbox": [36, 311, 79, 329], "source_url": "@source/2b40c3b74f317ffe", "source_glyph_complete": true, "source_printed_full_literal": "Ormoc"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S08", "original": "Abuyog", "kind": "city", "original_bbox": [181, 407, 225, 428], "source_url": "@source/2b40c3b74f317ffe", "source_glyph_complete": true, "source_printed_full_literal": "Abuyog"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S09", "original": "Baybay", "kind": "city", "original_bbox": [103, 433, 149, 454], "source_url": "@source/2b40c3b74f317ffe", "source_glyph_complete": true, "source_printed_full_literal": "Baybay"}
+  ],
+  "translations": [
+    {"id": "PH9-SamarLeyte-z9-433-239-S01", "zh": "卡特巴洛甘", "status": "approved", "source": "@source/b0e993c831e2a77c", "record_sha256": "e81ab5a288ddd60a46b06f07e6fc384bbf7371df3e89a3309dcf0e85e0f98c49", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S02", "zh": "达拉姆", "status": "approved", "source": "@source/7f4fe96e233a1493", "record_sha256": "92709a66ad6e37fe0fb01e69340e13bf89b86b5580129511bb548167cbe17da7", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S03", "zh": "圣丽塔", "status": "approved", "source": "@source/7f4fe96e233a1493", "record_sha256": "ebce5bea5762955a79ae81ccda5cc623dc90bfb9545c21376e9eb46059a2ec79", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S04", "zh": "塔克洛班", "status": "approved", "source": "@source/b0e993c831e2a77c", "record_sha256": "5862d92f053d32671748dfe2c0cffc250ea9f9c36f500eb3b3b8fab206deaad5", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S05", "zh": "卡南加", "status": "approved", "source": "@source/7f4fe96e233a1493", "record_sha256": "a5d3570de537e8963f0923c826196626a907b6e2858507bba062dbd6bca98276", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S06", "zh": "塔瑙安", "status": "approved", "source": "@source/7f4fe96e233a1493", "record_sha256": "25ac8512af42b44a3d600f0ae31abb3e557777502e7976fb27b566c9530fb3a8", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S07", "zh": "奥尔莫克", "status": "approved", "source": "@source/b0e993c831e2a77c", "record_sha256": "8cc116173396cd279127889fae6b3128c621af91468f67ae3e42c95b7c2630d2", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S08", "zh": "阿布约格", "status": "approved", "source": "@source/7f4fe96e233a1493", "record_sha256": "7c27240ff1b2081fb6b748cb8fb3ec63bf9da6cae03ca6d0b3e4e48f2e4d62aa", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarLeyte-z9-433-239-S09", "zh": "拜拜", "status": "approved", "source": "@source/b0e993c831e2a77c", "record_sha256": "cadedec0fe2576a1f8b4095ba2871c0c1a3da12872b11880ded3327d74c434b8", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"}
+  ],
+  "layouts": [
+    {"id": "PH9-SamarLeyte-z9-433-239-S01", "x": 157.0, "y": 36.0, "font_style": "regular", "font_size": 12, "lines": ["卡特巴洛甘"]},
+    {"id": "PH9-SamarLeyte-z9-433-239-S02", "x": 125.0, "y": 86.0, "font_style": "regular", "font_size": 12, "lines": ["达拉姆"]},
+    {"id": "PH9-SamarLeyte-z9-433-239-S03", "x": 177.0, "y": 154.5, "font_style": "regular", "font_size": 12, "lines": ["圣丽塔"]},
+    {"id": "PH9-SamarLeyte-z9-433-239-S04", "x": 202.0, "y": 232.0, "font_style": "regular", "font_size": 12, "lines": ["塔克洛班"]},
+    {"id": "PH9-SamarLeyte-z9-433-239-S05", "x": 39.5, "y": 255.5, "font_style": "regular", "font_size": 12, "lines": ["卡南加"]},
+    {"id": "PH9-SamarLeyte-z9-433-239-S06", "x": 205.5, "y": 281.0, "font_style": "regular", "font_size": 12, "lines": ["塔瑙安"]},
+    {"id": "PH9-SamarLeyte-z9-433-239-S07", "x": 57.5, "y": 320.0, "font_style": "regular", "font_size": 12, "lines": ["奥尔莫克"]},
+    {"id": "PH9-SamarLeyte-z9-433-239-S08", "x": 203.0, "y": 417.5, "font_style": "regular", "font_size": 12, "lines": ["阿布约格"]},
+    {"id": "PH9-SamarLeyte-z9-433-239-S09", "x": 126.0, "y": 443.5, "font_style": "regular", "font_size": 12, "lines": ["拜拜"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "PH9-SamarLeyte-z9-433-239-SH1", "owner_region": "PH9-SamarSeaNaval-z9-432-239", "feature_id": "PH9-SamarSeaNaval-z9-432-239-S01", "original_bbox": [-46, 2, 81, 23], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "marine", "original": "Samar Sea", "source_url": "@source/9770f909adca139f"},
+    {"id": "PH9-SamarLeyte-z9-433-239-SH2", "owner_region": "PH9-CebuCamotes-z9-432-240", "feature_id": "PH9-CebuCamotes-z9-432-240-S02", "original_bbox": [-54, 296, 3, 315], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "city", "original": "Palompon", "source_url": "@source/8de70f34fcd8384f"},
+    {"id": "PH9-SamarLeyte-z9-433-239-SH3", "owner_region": "PH9-CebuCamotes-z9-432-240", "feature_id": "PH9-CebuCamotes-z9-432-240-S06", "original_bbox": [-120, 493, 34, 515], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "marine", "original": "Camotes Sea", "source_url": "@source/8de70f34fcd8384f"},
+    {"id": "PH9-SamarLeyte-z9-433-239-SH4", "owner_region": "PH9-EastSamar-z9-434-240", "feature_id": "PH9-EastSamar-z9-434-240-S01", "original_bbox": [253, 274, 301, 290], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "city", "original": "Marabut", "source_url": "@source/8c74b702c8661fa1"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "PH9-SamarLeyte-z9-433-239-C-Cities3069", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3069, "original_Chinese_name": "帕纳拉诺伊", "lat_f32_bits": 1093928076, "lon_f32_bits": 1123681094, "flags": 0, "level": 1}, "layout": {"x": 201.43888888889342, "y": 218.01242409767292, "font_style": "regular", "font_size": 12, "lines": ["帕纳拉诺伊"]}}
+  ]
+}

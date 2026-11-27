@@ -1,0 +1,38 @@
+{
+  "id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222",
+  "z": 9,
+  "x": 407,
+  "y": 222,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "features": [
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S01", "kind": "city", "original": "Jingxi", "source_url": "@source/7231a314d465456a", "original_bbox": [69, 32, 106, 54], "source_printed_full_literal": "Jingxi", "source_glyph_complete": true},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S02", "kind": "city", "original": "Tongde", "source_url": "@source/7231a314d465456a", "original_bbox": [127, 50, 171, 69], "source_printed_full_literal": "Tongde", "source_glyph_complete": true},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S03", "kind": "city", "original": "Longbang", "source_url": "@source/7231a314d465456a", "original_bbox": [28, 132, 83, 151], "source_printed_full_literal": "Longbang", "source_glyph_complete": true},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S04", "kind": "city", "original": "Cao Bằng", "source_url": "@source/7231a314d465456a", "original_bbox": [14, 208, 50, 250], "source_printed_full_literal": "Cao Bằng", "source_glyph_complete": true},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S05", "kind": "city", "original": "|", "source_url": "@source/7231a314d465456a", "original_bbox": [252, 230, 256, 246], "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "|", "resolved_semantic_name": "Baowei", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"complete_spelling_source_z": 10, "complete_spelling_source_world_bbox": [208909, 114131, 208951, 114148], "complete_spelling_source_bbox": [13, 211, 55, 228], "complete_spelling_source_RGBA_sha256": "133419b6e924cf7a01ed7ea02e1c5334ccfb7efba9c31d93967e4a0666ba8238", "z9_visible_bbox": [252, 230, 256, 246], "z9_visible_world_bbox": [104444, 57062, 104448, 57078], "z10_complete_caption_center_divided_by_two_relative": [273.0, 237.75], "projected_unclipped_glyph_extent_at_z9_nominal_size": [252.0, 229.25, 294.0, 246.25], "best_visible_alpha_support_overlap": 0.9402985074626866, "observed_clip_side": "E", "best_fit_offset_z9": [252, 230], "original_is_visible_fragment_not_recovered_full_glyphs": true, "type": "ACTUAL_OTHER_ZOOM_COMPLETE_PRINT_AND_SAME_WORLD_CAPTION_ASSOCIATION", "complete_spelling": "Baowei", "complete_spelling_source_url": "@source/096db98497b37dfe", "complete_spelling_source_input": {"path": "evidence/tile_recovery/originals/10/816/445.png", "sha256": "8ce6ec5a98f2ec435b4536f97f72a4bcd2697cf0625ef529b288b9532fa3ee2f", "bytes": 3492}, "receipt": {"path": "evidence/parallel_map/reviews/SEA_151_RESIDUAL_IDENTITY_Z10_EXACT_COMPARATORS_20261123.json", "sha256": "127a308844b7ec86120d174e5f7ea482359fb723edd0bc91aa8d8ef7be31ce93", "bytes": 1098}, "administrative_name_source": "@source/f356f7ed39a79d86", "limits": "z9 的实见内容只有右边界竖笔。完整拼写由同供应商 z10 的原图证实。", "exact_opposite_box": [256, 222, 266, 252], "exact_opposite_alpha": 0}}
+  ],
+  "translations": [
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S01", "zh": "靖西", "source": "@source/98c2b36b6dc98d7d", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "777486b55d2565ee06ce50c559c4e78ca66b6890ab451278ca3b728054959a87"},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S02", "zh": "同德", "source": "@source/98c2b36b6dc98d7d", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "46afd9b9f80aac5f42793ab088c340c585295d76f2af1697383736dc0682d598"},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S03", "zh": "龙邦", "source": "@source/98c2b36b6dc98d7d", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "b08c1106e50f30108814e4352a18f5defd2d84535117ae11d55d2a12a691b0f7"},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S04", "zh": "高平", "source": "@source/c639ec7448af7f37", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "6b7134cbb14d4c910d0acb4ea33a047f98f6e851b89778b20de79fc4b3c74cc0"},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S05", "zh": "宝圩", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "66368fe0155f278e20b874c6180af71caf6f49c9560ddd77990020df85332eda"}
+  ],
+  "layouts": [
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S01", "x": 87.5, "y": 43.0, "font_style": "regular", "font_size": 12, "lines": ["靖西"]},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S02", "x": 149.0, "y": 59.5, "font_style": "regular", "font_size": 12, "lines": ["同德"]},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S03", "x": 55.5, "y": 141.5, "font_style": "regular", "font_size": 12, "lines": ["龙邦"]},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S04", "x": 32.0, "y": 229.0, "font_style": "regular", "font_size": 12, "lines": ["高平"]},
+    {"id": "CNVN-Jingxi-CaoBang-Baowei-z9-407-222-S05", "x": 242.5, "y": 238.0, "font_style": "regular", "font_size": 12, "lines": ["宝圩"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "9/407/222.png"
+  ],
+  "context_tiles": [
+    "9/408/222.png"
+  ]
+}

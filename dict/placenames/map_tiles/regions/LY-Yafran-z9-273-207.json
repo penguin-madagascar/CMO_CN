@@ -1,0 +1,28 @@
+{
+  "id": "LY-Yafran-z9-273-207",
+  "z": 9,
+  "x": 273,
+  "y": 207,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/273/207.png"
+  ],
+  "context_tiles": [
+    "9/273/208.png"
+  ],
+  "features": [
+    {"id": "LY-Yafran-z9-273-207-Yafran", "original": "Yafran", "original_bbox": [190, 200, 228, 216], "kind": "city", "source_url": "@source/634ba601400a9747", "source_glyph_complete": true, "source_printed_full_literal": "Yafran"}
+  ],
+  "translations": [
+    {"id": "LY-Yafran-z9-273-207-Yafran", "zh": "耶夫兰", "status": "approved", "source": "@source/095dfaf9af038420", "record_sha256": "d3267f319747e54ca4ab7a58c28fe5dbe643f93f9a406984ba4d7909ca9a3c1e", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"}
+  ],
+  "layouts": [
+    {"id": "LY-Yafran-z9-273-207-Yafran", "x": 209.0, "y": 208.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "LY-Yafran-z9-273-207-shared-LY-AlUrqub-z9-273-208-N01", "owner_region": "LY-AlUrqub-z9-273-208", "feature_id": "LY-AlUrqub-z9-273-208-N01", "original": "Al Urqub", "kind": "city", "original_bbox": [71, 250, 121, 269], "source_url": "@source/3cd64c0620b8ef9a", "review_notes": "完整原文字框对应同一层级相同世界坐标，RGBA 逐字节对应正式所属区。已有中文与符号保持其原输出。"}
+  ],
+  "legacy_suppressions": []
+}

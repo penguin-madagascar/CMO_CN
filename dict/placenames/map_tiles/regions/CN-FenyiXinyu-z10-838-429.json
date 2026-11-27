@@ -1,0 +1,31 @@
+{
+  "id": "CN-FenyiXinyu-z10-838-429",
+  "z": 10,
+  "x": 838,
+  "y": 429,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/838/429.png"
+  ],
+  "context_tiles": [
+    "10/838/430.png"
+  ],
+  "features": [
+    {"id": "CN-FenyiXinyu-z10-838-429-Fenyi", "kind": "city", "original": "Fenyi", "original_bbox": [38, 136, 73, 157], "source_url": "@source/3fee7d25641d9a71", "source_glyph_complete": true, "source_printed_full_literal": "Fenyi"},
+    {"id": "CN-FenyiXinyu-z10-838-429-Xinyu", "kind": "city", "original": "Xinyu", "original_bbox": [201, 133, 241, 155], "source_url": "@source/3fee7d25641d9a71", "source_glyph_complete": true, "source_printed_full_literal": "Xinyu"}
+  ],
+  "translations": [
+    {"id": "CN-FenyiXinyu-z10-838-429-Fenyi", "zh": "分宜", "status": "approved", "source": "@source/77101e3a3018703d", "record_sha256": "6e12a98e6e1bdf7791f970ac5d8fa806bcc85a36e05b874ff8e09259212af25b", "review_notes": "完整原图字形与同地官方汉字对照。"},
+    {"id": "CN-FenyiXinyu-z10-838-429-Xinyu", "zh": "新余", "status": "approved", "source": "@source/77101e3a3018703d", "record_sha256": "8dffa1cea675d1bd5bdf87aac69ccbfbe3be4e6226dfd773c32dabf886dc4af6", "review_notes": "完整原图字形与同地官方汉字对照。"}
+  ],
+  "layouts": [
+    {"id": "CN-FenyiXinyu-z10-838-429-Fenyi", "x": 55.5, "y": 146.5, "lines": ["分宜"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-FenyiXinyu-z10-838-429-Xinyu", "x": 221.0, "y": 144.0, "lines": ["新余"], "font_style": "regular", "font_size": 14}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-FenyiXinyu-z10-838-429-SharedQianshan", "owner_region": "CN-Jiangxi-Qianshan-Liangshan-Shanzhuang-Futian-z10-838-430", "feature_id": "CN-Jiangxi-Qianshan-Liangshan-Shanzhuang-Futian-z10-838-430-Qianshan", "kind": "city", "original": "Qianshan", "original_bbox": [26, 239, 81, 257], "source_url": "@source/3fee7d25641d9a71", "review_notes": "沿用已批准的跨片地名归属和渲染。"}
+  ],
+  "legacy_suppressions": []
+}

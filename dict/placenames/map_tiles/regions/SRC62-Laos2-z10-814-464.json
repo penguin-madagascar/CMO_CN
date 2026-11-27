@@ -1,0 +1,36 @@
+{
+  "id": "SRC62-Laos2-z10-814-464",
+  "z": 10,
+  "x": 814,
+  "y": 464,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/814/464.png",
+    "10/815/464.png"
+  ],
+  "context_tiles": [
+    "10/815/463.png"
+  ],
+  "features": [
+    {"id": "SRC62-Laos2-NEXT8-G212-P20", "kind": "city", "original": "Davasan", "original_bbox": [272, 0, 320, 16], "source_url": "@source/a075317adfb53cc2"},
+    {"id": "SRC62-Laos2-NEXT8-G212-P21", "kind": "city", "original": "A May", "original_bbox": [398, 103, 435, 123], "source_url": "@source/a075317adfb53cc2"},
+    {"id": "SRC62-Laos2-NEXT8-G212-P22", "kind": "city", "original": "Samnouay", "original_bbox": [434, 139, 487, 157], "source_url": "@source/a075317adfb53cc2"},
+    {"id": "SRC62-Laos2-NEXT8-G212-P23", "kind": "city", "original": "Muang Nong", "original_bbox": [218, 181, 257, 219], "source_url": "@source/d382c6cd6fd23cc4"}
+  ],
+  "translations": [
+    {"id": "SRC62-Laos2-NEXT8-G212-P20", "zh": "达瓦桑", "status": "approved", "source": "@source/a075317adfb53cc2", "record_sha256": "21f1f5133a333854df9d1ec65015a62312accea44b4a2449e051f47ee13c4258", "review_notes": "Printed-label provenance URL only, not an official Chinese-name authority. Root lexical selection evidence/tile_recovery/root_continuity7_Chinese_lexical_actual_selection_20261104/Root_SELECTED_CONTINUITY7_COMPLETE_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 837578f311b888d248ecad830ccf2428af6070f15dccf89df4e7e71048c77228 pointer /lexical_choices/3; grade C unchanged. Project caption only; no supplier/entity point assignment."},
+    {"id": "SRC62-Laos2-NEXT8-G212-P21", "zh": "阿迈", "status": "approved", "source": "@source/a075317adfb53cc2", "record_sha256": "cafda7152056b82531c1e37ec5e460f8a741650957233e7b1d4c204d6eee5028", "review_notes": "Printed-label provenance URL only, not an official Chinese-name authority. Root lexical selection evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer /lexical_choices/16; grade C unchanged. Project caption only; no supplier/entity point assignment."},
+    {"id": "SRC62-Laos2-NEXT8-G212-P22", "zh": "桑努艾", "status": "approved", "source": "@source/a075317adfb53cc2", "record_sha256": "20263e7b7e8cfc4d398b28be7d47c2e9e9e65ddb8f3b3046b1697f31d5ed9a57", "review_notes": "Printed-label provenance URL only, not an official Chinese-name authority. Root lexical selection evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer /lexical_choices/17; grade C unchanged. Project caption only; no supplier/entity point assignment."},
+    {"id": "SRC62-Laos2-NEXT8-G212-P23", "zh": "孟农", "status": "approved", "source": "@source/d382c6cd6fd23cc4", "record_sha256": "5d56871c212e9c9d2962c3bab53c153796516009f7b9ff6e9a08ec680a80b223", "review_notes": "Printed-label provenance URL only, not an official Chinese-name authority. Root lexical selection evidence/tile_recovery/root_continuity7_Chinese_lexical_actual_selection_20261104/Root_SELECTED_CONTINUITY7_COMPLETE_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 837578f311b888d248ecad830ccf2428af6070f15dccf89df4e7e71048c77228 pointer /lexical_choices/4; grade B unchanged. Project caption only; no supplier/entity point assignment."}
+  ],
+  "layouts": [
+    {"id": "SRC62-Laos2-NEXT8-G212-P20", "x": 296.0, "y": 13.0, "font_size": 12, "font_style": "regular"},
+    {"id": "SRC62-Laos2-NEXT8-G212-P21", "x": 416.5, "y": 113.0, "font_size": 12, "font_style": "regular"},
+    {"id": "SRC62-Laos2-NEXT8-G212-P22", "x": 460.5, "y": 148.0, "font_size": 12, "font_style": "regular"},
+    {"id": "SRC62-Laos2-NEXT8-G212-P23", "x": 237.5, "y": 200.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

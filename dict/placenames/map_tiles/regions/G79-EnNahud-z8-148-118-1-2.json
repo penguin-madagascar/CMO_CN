@@ -1,0 +1,31 @@
+{
+  "id": "G79-EnNahud-z8-148-118-1-2",
+  "z": 8,
+  "x": 148,
+  "y": 118,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "8/148/118.png",
+    "8/148/119.png"
+  ],
+  "context_tiles": [
+    "8/147/119.png"
+  ],
+  "features": [
+    {"id": "G79-En-Nahud-001", "kind": "city", "original": "En Nahud", "original_bbox": [50, 226, 94, 264], "source_url": "@source/90b8d74051db9259"}
+  ],
+  "translations": [
+    {"id": "G79-En-Nahud-001", "zh": "恩纳胡德", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "a725ba69cbd93b3b32ecd0702ffe5c70b5e99e7bbf84b98d104fa1b8713a5bb3", "review_notes": "Root7e790 selects 恩纳胡德 as grade B EXACT_SAVED_PROJECT_LEXEME from the exact saved En Nahud lexical entry. The URL preserves that existing lexical provenance; no new primary Chinese or supplier/entity/point claim. Full printed En/Nahud and true5px are qualified by Source21 Q62c45. This word selection is not Target approval."}
+  ],
+  "layouts": [
+    {"id": "G79-En-Nahud-001", "x": 72, "y": 250, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "G79-En-Nahud-point", "feature_id": "G79-En-Nahud-001", "kind": "circle", "original_bbox": [50, 226, 59, 235], "x": 54.5, "y": 230.5, "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "G79-Babanusah-C3-N006-shared", "owner_region": "C3-R09-z8-147-119", "feature_id": "C3-N006", "kind": "city", "original": "Babanusah", "original_bbox": [-62, 479, 6, 500], "source_url": "@source/8b745466cad11940", "review_notes": "Exact same z8 full printed Babanusah world bbox and both raw Source SHAs match sole normal C3-N006. This region accounts for the 86px continuation only and draws no duplicate normal/native. Original old normal/layout/translation/circle9/review/encoded output remain unchanged."}
+  ],
+  "legacy_suppressions": []
+}

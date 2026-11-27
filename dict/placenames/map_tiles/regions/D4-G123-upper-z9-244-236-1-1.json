@@ -1,0 +1,34 @@
+{
+  "id": "D4-G123-upper-z9-244-236-1-1",
+  "z": 9,
+  "x": 244,
+  "y": 236,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/244/236.png"
+  ],
+  "context_tiles": [
+    "9/244/237.png"
+  ],
+  "features": [
+    {"id": "D4-G123-W01", "kind": "city", "original": "Didiéni", "original_bbox": [106, 6, 146, 23], "source_url": "@source/d0c2f5e820964581"},
+    {"id": "D4-G123-W02", "kind": "city", "original": "Kolokani", "original_bbox": [121, 121, 175, 139], "source_url": "@source/d0c2f5e820964581"},
+    {"id": "D4-G123-W03", "kind": "city", "original": "Guihoyo", "original_bbox": [48, 149, 94, 168], "source_url": "@source/d0c2f5e820964581"}
+  ],
+  "translations": [
+    {"id": "D4-G123-W01", "zh": "迪迪耶尼", "status": "approved", "source": "@source/d0c2f5e820964581", "record_sha256": "1c67b8a34a2fa4d6ead6f233eac7a7f25086b8d5f47e5fb038e86e1f44b56d8d", "review_notes": "Root lexical selection 9fa6926e811c3d2ca3e30332bf1fd447e799598ca0311647493e33110be755ac; PROJECT_ROMAN_APPROXIMATION_UNVERIFIED_PRONUNCIATION_NOT_OFFICIAL_CHINESE; Original image literal; Chinese authority is separate exact Root lexical selection, not image-Chinese or supplier entity; Root lexical evidence {\"path\": \"evidence/parallel_map/reviews/C4_D4_closed25_Chinese_lexical_PROPOSAL_PRIMARY_TEXT_ONLY_20261028/CHINESE25_LEXICAL_PROPOSALS_NOT_ROOT_SELECTION_OR_SOURCE_IDENTITY.json\", \"sha256\": \"ddeef1bff36bcd793ee2502a7043f53f8471f5c5b8f11111e8ba8b13a9199e88\"}. Supplier entity/point remain unassigned."},
+    {"id": "D4-G123-W02", "zh": "科洛卡尼", "status": "approved", "source": "@source/d0c2f5e820964581", "record_sha256": "332e9dbe56b0be3d9850bfc9580809d7a06ddc2a4d5596c2951d646e032d2a5a", "review_notes": "Root lexical selection 9fa6926e811c3d2ca3e30332bf1fd447e799598ca0311647493e33110be755ac; PROJECT_ROMAN_APPROXIMATION_UNVERIFIED_PRONUNCIATION_NOT_OFFICIAL_CHINESE; Original image literal; Chinese authority is separate exact Root lexical selection, not image-Chinese or supplier entity; Root lexical evidence {\"path\": \"evidence/parallel_map/reviews/C4_D4_closed25_Chinese_lexical_PROPOSAL_PRIMARY_TEXT_ONLY_20261028/CHINESE25_LEXICAL_PROPOSALS_NOT_ROOT_SELECTION_OR_SOURCE_IDENTITY.json\", \"sha256\": \"ddeef1bff36bcd793ee2502a7043f53f8471f5c5b8f11111e8ba8b13a9199e88\"}. Supplier entity/point remain unassigned."},
+    {"id": "D4-G123-W03", "zh": "吉霍约", "status": "approved", "source": "@source/d0c2f5e820964581", "record_sha256": "59ea4794e1f48ba5b3a9e20d479c448b260393ea5a18133228f32d1d2e262db6", "review_notes": "Root lexical selection 9fa6926e811c3d2ca3e30332bf1fd447e799598ca0311647493e33110be755ac; PROJECT_ROMAN_APPROXIMATION_UNVERIFIED_PRONUNCIATION_NOT_OFFICIAL_CHINESE; Original image literal; Chinese authority is separate exact Root lexical selection, not image-Chinese or supplier entity; Root lexical evidence {\"path\": \"evidence/parallel_map/reviews/C4_D4_closed25_Chinese_lexical_PROPOSAL_PRIMARY_TEXT_ONLY_20261028/CHINESE25_LEXICAL_PROPOSALS_NOT_ROOT_SELECTION_OR_SOURCE_IDENTITY.json\", \"sha256\": \"ddeef1bff36bcd793ee2502a7043f53f8471f5c5b8f11111e8ba8b13a9199e88\"}. Supplier entity/point remain unassigned."}
+  ],
+  "layouts": [
+    {"id": "D4-G123-W01", "x": 126.0, "y": 14.5, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-G123-W02", "x": 148.0, "y": 130.0, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-G123-W03", "x": 71.0, "y": 158.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "D4-Daban-upper-source-only", "owner_region": "D4-G123-lower-z9-243-237-2-1", "feature_id": "D4-G123-W04", "kind": "city", "original": "Daban", "source_url": "@source/d0c2f5e820964581", "original_bbox": [28, 255, 65, 271], "review_notes": "Single full Daban Source instance542: upper17 plus lower525. Lower sole normal renders once; upper shared Source accounting only. No C/owner-native Source1 authority."}
+  ],
+  "legacy_suppressions": []
+}

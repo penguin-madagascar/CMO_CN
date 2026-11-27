@@ -1,0 +1,31 @@
+{
+  "id": "PH9-PalawanAgutayaCuyo-z9-427-240",
+  "z": 9,
+  "x": 427,
+  "y": 240,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/427/240.png",
+    "9/428/240.png"
+  ],
+  "context_tiles": [
+    "9/427/239.png",
+    "9/428/239.png"
+  ],
+  "features": [
+    {"id": "PH9-Palawan-Agutaya", "kind": "city", "original": "Agutaya", "original_bbox": [233, 1, 280, 22], "source_glyph_complete": true, "source_printed_full_literal": "Agutaya", "source_url": "@source/08e1e2226cd23815"},
+    {"id": "PH9-Palawan-Cuyo", "kind": "city", "original": "Cuyo", "original_bbox": [267, 111, 297, 131], "source_glyph_complete": true, "source_printed_full_literal": "Cuyo", "source_url": "@source/958b65f8cbadfa70"}
+  ],
+  "translations": [
+    {"id": "PH9-Palawan-Agutaya", "zh": "阿古塔亚", "status": "approved", "source": "@source/9fa44a8bd0f08111", "record_sha256": "44e770fddd35957ab5e91c37073ca36583247d6df2fa31d059864cceb518c191", "review_notes": "NAER foreign gazetteer lists Agutaya 阿古塔亞, separate from Agutaya Island. Use simplified form for the municipality. Philippines PSA municipality identity PSGC 1705302000."},
+    {"id": "PH9-Palawan-Cuyo", "zh": "库约", "status": "approved", "source": "@source/e95d7411aa44834e", "record_sha256": "c84ad22b5c1209dbb598f300e17409434865a008cd7b94fdff53d0126f07d038", "review_notes": "National Emergency Broadcasting identifies the same Cuyo, Palawan directly as 库约市区. Source label omits the administrative suffix. Philippines PSA municipality identity PSGC 1705310000."}
+  ],
+  "layouts": [
+    {"id": "PH9-Palawan-Agutaya", "x": 256.5, "y": 11.5, "font_style": "regular", "font_size": 12},
+    {"id": "PH9-Palawan-Cuyo", "x": 282.0, "y": 121.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

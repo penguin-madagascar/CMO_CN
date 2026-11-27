@@ -1,0 +1,45 @@
+{
+  "id": "PH-Catanduanes-z10-865-471-1x3",
+  "z": 10,
+  "x": 865,
+  "y": 471,
+  "width_tiles": 1,
+  "height_tiles": 3,
+  "original_tiles": [
+    "10/865/471.png",
+    "10/865/472.png",
+    "10/865/473.png"
+  ],
+  "context_tiles": [
+    "10/864/471.png",
+    "10/864/472.png"
+  ],
+  "features": [
+    {"id": "PH10-Catanduanes-Pandan", "kind": "city", "original": "Pandan", "original_bbox": [29, 153, 72, 170], "source_url": "@source/2415ee0ce6792bd7", "source_printed_full_literal": "Pandan", "source_glyph_complete": true},
+    {"id": "PH10-Catanduanes-Bagamanoc", "kind": "city", "original": "Bagamanoc", "original_bbox": [107, 237, 165, 254], "source_url": "@source/2415ee0ce6792bd7", "source_printed_full_literal": "Bagamanoc", "source_glyph_complete": true},
+    {"id": "PH10-Catanduanes-Viga", "kind": "city", "original": "Viga", "original_bbox": [136, 287, 165, 306], "source_url": "@source/2249f2276c2641c2", "source_printed_full_literal": "Viga", "source_glyph_complete": true},
+    {"id": "PH10-Catanduanes-Bato", "kind": "city", "original": "Bato", "original_bbox": [131, 485, 156, 500], "source_url": "@source/2249f2276c2641c2", "source_printed_full_literal": "Bato", "source_glyph_complete": true},
+    {"id": "PH10-Catanduanes-Virac", "kind": "city", "original": "Virac", "original_bbox": [78, 505, 110, 521], "source_url": "@source/2249f2276c2641c2", "source_printed_full_literal": "Virac", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "PH10-Catanduanes-Pandan", "zh": "潘丹", "status": "approved", "source": "@source/1c5ccb1158e7f8aa", "record_sha256": "cf349472e5eb4ceece0ea2290172c49069e7a47127a9cbc696dfb36aa51a6578", "review_notes": "Reuses the exact approved Chinese of the same-name Catanduanes place in the next lower zoom; cross-zoom print geometry corroborated."},
+    {"id": "PH10-Catanduanes-Bagamanoc", "zh": "巴加马诺克", "status": "approved", "source": "@source/1c5ccb1158e7f8aa", "record_sha256": "e98e99ac9603e20b1f277fb712a176e555280c16c22381f8b673ff8edc60f890", "review_notes": "PSA confirms the Catanduanes municipality. Project transliteration, with local geographic cross-check; supplier native point and official Chinese authority not claimed."},
+    {"id": "PH10-Catanduanes-Viga", "zh": "维加", "status": "approved", "source": "@source/1c5ccb1158e7f8aa", "record_sha256": "8d8593d5db79bc87ddadf72d610e8544e9c2095bb0f4516247e5c8dfd192b17a", "review_notes": "Reuses the exact approved Chinese of the same-name Catanduanes place in the next lower zoom; cross-zoom print geometry corroborated."},
+    {"id": "PH10-Catanduanes-Bato", "zh": "巴托", "status": "approved", "source": "@source/1c5ccb1158e7f8aa", "record_sha256": "c87f44b3f24dc89a62c2e4b71ffb9c508d5ea53532dc5029a11c26815b9a11f7", "review_notes": "PSA confirms the Catanduanes municipality. Project transliteration, with local geographic cross-check; supplier native point and official Chinese authority not claimed."},
+    {"id": "PH10-Catanduanes-Virac", "zh": "比拉克", "status": "approved", "source": "@source/1c5ccb1158e7f8aa", "record_sha256": "3bdb3f9c574f1591097f3e83c548861602b7ddfe80810e3daf57349b66dfaebc", "review_notes": "Reuses the exact approved Chinese of the same-name Catanduanes place in the next lower zoom; cross-zoom print geometry corroborated."}
+  ],
+  "layouts": [
+    {"id": "PH10-Catanduanes-Pandan", "x": 50.5, "y": 161.5, "font_style": "regular", "font_size": 12},
+    {"id": "PH10-Catanduanes-Bagamanoc", "x": 136.0, "y": 245.0, "font_style": "regular", "font_size": 12},
+    {"id": "PH10-Catanduanes-Viga", "x": 150.5, "y": 296.5, "font_style": "regular", "font_size": 12},
+    {"id": "PH10-Catanduanes-Bato", "x": 143.5, "y": 491.5, "font_style": "regular", "font_size": 12},
+    {"id": "PH10-Catanduanes-Virac", "x": 94.0, "y": 521.5, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "PH10-Catanduanes-shared-PR7-S013", "owner_region": "PR7-Bicol-z10-864-471-1x2", "feature_id": "PR7-S013", "original_bbox": [-6, 202, 54, 219], "original": "Caramoran", "kind": "city", "source_url": "@source/ce16e82fbb53eb2c", "review_notes": "Cross-border Source only from one exact western normal owner. The complete western Chinese label is drawn once."},
+    {"id": "PH10-Catanduanes-shared-PR7-S015", "owner_region": "PR7-Bicol-z10-864-471-1x2", "feature_id": "PR7-S015", "original_bbox": [-35, 490, 29, 507], "original": "San Andres", "kind": "city", "source_url": "@source/9faace1eadca5b49", "review_notes": "Cross-border Source only from one exact western normal owner. The complete western Chinese label is drawn once."}
+  ],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

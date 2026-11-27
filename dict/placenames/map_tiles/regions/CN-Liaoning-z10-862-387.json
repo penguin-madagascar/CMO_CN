@@ -1,0 +1,36 @@
+{
+  "id": "CN-Liaoning-z10-862-387",
+  "z": 10,
+  "x": 862,
+  "y": 387,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/862/387.png"
+  ],
+  "context_tiles": [
+    "10/862/386.png",
+    "10/863/386.png",
+    "10/863/387.png"
+  ],
+  "features": [
+    {"id": "CN-Liaoning-z10-862-387-Longtan", "kind": "city", "original": "Longtan", "original_bbox": [32, 29, 73, 47], "source_url": "@source/f5e9e4cb0c6c8f68", "source_glyph_complete": true, "source_printed_full_literal": "Longtan"},
+    {"id": "CN-Liaoning-z10-862-387-Xindian", "kind": "city", "original": "Xindian", "original_bbox": [36, 76, 76, 90], "source_url": "@source/f5e9e4cb0c6c8f68", "source_glyph_complete": true, "source_printed_full_literal": "Xindian"},
+    {"id": "CN-Liaoning-z10-862-387-Huayuan", "kind": "city", "original": "Huayuan", "original_bbox": [194, 230, 244, 249], "source_url": "@source/f5e9e4cb0c6c8f68", "source_glyph_complete": true, "source_printed_full_literal": "Huayuan"}
+  ],
+  "translations": [
+    {"id": "CN-Liaoning-z10-862-387-Longtan", "zh": "龙潭", "status": "approved", "source": "@source/e0dc266886bfae73", "record_sha256": "d7fc3dd54fbb6ac8ec7896dd2ac7b2fa7a91a42914e137b89ed739ea62a25022", "review_notes": "地名正文、中文正式资料及地理位置逐项核对。"},
+    {"id": "CN-Liaoning-z10-862-387-Xindian", "zh": "新甸", "status": "approved", "source": "@source/e0dc266886bfae73", "record_sha256": "0077293ade1dcb909b9b931f7b765ced5ba9884cecdda88e48b30aea211f6493", "review_notes": "地名正文、中文正式资料及地理位置逐项核对。"},
+    {"id": "CN-Liaoning-z10-862-387-Huayuan", "zh": "花院", "status": "approved", "source": "@source/b4ce5c1ef884f189", "record_sha256": "7f0ef738f49afa6d14c72f30c5b8c724622148fd385e0f54049efe70a3fe200c", "review_notes": "地名正文、中文正式资料及地理位置逐项核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-Liaoning-z10-862-387-Longtan", "x": 52.5, "y": 38.0, "font_size": 12, "font_style": "regular", "lines": ["龙潭"]},
+    {"id": "CN-Liaoning-z10-862-387-Xindian", "x": 56.0, "y": 83.0, "font_size": 12, "font_style": "regular", "lines": ["新甸"]},
+    {"id": "CN-Liaoning-z10-862-387-Huayuan", "x": 219.0, "y": 239.5, "font_size": 12, "font_style": "regular", "lines": ["花院"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Liaoning-z10-862-387-Linggou", "owner_region": "DL11-Column-z10-863-383-1-6", "feature_id": "DL11-N019", "kind": "city", "original": "Linggou", "original_bbox": [255, -5, 302, 14], "source_url": "@source/a61e10b39cc67c0d", "review_notes": "原版地名跨相邻瓦片。现有区域已完整绘制，本瓦片登记相同原版边界。"}
+  ],
+  "legacy_suppressions": []
+}

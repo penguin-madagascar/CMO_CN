@@ -1,0 +1,45 @@
+{
+  "id": "CN-CenxiRong-z9-413-222",
+  "z": 9,
+  "x": 413,
+  "y": 222,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/413/222.png"
+  ],
+  "context_tiles": [
+    "9/412/222.png",
+    "9/414/222.png",
+    "9/413/223.png"
+  ],
+  "features": [
+    {"id": "CN-CenxiRong-z9-413-222-N01", "kind": "city", "original": "Liuchen", "original_bbox": [-35, 11, 10, 27], "source_url": "@source/27145870190e1fbd", "source_glyph_complete": true, "source_printed_full_literal": "Liuchen"},
+    {"id": "CN-CenxiRong-z9-413-222-N02", "kind": "city", "original": "Sanbao", "original_bbox": [170, 43, 213, 60], "source_url": "@source/27145870190e1fbd", "source_glyph_complete": true, "source_printed_full_literal": "Sanbao"},
+    {"id": "CN-CenxiRong-z9-413-222-N03", "kind": "city", "original": "Cenxi", "original_bbox": [201, 117, 236, 136], "source_url": "@source/27145870190e1fbd", "source_glyph_complete": true, "source_printed_full_literal": "Cenxi"},
+    {"id": "CN-CenxiRong-z9-413-222-N04", "kind": "city", "original": "Rong", "original_bbox": [43, 141, 76, 163], "source_url": "@source/27145870190e1fbd", "source_glyph_complete": true, "source_printed_full_literal": "Rong"},
+    {"id": "CN-CenxiRong-z9-413-222-N05", "kind": "city", "original": "Liuwang", "original_bbox": [103, 167, 151, 187], "source_url": "@source/27145870190e1fbd", "source_glyph_complete": true, "source_printed_full_literal": "Liuwang"},
+    {"id": "CN-CenxiRong-z9-413-222-N06", "kind": "city", "original": "Limu", "original_bbox": [251, 167, 280, 183], "source_url": "@source/27145870190e1fbd", "source_glyph_complete": true, "source_printed_full_literal": "Limu"}
+  ],
+  "translations": [
+    {"id": "CN-CenxiRong-z9-413-222-N01", "zh": "六陈", "status": "approved", "source": "@source/55cf5aaa6cdb6c77", "record_sha256": "e749caff9d2c8d2243c4189ec15d1179e72571118a23974dd461591723be9b1d", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-CenxiRong-z9-413-222-N02", "zh": "三堡", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "e13dd0642f5f183a179e77097a8bce0e73f74dd43298ca99a8afea745d0779e1", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-CenxiRong-z9-413-222-N03", "zh": "岑溪", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "4384089d122319743423a1b316eac193f87cb05f22e0f2f5e14914426b901c0f", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-CenxiRong-z9-413-222-N04", "zh": "容县", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "4df36804c3a8261113a0100a1f6cb219da097e81539189f3614ac263339933a7", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-CenxiRong-z9-413-222-N05", "zh": "六王", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "08e56acb6126f1eefa98fd94651b9964474482474ed8213be6927ebe989cae53", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-CenxiRong-z9-413-222-N06", "zh": "梨木", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "5e8e8bbcd7a952edfa765d7470ad4a6bb3bec6db6292c029fb912c9ddb2e7e68", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-CenxiRong-z9-413-222-N01", "x": 16, "y": 20, "font_size": 12, "font_style": "regular", "lines": ["六陈"]},
+    {"id": "CN-CenxiRong-z9-413-222-N02", "x": 191.5, "y": 51.5, "font_size": 12, "font_style": "regular", "lines": ["三堡"]},
+    {"id": "CN-CenxiRong-z9-413-222-N03", "x": 218.5, "y": 126.5, "font_size": 12, "font_style": "regular", "lines": ["岑溪"]},
+    {"id": "CN-CenxiRong-z9-413-222-N04", "x": 59.5, "y": 152.0, "font_size": 12, "font_style": "regular", "lines": ["容县"]},
+    {"id": "CN-CenxiRong-z9-413-222-N05", "x": 127.0, "y": 177.0, "font_size": 12, "font_style": "regular", "lines": ["六王"]},
+    {"id": "CN-CenxiRong-z9-413-222-N06", "x": 239, "y": 175, "font_size": 12, "font_style": "regular", "lines": ["梨木"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-CenxiRong-z9-413-222-shared-SC14-N030", "owner_region": "SC14-R04-z9-412-223", "feature_id": "SC14-N030", "kind": "city", "original": "Yangcun", "source_url": "@source/27145870190e1fbd", "original_bbox": [119, 245, 167, 264], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

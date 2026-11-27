@@ -1,0 +1,42 @@
+{
+  "id": "NC4-MODEL-R1",
+  "z": 9,
+  "x": 427,
+  "y": 191,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/427/191.png"
+  ],
+  "context_tiles": [
+    "9/427/190.png",
+    "9/428/191.png"
+  ],
+  "features": [
+    {"id": "NC4-MODEL-N02", "kind": "city", "original": "Chaoyang", "original_bbox": [24, -3, 85, 19], "source_url": "@source/fffbc55d885d74b7", "printed_full_literal": "Chaoyang", "sourceglyph_complete": true, "providerpoint": null, "pure_native_layer": null},
+    {"id": "NC4-MODEL-N08", "kind": "city", "original": "Shenjiatai", "original_bbox": [196, 81, 252, 102], "source_url": "@source/fffbc55d885d74b7", "printed_full_literal": "Shenjiatai", "sourceglyph_complete": true, "providerpoint": null, "pure_native_layer": null},
+    {"id": "NC4-MODEL-N13", "kind": "city", "original": "Dongdatun", "original_bbox": [117, 119, 178, 138], "source_url": "@source/fffbc55d885d74b7", "printed_full_literal": "Dongdatun", "sourceglyph_complete": true, "providerpoint": null, "pure_native_layer": null},
+    {"id": "NC4-MODEL-N17", "kind": "city", "original": "Yangshan", "original_bbox": [20, 148, 75, 168], "source_url": "@source/fffbc55d885d74b7", "printed_full_literal": "Yangshan", "sourceglyph_complete": true, "providerpoint": null, "pure_native_layer": null},
+    {"id": "NC4-MODEL-N22", "kind": "city", "original": "Nanpiao", "original_bbox": [161, 185, 214, 207], "source_url": "@source/fffbc55d885d74b7", "printed_full_literal": "Nanpiao", "sourceglyph_complete": true, "providerpoint": null, "pure_native_layer": null},
+    {"id": "NC4-MODEL-N28", "kind": "city", "original": "Wangyingzi", "original_bbox": [33, 229, 98, 249], "source_url": "@source/fffbc55d885d74b7", "printed_full_literal": "Wangyingzi", "sourceglyph_complete": true, "providerpoint": null, "pure_native_layer": null}
+  ],
+  "translations": [
+    {"id": "NC4-MODEL-N02", "zh": "朝阳", "status": "approved", "source": "@source/fffbc55d885d74b7", "record_sha256": "6c0b1206a01a7d650dfa0f9de95321c4a1d29b909f0daf5d34738f3700b58f32", "review_notes": "ORIGINAL_GN_OR_NE_HAN_FIELD_EXPLICIT_BARE_STEM_IF_SUFFIXED. Existing independently verified original GN/NE Han or original official Chinese body retained; explicit editorial geographic Roman-to-Han bridge where applicable, not supplier identity. Complete actual Source/context and new author Chinese view verified. Different person review pending."},
+    {"id": "NC4-MODEL-N08", "zh": "沈家台", "status": "approved", "source": "@source/fffbc55d885d74b7", "record_sha256": "05f3ddef587594571017ebc2319002934052f003f63e44c1a7a08b17ba6a5f6d", "review_notes": "ORIGINAL_OFFICIAL_CHINESE_BODY_WITH_EXPLICIT_EDITORIAL_ROMAN_GEOGRAPHIC_BRIDGE. Existing independently verified original GN/NE Han or original official Chinese body retained; explicit editorial geographic Roman-to-Han bridge where applicable, not supplier identity. Complete actual Source/context and new author Chinese view verified. Different person review pending."},
+    {"id": "NC4-MODEL-N13", "zh": "东大屯", "status": "approved", "source": "@source/fffbc55d885d74b7", "record_sha256": "137e7d4d2edb8e3cbe0f3eb40552197f0c2211eaf79e655718c9b05c45b3bc97", "review_notes": "ORIGINAL_OFFICIAL_CHINESE_BODY_WITH_EXPLICIT_EDITORIAL_ROMAN_GEOGRAPHIC_BRIDGE. Existing independently verified original GN/NE Han or original official Chinese body retained; explicit editorial geographic Roman-to-Han bridge where applicable, not supplier identity. Complete actual Source/context and new author Chinese view verified. Different person review pending."},
+    {"id": "NC4-MODEL-N17", "zh": "羊山", "status": "approved", "source": "@source/fffbc55d885d74b7", "record_sha256": "b40b227cfe43816259f48567cd2d69bec4abbc463adef56b39d180443441ff49", "review_notes": "ORIGINAL_OFFICIAL_CHINESE_BODY_WITH_EXPLICIT_EDITORIAL_ROMAN_GEOGRAPHIC_BRIDGE. Existing independently verified original GN/NE Han or original official Chinese body retained; explicit editorial geographic Roman-to-Han bridge where applicable, not supplier identity. Complete actual Source/context and new author Chinese view verified. Different person review pending."},
+    {"id": "NC4-MODEL-N22", "zh": "南票", "status": "approved", "source": "@source/fffbc55d885d74b7", "record_sha256": "a48836491d3e4b3bedcc8877ff49892e6f4cbf4d9adfd7e29a346d126d90ba23", "review_notes": "ORIGINAL_GN_OR_NE_HAN_FIELD_EXPLICIT_BARE_STEM_IF_SUFFIXED. Existing independently verified original GN/NE Han or original official Chinese body retained; explicit editorial geographic Roman-to-Han bridge where applicable, not supplier identity. Complete actual Source/context and new author Chinese view verified. Different person review pending."},
+    {"id": "NC4-MODEL-N28", "zh": "王营子", "status": "approved", "source": "@source/fffbc55d885d74b7", "record_sha256": "433914df2e37f2085c7b49bcd919f04a99b03a400b775746ea487550c25ccdc0", "review_notes": "ORIGINAL_GN_OR_NE_HAN_FIELD_EXPLICIT_BARE_STEM_IF_SUFFIXED. Existing independently verified original GN/NE Han or original official Chinese body retained; explicit editorial geographic Roman-to-Han bridge where applicable, not supplier identity. Complete actual Source/context and new author Chinese view verified. Different person review pending."}
+  ],
+  "layouts": [
+    {"id": "NC4-MODEL-N02", "x": 54.5, "y": 16, "font_size": 12, "font_style": "regular", "lines": ["朝阳"]},
+    {"id": "NC4-MODEL-N08", "x": 224.0, "y": 91.5, "font_size": 12, "font_style": "regular", "lines": ["沈家台"]},
+    {"id": "NC4-MODEL-N13", "x": 147.5, "y": 128.5, "font_size": 12, "font_style": "regular", "lines": ["东大屯"]},
+    {"id": "NC4-MODEL-N17", "x": 47.5, "y": 158.0, "font_size": 12, "font_style": "regular", "lines": ["羊山"]},
+    {"id": "NC4-MODEL-N22", "x": 187.5, "y": 196.0, "font_size": 12, "font_style": "regular", "lines": ["南票"]},
+    {"id": "NC4-MODEL-N28", "x": 65.5, "y": 239.0, "font_size": 12, "font_style": "regular", "lines": ["王营子"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

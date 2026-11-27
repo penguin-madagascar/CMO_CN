@@ -1,0 +1,25 @@
+{
+  "id": "F4-CLOSED-G231-z10-878-382",
+  "z": 10,
+  "x": 878,
+  "y": 382,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "10/878/382.png",
+    "10/878/383.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "F4-G231-W01", "kind": "city", "original": "Paekam-rodongjagu", "original_bbox": [63, 238, 127, 276], "source_url": "@source/5fd27da6de324daf"}
+  ],
+  "translations": [
+    {"id": "F4-G231-W01", "zh": "白岩劳动者区", "status": "approved", "source": "@source/e169217c7c6619a4", "record_sha256": "61d4f0142d63e5e077c4b056d13f0637a4dbeb84eed088240a0a622d7209ca2f", "review_notes": "Root lexical a7032e1f05c452897a4bcbba0dce181109f4718b8d0aec6e851fad583a87dfba; PUBLIC_PRIMARY_HAN_STEM_PLUS_PROJECT_SUFFIX_TRANSLATION; Root selected exact Chinese lexeme; project/public-source grade retained. No supplier entity/admin/renderer-epoch inference."}
+  ],
+  "layouts": [
+    {"id": "F4-G231-W01", "x": 95.0, "y": 257.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

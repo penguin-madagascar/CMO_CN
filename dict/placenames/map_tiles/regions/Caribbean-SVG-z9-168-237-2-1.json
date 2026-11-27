@@ -1,0 +1,37 @@
+{
+  "id": "Caribbean-SVG-z9-168-237-2-1",
+  "z": 9,
+  "x": 168,
+  "y": 237,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    {"path": "9/168/237.png", "z": 9},
+    {"path": "9/169/237.png", "z": 9}
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Kingstown", "original": "Kingstown", "kind": "city", "original_bbox": [206, 23, 266, 43], "source_glyph_complete": true, "source_printed_full_literal": "Kingstown", "source_url": "@source/488d8b86855e9b0b"},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-PortElizabeth", "original": "Port Elizabeth", "kind": "city", "original_bbox": [208, 69, 259, 102], "source_glyph_complete": true, "source_printed_full_literal": "Port Elizabeth", "source_url": "@source/488d8b86855e9b0b"},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Dovers", "original": "Dovers", "kind": "city", "original_bbox": [232, 123, 272, 139], "source_glyph_complete": true, "source_printed_full_literal": "Dovers", "source_url": "@source/488d8b86855e9b0b"},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Ashton", "original": "Ashton", "kind": "city", "original_bbox": [140, 232, 181, 249], "source_glyph_complete": true, "source_printed_full_literal": "Ashton", "source_url": "@source/488d8b86855e9b0b"}
+  ],
+  "translations": [
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Kingstown", "zh": "金斯敦", "source": "@source/5bb968944568e80d", "status": "approved", "record_sha256": "26e3559fded332b3ed66af19b35497b4a392f17b4026ec75254d730a005061bf", "review_notes": "沿用同地两级已发布中文名。"},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-PortElizabeth", "zh": "伊丽莎白港", "source": "@source/bf0234841568ee84", "status": "approved", "record_sha256": "116a2dd1c1270a8149574bb007de906c5ae54ed4f3a2d3353e927f72a0d86d8d", "review_notes": "原版为两行完整字形，位于贝基亚岛，采用中文港名。"},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Dovers", "zh": "多弗斯", "source": "@source/6fc149286d6a2603", "status": "approved", "record_sha256": "a782f277d2c2c466c8ab70a9de8d97832955d69c7453176d4030de265d589580", "review_notes": "马斯蒂克岛，原文末尾有 s，按原名音译。"},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Ashton", "zh": "阿什顿", "source": "@source/bf0234841568ee84", "status": "approved", "record_sha256": "c7605137e3391046781e8a249fe46fbaeab5c461440402adc0e1fe1d0651c206", "review_notes": "核验原版完整字形，原地点位于尤宁岛，按原名音译。"}
+  ],
+  "layouts": [
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Kingstown", "x": 236, "y": 33, "font_style": "regular", "font_size": 12, "lines": ["金斯敦"]},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-PortElizabeth", "x": 233.5, "y": 85.5, "font_style": "regular", "font_size": 12, "lines": ["伊丽莎白港"]},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Dovers", "x": 252, "y": 131, "font_style": "regular", "font_size": 12, "lines": ["多弗斯"]},
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Ashton", "x": 160.5, "y": 240.5, "font_style": "regular", "font_size": 12, "lines": ["阿什顿"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "Caribbean-SVG-z9-168-237-2-1-Synoptic221", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Synoptic", "wwp_file": {"path": "assets/placenames/Synoptic.wwp", "sha256": "3dfa0cc94649684dadadaee84f00c758b7d6bca10fa25175f0fb88aa32a41f53"}, "record_index_zero_based": 221, "original_Chinese_name": "圣文森特和格林纳丁斯", "lat_f32_bits": 1095849298, "lon_f32_bits": 3262434509, "level": 0, "flags": 0}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 173.0, "y": 59.0, "font_style": "bold", "font_size": 16, "lines": ["圣文森特和格林纳丁斯"]}}
+  ]
+}

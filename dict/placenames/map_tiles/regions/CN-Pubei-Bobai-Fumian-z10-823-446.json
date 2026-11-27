@@ -1,0 +1,63 @@
+{
+  "id": "CN-Pubei-Bobai-Fumian-z10-823-446",
+  "z": 10,
+  "x": 823,
+  "y": 446,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "features": [
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S01", "kind": "city", "original": "Fumian", "source_url": "@source/ca4d74941c78d336", "original_bbox": [500, -5, 548, 14], "source_printed_full_literal": "Fumian", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S02", "kind": "city", "original": "Liuken", "source_url": "@source/ca4d74941c78d336", "original_bbox": [310, 78, 349, 95], "source_printed_full_literal": "Liuken", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S03", "kind": "city", "original": "Fuwang", "source_url": "@source/dfd5890e3a81161d", "original_bbox": [140, 135, 179, 153], "source_printed_full_literal": "Fuwang", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S04", "kind": "city", "original": "Yong'an", "source_url": "@source/ca4d74941c78d336", "original_bbox": [289, 214, 330, 231], "source_printed_full_literal": "Yong'an", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S05", "kind": "city", "original": "Bobai", "source_url": "@source/ca4d74941c78d336", "original_bbox": [444, 241, 481, 259], "source_printed_full_literal": "Bobai", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S06", "kind": "city", "original": "Pubei", "source_url": "@source/dfd5890e3a81161d", "original_bbox": [139, 244, 176, 262], "source_printed_full_literal": "Pubei", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S07", "kind": "city", "original": "Beitong", "source_url": "@source/a50f1b51f048b575", "original_bbox": [-28, 282, 16, 301], "source_printed_full_literal": "Beitong", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S08", "kind": "city", "original": "Yashan", "source_url": "@source/468ed8cf1fd54a6b", "original_bbox": [425, 304, 462, 319], "source_printed_full_literal": "Yashan", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S09", "kind": "city", "original": "Shahe", "source_url": "@source/468ed8cf1fd54a6b", "original_bbox": [256, 408, 291, 425], "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "Shahe", "resolved_semantic_name": "Shahe", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"type": "FULL_LITERAL_LEGIBLE_AT_OUTER_PIXEL_LIMIT", "administrative_name_source": "@source/8b3b8df4a37d545e", "limits": "沙河完整拼写清晰可读。西邻未印该范围，实见框不扩边。", "exact_opposite_box": [240, 402, 256, 431], "exact_opposite_alpha": 0}},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S10", "kind": "city", "original": "Dongping", "source_url": "@source/468ed8cf1fd54a6b", "original_bbox": [322, 455, 377, 475], "source_printed_full_literal": "Dongping", "source_glyph_complete": true},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S11", "kind": "city", "original": "Shichong", "source_url": "@source/a50f1b51f048b575", "original_bbox": [163, 500, 210, 512], "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "Shichong", "resolved_semantic_name": "Shichong", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"type": "FULL_LITERAL_LEGIBLE_ABOVE_BOUNDED_BOTTOM_CLIP", "administrative_name_source": "@source/88d784202ca4dbbb", "limits": "原图 Shichong 八个字母的上部均实见，最底部笔画在边界截断。行政名称保留这份原图年代的石冲写法。", "exact_opposite_box": [153, 512, 221, 532], "exact_opposite_alpha": 0}}
+  ],
+  "translations": [
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S01", "zh": "福绵", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "7fa51976ac2df3133467c1d21cb7c7b64adcc37d7a305a86b299547a2f835ec1"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S02", "zh": "六硍", "source": "@source/6c0fb0c4030a31c5", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "57e1d940e7536ffca008ebf2500e2be5c423ef2fd35b83360a9744e7df7b6ebf"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S03", "zh": "福旺", "source": "@source/6c0fb0c4030a31c5", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "cc0b52331f339b001ae5fa5b2ac691a01e4d3265e946c72ca78bbe95eae9f291"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S04", "zh": "永安", "source": "@source/8b3b8df4a37d545e", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "c2f6c402cad56e9ad1ad26d5f3142febfe0d957643b6005d39ba48467ad97863"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S05", "zh": "博白", "source": "@source/8b3b8df4a37d545e", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "79faf13235d696d947d5bec91c89e348dc7d7e60cf44f13e1c484147d7179b74"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S06", "zh": "浦北", "source": "@source/6c0fb0c4030a31c5", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "d3cd1a6864aaf9bfecbf285d3c5caddd50d2f64c58a01c4a4d2d4c75767dabaa"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S07", "zh": "北通", "source": "@source/6c0fb0c4030a31c5", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "a3fd486d5d4f45e138afff02a4099d7a789f82c3b07b7b1284008822f32ba034"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S08", "zh": "亚山", "source": "@source/8b3b8df4a37d545e", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "7d2c113f1bf99c87add3d7e44b035e2aa379a8af03b5a96cd7f280bbd2c07509"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S09", "zh": "沙河", "source": "@source/8b3b8df4a37d545e", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "a26603f3d58d22e73d0cadef4a407a162d744e3abc4c957885ba23ddf7d49609"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S10", "zh": "东平", "source": "@source/8b3b8df4a37d545e", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "2454fdcf389f1b08c0472d9ecfea80342b1324a243be2ed3c9ed212c89d87b81"},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S11", "zh": "石冲", "source": "@source/88d784202ca4dbbb", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "970b3a4129b4c6c5dd1191af1f97262d4bcd2e869292e30b8b045c7ed620e579"}
+  ],
+  "layouts": [
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S01", "x": 498.5, "y": 7.5, "font_style": "regular", "font_size": 12, "lines": ["福绵"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S02", "x": 329.5, "y": 86.5, "font_style": "regular", "font_size": 12, "lines": ["六硍"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S03", "x": 159.5, "y": 144.0, "font_style": "regular", "font_size": 12, "lines": ["福旺"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S04", "x": 309.5, "y": 222.5, "font_style": "regular", "font_size": 12, "lines": ["永安"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S05", "x": 462.5, "y": 250.0, "font_style": "regular", "font_size": 12, "lines": ["博白"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S06", "x": 157.5, "y": 253.0, "font_style": "regular", "font_size": 12, "lines": ["浦北"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S07", "x": 13.5, "y": 291.5, "font_style": "regular", "font_size": 12, "lines": ["北通"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S08", "x": 443.5, "y": 311.5, "font_style": "regular", "font_size": 12, "lines": ["亚山"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S09", "x": 273.5, "y": 416.5, "font_style": "regular", "font_size": 12, "lines": ["沙河"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S10", "x": 349.5, "y": 465.0, "font_style": "regular", "font_size": 12, "lines": ["东平"]},
+    {"id": "CN-Pubei-Bobai-Fumian-z10-823-446-S11", "x": 186.5, "y": 504.5, "font_style": "regular", "font_size": 12, "lines": ["石冲"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "10/823/446.png",
+    "10/823/447.png",
+    "10/824/446.png",
+    "10/824/447.png"
+  ],
+  "context_tiles": [
+    "10/822/447.png",
+    "10/824/445.png",
+    "10/825/445.png",
+    "10/825/446.png",
+    "10/823/448.png"
+  ]
+}

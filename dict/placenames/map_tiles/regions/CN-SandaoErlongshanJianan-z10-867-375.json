@@ -1,0 +1,33 @@
+{
+  "id": "CN-SandaoErlongshanJianan-z10-867-375",
+  "z": 10,
+  "x": 867,
+  "y": 375,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/867/375.png"
+  ],
+  "context_tiles": [
+    "10/866/375.png",
+    "10/867/376.png"
+  ],
+  "features": [
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S01", "kind": "city", "original": "Sandao", "original_bbox": [136, 60, 174, 75], "source_url": "@source/a82233a1a4ebe09e", "source_glyph_complete": true, "source_printed_full_literal": "Sandao"},
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S02", "kind": "water", "original": "Erlongshan Reservoir", "original_bbox": [-20, 103, 46, 128], "source_url": "@source/a82233a1a4ebe09e", "source_glyph_complete": true, "source_printed_full_literal": "Erlongshan Reservoir"},
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S03", "kind": "city", "original": "Jian'an", "original_bbox": [180, 242, 220, 258], "source_url": "@source/a82233a1a4ebe09e", "source_glyph_complete": true, "source_printed_full_literal": "Jian'an"}
+  ],
+  "translations": [
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S01", "zh": "三道", "status": "approved", "source": "@source/fa3d0506061d020b", "record_sha256": "622cacd4e90fa0b3d99b94baca546e90ff9e247b7270c86c42d3f940b72e9ca3", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S02", "zh": "二龙山水库", "status": "approved", "source": "@source/e45aa72d7f02589a", "record_sha256": "2c0bdb7bd3dadbea39da8b3b4703498a00f681327fb2d9948bece10fb505bc85", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S03", "zh": "建安", "status": "approved", "source": "@source/1a22d7bd8fce790e", "record_sha256": "8665ab63e141ba65ca8106d495ce0184ed75df4ab4bf58c718339fa45de74fa1", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S01", "x": 154, "y": 67, "font_style": "regular", "font_size": 12, "lines": ["三道"]},
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S02", "x": 33, "y": 115, "font_style": "regular", "font_size": 12, "lines": ["二龙山水库"]},
+    {"id": "CN-SandaoErlongshanJianan-z10-867-375-S03", "x": 200, "y": 248, "font_style": "regular", "font_size": 12, "lines": ["建安"]}
+  ],
+  "shared_sources": [],
+  "symbols": [],
+  "legacy_suppressions": []
+}

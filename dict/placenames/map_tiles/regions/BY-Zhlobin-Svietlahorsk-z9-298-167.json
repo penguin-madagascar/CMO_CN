@@ -1,0 +1,36 @@
+{
+  "id": "BY-Zhlobin-Svietlahorsk-z9-298-167",
+  "z": 9,
+  "x": 298,
+  "y": 167,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/298/167.png"
+  ],
+  "context_tiles": [
+    "9/297/167.png"
+  ],
+  "features": [
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Zhlobin", "kind": "city", "original": "Zhlobin", "original_bbox": [162, 3, 206, 19], "source_url": "@source/e09a5ed76c1d146f", "source_glyph_complete": true, "source_printed_full_literal": "Zhlobin"},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Streshyn", "kind": "city", "original": "Стрэшын", "original_bbox": [184, 99, 235, 119], "source_url": "@source/e09a5ed76c1d146f", "source_glyph_complete": true, "source_printed_full_literal": "Стрэшын"},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Svietlahorsk", "kind": "city", "original": "Svietlahorsk", "original_bbox": [45, 157, 114, 174], "source_url": "@source/e09a5ed76c1d146f", "source_glyph_complete": true, "source_printed_full_literal": "Svietlahorsk"},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-SasnovyBor", "kind": "city", "original": "Sasnovy Bor", "original_bbox": [0, 217, 47, 252], "source_url": "@source/e09a5ed76c1d146f", "source_glyph_complete": true, "source_printed_full_literal": "Sasnovy Bor"}
+  ],
+  "translations": [
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Zhlobin", "zh": "日洛宾", "status": "approved", "source": "@source/3063ef198c0285d9", "review_notes": "铁组中文协约使用“日洛宾”。", "record_sha256": "fd4ff2d4451b9f83bc20cf76d1852dea5ccb337a03e6ba6b33b355910ffb6351"},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Streshyn", "zh": "斯特雷申", "status": "approved", "source": "@source/2b5ca9162c263ffc", "review_notes": "按白俄罗斯语原字和出版地名录核对，使用项目音译。", "record_sha256": "4db874787e9989de77dea889a75cec516d31f4545523a11a4ced5336500f0f79"},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Svietlahorsk", "zh": "斯韦特洛戈尔斯克", "status": "approved", "source": "@source/4aad84680014ce40", "review_notes": "沿用在白俄罗斯该城市承担工程设计的中国单位既有译名。", "record_sha256": "7ac0c43edaf5b5da2404660db338f1a869fd1b4d4fdf28e524dfb767dac03483"},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-SasnovyBor", "zh": "萨斯诺维博尔", "status": "approved", "source": "@source/8e375950158e4e47", "review_notes": "按白俄罗斯语 Сасновы Бор 作项目音译，延续原版两行排布。", "record_sha256": "125491d58cd355120f0a50bfd9982799b40f4f6161b28c3921dc3277f2c6f713"}
+  ],
+  "layouts": [
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Zhlobin", "x": 184, "y": 11, "font_size": 12, "font_style": "regular", "lines": ["日洛宾"]},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Streshyn", "x": 209.5, "y": 109, "font_size": 12, "font_style": "regular", "lines": ["斯特雷申"]},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-Svietlahorsk", "x": 79.5, "y": 165.5, "font_size": 12, "font_style": "regular", "lines": ["斯韦特洛戈尔斯克"]},
+    {"id": "BY-Zhlobin-Svietlahorsk-z9-298-167-SasnovyBor", "x": 27, "y": 234.5, "font_size": 12, "font_style": "regular", "lines": ["萨斯诺维", "博尔"]}
+  ],
+  "symbols": [],
+  "canonical_captions": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

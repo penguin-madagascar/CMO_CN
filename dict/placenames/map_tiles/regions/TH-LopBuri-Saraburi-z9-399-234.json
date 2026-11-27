@@ -1,0 +1,69 @@
+{
+  "id": "TH-LopBuri-Saraburi-z9-399-234",
+  "z": 9,
+  "x": 399,
+  "y": 234,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "features": [
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S01", "kind": "city", "original": "Sa Bot", "source_url": "@source/ba59a09a55c16c2f", "original_bbox": [84, 19, 123, 36], "source_printed_full_literal": "Sa Bot", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S02", "kind": "city", "original": "Lam Narai", "source_url": "@source/ba59a09a55c16c2f", "original_bbox": [186, 20, 241, 37], "source_printed_full_literal": "Lam Narai", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S03", "kind": "city", "original": "Khok Samrong", "source_url": "@source/ba59a09a55c16c2f", "original_bbox": [38, 65, 89, 103], "source_printed_full_literal": "Khok Samrong", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S04", "kind": "city", "original": "Tha Luang", "source_url": "@source/ba59a09a55c16c2f", "original_bbox": [175, 72, 234, 92], "source_printed_full_literal": "Tha Luang", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S05", "kind": "city", "original": "Lop Buri", "source_url": "@source/ba59a09a55c16c2f", "original_bbox": [1, 174, 48, 192], "source_printed_full_literal": "Lop Buri", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S06", "kind": "city", "original": "Nong Don", "source_url": "@source/ba59a09a55c16c2f", "original_bbox": [31, 217, 87, 238], "source_printed_full_literal": "Nong Don", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S07", "kind": "city", "original": "Kaeng Khoi", "source_url": "@source/ba59a09a55c16c2f", "original_bbox": [134, 254, 196, 273], "source_printed_full_literal": "Kaeng Khoi", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S08", "kind": "city", "original": "Saraburi", "source_url": "@source/235b22e8b7a37e5f", "original_bbox": [111, 277, 157, 294], "source_printed_full_literal": "Saraburi", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S09", "kind": "city", "original": "Phra Nakhon Si Ayutthaya", "source_url": "@source/235b22e8b7a37e5f", "original_bbox": [-25, 322, 38, 382], "source_printed_full_literal": "Phra Nakhon Si Ayutthaya", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S10", "kind": "city", "original": "Wihan Daeng", "source_url": "@source/235b22e8b7a37e5f", "original_bbox": [145, 339, 182, 376], "source_printed_full_literal": "Wihan Daeng", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S11", "kind": "city", "original": "Wang Noi", "source_url": "@source/235b22e8b7a37e5f", "original_bbox": [35, 389, 90, 409], "source_printed_full_literal": "Wang Noi", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S12", "kind": "city", "original": "Pathum Thani", "source_url": "@source/235b22e8b7a37e5f", "original_bbox": [-26, 459, 17, 493], "source_printed_full_literal": "Pathum Thani", "source_glyph_complete": true},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S13", "kind": "city", "original": "Lam Sai", "source_url": "@source/235b22e8b7a37e5f", "original_bbox": [92, 492, 137, 509], "source_printed_full_literal": "Lam Sai", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S01", "zh": "沙博", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "5034bfc607706f853a6eec51936342c4b8c9046253841b006f993707b6c6b597"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S02", "zh": "南那莱", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "9576499179598df2724957e99ef41d1b42d0ae7ffe1555ece7e1e83a223cfde1"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S03", "zh": "科三隆", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "85fd4335a3dc612899bf909c553a2eacd302268bf4105ca6ef8123c4d205f75d"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S04", "zh": "塔銮", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "b5a0dc3a2bf9c7d57d86daacfb851aa062d490baf5e6a9aa020c0035229fe8c3"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S05", "zh": "华富里", "source": "@source/6cb6b62f9bf42734", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "7980bd8ec3f64e4d9b1268163ce4ae28c222f81015376a1a0be6f359677d1857"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S06", "zh": "廊敦", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "757c3e283f08898564a136f94a9d0f44d82d772ac7cea8d1f13f3b5e601c0e0a"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S07", "zh": "耿奎", "source": "@source/6cb6b62f9bf42734", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "7b95826841389ad2c6c0b18f7241380b2c1ef5649793ee5ff8beea9cfe22aee9"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S08", "zh": "沙拉武里", "source": "@source/6cb6b62f9bf42734", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "4b2477fd8ec3d307ebd10b7041a1943a3ea0b9a51078ffbfcce05444a5a8fd0c"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S09", "zh": "大城", "source": "@source/6cb6b62f9bf42734", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "b1ddb6093de14479e7687da6702a82103ab64f117352e1553f9c31fa3aa3abdb"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S10", "zh": "威汉登", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "f2924cb6de19e99e59c636df7949e2a8f262baa6f5f57e0ba62cc10fd43c3f78"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S11", "zh": "旺内", "source": "@source/6cb6b62f9bf42734", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "2ed149228d20fdb89fa6463b4d62b4c3249e2ca5a6c57658d779c029596a9a26"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S12", "zh": "巴吞他尼", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "7f78fccf8c2866280aed7ce79a18263c272dce0dce1e1788ab3bebb73f15db9e"},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S13", "zh": "兰赛", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "fa019def7dcdf846528f8ae4bbf3e45ce7b65ed73c6897f42bd1db113bf9f9ff"}
+  ],
+  "layouts": [
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S01", "x": 103.5, "y": 27.5, "font_style": "regular", "font_size": 12, "lines": ["沙博"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S02", "x": 213.5, "y": 28.5, "font_style": "regular", "font_size": 12, "lines": ["南那莱"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S03", "x": 63.5, "y": 84.0, "font_style": "regular", "font_size": 12, "lines": ["科三隆"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S04", "x": 204.5, "y": 82.0, "font_style": "regular", "font_size": 12, "lines": ["塔銮"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S05", "x": 24.5, "y": 183.0, "font_style": "regular", "font_size": 12, "lines": ["华富里"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S06", "x": 59.0, "y": 227.5, "font_style": "regular", "font_size": 12, "lines": ["廊敦"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S07", "x": 165.0, "y": 263.5, "font_style": "regular", "font_size": 12, "lines": ["耿奎"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S08", "x": 134.0, "y": 285.5, "font_style": "regular", "font_size": 12, "lines": ["沙拉武里"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S09", "x": 13.5, "y": 352.0, "font_style": "regular", "font_size": 12, "lines": ["大城"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S10", "x": 163.5, "y": 357.5, "font_style": "regular", "font_size": 12, "lines": ["威汉登"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S11", "x": 62.5, "y": 399.0, "font_style": "regular", "font_size": 12, "lines": ["旺内"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S12", "x": 31, "y": 476.0, "font_style": "regular", "font_size": 12, "lines": ["巴吞他尼"]},
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-S13", "x": 114.5, "y": 500.5, "font_style": "regular", "font_size": 12, "lines": ["兰赛"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Nakhon Nayok", "source_url": "@source/235b22e8b7a37e5f", "id": "TH-LopBuri-Saraburi-z9-399-234-shared-ICW9-111", "original_bbox": [222, 389, 265, 426], "owner_region": "Indochina-West-z9-400-232", "feature_id": "ICW9-111", "review_notes": "Complete original seam is attributed to the already-rendered Source owner."}
+  ],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "9/399/234.png",
+    "9/399/235.png"
+  ],
+  "context_tiles": [
+    "9/398/235.png",
+    "9/400/235.png"
+  ],
+  "canonical_captions": [
+    {"id": "TH-LopBuri-Saraburi-z9-399-234-C3628", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3628, "original_Chinese_name": "空銮", "lat_f32_bits": 1096878307, "lon_f32_bits": 1120488100, "flags": 0, "level": 1}, "layout": {"x": 36.011111111118225, "y": 458.9935249909249, "font_size": 12, "font_style": "regular", "lines": ["空銮"]}}
+  ]
+}

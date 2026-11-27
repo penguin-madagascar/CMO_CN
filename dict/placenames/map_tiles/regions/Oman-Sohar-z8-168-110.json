@@ -1,0 +1,29 @@
+{
+  "id": "Oman-Sohar-z8-168-110",
+  "z": 8,
+  "x": 168,
+  "y": 110,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/168/110.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "Oman-Sohar-z8-168-110-Sohar", "kind": "city", "original": "Sohar", "original_bbox": [85, 32, 127, 53], "source_url": "@source/dcc9002f0c1f3875", "source_glyph_complete": true, "source_printed_full_literal": "Sohar"}
+  ],
+  "translations": [
+    {"id": "Oman-Sohar-z8-168-110-Sohar", "zh": "苏哈尔", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "89d0b5a10a10f4c39c63776227006cb8bb07b5dff2b4d2924a996536307b0935", "review_notes": "沿用正式地图同一地名的中文，对照原版字形和已有缩放位置。"}
+  ],
+  "layouts": [
+    {"id": "Oman-Sohar-z8-168-110-Sohar", "x": 113, "y": 46.5, "font_size": 12, "font_style": "regular", "lines": ["苏哈尔"]}
+  ],
+  "symbols": [
+    {"id": "Oman-Sohar-z8-168-110-Sohar-circle", "feature_id": "Oman-Sohar-z8-168-110-Sohar", "kind": "circle", "x": 89.5, "y": 36.5, "size": 7, "outline_width": 1, "original_bbox": [85, 32, 94, 41]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "Oman-Sohar-z8-168-110-Cities3016", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3016, "original_Chinese_name": "苏韦格", "lat_f32_bits": 1103023015, "lon_f32_bits": 1113964835, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 216.5, "y": 135.5, "font_style": "regular", "font_size": 12, "lines": ["苏韦格"]}}
+  ]
+}

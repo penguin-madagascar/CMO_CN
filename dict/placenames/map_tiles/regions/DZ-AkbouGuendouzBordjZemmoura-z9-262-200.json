@@ -1,0 +1,38 @@
+{
+  "id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200",
+  "z": 9,
+  "x": 262,
+  "y": 200,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/262/200.png"
+  ],
+  "context_tiles": [
+    "9/262/201.png",
+    "9/263/200.png"
+  ],
+  "features": [
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S01", "kind": "city", "original": "Akbou", "original_bbox": [94, 54, 132, 71], "source_url": "@source/051bf1ea01536b06", "source_glyph_complete": true, "source_printed_full_literal": "Akbou"},
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S02", "kind": "city", "original": "Guendouz", "original_bbox": [70, 95, 126, 112], "source_url": "@source/051bf1ea01536b06", "source_glyph_complete": true, "source_printed_full_literal": "Guendouz"},
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S03", "kind": "city", "original": "Bordj Zemmoura", "original_bbox": [196, 132, 256, 166], "source_url": "@source/051bf1ea01536b06", "source_glyph_complete": true, "source_printed_full_literal": "Bordj Zemmoura"}
+  ],
+  "translations": [
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S01", "zh": "阿克布", "status": "approved", "source": "@source/327b42357f81fddc", "record_sha256": "39a001da921dac29d244abb91d0f00b201699bd28e969b5372a26a35cf2d6d47", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S02", "zh": "根杜兹", "status": "approved", "source": "@source/63582e755d3a3c0d", "record_sha256": "94a4d83a24cb3b4d14943c63e444790a1e4f8df8a11c59ec1a07452aca3b02e3", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S03", "zh": "布尔吉泽穆拉", "status": "approved", "source": "@source/76cbee50e9e249ee", "record_sha256": "88c0787ce6a2136f348e9a5932b41f129778dcb8e8e5e294603788da5bba464a", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S01", "x": 113, "y": 63, "font_style": "regular", "font_size": 12, "lines": ["阿克布"]},
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S02", "x": 97, "y": 105, "font_style": "regular", "font_size": 12, "lines": ["根杜兹"]},
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-S03", "x": 216, "y": 149, "font_style": "regular", "font_size": 12, "lines": ["布尔吉泽穆拉"]}
+  ],
+  "shared_sources": [
+    {"kind": "region", "original": "Bordj Bou Arreridjj", "source_url": "@source/051bf1ea01536b06", "id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-shared-DZ9-MsilaHammamDhalaa-z9-262-201-N01", "original_bbox": [172, 208, 223, 269], "owner_region": "DZ9-MsilaHammamDhalaa-z9-262-201", "feature_id": "DZ9-MsilaHammamDhalaa-z9-262-201-N01", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "DZ-AkbouGuendouzBordjZemmoura-z9-262-200-Cities1172", "kind": "region", "origin": "canonical_wwp", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1172, "original_Chinese_name": "阿希尔", "lat_f32_bits": 1108361573, "lon_f32_bits": 1083446269, "flags": 0, "level": 1}, "layout": {"x": 149, "y": 244, "font_style": "regular", "font_size": 12, "lines": ["阿希尔"]}}
+  ]
+}

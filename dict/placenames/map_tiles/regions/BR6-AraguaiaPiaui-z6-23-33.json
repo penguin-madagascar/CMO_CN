@@ -1,0 +1,57 @@
+{
+  "id": "BR6-AraguaiaPiaui-z6-23-33",
+  "z": 6,
+  "x": 23,
+  "y": 33,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "6/23/33.png",
+    "6/24/33.png"
+  ],
+  "context_tiles": [
+    "6/23/32.png",
+    "6/24/32.png",
+    "6/23/34.png",
+    "6/24/34.png"
+  ],
+  "features": [
+    {"id": "BR6-R33-N01", "kind": "water", "original": "Araguaia River", "original_bbox": [57, 117, 108, 152], "source_url": "@source/6df785f9432ff57f", "source_glyph_complete": true, "source_printed_full_literal": "Araguaia River"},
+    {"id": "BR6-R33-N02", "kind": "city", "original": "Porto Nacional", "original_bbox": [96, 229, 147, 264], "source_url": "@source/6df785f9432ff57f", "source_glyph_complete": true, "source_printed_full_literal": "Porto Nacional"},
+    {"id": "BR6-R33-N03", "kind": "admin1", "original": "PIAUÍ", "original_bbox": [350, 85, 390, 100], "source_url": "@source/5647c5916ce7b855", "source_glyph_complete": true, "source_printed_full_literal": "PIAUÍ"},
+    {"id": "BR6-R33-N04", "kind": "city", "original": "Picos", "original_bbox": [412, 63, 447, 82], "source_url": "@source/5647c5916ce7b855", "source_glyph_complete": true, "source_printed_full_literal": "Picos"},
+    {"id": "BR6-R33-N05", "kind": "city", "original": "Petrolina", "original_bbox": [457, 168, 508, 188], "source_url": "@source/5647c5916ce7b855", "source_glyph_complete": true, "source_printed_full_literal": "Petrolina"},
+    {"id": "BR6-R33-N06", "kind": "city", "original": "Xique-Xique", "original_bbox": [355, 235, 396, 272], "source_url": "@source/5647c5916ce7b855", "source_glyph_complete": true, "source_printed_full_literal": "Xique-Xique"}
+  ],
+  "translations": [
+    {"id": "BR6-R33-N01", "zh": "阿拉瓜亚河", "status": "approved", "source": "@source/0e41bc0b14a3aebe", "record_sha256": "07bfff9f4eae5b80eaac49f471e86cf83f6b27d1767cb48f22c898b17f7e30f9", "review_notes": "核对完整原图及当地资料，采用已有中文译名；州市名称保持正式写法。"},
+    {"id": "BR6-R33-N02", "zh": "纳雄耐尔港", "status": "approved", "source": "@source/635c24b4be34f487", "record_sha256": "c182ea8b7a959a08ef50bf8b9b03c8d5d24ebc1c281f193ce85c2d05eb61e265", "review_notes": "核对完整原图及当地资料，采用已有中文译名；州市名称保持正式写法。"},
+    {"id": "BR6-R33-N03", "zh": "皮奥伊州", "status": "approved", "source": "@source/89a22882dc2a42ba", "record_sha256": "076a98425f33d03b239721880ea5a291ef9a09ca3aa03f43f5a94e48ad542383", "review_notes": "核对完整原图及当地资料，采用已有中文译名；州市名称保持正式写法。"},
+    {"id": "BR6-R33-N04", "zh": "皮库斯", "status": "approved", "source": "@source/89a22882dc2a42ba", "record_sha256": "d3d41e4bceb26c4e05d58940a78f4e8c35baa16fba14ddf6c3f3c033dd3a0e00", "review_notes": "核对完整原图及当地资料，采用已有中文译名；州市名称保持正式写法。"},
+    {"id": "BR6-R33-N05", "zh": "彼得罗利纳", "status": "approved", "source": "@source/c29366941c6335f5", "record_sha256": "66cd55db55d940f8867b6df865921dd294d5dfa855e328c69478872afabe060f", "review_notes": "核对完整原图及当地资料，采用已有中文译名；州市名称保持正式写法。"},
+    {"id": "BR6-R33-N06", "zh": "希克希克", "status": "approved", "source": "@source/4c37c8ecc71134ae", "record_sha256": "307664f961cb0d5e436da17ac7dfb87760f6e8286f2fa184cc92641f22709d76", "review_notes": "核对完整原图及当地资料，采用已有中文译名；州市名称保持正式写法。"}
+  ],
+  "layouts": [
+    {"id": "BR6-R33-N01", "x": 87, "y": 137, "font_style": "regular", "font_size": 11, "lines": ["阿拉瓜亚河"]},
+    {"id": "BR6-R33-N02", "x": 131, "y": 244, "font_style": "regular", "font_size": 11, "lines": ["纳雄耐尔港"]},
+    {"id": "BR6-R33-N03", "x": 370, "y": 92, "font_style": "bold", "font_size": 11, "lines": ["皮奥伊州"]},
+    {"id": "BR6-R33-N04", "x": 438, "y": 76, "font_style": "regular", "font_size": 11, "lines": ["皮库斯"]},
+    {"id": "BR6-R33-N05", "x": 482, "y": 183, "font_style": "regular", "font_size": 11, "lines": ["彼得罗利纳"]},
+    {"id": "BR6-R33-N06", "x": 386, "y": 250, "font_style": "regular", "font_size": 11, "lines": ["希克希克"]}
+  ],
+  "symbols": [
+    {"id": "BR6-R33-N01-point", "feature_id": "BR6-R33-N01", "kind": "circle", "size": 7, "outline_width": 1, "x": 61, "y": 121, "original_bbox": [57, 117, 66, 126]},
+    {"id": "BR6-R33-N02-point", "feature_id": "BR6-R33-N02", "kind": "circle", "size": 7, "outline_width": 1, "x": 100, "y": 233, "original_bbox": [96, 229, 105, 238]},
+    {"id": "BR6-R33-N04-point", "feature_id": "BR6-R33-N04", "kind": "circle", "size": 7, "outline_width": 1, "x": 416, "y": 67, "original_bbox": [412, 63, 421, 72]},
+    {"id": "BR6-R33-N05-point", "feature_id": "BR6-R33-N05", "kind": "circle", "size": 7, "outline_width": 1, "x": 461, "y": 172, "original_bbox": [457, 168, 466, 177]},
+    {"id": "BR6-R33-N06-point", "feature_id": "BR6-R33-N06", "kind": "circle", "size": 7, "outline_width": 1, "x": 359, "y": 239, "original_bbox": [355, 235, 364, 244]}
+  ],
+  "shared_sources": [
+    {"id": "BR6-R33-SH-Maraba", "owner_region": "AM-NorthSouthAmerica-z6-19-29", "feature_id": "AM31-43-Marab", "original": "Marabá", "kind": "city", "original_bbox": [64, -18, 110, 3], "source_url": "@source/3dd0f7c710f2e66d", "review_notes": "马拉巴原文跨北侧边缘，原所属区保持完整中文渲染。"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "BR6-R33-C-Cities189", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 189, "original_Chinese_name": "阿拉瓜伊纳", "lat_f32_bits": 3236306323, "lon_f32_bits": 3259028529, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 110.03593749999982, "y": 72.13804025245554, "font_style": "regular", "font_size": 12, "lines": ["阿拉瓜伊纳"]}},
+    {"id": "BR6-R33-C-Cities370", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 370, "original_Chinese_name": "帕尔马斯", "lat_f32_bits": 3240275424, "lon_f32_bits": 3259060102, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 104.55451388888923, "y": 209.17984650271865, "font_style": "regular", "font_size": 12, "lines": ["帕尔马斯"]}}
+  ]
+}

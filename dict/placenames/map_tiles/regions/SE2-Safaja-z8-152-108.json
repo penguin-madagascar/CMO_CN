@@ -1,0 +1,26 @@
+{
+  "id": "SE2-Safaja-z8-152-108",
+  "z": 8,
+  "x": 152,
+  "y": 108,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/152/108.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "SE2-002", "kind": "city", "original": "Safaja", "original_bbox": [30, 56, 72, 80], "source_url": "@source/884a19b89d427ffd"}
+  ],
+  "symbols": [
+    {"id": "SE2-N001", "feature_id": "SE2-002", "kind": "circle", "x": 34.5, "y": 60.5, "size": 9, "outline_width": 1, "original_bbox": [30, 56, 39, 65]}
+  ],
+  "translations": [
+    {"id": "SE2-002", "zh": "塞法杰", "status": "approved", "source": "@source/884a19b89d427ffd", "record_sha256": "19c86c8501ce922edddafa10a509a40c1b8999c10efe049adffff7c9de9da623", "review_notes": "Different SOURCE-qualified project caption. Preserve original supplier literal/box/URL; no official name, numeric supplier ID/admin or provider vector is asserted. Actual font, native display, bounds and different TARGET review remain pending. Original supplier PNG URI is the executable HTTP evidence entry; exact different SOURCE CJK contract and original raw GN/NE/project-wording roles remain independently bound by Root model/per-ID table, not claimed as official Chinese in the PNG. Root-selected actual private author SELF only; different TARGET pending."}
+  ],
+  "layouts": [
+    {"id": "SE2-002", "x": 60, "y": 73, "font_size": 12, "font_style": "regular", "lines": ["塞法杰"]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

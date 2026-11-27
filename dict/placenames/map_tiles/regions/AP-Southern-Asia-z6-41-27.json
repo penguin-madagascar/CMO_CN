@@ -649,5 +649,9 @@
     {"id": "shared-AP-S6-001", "owner_region": "AP-West-Asia-z6-41-19", "feature_id": "AP-W6-122", "kind": "city", "original": "Bandar Abbas", "source_url": "@source/1f19597ba06a7bb1", "original_bbox": [253, -11, 296, 24], "review_notes": "@note/shared_sources"},
     {"id": "shared-AP-S6-002", "owner_region": "AP-West-Asia-z6-41-19", "feature_id": "AP-W6-123", "kind": "city", "original": "Agra", "source_url": "@source/6bf2476a84e60f4d", "original_bbox": [1242, -10, 1273, 12], "review_notes": "@note/shared_sources"},
     {"id": "shared-AP-S6-003", "owner_region": "AP-China-Mongolia-z6-50-19", "feature_id": "AP-C6-131", "kind": "admin1", "original": "Guizhou", "source_url": "@source/c99418598e3d79b5", "original_bbox": [2534, -5, 2597, 8], "review_notes": "@note/shared_sources"}
+  ],
+  "canonical_captions": [
+    {"id": "WWP-Cities-3012-z6", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3012, "original_Chinese_name": "塞拉莱", "lat_f32_bits": 1099439827, "lon_f32_bits": 1113087638, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 159.0, "y": 495.0, "font_style": "regular", "font_size": 12, "lines": ["塞拉莱"]}},
+    {"id": "WWP-Cities-3069-z6", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3069, "original_Chinese_name": "帕纳拉诺伊", "lat_f32_bits": 1093928076, "lon_f32_bits": 1123681094, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 3386.0, "y": 757.5, "font_style": "regular", "font_size": 12, "lines": ["帕纳拉诺伊"]}}
   ]
 }

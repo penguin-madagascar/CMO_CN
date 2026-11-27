@@ -43,7 +43,7 @@ namespace CMOLocalizerInstaller
 
         public InstallerForm(string initialPath)
         {
-            this.Text = "Command: Modern Operations (CMO) 完整中文汉化一键安装工具 v4.2.2（适配游戏内部版本 " + ReleaseConstants.GameBuild + "）";
+            this.Text = "Command: Modern Operations (CMO) 完整中文汉化一键安装工具 v4.3.1（适配游戏内部版本 " + ReleaseConstants.GameBuild + "）";
             this.Size = new Size(700, 770);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -771,7 +771,7 @@ namespace CMOLocalizerInstaller
         {
             try
             {
-                string dir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CMOChinese");
+                string dir = CmoPaths.LocalDir;
                 Directory.CreateDirectory(dir);
                 string file = Path.Combine(dir, "installer.log");
                 if (File.Exists(file) && new FileInfo(file).Length > 512 * 1024)
@@ -937,6 +937,12 @@ namespace CMOLocalizerInstaller
 
         public static bool Install(string gamePath, out string errorMsg)
         {
+            return Install(gamePath, WriteRegistrySettings, out errorMsg);
+        }
+
+        // 文件部署仍走同一路径；隔离测试仅替换用户设置副作用。
+        internal static bool Install(string gamePath, Action<string> writeSettings, out string errorMsg)
+        {
             errorMsg = "";
             if (string.IsNullOrEmpty(gamePath) || !File.Exists(Path.Combine(gamePath, "Command.exe")))
             {
@@ -945,14 +951,6 @@ namespace CMOLocalizerInstaller
             }
 
             string curDir = AppDomain.CurrentDomain.BaseDirectory;
-            string dllSrc = Path.Combine(curDir, "CMOLocalizer.dll");
-            string jsonSrc = Path.Combine(curDir, "CMOLocalizer.json");
-
-            if (!File.Exists(dllSrc))
-            {
-                dllSrc = Path.Combine(curDir, "patch_files", "CMOLocalizer.dll");
-                jsonSrc = Path.Combine(curDir, "patch_files", "CMOLocalizer.json");
-            }
 
             // 先探测目标目录可写性：Steam 默认装在 C:\Program Files 下，普通权限写不进去，
             // 而这正是「在别的电脑上、没开游戏也装不上」的首要原因。直接探针比事后猜靠谱。
@@ -966,7 +964,7 @@ namespace CMOLocalizerInstaller
                 return false;
             }
             WriteLog("安装开始：游戏目录=" + gamePath + "；安装包目录=" + curDir
-                + "；用磁盘 DLL=" + File.Exists(dllSrc));
+                + "；载荷来源=安装包内嵌资源");
 
             try
             {
@@ -978,31 +976,15 @@ namespace CMOLocalizerInstaller
                 // 共享冲突拒绝，而旧实现把这个异常吞掉、只能报「未找到资源」——用户实测
                 // 2026-10-18 21:02 在游戏运行时安装拿到的完全不着边际的报错就是这个。
                 // 统一走「写同目录临时文件 + MoveFileEx 原子替换」：重命名不受文件占用影响。
-                if (File.Exists(dllSrc))
-                {
-                    if (!string.Equals(Path.GetFullPath(dllSrc), Path.GetFullPath(dllDest), StringComparison.OrdinalIgnoreCase)
-                        && !CopyFileAtomic(dllSrc, dllDest, out writeErr))
-                    {
-                        errorMsg = writeErr;
-                        return false;
-                    }
-                }
-                else if (!ExtractEmbeddedResource("CMOLocalizer.dll", dllDest, out writeErr))
+                // 发布包只部署自身内嵌字节：旁边或目标目录里的旧载荷不能代表新包。
+                // 无内嵌资源的开发构建明确失败，不把磁盘旧文件登记为 CurrentVersion。
+                if (!ExtractEmbeddedResource("CMOLocalizer.dll", dllDest, out writeErr))
                 {
                     errorMsg = writeErr;
                     return false;
                 }
 
-                if (File.Exists(jsonSrc))
-                {
-                    if (!string.Equals(Path.GetFullPath(jsonSrc), Path.GetFullPath(jsonDest), StringComparison.OrdinalIgnoreCase)
-                        && !CopyFileAtomic(jsonSrc, jsonDest, out writeErr))
-                    {
-                        errorMsg = writeErr;
-                        return false;
-                    }
-                }
-                else if (!ExtractEmbeddedResource("CMOLocalizer.json", jsonDest, out writeErr))
+                if (!ExtractEmbeddedResource("CMOLocalizer.json", jsonDest, out writeErr))
                 {
                     errorMsg = writeErr;
                     return false;
@@ -1026,33 +1008,10 @@ namespace CMOLocalizerInstaller
                     config.AppendChild(runtime);
                 }
 
-                XmlNode typeNode = runtime.SelectSingleNode("appDomainManagerType");
-                if (typeNode == null)
-                {
-                    typeNode = doc.CreateElement("appDomainManagerType");
-                    XmlAttribute attr = doc.CreateAttribute("value");
-                    attr.Value = "CMOLocalizer.LocalizerDomainManager";
-                    typeNode.Attributes.Append(attr);
-                    runtime.AppendChild(typeNode);
-                }
-                else
-                {
-                    typeNode.Attributes["value"].Value = "CMOLocalizer.LocalizerDomainManager";
-                }
-
-                XmlNode asmNode = runtime.SelectSingleNode("appDomainManagerAssembly");
-                if (asmNode == null)
-                {
-                    asmNode = doc.CreateElement("appDomainManagerAssembly");
-                    XmlAttribute attr = doc.CreateAttribute("value");
-                    attr.Value = "CMOLocalizer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
-                    asmNode.Attributes.Append(attr);
-                    runtime.AppendChild(asmNode);
-                }
-                else
-                {
-                    asmNode.Attributes["value"].Value = "CMOLocalizer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
-                }
+                NormalizeDomainManagerSetting(doc, runtime, "appDomainManagerType",
+                    "CMOLocalizer.LocalizerDomainManager");
+                NormalizeDomainManagerSetting(doc, runtime, "appDomainManagerAssembly",
+                    "CMOLocalizer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
 
                 doc.Save(cfgPath);
 
@@ -1082,6 +1041,9 @@ namespace CMOLocalizerInstaller
                 // 部署已全量汉化的 Scenarios HTML 简报/教程正文（内嵌 zip，带 .orig 备份）
                 DeployScenarioHtml(gamePath);
 
+                // 部署汉化后的「快速战斗」表单页（内嵌 zip，带 .orig 备份）
+                DeployQuickBattleHtml(gamePath);
+
                 // 部署汉化地名集（地图矢量地名层的数据源，必须先于标签瓦片重绘）
                 DeployPlacenames(gamePath);
 
@@ -1090,7 +1052,7 @@ namespace CMOLocalizerInstaller
 
                 // 部署自动升级组件并写入设置（开机自启 / 每 6 小时检查）
                 DeployUpdater(gamePath);
-                WriteRegistrySettings(gamePath);
+                writeSettings(gamePath);
 
                 // 兜底：对 zip 未覆盖的 HTML 做标题级替换 (带 .orig 备份)
                 LocalizeScenarioBriefings(Path.Combine(gamePath, "Scenarios"));
@@ -1116,6 +1078,11 @@ namespace CMOLocalizerInstaller
                         + "，安装器 CurrentVersion=" + CurrentVersion);
                 }
                 Dictionary<string, string> manifestFiles = InstallManifest.HashEngineFiles(gamePath);
+                if (!PackageAssets.VerifyEngineFiles(Application.ExecutablePath, manifestFiles, out errorMsg))
+                {
+                    CmoLog.Error(errorMsg);
+                    return false;
+                }
                 if (!InstallManifest.Write(gamePath, CurrentVersion, Application.ExecutablePath, manifestFiles))
                 {
                     errorMsg = "汉化文件已部署，但写入安装清单失败（状态可能显示不准，重新安装即可修复）。";
@@ -1273,12 +1240,31 @@ namespace CMOLocalizerInstaller
         /// </summary>
         private static void DeployScenarioHtml(string gamePath)
         {
+            DeployHtmlBundle(gamePath, "SCEN_HTML_ZIP", "Scenarios/");
+        }
+
+        /// <summary>
+        /// 部署汉化后的「快速战斗」表单页（内嵌 zip）。
+        /// 为什么需要：�速战斗的界面不是词典里的固定串，而是游戏从
+        /// QuickBattle/&lt;条目&gt;/Form.html 读出来、丢进 WinForms WebBrowser 渲染的整页 HTML；
+        /// 不换文件就只能看到英文原文。各页的 name/value 属性是 Script.lua 的数据契约，
+        /// 汉化时只改标签之间的文本（见 scripts/quickbattle_html.py 的 verify）。
+        /// </summary>
+        private static void DeployQuickBattleHtml(string gamePath)
+        {
+            DeployHtmlBundle(gamePath, "QB_HTML_ZIP", "QuickBattle/");
+        }
+
+        /// <summary>
+        /// 把一个内嵌 HTML 包写进游戏目录，覆盖前先写 .orig。
+        /// 已存在的 .orig 永不覆盖：卸载必须能 100% 还原英文原件。
+        /// </summary>
+        private static void DeployHtmlBundle(string gamePath, string resourceName, string requiredPrefix)
+        {
             try
             {
-                string scenDir = Path.Combine(gamePath, "Scenarios");
-                if (!Directory.Exists(scenDir)) return;
                 Assembly asm = Assembly.GetExecutingAssembly();
-                using (Stream s = asm.GetManifestResourceStream("SCEN_HTML_ZIP"))
+                using (Stream s = asm.GetManifestResourceStream(resourceName))
                 {
                     if (s == null) return;
                     using (ZipArchive zip = new ZipArchive(s, ZipArchiveMode.Read))
@@ -1286,6 +1272,11 @@ namespace CMOLocalizerInstaller
                         foreach (ZipArchiveEntry e in zip.Entries)
                         {
                             if (e.Length == 0) continue;
+                            if (!e.FullName.Replace('\\', '/').StartsWith(requiredPrefix, StringComparison.OrdinalIgnoreCase))
+                            {
+                                CmoLog.Warn("跳过越界 zip 条目: " + e.FullName);
+                                continue;
+                            }
                             string dest;
                             if (!CmoPaths.TryResolveInside(gamePath, e.FullName, out dest))
                             {
@@ -1310,6 +1301,22 @@ namespace CMOLocalizerInstaller
                             }
                         }
                     }
+                }
+            }
+            catch { }
+        }
+
+        /// <summary>卸载时按 .orig 还原「快速战斗」表单页。</summary>
+        private static void RestoreQuickBattleHtml(string gamePath)
+        {
+            string root = Path.Combine(gamePath, "QuickBattle");
+            if (!Directory.Exists(root)) return;
+            try
+            {
+                foreach (string orig in Directory.GetFiles(root, "*.orig", SearchOption.AllDirectories))
+                {
+                    string target = orig.Substring(0, orig.Length - ".orig".Length);
+                    File.Copy(orig, target, true);
                 }
             }
             catch { }
@@ -1391,6 +1398,7 @@ namespace CMOLocalizerInstaller
                     }
                     // .orig 只用于卸载还原；补译必须基于当前版本，不能回退更新后的正文。
                     Func<string, string> replacement = value => EncodeScenarioReplacement(value, encoding);
+                    text = EnsureCharsetDeclaration(text, encoding);
                     string trans = text
                         .Replace("<h2>Briefing</h2>", replacement("<h2>作战任务简报 (Briefing)</h2>"))
                         .Replace("<h1>Introduction</h1>", replacement("<h1>战役背景导言 (Introduction)</h1>"))
@@ -1418,6 +1426,35 @@ namespace CMOLocalizerInstaller
                 }
             }
             catch { }
+        }
+
+        /// <summary>
+        /// R78：给简报 HTML 补上编码声明。
+        /// 实测理由：这些页面原本都没有 charset 声明，游戏用 mshtml 渲染；没有声明时
+        /// mshtml 回退到 ANSI 代码页，把 UTF-8 中文按 GBK 解码，整页变成乱码
+        ///（「娆㈣繋鏉ュ埌楂樼骇…」而不是「欢迎来到高级…」）。英文原文是纯 ASCII，
+        /// 所以译文出现之前这个缺失一直没有表现。补声明后同一控件实测渲染正确。
+        /// </summary>
+        private static string EnsureCharsetDeclaration(string document, Encoding encoding)
+        {
+            string head = document.Length > 2048 ? document.Substring(0, 2048) : document;
+            if (System.Text.RegularExpressions.Regex.IsMatch(head, "<meta[^>]+charset\\s*=",
+                    System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+            {
+                return document;
+            }
+            string name = encoding.CodePage == 65001 ? "utf-8" : encoding.WebName;
+            string meta = "<meta charset=\"" + name + "\">";
+            System.Text.RegularExpressions.Match tag = System.Text.RegularExpressions.Regex.Match(
+                document, "<head[^>]*>", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            if (tag.Success)
+            {
+                return document.Insert(tag.Index + tag.Length, meta);
+            }
+            tag = System.Text.RegularExpressions.Regex.Match(
+                document, "<html[^>]*>", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            int at = tag.Success ? tag.Index + tag.Length : 0;
+            return document.Insert(at, "<head>" + meta + "</head>");
         }
 
         private static void RestoreScenarioBriefings(string scenDir)
@@ -1449,52 +1486,26 @@ namespace CMOLocalizerInstaller
             try
             {
                 string cacheDir = MapLabelTilePack.CacheDirectory(gamePath);
-                // Capture old paths before applying coverage; then include all newly supplied pack tiles.
+                // Only fallback paths need a second pass; the pack writer produces final covered tiles.
                 var pngs = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
                 foreach (string file in MapLabelTilePack.CacheFiles(cacheDir))
                     if (file.EndsWith(".png", StringComparison.OrdinalIgnoreCase)) pngs.Add(file);
-                if (pack != null) saved += pack.PrepareCacheRefresh(gamePath);
-                else
+                if (pack == null)
                 {
                     if (!Directory.Exists(cacheDir)) return 0;
                     MapLabelTilePack.EnsureCacheBackup(gamePath);
                 }
-                foreach (string file in MapLabelTilePack.CacheFiles(cacheDir))
-                    if (file.EndsWith(".png", StringComparison.OrdinalIgnoreCase)) pngs.Add(file);
-
-                List<MapLabelPlace> list = new List<MapLabelPlace>();
-                string synWwp = Path.Combine(gamePath, @"WW\PlacenameSets\Synoptic\0000_0000.wwp");
-                string citWwp = Path.Combine(gamePath, @"WW\PlacenameSets\Cities\0000_0000.wwp");
-
-                Action<string, int> loadWwp = (path, lvl) =>
+                List<MapLabelPlace> list = MapLabelCatalog.LoadBasePlaces(gamePath);
+                // 省/州级标签（R88）来自词典 places 分区：缓存重绘与运行时必须用同一份数据，
+                // 否则安装器重绘的瓦片会缺省级名，而运行时新瓦片有——同一张地图两副样子。
+                try
                 {
-                    if (!File.Exists(path)) return;
-                    try
-                    {
-                        using (BinaryReader br = new BinaryReader(File.OpenRead(path), Encoding.UTF8))
-                        {
-                            int count = br.ReadInt32();
-                            for (int i = 0; i < count; i++)
-                            {
-                                string name = br.ReadString();
-                                float lat = br.ReadSingle();
-                                float lon = br.ReadSingle();
-                                br.ReadUInt32();
-                                list.Add(new MapLabelPlace { Name = name, Lat = lat, Lon = lon, Level = lvl });
-                            }
-                        }
-                    }
-                    catch { }
-                };
-
-                string catalogPath = Path.Combine(gamePath, "ChineseMapLabels.dat");
-                if (File.Exists(catalogPath)) list.AddRange(MapLabelCatalog.Load(catalogPath).Places);
-                else
-                {
-                    loadWwp(synWwp, 0);
-                    loadWwp(citWwp, 1);
+                    string dictPath = Path.Combine(gamePath, "CMOLocalizer.json");
+                    list.AddRange(MapLabelRegions.LoadFromDictionary(dictPath));
                 }
+                catch { }
                 if (list.Count == 0 && pack == null) return 0;
+                if (pack != null) saved += pack.PrepareCacheRefresh(gamePath, list);
 
                 Parallel.ForEach(pngs, pngPath =>
                 {
@@ -1507,19 +1518,11 @@ namespace CMOLocalizerInstaller
                         string fName = parts[parts.Length - 1];
                         int y = int.Parse(fName.Substring(0, fName.IndexOf('.')));
 
+                        if (pack != null && pack.ContainsTile(z, x, y)) return;
                         int candidates;
                         int rendered;
                         byte[] png = MapLabelRenderer.RenderTileBytes(list, pack, z, x, y, out candidates, out rendered);
-                        byte[] supplied;
-                        int labels;
-                        bool covered = pack != null && pack.TryGetTile(z, x, y, out supplied, out labels);
-                        // Pack writes were counted by ApplyToCache; legacy paths retain their counted redraw contract.
-                        if (covered)
-                        {
-                            if (MapLabelTilePack.WriteCacheBytes(pngPath, png))
-                                System.Threading.Interlocked.Increment(ref saved);
-                        }
-                        else if (list.Count != 0)
+                        if (list.Count != 0)
                         {
                             // Preserve legacy redraw writes/counts, including explicit refresh of identical pixels.
                             MapLabelTilePack.WriteCacheBytes(pngPath, png, true);
@@ -1544,27 +1547,29 @@ namespace CMOLocalizerInstaller
             string temp = dest + ".cmo_new-" + Guid.NewGuid().ToString("N");
             try
             {
-                string source = Path.Combine(sourceDir, "ChineseMapTiles.dat");
-                if (!File.Exists(source)) source = Path.Combine(sourceDir, "patch_files", "ChineseMapTiles.dat");
-                if (File.Exists(source))
+                using (Stream resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("MAP_TILES"))
                 {
-                    if (string.Equals(Path.GetFullPath(source), Path.GetFullPath(dest), StringComparison.OrdinalIgnoreCase))
+                    if (resource != null)
                     {
-                        MapLabelTilePack.Load(source);
-                        return true;
-                    }
-                    File.Copy(source, temp);
-                }
-                else
-                {
-                    using (Stream resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("MAP_TILES"))
-                    {
-                        // 兼容没有瓦片资源的旧安装器测试 fixture。正常构建明确嵌入正式资产。
-                        if (resource == null) return true;
+                        // 内嵌包属于本版安装器，升级时游戏或安装器目录可能还留着旧 DAT。
                         using (FileStream output = File.Create(temp)) resource.CopyTo(output);
+                    }
+                    else
+                    {
+                        string source = Path.Combine(sourceDir, "ChineseMapTiles.dat");
+                        if (!File.Exists(source)) source = Path.Combine(sourceDir, "patch_files", "ChineseMapTiles.dat");
+                        if (!File.Exists(source)) return true;
+                        if (string.Equals(Path.GetFullPath(source), Path.GetFullPath(dest), StringComparison.OrdinalIgnoreCase))
+                        {
+                            MapLabelTilePack.Load(source);
+                            return true;
+                        }
+                        File.Copy(source, temp);
                     }
                 }
                 MapLabelTilePack.Load(temp);
+                if (File.Exists(dest) && new FileInfo(dest).Length == new FileInfo(temp).Length
+                    && InstallManifest.Sha256OfFile(dest) == InstallManifest.Sha256OfFile(temp)) return true;
                 ReplaceFileAtomic(temp, dest);
                 return true;
             }
@@ -1697,6 +1702,15 @@ namespace CMOLocalizerInstaller
         //  自动升级（更新助手 CMO_Updater.exe）集成
         // ──────────────────────────────────────────────────────────────
         // 发布常量的唯一来源是 CMOShared.ReleaseConstants（禁止在本文件再写字面量副本）。
+        private static void NormalizeDomainManagerSetting(XmlDocument doc, XmlNode runtime, string name, string value)
+        {
+            XmlNodeList existing = runtime.SelectNodes(name);
+            XmlElement setting = existing.Count == 0 ? doc.CreateElement(name) : (XmlElement)existing[0];
+            for (int i = existing.Count - 1; i > 0; i--) runtime.RemoveChild(existing[i]);
+            if (existing.Count == 0) runtime.AppendChild(setting);
+            setting.SetAttribute("value", value);
+        }
+
         public const string CurrentVersion = ReleaseConstants.Version;
         private const string RegPath = ReleaseConstants.RegPath;
         private const string RunKeyName = ReleaseConstants.RunKeyName;
@@ -1967,6 +1981,11 @@ namespace CMOLocalizerInstaller
 
         public static bool Uninstall(string gamePath, out string errorMsg)
         {
+            return Uninstall(gamePath, CleanupUpdater, out errorMsg);
+        }
+
+        internal static bool Uninstall(string gamePath, Action<string> cleanupUpdater, out string errorMsg)
+        {
             errorMsg = "";
             if (string.IsNullOrEmpty(gamePath) || !File.Exists(Path.Combine(gamePath, "Command.exe")))
             {
@@ -2022,6 +2041,9 @@ namespace CMOLocalizerInstaller
                 // 还原 Scenarios 下的 .orig 简报备份
                 RestoreScenarioBriefings(Path.Combine(gamePath, "Scenarios"));
 
+                // 还原 QuickBattle 下的 .orig 表单页备份
+                RestoreQuickBattleHtml(gamePath);
+
                 // 还原 World Wind 标注图层瓦片
                 RestoreMapLabelTiles(gamePath);
 
@@ -2032,7 +2054,7 @@ namespace CMOLocalizerInstaller
                 RestoreSymbolsAndLauncher(gamePath);
 
                 // 清理自动升级：结束助手进程、删除开机启动项、注册表设置与助手本体
-                CleanupUpdater(gamePath);
+                cleanupUpdater(gamePath);
 
                 return true;
             }

@@ -1,0 +1,36 @@
+{
+  "id": "CN-QingyuanZhenghe-z10-850-430",
+  "z": 10,
+  "x": 850,
+  "y": 430,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/850/430.png"
+  ],
+  "context_tiles": [
+    "10/849/430.png",
+    "10/850/431.png",
+    "10/849/431.png"
+  ],
+  "features": [
+    {"id": "CN-QingyuanZhenghe-z10-850-430-QingyuanCounty", "kind": "city", "original": "Qingyuan County", "original_bbox": [136, 30, 198, 72], "source_url": "@source/e8c3ab1e37bf3372", "source_glyph_complete": true, "source_printed_full_literal": "Qingyuan County"},
+    {"id": "CN-QingyuanZhenghe-z10-850-430-Lingyao", "kind": "city", "original": "Lingyao", "original_bbox": [93, 166, 133, 184], "source_url": "@source/e8c3ab1e37bf3372", "source_glyph_complete": true, "source_printed_full_literal": "Lingyao"},
+    {"id": "CN-QingyuanZhenghe-z10-850-430-Tieshan", "kind": "city", "original": "Tieshan", "original_bbox": [49, 227, 94, 244], "source_url": "@source/e8c3ab1e37bf3372", "source_glyph_complete": true, "source_printed_full_literal": "Tieshan"}
+  ],
+  "translations": [
+    {"id": "CN-QingyuanZhenghe-z10-850-430-QingyuanCounty", "zh": "庆元县", "status": "approved", "source": "@source/66056df85d7bc3dd", "record_sha256": "be6bc2328d5f7ea761867e0d7e606c2edb0ad21d33f94d81b26175aa063d10c7", "review_notes": "完整原图字形与同地官方汉字对照。"},
+    {"id": "CN-QingyuanZhenghe-z10-850-430-Lingyao", "zh": "岭腰", "status": "approved", "source": "@source/c2f75cc445e29c1a", "record_sha256": "9125bf3833a9cf16f98be3e527a7f83ca5cd4cd881197ee50ebbb1e7006ac5d5", "review_notes": "完整原图字形与同地官方汉字对照。"},
+    {"id": "CN-QingyuanZhenghe-z10-850-430-Tieshan", "zh": "铁山", "status": "approved", "source": "@source/c2f75cc445e29c1a", "record_sha256": "51bd332d831769230800ab5a929a82bc757560d114ec68124c85185edc9efc71", "review_notes": "完整原图字形与同地官方汉字对照。"}
+  ],
+  "layouts": [
+    {"id": "CN-QingyuanZhenghe-z10-850-430-QingyuanCounty", "x": 167.0, "y": 51.0, "lines": ["庆元县"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-QingyuanZhenghe-z10-850-430-Lingyao", "x": 113.0, "y": 175.0, "lines": ["岭腰"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-QingyuanZhenghe-z10-850-430-Tieshan", "x": 71.5, "y": 235.5, "lines": ["铁山"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-QingyuanZhenghe-z10-850-430-SharedZhenghe", "owner_region": "CN-ZhengheJianouEast-z10-849-431-2x1", "feature_id": "CN-ZhengheJianouEast-z10-849-431-2x1-N01", "kind": "city", "original": "Zhenghe", "original_bbox": [-10, 242, 60, 271], "source_url": "@source/0ae08157b54fb358", "review_notes": "沿用已批准的跨片地名归属和渲染。"}
+  ],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "BF-Bangasse-z10-504-474",
+  "z": 10,
+  "x": 504,
+  "y": 474,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/504/474.png"
+  ],
+  "context_tiles": [
+    "10/504/473.png"
+  ],
+  "features": [
+    {"id": "BF-Bangasse-z10-504-474-N01", "kind": "city", "original": "Bangassé", "original_bbox": [128, 93, 182, 114], "source_url": "@source/66eef26e99ef7403", "source_glyph_complete": true, "source_printed_full_literal": "Bangassé"}
+  ],
+  "translations": [
+    {"id": "BF-Bangasse-z10-504-474-N01", "zh": "班加塞", "status": "approved", "source": "@source/e4ba921998ec1736", "record_sha256": "9bdf17472759477cf57c5c9aa32b22b6c30725ff8b93c509fac6c294d5bf21d0", "review_notes": "原图实见地名，地理位置及所列资料确认；采用现有译名或地名音译。"}
+  ],
+  "layouts": [
+    {"id": "BF-Bangasse-z10-504-474-N01", "x": 155.0, "y": 103.5, "font_style": "regular", "font_size": 12, "lines": ["班加塞"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "BF-Bangasse-z10-504-474-shared-BF10-OuahigouyaKoumbri-z10-504-472-N06", "owner_region": "BF10-OuahigouyaKoumbri-z10-504-472", "feature_id": "BF10-OuahigouyaKoumbri-z10-504-472-N06", "kind": "region", "original": "Kiembara", "source_url": "@source/602823240ff8ed87", "original_bbox": [35, -8, 88, 8], "review_notes": "同一供应商跨接字形及已实际渲染译名，沿用唯一既有归属。"},
+    {"id": "BF-Bangasse-z10-504-474-shared-BF10-OuahigouyaKoumbri-z10-504-472-N07", "owner_region": "BF10-OuahigouyaKoumbri-z10-504-472", "feature_id": "BF10-OuahigouyaKoumbri-z10-504-472-N07", "kind": "region", "original": "Lankoué", "source_url": "@source/602823240ff8ed87", "original_bbox": [145, -14, 188, 2], "review_notes": "同一供应商跨接字形及已实际渲染译名，沿用唯一既有归属。"}
+  ],
+  "legacy_suppressions": []
+}

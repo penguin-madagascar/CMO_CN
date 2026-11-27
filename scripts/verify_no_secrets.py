@@ -18,6 +18,8 @@ from __future__ import annotations
 
 import re
 import subprocess
+import proc_util
+proc_util.utf8_stdout()
 import sys
 from pathlib import Path
 
@@ -39,15 +41,13 @@ DANGEROUS_GLOBS = (
     "**/__pycache__/*.pyc", "**/*.pyc", "**/*.pyo",
     ".env", ".env.*", "**/.env", "**/.env.*",
     "**/*.pem", "**/*.key", "**/*.pfx", "**/*.p12",
-    "**/*.log", "**/credentials*.json", "**/*secret*.json",
-)
+    "**/*.log", "**/credentials*.json", "**/*secret*.json")
 
 MAX_BYTES = 5_000_000
 
 
 def _git(*args: str) -> list[str]:
-    out = subprocess.run(["git", *args], capture_output=True, text=True,
-                         encoding="utf-8", errors="ignore").stdout
+    out = proc_util.run(["git", *args], capture_output=True).stdout
     return [p for p in out.splitlines() if p.strip()]
 
 
@@ -125,8 +125,8 @@ def scan_history(max_bytes: int = 200_000_000) -> tuple[list[str], str]:
     skipped_big = 0
     for i in range(0, len(shas), chunk):
         part = shas[i:i + chunk]
-        out = subprocess.run(["git", "cat-file", "--batch-check"], input="\n".join(part) + "\n",
-                             capture_output=True, text=True, encoding="utf-8", errors="ignore").stdout
+        out = proc_util.run(["git", "cat-file", "--batch-check"], input="\n".join(part) + "\n",
+                             capture_output=True, ).stdout
         for line in out.splitlines():
             f = line.split()
             if len(f) < 3 or f[1] != "blob":
@@ -144,9 +144,13 @@ def scan_history(max_bytes: int = 200_000_000) -> tuple[list[str], str]:
         part = blobs[i:i + chunk]
         if budget > max_bytes:
             break
-        out = subprocess.run(["git", "cat-file", "--batch"],
+        # cat-file --batch 的后续切片依赖**字节**长度（下面的 size 来自 --batch-check 的字节数），
+        # 所以这一步必须取原始 bytes。proc_util.run 一律解码为 str，用它会让
+        # `out.find(b"\n")` 抛 TypeError（历史回归：门禁 --history 整条路径直接崩）。
+        raw = subprocess.run(["git", "cat-file", "--batch"],
                              input=("\n".join(s for s, _ in part) + "\n").encode(),
-                             capture_output=True).stdout
+                             capture_output=True)
+        out = raw.stdout or b""
         pos = 0
         for sha, size in part:
             nl = out.find(b"\n", pos)

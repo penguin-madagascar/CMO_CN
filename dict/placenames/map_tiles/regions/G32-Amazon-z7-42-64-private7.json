@@ -1,0 +1,55 @@
+{
+  "id": "G32-Amazon-z7-42-64-private7",
+  "z": 7,
+  "x": 42,
+  "y": 64,
+  "width_tiles": 3,
+  "height_tiles": 2,
+  "original_tiles": [
+    "7/42/64.png",
+    "7/43/64.png",
+    "7/44/64.png",
+    "7/42/65.png",
+    "7/43/65.png",
+    "7/44/65.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "G32-01", "kind": "city", "original": "Novo Airão", "original_bbox": [80, 235, 141, 254], "source_url": "@source/b22219ae0d6cb0d6"},
+    {"id": "G32-02", "kind": "city", "original": "Parintins", "original_bbox": [464, 235, 514, 255], "source_url": "@source/acb3d8c0e1d7f73e"},
+    {"id": "G32-03", "kind": "city", "original": "Óbidos", "original_bbox": [574, 169, 617, 188], "source_url": "@source/2b1c0e406c593c2a"},
+    {"id": "G32-04", "kind": "city", "original": "Santarém", "original_bbox": [649, 218, 702, 237], "source_url": "@source/2b1c0e406c593c2a"},
+    {"id": "G32-05", "kind": "city", "original": "Manaus", "original_bbox": [168, 281, 214, 300], "source_url": "@source/651a960f8accbc46"},
+    {"id": "G32-06", "kind": "city", "original": "Itacoatiara", "original_bbox": [308, 282, 366, 301], "source_url": "@source/2a147f2fa7710461"},
+    {"id": "G32-07", "kind": "city", "original": "Itaituba", "original_bbox": [531, 384, 577, 403], "source_url": "@source/341562abd5b959e7"}
+  ],
+  "translations": [
+    {"id": "G32-01", "zh": "诺沃艾劳", "status": "approved", "source": "@source/b22219ae0d6cb0d6", "record_sha256": "98a5bbce14a426641a145e9007374d90c252f91cde5b2364ff35cc8a9e54e28d", "review_notes": "Root supplied Chinese candidate, existing lower zoom spelling retained where present. Local SELF candidate approval only. Official tile URL supports printed source identity, not official Chinese naming."},
+    {"id": "G32-02", "zh": "帕林廷斯", "status": "approved", "source": "@source/acb3d8c0e1d7f73e", "record_sha256": "51a4d3aa7c45efadd1a00177f6edd2beefaac5be096a77f24d58caa4e3ede678", "review_notes": "Root supplied Chinese candidate, existing lower zoom spelling retained where present. Local SELF candidate approval only. Official tile URL supports printed source identity, not official Chinese naming."},
+    {"id": "G32-03", "zh": "奥比杜斯", "status": "approved", "source": "@source/2b1c0e406c593c2a", "record_sha256": "235d2aacb53a14243a32e531374e749d5b456fa73dfc336627d88f5c7b22d3c6", "review_notes": "Root supplied Chinese candidate, existing lower zoom spelling retained where present. Local SELF candidate approval only. Official tile URL supports printed source identity, not official Chinese naming."},
+    {"id": "G32-04", "zh": "圣塔伦", "status": "approved", "source": "@source/2b1c0e406c593c2a", "record_sha256": "553ae7b50ea5f836e272c69304ecf1e461d645258a77fbd8626bb831f0a01d28", "review_notes": "Root supplied Chinese candidate, existing lower zoom spelling retained where present. Local SELF candidate approval only. Official tile URL supports printed source identity, not official Chinese naming."},
+    {"id": "G32-05", "zh": "马瑙斯", "status": "approved", "source": "@source/651a960f8accbc46", "record_sha256": "66acf3909945d62452bc207f33310d8b4feb5937c774cd1a01bea35f35d53b65", "review_notes": "Root supplied Chinese candidate, existing lower zoom spelling retained where present. Local SELF candidate approval only. Official tile URL supports printed source identity, not official Chinese naming."},
+    {"id": "G32-06", "zh": "伊塔夸蒂亚拉", "status": "approved", "source": "@source/2a147f2fa7710461", "record_sha256": "21cc381f530b8c7d4880cf2cc43a166dabec237b26e73e2b1645419562248962", "review_notes": "Root supplied Chinese candidate, existing lower zoom spelling retained where present. Local SELF candidate approval only. Official tile URL supports printed source identity, not official Chinese naming."},
+    {"id": "G32-07", "zh": "伊泰图巴", "status": "approved", "source": "@source/341562abd5b959e7", "record_sha256": "5ade4fab05c4502c79b2c599c30316fd03ca8203c5dadea217a1b4ec8113a61f", "review_notes": "Root supplied Chinese candidate, existing lower zoom spelling retained where present. Local SELF candidate approval only. Official tile URL supports printed source identity, not official Chinese naming."}
+  ],
+  "layouts": [
+    {"id": "G32-01", "x": 119.0, "y": 247.5, "font_size": 12, "font_style": "regular", "lines": ["诺沃艾劳"]},
+    {"id": "G32-02", "x": 503.0, "y": 247.5, "font_size": 12, "font_style": "regular", "lines": ["帕林廷斯"]},
+    {"id": "G32-03", "x": 613.0, "y": 181.5, "font_size": 12, "font_style": "regular", "lines": ["奥比杜斯"]},
+    {"id": "G32-04", "x": 682.0, "y": 230.5, "font_size": 12, "font_style": "regular", "lines": ["圣塔伦"]},
+    {"id": "G32-05", "x": 201.0, "y": 293.5, "font_size": 12, "font_style": "regular", "lines": ["马瑙斯"]},
+    {"id": "G32-06", "x": 359.0, "y": 294.5, "font_size": 12, "font_style": "regular", "lines": ["伊塔夸蒂亚拉"]},
+    {"id": "G32-07", "x": 570.0, "y": 396.5, "font_size": 12, "font_style": "regular", "lines": ["伊泰图巴"]}
+  ],
+  "symbols": [
+    {"id": "G32-01-point", "feature_id": "G32-01", "kind": "circle", "original_bbox": [80, 235, 89, 244], "x": 84.5, "y": 239.5, "size": 9, "outline_width": 1, "review_notes": "G27 ordinary circle9/outline1 at observed mixed dot frame midpoint; not pure-layer reconstruction, provider identity or native SourceCAP."},
+    {"id": "G32-02-point", "feature_id": "G32-02", "kind": "circle", "original_bbox": [464, 235, 473, 244], "x": 468.5, "y": 239.5, "size": 9, "outline_width": 1, "review_notes": "G27 ordinary circle9/outline1 at observed mixed dot frame midpoint; not pure-layer reconstruction, provider identity or native SourceCAP."},
+    {"id": "G32-03-point", "feature_id": "G32-03", "kind": "circle", "original_bbox": [574, 169, 583, 178], "x": 578.5, "y": 173.5, "size": 9, "outline_width": 1, "review_notes": "G27 ordinary circle9/outline1 at observed mixed dot frame midpoint; not pure-layer reconstruction, provider identity or native SourceCAP."},
+    {"id": "G32-04-point", "feature_id": "G32-04", "kind": "circle", "original_bbox": [649, 218, 658, 227], "x": 653.5, "y": 222.5, "size": 9, "outline_width": 1, "review_notes": "G27 ordinary circle9/outline1 at observed mixed dot frame midpoint; not pure-layer reconstruction, provider identity or native SourceCAP."},
+    {"id": "G32-05-point", "feature_id": "G32-05", "kind": "circle", "original_bbox": [168, 281, 177, 290], "x": 172.5, "y": 285.5, "size": 9, "outline_width": 1, "review_notes": "G27 ordinary circle9/outline1 at observed mixed dot frame midpoint; not pure-layer reconstruction, provider identity or native SourceCAP."},
+    {"id": "G32-06-point", "feature_id": "G32-06", "kind": "circle", "original_bbox": [308, 282, 317, 291], "x": 312.5, "y": 286.5, "size": 9, "outline_width": 1, "review_notes": "G27 ordinary circle9/outline1 at observed mixed dot frame midpoint; not pure-layer reconstruction, provider identity or native SourceCAP."},
+    {"id": "G32-07-point", "feature_id": "G32-07", "kind": "circle", "original_bbox": [531, 384, 540, 393], "x": 535.5, "y": 388.5, "size": 9, "outline_width": 1, "review_notes": "G27 ordinary circle9/outline1 at observed mixed dot frame midpoint; not pure-layer reconstruction, provider identity or native SourceCAP."}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

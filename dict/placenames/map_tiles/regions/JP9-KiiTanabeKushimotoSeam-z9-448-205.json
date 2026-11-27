@@ -1,0 +1,24 @@
+{
+  "id": "JP9-KiiTanabeKushimotoSeam-z9-448-205",
+  "z": 9,
+  "x": 448,
+  "y": 205,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/448/205.png"
+  ],
+  "context_tiles": [
+    "9/448/204.png",
+    "9/449/205.png"
+  ],
+  "features": [],
+  "translations": [],
+  "layouts": [],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "JP9-KiiTanabeKushimotoSeam-z9-448-205-SH1", "owner_region": "JP9-Wakayama-z9-448-204", "feature_id": "JP9-448204-Tanabe", "original_bbox": [114, -10, 161, 7], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "city", "original": "Tanabe", "source_url": "@source/6613f9d2e266dbc3"},
+    {"id": "JP9-KiiTanabeKushimotoSeam-z9-448-205-SH2", "owner_region": "JP9-KiiShinguKushimoto-z9-449-204", "feature_id": "JP9-KiiShinguKushimoto-z9-449-204-S04", "original_bbox": [254, 100, 314, 116], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "city", "original": "Kushimoto", "source_url": "@source/9717c66c23694282"}
+  ],
+  "legacy_suppressions": []
+}

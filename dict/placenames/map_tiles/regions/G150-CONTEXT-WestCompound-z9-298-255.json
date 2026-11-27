@@ -1,0 +1,44 @@
+{
+  "id": "G150-CONTEXT-WestCompound-z9-298-255",
+  "z": 9,
+  "x": 298,
+  "y": 255,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/298/255.png"
+  ],
+  "context_tiles": [
+    "9/297/255.png",
+    "9/298/254.png",
+    "9/298/256.png",
+    "9/299/254.png",
+    "9/299/255.png"
+  ],
+  "features": [
+    {"id": "G150-CONTINUITY5-01", "kind": "city", "original": "Nobili", "original_bbox": [132, 18, 167, 35], "source_url": "@source/4ba8afcc7ec7f4fc"},
+    {"id": "G150-CONTINUITY5-02", "kind": "city", "original": "Kasese", "original_bbox": [180, 184, 224, 202], "source_url": "@source/4ba8afcc7ec7f4fc"},
+    {"id": "G150-CONTINUITY5-03", "kind": "city", "original": "Bwera", "original_bbox": [65, 236, 102, 252], "source_url": "@source/4ba8afcc7ec7f4fc"},
+    {"id": "G150-CONTINUITY5-04", "kind": "peak", "original": "Margherita", "original_bbox": [61, 78, 125, 109], "source_url": "@source/4ba8afcc7ec7f4fc", "original_elevation_m": "5109"}
+  ],
+  "translations": [
+    {"id": "G150-CONTINUITY5-01", "zh": "诺比利", "status": "approved", "source": "@source/4ba8afcc7ec7f4fc", "record_sha256": "2ad124f39712fffd4e53c0a100d86161faffedfbeff953b303f9abd2108657c3", "review_notes": "Root exact lexical 831fdd6bbf6fe2a0a9326920eeba6623fc69d5e9ef2097c5e41f475215b55baa; {\"original\": \"Nobili\", \"Chinese\": \"诺比利\", \"grade_preserved\": \"C\", \"confidence_preserved\": \"中\", \"evidence_role_preserved\": \"EXPLICIT_PROJECT_TRANSLITERATION_WITH_SECONDARY_SEARCH_SNIPPET_ONLY_NOT_ATTESTED_PRIMARY_CHINESE\", \"original_row_pointer\": \"/rows/0\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTINUITY5-02", "zh": "卡塞塞", "status": "approved", "source": "@source/4ba8afcc7ec7f4fc", "record_sha256": "d5774c07781063305712d6137e86aa40979a20d10fdb8feac17135c219ce51ac", "review_notes": "Root exact lexical 831fdd6bbf6fe2a0a9326920eeba6623fc69d5e9ef2097c5e41f475215b55baa; {\"original\": \"Kasese\", \"Chinese\": \"卡塞塞\", \"grade_preserved\": \"A-\", \"confidence_preserved\": \"高\", \"evidence_role_preserved\": \"WHO_SAME_DOCUMENT_BILINGUAL_DISTRICT_STEM_LEXICAL_ATTESTATION_NOT_SOURCE_TOWN_ENTITY_JOIN\", \"original_row_pointer\": \"/rows/1\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTINUITY5-03", "zh": "布韦拉", "status": "approved", "source": "@source/4ba8afcc7ec7f4fc", "record_sha256": "492c7b2a84e77ac339d5a68bbd3f61645e84d31008e000cbb794430592f67d60", "review_notes": "Root exact lexical 831fdd6bbf6fe2a0a9326920eeba6623fc69d5e9ef2097c5e41f475215b55baa; {\"original\": \"Bwera\", \"Chinese\": \"布韦拉\", \"grade_preserved\": \"C\", \"confidence_preserved\": \"中\", \"evidence_role_preserved\": \"EXPLICIT_PROJECT_TRANSLITERATION_ENGLISH_PRIMARY_CONTEXT_ONLY_NOT_ATTESTED_PRIMARY_CHINESE\", \"original_row_pointer\": \"/rows/2\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTINUITY5-04", "zh": "玛格丽塔峰", "status": "approved", "source": "@source/4ba8afcc7ec7f4fc", "record_sha256": "2897dc9cf64b247b882ff0744646f4a69db09e577fdb1481f56afe073c4ffbdb", "review_notes": "Root exact lexical 831fdd6bbf6fe2a0a9326920eeba6623fc69d5e9ef2097c5e41f475215b55baa; {\"original\": \"Margherita\", \"Chinese\": \"玛格丽塔峰\", \"grade_preserved\": \"A\", \"confidence_preserved\": \"高\", \"evidence_role_preserved\": \"UNESCO_SAME_SITE_BILINGUAL_NAME_AND_HEIGHT_LEXICAL_ATTESTATION_NOT_CITY_OR_PROVIDER_ENTITY_JOIN\", \"original_row_pointer\": \"/rows/3\"}; display enum only, no supplier entity/class/point inference."}
+  ],
+  "layouts": [
+    {"id": "G150-CONTINUITY5-01", "x": 149.5, "y": 26.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTINUITY5-02", "x": 202.0, "y": 193.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTINUITY5-03", "x": 83.5, "y": 240.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTINUITY5-04", "x": 93.0, "y": 93.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "G150-CONTINUITY5-04-triangle", "feature_id": "G150-CONTINUITY5-04", "kind": "triangle", "size": 10, "outline_width": 1, "x": 124, "y": 116, "original_bbox": [119, 111, 129, 120]}
+  ],
+  "shared_sources": [
+    {"id": "G150-Mbau-source-borrow-63", "kind": "city", "original": "Mbau", "source_url": "@source/1c32bbf08d32b685", "original_bbox": [-28, 10, 5, 26], "owner_region": "G150-SUPPORT-SixNormals-z9-297-255", "feature_id": "D4-C2-G150-W01", "review_notes": "Root b716 exact same-print Source alias only; one normal in sole full owner. No borrower text/native or Source1."},
+    {"id": "G150-FortPortal-source-borrow-51", "kind": "city", "original": "Fort Portal", "source_url": "@source/4ba8afcc7ec7f4fc", "original_bbox": [253, -2, 292, 36], "owner_region": "G150-CONTEXT-EastNine-z9-299-254", "feature_id": "G150-CONTEXT9-08", "review_notes": "Root b716 exact same-print Source alias only; one normal in sole full owner. No borrower text/native or Source1."}
+  ],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,41 @@
+{
+  "id": "Turkey-Denizli-z9-297-197",
+  "z": 9,
+  "x": 297,
+  "y": 197,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/297/197.png"
+  ],
+  "context_tiles": [
+    "9/296/197.png"
+  ],
+  "features": [
+    {"id": "Turkey-Denizli-z9-297-197-Guney", "kind": "city", "original": "Güney", "original_bbox": [69, 46, 105, 66], "source_url": "@source/ceb165717e52837e", "source_glyph_complete": true, "source_printed_full_literal": "Güney"},
+    {"id": "Turkey-Denizli-z9-297-197-Cal", "kind": "city", "original": "Çal", "original_bbox": [198, 80, 218, 99], "source_url": "@source/ceb165717e52837e", "source_glyph_complete": true, "source_printed_full_literal": "Çal"},
+    {"id": "Turkey-Denizli-z9-297-197-Saraykoy", "kind": "city", "original": "Sarayköy", "original_bbox": [9, 152, 60, 172], "source_url": "@source/ceb165717e52837e", "source_glyph_complete": true, "source_printed_full_literal": "Sarayköy"},
+    {"id": "Turkey-Denizli-z9-297-197-Denizli", "kind": "city", "original": "Denizli", "original_bbox": [72, 217, 115, 235], "source_url": "@source/ceb165717e52837e", "source_glyph_complete": true, "source_printed_full_literal": "Denizli"},
+    {"id": "Turkey-Denizli-z9-297-197-Honaz", "kind": "city", "original": "Honaz", "original_bbox": [143, 232, 179, 249], "source_url": "@source/ceb165717e52837e", "source_glyph_complete": true, "source_printed_full_literal": "Honaz"}
+  ],
+  "translations": [
+    {"id": "Turkey-Denizli-z9-297-197-Guney", "zh": "居内伊", "status": "approved", "source": "@source/5e3cd936d48c60e0", "record_sha256": "07ff0edcbdad823340c8886904793f5d34e6317c7f282a0f582aaf71e4689b48", "review_notes": "核对土耳其行政地名和同一城镇坐标。已有译名的名称沿用项目用字。"},
+    {"id": "Turkey-Denizli-z9-297-197-Cal", "zh": "恰尔", "status": "approved", "source": "@source/e04b8087e71bc065", "record_sha256": "7508b98e8ce175b0ea38ff55df797edd2b914aea762393a96057aa0c380c20e1", "review_notes": "核对土耳其行政地名和同一城镇坐标。已有译名的名称沿用项目用字。"},
+    {"id": "Turkey-Denizli-z9-297-197-Saraykoy", "zh": "萨拉伊柯伊", "status": "approved", "source": "@source/fd190403468bc6cd", "record_sha256": "c03703d7a5b2c50b5438f2a69634086c599e886aa27ee73c36f6b1a48ae7dc96", "review_notes": "核对土耳其行政地名和同一城镇坐标。已有译名的名称沿用项目用字。"},
+    {"id": "Turkey-Denizli-z9-297-197-Denizli", "zh": "代尼兹利", "status": "approved", "source": "@source/6c423eb2a8f158f7", "record_sha256": "d5a4a6e3f4661d1d484b36d0fc94299990169dca0bce134da9981a714d5d6076", "review_notes": "核对土耳其行政地名和同一城镇坐标。已有译名的名称沿用项目用字。"},
+    {"id": "Turkey-Denizli-z9-297-197-Honaz", "zh": "霍纳兹", "status": "approved", "source": "@source/cc9770320ebb4d69", "record_sha256": "cd680264219c2a4d2cf5c2798c71237598cf0f55caf8b031b4a67eb24f8a5fe8", "review_notes": "核对土耳其行政地名和同一城镇坐标。已有译名的名称沿用项目用字。"}
+  ],
+  "layouts": [
+    {"id": "Turkey-Denizli-z9-297-197-Guney", "x": 87.0, "y": 56.0, "font_size": 12, "font_style": "regular", "lines": ["居内伊"]},
+    {"id": "Turkey-Denizli-z9-297-197-Cal", "x": 208.0, "y": 89.5, "font_size": 12, "font_style": "regular", "lines": ["恰尔"]},
+    {"id": "Turkey-Denizli-z9-297-197-Saraykoy", "x": 34.5, "y": 162.0, "font_size": 12, "font_style": "regular", "lines": ["萨拉伊柯伊"]},
+    {"id": "Turkey-Denizli-z9-297-197-Denizli", "x": 93.5, "y": 226.0, "font_size": 12, "font_style": "regular", "lines": ["代尼兹利"]},
+    {"id": "Turkey-Denizli-z9-297-197-Honaz", "x": 161.0, "y": 240.5, "font_size": 12, "font_style": "regular", "lines": ["霍纳兹"]}
+  ],
+  "shared_sources": [
+    {"id": "Turkey-Denizli-z9-297-197-Buldan-Shared", "owner_region": "GR16-EastS-z9-296-196", "feature_id": "GR16-N-057", "kind": "city", "original": "Buldan", "original_bbox": [-19, 97, 21, 113], "source_url": "@source/27c1505ff91eeb4a", "review_notes": "原文跨片归既有布尔丹中文标注，使用同一原文范围。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

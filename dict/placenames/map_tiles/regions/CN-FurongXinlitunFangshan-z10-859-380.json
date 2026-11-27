@@ -1,0 +1,32 @@
+{
+  "id": "CN-FurongXinlitunFangshan-z10-859-380",
+  "z": 10,
+  "x": 859,
+  "y": 380,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/859/380.png"
+  ],
+  "context_tiles": [
+    "10/858/380.png"
+  ],
+  "features": [
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S01", "kind": "city", "original": "Xinlitun", "original_bbox": [101, 20, 147, 36], "source_url": "@source/a98d05a830d2b3f8", "source_glyph_complete": true, "source_printed_full_literal": "Xinlitun"},
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S02", "kind": "city", "original": "Furong", "original_bbox": [-2, 55, 38, 75], "source_url": "@source/a98d05a830d2b3f8", "source_glyph_complete": true, "source_printed_full_literal": "Furong"},
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S03", "kind": "city", "original": "Fangshan", "original_bbox": [32, 122, 80, 140], "source_url": "@source/a98d05a830d2b3f8", "source_glyph_complete": true, "source_printed_full_literal": "Fangshan"}
+  ],
+  "translations": [
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S01", "zh": "新立屯", "status": "approved", "source": "@source/840de2cc8334b90f", "record_sha256": "53b6ecee3a60b47acbeef585efa7dbfa6ff4222e013150bb9cb01560ee1eb14a", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S02", "zh": "富荣", "status": "approved", "source": "@source/4e0752acca323251", "record_sha256": "7236fd53894466cd793694cc2cd8d0de212aaaecd27d897bac0e5e9bed3f3fbb", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S03", "zh": "芳山", "status": "approved", "source": "@source/840de2cc8334b90f", "record_sha256": "7d7c684e10eb2f487106aaa11b8e3ab2e839ba3dbbe8b69263ca1e8b1c949e06", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S01", "x": 124, "y": 28, "font_style": "regular", "font_size": 12, "lines": ["新立屯"]},
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S02", "x": 18, "y": 65, "font_style": "regular", "font_size": 12, "lines": ["富荣"]},
+    {"id": "CN-FurongXinlitunFangshan-z10-859-380-S03", "x": 56, "y": 131, "font_style": "regular", "font_size": 12, "lines": ["芳山"]}
+  ],
+  "shared_sources": [],
+  "symbols": [],
+  "legacy_suppressions": []
+}

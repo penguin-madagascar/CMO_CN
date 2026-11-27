@@ -1,0 +1,56 @@
+{
+  "id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1",
+  "z": 7,
+  "x": 92,
+  "y": 56,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/92/56.png",
+    "7/93/56.png"
+  ],
+  "context_tiles": [
+    "7/93/55.png",
+    "7/94/56.png"
+  ],
+  "features": [
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-CHHATTISGARH", "kind": "admin1", "original": "CHHATTISGARH", "original_bbox": [206, 16, 356, 34], "source_url": "@source/a346621193986af4", "source_glyph_complete": true, "source_printed_full_literal": "CHHATTISGARH"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Bhilai", "kind": "city", "original": "Bhilai", "original_bbox": [234, 67, 270, 86], "source_url": "@source/a346621193986af4", "source_glyph_complete": true, "source_printed_full_literal": "Bhilai"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Nagpur", "kind": "city", "original": "Nagpur", "original_bbox": [26, 73, 76, 98], "source_url": "@source/a346621193986af4", "source_glyph_complete": true, "source_printed_full_literal": "Nagpur"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Chandrapur", "kind": "city", "original": "Chandrapur", "original_bbox": [46, 190, 109, 211], "source_url": "@source/a346621193986af4", "source_glyph_complete": true, "source_printed_full_literal": "Chandrapur"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Sambalpur", "kind": "city", "original": "Sambalpur", "original_bbox": [471, 42, 531, 63], "source_url": "@source/5a0e50ad0da5be4e", "source_glyph_complete": true, "source_printed_full_literal": "Sambalpur"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-ODISHA", "kind": "admin1", "original": "ODISHA", "original_bbox": [503, 125, 579, 143], "source_url": "@source/5a0e50ad0da5be4e", "source_glyph_complete": true, "source_printed_full_literal": "ODISHA"}
+  ],
+  "translations": [
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-CHHATTISGARH", "zh": "恰蒂斯加尔邦", "status": "approved", "source": "@source/c99418598e3d79b5", "record_sha256": "74e7bbb89fa497808f8306f956da5d5391cb3fc7a79c51bc3a4abad834f6e7c4", "review_notes": "沿用正式地图同一地名的中文，对照原版字形和已有缩放位置。"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Bhilai", "zh": "比莱", "status": "approved", "source": "@source/c38d42c5c998304d", "record_sha256": "55388e6ae7e38590061674d4988332f46cf0fc4be0235027934d4bba9351faf4", "review_notes": "沿用正式地图同一地名的中文，对照原版字形和已有缩放位置。"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Nagpur", "zh": "那格浦尔", "status": "approved", "source": "@source/b6adcaa77fa34a12", "record_sha256": "c1ddfa8839bdaf2eae5fcc1b5b18dd33f3f01ffda8f7459dcc35f962c76283ca", "review_notes": "沿用正式地图同一地名的中文，对照原版字形和已有缩放位置。"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Chandrapur", "zh": "钱德拉布尔", "status": "approved", "source": "@source/9f61ae5356feb4ef", "record_sha256": "22542e8b997a3c5dbda9e7d65fc00ff6b05ffad951c18934e99f8f36f52a5828", "review_notes": "沿用现有游戏地名表同地中文，核对原版英文、圆点位置与现有中文记录。"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Sambalpur", "zh": "萨姆巴尔普尔", "status": "approved", "source": "@source/75e64fa6757269d8", "record_sha256": "663b2677a09f867d6542ddac567081523d9447e68add8ea168d3fcd046c55a8f", "review_notes": "沿用现有游戏地名表同地中文，核对原版英文、圆点位置与现有中文记录。"},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-ODISHA", "zh": "奥里萨邦", "status": "approved", "source": "@source/c99418598e3d79b5", "record_sha256": "6acb5391a6341bd37c264785bba4a10ecf6bb0ae1adb72a02c487d6ec4b860dc", "review_notes": "沿用正式地图同一地名的中文，对照原版字形和已有缩放位置。"}
+  ],
+  "layouts": [
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-CHHATTISGARH", "x": 281, "y": 26, "font_size": 12, "font_style": "bold", "lines": ["恰蒂斯加尔邦"]},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Bhilai", "x": 259, "y": 86, "font_size": 12, "font_style": "regular", "lines": ["比莱"]},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Nagpur", "x": 61.5, "y": 89, "font_size": 12, "font_style": "regular", "lines": ["那格浦尔"]},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Chandrapur", "x": 87, "y": 203, "font_size": 12, "font_style": "regular", "lines": ["钱德拉布尔"]},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Sambalpur", "x": 490, "y": 74, "font_size": 11, "font_style": "regular", "lines": ["萨姆巴", "尔普尔"]},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-ODISHA", "x": 487, "y": 134, "font_size": 11, "font_style": "bold", "lines": ["奥里萨邦"]}
+  ],
+  "symbols": [
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Bhilai-circle", "feature_id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Bhilai", "kind": "circle", "x": 238.5, "y": 71.5, "size": 7, "outline_width": 1, "original_bbox": [234, 67, 243, 76]},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Nagpur-circle", "feature_id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Nagpur", "kind": "circle", "x": 30.5, "y": 77.5, "size": 7, "outline_width": 1, "original_bbox": [26, 73, 35, 82]},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Chandrapur-circle", "feature_id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Chandrapur", "kind": "circle", "x": 50.5, "y": 194.5, "size": 7, "outline_width": 1, "original_bbox": [46, 190, 55, 199]},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Sambalpur-circle", "feature_id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Sambalpur", "kind": "circle", "x": 475.5, "y": 46.5, "size": 7, "outline_width": 1, "original_bbox": [471, 42, 480, 51]}
+  ],
+  "shared_sources": [
+    {"id": "IND7-Nagpur-Bilaspur-source-tail", "owner_region": "AM-India-z7-South", "feature_id": "AM26-136-Bilaspur", "kind": "city", "original": "Bilaspur", "source_url": "@source/cfda306b2efdb3ae", "original_bbox": [304, -19, 354, 5], "review_notes": "仅核算本片上沿已译比拉斯普尔的跨片原文字形，整词中文留在既有北片。"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Cities1782", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1782, "original_Chinese_name": "拉杰南德冈", "lat_f32_bits": 1101579876, "lon_f32_bits": 1117916876, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 198.0, "y": 84.5, "font_style": "regular", "font_size": 12, "lines": ["拉杰南德冈"]}},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Cities1954", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1954, "original_Chinese_name": "贡迪耶", "lat_f32_bits": 1101770339, "lon_f32_bits": 1117807186, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 131.5, "y": 47.5, "font_style": "regular", "font_size": 12, "lines": ["贡迪耶"]}},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Cities1786", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1786, "original_Chinese_name": "赖布尔", "lat_f32_bits": 1101651420, "lon_f32_bits": 1117996100, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 283.5, "y": 66.5, "font_style": "regular", "font_size": 12, "lines": ["赖布尔"]}},
+    {"id": "India-Nagpur-Chhattisgarh-z7-92-56-2x1-Cities1787", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1787, "original_Chinese_name": "赖格尔", "lat_f32_bits": 1102000947, "lon_f32_bits": 1118227661, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 423.5, "y": 11, "font_style": "regular", "font_size": 12, "lines": ["赖格尔"]}}
+  ]
+}

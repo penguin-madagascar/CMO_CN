@@ -1,0 +1,37 @@
+{
+  "id": "Turkey-Fethiye-z9-297-199",
+  "z": 9,
+  "x": 297,
+  "y": 199,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/297/199.png"
+  ],
+  "context_tiles": [
+    "9/298/199.png",
+    "9/297/200.png"
+  ],
+  "features": [
+    {"id": "Turkey-Fethiye-z9-297-199-Cameli", "kind": "city", "original": "Çameli", "original_bbox": [169, 30, 207, 49], "source_url": "@source/246c89ed2dc16d35", "source_glyph_complete": true, "source_printed_full_literal": "Çameli"},
+    {"id": "Turkey-Fethiye-z9-297-199-Altinyayla", "kind": "city", "original": "Altınyayla", "original_bbox": [234, 66, 290, 86], "source_url": "@source/246c89ed2dc16d35", "source_glyph_complete": true, "source_printed_full_literal": "Altınyayla"},
+    {"id": "Turkey-Fethiye-z9-297-199-Seydikemer", "kind": "city", "original": "Seydikemer", "original_bbox": [162, 224, 228, 244], "source_url": "@source/246c89ed2dc16d35", "source_glyph_complete": true, "source_printed_full_literal": "Seydikemer"},
+    {"id": "Turkey-Fethiye-z9-297-199-Fethiye", "kind": "city", "original": "Fethiye", "original_bbox": [84, 237, 126, 256], "source_url": "@source/246c89ed2dc16d35", "source_glyph_complete": true, "source_printed_full_literal": "Fethiye"}
+  ],
+  "translations": [
+    {"id": "Turkey-Fethiye-z9-297-199-Cameli", "zh": "恰梅利", "status": "approved", "source": "@source/6cdbd5784e6d66d8", "record_sha256": "d6e9cf7e97fe69185a8f123b25df7397b2011cea9a9664637febcf6a638985a8", "review_notes": "按原图完整地名与当地行政名称核对。跨东边界的字样由同源邻片补齐。"},
+    {"id": "Turkey-Fethiye-z9-297-199-Altinyayla", "zh": "阿尔滕亚伊拉", "status": "approved", "source": "@source/8c11e8185c51cb48", "record_sha256": "471b9d030ac50c155a058ba777454de87e6612b6f0378848a86f5ef6264da1ba", "review_notes": "按原图完整地名与当地行政名称核对。跨东边界的字样由同源邻片补齐。"},
+    {"id": "Turkey-Fethiye-z9-297-199-Seydikemer", "zh": "赛迪凯梅尔", "status": "approved", "source": "@source/de76712499d4498f", "record_sha256": "b3b2d9aa89fe98e01f3e811ecc0799ce66d8affc8d5a5876f3cbd29c7af7ac41", "review_notes": "按原图完整地名与当地行政名称核对。跨东边界的字样由同源邻片补齐。"},
+    {"id": "Turkey-Fethiye-z9-297-199-Fethiye", "zh": "费特希耶", "status": "approved", "source": "@source/27040e21b493145a", "record_sha256": "847384ad3b5dec857ade182b2e60fabb3e1de08a804aced2719e9626cb75fb9c", "review_notes": "按原图完整地名与当地行政名称核对。跨东边界的字样由同源邻片补齐。"}
+  ],
+  "layouts": [
+    {"id": "Turkey-Fethiye-z9-297-199-Cameli", "x": 188.0, "y": 39.5, "font_size": 12, "font_style": "regular", "lines": ["恰梅利"]},
+    {"id": "Turkey-Fethiye-z9-297-199-Altinyayla", "x": 235.0, "y": 76.0, "font_size": 12, "font_style": "regular", "lines": ["阿尔滕", "亚伊拉"]},
+    {"id": "Turkey-Fethiye-z9-297-199-Seydikemer", "x": 195.0, "y": 234.0, "font_size": 12, "font_style": "regular", "lines": ["赛迪凯梅尔"]},
+    {"id": "Turkey-Fethiye-z9-297-199-Fethiye", "x": 105.0, "y": 246.5, "font_size": 12, "font_style": "regular", "lines": ["费特希耶"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

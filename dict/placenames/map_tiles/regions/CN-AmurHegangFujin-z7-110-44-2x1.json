@@ -1,0 +1,44 @@
+{
+  "id": "CN-AmurHegangFujin-z7-110-44-2x1",
+  "z": 7,
+  "x": 110,
+  "y": 44,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/110/44.png",
+    "7/111/44.png"
+  ],
+  "context_tiles": [
+    "7/109/44.png",
+    "7/109/45.png",
+    "7/110/45.png"
+  ],
+  "features": [
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N01", "kind": "admin1", "original": "JEWISH REGION", "original_bbox": [228, 28, 301, 67], "source_url": "@source/e62746b6af8d0e03", "source_glyph_complete": true, "source_printed_full_literal": "JEWISH REGION"},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N02", "kind": "city", "original": "Birobidzhan", "original_bbox": [319, 14, 384, 33], "source_url": "@source/745df0e1a4720d3b", "source_glyph_complete": true, "source_printed_full_literal": "Birobidzhan"},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N03", "kind": "city", "original": "Hegang", "original_bbox": [78, 213, 123, 235], "source_url": "@source/e62746b6af8d0e03", "source_glyph_complete": true, "source_printed_full_literal": "Hegang"},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N04", "kind": "city", "original": "Fujin", "original_bbox": [237, 225, 270, 247], "source_url": "@source/e62746b6af8d0e03", "source_glyph_complete": true, "source_printed_full_literal": "Fujin"}
+  ],
+  "translations": [
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N01", "zh": "犹太自治州", "status": "approved", "source": "@source/a340a12c3ec8f969", "record_sha256": "00f695ac6b4b96cddbd212e282e4e57113e606d2a34ca5d564b2a918c35a4c7d", "review_notes": "与相邻官方原图完整拼写及同地官方中文核对。"},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N02", "zh": "比罗比詹", "status": "approved", "source": "@source/a340a12c3ec8f969", "record_sha256": "dd159152934e00190e532bf45d98dbc203248696b7dadadf3920fb6b807faf1d", "review_notes": "与相邻官方原图完整拼写及同地官方中文核对。"},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N03", "zh": "鹤岗", "status": "approved", "source": "@source/ac5cb65db13b65ae", "record_sha256": "3e2a594c9ecdbb4845297fd770193b90ee8eecb5691cd662a810382b2e85130c", "review_notes": "与相邻官方原图完整拼写及同地官方中文核对。"},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N04", "zh": "富锦", "status": "approved", "source": "@source/8a664b091e23f75d", "record_sha256": "5aea515c1529a68e7f878d4353022db1f02ff070f47e7b0e2531a9f5727828b2", "review_notes": "与相邻官方原图完整拼写及同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N01", "x": 266, "y": 47, "font_size": 15, "font_style": "bold", "lines": ["犹太自治州"]},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N02", "x": 365, "y": 27, "font_size": 12, "font_style": "regular", "lines": ["比罗比詹"]},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N03", "x": 106, "y": 226, "font_size": 12, "font_style": "regular", "lines": ["鹤岗"]},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N04", "x": 258, "y": 239, "font_size": 12, "font_style": "regular", "lines": ["富锦"]}
+  ],
+  "symbols": [
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N02-point", "feature_id": "CN-AmurHegangFujin-z7-110-44-2x1-N02", "kind": "circle", "x": 323.5, "y": 19.0, "size": 7, "outline_width": 1, "original_bbox": [319, 14, 328, 24]},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N03-point", "feature_id": "CN-AmurHegangFujin-z7-110-44-2x1-N03", "kind": "circle", "x": 82.5, "y": 218.0, "size": 7, "outline_width": 1, "original_bbox": [78, 213, 87, 223]},
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-N04-point", "feature_id": "CN-AmurHegangFujin-z7-110-44-2x1-N04", "kind": "circle", "x": 241.5, "y": 230.5, "size": 7, "outline_width": 1, "original_bbox": [237, 225, 246, 236]}
+  ],
+  "shared_sources": [
+    {"id": "CN-AmurHegangFujin-z7-110-44-2x1-shared-Nancha", "owner_region": "AP-Primorye-NorthStrip-z7-107-44", "feature_id": "AP-PR7-010", "kind": "city", "original": "Nancha", "original_bbox": [-15, 238, 29, 257], "source_url": "@source/5cdf9a15e3a95e77", "review_notes": "由原正式西邻保留南岔中文和原生圆点。"}
+  ],
+  "legacy_suppressions": []
+}

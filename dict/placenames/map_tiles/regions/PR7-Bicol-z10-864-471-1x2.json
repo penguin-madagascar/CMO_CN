@@ -1,0 +1,35 @@
+{
+  "id": "PR7-Bicol-z10-864-471-1x2",
+  "z": 10,
+  "x": 864,
+  "y": 471,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    {"path": "10/864/471.png", "origin": "historical_attested_original", "source_alpha_count": 98},
+    {"path": "10/864/472.png", "origin": "historical_attested_original", "source_alpha_count": 1310}
+  ],
+  "context_tiles": [
+    {"path": "10/865/471.png", "origin": "new_official_once_readonly_context_NOT_historical_sameSHA", "source_alpha_count": 2120},
+    {"path": "10/865/472.png", "origin": "new_official_once_readonly_context_NOT_historical_sameSHA", "source_alpha_count": 1343}
+  ],
+  "features": [
+    {"id": "PR7-S013", "kind": "city", "original": "Caramoran", "original_bbox": [250, 202, 310, 219], "source_url": "@source/ce16e82fbb53eb2c"},
+    {"id": "PR7-S014", "kind": "city", "original": "Caramoan", "original_bbox": [54, 364, 110, 381], "source_url": "@source/9faace1eadca5b49"},
+    {"id": "PR7-S015", "kind": "city", "original": "San Andres", "original_bbox": [221, 490, 285, 507], "source_url": "@source/9faace1eadca5b49"}
+  ],
+  "translations": [
+    {"id": "PR7-S013", "zh": "卡拉莫兰", "status": "approved", "source": "@source/ce16e82fbb53eb2c", "record_sha256": "06a94f11aecbdc80ca3ac34617a2f5cd356c279275459f75571dc4441698ff78", "review_notes": "UNRENDERED PROPOSAL. project_editorial_nonofficial_transliteration_of_complete_printed_literal. GN original English/aliases/admin fields establish modern identity context only; they do not supply this Chinese spelling. Preserve two different physical printed names: Caramoran/PH05/19 vs Caramoan/PH05/16; the Caramoran record also carries a looseCaramoan alias, which is not a same-entity join. Author SELF private Chinese review only; different actual TARGET pending."},
+    {"id": "PR7-S014", "zh": "卡拉莫安", "status": "approved", "source": "@source/9faace1eadca5b49", "record_sha256": "afefa3940e70d8be5e0884b6392b35016e27470b6676362983a54ffe3a066a18", "review_notes": "UNRENDERED PROPOSAL. project_editorial_nonofficial_transliteration_of_complete_printed_literal. GN original English/aliases/admin fields establish modern identity context only; they do not supply this Chinese spelling. Preserve two different physical printed names: Caramoran/PH05/19 vs Caramoan/PH05/16; the Caramoran record also carries a looseCaramoan alias, which is not a same-entity join. Author SELF private Chinese review only; different actual TARGET pending."},
+    {"id": "PR7-S015", "zh": "圣安德烈斯", "status": "approved", "source": "@source/9faace1eadca5b49", "record_sha256": "af7c4eff19a65c1d51f2d1bc8ac639137e8514aff31c2e0a28b0b9ffb4d34b74", "review_notes": "UNRENDERED PROPOSAL. project_editorial_nonofficial_transliteration_of_complete_printed_literal. GN original English/aliases/admin fields establish modern identity context only; they do not supply this Chinese spelling. Author SELF private Chinese review only; different actual TARGET pending."}
+  ],
+  "layouts": [
+    {"id": "PR7-S013", "x": 218.0, "y": 210.5, "font_size": 12, "font_style": "regular", "lines": ["卡拉莫兰"]},
+    {"id": "PR7-S014", "x": 82.0, "y": 372.5, "font_size": 12, "font_style": "regular", "lines": ["卡拉莫安"]},
+    {"id": "PR7-S015", "x": 215.0, "y": 498.5, "font_size": 12, "font_style": "regular", "lines": ["圣安德烈斯"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "CN-YishuiMengyinDuozhuang-z9-424-201",
+  "z": 9,
+  "x": 424,
+  "y": 201,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/424/201.png"
+  ],
+  "context_tiles": [
+    "9/423/201.png",
+    "9/424/200.png",
+    "9/425/201.png"
+  ],
+  "features": [
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N01", "kind": "city", "original": "Gaoqiao", "original_bbox": [188, 36, 234, 56], "source_url": "@source/529ca4a4285bbbb7", "source_glyph_complete": true, "source_printed_full_literal": "Gaoqiao"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N02", "kind": "city", "original": "Xiawei", "original_bbox": [48, 87, 88, 103], "source_url": "@source/529ca4a4285bbbb7", "source_glyph_complete": true, "source_printed_full_literal": "Xiawei"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N03", "kind": "city", "original": "Yishui", "original_bbox": [161, 99, 201, 117], "source_url": "@source/529ca4a4285bbbb7", "source_glyph_complete": true, "source_printed_full_literal": "Yishui"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N04", "kind": "city", "original": "Yinan", "original_bbox": [103, 207, 140, 225], "source_url": "@source/529ca4a4285bbbb7", "source_glyph_complete": true, "source_printed_full_literal": "Yinan"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N05", "kind": "city", "original": "Duozhuang", "original_bbox": [0, 210, 43, 230], "source_url": "@source/529ca4a4285bbbb7", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N01", "zh": "高桥", "status": "approved", "source": "@source/70e04efd1c9d14a7", "record_sha256": "8feec9eb3718bdc4d78a83eaaf06035a6ed3391e5099ceb095d56838ef14e272", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N02", "zh": "夏蔚", "status": "approved", "source": "@source/70e04efd1c9d14a7", "record_sha256": "a7608577610d94e9fe078ab2b43f5db834498af977f085714e39f0c261aa2b5e", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N03", "zh": "沂水", "status": "approved", "source": "@source/70e04efd1c9d14a7", "record_sha256": "4c10ea0489f799e84a048d5601f9beef8b24802877eb671949119b056caa6d0b", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N04", "zh": "沂南", "status": "approved", "source": "@source/f331590a62e7da9c", "record_sha256": "ef4c1a97a4e7fffc89452e72aa5c05457ddf23f5e9b77837e4a87ce49735fc3c", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N05", "zh": "垛庄", "status": "approved", "source": "@source/cc96071b20d8ad6c", "record_sha256": "aec386e9eb27031c69a14ed5d98eefdcb3979f786dc16b67e71ffc91fe9e1866", "review_notes": "留存拼写及原位置与同地官方中文核对，邻片无续笔。"}
+  ],
+  "layouts": [
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N01", "x": 211.0, "y": 46.0, "font_size": 12, "font_style": "regular", "lines": ["高桥"]},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N02", "x": 68.0, "y": 95.0, "font_size": 12, "font_style": "regular", "lines": ["夏蔚"]},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N03", "x": 181.0, "y": 108.0, "font_size": 12, "font_style": "regular", "lines": ["沂水"]},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N04", "x": 121.5, "y": 216.0, "font_size": 12, "font_style": "regular", "lines": ["沂南"]},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-N05", "x": 16, "y": 220, "font_size": 12, "font_style": "regular", "lines": ["垛庄"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-shared-CN-LinquYiyuanZhangzhuang-z9-424-200-Xili", "owner_region": "CN-LinquYiyuanZhangzhuang-z9-424-200", "feature_id": "CN-LinquYiyuanZhangzhuang-z9-424-200-Xili", "kind": "city", "original": "Xili", "source_url": "@source/bbe0b8756587fdff", "original_bbox": [62, -10, 83, 7], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-shared-CN-LinquYiyuanZhangzhuang-z9-424-200-Shagou", "owner_region": "CN-LinquYiyuanZhangzhuang-z9-424-200", "feature_id": "CN-LinquYiyuanZhangzhuang-z9-424-200-Shagou", "kind": "city", "original": "Shagou", "source_url": "@source/bbe0b8756587fdff", "original_bbox": [168, -17, 211, 4], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"},
+    {"id": "CN-YishuiMengyinDuozhuang-z9-424-201-shared-CN-ZhuchengWulianJuxian-z9-425-201-N03", "owner_region": "CN-ZhuchengWulianJuxian-z9-425-201", "feature_id": "CN-ZhuchengWulianJuxian-z9-425-201-N03", "kind": "city", "original": "Juxian", "source_url": "@source/894c906f2ad52657", "original_bbox": [235, 191, 276, 209], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

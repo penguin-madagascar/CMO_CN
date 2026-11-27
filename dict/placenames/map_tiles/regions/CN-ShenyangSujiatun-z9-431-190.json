@@ -1,0 +1,43 @@
+{
+  "id": "CN-ShenyangSujiatun-z9-431-190",
+  "z": 9,
+  "x": 431,
+  "y": 190,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/431/190.png"
+  ],
+  "context_tiles": [
+    "9/430/190.png",
+    "9/432/190.png"
+  ],
+  "features": [
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S01", "kind": "city", "original": "Shenbei", "original_bbox": [170, 48, 221, 66], "source_url": "@source/df0830057970307f", "source_glyph_complete": true, "source_printed_full_literal": "Shenbei"},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S02", "kind": "city", "original": "Shenyang", "original_bbox": [101, 101, 176, 128], "source_url": "@source/df0830057970307f", "source_glyph_complete": true, "source_printed_full_literal": "Shenyang"},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S03", "kind": "city", "original": "Sujiatun", "original_bbox": [79, 171, 133, 194], "source_url": "@source/df0830057970307f", "source_glyph_complete": true, "source_printed_full_literal": "Sujiatun"},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S04", "kind": "city", "original": "Wanggang", "original_bbox": [9, 191, 69, 210], "source_url": "@source/df0830057970307f", "source_glyph_complete": true, "source_printed_full_literal": "Wanggang"}
+  ],
+  "translations": [
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S01", "zh": "沈北", "status": "approved", "source": "@source/aed8a0f00185a97d", "record_sha256": "cb0c516b8ea297f26d6c2ca5c10026b9e56e8d42a1f12a3942e317e80b5dce8f", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S02", "zh": "沈阳", "status": "approved", "source": "@source/aed8a0f00185a97d", "record_sha256": "878ecd07908b11603f8876ea0977723075c0430042931f228eab585ebde41abc", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S03", "zh": "苏家屯", "status": "approved", "source": "@source/7c64ba9ca5a56a80", "record_sha256": "d290394f6afcf76920a05eff4c44beaa30080f36372f917a8ed120092f95cc97", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S04", "zh": "王纲", "status": "approved", "source": "@source/4f77479161389e57", "record_sha256": "09ddad09691226efc48094f73bbf4af7ee1cea6b363bb148ae6748a37da61ce7", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S01", "x": 196, "y": 59, "font_style": "regular", "font_size": 12, "lines": ["沈北"]},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S02", "x": 140.5, "y": 117.79, "font_style": "regular", "font_size": 12, "lines": ["沈阳"]},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S03", "x": 106.42, "y": 182.7, "font_style": "regular", "font_size": 12, "lines": ["苏家屯"]},
+    {"id": "CN-ShenyangSujiatun-z9-431-190-S04", "x": 40, "y": 200, "font_style": "regular", "font_size": 12, "lines": ["王纲"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Xinglong", "source_url": "@source/c3fa0fa5e9745a1e", "id": "CN-ShenyangSujiatun-z9-431-190-shared-CN-HeishanXinmin-z9-430-190-S04", "original_bbox": [-26, 21, 25, 40], "owner_region": "CN-HeishanXinmin-z9-430-190", "feature_id": "CN-HeishanXinmin-z9-430-190-S04", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Changtan", "source_url": "@source/c3fa0fa5e9745a1e", "id": "CN-ShenyangSujiatun-z9-431-190-shared-CN-HeishanXinmin-z9-430-190-S08", "original_bbox": [-30, 225, 23, 245], "owner_region": "CN-HeishanXinmin-z9-430-190", "feature_id": "CN-HeishanXinmin-z9-430-190-S08", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Hailang", "source_url": "@source/6d658a073e538eb0", "id": "CN-ShenyangSujiatun-z9-431-190-shared-CN-FushunJiubing-z9-432-190-N05", "original_bbox": [244, 215, 287, 234], "owner_region": "CN-FushunJiubing-z9-432-190", "feature_id": "CN-FushunJiubing-z9-432-190-N05", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "CN-ShenyangSujiatun-z9-431-190-Cities928", "kind": "region", "origin": "canonical_wwp", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 928, "original_Chinese_name": "东陵", "lat_f32_bits": 1109869053, "lon_f32_bits": 1123493587, "flags": 0, "level": 1}, "layout": {"x": 192.59, "y": 106.94, "font_style": "regular", "font_size": 12, "lines": ["东陵"]}}
+  ]
+}

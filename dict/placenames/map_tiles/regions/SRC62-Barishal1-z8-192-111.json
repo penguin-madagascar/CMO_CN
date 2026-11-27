@@ -1,0 +1,26 @@
+{
+  "id": "SRC62-Barishal1-z8-192-111",
+  "z": 8,
+  "x": 192,
+  "y": 111,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/192/111.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "BARISHAL1-01", "kind": "city", "original": "Barishal", "original_bbox": [63, 103, 116, 124], "source_url": "@source/e49178149b588de5"}
+  ],
+  "translations": [
+    {"id": "BARISHAL1-01", "zh": "巴里萨尔", "status": "approved", "source": "@source/e49178149b588de5", "record_sha256": "c9dfa30ecb905c80a3998bcf600168a31393b627da5e5a9cebed441a71eddf7d", "review_notes": "Exact Root-selected Chinese lexical body: evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer=/lexical_choices/10. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."}
+  ],
+  "layouts": [
+    {"id": "BARISHAL1-01", "x": 89.5, "y": 124.5, "font_size": 12, "font_style": "regular", "lines": ["巴里萨尔"]}
+  ],
+  "symbols": [
+    {"id": "BARISHAL1-01-point", "feature_id": "BARISHAL1-01", "kind": "circle", "original_bbox": [63, 103, 72, 112], "x": 67.5, "y": 107.5, "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

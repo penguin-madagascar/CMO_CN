@@ -1,0 +1,28 @@
+{
+  "id": "SO7-Galkayo-z7-80-61",
+  "z": 7,
+  "x": 80,
+  "y": 61,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/80/61.png"
+  ],
+  "context_tiles": [
+    "7/81/61.png"
+  ],
+  "features": [
+    {"id": "SO7-Galkayo-z7-80-61-N01", "kind": "city", "original": "Galkayo", "original_bbox": [224, 150, 263, 168], "source_url": "@source/9edae5dcd5d514f3", "source_glyph_complete": true, "source_printed_full_literal": "Galkayo"}
+  ],
+  "translations": [
+    {"id": "SO7-Galkayo-z7-80-61-N01", "zh": "加勒卡约", "status": "approved", "source": "@source/edb93a5b4f687f36", "record_sha256": "a827ae2bad32ba5ed1e46c76f8be168991d615b6be094b17bb8d789d570fd354", "review_notes": "原图字形跨接完整，联合国中文文件同城译名。"}
+  ],
+  "layouts": [
+    {"id": "SO7-Galkayo-z7-80-61-N01", "x": 228, "y": 166, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "SO7-Galkayo-z7-80-61-N01-circle", "feature_id": "SO7-Galkayo-z7-80-61-N01", "kind": "circle", "original_bbox": [217, 146, 226, 156], "x": 221.5, "y": 151.0, "size": 10, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

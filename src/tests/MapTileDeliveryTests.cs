@@ -15,12 +15,12 @@ public static class MapTileDeliveryTests
     static Type installer;
     static void Check(bool ok, string name) { if (!ok) throw new Exception(name); checks++; Console.WriteLine("PASS " + name); }
     static string PackPath(string dir) { return Path.Combine(dir, "ChineseMapTiles.dat"); }
-    static byte[] ValidPack()
+    static byte[] ValidPack(Color color)
     {
         byte[] png;
         using (var image = new Bitmap(256, 256))
         using (var g = Graphics.FromImage(image))
-        using (var stream = new MemoryStream()) { g.Clear(Color.Red); image.Save(stream, ImageFormat.Png); png = stream.ToArray(); }
+        using (var stream = new MemoryStream()) { g.Clear(color); image.Save(stream, ImageFormat.Png); png = stream.ToArray(); }
         byte[] payload;
         using (var stream = new MemoryStream())
         using (var w = new BinaryWriter(stream)) { w.Write(1); w.Write(3); w.Write(4); w.Write(4); w.Write(1); w.Write(png.Length); w.Write(png); payload = stream.ToArray(); }
@@ -41,40 +41,79 @@ public static class MapTileDeliveryTests
     }
     static bool Equal(byte[] a, byte[] b) { return Convert.ToBase64String(a) == Convert.ToBase64String(b); }
     static void Restore(string game) { installer.GetMethod("RestoreMapLabelTiles", BindingFlags.NonPublic | BindingFlags.Static).Invoke(null, new object[] { game }); }
+    static void CheckEmbeddedUpgrade(string game, string source, byte[] valid, string enginePath)
+    {
+        string error;
+        byte[] previous = ValidPack(Color.Blue);
+        File.WriteAllBytes(PackPath(game), previous);
+        File.WriteAllBytes(PackPath(source), previous);
+        Check(Deploy(game, game, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "installer in the game directory upgrades the installed pack");
+        File.WriteAllBytes(PackPath(game), previous);
+        Check(Deploy(game, source, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "embedded pack supersedes an older valid sidecar");
+        using (var held = File.Open(PackPath(game), FileMode.Open, FileAccess.Read, FileShare.Read))
+            Check(Deploy(game, game, out error), "reinstall leaves a matching pack in place without replacing it");
+        File.WriteAllBytes(PackPath(game), previous);
+        using (var held = File.Open(PackPath(game), FileMode.Open, FileAccess.Read, FileShare.Read))
+            Check(!Deploy(game, game, out error) && error.Length > 0 && Equal(previous, File.ReadAllBytes(PackPath(game))), "blocked embedded upgrade leaves the old working pack intact");
+        Check(Deploy(game, game, out error), "retry publishes the embedded pack");
+        Type engine = Assembly.LoadFrom(enginePath).GetType("CMOLocalizer.CustomAppDomainManager", true);
+        const BindingFlags flags = BindingFlags.NonPublic | BindingFlags.Static;
+        engine.GetMethod("StartLocalTileServer", flags).Invoke(null, new object[] { game });
+        object[] request = { 3, 4, 4, 0, 0 };
+        byte[] png = (byte[])engine.GetMethod("RenderChineseTileBytes", flags).Invoke(null, request);
+        using (var stream = new MemoryStream(png))
+        using (var tile = new Bitmap(stream))
+            Check((int)request[4] == 1 && tile.GetPixel(0, 0).ToArgb() == Color.Red.ToArgb(), "running engine serves the upgraded tile after installation");
+        var listener = (System.Net.Sockets.TcpListener)engine.GetField("tileListener", flags).GetValue(null);
+        if (listener != null) listener.Stop();
+    }
+    static void CheckSidecarDelivery(string game, string source, byte[] valid)
+    {
+        string error;
+        File.WriteAllBytes(PackPath(source), valid);
+        Check(Deploy(game, source, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "disk pack reaches game root exactly");
+        Check(Deploy(game, game, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "same path validates without self-copy damage");
+        File.WriteAllBytes(PackPath(source), new byte[] { 1, 2, 3 });
+        Check(!Deploy(game, source, out error) && error.Length > 0 && Equal(valid, File.ReadAllBytes(PackPath(game))), "bad disk candidate fails and preserves old pack");
+        string patch = Dir("patch-source"), patchFiles = Path.Combine(patch, "patch_files"); Directory.CreateDirectory(patchFiles);
+        File.WriteAllBytes(PackPath(patchFiles), valid);
+        Check(Deploy(game, patch, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "existing patch_files layout supported");
+        File.WriteAllBytes(PackPath(patch), new byte[] { 4 });
+        Check(!Deploy(game, patch, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "bad direct pack is not silently replaced by fallback");
+        File.WriteAllBytes(PackPath(source), ValidPack(Color.Blue));
+        using (var held = File.Open(PackPath(game), FileMode.Open, FileAccess.Read, FileShare.Read))
+            Check(!Deploy(game, source, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "blocked sidecar publication preserves destination");
+        File.WriteAllBytes(PackPath(source), new byte[] { 8 });
+        Check(!Deploy(source, source, out error), "same-path corrupt candidate is rejected");
+    }
     public static int Main(string[] args)
     {
         try {
-            if (args[0] == "--write-pack") { File.WriteAllBytes(args[1], ValidPack()); return 0; }
+            if (args[0] == "--write-pack") { File.WriteAllBytes(args[1], ValidPack(Color.Red)); return 0; }
             root = Path.GetFullPath(args[2]); Directory.CreateDirectory(root);
             var assembly = Assembly.LoadFrom(args[0]); installer = assembly.GetType("CMOLocalizerInstaller.InstallerCore", true);
             Check(installer.GetMethod("DeployMapTilePack", BindingFlags.NonPublic | BindingFlags.Static) != null, "isolated delivery helper exists");
-            byte[] valid = ValidPack(); string error;
+            byte[] valid = ValidPack(Color.Red); string error;
             string source = Dir("source"), game = Dir("game");
-            File.WriteAllBytes(PackPath(source), valid);
-            Check(Deploy(game, source, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "disk pack reaches game root exactly");
-            Check(Deploy(game, game, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "same path validates without self-copy damage");
-            File.WriteAllBytes(PackPath(source), new byte[] { 1, 2, 3 });
-            Check(!Deploy(game, source, out error) && error.Length > 0 && Equal(valid, File.ReadAllBytes(PackPath(game))), "bad disk candidate fails and preserves old pack");
-            string patch = Dir("patch-source"), patchFiles = Path.Combine(patch, "patch_files"); Directory.CreateDirectory(patchFiles);
-            File.WriteAllBytes(PackPath(patchFiles), valid);
-            Check(Deploy(game, patch, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "existing patch_files layout supported");
-            File.WriteAllBytes(PackPath(patch), new byte[] { 4 });
-            Check(!Deploy(game, patch, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "bad direct pack is not silently replaced by fallback");
             string missing = Dir("missing"), absent = Dir("absent");
             string mode = args[1];
             bool embedded = Deploy(absent, missing, out error);
-            if (mode == "valid") Check(embedded && Equal(valid, File.ReadAllBytes(PackPath(absent))), "exact MAP_TILES embedded resource deployed");
+            if (mode == "valid") {
+                Check(embedded && Equal(valid, File.ReadAllBytes(PackPath(absent))), "exact MAP_TILES embedded resource deployed");
+                CheckEmbeddedUpgrade(game, source, valid, args[3]);
+            }
             else if (mode == "bad") {
                 Check(!embedded && !File.Exists(PackPath(absent)) && error.Length > 0, "bad embedded pack fails before destination publication");
-                Check(!Deploy(game, missing, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "bad embedded pack preserves old destination");
+                File.WriteAllBytes(PackPath(game), valid);
+                File.WriteAllBytes(PackPath(source), valid);
+                Check(!Deploy(game, source, out error) && error.Length > 0 && Equal(valid, File.ReadAllBytes(PackPath(game))), "a valid sidecar cannot hide a corrupt embedded resource");
+                Check(!Deploy(game, game, out error) && error.Length > 0 && Equal(valid, File.ReadAllBytes(PackPath(game))), "same-path upgrade with a corrupt resource preserves old pack and reports failure");
             }
-            else Check(embedded && !File.Exists(PackPath(absent)), "resource-free legacy fixture is optional");
-            File.WriteAllBytes(PackPath(source), valid);
-            using (var held = File.Open(PackPath(game), FileMode.Open, FileAccess.Read, FileShare.Read))
-                Check(!Deploy(game, source, out error) && Equal(valid, File.ReadAllBytes(PackPath(game))), "blocked atomic publication reports failure and preserves destination");
+            else {
+                Check(embedded && !File.Exists(PackPath(absent)), "resource-free legacy fixture is optional");
+                CheckSidecarDelivery(game, source, valid);
+            }
             Check(Directory.GetFiles(game, "*.cmo_new*").Length == 0, "failed delivery cleans staging file");
-            File.WriteAllBytes(PackPath(source), new byte[] { 8 });
-            Check(!Deploy(source, source, out error), "same-path corrupt candidate is rejected");
             Type manifest = assembly.GetType("CMOShared.InstallManifest", true);
             string hashGame = Dir("hash-game"); File.WriteAllText(Path.Combine(hashGame,"CMOLocalizer.dll"),"dll"); File.WriteAllText(Path.Combine(hashGame,"CMOLocalizer.json"),"{}");
             var hashes = (IDictionary)manifest.GetMethod("HashEngineFiles").Invoke(null,new object[]{hashGame});

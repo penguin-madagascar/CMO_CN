@@ -2,7 +2,9 @@
 """Exercise the real release placename gate against complete synthetic assets."""
 from __future__ import annotations
 
+import contextlib
 import hashlib
+import io
 import json
 from pathlib import Path
 import struct
@@ -10,9 +12,11 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
 from unittest.mock import patch
 
 import verify_all
+import release_check
 from placename_translation import PLACENAME_SETS
 from test_placenames import write_fixture
 from wwp import load, save
@@ -56,7 +60,10 @@ class ReleasePlacenameTests(unittest.TestCase):
         return self.root / "assets/placenames" / f"{name}.wwp"
 
     def check_gate(self):
-        with patch.object(verify_all, "results", []):
+        # These fixtures contain only WWP sets. The packed R88 layer has its own manifest and DAT.
+        with (patch.object(verify_all, "results", []),
+              patch("verify_packed_regions.verify", return_value="R88 checked separately"),
+              patch("verify_packed_wwp.verify", return_value="packed WWP checked separately")):
             verify_all.gate_placenames()
             self.assertEqual(1, len(verify_all.results))
             name, ok, detail = verify_all.results[0]
@@ -176,6 +183,119 @@ class ReleasePlacenameTests(unittest.TestCase):
                 result = self.check_cli(name)
                 self.assertNotEqual(0, result.returncode)
                 self.assertIn("metadata", result.stderr)
+
+
+class PlacenamePayloadTests(unittest.TestCase):
+    """地名集必须真的进包：exe 内嵌 PLACE_* 与绿色包 wwp 逐字节等于 assets/placenames。"""
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory(prefix="placename-payload-")
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.payloads = {}
+        assets = self.root / "assets/placenames"
+        assets.mkdir(parents=True, exist_ok=True)
+        for name in ("Cities", "Synoptic"):
+            data = f"asset-{name}".encode()
+            (assets / f"{name}.wwp").write_bytes(data)
+            self.payloads[name] = data
+        self.pack = self.root / "pack.zip"
+
+    def write_pack(self, *, cities=None, synoptic=None, omit=()):
+        with zipfile.ZipFile(self.pack, "w") as z:
+            for name, data in (("Cities", self.payloads["Cities"] if cities is None else cities),
+                              ("Synoptic", self.payloads["Synoptic"] if synoptic is None else synoptic)):
+                if name not in omit:
+                    z.writestr(release_check.PACK_PLACENAME_MEMBERS[name], data)
+
+    def embedded(self, *, cities=None, synoptic=None, map_tiles=None):
+        """Stand-in for the CLR reflection read so the tests stay hermetic and fast."""
+        payload = {"PLACE_CITIES": self.payloads["Cities"] if cities is None else cities,
+                   "PLACE_SYNOPTIC": self.payloads["Synoptic"] if synoptic is None else synoptic}
+        if map_tiles is not None:
+            payload["MAP_TILES"] = map_tiles
+
+        def reader(_setup, names):
+            return {name: hashlib.sha256(payload[name]).hexdigest() for name in names}
+
+        return patch.object(release_check, "embedded_resource_hashes", reader)
+
+    def check(self):
+        return release_check.placename_payload_problems(self.root / "setup.exe", self.pack, self.root)
+
+    def test_matching_installer_and_pack_payloads_pass(self):
+        self.write_pack()
+        with self.embedded():
+            self.assertEqual([], self.check())
+
+    def test_matching_payloads_pass_without_a_pack(self):
+        with self.embedded():
+            self.assertEqual([], release_check.placename_payload_problems(
+                self.root / "setup.exe", None, self.root))
+
+    def test_prepackage_checks_installer_map_before_the_zip_exists(self):
+        (self.root / "assets/placenames/ChineseMapTiles.dat").write_bytes(b"verified")
+        for embedded, expected in ((b"old map", 1), (b"verified", 0)):
+            with (self.subTest(embedded=embedded), self.embedded(map_tiles=embedded),
+                  patch.object(release_check, "ROOT", self.root), patch.object(release_check, "VA"),
+                  patch.object(release_check, "check_sources"), patch.object(release_check, "check_assets"),
+                  patch.object(release_check, "check_regression_report", return_value=[]),
+                  contextlib.redirect_stdout(io.StringIO()) as output):
+                self.assertEqual(expected, release_check.main(["--pre"]))
+                if expected:
+                    self.assertIn("MAP_TILES", output.getvalue())
+        self.assertFalse(self.pack.exists())
+
+    def test_public_pack_rejects_private_map_source_directory(self):
+        with zipfile.ZipFile(self.pack, "w") as archive:
+            archive.writestr("地图瓦片源码/source-package.json", "{}")
+        problems = release_check.pack_problems(self.pack.read_bytes(), "4.3.1")
+        self.assertTrue(any("地图瓦片源码/" in problem for problem in problems), problems)
+
+    def test_stale_installer_payload_is_flagged(self):
+        with self.embedded(cities=b"old-cities"):
+            problems = release_check.placename_payload_problems(self.root / "setup.exe", None, self.root)
+        self.assertEqual(1, len(problems), problems)
+        self.assertIn("PLACE_CITIES", problems[0])
+
+    def test_stale_pack_bytes_are_flagged(self):
+        self.write_pack(synoptic=b"old-synoptic")
+        with self.embedded():
+            problems = self.check()
+        self.assertEqual(1, len(problems), problems)
+        self.assertIn("绿色包", problems[0])
+        self.assertIn("Synoptic", problems[0])
+
+    def test_pack_missing_a_placename_set_is_flagged(self):
+        self.write_pack(omit=("Cities",))
+        with self.embedded():
+            problems = self.check()
+        self.assertEqual(1, len(problems), problems)
+        self.assertIn("缺少", problems[0])
+
+    def test_repo_without_placename_assets_is_left_to_the_source_gate(self):
+        """存在性归 verify_all.gate_placenames；合成目录没地名集时这里不报错、不告警。"""
+        import shutil
+        shutil.rmtree(self.root / "assets/placenames")
+        self.write_pack()
+        with self.embedded():
+            self.assertEqual([], self.check())
+
+    def test_partial_asset_set_still_checks_the_present_one(self):
+        (self.root / "assets/placenames/Synoptic.wwp").unlink()
+        with self.embedded(cities=b"old-cities"):
+            problems = release_check.placename_payload_problems(
+                self.root / "setup.exe", None, self.root)
+        self.assertEqual(1, len(problems), problems)
+        self.assertIn("PLACE_CITIES", problems[0])
+
+    def test_installer_without_placename_resource_raises(self):
+        def reader(_setup, names):
+            raise ValueError("安装器缺少可核验的内嵌资源: " + ",".join(names))
+
+        with patch.object(release_check, "embedded_resource_hashes", reader):
+            with self.assertRaisesRegex(ValueError, "内嵌资源"):
+                release_check.placename_payload_problems(self.root / "setup.exe", None, self.root)
 
 
 if __name__ == "__main__":

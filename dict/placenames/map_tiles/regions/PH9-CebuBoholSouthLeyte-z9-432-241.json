@@ -1,0 +1,69 @@
+{
+  "id": "PH9-CebuBoholSouthLeyte-z9-432-241",
+  "z": 9,
+  "x": 432,
+  "y": 241,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/432/241.png",
+    "9/433/241.png"
+  ],
+  "context_tiles": [
+    "9/432/240.png",
+    "9/432/242.png",
+    "9/433/240.png",
+    "9/434/241.png"
+  ],
+  "features": [
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S01", "original": "Cebu City", "kind": "city", "original_bbox": [38, 50, 74, 96], "source_url": "@source/2b2d55338519bbd1", "source_glyph_complete": true, "source_printed_full_literal": "Cebu City"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S02", "original": "Inabanga", "kind": "city", "original_bbox": [90, 161, 141, 180], "source_url": "@source/2b2d55338519bbd1", "source_glyph_complete": true, "source_printed_full_literal": "Inabanga"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S03", "original": "Carmen", "kind": "city", "original_bbox": [142, 237, 185, 253], "source_url": "@source/2b2d55338519bbd1", "source_glyph_complete": true, "source_printed_full_literal": "Carmen"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S04", "original": "Loon", "kind": "city", "original_bbox": [2, 246, 31, 263], "source_url": "@source/2b2d55338519bbd1", "source_glyph_complete": true, "source_printed_full_literal": "Loon"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S05", "original": "Hilongos", "kind": "city", "original_bbox": [339, 34, 389, 54], "source_url": "@source/bc41ab293e118612", "source_glyph_complete": true, "source_printed_full_literal": "Hilongos"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S06", "original": "Bontoc", "kind": "city", "original_bbox": [424, 41, 465, 57], "source_url": "@source/bc41ab293e118612", "source_glyph_complete": true, "source_printed_full_literal": "Bontoc"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S07", "original": "Hinunangan", "kind": "city", "original_bbox": [495, 27, 562, 46], "source_url": "@source/bc41ab293e118612", "source_glyph_complete": true, "source_printed_full_literal": "Hinunangan"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S08", "original": "Carlos P. Garcia", "kind": "city", "original_bbox": [269, 118, 317, 153], "source_url": "@source/bc41ab293e118612", "source_glyph_complete": true, "source_printed_full_literal": "Carlos P. Garcia"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S09", "original": "Maasin", "kind": "city", "original_bbox": [374, 123, 420, 141], "source_url": "@source/bc41ab293e118612", "source_glyph_complete": true, "source_printed_full_literal": "Maasin"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S10", "original": "Lilo-an", "kind": "city", "original_bbox": [479, 115, 518, 131], "source_url": "@source/bc41ab293e118612", "source_glyph_complete": true, "source_printed_full_literal": "Lilo-an"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S11", "original": "Limasawa", "kind": "city", "original_bbox": [455, 200, 510, 216], "source_url": "@source/bc41ab293e118612", "source_glyph_complete": true, "source_printed_full_literal": "Limasawa"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S12", "original": "Mabini", "kind": "city", "original_bbox": [262, 222, 301, 238], "source_url": "@source/bc41ab293e118612", "source_glyph_complete": true, "source_printed_full_literal": "Mabini"}
+  ],
+  "translations": [
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S01", "zh": "宿务市", "status": "approved", "source": "@source/b0e993c831e2a77c", "record_sha256": "2e562363fa64e007ab619274bfd6fa86bd3dfe6dd71feaf264279bf76fda100b", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S02", "zh": "伊纳班加", "status": "approved", "source": "@source/336b6a43e81a907f", "record_sha256": "298da49b377952cdf4671cea731cf1e821ef613f3aa21b367528969a7c99cf26", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S03", "zh": "卡门", "status": "approved", "source": "@source/336b6a43e81a907f", "record_sha256": "ce400755abaaca6bce6f284f99a3b0f19077a90cd8dc42ebe2d37cd95207d645", "review_notes": "同名实体以坐标和保和省行政区来源区分，此处为保和岛卡门。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S04", "zh": "隆", "status": "approved", "source": "@source/336b6a43e81a907f", "record_sha256": "68095e8b9f3e9bcfa22a22ec191205222057673b20a08b84b13ecc1e0a9a9908", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S05", "zh": "希隆戈斯", "status": "approved", "source": "@source/7f4fe96e233a1493", "record_sha256": "cd985b7b3c072178d55260e1deb361b2db184de992c188005648d1586e17baab", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S06", "zh": "邦托克", "status": "approved", "source": "@source/f38b801fbfe90219", "record_sha256": "bda5bc4634d8272d94df490c16073aa959d9fa7e810023467f0fb046220b2ba9", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S07", "zh": "希努南岸", "status": "approved", "source": "@source/f38b801fbfe90219", "record_sha256": "e997ac5b8dd7b24e6e66f446835bbf58a86158dd31b5aa215590f29ad015a332", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S08", "zh": "卡洛斯·加西亚", "status": "approved", "source": "@source/336b6a43e81a907f", "record_sha256": "400696cee62f52d3715aea2ba66928d090abb5a1d381882da26fdff6a07be281", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S09", "zh": "马阿辛", "status": "approved", "source": "@source/b0e993c831e2a77c", "record_sha256": "1659a8d384535819f5dcf0014754f63d4687059cdf61da513621a827572b37c7", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S10", "zh": "利洛安", "status": "approved", "source": "@source/f38b801fbfe90219", "record_sha256": "f4896896ab32d5e5b47a791f9f39e8e766f138ac04418de27fef41784b97ea30", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S11", "zh": "利马萨瓦", "status": "approved", "source": "@source/f38b801fbfe90219", "record_sha256": "4d319d7a03c541516031f92ae38c1cbce2a997e8850e65a19e2040ea13b3d410", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S12", "zh": "马比尼", "status": "approved", "source": "@source/336b6a43e81a907f", "record_sha256": "97edda0691c2cc8a6770fa399073d57f9e879df625a199cd408446c7536603f3", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"}
+  ],
+  "layouts": [
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S01", "x": 56.0, "y": 73.0, "font_style": "regular", "font_size": 12, "lines": ["宿务市"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S02", "x": 115.5, "y": 170.5, "font_style": "regular", "font_size": 12, "lines": ["伊纳班加"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S03", "x": 163.5, "y": 245.0, "font_style": "regular", "font_size": 12, "lines": ["卡门"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S04", "x": 21, "y": 245, "font_style": "regular", "font_size": 12, "lines": ["隆"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S05", "x": 364.0, "y": 44.0, "font_style": "regular", "font_size": 12, "lines": ["希隆戈斯"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S06", "x": 444.5, "y": 49.0, "font_style": "regular", "font_size": 12, "lines": ["邦托克"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S07", "x": 469, "y": 32, "font_style": "regular", "font_size": 12, "lines": ["希努南岸"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S08", "x": 293.0, "y": 135.5, "font_style": "regular", "font_size": 12, "lines": ["卡洛斯·加西亚"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S09", "x": 397.0, "y": 132.0, "font_style": "regular", "font_size": 12, "lines": ["马阿辛"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S10", "x": 482, "y": 123, "font_style": "regular", "font_size": 12, "lines": ["利洛安"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S11", "x": 482.5, "y": 208.0, "font_style": "regular", "font_size": 12, "lines": ["利马萨瓦"]},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-S12", "x": 281.5, "y": 230.0, "font_style": "regular", "font_size": 12, "lines": ["马比尼"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-SH1", "owner_region": "PH9-CebuCamotes-z9-432-240", "feature_id": "PH9-CebuCamotes-z9-432-240-S06", "original_bbox": [136, -19, 290, 3], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "marine", "original": "Camotes Sea", "source_url": "@source/8de70f34fcd8384f"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-C-Cities3050", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3050, "original_Chinese_name": "塔里萨伊", "lat_f32_bits": 1092872800, "lon_f32_bits": 1123529450, "flags": 0, "level": 1}, "layout": {"x": 36.2055555555562, "y": 89.9755757335297, "font_style": "regular", "font_size": 12, "lines": ["塔里萨伊"]}},
+    {"id": "PH9-CebuBoholSouthLeyte-z9-432-241-C-Cities3082", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3082, "original_Chinese_name": "曼达韦市", "lat_f32_bits": 1092955522, "lon_f32_bits": 1123538989, "flags": 0, "level": 1}, "layout": {"x": 62.70277777778392, "y": 59.78367163934308, "font_style": "regular", "font_size": 12, "lines": ["曼达韦市"]}}
+  ]
+}

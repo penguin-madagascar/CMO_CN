@@ -1,0 +1,23 @@
+{
+  "id": "OTHER-Zama-z10-520-470",
+  "z": 10,
+  "x": 520,
+  "y": 470,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/520/470.png"
+  ],
+  "context_tiles": [
+    "10/519/470.png"
+  ],
+  "features": [],
+  "translations": [],
+  "layouts": [],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "OTHER-SH-201", "owner_region": "AM-MaliEast-z10-512-464", "feature_id": "AM27-21-Zama", "kind": "city", "original": "Zama", "source_url": "@source/7d8e3d1777daa13d", "original_bbox": [-8, 199, 28, 217], "review_notes": "Proposed exact same-instance Source accounting from frozen Other4 physical Source Q; Root model selection and actual Target pending."}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

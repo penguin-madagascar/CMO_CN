@@ -1,0 +1,39 @@
+{
+  "id": "Utah-LoganRichmondBrigham-z9-96-190",
+  "z": 9,
+  "x": 96,
+  "y": 190,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/96/190.png",
+    "9/97/190.png"
+  ],
+  "context_tiles": [
+    "9/96/191.png"
+  ],
+  "features": [
+    {"id": "US9-Richmond", "kind": "city", "original": "Richmond", "original_bbox": [222, 46, 278, 62], "source_url": "@source/3c61437f15a28820", "source_glyph_complete": true, "source_printed_full_literal": "Richmond"},
+    {"id": "US9-Tremonton", "kind": "city", "original": "Tremonton", "original_bbox": [91, 149, 152, 165], "source_url": "@source/3c61437f15a28820", "source_glyph_complete": true, "source_printed_full_literal": "Tremonton"},
+    {"id": "US9-Logan", "kind": "city", "original": "Logan", "original_bbox": [223, 139, 262, 160], "source_url": "@source/3c61437f15a28820", "source_glyph_complete": true, "source_printed_full_literal": "Logan"},
+    {"id": "US9-Hyrum", "kind": "city", "original": "Hyrum", "original_bbox": [216, 187, 254, 206], "source_url": "@source/3c61437f15a28820", "source_glyph_complete": true, "source_printed_full_literal": "Hyrum"},
+    {"id": "US9-BrighamCity", "kind": "city", "original": "Brigham City", "original_bbox": [153, 238, 200, 274], "source_url": "@source/3c61437f15a28820", "source_glyph_complete": true, "source_printed_full_literal": "Brigham City"}
+  ],
+  "symbols": [],
+  "translations": [
+    {"id": "US9-Richmond", "zh": "里士满", "source": "@source/c2284c801779c8e4", "status": "approved", "record_sha256": "d40da91d834a3a0ab981afe19eb696e58b60c2222de688419b5b866a3b56e665", "review_notes": "同名地按犹他州行政资料定位，采用常用译音。"},
+    {"id": "US9-Tremonton", "zh": "特里蒙顿", "source": "@source/c2284c801779c8e4", "status": "approved", "record_sha256": "d8a9396fbe8744a72c322ef1437b0d26c5d4dfd88ef39e886a4d1dc54f17370f", "review_notes": "按犹他州行政资料确认，采用常见音译。"},
+    {"id": "US9-Logan", "zh": "洛根", "source": "@source/e61074d5a960dd92", "status": "approved", "record_sha256": "f46e7d89a7c221c6dfe16e1a9bb7a7b8d99dac93cb3af6b7096462cfd3b0ea3b", "review_notes": "沿用犹他州中文旅游指南的洛根。"},
+    {"id": "US9-Hyrum", "zh": "海勒姆", "source": "@source/4558bfb23f595094", "status": "approved", "record_sha256": "e5d698723ee7fbdf5d9480063ba934400c9decda99d8bcd70b201a27b3d0f7a2", "review_notes": "沿用犹他州中文旅游局的海勒姆。"},
+    {"id": "US9-BrighamCity", "zh": "布里格姆城", "source": "@source/d2572aa33464df7b", "status": "approved", "record_sha256": "2d5f895eec5035a18204b5c46c6c7cf7f9a6caeafda29a178edf3b44885c914f", "review_notes": "按犹他州行政资料确认，City 译作城。"}
+  ],
+  "layouts": [
+    {"id": "US9-Richmond", "x": 250, "y": 54, "font_size": 12, "font_style": "regular"},
+    {"id": "US9-Tremonton", "x": 121.5, "y": 157, "font_size": 12, "font_style": "regular"},
+    {"id": "US9-Logan", "x": 242.5, "y": 149.5, "font_size": 12, "font_style": "regular"},
+    {"id": "US9-Hyrum", "x": 235, "y": 196.5, "font_size": 12, "font_style": "regular"},
+    {"id": "US9-BrighamCity", "x": 176.5, "y": 247, "font_size": 12, "font_style": "regular"}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

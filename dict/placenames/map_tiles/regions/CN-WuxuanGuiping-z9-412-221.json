@@ -1,0 +1,52 @@
+{
+  "id": "CN-WuxuanGuiping-z9-412-221",
+  "x": 412,
+  "y": 221,
+  "z": 9,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/412/221.png"
+  ],
+  "context_tiles": [
+    "9/411/221.png",
+    "9/412/220.png",
+    "9/412/222.png",
+    "9/413/221.png"
+  ],
+  "features": [
+    {"id": "CN-WuxuanGuiping-z9-412-221-N01", "kind": "city", "original": "Liuxiang", "source_url": "@source/ff55479261534ed3", "original_bbox": [113, -13, 160, 6], "source_glyph_complete": true, "source_printed_full_literal": "Liuxiang"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N02", "kind": "city", "original": "Dapeng", "source_url": "@source/ff55479261534ed3", "original_bbox": [157, 47, 200, 66], "source_glyph_complete": true, "source_printed_full_literal": "Dapeng"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N03", "kind": "city", "original": "Siwang", "source_url": "@source/ff55479261534ed3", "original_bbox": [204, 73, 246, 93], "source_glyph_complete": true, "source_printed_full_literal": "Siwang"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N04", "kind": "city", "original": "Wuxuan", "source_url": "@source/ff55479261534ed3", "original_bbox": [-37, 106, 16, 124], "source_glyph_complete": true, "source_printed_full_literal": "Wuxuan"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N05", "kind": "city", "original": "Nanmu", "source_url": "@source/ff55479261534ed3", "original_bbox": [121, 147, 162, 164], "source_glyph_complete": true, "source_printed_full_literal": "Nanmu"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N06", "kind": "city", "original": "Guiping", "source_url": "@source/ff55479261534ed3", "original_bbox": [116, 187, 165, 209], "source_glyph_complete": true, "source_printed_full_literal": "Guiping"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N07", "kind": "city", "original": "Qingfeng", "source_url": "@source/ff55479261534ed3", "original_bbox": [1, 240, 53, 256], "source_glyph_complete": false, "source_printed_full_literal": null, "source_visible_fragment": "Qingfeng", "resolved_semantic_name": "Qingfeng", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"type": "LEGIBLE_FULL_NAME_WITH_GLYPHS_CLIPPED_ON_SOUTH_EDGE", "details": "全部字母可读，南侧实图没有接续的降部。同坐标独立地图标为庆丰镇。", "source_url": "@source/f356f7ed39a79d86"}},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N08", "kind": "city", "original": "Youma", "source_url": "@source/ff55479261534ed3", "original_bbox": [183, 236, 223, 252], "source_glyph_complete": true, "source_printed_full_literal": "Youma"}
+  ],
+  "translations": [
+    {"id": "CN-WuxuanGuiping-z9-412-221-N01", "zh": "六巷", "source": "@source/f356f7ed39a79d86", "status": "approved", "record_sha256": "5c9d69bf3daec587ae1c9e04ed13527f37d592c33b122f95939c171006cde770", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N02", "zh": "大鹏", "source": "@source/f356f7ed39a79d86", "status": "approved", "record_sha256": "c1915775e803049b03e9cd1502274512033ae9d67c3073b019c57261f32c6cce", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N03", "zh": "思旺", "source": "@source/f356f7ed39a79d86", "status": "approved", "record_sha256": "0acf2961eada8508daa7d202450275850b3e61f8e25d71ee67c2a4161734ee8c", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N04", "zh": "武宣", "source": "@source/f356f7ed39a79d86", "status": "approved", "record_sha256": "98ea8a3923699b7ea6129cb4c3f1f2a5da0cbff9b7661bcd3cf90b961744a6db", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N05", "zh": "南木", "source": "@source/f356f7ed39a79d86", "status": "approved", "record_sha256": "de233bbb3e650ea6d27f01e6d09624555add97ea49e48c67d2bd84ae9f54820b", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N06", "zh": "桂平", "source": "@source/f356f7ed39a79d86", "status": "approved", "record_sha256": "909563d688c383ce59288eec359d61fc57fc4e54a6697a64a57fe6b743f0ef05", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N07", "zh": "庆丰", "source": "@source/f356f7ed39a79d86", "status": "approved", "record_sha256": "03afd872c18c17e1f39788a108198398bbc27c1cd6a676121a5d16d2fcb034f9", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N08", "zh": "油麻", "source": "@source/f356f7ed39a79d86", "status": "approved", "record_sha256": "b47184103fcfd949f2f49d706a41fcc44a1b0dcca1a9b3343cd3c95252c2c461", "review_notes": "核对原图字样、同坐标矢量地名及行政资料。"}
+  ],
+  "layouts": [
+    {"id": "CN-WuxuanGuiping-z9-412-221-N01", "x": 136.5, "y": 7.5, "font_style": "regular", "font_size": 12, "lines": ["六巷"]},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N02", "x": 178.5, "y": 56.5, "font_style": "regular", "font_size": 12, "lines": ["大鹏"]},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N03", "x": 225.0, "y": 83.0, "font_style": "regular", "font_size": 12, "lines": ["思旺"]},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N04", "x": 13.5, "y": 115.0, "font_style": "regular", "font_size": 12, "lines": ["武宣"]},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N05", "x": 141.5, "y": 155.5, "font_style": "regular", "font_size": 12, "lines": ["南木"]},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N06", "x": 140.5, "y": 198.0, "font_style": "regular", "font_size": 12, "lines": ["桂平"]},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N07", "x": 27.0, "y": 248.0, "font_style": "regular", "font_size": 12, "lines": ["庆丰"]},
+    {"id": "CN-WuxuanGuiping-z9-412-221-N08", "x": 203.0, "y": 244.0, "font_style": "regular", "font_size": 12, "lines": ["油麻"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-WuxuanGuiping-z9-412-221-shared-CN-TengPingnan-z9-413-221-N03", "owner_region": "CN-TengPingnan-z9-413-221", "feature_id": "CN-TengPingnan-z9-413-221-N03", "kind": "city", "original": "Pingnan", "original_bbox": [230, 128, 281, 149], "source_url": "@source/a5bcabbc8cb3b90d", "review_notes": "原字跨片，中文沿用相邻瓦片中已绘制的同一地名。"}
+  ],
+  "legacy_suppressions": []
+}

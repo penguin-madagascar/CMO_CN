@@ -1,0 +1,26 @@
+{
+  "id": "EUE12-R1-Liepaja-z8-142-79-2x1",
+  "z": 8,
+  "x": 142,
+  "y": 79,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/142/79.png",
+    "8/143/79.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "EUE12-N01", "kind": "city", "original": "Liepaja", "original_bbox": [236, 13, 284, 38], "source_url": "@source/285cde36f19b7fa2"}
+  ],
+  "translations": [
+    {"id": "EUE12-N01", "zh": "利耶帕亚", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "ffb8064ab4964531b603a4c7aa49e1072d59a249b05d2e413790f7e80375bd81", "review_notes": "ORIGINAL_NE_NAME_ZH_PLUS_EXPLICIT_ORIGINAL_GN_ASCII_OR_NE_NAMEASCII_SPELLING_BRIDGE; verbatim qualified Source Chinese. Metadata only; Root model and actual different TARGET pending. Root e094 actual private model, author SELF only; different /root/caribbean_author TARGET pending. Personally viewed all22 new complete glyphs (17 Source Chinese+5 separate original WWP captions),7 new whole owners,18 original mixed raw9-frame/target73 native pairs,5 internal joins and2 cross-owner joins. All original Source18 full13400/core13141/real5px15 verified; old Tetovo259 retained in its complete existing normal with603=344+259. Measured initial Elbasan N17 and fixed Albania C03 low-alpha3pixel overlap; only ordinary Source N17 x+4 removes all positive/alpha/RGBA contamination. First evidence retained. All5 canonical exact bodies/layouts/nominal f32 points,all18 native midpoints and complete Source boxes unchanged. Source1=None; new Tetovo rendered private1 is newly selected,not borrowed current19/future21. Old3 complete145 objects/reviews remain exact. No old preview exports,formal promotion,new Source HTTP,unknown15 or fullrunner. This author SELF receipt is not different TARGET approval or full_current canonical/rendered authority."}
+  ],
+  "layouts": [
+    {"id": "EUE12-N01", "x": 272.5, "y": 28.5, "font_size": 12, "font_style": "regular", "lines": ["利耶帕亚"]}
+  ],
+  "symbols": [
+    {"id": "EUE12-P01", "kind": "circle", "original_bbox": [236, 13, 245, 22], "x": 240.5, "y": 17.5, "size": 9, "outline_width": 1, "source_url": "@source/30ea1d4a75b2e43c", "feature_id": "EUE12-N01"}
+  ],
+  "shared_sources": []
+}

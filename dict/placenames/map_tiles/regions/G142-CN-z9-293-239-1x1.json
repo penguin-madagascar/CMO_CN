@@ -1,0 +1,32 @@
+{
+  "id": "G142-CN-z9-293-239-1x1",
+  "z": 9,
+  "x": 293,
+  "y": 239,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/293/239.png"
+  ],
+  "context_tiles": [
+    "9/294/239.png"
+  ],
+  "features": [
+    {"id": "G142-N-01", "kind": "region", "original": "Wad Belal", "original_bbox": [155, 59, 213, 75], "source_url": "@source/8cfe9e053e10d140", "source_printed_full_literal": "Wad Belal", "source_glyph_complete": true, "providerpoint": null},
+    {"id": "G142-N-02", "kind": "region", "original": "Ad Da'ein", "original_bbox": [22, 131, 63, 170], "source_url": "@source/8cfe9e053e10d140", "source_printed_full_literal": "Ad Da'ein", "source_glyph_complete": true, "providerpoint": null},
+    {"id": "G142-N-03", "kind": "region", "original": "Jabron…", "original_bbox": [216, 27, 256, 43], "source_url": "@source/8cfe9e053e10d140", "source_printed_full_literal": null, "source_glyph_complete": false, "providerpoint": null, "source_visible_fragment": "Jabron…", "resolved_semantic_name": "Jabrona", "semantic_resolution": {"type": "ACTUAL_OTHER_ZOOM_COMPLETE_PRINT_AND_SAME_WORLD_CAPTION_ASSOCIATION", "complete_spelling": "Jabrona", "complete_spelling_source_url": "@source/c47f12239dacbe00", "complete_spelling_source_wire_sha256": "27ef58287ed4983492d55f97a45878b8ef09a293901312b6d1f65e69115a2b07", "complete_spelling_source_RGBA_sha256": "23a0c02bb9b6a73d31f55f20490a3403edb18239474effa978c1876b5885bca3", "complete_spelling_source_z": 10, "complete_spelling_source_bbox": [198, 62, 243, 78], "complete_spelling_source_world_bbox": [150470, 122430, 150515, 122446], "z9_visible_bbox": [216, 27, 256, 43], "z9_visible_world_bbox": [75224, 61211, 75264, 61227], "z9_visible_caption_center": [75244, 61219], "z10_complete_caption_center_divided_by_two": [75246.25, 61219], "caption_center_delta_z9_pixels": [2.25, 0], "independent_same_area_caption_control": {"original": "Wad Belal", "z9_world_bbox": [75163, 61243, 75221, 61259], "z10_world_bbox": [150354, 122495, 150413, 122511], "z9_caption_center": [75192, 61251], "z10_caption_center_divided_by_two": [75191.75, 61251.5], "caption_center_delta_z9_pixels": [-0.25, 0.5]}, "limits": "Association of a clipped caption with the actual complete same-world z10 name, supported by its visible prefix and the Wad Belal control. Caption centers are not provider points. No z9 full literal, missing letters, or full z9 glyph bbox is recovered. The ellipsis is fragment notation, not a printed ellipsis. Exact parent/child glyph-template equality is not claimed. Futaha in z9/294/239 is a separate old-owned caption, not a continuation.", "original_is_visible_fragment_not_recovered_full_glyphs": true, "old_semantic_approval_reused": false}}
+  ],
+  "translations": [
+    {"id": "G142-N-01", "zh": "瓦德比拉勒", "status": "approved", "source": "@source/8cfe9e053e10d140", "record_sha256": "465973135d73e1a1c3a687b96b307f800687ce6f31631f72a014d768507bc00c", "review_notes": "Root Chinese selection 69e94f5664dbb728ac9e29b78ede8125a2560dcce0a6d11f1e6a13b5b6063329 /selected_words/0, grade C_PROJECT_TRANSLITERATION. HTTP source identifies original printed support only, not official Chinese wording. Complete printed caption retained; no provider-point or administrative entity inference."},
+    {"id": "G142-N-02", "zh": "埃代因", "status": "approved", "source": "@source/8cfe9e053e10d140", "record_sha256": "fde4f470033a6cdb340717357b08c60ba878ce943101d93a541a5698b149b135", "review_notes": "Root Chinese selection 69e94f5664dbb728ac9e29b78ede8125a2560dcce0a6d11f1e6a13b5b6063329 /selected_words/1, grade A_DIRECT_UN_SAME_CITY. HTTP source identifies original printed support only, not official Chinese wording. Complete printed caption retained; no provider-point or administrative entity inference."},
+    {"id": "G142-N-03", "zh": "贾布罗纳", "status": "approved", "source": "@source/c47f12239dacbe00", "record_sha256": "7a2efbbb241834773a587754b01dc58f618d12849935d120f1f7c8310e843802", "review_notes": "项目音译贾布罗纳，C_PROJECT_TRANSLITERATION，非官方中译认证。新官方 z10 实图完整打印 Jabrona，并以同世界位置和 Wad Belal 对照关联到 z9 可见裁词。z9 original 仍为 Jabron…，source_glyph_complete=false、source_printed_full_literal=null，bbox 仅真实547像素；不复用旧 semantic Target/Source 签名作为新证据，交独立复核此关联及中文。"}
+  ],
+  "layouts": [
+    {"id": "G142-N-01", "x": 184, "y": 67, "font_size": 12, "font_style": "regular", "lines": ["瓦德比拉勒"]},
+    {"id": "G142-N-02", "x": 42.5, "y": 150.5, "font_size": 12, "font_style": "regular", "lines": ["埃代因"]},
+    {"id": "G142-N-03", "x": 220, "y": 35, "font_size": 12, "font_style": "regular", "lines": ["贾布罗纳"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

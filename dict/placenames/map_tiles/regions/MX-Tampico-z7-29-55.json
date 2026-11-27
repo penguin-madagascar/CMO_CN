@@ -1,0 +1,25 @@
+{
+  "id": "MX-Tampico-z7-29-55",
+  "z": 7,
+  "x": 29,
+  "y": 55,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/29/55.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "MX7-Tampico", "kind": "city", "original": "Tampico", "original_bbox": [48, 225, 98, 246], "source_url": "@source/20394b8040b3a04d", "source_glyph_complete": true, "source_full_literal": "Tampico"}
+  ],
+  "translations": [
+    {"id": "MX7-Tampico", "zh": "坦皮科", "status": "approved", "source": "@source/1566a1ccf70be179", "record_sha256": "ea6d1bae0a4c40c42c967f4f568c6b941dc060a6f69c18b51fc18d685faafb06", "review_notes": "Reuse independently approved exact Tampico Chinese in z5 and z6. Tampico municipal government verifies the identity and coordinates, with Ciudad Madero a distinct neighbor. Source print and point complete; Chinese remains equal to actually displayed Cities#2699."}
+  ],
+  "layouts": [
+    {"id": "MX7-Tampico", "x": 78.0, "y": 238.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "MX7-Tampico-point", "feature_id": "MX7-Tampico", "kind": "circle", "x": 52.5, "y": 229.5, "size": 9, "outline_width": 1, "original_bbox": [48, 225, 57, 234]}
+  ],
+  "shared_sources": []
+}

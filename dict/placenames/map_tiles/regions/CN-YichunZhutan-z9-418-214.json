@@ -1,0 +1,42 @@
+{
+  "id": "CN-YichunZhutan-z9-418-214",
+  "z": 9,
+  "x": 418,
+  "y": 214,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/418/214.png"
+  ],
+  "context_tiles": [
+    "9/419/214.png",
+    "9/417/214.png"
+  ],
+  "features": [
+    {"id": "CN-YichunZhutan-z9-418-214-N01", "kind": "city", "original": "Xiaohe", "original_bbox": [32, 17, 73, 34], "source_url": "@source/d3d9493e2a42e109", "source_glyph_complete": true, "source_printed_full_literal": "Xiaohe"},
+    {"id": "CN-YichunZhutan-z9-418-214-N02", "kind": "city", "original": "Wanzai", "original_bbox": [171, 72, 217, 90], "source_url": "@source/d3d9493e2a42e109", "source_glyph_complete": true, "source_printed_full_literal": "Wanzai"},
+    {"id": "CN-YichunZhutan-z9-418-214-N03", "kind": "city", "original": "Tianxin", "original_bbox": [233, 62, 276, 78], "source_url": "@source/d3d9493e2a42e109", "source_glyph_complete": true, "source_printed_full_literal": "Tianxin"},
+    {"id": "CN-YichunZhutan-z9-418-214-N04", "kind": "city", "original": "Zhutan", "original_bbox": [72, 96, 113, 112], "source_url": "@source/d3d9493e2a42e109", "source_glyph_complete": true, "source_printed_full_literal": "Zhutan"},
+    {"id": "CN-YichunZhutan-z9-418-214-N05", "kind": "city", "original": "Shuijiang", "original_bbox": [0, 176, 42, 196], "source_url": "@source/d3d9493e2a42e109", "source_glyph_complete": false, "source_printed_full_literal": null},
+    {"id": "CN-YichunZhutan-z9-418-214-N06", "kind": "city", "original": "Yichun", "original_bbox": [162, 192, 206, 210], "source_url": "@source/d3d9493e2a42e109", "source_glyph_complete": true, "source_printed_full_literal": "Yichun"}
+  ],
+  "translations": [
+    {"id": "CN-YichunZhutan-z9-418-214-N01", "zh": "小河", "status": "approved", "source": "@source/d238da4121fa3004", "record_sha256": "4b6ced96341f9eda78b3a1099fe489feb2617ed953018eb5ebbc3bd23bf74673", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-YichunZhutan-z9-418-214-N02", "zh": "万载", "status": "approved", "source": "@source/6c0fb0c4030a31c5", "record_sha256": "a666dfd1ca3c0834edfcd33316aeef8957cf2e29d22135634f75aada0e49f7fa", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-YichunZhutan-z9-418-214-N03", "zh": "田心", "status": "approved", "source": "@source/6c0fb0c4030a31c5", "record_sha256": "171efecc8e9bad7b0d8828d88df7d47fe967677339a75abac954c96121875dee", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-YichunZhutan-z9-418-214-N04", "zh": "株潭", "status": "approved", "source": "@source/6c0fb0c4030a31c5", "record_sha256": "1e2415b4c0477ca7a0a3c885ec567b63730f81d46a6c166764868d5d840ed625", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-YichunZhutan-z9-418-214-N05", "zh": "水江", "status": "approved", "source": "@source/6c0fb0c4030a31c5", "record_sha256": "78276dcc8755546abe5cfa50466834b2aef8dd5792b16ad74d3b94f6bf8914c2", "review_notes": "原图左缘首字母有缺笔，邻片无续笔，余字与同地地名证据核对。"},
+    {"id": "CN-YichunZhutan-z9-418-214-N06", "zh": "宜春", "status": "approved", "source": "@source/6c0fb0c4030a31c5", "record_sha256": "84ac6d83a21b6ddca18d88f9bf5a3160a0f6d0ecd3b11f6e8e9747f62148cfb9", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-YichunZhutan-z9-418-214-N01", "x": 52.5, "y": 25.5, "font_size": 12, "font_style": "regular", "lines": ["小河"]},
+    {"id": "CN-YichunZhutan-z9-418-214-N02", "x": 194.0, "y": 81.0, "font_size": 12, "font_style": "regular", "lines": ["万载"]},
+    {"id": "CN-YichunZhutan-z9-418-214-N03", "x": 239, "y": 70, "font_size": 12, "font_style": "regular", "lines": ["田心"]},
+    {"id": "CN-YichunZhutan-z9-418-214-N04", "x": 92.5, "y": 104.0, "font_size": 12, "font_style": "regular", "lines": ["株潭"]},
+    {"id": "CN-YichunZhutan-z9-418-214-N05", "x": 19, "y": 183, "font_size": 12, "font_style": "regular", "lines": ["水江"]},
+    {"id": "CN-YichunZhutan-z9-418-214-N06", "x": 179.8, "y": 194.4, "font_size": 12, "font_style": "regular", "lines": ["宜春"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

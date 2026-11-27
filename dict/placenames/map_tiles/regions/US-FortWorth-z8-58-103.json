@@ -1,0 +1,29 @@
+{
+  "id": "US-FortWorth-z8-58-103",
+  "z": 8,
+  "x": 58,
+  "y": 103,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/58/103.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "Texas-Fort-Worth", "kind": "city", "original": "Fort Worth", "original_bbox": [197, 79, 241, 119], "source_url": "@source/d6c21e2cab962ad2"}
+  ],
+  "translations": [
+    {"id": "Texas-Fort-Worth", "zh": "沃思堡", "status": "approved", "source": "@source/b2a5d3c53ee20488", "record_sha256": "eadb3cd082994cfb8124fb0f4228b67523e9fc1741987748b82b7c2a9205b6fc", "review_notes": "Complete Fort / Worth on the z8 U.S. Texas Source tile, exact repository lexical row and same geographic Cities[3897]. The Census municipal identity is separate from community Chinese spelling evidence."}
+  ],
+  "layouts": [
+    {"id": "Texas-Fort-Worth", "x": 221.5, "y": 106.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "Texas-Fort-Worth-circle", "feature_id": "Texas-Fort-Worth", "kind": "circle", "original_bbox": [197, 79, 206, 88], "x": 201.5, "y": 83.5, "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "US-FortWorth-z8-58-103-C-Cities-3889", "origin": "canonical_wwp", "source_bbox": null, "source_png": null, "source_native": null, "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3889, "original_Chinese_name": "阿灵顿", "lat_f32_bits": 1107489113, "lon_f32_bits": 3267508053, "flags": 0, "level": 1}, "layout": {"x": 235, "y": 87, "font_style": "regular", "font_size": 12, "lines": ["阿灵顿"]}}
+  ]
+}

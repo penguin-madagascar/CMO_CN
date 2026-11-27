@@ -1,0 +1,40 @@
+{
+  "id": "SA-AbhaAhadRufaidah-z9-316-229",
+  "z": 9,
+  "x": 316,
+  "y": 229,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "features": [
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N01", "kind": "city", "original": "Abha", "original_bbox": [98, 155, 133, 174], "source_glyph_complete": true, "source_printed_full_literal": "Abha", "source_url": "@source/073bf142763f6e13"},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N02", "kind": "city", "original": "Khamis Mushayt", "original_bbox": [172, 114, 227, 155], "source_glyph_complete": true, "source_printed_full_literal": "Khamis Mushayt", "source_url": "@source/073bf142763f6e13"},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N03", "kind": "city", "original": "Ahad Rufaidah", "original_bbox": [213, 161, 263, 195], "source_glyph_complete": true, "source_printed_full_literal": "Ahad Rufaidah", "source_url": "@source/073bf142763f6e13"},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N04", "kind": "city", "original": "Far`at Turayb", "original_bbox": [350, 14, 390, 51], "source_glyph_complete": true, "source_printed_full_literal": "Far`at Turayb", "source_url": "@source/4da78e8a90b5d337"},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N05", "kind": "city", "original": "Surat `Abydah", "original_bbox": [321, 197, 368, 234], "source_glyph_complete": true, "source_printed_full_literal": "Surat `Abydah", "source_url": "@source/4da78e8a90b5d337"}
+  ],
+  "translations": [
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N01", "zh": "艾卜哈", "status": "approved", "source": "@source/54080a2911bafe4a", "record_sha256": "7ca25fae63f19158f6da1726abe318bfd66f716374b15a9f22c10f629a9facbb", "review_notes": "完整原图字样和位置已核对，中文沿用相应地区官方资料用字。"},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N02", "zh": "海米斯穆谢特", "status": "approved", "source": "@source/54080a2911bafe4a", "record_sha256": "56fde53a85c01199c1ffdac2da1025524dd38782c6bbe22b3663ff5ad2565601", "review_notes": "完整原图字样和位置已核对，中文沿用相应地区官方资料用字。"},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N03", "zh": "阿哈德·拉菲达", "status": "approved", "source": "@source/e475ee5634a6a265", "record_sha256": "f4791f51c7f26e78ae81f62fd86169b1e026dfac8a61eab1136ae0af67507dc0", "review_notes": "完整原图字样和位置已核对，中文沿用相应地区官方资料用字。"},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N04", "zh": "图莱布", "status": "approved", "source": "@source/54080a2911bafe4a", "record_sha256": "ede4a55bbc4f6edeb65b6ebd68f0218a24b3fdb7b2d2dad679e9dac7befe1477", "review_notes": "原图印作 Far`at Turayb。市镇坐标及当地异拼见 https://www.openstreetmap.org/node/7700248105 ，中心与原图相符。中文采用沙特百科对该地的译名图莱布。"},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N05", "zh": "萨拉特·阿比达", "status": "approved", "source": "@source/54080a2911bafe4a", "record_sha256": "dcfd8142eed144126f72af568e1f22905fb46de23225bcc004cabec80620cf4b", "review_notes": "完整原图字样和位置已核对，中文沿用相应地区官方资料用字。"}
+  ],
+  "layouts": [
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N01", "x": 115, "y": 165, "font_size": 12, "font_style": "regular", "lines": ["艾卜哈"]},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N02", "x": 199, "y": 134, "font_size": 12, "font_style": "regular", "lines": ["海米斯穆谢特"]},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N03", "x": 238, "y": 178, "font_size": 12, "font_style": "regular", "lines": ["阿哈德·拉菲达"]},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N04", "x": 370, "y": 32, "font_size": 12, "font_style": "regular", "lines": ["图莱布"]},
+    {"id": "SA-AbhaAhadRufaidah-z9-316-229-N05", "x": 344, "y": 216, "font_size": 12, "font_style": "regular", "lines": ["萨拉特·阿比达"]}
+  ],
+  "symbols": [],
+  "original_tiles": [
+    "9/316/229.png",
+    "9/317/229.png"
+  ],
+  "context_tiles": [],
+  "shared_sources": [],
+  "legacy_suppressions": [
+    {"feature_id": "SA-AbhaAhadRufaidah-z9-316-229-N01", "name": "艾卜哈", "lat": 18.21639060974121, "lon": 42.505279541015625, "level": 1, "source": "@source/54080a2911bafe4a", "review_notes": "同一城市和原位置已有源图中文标注，按原内置坐标精确去重。"},
+    {"feature_id": "SA-AbhaAhadRufaidah-z9-316-229-N02", "name": "海米斯穆谢特", "lat": 18.299999237060547, "lon": 42.73332977294922, "level": 1, "source": "@source/54080a2911bafe4a", "review_notes": "同一城市和原位置已有源图中文标注，按原内置坐标精确去重。"}
+  ]
+}

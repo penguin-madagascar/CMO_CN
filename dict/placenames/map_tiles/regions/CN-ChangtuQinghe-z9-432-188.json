@@ -1,0 +1,42 @@
+{
+  "id": "CN-ChangtuQinghe-z9-432-188",
+  "z": 9,
+  "x": 432,
+  "y": 188,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/432/188.png"
+  ],
+  "context_tiles": [
+    "9/433/188.png",
+    "9/432/189.png"
+  ],
+  "features": [
+    {"id": "CN-ChangtuQinghe-z9-432-188-S01", "kind": "city", "original": "Dongga", "original_bbox": [20, 28, 64, 48], "source_url": "@source/428fd47f4de3d700", "source_glyph_complete": true, "source_printed_full_literal": "Dongga"},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S02", "kind": "city", "original": "Changtu", "original_bbox": [104, 131, 156, 154], "source_url": "@source/428fd47f4de3d700", "source_glyph_complete": true, "source_printed_full_literal": "Changtu"},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S03", "kind": "city", "original": "Chengdong", "original_bbox": [111, 212, 173, 233], "source_url": "@source/428fd47f4de3d700", "source_glyph_complete": true, "source_printed_full_literal": "Chengdong"},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S04", "kind": "city", "original": "Babao", "original_bbox": [43, 241, 80, 258], "source_url": "@source/428fd47f4de3d700", "source_glyph_complete": true, "source_printed_full_literal": "Babao"},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S05", "kind": "city", "original": "Qinghe", "original_bbox": [122, 251, 168, 273], "source_url": "@source/428fd47f4de3d700", "source_glyph_complete": true, "source_printed_full_literal": "Qinghe"}
+  ],
+  "translations": [
+    {"id": "CN-ChangtuQinghe-z9-432-188-S01", "zh": "东嘎", "status": "approved", "source": "@source/64d9dfe09f2f534e", "record_sha256": "2fddcfb35c8115df2c69bd3f2e6c5cf1e903986b6c20a03a3bb4c01de5b0cca1", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S02", "zh": "昌图", "status": "approved", "source": "@source/84cef19069e573c3", "record_sha256": "7d1dc613fc5eb059f3e93def7f095968018df8816d523d0882c30ed98b4fd93f", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S03", "zh": "城东", "status": "approved", "source": "@source/40af52b9680d1ff6", "record_sha256": "d8e665078872c6d6723e4065b7cccf2e2c63e81ca1c699ceecf9da395fcd0152", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S04", "zh": "八宝", "status": "approved", "source": "@source/8c0807929192e6f8", "record_sha256": "2def5485bc1fa79fd5ba365b101a0fb08e30f0a7f739f8f8362aae4895b11d13", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S05", "zh": "清河", "status": "approved", "source": "@source/84cef19069e573c3", "record_sha256": "cbc3691f29c5b4d478025d6d5445b8ab5bae3fdaf8110b5ac9f85b56afee821b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-ChangtuQinghe-z9-432-188-S01", "x": 42, "y": 38, "font_style": "regular", "font_size": 12, "lines": ["东嘎"]},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S02", "x": 130, "y": 142, "font_style": "regular", "font_size": 12, "lines": ["昌图"]},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S03", "x": 139, "y": 223, "font_style": "regular", "font_size": 12, "lines": ["城东"]},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S04", "x": 61, "y": 246, "font_style": "regular", "font_size": 12, "lines": ["八宝"]},
+    {"id": "CN-ChangtuQinghe-z9-432-188-S05", "x": 145, "y": 248, "font_style": "regular", "font_size": 12, "lines": ["清河"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Lianhua", "source_url": "@source/17c8f0d6191fe903", "id": "CN-ChangtuQinghe-z9-432-188-shared-CN-LiaoyuanDongliaoJianan-z9-433-188-S04", "original_bbox": [216, 113, 261, 129], "owner_region": "CN-LiaoyuanDongliaoJianan-z9-433-188", "feature_id": "CN-LiaoyuanDongliaoJianan-z9-433-188-S04", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Gaojiadian", "source_url": "@source/17c8f0d6191fe903", "id": "CN-ChangtuQinghe-z9-432-188-shared-CN-LiaoyuanDongliaoJianan-z9-433-188-S06", "original_bbox": [235, 168, 294, 188], "owner_region": "CN-LiaoyuanDongliaoJianan-z9-433-188", "feature_id": "CN-LiaoyuanDongliaoJianan-z9-433-188-S06", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

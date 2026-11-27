@@ -13,7 +13,7 @@
     "9/266/199.png"
   ],
   "features": [
-    {"id": "GZ9-03-02", "kind": "city", "original": "Oued Attia", "original_bbox": [-26, 67, 37, 84], "source_url": "@source/f4c27211cac1df4d"},
+    {"id": "GZ9-03-02", "kind": "city", "original": "Ouled Attia", "original_bbox": [-26, 67, 37, 84], "source_url": "@source/f4c27211cac1df4d"},
     {"id": "GZ9-03-03", "kind": "city", "original": "Kerkera", "original_bbox": [72, 97, 115, 113], "source_url": "@source/481b6e7479bf9614"},
     {"id": "GZ9-03-04", "kind": "city", "original": "Skikda", "original_bbox": [189, 118, 233, 137], "source_url": "@source/481b6e7479bf9614"},
     {"id": "GZ9-03-05", "kind": "city", "original": "Filfila", "original_bbox": [249, 112, 281, 128], "source_url": "@source/481b6e7479bf9614"},
@@ -22,7 +22,7 @@
     {"id": "GZ9-03-08", "kind": "city", "original": "El Harrouch", "original_bbox": [153, 224, 217, 240], "source_url": "@source/481b6e7479bf9614"}
   ],
   "translations": [
-    {"id": "GZ9-03-02", "zh": "瓦德阿提亚", "source": "@source/f4c27211cac1df4d", "status": "approved", "record_sha256": "a32841e908b9d212a3af66ad5807be493689044ee39720166c81892a089a2c9d", "review_notes": "@note/translations"},
+    {"id": "GZ9-03-02", "zh": "瓦德阿提亚", "source": "@source/f4c27211cac1df4d", "status": "approved", "record_sha256": "e5e325492f089dd07c25e5241decd9477bd4e4bc0513df03f09b6d9c553eb80b", "review_notes": "@note/translations"},
     {"id": "GZ9-03-03", "zh": "凯尔凯拉", "source": "@source/5af3e7d02fe0de7c", "status": "approved", "record_sha256": "e987feec49f1bbb7f0967c6f0d32734ed0c77f5ce2100d1c7f7f116fde96e0e5", "review_notes": "@note/translations"},
     {"id": "GZ9-03-04", "zh": "斯基克达", "source": "@source/eb0b5b3305d87ad4", "status": "approved", "record_sha256": "49aac4b6b7d9246d25adf6bb450013cedb87fde48762fac08d7e0fcdffa3ed06", "review_notes": "@note/translations"},
     {"id": "GZ9-03-05", "zh": "菲尔菲拉", "source": "@source/481b6e7479bf9614", "status": "approved", "record_sha256": "002cd5291ae5810ad4b2b8f93d69745b1213ddc0cdc9eb74704f46b3845efd57", "review_notes": "@note/translations"},

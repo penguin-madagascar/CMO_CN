@@ -1,0 +1,56 @@
+{
+  "id": "MX-JaliscoMichoacanUruapan-z7-27-56",
+  "z": 7,
+  "x": 27,
+  "y": 56,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/27/56.png"
+  ],
+  "context_tiles": [
+    "7/28/56.png",
+    "7/27/57.png"
+  ],
+  "features": [
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Aguascalientes", "kind": "city", "original": "Aguascalientes", "original_bbox": [156, 2, 235, 24], "source_url": "@source/3cd139e72f561013", "source_glyph_complete": true, "source_printed_full_literal": "Aguascalientes"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-LagosDeMoreno", "kind": "city", "original": "Lagos de Moreno", "original_bbox": [189, 53, 240, 88], "source_url": "@source/3cd139e72f561013", "source_glyph_complete": true, "source_printed_full_literal": "Lagos de Moreno"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Guadalajara", "kind": "city", "original": "Guadalajara", "original_bbox": [61, 120, 134, 144], "source_url": "@source/3cd139e72f561013", "source_glyph_complete": true, "source_printed_full_literal": "Guadalajara"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Zamora", "kind": "city", "original": "Zamora", "original_bbox": [157, 187, 202, 206], "source_url": "@source/3cd139e72f561013", "source_glyph_complete": true, "source_printed_full_literal": "Zamora"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-CiudadGuzman", "kind": "city", "original": "Ciudad Guzmán", "original_bbox": [50, 214, 97, 249], "source_url": "@source/3cd139e72f561013", "source_glyph_complete": true, "source_printed_full_literal": "Ciudad Guzmán"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Uruapan", "kind": "city", "original": "Uruapan", "original_bbox": [178, 241, 227, 263], "source_url": "@source/3cd139e72f561013", "source_glyph_complete": true, "source_printed_full_literal": "Uruapan"}
+  ],
+  "translations": [
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Aguascalientes", "zh": "阿瓜斯卡连特斯", "status": "approved", "source": "@source/8fa73449b3b173a3", "record_sha256": "ec89b59c79475a9e0b63e5f262a32c5f28b294b43d1a580c46a6b319886fc4e0", "review_notes": "核对同级供应商原图的完整名称与地点，已有实际可见译名采用原字。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-LagosDeMoreno", "zh": "拉戈斯德莫雷诺", "status": "approved", "source": "@source/ea2f0b55f2ef5109", "record_sha256": "f8d0c3d8e055bb746defedea83867017044a67ea2a040424ebd4120f441fdee7", "review_notes": "核对同级供应商原图的完整名称与地点，已有实际可见译名采用原字。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Guadalajara", "zh": "瓜达拉哈拉", "status": "approved", "source": "@source/8fa73449b3b173a3", "record_sha256": "558ebcedd99c89bfb3f62cba944522f855714005cf9a9bbb28b371a48f8f9362", "review_notes": "核对同级供应商原图的完整名称与地点，已有实际可见译名采用原字。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Zamora", "zh": "萨莫拉-德伊达尔戈", "status": "approved", "source": "@source/4b3219e31fe6d406", "record_sha256": "35853d3d2da4cf61e06d8193808ed71c3f094369b52f8580d31bb356253e8ca6", "review_notes": "核对同级供应商原图的完整名称与地点，已有实际可见译名采用原字。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-CiudadGuzman", "zh": "古斯曼城", "status": "approved", "source": "@source/9b6ffec6e93b51c9", "record_sha256": "8d0b295e315d4e2fe2e6e37b8b1ffd5c67bec9f9a329486c5cabdc1cc68d767a", "review_notes": "核对同级供应商原图的完整名称与地点，已有实际可见译名采用原字。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Uruapan", "zh": "乌鲁阿潘", "status": "approved", "source": "@source/b3181abcff0f98cb", "record_sha256": "19b379621bad2b477e0d832f2daa8e611a1bcde3d19d83b85562b6fde8efb099", "review_notes": "核对同级供应商原图的完整名称与地点，已有实际可见译名采用原字。"}
+  ],
+  "layouts": [
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Aguascalientes", "x": 194, "y": 19, "lines": ["阿瓜斯卡连特斯"], "font_style": "regular", "font_size": 12},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-LagosDeMoreno", "x": 200, "y": 43, "lines": ["拉戈斯德莫雷诺"], "font_style": "regular", "font_size": 12},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Guadalajara", "x": 110, "y": 137, "lines": ["瓜达拉哈拉"], "font_style": "regular", "font_size": 12},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Zamora", "x": 177, "y": 204, "lines": ["萨莫拉-德伊达尔戈"], "font_style": "regular", "font_size": 12},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-CiudadGuzman", "x": 88, "y": 234, "lines": ["古斯曼城"], "font_style": "regular", "font_size": 12},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Uruapan", "x": 221, "y": 247, "lines": ["乌鲁阿潘"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Aguascalientes-circle", "feature_id": "MX-JaliscoMichoacanUruapan-z7-27-56-Aguascalientes", "kind": "circle", "x": 160.5, "y": 6.5, "size": 9, "outline_width": 1, "original_bbox": [156, 2, 165, 11], "source_url": "@source/3cd139e72f561013", "review_notes": "独立核对原图圆点中心与完整边界。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-LagosDeMoreno-circle", "feature_id": "MX-JaliscoMichoacanUruapan-z7-27-56-LagosDeMoreno", "kind": "circle", "x": 193.5, "y": 57.5, "size": 9, "outline_width": 1, "original_bbox": [189, 53, 198, 62], "source_url": "@source/3cd139e72f561013", "review_notes": "独立核对原图圆点中心与完整边界。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Guadalajara-circle", "feature_id": "MX-JaliscoMichoacanUruapan-z7-27-56-Guadalajara", "kind": "circle", "x": 65.5, "y": 124.5, "size": 9, "outline_width": 1, "original_bbox": [61, 120, 70, 129], "source_url": "@source/3cd139e72f561013", "review_notes": "独立核对原图圆点中心与完整边界。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Zamora-circle", "feature_id": "MX-JaliscoMichoacanUruapan-z7-27-56-Zamora", "kind": "circle", "x": 161.5, "y": 191.5, "size": 9, "outline_width": 1, "original_bbox": [157, 187, 166, 196], "source_url": "@source/3cd139e72f561013", "review_notes": "独立核对原图圆点中心与完整边界。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-CiudadGuzman-circle", "feature_id": "MX-JaliscoMichoacanUruapan-z7-27-56-CiudadGuzman", "kind": "circle", "x": 54.5, "y": 218.5, "size": 9, "outline_width": 1, "original_bbox": [50, 214, 59, 223], "source_url": "@source/3cd139e72f561013", "review_notes": "独立核对原图圆点中心与完整边界。"},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-Uruapan-circle", "feature_id": "MX-JaliscoMichoacanUruapan-z7-27-56-Uruapan", "kind": "circle", "x": 182.5, "y": 245.5, "size": 9, "outline_width": 1, "original_bbox": [178, 241, 187, 250], "source_url": "@source/3cd139e72f561013", "review_notes": "独立核对原图圆点中心与完整边界。"}
+  ],
+  "canonical_captions": [
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-C-Cities2760", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2760, "original_Chinese_name": "萨波潘", "lat_f32_bits": 1101384154, "lon_f32_bits": 3268330755, "flags": 0, "level": 1}, "layout": {"x": 63, "y": 109, "font_style": "regular", "font_size": 12, "lines": ["萨波潘"]}},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-C-Cities2789", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2789, "original_Chinese_name": "莱昂", "lat_f32_bits": 1101597518, "lon_f32_bits": 3268106125, "flags": 0, "level": 1}, "layout": {"x": 218, "y": 81, "font_style": "regular", "font_size": 12, "lines": ["莱昂"]}},
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-C-Cities2791", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2791, "original_Chinese_name": "伊拉普阿托", "lat_f32_bits": 1101359612, "lon_f32_bits": 3268064874, "flags": 0, "level": 1}, "layout": {"x": 219, "y": 125, "font_style": "regular", "font_size": 12, "lines": ["伊拉普阿托"]}}
+  ],
+  "shared_sources": [
+    {"id": "MX-JaliscoMichoacanUruapan-z7-27-56-SharedNative-Guanajuato-circle", "owner_region": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1", "owner_symbol_id": "MX-GuanajuatoMexicoCityPachucaTuxpam-z7-28-56-2x1-Guanajuato-circle", "original_bbox": [251, 86, 261, 95], "owner_symbol_record_sha256": "c42f4a2e3cbdf8a5fe122513f4a96ce5f77b28486d23fbb093e446c2edc5d2b0", "source_rgba_sha256": "b14b650b19287c1d825efa4698ee7be674ee3079719d72fce86421d648e308f7", "review_notes": "当前正式邻片保持已批准的同一个完整圆形标记；本片仅计入跨缝原图证据。"}
+  ],
+  "legacy_suppressions": []
+}

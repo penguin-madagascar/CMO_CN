@@ -1,0 +1,54 @@
+{
+  "id": "G150-CONTEXT-EastNine-z9-299-254",
+  "z": 9,
+  "x": 299,
+  "y": 254,
+  "width_tiles": 1,
+  "height_tiles": 3,
+  "original_tiles": [
+    "9/299/254.png",
+    "9/299/255.png",
+    "9/299/256.png"
+  ],
+  "context_tiles": [
+    "9/298/254.png",
+    "9/298/255.png",
+    "9/300/256.png"
+  ],
+  "features": [
+    {"id": "G150-CONTEXT9-02", "kind": "city", "original": "Kyangwali", "original_bbox": [184, 57, 242, 77], "source_url": "@source/83892aed1c0aa234"},
+    {"id": "G150-CONTEXT9-03", "kind": "city", "original": "Ntoroko", "original_bbox": [88, 120, 133, 137], "source_url": "@source/83892aed1c0aa234"},
+    {"id": "G150-CONTEXT9-04", "kind": "city", "original": "Kagadi", "original_bbox": [190, 162, 229, 182], "source_url": "@source/83892aed1c0aa234"},
+    {"id": "G150-CONTEXT9-05", "kind": "city", "original": "Ibanda", "original_bbox": [76, 552, 115, 568], "source_url": "@source/767f2341c2d7cf1d"},
+    {"id": "G150-CONTEXT9-06", "kind": "city", "original": "Rubindi", "original_bbox": [105, 622, 149, 638], "source_url": "@source/767f2341c2d7cf1d"},
+    {"id": "G150-CONTEXT9-07", "kind": "city", "original": "Mbarara", "original_bbox": [127, 725, 179, 743], "source_url": "@source/767f2341c2d7cf1d"},
+    {"id": "G150-CONTEXT9-08", "kind": "city", "original": "Fort Portal", "original_bbox": [-3, 254, 36, 292], "source_url": "@source/4ba8afcc7ec7f4fc"},
+    {"id": "G150-CONTEXT9-09", "kind": "city", "original": "Kitagwenda", "original_bbox": [17, 501, 83, 520], "source_url": "@source/5df132747f193bb9"},
+    {"id": "G150-CONTINUITY5-05", "kind": "city", "original": "nyakashara", "original_bbox": [234, 590, 296, 609], "source_url": "@source/767f2341c2d7cf1d"}
+  ],
+  "translations": [
+    {"id": "G150-CONTEXT9-02", "zh": "基扬瓦利", "status": "approved", "source": "@source/83892aed1c0aa234", "record_sha256": "31861e72b7f0d36df3dd32794dbae50d055da23cc9a6dcaaa1d1216d3b9a8210", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Kyangwali\", \"Chinese\": \"基扬瓦利\", \"evidence_grade_preserved\": \"C\", \"lexical_confidence_preserved\": \"中\", \"evidence_role_preserved\": \"PROJECT_TRANSLITERATION_NOT_ATTESTED_OFFICIAL_CHINESE\", \"original_row_pointer\": \"/rows/1\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTEXT9-03", "zh": "恩托罗科", "status": "approved", "source": "@source/83892aed1c0aa234", "record_sha256": "6b76a8a9599a22ed00c280489d154e2c943cd65d84b199e352720e012ea2d5af", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Ntoroko\", \"Chinese\": \"恩托罗科\", \"evidence_grade_preserved\": \"C+\", \"lexical_confidence_preserved\": \"中\", \"evidence_role_preserved\": \"PROJECT_BARE_STEM_FROM_EXISTING_GN_COMMUNITY_ADM2_CHINESE_ALIAS_NOT_TOWN_ALIAS\", \"original_row_pointer\": \"/rows/2\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTEXT9-04", "zh": "卡加迪", "status": "approved", "source": "@source/83892aed1c0aa234", "record_sha256": "3e38dc30242bec896138eceafd56ecbfda14c1bcfd93976f92d1a6201eef8df5", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Kagadi\", \"Chinese\": \"卡加迪\", \"evidence_grade_preserved\": \"B\", \"lexical_confidence_preserved\": \"高\", \"evidence_role_preserved\": \"PRIMARY_CONTRACTOR_ORIGINAL_CHINESE_ENGLISH_USAGE_NOT_OFFICIAL_GAZETTEER\", \"original_row_pointer\": \"/rows/3\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTEXT9-05", "zh": "伊班达", "status": "approved", "source": "@source/767f2341c2d7cf1d", "record_sha256": "291afed65d181c559ffa9022e9c9f17b28a3a708e949bae8b523c55427462a2d", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Ibanda\", \"Chinese\": \"伊班达\", \"evidence_grade_preserved\": \"C\", \"lexical_confidence_preserved\": \"中\", \"evidence_role_preserved\": \"PROJECT_TRANSLITERATION_NOT_ATTESTED_OFFICIAL_CHINESE_FOR_UG_SETTLEMENT\", \"original_row_pointer\": \"/rows/4\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTEXT9-06", "zh": "鲁宾迪", "status": "approved", "source": "@source/767f2341c2d7cf1d", "record_sha256": "e5d3df8c90cb3a407edcfad3318a46aaadb5a529fb67523b411fb51feed1a289", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Rubindi\", \"Chinese\": \"鲁宾迪\", \"evidence_grade_preserved\": \"C\", \"lexical_confidence_preserved\": \"中\", \"evidence_role_preserved\": \"PROJECT_TRANSLITERATION_NOT_ATTESTED_OFFICIAL_CHINESE\", \"original_row_pointer\": \"/rows/5\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTEXT9-07", "zh": "姆巴拉拉", "status": "approved", "source": "@source/767f2341c2d7cf1d", "record_sha256": "608af0ac8f8cfb6f23aecb53d518743eeee5b870d3b6f5a3b5b8e8f68e5b6851", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Mbarara\", \"Chinese\": \"姆巴拉拉\", \"evidence_grade_preserved\": \"A\", \"lexical_confidence_preserved\": \"高\", \"evidence_role_preserved\": \"OFFICIAL_CHINESE_DIPLOMATIC_USAGE_AND_EXISTING_PROJECT_NE_NAME_ZH\", \"original_row_pointer\": \"/rows/6\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTEXT9-08", "zh": "波特尔堡", "status": "approved", "source": "@source/4ba8afcc7ec7f4fc", "record_sha256": "dfc28b889928afccfb541ab1a366b8263095de54e31d9184fed743b3307fa449", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Fort Portal\", \"Chinese\": \"波特尔堡\", \"evidence_grade_preserved\": \"A-\", \"lexical_confidence_preserved\": \"高\", \"evidence_role_preserved\": \"OFFICIAL_CHINESE_EMBASSY_COMMERCIAL_OFFICE_TRANSLATED_NEWS_USAGE_NOT_GAZETTEER\", \"original_row_pointer\": \"/rows/7\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTEXT9-09", "zh": "基塔格文达", "status": "approved", "source": "@source/5df132747f193bb9", "record_sha256": "b74f29787842f90f6dd67afb36f207201c8dd1f915e1cdca43f5acae12a415c8", "review_notes": "Root exact lexical 98bd8b90a902f9a885d15f9b074e2e061b02053423f7825730a414eb7a39ed79; {\"original\": \"Kitagwenda\", \"Chinese\": \"基塔格文达\", \"evidence_grade_preserved\": \"C\", \"lexical_confidence_preserved\": \"中\", \"evidence_role_preserved\": \"PROJECT_TRANSLITERATION_NOT_ATTESTED_OFFICIAL_CHINESE\", \"original_row_pointer\": \"/rows/8\"}; display enum only, no supplier entity/class/point inference."},
+    {"id": "G150-CONTINUITY5-05", "zh": "尼亚卡沙拉", "status": "approved", "source": "@source/767f2341c2d7cf1d", "record_sha256": "1c53d1cbee1d072b2d5b7f8d31855b4a18bf1c77aab866a89b707a294c5e5d75", "review_notes": "Root exact lexical f710fcac4307f6e37daef0f46ae3f4e93f2a7b8a4a8a263ed7d9329c272c69c8; {\"original\": \"nyakashara\", \"Chinese\": \"尼亚卡沙拉\", \"grade\": \"PROJECT_ROMAN_LETTER_TRANSCRIPTION_NO_OFFICIAL_CHINESE_CONFIRMED\", \"confidence\": \"中等；项目音译，未获当地录音或IPA校准\"}; display enum only, no supplier entity/class/point inference."}
+  ],
+  "layouts": [
+    {"id": "G150-CONTEXT9-02", "x": 213.0, "y": 67.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTEXT9-03", "x": 110.5, "y": 128.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTEXT9-04", "x": 209.5, "y": 172.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTEXT9-05", "x": 95.5, "y": 560.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTEXT9-06", "x": 127.0, "y": 630.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTEXT9-07", "x": 153.0, "y": 734.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTEXT9-08", "x": 20.5, "y": 273.0, "font_size": 12, "font_style": "regular", "lines": ["波特", "尔堡"]},
+    {"id": "G150-CONTEXT9-09", "x": 50.0, "y": 510.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G150-CONTINUITY5-05", "x": 241.0, "y": 599.5, "font_size": 12, "font_style": "regular", "lines": ["尼", "亚", "卡", "沙", "拉"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

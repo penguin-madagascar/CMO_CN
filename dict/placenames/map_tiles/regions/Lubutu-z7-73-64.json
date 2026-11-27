@@ -1,0 +1,26 @@
+{
+  "id": "Lubutu-z7-73-64",
+  "z": 7,
+  "x": 73,
+  "y": 64,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "features": [
+    {"id": "Lubutu-z7-73-64-name", "kind": "city", "original": "Lubutu", "original_bbox": [111, 63, 154, 82], "source_url": "@source/943fa784478adb82", "source_glyph_complete": true, "source_printed_full_literal": "Lubutu"}
+  ],
+  "translations": [
+    {"id": "Lubutu-z7-73-64-name", "zh": "卢布图", "status": "approved", "source": "@source/1bb643c4fbb827d9", "review_notes": "Current exact z8 project translation and Natural Earth z7-point identity agree. The OCR reading Lubuu drops the letter t present on the original PNG.", "record_sha256": "af62069b8818feb0b0d17ad4d1095987837516e41c034add1744b75fec7609e4"}
+  ],
+  "layouts": [
+    {"id": "Lubutu-z7-73-64-name", "x": 139.5, "y": 74.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "Lubutu-z7-73-64-point", "feature_id": "Lubutu-z7-73-64-name", "kind": "circle", "x": 115.5, "y": 67.5, "size": 7, "outline_width": 1, "original_bbox": [111, 63, 120, 72]}
+  ],
+  "original_tiles": [
+    "7/73/64.png"
+  ],
+  "context_tiles": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": "WST3-PacificSpill-z5-5-16",
+  "z": 5,
+  "x": 5,
+  "y": 16,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "5/5/16.png"
+  ],
+  "context_tiles": [
+    "5/5/15.png"
+  ],
+  "features": [],
+  "translations": [],
+  "layouts": [],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "shared_sources": [
+    {"id": "WST3-A01-Pacific-Ocean", "owner_region": "AM-North-z5-0-9", "feature_id": "AM5-Pacific-Ocean", "kind": "marine", "original": "Pacific Ocean", "source_url": "@source/7d2e23c834197d93", "original_bbox": [24, -5, 103, 33], "review_notes": "Draft alias to existing 太平洋 normal only AFTER Root selects Pacific right1 exception and qualified Source14 accepts its exact coupled metadata delta. No new Chinese/native."}
+  ]
+}

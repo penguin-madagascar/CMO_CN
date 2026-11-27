@@ -1,0 +1,41 @@
+{
+  "id": "PH9-SouthBoholCamiguin-z9-432-242-2x1",
+  "z": 9,
+  "x": 432,
+  "y": 242,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/432/242.png",
+    "9/433/242.png"
+  ],
+  "context_tiles": [
+    "9/432/241.png"
+  ],
+  "features": [
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N01", "kind": "city", "original": "Tagbilaran", "original_bbox": [5, 48, 72, 70], "source_glyph_complete": true, "source_printed_full_literal": "Tagbilaran", "source_url": "@source/c7b07375f8610b37"},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N02", "kind": "city", "original": "Valencia", "original_bbox": [141, 61, 190, 77], "source_glyph_complete": true, "source_printed_full_literal": "Valencia", "source_url": "@source/c7b07375f8610b37"},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N03", "kind": "city", "original": "Jagna", "original_bbox": [207, 46, 241, 65], "source_glyph_complete": true, "source_printed_full_literal": "Jagna", "source_url": "@source/c7b07375f8610b37"},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N04", "kind": "city", "original": "Guindulman", "original_bbox": [236, 4, 302, 21], "source_glyph_complete": true, "source_printed_full_literal": "Guindulman", "source_url": "@source/fd23ea1fe0f898ca"},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N05", "kind": "city", "original": "Mambajao", "original_bbox": [327, 195, 385, 214], "source_glyph_complete": true, "source_printed_full_literal": "Mambajao", "source_url": "@source/fd23ea1fe0f898ca"}
+  ],
+  "translations": [
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N01", "zh": "塔比拉兰", "status": "approved", "source": "@source/79e14c77bb478aaa", "record_sha256": "0079c8c722f9d5f756e56b228e6fc72842a62c1aa8570e65ea7efb375165b2d6", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N02", "zh": "瓦伦西亚", "status": "approved", "source": "@source/79e14c77bb478aaa", "record_sha256": "5d2830b72f82924550b39e035f596dd20d38680349be303028454aa06fcd3367", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N03", "zh": "哈格纳", "status": "approved", "source": "@source/79e14c77bb478aaa", "record_sha256": "a14cfab716353ae296da312b17e78dd9c6e786265b66e17ece511cc8693c1f7e", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N04", "zh": "金杜尔曼", "status": "approved", "source": "@source/79e14c77bb478aaa", "record_sha256": "00e778666f1844be272baf2853eda474c463f951ad8a908196ee1a7de3737f59", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N05", "zh": "曼巴豪", "status": "approved", "source": "@source/dfbc96a034742be3", "record_sha256": "ecda66a731c5135a5f02815cc293666d6b098a98ee94a2fb7ac20f23a7a6ae8d", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"}
+  ],
+  "layouts": [
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N01", "x": 38.5, "y": 59.0, "font_style": "regular", "font_size": 12, "lines": ["塔比拉兰"]},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N02", "x": 165.5, "y": 69.0, "font_style": "regular", "font_size": 12, "lines": ["瓦伦西亚"]},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N03", "x": 224.0, "y": 55.5, "font_style": "regular", "font_size": 12, "lines": ["哈格纳"]},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N04", "x": 269.0, "y": 12.5, "font_style": "regular", "font_size": 12, "lines": ["金杜尔曼"]},
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-N05", "x": 356.0, "y": 204.5, "font_style": "regular", "font_size": 12, "lines": ["曼巴豪"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "PH9-SouthBoholCamiguin-z9-432-242-2x1-SH-PH9-CebuBoholSouthLeyte-z9-432-241-S04", "owner_region": "PH9-CebuBoholSouthLeyte-z9-432-241", "feature_id": "PH9-CebuBoholSouthLeyte-z9-432-241-S04", "original_bbox": [2, -10, 31, 7], "review_notes": "同缩放原图跨片续字沿用既有地名所属区。", "kind": "city", "original": "Loon", "source_url": "@source/2b2d55338519bbd1"}
+  ],
+  "legacy_suppressions": []
+}

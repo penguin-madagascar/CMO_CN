@@ -1,0 +1,41 @@
+{
+  "id": "TH-Phaisali-z9-399-233",
+  "z": 9,
+  "x": 399,
+  "y": 233,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "features": [
+    {"id": "TH-Phaisali-z9-399-233-S01", "kind": "city", "original": "Nong Bua", "source_url": "@source/707aef3ccd948f86", "original_bbox": [-14, 27, 41, 48], "source_printed_full_literal": "Nong Bua", "source_glyph_complete": true},
+    {"id": "TH-Phaisali-z9-399-233-S02", "kind": "city", "original": "Sap Samo Thot", "source_url": "@source/707aef3ccd948f86", "original_bbox": [139, 50, 195, 84], "source_printed_full_literal": "Sap Samo Thot", "source_glyph_complete": true},
+    {"id": "TH-Phaisali-z9-399-233-S03", "kind": "city", "original": "Phaisali", "source_url": "@source/707aef3ccd948f86", "original_bbox": [14, 128, 58, 145], "source_printed_full_literal": "Phaisali", "source_glyph_complete": true},
+    {"id": "TH-Phaisali-z9-399-233-S04", "kind": "city", "original": "Phu Toei", "source_url": "@source/707aef3ccd948f86", "original_bbox": [164, 138, 213, 154], "source_printed_full_literal": "Phu Toei", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "TH-Phaisali-z9-399-233-S01", "zh": "廊磨", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "2a996c4d875ff45ee8b4a9420582e81230354500f4c75cd4b0643a89007bb5b5"},
+    {"id": "TH-Phaisali-z9-399-233-S02", "zh": "萨莫托", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "afb4241d68cfbcfc7ff1fb4f3302d5568b190cf3bd1b68fb34002e40f5794ec1"},
+    {"id": "TH-Phaisali-z9-399-233-S03", "zh": "派沙利", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "f5f926c3b3775c947d22b2595d199f78479dbf298fe4bb2b534b9372d1e9dfd6"},
+    {"id": "TH-Phaisali-z9-399-233-S04", "zh": "普堆", "source": "@source/5afe42bcab666c29", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "fb6cda94eafd5dc1b814a31c8523a0ef97f9f3e1968bf5203e1cfbcb61c4c11d"}
+  ],
+  "layouts": [
+    {"id": "TH-Phaisali-z9-399-233-S01", "x": 13.5, "y": 37.5, "font_style": "regular", "font_size": 12, "lines": ["廊磨"]},
+    {"id": "TH-Phaisali-z9-399-233-S02", "x": 167.0, "y": 67.0, "font_style": "regular", "font_size": 12, "lines": ["萨莫托"]},
+    {"id": "TH-Phaisali-z9-399-233-S03", "x": 36.0, "y": 136.5, "font_style": "regular", "font_size": 12, "lines": ["派沙利"]},
+    {"id": "TH-Phaisali-z9-399-233-S04", "x": 188.5, "y": 146.0, "font_style": "regular", "font_size": 12, "lines": ["普堆"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Nong Phai", "source_url": "@source/967541fdd74a7ba9", "id": "TH-Phaisali-z9-399-233-shared-TH-Phetchabun-z9-399-232-S05", "original_bbox": [160, -19, 217, 1], "owner_region": "TH-Phetchabun-z9-399-232", "feature_id": "TH-Phetchabun-z9-399-232-S05", "review_notes": "Complete original seam is attributed to the already-rendered Source owner."}
+  ],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "9/399/233.png"
+  ],
+  "context_tiles": [
+    "9/398/233.png",
+    "9/399/232.png"
+  ],
+  "canonical_captions": [
+    {"id": "TH-Phaisali-z9-399-233-C201", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Synoptic", "wwp_file": {"path": "assets/placenames/Synoptic.wwp", "sha256": "3dfa0cc94649684dadadaee84f00c758b7d6bca10fa25175f0fb88aa32a41f53"}, "record_index_zero_based": 201, "original_Chinese_name": "泰国", "lat_f32_bits": 1098383360, "lon_f32_bits": 1120534528, "flags": 0, "level": 0}, "layout": {"x": 164.9777777777781, "y": 174.50093983919214, "font_size": 12, "font_style": "regular", "lines": ["泰国"]}}
+  ]
+}

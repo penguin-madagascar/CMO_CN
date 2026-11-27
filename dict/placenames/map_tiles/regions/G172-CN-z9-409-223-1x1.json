@@ -1,0 +1,38 @@
+{
+  "id": "G172-CN-z9-409-223-1x1",
+  "z": 9,
+  "x": 409,
+  "y": 223,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/409/223.png"
+  ],
+  "context_tiles": [
+    "9/408/223.png",
+    "9/410/223.png"
+  ],
+  "features": [
+    {"id": "G172-N-01", "kind": "region", "original": "Shangsi County", "original_bbox": [121, 153, 171, 194], "source_url": "@source/b5c6bb33871ebd22", "source_printed_full_literal": "Shangsi County", "source_glyph_complete": true, "providerpoint": null},
+    {"id": "G172-N-02", "kind": "region", "original": "Hualan", "original_bbox": [69, 226, 109, 242], "source_url": "@source/b5c6bb33871ebd22", "source_printed_full_literal": "Hualan", "source_glyph_complete": true, "providerpoint": null},
+    {"id": "G172-N-03", "kind": "region", "original": "Nac…", "original_bbox": [231, 47, 256, 64], "source_url": "@source/b5c6bb33871ebd22", "source_printed_full_literal": null, "source_glyph_complete": false, "providerpoint": null, "source_visible_fragment": "Nac…", "resolved_semantic_name": "Nacheng / Nachen", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"type": "ROOT_SELECTED_BOUNDED_CLIPPED_SUPPORT_RESOLUTION", "Root_selection": {"path": "evidence/tile_recovery/root_G172_Chinese4_bounded_semantic_identity_selection_20261105/Root_SELECTED_G172_CHINESE4_AND_BOUNDED_NACHEN_GUITAI_NOT_ASSET_GRANT.json", "sha256": "f12fa1c47762bbe80a62e95c4d04be091a8bc8883492a10d26dde32308f0762e"}, "JSONpointer": "/selected_words/2", "semantic_grade": "B_HIGH_HISTORICAL_POINT_PREFIX_AND_FOUR_CONTROL_INFERENCE", "no_recovered_full_printed_glyph_claim": true}},
+    {"id": "G172-N-04", "kind": "region", "original": "UNREADABLE_CLIPPED_SUPPORT[28px]", "original_bbox": [254, 156, 256, 171], "source_url": "@source/b5c6bb33871ebd22", "source_printed_full_literal": null, "source_glyph_complete": false, "providerpoint": null, "source_visible_fragment": null, "resolved_semantic_name": "Guitai", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"type": "ROOT_SELECTED_BOUNDED_CLIPPED_SUPPORT_RESOLUTION", "Root_selection": {"path": "evidence/tile_recovery/root_G172_Chinese4_bounded_semantic_identity_selection_20261105/Root_SELECTED_G172_CHINESE4_AND_BOUNDED_NACHEN_GUITAI_NOT_ASSET_GRANT.json", "sha256": "f12fa1c47762bbe80a62e95c4d04be091a8bc8883492a10d26dde32308f0762e"}, "JSONpointer": "/selected_words/3", "semantic_grade": "B_HIGH_HISTORICAL_POINT_FOUR_CONTROL_INFERENCE_WEAK_GLYPH_ALONE", "no_recovered_full_printed_glyph_claim": true}}
+  ],
+  "translations": [
+    {"id": "G172-N-01", "zh": "上思县", "status": "approved", "source": "@source/b5c6bb33871ebd22", "record_sha256": "f98604705e5b23b6f0c8bb021d916c2974682d53034b4d21978d0c976d74c7b6", "review_notes": "Root lexical/semantic selection f12fa1c47762bbe80a62e95c4d04be091a8bc8883492a10d26dde32308f0762e /selected_words/0; A_OFFICIAL_WORD_FORM. HTTP URL identifies original Source pixels, not official Chinese wording. Bare Chinese word form only; no added town suffix or provider/entity inference."},
+    {"id": "G172-N-02", "zh": "华兰", "status": "approved", "source": "@source/b5c6bb33871ebd22", "record_sha256": "adc18de3eadae7013cc8f2c05fa77b4e94585b5f9a53094b397ec543e291158a", "review_notes": "Root lexical/semantic selection f12fa1c47762bbe80a62e95c4d04be091a8bc8883492a10d26dde32308f0762e /selected_words/1; A_OFFICIAL_WORD_STEM. HTTP URL identifies original Source pixels, not official Chinese wording. Bare Chinese word form only; no added town suffix or provider/entity inference."},
+    {"id": "G172-N-03", "zh": "那陈", "status": "approved", "source": "@source/b5c6bb33871ebd22", "record_sha256": "7f43203a0b60fcd22afa51f17126a5a48ea5803c4cd639c96a228f1c08db08df", "review_notes": "Root lexical/semantic selection f12fa1c47762bbe80a62e95c4d04be091a8bc8883492a10d26dde32308f0762e /selected_words/2; A_OFFICIAL_WORD_STEM. HTTP URL identifies original Source pixels, not official Chinese wording. Full printed literal remains NULL. Bounded external semantic resolution expressly selected by Root; 28px case has no readable Latin literal."},
+    {"id": "G172-N-04", "zh": "贵台", "status": "approved", "source": "@source/b5c6bb33871ebd22", "record_sha256": "903e2f61882b6a5f769bed78d2e0a675329e3f3ae24ae44c10a40fbbb983e20f", "review_notes": "Root lexical/semantic selection f12fa1c47762bbe80a62e95c4d04be091a8bc8883492a10d26dde32308f0762e /selected_words/3; A_OFFICIAL_WORD_STEM. HTTP URL identifies original Source pixels, not official Chinese wording. Full printed literal remains NULL. Bounded external semantic resolution expressly selected by Root; 28px case has no readable Latin literal."}
+  ],
+  "layouts": [
+    {"id": "G172-N-01", "x": 146, "y": 173.5, "font_size": 12, "font_style": "regular", "lines": ["上思县"]},
+    {"id": "G172-N-02", "x": 89, "y": 234, "font_size": 12, "font_style": "regular", "lines": ["华兰"]},
+    {"id": "G172-N-03", "x": 235.5, "y": 55.5, "font_size": 12, "font_style": "regular", "lines": ["那陈"]},
+    {"id": "G172-N-04", "x": 237, "y": 163.5, "font_size": 12, "font_style": "regular", "lines": ["贵台"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G172-ORDINARY-SHARED-QUIJU-N032", "owner_region": "SC14-R02-z9-408-223", "feature_id": "SC14-N032", "kind": "city", "original": "Qujiu", "source_url": "@source/ad512a21c8a8b9e1", "original_bbox": [-18, 21, 15, 42], "review_notes": "Root-selected ordinary Source accounting alias to exact existing sole-normal SC14-N032. Keep original 渠旧/TR/layout/review and actual old output. No second normal, provider or owner-native alias."}
+  ],
+  "legacy_suppressions": []
+}

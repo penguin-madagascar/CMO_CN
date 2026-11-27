@@ -1,0 +1,45 @@
+{
+  "id": "CN-AohanFengshou-z9-426-189",
+  "z": 9,
+  "x": 426,
+  "y": 189,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/426/189.png"
+  ],
+  "context_tiles": [
+    "9/425/189.png",
+    "9/427/189.png"
+  ],
+  "features": [
+    {"id": "CN-AohanFengshou-z9-426-189-N01", "kind": "city", "original": "Manihan", "original_bbox": [126, 39, 175, 55], "source_url": "@source/a61e6f0653b76b01", "source_glyph_complete": true, "source_printed_full_literal": "Manihan"},
+    {"id": "CN-AohanFengshou-z9-426-189-N02", "kind": "city", "original": "Salbar", "original_bbox": [53, 44, 90, 61], "source_url": "@source/a61e6f0653b76b01", "source_glyph_complete": true, "source_printed_full_literal": "Salbar"},
+    {"id": "CN-AohanFengshou-z9-426-189-N03", "kind": "city", "original": "Nohot", "original_bbox": [246, 52, 282, 69], "source_url": "@source/a61e6f0653b76b01", "source_glyph_complete": true, "source_printed_full_literal": "Nohot"},
+    {"id": "CN-AohanFengshou-z9-426-189-N04", "kind": "city", "original": "Aohan", "original_bbox": [115, 122, 157, 140], "source_url": "@source/a61e6f0653b76b01", "source_glyph_complete": true, "source_printed_full_literal": "Aohan"},
+    {"id": "CN-AohanFengshou-z9-426-189-N05", "kind": "city", "original": "Fengshou", "original_bbox": [191, 142, 245, 162], "source_url": "@source/a61e6f0653b76b01", "source_glyph_complete": true, "source_printed_full_literal": "Fengshou"},
+    {"id": "CN-AohanFengshou-z9-426-189-N06", "kind": "city", "original": "Shaoguoyingzi", "original_bbox": [-31, 167, 50, 188], "source_url": "@source/a61e6f0653b76b01", "source_glyph_complete": true, "source_printed_full_literal": "Shaoguoyingzi"},
+    {"id": "CN-AohanFengshou-z9-426-189-N07", "kind": "city", "original": "Machang", "original_bbox": [37, 227, 87, 247], "source_url": "@source/a61e6f0653b76b01", "source_glyph_complete": true, "source_printed_full_literal": "Machang"}
+  ],
+  "translations": [
+    {"id": "CN-AohanFengshou-z9-426-189-N01", "zh": "玛尼罕", "status": "approved", "source": "@source/da41c844f717607a", "record_sha256": "59f5cbdbe46bf80d492ff44ec9376235310fde5cea9a1af9978afa2c4d9470ad", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-AohanFengshou-z9-426-189-N02", "zh": "萨力巴", "status": "approved", "source": "@source/9d10291342256693", "record_sha256": "8108833d2f06bc17ab8e8cbfa59164f0ace91fa591f591e4b77f0edae1f6e246", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-AohanFengshou-z9-426-189-N03", "zh": "牛古吐", "status": "approved", "source": "@source/2b3cbf20049748de", "record_sha256": "36dc8275752bfc405397141755a2157d6ee004ef05970c5f8681f23d1d40efea", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-AohanFengshou-z9-426-189-N04", "zh": "敖汉旗", "status": "approved", "source": "@source/499a5717b31e6ae4", "record_sha256": "67b8e3a4c48cb084d1fce8dd3dfb0cfe07b38849a105cf9afce093a2ee0a78cc", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-AohanFengshou-z9-426-189-N05", "zh": "丰收", "status": "approved", "source": "@source/3c4ca0160dad3db8", "record_sha256": "94eca8005b740d091cf462926f07204cc617df86387ce08ae910b545c4b8bada", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-AohanFengshou-z9-426-189-N06", "zh": "烧锅营子", "status": "approved", "source": "@source/e51cbeb239f03dd8", "record_sha256": "5cb1a1acc5e720647acd8a411f2558139054c10e0646f08f0191914ca5ebf04c", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-AohanFengshou-z9-426-189-N07", "zh": "马场", "status": "approved", "source": "@source/ba9e38edaa4da954", "record_sha256": "f7dd404b164d7a0a6ade377f6131ea3a3d8eb05e443a170f2eca6f6254351d59", "review_notes": "原图拼写与同地坐标的中英文地名对应。"}
+  ],
+  "layouts": [
+    {"id": "CN-AohanFengshou-z9-426-189-N01", "x": 150.5, "y": 47.0, "lines": ["玛尼罕"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-AohanFengshou-z9-426-189-N02", "x": 71.5, "y": 52.5, "lines": ["萨力巴"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-AohanFengshou-z9-426-189-N03", "x": 235.5, "y": 60.5, "lines": ["牛古吐"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-AohanFengshou-z9-426-189-N04", "x": 136.0, "y": 131.0, "lines": ["敖汉旗"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-AohanFengshou-z9-426-189-N05", "x": 218.0, "y": 152.0, "lines": ["丰收"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-AohanFengshou-z9-426-189-N06", "x": 26.5, "y": 177.5, "lines": ["烧锅营子"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-AohanFengshou-z9-426-189-N07", "x": 62.0, "y": 237.0, "lines": ["马场"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "CN-YongxinAonanJinggangshan-z10-837-432",
+  "z": 10,
+  "x": 837,
+  "y": 432,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/837/432.png"
+  ],
+  "context_tiles": [
+    "10/836/432.png",
+    "10/836/433.png",
+    "10/837/433.png"
+  ],
+  "features": [
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N01", "kind": "city", "original": "Yongxin County", "original_bbox": [-41, 71, 12, 113], "source_glyph_complete": true, "source_printed_full_literal": "Yongxin County", "source_url": "@source/6efcbbb10f790acb"},
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N02", "kind": "city", "original": "Aonan", "original_bbox": [93, 146, 126, 161], "source_glyph_complete": true, "source_printed_full_literal": "Aonan", "source_url": "@source/6efcbbb10f790acb"},
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N03", "kind": "city", "original": "Jinggangshan City", "original_bbox": [-24, 233, 62, 274], "source_glyph_complete": true, "source_printed_full_literal": "Jinggangshan City", "source_url": "@source/6efcbbb10f790acb"}
+  ],
+  "translations": [
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N01", "zh": "永新县", "status": "approved", "source": "@source/a8ac59a727bbcf6f", "record_sha256": "c544c0943dbc416dffba6095c7e03f8847014c2f3c3d4ab9cf1c6bacdac18df4", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N02", "zh": "坳南", "status": "approved", "source": "@source/a0a30e462e54f138", "record_sha256": "b7490628602ee82bc0b5b8743166759e98920366d7fee599e6ea17f3563cb262", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N03", "zh": "井冈山市", "status": "approved", "source": "@source/a8ac59a727bbcf6f", "record_sha256": "67e1995c912b31e92a6bbbae1d77ed3199b90f6977ee14efc373a59ae4ce1698", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"}
+  ],
+  "layouts": [
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N01", "x": 20.0, "y": 92.0, "font_style": "regular", "font_size": 12, "lines": ["永新县"]},
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N02", "x": 109.5, "y": 153.5, "font_style": "regular", "font_size": 12, "lines": ["坳南"]},
+    {"id": "CN-YongxinAonanJinggangshan-z10-837-432-N03", "x": 26.0, "y": 248.0, "font_style": "regular", "font_size": 12, "lines": ["井冈山市"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

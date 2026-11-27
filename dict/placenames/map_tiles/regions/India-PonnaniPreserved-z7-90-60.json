@@ -1,0 +1,27 @@
+{
+  "id": "India-PonnaniPreserved-z7-90-60",
+  "z": 7,
+  "x": 90,
+  "y": 60,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/90/60.png"
+  ],
+  "context_tiles": [
+    "7/90/59.png",
+    "7/91/59.png",
+    "7/91/60.png"
+  ],
+  "features": [],
+  "symbols": [],
+  "translations": [],
+  "layouts": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "India-PonnaniPreserved-z7-90-60-C-Cities1801", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 1801, "original_Chinese_name": "蓬纳尼", "lat_f32_bits": 1093420397, "lon_f32_bits": 1117247928, "flags": 0, "level": 1}, "layout": {"x": 229, "y": 38.15, "font_style": "regular", "font_size": 12, "lines": ["蓬纳尼"]}}
+  ],
+  "shared_sources": [
+    {"id": "India-PonnaniPreserved-z7-90-60-Share-Kozhikode", "owner_region": "India-MangaluruKarnataka-z7-90-59", "feature_id": "India-MangaluruKarnataka-z7-90-59-Kozhikode", "kind": "city", "original": "Kozhikode", "source_url": "@source/d94ace9d488c3afb", "original_bbox": [237, -11, 295, 9], "review_notes": "原图跨片印字已有指定区域，保留该区域的原有地名与点符号。"}
+  ]
+}

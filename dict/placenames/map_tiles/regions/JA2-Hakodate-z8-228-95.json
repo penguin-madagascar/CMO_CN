@@ -1,0 +1,26 @@
+{
+  "z": 8,
+  "x": 228,
+  "y": 95,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "id": "JA2-Hakodate-z8-228-95",
+  "original_tiles": [
+    "8/228/95.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "JA2-N01-Hakodate", "kind": "city", "original": "Hakodate", "original_bbox": [14, 60, 77, 82], "source_url": "@source/ffe86acb5534e327"}
+  ],
+  "translations": [
+    {"id": "JA2-N01-Hakodate", "zh": "函馆", "source": "@source/2b4a035c52c453e9", "status": "approved", "record_sha256": "9da29fb03aabc5e6c10a25332d167584d14c04fa41c159ad53ec55fe4c177686", "review_notes": "PREPARED metadata, different SOURCE qualified; no actual TARGET. ORIGINAL_NE_NAME_ZH_PLUS_ACTUAL_OFFICIAL_CITY_CHINESE_TEXT Roota0a947 actual private Source2/localnative1/C0 model. Author /root/frontier_c3_source personally viewed all2 complete CJK glyphs and Source true5px,2 Source/Target whole singletons,1 mixed raw71 frame with pristine Root circle and actual placed patch across4 saved boards, plus both readonly RAM grids covering5 old adjacent output tiles. No missing glyph, crop, overlap, name/kind/font-size or text xy change. Source fullboxes/1908 samples and qualified grades remain unchanged: 函馆 originalNE plus actual official city text; 拉普捷夫海 originalNE marine Chinese, no invented new primaryPDF proof. Actual circle9 outline1 target has73 positive samples and placed bbox midpoint delta0; original raw71 composite includes neighboring H and is not a pure69 mask/vector restoration. Raw composite intersection70 and remaining [58390,24388] at previously disclosed H halo are recorded, not reclassified as isolated native ownership. Target style acceptance requires different peer. Old2 complete whole74/reviews/SourceURLs/4 existing normals remain readonly; no alias/oldnative grant or oldruntime/old preview export. Only5 old PNGs decoded for bounded RAM joins, fullold74 Sourceproof reused without re-decode. Cities2458 Hakodate and Synoptic268 LaptevSea are already printed Source entities; C0/H0/rule0/Source1None/renderedsharedNone/capNone. First preparation stopped at missing existing work/tooldeps import path before any direct render/finite; exact saved private inputs resumed, no kernel patch or finite retry. AUTHOR_SELF_PRIVATE_MODEL_ONLY; /root/identity_holds_research DIFFERENT_ACTUAL_TARGET_PENDING. No formal/window/publication/global approval. Different actual TARGET by /root/identity_holds_research under Roota0a947/budget71ada. Personally viewed both full Chinese/source5px pairs, both whole singletons, mixed raw71/native display board and two RAM grids with exactly5 old join tiles. Independently measured pristine2 Chinese glyphs and full compositedRGBA, zero positive overlap/clipping/missing glyph; Source names/URLs/fullboxes/CJK grades/fonts12regular/xy unchanged. Root-selected circle9 outline1 is explicitly accepted: actual73 positive, geometric midpoint delta0, raw mixed71 intersection70; remaining [58390,24388] is the previously disclosed H halo. No pure69 mask, full71 native ownership, vector recovery or Source glyph identity is invented. Old2 complete whole74/4normals/953 Source proof reused without redecoding74; exactly5 old tiles were readonly RAM joins, no old preview export/oldruntime/old Source/native modifications. Only new2 finite once and standard checked_batch new2 once are authorized. C/H/alias/newrule0; Source1/renderedshared/canonicalcapNone. Private actual TARGET signature only, no formal/window/publication or global approval."}
+  ],
+  "layouts": [
+    {"id": "JA2-N01-Hakodate", "x": 49.5, "y": 73.5, "font_size": 12, "font_style": "regular", "lines": ["函馆"]}
+  ],
+  "symbols": [
+    {"id": "JA2-N01-circle", "feature_id": "JA2-N01-Hakodate", "kind": "circle", "x": 18.5, "y": 64.5, "size": 9, "outline_width": 1, "original_bbox": [14, 60, 23, 69]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

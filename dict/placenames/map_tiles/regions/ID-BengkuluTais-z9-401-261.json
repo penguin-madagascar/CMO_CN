@@ -1,0 +1,34 @@
+{
+  "id": "ID-BengkuluTais-z9-401-261",
+  "z": 9,
+  "x": 401,
+  "y": 261,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/401/261.png"
+  ],
+  "context_tiles": [
+    "9/402/261.png"
+  ],
+  "features": [
+    {"id": "ID-BengkuluTais-z9-401-261-N01", "kind": "city", "original": "Kepahiang", "original_bbox": [199, 40, 257, 60], "source_glyph_complete": true, "source_printed_full_literal": "Kepahiang", "source_url": "@source/77de51b14b4a343d"},
+    {"id": "ID-BengkuluTais-z9-401-261-N02", "kind": "city", "original": "Bengkulu", "original_bbox": [83, 93, 143, 114], "source_glyph_complete": true, "source_printed_full_literal": "Bengkulu", "source_url": "@source/77de51b14b4a343d"},
+    {"id": "ID-BengkuluTais-z9-401-261-N03", "kind": "city", "original": "Tais", "original_bbox": [214, 198, 240, 214], "source_glyph_complete": true, "source_printed_full_literal": "Tais", "source_url": "@source/77de51b14b4a343d"}
+  ],
+  "translations": [
+    {"id": "ID-BengkuluTais-z9-401-261-N01", "zh": "克帕希昂", "status": "approved", "source": "@source/6a0847aefc4aa63e", "record_sha256": "75e8d573ba0b19e7089112ca9ce5593200f8e2537157a1609b5c86b59400153e", "review_notes": "核实同名县治，采用印尼中文报刊用字。"},
+    {"id": "ID-BengkuluTais-z9-401-261-N02", "zh": "明古鲁", "status": "approved", "source": "@source/99275479ff786177", "record_sha256": "62982a07f51274f92766ce446bdfe7591d0b8be69d7581357029ffe19a5eb2e7", "review_notes": "核对明古鲁市及原地图词表同一坐标。"},
+    {"id": "ID-BengkuluTais-z9-401-261-N03", "zh": "塔伊斯", "status": "approved", "source": "@source/aaed04789c50f1b8", "record_sha256": "bd05e3908ecd03902d51452f1a2dc83bb5678fbd05de7f0306d0ce592cbefc04", "review_notes": "核实塞卢马县首府，沿用行政区划资料的音译。"}
+  ],
+  "layouts": [
+    {"id": "ID-BengkuluTais-z9-401-261-N01", "x": 228.0, "y": 50.0, "font_style": "regular", "font_size": 12, "lines": ["克帕希昂"]},
+    {"id": "ID-BengkuluTais-z9-401-261-N02", "x": 113.0, "y": 103.5, "font_style": "regular", "font_size": 12, "lines": ["明古鲁"]},
+    {"id": "ID-BengkuluTais-z9-401-261-N03", "x": 227.0, "y": 206.0, "font_style": "regular", "font_size": 12, "lines": ["塔伊斯"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [
+    {"feature_id": "ID-BengkuluTais-z9-401-261-N02", "name": "明古鲁", "lat": -3.8004400730133057, "lon": 102.26554107666016, "level": 1, "source": "@source/99275479ff786177", "review_notes": "同一级别同一原图地名已在本片绘制，原内置词表实体及坐标逐项核对。"}
+  ]
+}

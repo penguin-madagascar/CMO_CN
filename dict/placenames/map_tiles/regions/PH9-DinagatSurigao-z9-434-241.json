@@ -1,0 +1,39 @@
+{
+  "id": "PH9-DinagatSurigao-z9-434-241",
+  "z": 9,
+  "x": 434,
+  "y": 241,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/434/241.png"
+  ],
+  "context_tiles": [
+    "9/433/241.png",
+    "9/434/242.png"
+  ],
+  "features": [
+    {"id": "PH9-DinagatSurigao-z9-434-241-N01", "kind": "city", "original": "Loreto", "original_bbox": [136, 39, 173, 56], "source_glyph_complete": true, "source_printed_full_literal": "Loreto", "source_url": "@source/63d8fac1edeef6d7"},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N02", "kind": "city", "original": "Basilisa", "original_bbox": [107, 173, 151, 189], "source_glyph_complete": true, "source_printed_full_literal": "Basilisa", "source_url": "@source/63d8fac1edeef6d7"},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N03", "kind": "city", "original": "San Ricardo", "original_bbox": [11, 203, 77, 220], "source_glyph_complete": true, "source_printed_full_literal": "San Ricardo", "source_url": "@source/63d8fac1edeef6d7"},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N04", "kind": "city", "original": "Surigao City", "original_bbox": [98, 238, 148, 280], "source_glyph_complete": true, "source_printed_full_literal": "Surigao City", "source_url": "@source/63d8fac1edeef6d7"}
+  ],
+  "translations": [
+    {"id": "PH9-DinagatSurigao-z9-434-241-N01", "zh": "洛雷托", "status": "approved", "source": "@source/61ef087cfdd5b2ae", "record_sha256": "21864107c490a925b85c9673b528d545ec7b200376495dcb9715a3a7604da191", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N02", "zh": "巴西利萨", "status": "approved", "source": "@source/61ef087cfdd5b2ae", "record_sha256": "64e90dc9a5f5e9e42e9bde498847698d69872e59ec862080d1ec8c9d65a8b6ae", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N03", "zh": "圣里卡多", "status": "approved", "source": "@source/f38b801fbfe90219", "record_sha256": "5557534941e471b40f6d844bac45ad6ac766016226182bbe593d07e8ad8f50e4", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N04", "zh": "苏里高市", "status": "approved", "source": "@source/a29793b2941753e3", "record_sha256": "5d9764fbc5dbe5a85c3f738cce0b6deb76b6cd868c271d8a60555fc2d4f75ae2", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"}
+  ],
+  "layouts": [
+    {"id": "PH9-DinagatSurigao-z9-434-241-N01", "x": 154.5, "y": 47.5, "font_style": "regular", "font_size": 12, "lines": ["洛雷托"]},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N02", "x": 129.0, "y": 181.0, "font_style": "regular", "font_size": 12, "lines": ["巴西利萨"]},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N03", "x": 44.0, "y": 211.5, "font_style": "regular", "font_size": 12, "lines": ["圣里卡多"]},
+    {"id": "PH9-DinagatSurigao-z9-434-241-N04", "x": 123.0, "y": 248.0, "font_style": "regular", "font_size": 12, "lines": ["苏里高市"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "PH9-DinagatSurigao-z9-434-241-SH-PH9-CebuBoholSouthLeyte-z9-432-241-S07", "owner_region": "PH9-CebuBoholSouthLeyte-z9-432-241", "feature_id": "PH9-CebuBoholSouthLeyte-z9-432-241-S07", "original_bbox": [-17, 27, 50, 46], "review_notes": "同缩放原图跨片续字沿用既有地名所属区。", "kind": "city", "original": "Hinunangan", "source_url": "@source/bc41ab293e118612"},
+    {"id": "PH9-DinagatSurigao-z9-434-241-SH-PH9-CebuBoholSouthLeyte-z9-432-241-S10", "owner_region": "PH9-CebuBoholSouthLeyte-z9-432-241", "feature_id": "PH9-CebuBoholSouthLeyte-z9-432-241-S10", "original_bbox": [-33, 115, 6, 131], "review_notes": "同缩放原图跨片续字沿用既有地名所属区。", "kind": "city", "original": "Lilo-an", "source_url": "@source/bc41ab293e118612"}
+  ],
+  "legacy_suppressions": []
+}

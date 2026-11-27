@@ -1,0 +1,37 @@
+{
+  "id": "TH-Phuket-ThungSong-Trang-z8-197-122",
+  "z": 8,
+  "x": 197,
+  "y": 122,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "features": [
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S01", "kind": "city", "original": "Phuket", "source_url": "@source/55e22f33a48c09c3", "original_bbox": [243, 92, 290, 113], "source_printed_full_literal": "Phuket", "source_glyph_complete": true},
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S02", "kind": "city", "original": "Thung Song", "source_url": "@source/c8d639ce01984ae2", "original_bbox": [477, 40, 542, 62], "source_printed_full_literal": "Thung Song", "source_glyph_complete": true},
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S03", "kind": "city", "original": "Trang", "source_url": "@source/c8d639ce01984ae2", "original_bbox": [464, 152, 505, 176], "source_printed_full_literal": "Trang", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S01", "zh": "普吉", "source": "@source/96be5213fa637c46", "status": "approved", "review_notes": "Complete supplier city label and hollow circle. Chinese retains the visible established WWP form for the matching names.", "record_sha256": "b663c31a8605f1bfc06bd6755895f9fdf454a295bc6549d64708167694fabe00"},
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S02", "zh": "通宋", "source": "@source/9208247a8cc00dda", "status": "approved", "review_notes": "Complete supplier city label and hollow circle. Chinese retains the visible established WWP form for the matching names.", "record_sha256": "724a9ea10d30df4ddc8c932643fd9e6b9d2fb47014c7581296d8d3f377de9c10"},
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S03", "zh": "董里", "source": "@source/00787e51a2463826", "status": "approved", "review_notes": "Complete supplier city label and hollow circle. Chinese retains the visible established WWP form for the matching names.", "record_sha256": "4ebdc82aa6166a44e4481a0be6f8a95566cf8928bed925eaa8ba996c0c5d1076"}
+  ],
+  "layouts": [
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S01", "x": 264, "y": 105, "font_style": "regular", "font_size": 12, "lines": ["普吉"]},
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S02", "x": 497, "y": 56, "font_style": "regular", "font_size": 12, "lines": ["通宋"]},
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S03", "x": 491, "y": 168, "font_style": "regular", "font_size": 12, "lines": ["董里"]}
+  ],
+  "symbols": [
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S01-circle", "feature_id": "TH-Phuket-ThungSong-Trang-z8-197-122-S01", "kind": "circle", "x": 247.5, "y": 95.5, "size": 9, "original_bbox": [243, 92, 252, 99], "outline_width": 1, "source_url": "@source/55e22f33a48c09c3", "review_notes": "Exact observed city circle presented at the measured original center."},
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S02-circle", "feature_id": "TH-Phuket-ThungSong-Trang-z8-197-122-S02", "kind": "circle", "x": 481.0, "y": 44.0, "size": 8, "original_bbox": [477, 40, 485, 48], "outline_width": 1, "source_url": "@source/c8d639ce01984ae2", "review_notes": "Exact observed city circle presented at the measured original center."},
+    {"id": "TH-Phuket-ThungSong-Trang-z8-197-122-S03-circle", "feature_id": "TH-Phuket-ThungSong-Trang-z8-197-122-S03", "kind": "circle", "x": 468.5, "y": 156.0, "size": 9, "original_bbox": [464, 152, 473, 160], "outline_width": 1, "source_url": "@source/c8d639ce01984ae2", "review_notes": "Exact observed city circle presented at the measured original center."}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "8/197/122.png",
+    "8/198/122.png"
+  ],
+  "context_tiles": [
+    "8/199/122.png"
+  ]
+}

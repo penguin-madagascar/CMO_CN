@@ -1,0 +1,29 @@
+{
+  "id": "LY-AlUrqub-z9-273-208",
+  "z": 9,
+  "x": 273,
+  "y": 208,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/273/208.png"
+  ],
+  "context_tiles": [
+    "9/272/208.png",
+    "9/273/207.png"
+  ],
+  "features": [
+    {"id": "LY-AlUrqub-z9-273-208-N01", "kind": "city", "original": "Al Urqub", "original_bbox": [71, -6, 121, 13], "source_url": "@source/3cd64c0620b8ef9a", "source_glyph_complete": true, "source_printed_full_literal": "Al Urqub"}
+  ],
+  "translations": [
+    {"id": "LY-AlUrqub-z9-273-208-N01", "zh": "阿尔乌尔库卜", "status": "approved", "source": "@source/e2ed51865301d313", "record_sha256": "a1c048ed2714cd83c84f68144e95eae910640b5d3e845c34324432bb6c088769", "review_notes": "原图实见地名，地理位置及所列资料确认；采用现有译名或地名音译。"}
+  ],
+  "layouts": [
+    {"id": "LY-AlUrqub-z9-273-208-N01", "x": 96.0, "y": 8, "font_style": "regular", "font_size": 12, "lines": ["阿尔乌尔库卜"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "LY-AlUrqub-z9-273-208-shared-LY9-RahibatZararah-z9-272-208-N02", "owner_region": "LY9-RahibatZararah-z9-272-208", "feature_id": "LY9-RahibatZararah-z9-272-208-N02", "kind": "region", "original": "Rahibat", "source_url": "@source/0e0e81a6f97d47a7", "original_bbox": [-44, 20, 6, 38], "review_notes": "同一供应商跨接字形及已实际渲染译名，沿用唯一既有归属。"}
+  ],
+  "legacy_suppressions": []
+}

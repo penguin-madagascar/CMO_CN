@@ -1,0 +1,29 @@
+{
+  "id": "CA-PrinceAlbertBirchHills-z9-105-166",
+  "z": 9,
+  "x": 105,
+  "y": 166,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/105/166.png"
+  ],
+  "context_tiles": [
+    "9/106/166.png"
+  ],
+  "features": [
+    {"id": "CA-PrinceAlbertBirchHills-z9-105-166-N01", "kind": "city", "original": "Prince Albert", "original_bbox": [134, 60, 175, 98], "source_glyph_complete": true, "source_printed_full_literal": "Prince Albert", "source_url": "@source/c587d81c73cf6cf2"},
+    {"id": "CA-PrinceAlbertBirchHills-z9-105-166-N02", "kind": "city", "original": "Birch Hills", "original_bbox": [241, 202, 298, 219], "source_glyph_complete": true, "source_printed_full_literal": "Birch Hills", "source_url": "@source/c587d81c73cf6cf2"}
+  ],
+  "translations": [
+    {"id": "CA-PrinceAlbertBirchHills-z9-105-166-N01", "zh": "艾伯特亲王城", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "43beb6038eeb8d1c2eeeb25fab12badae9ef90102125454b07198ddc17d069b4", "review_notes": "沿用第七级加拿大同一城市的正式译名。"},
+    {"id": "CA-PrinceAlbertBirchHills-z9-105-166-N02", "zh": "伯奇希尔斯", "status": "approved", "source": "@source/bf457bb12387733d", "record_sha256": "1bd912a6c752eb2715108ca2df7b5e79b0c41426b8b22eacc534189e8b034606", "review_notes": "据萨斯喀彻温百科核实市镇，中文采用地名音译。"}
+  ],
+  "layouts": [
+    {"id": "CA-PrinceAlbertBirchHills-z9-105-166-N01", "x": 154.5, "y": 79.0, "font_style": "regular", "font_size": 12, "lines": ["艾伯特亲王城"]},
+    {"id": "CA-PrinceAlbertBirchHills-z9-105-166-N02", "x": 224.0, "y": 210.5, "font_style": "regular", "font_size": 12, "lines": ["伯奇希尔斯"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -50,6 +50,158 @@ public static class MapLabelTilePackTests
         string path=Pack(payload,name,false); byte[] wire=File.ReadAllBytes(path); wire[7]=(byte)'2';File.WriteAllBytes(path,wire);return path;
     }
     static string Valid(byte[] png, string name) { return Pack(Payload(3,4,4,2,png,1,png.Length,false), name, false); }
+    static void CheckPackedRegionIdentity(Assembly engine) {
+        var index = engine.GetType("CMOShared.PackedRegionCoverage", true);
+        const BindingFlags hidden = BindingFlags.NonPublic | BindingFlags.Static;
+        var covered = index.GetMethod("Contains", hidden);
+        var fingerprint = (string)index.GetField("Fingerprint", hidden).GetRawConstantValue();
+        string file = Path.Combine(root, "cross-tile-regions.json");
+        File.WriteAllText(file, "{\"places\":[[\"甘肃省\",38.7393,100.735,4.6],[\"青海省\",35.2652,96.2377,4.6],"
+            + "[\"甘肃省\",38.7393,100.736,4.6],[\"金沙萨\",-4.4952,15.8492,6]]}", Encoding.UTF8);
+        var places = (IList)engine.GetType("CMOShared.MapLabelRegions").GetMethod("LoadFromDictionary").Invoke(null, new object[]{file});
+        Func<string,int,int,bool> includes = (pack, row, z) => (bool)covered.Invoke(null, new object[]{pack, places[row], z});
+        Check(includes(fingerprint, 0, 7), "exact Gansu province already supplied on neighboring z7 tile");
+        Check(!includes(new string('0', 64), 0, 7), "unrelated pack retains dictionary Gansu");
+        Check(!includes(fingerprint, 0, 4), "Gansu is not globally suppressed at other zooms");
+        Check(!includes(fingerprint, 1, 7), "Qinghai with no canonical province label is retained");
+        Check(!includes(fingerprint, 2, 7), "changed R88 anchor is not mistaken for the reviewed entity");
+        Check(!includes(fingerprint, 3, 6), "same-named city does not remove Kinshasa province");
+        places[0].GetType().GetField("Rank").SetValue(places[0], 2);
+        Check(!includes(fingerprint, 0, 7), "same-named city at identical anchor is not an administrative match");
+    }
+    static void CheckRegionOverlay(Assembly engine, MethodInfo render) {
+        string dict = Path.Combine(root, "region-dictionary.json");
+        File.WriteAllText(dict, "{\"places\":[[\"某省\",-20,22.5,2.5]]}", Encoding.UTF8);
+        object places = engine.GetType("CMOShared.MapLabelRegions").GetMethod("LoadFromDictionary").Invoke(null, new object[]{dict});
+        Color original = Color.FromArgb(89, 97, 154, 213);
+        byte[] baseline;
+        using (var bitmap = new Bitmap(256, 256)) using (var stream = new MemoryStream()) {
+            bitmap.SetPixel(9, 9, original);
+            bitmap.Save(stream, ImageFormat.Png);
+            baseline = stream.ToArray();
+        }
+        object pack = Load(Valid(baseline, "region-coverage"));
+        object[] hit = {places, pack, 3, 4, 4, 0, 0};
+        byte[] overlay = (byte[])render.Invoke(null, hit);
+        Check((int)hit[5] == 3 && (int)hit[6] == 3, "eligible R88 region added to supplied PNG");
+        using (var stream = new MemoryStream(overlay)) using (var image = new Bitmap(stream)) {
+            Check(image.GetPixel(9, 9).ToArgb() == original.ToArgb(), "original semitransparent ink retains exact ARGB");
+            bool drawn = false;
+            for (int y = 120; y < 160 && !drawn; y++)
+                for (int x = 100; x < 155; x++) if (image.GetPixel(x, y).A != 0) { drawn = true; break; }
+            Check(drawn, "added Chinese text lies at its R88 label coordinates");
+        }
+        var solid = Png(256, Color.Red);
+        hit[1] = Load(Valid(solid, "region-collision"));
+        Check(Equal((byte[])render.Invoke(null, hit), solid) && (int)hit[5] == 3 && (int)hit[6] == 2,
+            "collision preserves original packed bytes and counts only original labels");
+        // The first region's original anchor is covered; the second remains free. A retry must
+        // leave the second at its original coordinates and preserve every opaque source pixel.
+        byte[] crowded;
+        using (var bitmap = new Bitmap(256, 256)) using (var g = Graphics.FromImage(bitmap))
+        using (var stream = new MemoryStream()) {
+            g.FillRectangle(Brushes.Red, 80, 0, 96, 125);
+            bitmap.Save(stream, ImageFormat.Png);
+            crowded = stream.ToArray();
+        }
+        var regionalReader = engine.GetType("CMOShared.MapLabelRegions").GetMethod("LoadFromDictionary");
+        File.WriteAllText(dict, "{\"places\":[[\"乙省\",-24,22.5,2.5]]}", Encoding.UTF8);
+        object second = regionalReader.Invoke(null, new object[]{dict});
+        var partial = Load(Valid(crowded, "region-nearby"));
+        object[] anchored = {second, partial, 3, 4, 4, 0, 0};
+        byte[] fixedRegion = (byte[])render.Invoke(null, anchored);
+        File.WriteAllText(dict, "{\"places\":[[\"某省\",-20,22.5,2.5],[\"乙省\",-24,22.5,2.5]]}", Encoding.UTF8);
+        object[] adjusted = {regionalReader.Invoke(null, new object[]{dict}), partial, 3, 4, 4, 0, 0};
+        byte[] both = (byte[])render.Invoke(null, adjusted);
+        Check((int)anchored[6] == 3 && (int)adjusted[6] == 4, "nearby placement restores distinct region blocked by canonical text");
+        using (var originalStream = new MemoryStream(fixedRegion)) using (var fixedImage = new Bitmap(originalStream))
+        using (var bothStream = new MemoryStream(both)) using (var bothImage = new Bitmap(bothStream)) {
+            bool same = true;
+            for (int y = 0; y < 256 && same; y++) for (int x = 0; x < 256; x++) {
+                Color pixel = fixedImage.GetPixel(x, y);
+                if (pixel.A != 0 && pixel.ToArgb() != bothImage.GetPixel(x, y).ToArgb()) { same = false; break; }
+            }
+            Check(same, "all canonical ink and the unobstructed province stay at exact original pixels");
+        }
+        Check(Equal(both, (byte[])render.Invoke(null, adjusted)), "nearby province layout is deterministic");
+        File.WriteAllText(dict, "{\"places\":[[\"谢胡布尔\",-20,22.5,2.5]]}", Encoding.UTF8);
+        using (var smallSpace = new Bitmap(256, 256)) using (var stream = new MemoryStream()) {
+            using (var g = Graphics.FromImage(smallSpace)) g.Clear(Color.Red);
+            for (int y = 99; y < 136; y++) for (int x = 112; x < 144; x++) smallSpace.SetPixel(x, y, Color.Transparent);
+            smallSpace.Save(stream, ImageFormat.Png);
+            var tight = Load(Valid(stream.ToArray(), "region-narrow"));
+            object[] narrow = {regionalReader.Invoke(null, new object[]{dict}), tight, 3, 4, 4, 0, 0};
+            byte[] result = (byte[])render.Invoke(null, narrow);
+            Check((int)narrow[6] == 3 && !Equal(result, stream.ToArray()), "crowded host fits a required CJK name into a narrow clear column");
+        }
+        using (var stream = new MemoryStream(crowded)) using (var originalImage = new Bitmap(stream))
+        using (var output = new MemoryStream()) {
+            // Leave one native-transparent channel at the true z3 geographic anchor (128,116.16).
+            for (int y = 0; y < 125; y++) for (int x = 127; x <= 129; x++) originalImage.SetPixel(x, y, Color.Transparent);
+            originalImage.Save(output, ImageFormat.Png);
+            hit[1] = Load(Valid(output.ToArray(), "region-leader"));
+            byte[] linked = (byte[])render.Invoke(null, hit);
+            using (var linkedStream = new MemoryStream(linked)) using (var linkedImage = new Bitmap(linkedStream)) {
+                bool atAnchor = false;
+                for (int y = 115; y <= 118; y++) for (int x = 127; x <= 129; x++)
+                    if (linkedImage.GetPixel(x, y).A > 0) atAnchor = true;
+                Check(atAnchor, "displaced label has a visible leader at its true geographic anchor");
+                Check(linkedImage.GetPixel(126, 116).ToArgb() == Color.Red.ToArgb(), "leader never alters the adjacent native glyph");
+            }
+        }
+        object[] outside = {places, null, 2, 2, 2, 0, 0};
+        render.Invoke(null, outside);
+        Check((int)outside[5] == 0, "R88 fractional minimum zoom rounds up");
+        string game = Path.Combine(root, "region-cache");
+        Check((int)Call(pack, "ApplyToCacheWithLegacy", game, places) == 1
+            && Equal(overlay, File.ReadAllBytes(Tile(game))), "packed warm cache matches live regional overlay");
+        Check((int)Call(pack, "ApplyToCacheWithLegacy", game, places) == 0, "repeat does not rewrite regional overlay");
+        string fallback = Path.Combine(Cache(game), @"4\9\8.png");
+        Write(fallback, solid);
+        object[] miss = {places, pack, 4, 9, 8, 0, 0};
+        byte[] expected = (byte[])render.Invoke(null, miss);
+        Check((int)miss[6] == 1 && (int)Call(pack, "ApplyToCacheWithLegacy", game, places) == 1
+            && Equal(expected, File.ReadAllBytes(fallback)), "existing unpacked region host is refreshed in the warm cache");
+    }
+
+    static void CheckHistoricalWwp(Assembly engine, MethodInfo render) {
+        var type = engine.GetType("CMOShared.MapLabelPlace");
+        string file = Path.Combine(root, "wwp-region-collision.json");
+        File.WriteAllText(file, "{\"places\":[[\"同址省\",-1.4,1.4,6]]}", Encoding.UTF8);
+        var loaded = engine.GetType("CMOShared.MapLabelRegions").GetMethod("LoadFromDictionary").Invoke(null, new object[]{file});
+        var roster = (IList)loaded;
+        foreach (string name in new[]{"原有城","历史隐藏城"}) {
+            var city = Activator.CreateInstance(type);
+            type.GetField("Name").SetValue(city, name);
+            type.GetField("Level").SetValue(city, 1);
+            type.GetField("Lat").SetValue(city, -1.4f);
+            type.GetField("Lon").SetValue(city, 1.4f);
+            roster.Add(city);
+        }
+        string stamp = (string)engine.GetType("CMOShared.PackedWwpCoverage").GetField("Fingerprint",
+            BindingFlags.Static | BindingFlags.NonPublic).GetRawConstantValue();
+        byte[] transparent = Png(256, Color.Transparent);
+        foreach (bool hit in new[]{true, false}) {
+            int x = hit ? 64 : 0;
+            object pack = Load(Pack(Payload(7, x, 64, 0, transparent, 1, transparent.Length, false), "union-" + x, false));
+            // The miniature fixture stands in for an attested package without copying its real 9,377 PNGs.
+            packType.GetProperty("Fingerprint").GetSetMethod(true).Invoke(pack, new object[]{stamp});
+            object[] args = {roster, pack, 7, 64, 64, 0, 0};
+            byte[] served = (byte[])render.Invoke(null, args);
+            Check((int)args[6] == 2, (hit ? "packed" : "fallback") + " retains both historical city and upstream province, excludes always-hidden city");
+            string game = Path.Combine(root, "wwp-warm-" + x);
+            string tile = Path.Combine(Cache(game), @"7\64\64.png");
+            Write(tile, transparent);
+            Call(pack, "ApplyToCacheWithLegacy", game, roster);
+            Check(Equal(served, File.ReadAllBytes(tile)), (hit ? "packed" : "fallback") + " indexed cache equals original-roster rendering");
+        }
+        object[] original = {roster, null, 7, 64, 64, 0, 0};
+        byte[] ordinary = (byte[])render.Invoke(null, original);
+        Check((int)original[6] == 1, "without optional map pack upstream R88 collision rules remain in effect");
+        using (var stream = new MemoryStream(ordinary)) using (var image = new Bitmap(stream))
+            Check(Math.Abs(image.HorizontalResolution - 96f) < 0.1f && Math.Abs(image.VerticalResolution - 96f) < 0.1f,
+                "ordinary fallback PNG density is independent of the process display DPI");
+    }
     static void Reject(string file, string name) {
         try { Load(file); throw new Exception("Accepted " + name); }
         catch (TargetInvocationException e) { Check(e.InnerException is InvalidDataException || e.InnerException is EndOfStreamException || e.InnerException is ArgumentException || e.InnerException is FormatException, "reject " + name); }
@@ -83,6 +235,9 @@ public static class MapLabelTilePackTests
             object rulePlaces=Activator.CreateInstance(typeof(System.Collections.Generic.List<>).MakeGenericType(rulePlaceType));
             rulePlaces.GetType().GetMethod("Add").Invoke(rulePlaces,new[]{rulePlace});
             var ruleRenderer=engine.GetType("CMOShared.MapLabelRenderer",true).GetMethod("RenderTileBytes");
+            CheckPackedRegionIdentity(engine);
+            CheckRegionOverlay(engine, ruleRenderer);
+            CheckHistoricalWwp(engine, ruleRenderer);
             object[] ruleHit={rulePlaces,rules,7,0,0,0,0};
             Check(Equal(rulePng,(byte[])ruleRenderer.Invoke(null,ruleHit)) && (int)ruleHit[5]==1 && (int)ruleHit[6]==1,"v2 direct hit retains exact approved PNG and counts");
             object[] without={rulePlaces,null,7,64,64,0,0},with={rulePlaces,rules,7,64,64,0,0};

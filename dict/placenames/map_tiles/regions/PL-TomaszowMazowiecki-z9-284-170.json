@@ -1,0 +1,43 @@
+{
+  "id": "PL-TomaszowMazowiecki-z9-284-170",
+  "z": 9,
+  "x": 284,
+  "y": 170,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/284/170.png"
+  ],
+  "context_tiles": [
+    "9/283/170.png",
+    "9/284/171.png",
+    "9/285/170.png",
+    "9/285/171.png"
+  ],
+  "features": [
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Ujazd", "original": "Ujazd", "original_bbox": [69, 4, 102, 23], "kind": "city", "source_url": "@source/7e6ce39db7fe3ffe", "source_glyph_complete": true, "source_printed_full_literal": "Ujazd"},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-TomaszwMazowiecki", "original": "Tomaszów Mazowiecki", "original_bbox": [85, 33, 149, 68], "kind": "city", "source_url": "@source/7e6ce39db7fe3ffe", "source_glyph_complete": true, "source_printed_full_literal": "Tomaszów Mazowiecki"},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-PiotrkwTrybunalski", "original": "Piotrków Trybunalski", "original_bbox": [-34, 102, 39, 144], "kind": "city", "source_url": "@source/7e6ce39db7fe3ffe", "source_glyph_complete": true, "source_printed_full_literal": "Piotrków Trybunalski"},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Opoczno", "original": "Opoczno", "original_bbox": [196, 131, 246, 151], "kind": "city", "source_url": "@source/7e6ce39db7fe3ffe", "source_glyph_complete": true, "source_printed_full_literal": "Opoczno"},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Sulejw", "original": "Sulejów", "original_bbox": [50, 145, 97, 165], "kind": "city", "source_url": "@source/7e6ce39db7fe3ffe", "source_glyph_complete": true, "source_printed_full_literal": "Sulejów"}
+  ],
+  "translations": [
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Ujazd", "zh": "乌亚兹德", "status": "approved", "source": "@source/9684b48e15715e32", "record_sha256": "5411f863174a5314ac44d88e89c5570faeb4973b551827a18094c6ba4820aecb", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-TomaszwMazowiecki", "zh": "马佐夫舍地区托马舒夫", "status": "approved", "source": "@source/db18d3efb184c3d5", "record_sha256": "c11bd11deed80333cb00430b085a99f120c54fe8b8f55bbfd1cd6f437a996dff", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-PiotrkwTrybunalski", "zh": "彼得库夫-特雷布纳尔斯基", "status": "approved", "source": "@source/7587411f14bc3b11", "record_sha256": "713801a73635425d37546cea543e109e5b101f7f7b8a4a9692f17e0550fb1870", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Opoczno", "zh": "奥波奇诺", "status": "approved", "source": "@source/9684b48e15715e32", "record_sha256": "40344aa28671094dac9d09a1b308243d1e503ee26ef4063bf8cadb93adbd0b91", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Sulejw", "zh": "苏莱尤夫", "status": "approved", "source": "@source/9684b48e15715e32", "record_sha256": "7e555db1a4b4194b7350e36016286b76c6b0d5f12b8538cd879f4a80978ddfaf", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"}
+  ],
+  "layouts": [
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Ujazd", "x": 85.5, "y": 13.5, "font_style": "regular", "font_size": 12},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-TomaszwMazowiecki", "x": 117.0, "y": 50.5, "font_style": "regular", "font_size": 12},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-PiotrkwTrybunalski", "x": 73, "y": 123.0, "font_style": "regular", "font_size": 12},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Opoczno", "x": 221.0, "y": 141.0, "font_style": "regular", "font_size": 12},
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-Sulejw", "x": 73.5, "y": 155.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "PL-TomaszowMazowiecki-z9-284-170-shared-PL-KonskieKielcePinczow-z9-285-171-1x2-S01", "owner_region": "PL-KonskieKielcePinczow-z9-285-171-1x2", "feature_id": "PL-KonskieKielcePinczow-z9-285-171-1x2-S01", "original": "Końskie", "kind": "city", "original_bbox": [240, 240, 285, 257], "source_url": "@source/2895bcc6540e0630", "review_notes": "完整原文字框对应同一层级相同世界坐标，RGBA 逐字节对应正式所属区。已有中文与符号保持其原输出。"}
+  ],
+  "legacy_suppressions": []
+}

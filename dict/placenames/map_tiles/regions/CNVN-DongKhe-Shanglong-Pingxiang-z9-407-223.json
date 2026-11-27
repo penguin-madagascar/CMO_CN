@@ -1,0 +1,41 @@
+{
+  "id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223",
+  "z": 9,
+  "x": 407,
+  "y": 223,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    {"path": "9/407/223.png", "z": 9, "origin": "official frozen tile HTTP", "source_alpha_count": 4829}
+  ],
+  "context_tiles": [
+    "9/406/223.png",
+    {"path": "9/407/224.png", "z": 9, "origin": "official frozen tile HTTP", "source_alpha_count": 4750},
+    {"path": "9/408/223.png", "z": 9, "origin": "official frozen tile HTTP", "source_alpha_count": 3715}
+  ],
+  "features": [
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S01", "kind": "city", "original": "Đông Khê", "source_url": "@source/b222f2b0d8a83674", "original_bbox": [66, 56, 122, 76], "source_printed_full_literal": "Đông Khê", "source_glyph_complete": true},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S02", "kind": "city", "original": "Ang Mo", "source_url": "@source/b222f2b0d8a83674", "original_bbox": [34, 105, 78, 125], "source_printed_full_literal": "Ang Mo", "source_glyph_complete": true},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S03", "kind": "city", "original": "Pingxiang", "source_url": "@source/b222f2b0d8a83674", "original_bbox": [185, 186, 246, 208], "source_printed_full_literal": "Pingxiang", "source_glyph_complete": true},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S04", "kind": "city", "original": "Shangl…", "source_url": "@source/b222f2b0d8a83674", "original_bbox": [217, 60, 256, 80], "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "Shangl…", "resolved_semantic_name": "Shanglong", "semantic_resolution": {"complete_spelling_source_z": 10, "complete_spelling_source_world_bbox": [208848, 114304, 208905, 114325], "complete_spelling_source_bbox": [208, 128, 265, 149], "complete_spelling_source_RGBA_sha256": "4025a8ad9e9f9c0077a82512c48ea63810445e9b010d5db0bc8c0c928256e617", "z9_visible_bbox": [217, 60, 256, 80], "z9_visible_world_bbox": [104409, 57148, 104448, 57168], "z10_complete_caption_center_divided_by_two_relative": [246.25, 69.25], "projected_unclipped_glyph_extent_at_z9_nominal_size": [217.75, 58.75, 274.75, 79.75], "best_visible_alpha_support_overlap": 0.93026941362916, "observed_clip_side": "E", "best_fit_offset_z9": [217, 60], "original_is_visible_fragment_not_recovered_full_glyphs": true, "type": "ACTUAL_OTHER_ZOOM_COMPLETE_PRINT_AND_SAME_WORLD_CAPTION_ASSOCIATION", "complete_spelling": "Shanglong", "complete_spelling_source_url": "@source/5f3c83fee1ee4070", "complete_spelling_source_wire_sha256": "5469f38b747ade269a36a030bbbefb396e3d5419e722b5721fcad41b1469752b", "complete_spelling_source_inputs": [{"url": "@source/5f3c83fee1ee4070", "sha256": "5469f38b747ade269a36a030bbbefb396e3d5419e722b5721fcad41b1469752b"}, {"url": "@source/37921ff67d5e2bbe", "sha256": "a389d9521257119351cfad8cbf21c0e53a9f6b48df5db36306a7f59d81065a58"}], "exact_z9_opposite_box": [256, 46, 283, 91], "exact_z9_opposite_alpha": 0, "limits": "原始 z9 字符串仍残缺。完整拼写来自另一缩放级别的同一地图锚点，实见原字框只归账其非透明像素。两级字体与像素无需逐字节相同。"}, "original_is_support_not_full_glyph_transcription": true}
+  ],
+  "translations": [
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S01", "zh": "东溪", "status": "approved", "source": "@source/ea5fbfd65a2475f1", "record_sha256": "e23439dc4638137cb084693a84f4151a00d593e1c0e02110070a326616cb0014", "review_notes": "地图原字、对应行政地名与中文译名已核对。"},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S02", "zh": "昂莫", "status": "approved", "source": "@source/d10964b0eb0604e8", "record_sha256": "b09b8846b912c40808550f5fadc6d8af0ec1a823d2c5a7e232582642912ef34b", "review_notes": "地图原字、对应行政地名与中文译名已核对。"},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S03", "zh": "凭祥", "status": "approved", "source": "@source/4d5968c24f04c420", "record_sha256": "1eb72eeb9fb2e684cad80fc8274c6b054e11831172b4ba087b34cc9efb25c69f", "review_notes": "地图原字、对应行政地名与中文译名已核对。"},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S04", "zh": "上龙", "status": "approved", "source": "@source/f356f7ed39a79d86", "record_sha256": "0a63cfe732a458071fd87731dc74b0d8a5196423613dc32498755d5086facbe3", "review_notes": "残字归属由同供应商完整高缩放拼写和实测图幅锚点支持。"}
+  ],
+  "layouts": [
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S01", "x": 94.0, "y": 66.0, "font_style": "regular", "font_size": 12, "lines": ["东溪"]},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S02", "x": 56.0, "y": 115.0, "font_style": "regular", "font_size": 12, "lines": ["昂莫"]},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S03", "x": 215.5, "y": 197.0, "font_style": "regular", "font_size": 12, "lines": ["凭祥"]},
+    {"id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-S04", "x": 242.5, "y": 69.25, "font_style": "regular", "font_size": 12, "lines": ["上龙"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Yến Lạc", "source_url": "@source/b84085a1c88206e8", "id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-shared-VN-BacKan-ChoRa-YenLac-z9-406-223-S04", "original_bbox": [-20, 129, 30, 150], "owner_region": "VN-BacKan-ChoRa-YenLac-z9-406-223", "feature_id": "VN-BacKan-ChoRa-YenLac-z9-406-223-S04", "review_notes": "完整原字跨接缝后与现有归属的像素完全一致。"},
+    {"kind": "city", "original": "Đồng Đăng", "source_url": "@source/b222f2b0d8a83674", "id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-shared-SC14-N048", "original_bbox": [158, 242, 225, 265], "owner_region": "SC14-R01-z9-407-224", "feature_id": "SC14-N048", "review_notes": "完整原字跨接缝后与现有归属的像素完全一致。"},
+    {"kind": "city", "original": "Bình Gia", "source_url": "@source/b222f2b0d8a83674", "id": "CNVN-DongKhe-Shanglong-Pingxiang-z9-407-223-shared-SC14-N049", "original_bbox": [51, 243, 98, 260], "owner_region": "SC14-R01-z9-407-224", "feature_id": "SC14-N049", "review_notes": "完整原字跨接缝后与现有归属的像素完全一致。"}
+  ],
+  "legacy_suppressions": []
+}

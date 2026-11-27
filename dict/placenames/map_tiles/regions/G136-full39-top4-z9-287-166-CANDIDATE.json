@@ -1,0 +1,71 @@
+{
+  "id": "G136-full39-top4-z9-287-166-CANDIDATE",
+  "z": 9,
+  "x": 287,
+  "y": 166,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/287/166.png",
+    "9/288/166.png",
+    "9/287/167.png",
+    "9/288/167.png"
+  ],
+  "context_tiles": [
+    "9/289/166.png",
+    "9/289/167.png"
+  ],
+  "features": [
+    {"id": "G136-C01", "kind": "city", "original": "Ostrów Mazowiecka", "original_bbox": [3, 304, 71, 339], "source_url": "@source/f05d5e15536ed7f8"},
+    {"id": "G136-C02", "kind": "city", "original": "Czyżew", "original_bbox": [167, 314, 210, 334], "source_url": "@source/f05d5e15536ed7f8"},
+    {"id": "G136-C03", "kind": "city", "original": "Brańsk", "original_bbox": [358, 345, 398, 363], "source_url": "@source/4ccfbbc5d7ec9ce7"},
+    {"id": "G136-C04", "kind": "city", "original": "Ciechanowiec", "original_bbox": [218, 385, 294, 403], "source_url": "@source/f05d5e15536ed7f8"},
+    {"id": "G136-C05", "kind": "city", "original": "Kosów Lacki", "original_bbox": [108, 426, 148, 461], "source_url": "@source/f05d5e15536ed7f8"},
+    {"id": "G136-C09", "kind": "city", "original": "Wysokie Mazowieckie", "original_bbox": [226, 235, 297, 269], "source_url": "@source/2e58d6d24b926937"},
+    {"id": "G136-C11", "kind": "city", "original": "Jedwabne", "original_bbox": [156, 19, 211, 35], "source_url": "@source/2e58d6d24b926937"},
+    {"id": "G136-C12", "kind": "city", "original": "Knyszyn", "original_bbox": [386, 3, 433, 22], "source_url": "@source/4ea12cf0dca7148e"},
+    {"id": "G136-C13", "kind": "city", "original": "Łomża", "original_bbox": [79, 86, 122, 104], "source_url": "@source/2e58d6d24b926937"},
+    {"id": "G136-C14", "kind": "city", "original": "Zambrów", "original_bbox": [135, 201, 189, 218], "source_url": "@source/2e58d6d24b926937"},
+    {"id": "G136-C15", "kind": "city", "original": "Łapy", "original_bbox": [381, 198, 410, 217], "source_url": "@source/4ea12cf0dca7148e"},
+    {"id": "G136-C16", "kind": "city", "original": "Suraż", "original_bbox": [406, 223, 439, 240], "source_url": "@source/4ea12cf0dca7148e"},
+    {"id": "G136-C21", "kind": "city", "original": "Wasilków", "original_bbox": [485, 72, 541, 89], "source_url": "@source/4ea12cf0dca7148e"},
+    {"id": "G136-C22", "kind": "city", "original": "Białystok", "original_bbox": [468, 112, 526, 133], "source_url": "@source/4ea12cf0dca7148e"}
+  ],
+  "translations": [
+    {"id": "G136-C01", "zh": "马佐夫舍地区奥斯特鲁夫", "status": "approved", "source": "@source/e14b27568e3cefcb", "review_notes": "项目译名复核：实际原印、对应地域和所引中文用名相符，采用现有中文地名用法并按简体书写。仅批准该词的项目中文词形；所引资料为用名证据，不是官方中文标准认证。Source/region/Root正式集成仍未批准。", "record_sha256": "048c29125a03ab1ecf772cef556611a4982237e6ed2a6d6ef171c6c1fb7d5db9"},
+    {"id": "G136-C02", "zh": "奇热夫", "status": "approved", "source": "@source/63e942f51927f9b3", "review_notes": "项目译名复核：实际原印、对应地域和所引中文用名相符，采用现有中文地名用法并按简体书写。仅批准该词的项目中文词形；所引资料为用名证据，不是官方中文标准认证。Source/region/Root正式集成仍未批准。", "record_sha256": "06598139399ac00da073933584d45b9bb079fba2833aa6ac92f41c651237a147"},
+    {"id": "G136-C03", "zh": "布兰斯克", "status": "approved", "source": "@source/dc94792f602cba3c", "review_notes": "项目译名复核：实际原印、对应地域和所引中文用名相符，采用现有中文地名用法并按简体书写。仅批准该词的项目中文词形；所引资料为用名证据，不是官方中文标准认证。Source/region/Root正式集成仍未批准。", "record_sha256": "6d62ee023c4f4eecc29084c2465f355f2c0bbcbb34682ac0eb0373a304dd2a9c"},
+    {"id": "G136-C04", "zh": "切哈诺维茨", "status": "approved", "source": "@source/fbe4b4ad4a9ab0fe", "review_notes": "项目译名复核：实际原印、对应地域和所引中文用名相符，采用现有中文地名用法并按简体书写。仅批准该词的项目中文词形；所引资料为用名证据，不是官方中文标准认证。Source/region/Root正式集成仍未批准。", "record_sha256": "ab8255cd9d8030b4d801b9603c50afe6f16da44a842993b56a2660fa247c70fd"},
+    {"id": "G136-C05", "zh": "科苏夫拉茨基", "status": "approved", "source": "@source/e4fb8d3a0345b9b5", "review_notes": "项目译名复核：实际原印、对应地域和所引中文用名相符，采用现有中文地名用法并按简体书写。仅批准该词的项目中文词形；所引资料为用名证据，不是官方中文标准认证。Source/region/Root正式集成仍未批准。", "record_sha256": "6e5e29ae1194d814bcc75b705ac6bcd601c9dec9b98b4c938663482a8262c7cb"},
+    {"id": "G136-C09", "zh": "马佐夫舍地区维索凯", "status": "approved", "source": "@source/5b276b8bd7e3b829", "review_notes": "完整原印为两行 Wysokie/Mazowieckie，已实看补图并按全词归属。中文仅为已检得社区用名候选；官方波兰语证据只证明身份，不构成官方中文认证。待独立项目译名复核。 本轮已完成项目中文词形复核；完整词 source 与中文实际渲染交独立 Target 复核。", "record_sha256": "a438fab9fcde24ed9509985f72f82fbe649c24fbe2d0e96a5f3c86d008eb967b"},
+    {"id": "G136-C11", "zh": "耶德瓦布内", "status": "approved", "source": "@source/7bf021f5de39a293", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "b127dc6f2dfe4a171a6fdc036a8581bdf85ff1c768000c81609c5b41b91fe2d8"},
+    {"id": "G136-C12", "zh": "克内申", "status": "approved", "source": "@source/7a19c821b8a27d09", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "7ea3129be32503dbd47b9a2032ed4d95eeaec2391e344ec761b2f88f86d08e6d"},
+    {"id": "G136-C13", "zh": "沃姆扎", "status": "approved", "source": "@source/70d57cd9e27d9eb2", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "2a088614d45f449dca9db5a50d8945e7b3eecd515c49b7ac4969857940c97fca"},
+    {"id": "G136-C14", "zh": "赞布鲁夫", "status": "approved", "source": "@source/35f64bbb7826c5a8", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "ad84471a7479cb68fa75d335a5f959244e438eca1302b6f5a3b59c08ad2fb295"},
+    {"id": "G136-C15", "zh": "瓦佩", "status": "approved", "source": "@source/01ffb8c5cebb71d5", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "fef78ba61310fdb975eb245fc040b8ebd5afaf3ba6d09ce3e161690ca35077c8"},
+    {"id": "G136-C16", "zh": "苏拉日", "status": "approved", "source": "@source/112ddf3274edd98d", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "e068210a31ba253cc05ff1f5155493bbec6917aa38c94942dd13435b366897a0"},
+    {"id": "G136-C21", "zh": "瓦西尔库夫", "status": "approved", "source": "@source/1a855ef0c92a8e48", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "c056ba317b2fbb2a649f224c28185bbb4b329c4c1e0a48fc1fb9cc87863baf80"},
+    {"id": "G136-C22", "zh": "比亚韦斯托克", "status": "approved", "source": "@source/e3c3259ce8da3b7b", "review_notes": "项目词形复核：完整实际原印与地域已核；采用中文用名并转换简体，仅为本项目用字，不宣称官方中文认证。", "record_sha256": "36194786f73f381513c39a2fd2796aa3f9abee581a9eab37951690d3fb48296b"}
+  ],
+  "layouts": [
+    {"id": "G136-C01", "x": 40, "y": 321.5, "font_size": 12, "font_style": "regular", "lines": ["马佐夫舍地区", "奥斯特鲁夫"]},
+    {"id": "G136-C02", "x": 188.5, "y": 324.0, "font_size": 12, "font_style": "regular", "lines": ["奇热夫"]},
+    {"id": "G136-C03", "x": 378.0, "y": 354.0, "font_size": 12, "font_style": "regular", "lines": ["布兰斯克"]},
+    {"id": "G136-C04", "x": 256.0, "y": 394.0, "font_size": 12, "font_style": "regular", "lines": ["切哈诺维茨"]},
+    {"id": "G136-C05", "x": 128.0, "y": 443.5, "font_size": 12, "font_style": "regular", "lines": ["科苏夫", "拉茨基"]},
+    {"id": "G136-C09", "x": 261.5, "y": 252.0, "font_size": 12, "font_style": "regular", "lines": ["马佐夫舍地区", "维索凯"]},
+    {"id": "G136-C11", "x": 183.5, "y": 27.0, "font_size": 12, "font_style": "regular", "lines": ["耶德瓦布内"]},
+    {"id": "G136-C12", "x": 409.5, "y": 12.5, "font_size": 12, "font_style": "regular", "lines": ["克内申"]},
+    {"id": "G136-C13", "x": 100.5, "y": 95.0, "font_size": 12, "font_style": "regular", "lines": ["沃姆扎"]},
+    {"id": "G136-C14", "x": 162.0, "y": 209.5, "font_size": 12, "font_style": "regular", "lines": ["赞布鲁夫"]},
+    {"id": "G136-C15", "x": 395.5, "y": 207.5, "font_size": 12, "font_style": "regular", "lines": ["瓦佩"]},
+    {"id": "G136-C16", "x": 422.5, "y": 231.5, "font_size": 12, "font_style": "regular", "lines": ["苏拉日"]},
+    {"id": "G136-C21", "x": 491, "y": 80.5, "font_size": 12, "font_style": "regular", "lines": ["瓦西尔", "库夫"]},
+    {"id": "G136-C22", "x": 491, "y": 122.5, "font_size": 12, "font_style": "regular", "lines": ["比亚韦", "斯托克"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G136-full39-top4-z9-287-166-CANDIDATE-old-Bielsk", "owner_region": "UA20-BelarusWest-289-167", "feature_id": "UA20-N016", "kind": "city", "original": "Bielsk Podlaski", "original_bbox": [485, 324, 532, 357], "source_url": "@source/4ccfbbc5d7ec9ce7", "review_notes": "Exact unchanged normal owner record and complete world original_bbox checked against directly observed source ink. Source-only reference: no local normal/translation/layout/symbol duplication."},
+    {"id": "G136-full39-top4-z9-287-166-CANDIDATE-shared-G136-C20", "owner_region": "G136-full39-east1-z9-289-166-CANDIDATE", "feature_id": "G136-C20", "kind": "city", "original": "Czarna Białostocka", "original_bbox": [510, 2, 574, 37], "source_url": "@source/3b819df0cc8807f8", "review_notes": "Full observed original instance accounted across both output owners; only the normal owner renders Chinese. Complete source bbox and exact name/kind/URL match the normal owner."}
+  ]
+}

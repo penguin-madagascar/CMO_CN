@@ -1,0 +1,30 @@
+{
+  "id": "S62-SouthGeorgiaScotia-z5-12-21",
+  "z": 5,
+  "x": 12,
+  "y": 21,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "original_tiles": [
+    "5/12/21.png",
+    "5/12/22.png",
+    "5/13/21.png",
+    "5/13/22.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "S62-SG4-P24", "kind": "region", "original": "SOUTH GEORGIA AND SOUTH SANDWICH ISLANDS", "original_bbox": [132, 159, 286, 272], "source_url": "@source/5882bafb9a22ffa9"},
+    {"id": "S62-SG4-R01", "kind": "region", "original": "Scotia Sea", "original_bbox": [34, 325, 123, 341], "source_url": "@source/4739763b456656e9"}
+  ],
+  "translations": [
+    {"id": "S62-SG4-P24", "zh": "南乔治亚岛和南桑德韦奇岛", "status": "approved", "source": "@source/5882bafb9a22ffa9", "record_sha256": "6fec7c9364b327f8418f5db1483e8bb29b6219ac4ff5767a772c9f7fe58a8ca0", "review_notes": "Printed-label provenance URL only, not an official Chinese-name authority. Root lexical selection evidence/tile_recovery/root_continuity7_Chinese_lexical_actual_selection_20261104/Root_SELECTED_CONTINUITY7_COMPLETE_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 837578f311b888d248ecad830ccf2428af6070f15dccf89df4e7e71048c77228 pointer /lexical_choices/5; grade A unchanged. Project caption only; no supplier/entity point assignment."},
+    {"id": "S62-SG4-R01", "zh": "斯科舍海", "status": "approved", "source": "@source/4739763b456656e9", "record_sha256": "c7ebd50c0f07dca84ca0283bf8a101c9cb4923cf45ab6629058364fcaa1dcc7f", "review_notes": "Printed-label provenance URL only, not an official Chinese-name authority. Root lexical selection evidence/tile_recovery/root_residual8707_complete8_Chinese_actual_selection_20261104/Root_SELECTED_RESIDUAL_COMPLETE8_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 5b8bec296ec33968bd0e4b4879ffee2a29bd8c3402801af67ef9360bad712237 pointer /rows8/0; grade A unchanged. Project caption only; no supplier/entity point assignment."}
+  ],
+  "layouts": [
+    {"id": "S62-SG4-P24", "x": 209.0, "y": 215.5, "font_size": 12, "font_style": "regular"},
+    {"id": "S62-SG4-R01", "x": 78.5, "y": 333.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,48 @@
+{
+  "id": "CN-HebiLaodian-z9-418-201",
+  "z": 9,
+  "x": 418,
+  "y": 201,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/418/201.png"
+  ],
+  "context_tiles": [
+    "9/418/202.png",
+    "9/418/200.png",
+    "9/419/200.png",
+    "9/419/201.png"
+  ],
+  "features": [
+    {"id": "CN-HebiLaodian-z9-418-201-N01", "kind": "city", "original": "Heshan", "original_bbox": [66, 26, 113, 44], "source_url": "@source/e8ef6641b9a70bc3", "source_glyph_complete": true, "source_printed_full_literal": "Heshan"},
+    {"id": "CN-HebiLaodian-z9-418-201-N02", "kind": "city", "original": "Shancheng", "original_bbox": [64, 50, 132, 73], "source_url": "@source/e8ef6641b9a70bc3", "source_glyph_complete": true, "source_printed_full_literal": "Shancheng"},
+    {"id": "CN-HebiLaodian-z9-418-201-N03", "kind": "city", "original": "Hebi", "original_bbox": [125, 118, 155, 136], "source_url": "@source/e8ef6641b9a70bc3", "source_glyph_complete": true, "source_printed_full_literal": "Hebi"},
+    {"id": "CN-HebiLaodian-z9-418-201-N04", "kind": "city", "original": "Qixian", "original_bbox": [87, 174, 129, 196], "source_url": "@source/e8ef6641b9a70bc3", "source_glyph_complete": true, "source_printed_full_literal": "Qixian"},
+    {"id": "CN-HebiLaodian-z9-418-201-N05", "kind": "city", "original": "Xinzhen", "original_bbox": [142, 227, 189, 243], "source_url": "@source/e8ef6641b9a70bc3", "source_glyph_complete": true, "source_printed_full_literal": "Xinzhen"},
+    {"id": "CN-HebiLaodian-z9-418-201-N06", "kind": "city", "original": "Laodian", "original_bbox": [217, 253, 249, 256], "source_url": "@source/e8ef6641b9a70bc3", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "CN-HebiLaodian-z9-418-201-N01", "zh": "鹤山", "status": "approved", "source": "@source/7e500c5383060780", "record_sha256": "ffce147aca74771e74232c82ad907bfec435dfb719e9b659cc14273097b3afdf", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-HebiLaodian-z9-418-201-N02", "zh": "山城", "status": "approved", "source": "@source/7e500c5383060780", "record_sha256": "2d8ce8945357945950c9f0ec4a474c2de57d3ee8c3c771b0a9583975fb068232", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-HebiLaodian-z9-418-201-N03", "zh": "鹤壁", "status": "approved", "source": "@source/f300612cadebaa5c", "record_sha256": "7f5ab102fdc7b24d19958981e3558ed40bcab631b0f3f75329562e6fb95a4264", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-HebiLaodian-z9-418-201-N04", "zh": "淇县", "status": "approved", "source": "@source/6753864b39265455", "record_sha256": "28ac656a64658c8e1d175fd5fe560e8cd5b3c1c81f837a949fab8e3e252dbda2", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-HebiLaodian-z9-418-201-N05", "zh": "新镇", "status": "approved", "source": "@source/34f4acf567078afa", "record_sha256": "624c8db3ad6919e49b10d7732bd9d0360975b8cbc6d7fe3d97da306beb0d5a83", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-HebiLaodian-z9-418-201-N06", "zh": "老店", "status": "approved", "source": "@source/14c48d83b506801b", "record_sha256": "5e0a70e1519a7da408f634e0534bbc252f2793e39a35f3713a11d513948ed195", "review_notes": "南缘两段残笔同属一个地名。邻片无续笔，同供应商异地同拼写用于字形对照，滑县老店地名由位置和官方资料确认。"}
+  ],
+  "layouts": [
+    {"id": "CN-HebiLaodian-z9-418-201-N01", "x": 89.5, "y": 35.0, "font_size": 12, "font_style": "regular", "lines": ["鹤山"]},
+    {"id": "CN-HebiLaodian-z9-418-201-N02", "x": 103, "y": 79, "font_size": 12, "font_style": "regular", "lines": ["山城"]},
+    {"id": "CN-HebiLaodian-z9-418-201-N03", "x": 104.21944444444671, "y": 59.45177939037967, "font_size": 12, "font_style": "regular", "lines": ["鹤壁"]},
+    {"id": "CN-HebiLaodian-z9-418-201-N04", "x": 108.0, "y": 185.0, "font_size": 12, "font_style": "regular", "lines": ["淇县"]},
+    {"id": "CN-HebiLaodian-z9-418-201-N05", "x": 165.5, "y": 235.0, "font_size": 12, "font_style": "regular", "lines": ["新镇"]},
+    {"id": "CN-HebiLaodian-z9-418-201-N06", "x": 239, "y": 245, "font_size": 12, "font_style": "regular", "lines": ["老店"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-HebiLaodian-z9-418-201-shared-CNWB18-CNG-157", "owner_region": "CNWB18-E-z9-417-200", "feature_id": "CNWB18-CNG-157", "kind": "city", "original": "Xincun", "source_url": "@source/758d7033c332b0c4", "original_bbox": [246, -11, 287, 5], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"},
+    {"id": "CN-HebiLaodian-z9-418-201-shared-CN-PuyangNeihuang-z9-419-201-N03", "owner_region": "CN-PuyangNeihuang-z9-419-201", "feature_id": "CN-PuyangNeihuang-z9-419-201-N03", "kind": "city", "original": "Wangzhuang", "source_url": "@source/bb1f546f0855a93c", "original_bbox": [208, 105, 280, 125], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"},
+    {"id": "CN-HebiLaodian-z9-418-201-shared-CN-PuyangNeihuang-z9-419-201-N05", "owner_region": "CN-PuyangNeihuang-z9-419-201", "feature_id": "CN-PuyangNeihuang-z9-419-201-N05", "kind": "city", "original": "Xunxian", "source_url": "@source/bb1f546f0855a93c", "original_bbox": [207, 152, 260, 170], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

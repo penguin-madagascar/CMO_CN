@@ -1,0 +1,37 @@
+{
+  "id": "CN-WentangHongjiang-z10-837-430",
+  "z": 10,
+  "x": 837,
+  "y": 430,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/837/430.png"
+  ],
+  "context_tiles": [
+    "10/836/429.png",
+    "10/837/429.png",
+    "10/836/430.png",
+    "10/838/430.png",
+    "10/837/431.png",
+    "10/838/431.png"
+  ],
+  "features": [
+    {"id": "CN-WentangHongjiang-z10-837-430-Wentang", "kind": "city", "original": "Wentang", "original_bbox": [-6, -14, 45, 5], "source_url": "@source/198e97927e5f0e0f", "source_glyph_complete": true, "source_printed_full_literal": "Wentang"},
+    {"id": "CN-WentangHongjiang-z10-837-430-Hongjiang", "kind": "city", "original": "Hongjiang", "original_bbox": [69, 44, 127, 64], "source_url": "@source/9caffe9bde583e49", "source_glyph_complete": true, "source_printed_full_literal": "Hongjiang"}
+  ],
+  "translations": [
+    {"id": "CN-WentangHongjiang-z10-837-430-Wentang", "zh": "温汤", "status": "approved", "source": "@source/c54290c77ea290f7", "record_sha256": "c1c2b635ff7f273cc3b690f82ed832954d8b03ad9cbf3a1cdc213a90867e82df", "review_notes": "完整原图字形与同地官方汉字对照。"},
+    {"id": "CN-WentangHongjiang-z10-837-430-Hongjiang", "zh": "洪江", "status": "approved", "source": "@source/74ff30b79f4bb6e8", "record_sha256": "e3091a3b1591c9f4715a9f1ae05e0cf86c97be405bbfff65c30f7c854a2a1b0d", "review_notes": "完整原图字形与同地官方汉字对照。"}
+  ],
+  "layouts": [
+    {"id": "CN-WentangHongjiang-z10-837-430-Wentang", "x": 20, "y": 9, "lines": ["温汤"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-WentangHongjiang-z10-837-430-Hongjiang", "x": 98.0, "y": 54.0, "lines": ["洪江"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-WentangHongjiang-z10-837-430-SharedShanzhuang", "owner_region": "CN-Jiangxi-Qianshan-Liangshan-Shanzhuang-Futian-z10-838-430", "feature_id": "CN-Jiangxi-Qianshan-Liangshan-Shanzhuang-Futian-z10-838-430-Shanzhuang", "kind": "city", "original": "Shanzhuang", "original_bbox": [212, 129, 281, 149], "source_url": "@source/9caffe9bde583e49", "review_notes": "沿用已批准的跨片地名归属和渲染。"},
+    {"id": "CN-WentangHongjiang-z10-837-430-SharedAnfuCounty", "owner_region": "CN-Jiangxi-Anfu-Zhujiang-Tongping-JianCounty-z10-838-431", "feature_id": "CN-Jiangxi-Anfu-Zhujiang-Tongping-JianCounty-z10-838-431-AnfuCounty", "kind": "city", "original": "Anfu County", "original_bbox": [238, 217, 284, 260], "source_url": "@source/9caffe9bde583e49", "review_notes": "沿用已批准的跨片地名归属和渲染。"}
+  ],
+  "legacy_suppressions": []
+}

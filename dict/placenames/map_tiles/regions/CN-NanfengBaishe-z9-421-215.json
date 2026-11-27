@@ -1,0 +1,44 @@
+{
+  "id": "CN-NanfengBaishe-z9-421-215",
+  "z": 9,
+  "x": 421,
+  "y": 215,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/421/215.png"
+  ],
+  "context_tiles": [
+    "9/421/216.png",
+    "9/420/215.png"
+  ],
+  "features": [
+    {"id": "CN-NanfengBaishe-z9-421-215-N01", "kind": "city", "original": "Nancheng", "original_bbox": [194, 36, 255, 58], "source_url": "@source/179e846366c1f396", "source_glyph_complete": true, "source_printed_full_literal": "Nancheng"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N02", "kind": "city", "original": "Yihuang", "original_bbox": [52, 43, 104, 65], "source_url": "@source/179e846366c1f396", "source_glyph_complete": true, "source_printed_full_literal": "Yihuang"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N03", "kind": "city", "original": "Nanyuan", "original_bbox": [118, 71, 168, 91], "source_url": "@source/179e846366c1f396", "source_glyph_complete": true, "source_printed_full_literal": "Nanyuan"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N04", "kind": "city", "original": "Nanfeng", "original_bbox": [158, 180, 210, 202], "source_url": "@source/179e846366c1f396", "source_glyph_complete": true, "source_printed_full_literal": "Nanfeng"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N05", "kind": "city", "original": "Xinfeng", "original_bbox": [50, 227, 95, 247], "source_url": "@source/179e846366c1f396", "source_glyph_complete": true, "source_printed_full_literal": "Xinfeng"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N06", "kind": "city", "original": "Baishe", "original_bbox": [135, 253, 165, 256], "source_url": "@source/179e846366c1f396", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "CN-NanfengBaishe-z9-421-215-N01", "zh": "南城", "status": "approved", "source": "@source/b63103d10d29514c", "record_sha256": "02ca165e182bb0ee220a102b3b333e68064604b230ebdcaf21d4d335b37693ac", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N02", "zh": "宜黄", "status": "approved", "source": "@source/b63103d10d29514c", "record_sha256": "a9211702c5f8d1b4cf20dcab7cf367261244344bff6d6a7c718f0ef7ec792fb7", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N03", "zh": "南源", "status": "approved", "source": "@source/b63103d10d29514c", "record_sha256": "59bbb3eef216cf74d59705f4665d955a805c580192af812d88133fbc57e40f1f", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N04", "zh": "南丰", "status": "approved", "source": "@source/b63103d10d29514c", "record_sha256": "c63608c46a2983548597a9683bf6de23873fc8bd1a594f58b7ef0ceb5543d485", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N05", "zh": "新丰", "status": "approved", "source": "@source/b63103d10d29514c", "record_sha256": "c9417ab95e595b5be0c5c0a4f670bb13f3d693d68dd60eca36094fd3eb519f74", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-NanfengBaishe-z9-421-215-N06", "zh": "白舍", "status": "approved", "source": "@source/f16ae0931ded6dc7", "record_sha256": "d5175498f06d9887737190b963b9523448a520ef889e2844fd3017393141d7d5", "review_notes": "留存拼写及原位置与同地官方中文核对，邻片无续笔。"}
+  ],
+  "layouts": [
+    {"id": "CN-NanfengBaishe-z9-421-215-N01", "x": 222, "y": 47, "font_size": 12, "font_style": "regular", "lines": ["南城"]},
+    {"id": "CN-NanfengBaishe-z9-421-215-N02", "x": 78.0, "y": 54.0, "font_size": 12, "font_style": "regular", "lines": ["宜黄"]},
+    {"id": "CN-NanfengBaishe-z9-421-215-N03", "x": 143.0, "y": 81.0, "font_size": 12, "font_style": "regular", "lines": ["南源"]},
+    {"id": "CN-NanfengBaishe-z9-421-215-N04", "x": 184.0, "y": 191.0, "font_size": 12, "font_style": "regular", "lines": ["南丰"]},
+    {"id": "CN-NanfengBaishe-z9-421-215-N05", "x": 72.5, "y": 237.0, "font_size": 12, "font_style": "regular", "lines": ["新丰"]},
+    {"id": "CN-NanfengBaishe-z9-421-215-N06", "x": 154, "y": 244, "font_size": 12, "font_style": "regular", "lines": ["白舍"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-NanfengBaishe-z9-421-215-shared-CN9-N-076-0", "owner_region": "CN9-R-z9-420-215-1-1", "feature_id": "CN9-N-076-0", "kind": "region", "original": "Gugang", "source_url": "@source/419df175c3cfe49b", "original_bbox": [-27, 114, 16, 134], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

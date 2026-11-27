@@ -1,0 +1,43 @@
+{
+  "id": "CN-TaianFujia-z10-860-382",
+  "z": 10,
+  "x": 860,
+  "y": 382,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/860/382.png"
+  ],
+  "context_tiles": [
+    "10/859/382.png",
+    "10/859/383.png",
+    "10/860/381.png",
+    "10/860/383.png",
+    "10/861/381.png",
+    "10/861/382.png"
+  ],
+  "features": [
+    {"id": "CN-TaianFujia-z10-860-382-S01", "kind": "city", "original": "Xifu", "original_bbox": [133, 68, 157, 83], "source_url": "@source/385819a55c180da8", "source_glyph_complete": true, "source_printed_full_literal": "Xifu"},
+    {"id": "CN-TaianFujia-z10-860-382-S02", "kind": "city", "original": "Taian", "original_bbox": [42, 117, 79, 135], "source_url": "@source/385819a55c180da8", "source_glyph_complete": true, "source_printed_full_literal": "Taian"},
+    {"id": "CN-TaianFujia-z10-860-382-S03", "kind": "city", "original": "Daniu", "original_bbox": [180, 111, 215, 128], "source_url": "@source/385819a55c180da8", "source_glyph_complete": true, "source_printed_full_literal": "Daniu"},
+    {"id": "CN-TaianFujia-z10-860-382-S04", "kind": "city", "original": "Fujia", "original_bbox": [0, 242, 10, 258], "source_url": "@source/385819a55c180da8", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "CN-TaianFujia-z10-860-382-S01", "zh": "西佛", "status": "approved", "source": "@source/fdf43c190d01776a", "record_sha256": "daf4ffdae6ccc5c78b160c6ef63bd7fd633a41d4c0e5bfb9581362a568a1526e", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-TaianFujia-z10-860-382-S02", "zh": "台安", "status": "approved", "source": "@source/fdf43c190d01776a", "record_sha256": "834dc2fb58b720a88a43d897abf5ef73359886e9d6e076fbd6b81e33377e6d09", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-TaianFujia-z10-860-382-S03", "zh": "达牛", "status": "approved", "source": "@source/fdf43c190d01776a", "record_sha256": "88f7222925bf4b5c585f49605a2b8e4f2e4655f5bc705188976e6daf04fb2e29", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-TaianFujia-z10-860-382-S04", "zh": "富家", "status": "approved", "source": "@source/94a345193ed7b2b9", "record_sha256": "c9f12c5a1fe7bde2fb0addf2e028bb03ae6205cf8b24015797bea0355bb21a2a", "review_notes": "原图西缘只留下 ia，南缘两点白晕在同版南邻延续。西侧两张相邻原图的对应区域无字形。以台安县小柳河富家村的官方用名、同地坐标及同版 Wujia 的尾字核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-TaianFujia-z10-860-382-S01", "x": 144, "y": 77, "font_style": "regular", "font_size": 12, "lines": ["西佛"]},
+    {"id": "CN-TaianFujia-z10-860-382-S02", "x": 60, "y": 125, "font_style": "regular", "font_size": 12, "lines": ["台安"]},
+    {"id": "CN-TaianFujia-z10-860-382-S03", "x": 202, "y": 120, "font_style": "regular", "font_size": 12, "lines": ["达牛"]},
+    {"id": "CN-TaianFujia-z10-860-382-S04", "x": 15, "y": 248, "font_style": "regular", "font_size": 12, "lines": ["富家"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Huandong", "source_url": "@source/0ef1f4b993873cc5", "id": "CN-TaianFujia-z10-860-382-shared-CN-LiaozhongJiangtunChangtan-z10-860-381-2x1-S03", "original_bbox": [66, -5, 117, 13], "owner_region": "CN-LiaozhongJiangtunChangtan-z10-860-381-2x1", "feature_id": "CN-LiaozhongJiangtunChangtan-z10-860-381-2x1-S03", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Liaozhong", "source_url": "@source/3c3d9eab82800b5c", "id": "CN-TaianFujia-z10-860-382-shared-CN-LiaozhongJiangtunChangtan-z10-860-381-2x1-S04", "original_bbox": [248, -13, 312, 9], "owner_region": "CN-LiaozhongJiangtunChangtan-z10-860-381-2x1", "feature_id": "CN-LiaozhongJiangtunChangtan-z10-860-381-2x1-S04", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

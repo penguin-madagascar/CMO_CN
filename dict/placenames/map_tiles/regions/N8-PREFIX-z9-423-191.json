@@ -1,0 +1,43 @@
+{
+  "id": "N8-PREFIX-z9-423-191",
+  "z": 9,
+  "x": 423,
+  "y": 191,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/423/191.png"
+  ],
+  "context_tiles": [
+    "9/423/190.png",
+    "9/423/192.png",
+    "9/424/191.png",
+    "9/424/192.png"
+  ],
+  "features": [
+    {"id": "N8-PFX-001", "kind": "city", "original": "Pianpoying", "original_bbox": [104, -19, 165, 1], "source_url": "@source/345c8e627708a351"},
+    {"id": "N8-PFX-006", "kind": "city", "original": "Qijia", "original_bbox": [231, 19, 259, 40], "source_url": "@source/345c8e627708a351"},
+    {"id": "N8-PFX-010", "kind": "city", "original": "Anzhou", "original_bbox": [89, 86, 137, 104], "source_url": "@source/345c8e627708a351"},
+    {"id": "N8-PFX-019", "kind": "city", "original": "Zhongguan", "original_bbox": [165, 152, 228, 171], "source_url": "@source/345c8e627708a351"},
+    {"id": "N8-PFX-026", "kind": "city", "original": "Hongqi", "original_bbox": [65, 187, 106, 206], "source_url": "@source/345c8e627708a351"},
+    {"id": "N8-PFX-031", "kind": "city", "original": "Cangz…", "original_bbox": [223, 232, 256, 252], "source_url": "@source/345c8e627708a351", "source_glyph_complete": false, "source_printed_full_literal": null, "source_visible_fragment": "Cangz…", "providerpoint": null}
+  ],
+  "translations": [
+    {"id": "N8-PFX-001", "zh": "偏坡营", "status": "approved", "source": "@source/5703d3d8ae4281db", "record_sha256": "f178af84600ab9fc8a52d143bd057831ddea9787ca537add10af73d4c812b4fc", "review_notes": "承德市民政局公布原偏坡营满族乡撤乡设偏坡营镇；原 GeoNames 旧记录在隆化县同一地带。"},
+    {"id": "N8-PFX-006", "zh": "七家", "status": "approved", "source": "@source/74f6b1a9f8a44d68", "record_sha256": "9c0b2e0fd3691cd40dde0d12decd1c427a73dcc70d60c7aa203d222d90beb018", "review_notes": "承德市人民政府正文定位隆化县七家镇七家村；原 GeoNames 同拼写旧记录在同一地区。"},
+    {"id": "N8-PFX-010", "zh": "安州", "status": "approved", "source": "@source/345c8e627708a351", "record_sha256": "e75a981cef882610d062d7fd8941e3d58eb7143d58b8f6ee6a2baa61b93558ca", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-019", "zh": "中关", "status": "approved", "source": "@source/345c8e627708a351", "record_sha256": "c3bff23a6c776ff604a54f2a2d9ce9c749a69a928badf3ed887f964432fd1262", "review_notes": "DRAFT proposed ordinary feature. Inherit the exact frozen CJK grade and full print; no new identity or source qualification is claimed."},
+    {"id": "N8-PFX-026", "zh": "红旗", "status": "approved", "source": "@source/3362217e20b895bb", "record_sha256": "1a1e2cf9d1453951069144f3256fd27101353a8ca9d414338c66be62ab53ad85", "review_notes": "承德市生态环境局公开项目文件定位滦平县红旗镇；原 GeoNames 旧记录与原图标签同一地带。"},
+    {"id": "N8-PFX-031", "zh": "仓子", "status": "approved", "source": "@source/345c8e627708a351", "record_sha256": "3aad49a4dfab255d41b90708708a6eb745c36e5c003d03b6b733a5c5fa1d8978", "review_notes": "原图显示的边缘裁词按来源保存；使用已审核原始双语资料及同地关联，采用中性中文地名。"}
+  ],
+  "shared_sources": [],
+  "symbols": [],
+  "layouts": [
+    {"id": "N8-PFX-001", "x": 134.5, "y": 12.0, "font_size": 12, "font_style": "regular", "lines": ["偏坡营"]},
+    {"id": "N8-PFX-006", "x": 238.0, "y": 29.5, "font_size": 12, "font_style": "regular", "lines": ["七家"]},
+    {"id": "N8-PFX-010", "x": 113.0, "y": 95.0, "font_size": 12, "font_style": "regular", "lines": ["安州"]},
+    {"id": "N8-PFX-019", "x": 196.5, "y": 161.5, "font_size": 12, "font_style": "regular", "lines": ["中关"]},
+    {"id": "N8-PFX-026", "x": 85.5, "y": 196.5, "font_size": 12, "font_style": "regular", "lines": ["红旗"]},
+    {"id": "N8-PFX-031", "x": 238.5, "y": 242.0, "font_size": 12, "font_style": "regular", "lines": ["仓子"]}
+  ]
+}

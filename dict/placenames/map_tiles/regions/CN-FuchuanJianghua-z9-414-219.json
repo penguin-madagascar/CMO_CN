@@ -1,0 +1,48 @@
+{
+  "id": "CN-FuchuanJianghua-z9-414-219",
+  "z": 9,
+  "x": 414,
+  "y": 219,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/414/219.png"
+  ],
+  "context_tiles": [
+    "9/414/218.png",
+    "9/413/219.png",
+    "9/415/219.png"
+  ],
+  "features": [
+    {"id": "CN-FuchuanJianghua-z9-414-219-N01", "kind": "city", "original": "Jianghua", "original_bbox": [147, -18, 203, 4], "source_url": "@source/4a86ee0c0afb2397", "source_glyph_complete": true, "source_printed_full_literal": "Jianghua"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N02", "kind": "city", "original": "Taochuan", "original_bbox": [-24, 13, 30, 29], "source_url": "@source/4a86ee0c0afb2397", "source_glyph_complete": true, "source_printed_full_literal": "Taochuan"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N03", "kind": "city", "original": "Chengbei", "original_bbox": [29, 82, 81, 103], "source_url": "@source/4a86ee0c0afb2397", "source_glyph_complete": true, "source_printed_full_literal": "Chengbei"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N04", "kind": "city", "original": "Fuchuan", "original_bbox": [38, 129, 91, 147], "source_url": "@source/4a86ee0c0afb2397", "source_glyph_complete": true, "source_printed_full_literal": "Fuchuan"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N05", "kind": "city", "original": "Daxu", "original_bbox": [206, 111, 237, 127], "source_url": "@source/4a86ee0c0afb2397", "source_glyph_complete": true, "source_printed_full_literal": "Daxu"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N06", "kind": "city", "original": "Liujia", "original_bbox": [38, 164, 70, 184], "source_url": "@source/4a86ee0c0afb2397", "source_glyph_complete": true, "source_printed_full_literal": "Liujia"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N07", "kind": "city", "original": "Wanggao", "original_bbox": [92, 227, 145, 246], "source_url": "@source/4a86ee0c0afb2397", "source_glyph_complete": true, "source_printed_full_literal": "Wanggao"}
+  ],
+  "translations": [
+    {"id": "CN-FuchuanJianghua-z9-414-219-N01", "zh": "江华", "status": "approved", "source": "@source/d17eb18c2903c33b", "record_sha256": "8aa3df465476d19472bd939c9d7949da7b8f2e1e28ab85454a2eb9aa9806cb50", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N02", "zh": "桃川", "status": "approved", "source": "@source/630bb7c45b4fe04d", "record_sha256": "95401b583b02884106b4ede7d0a77fda39b15d2a5642342cc6850fb8eb9a2ce6", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N03", "zh": "城北", "status": "approved", "source": "@source/d27d5f4523d2829d", "record_sha256": "64fd732bea1e1e8a469105380914c139be17b78328d949c694123486b495e296", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N04", "zh": "富川", "status": "approved", "source": "@source/d27d5f4523d2829d", "record_sha256": "2a453fc686fd4eead501e0f623e8932e9a741ab106104ba4d3eeccf287879df7", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N05", "zh": "大圩", "status": "approved", "source": "@source/1a526d593a6194a8", "record_sha256": "bb5e99be24a6c1255983f17dfdd7ce15b4d11370659f2c73b0cdc4d22581b7a3", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N06", "zh": "柳家", "status": "approved", "source": "@source/d27d5f4523d2829d", "record_sha256": "f760ad038741fccb017c104e0ca4ed7571e5c71955b08b165f557b045a809562", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N07", "zh": "望高", "status": "approved", "source": "@source/d27d5f4523d2829d", "record_sha256": "33f76a32ebbd08abbe9286b115cdcc72d690c9265c851dde26b70d2bf4556087", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-FuchuanJianghua-z9-414-219-N01", "x": 174, "y": 10, "font_size": 12, "font_style": "regular", "lines": ["江华"]},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N02", "x": 17, "y": 25, "font_size": 12, "font_style": "regular", "lines": ["桃川"]},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N03", "x": 55.0, "y": 92.5, "font_size": 12, "font_style": "regular", "lines": ["城北"]},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N04", "x": 64.5, "y": 138.0, "font_size": 12, "font_style": "regular", "lines": ["富川"]},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N05", "x": 221.5, "y": 119.0, "font_size": 12, "font_style": "regular", "lines": ["大圩"]},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N06", "x": 54.0, "y": 174.0, "font_size": 12, "font_style": "regular", "lines": ["柳家"]},
+    {"id": "CN-FuchuanJianghua-z9-414-219-N07", "x": 118.5, "y": 236.5, "font_size": 12, "font_style": "regular", "lines": ["望高"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-FuchuanJianghua-z9-414-219-shared-G177-N-09", "owner_region": "G177-CN-z9-415-218-1x2", "feature_id": "G177-N-09", "kind": "region", "original": "Guiling", "source_url": "@source/a65d299862a313c4", "original_bbox": [239, 189, 279, 209], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

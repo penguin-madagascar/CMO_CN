@@ -1,0 +1,38 @@
+{
+  "id": "A7-Somalia-BeledweyneJowharMogadishu-z7-80-62",
+  "z": 7,
+  "x": 80,
+  "y": 62,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "7/80/62.png",
+    "7/80/63.png"
+  ],
+  "context_tiles": [
+    "7/79/63.png"
+  ],
+  "features": [
+    {"id": "A7-Beledweyne", "kind": "city", "original": "Beledweyne", "original_bbox": [14, 76, 80, 98], "source_url": "@source/09389a1856cacc17", "source_glyph_complete": true, "source_full_literal": "Beledweyne"},
+    {"id": "A7-Jowhar", "kind": "city", "original": "Jowhar", "original_bbox": [41, 254, 84, 274], "source_url": "@source/e6f8b8dfe4363ac0", "source_glyph_complete": true, "source_full_literal": "Jowhar"},
+    {"id": "A7-Mogadishu", "kind": "city", "original": "Mogadishu", "original_bbox": [27, 322, 88, 344], "source_url": "@source/e6f8b8dfe4363ac0", "source_glyph_complete": true, "source_full_literal": "Mogadishu"}
+  ],
+  "translations": [
+    {"id": "A7-Beledweyne", "zh": "贝莱德文", "status": "approved", "source": "@source/439cabd4a7f9ec58", "record_sha256": "8e4755b51de302d92007c029817266297ee892d696f61e64f2eae0fd90d15fb0", "review_notes": "Original complete city word and circle. UN S/2019/661 Chinese spelling and the exact previously approved z8 city name agree."},
+    {"id": "A7-Jowhar", "zh": "乔哈尔", "status": "approved", "source": "@source/439cabd4a7f9ec58", "record_sha256": "2c00732f094960420191241db55c967983c2222d19b8212dc26b62d6d31878f8", "review_notes": "Complete original text; point joins 12 alpha pixels in the north tile. UN S/2019/661 and existing exact z8 same city spelling agree."},
+    {"id": "A7-Mogadishu", "zh": "摩加迪沙", "status": "approved", "source": "@source/d91ad77efeac36fc", "record_sha256": "ddf4136fc7769304d8bccdd13a91ef95ab6005089295fa2d357568ed950f071f", "review_notes": "Original complete city word and circle. Official Chinese country profile, canonical WWP and existing z5/z6/z8 spellings agree."}
+  ],
+  "layouts": [
+    {"id": "A7-Beledweyne", "x": 50.5, "y": 89.0, "font_style": "regular", "font_size": 12},
+    {"id": "A7-Jowhar", "x": 71.0, "y": 267.0, "font_style": "regular", "font_size": 12},
+    {"id": "A7-Mogadishu", "x": 63.0, "y": 337.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "A7-Beledweyne-point", "feature_id": "A7-Beledweyne", "kind": "circle", "x": 18.5, "y": 80.5, "size": 9, "outline_width": 1, "original_bbox": [14, 76, 23, 85]},
+    {"id": "A7-Jowhar-point", "feature_id": "A7-Jowhar", "kind": "circle", "x": 45.5, "y": 258.5, "size": 9, "outline_width": 1, "original_bbox": [41, 254, 50, 263]},
+    {"id": "A7-Mogadishu-point", "feature_id": "A7-Mogadishu", "kind": "circle", "x": 31.5, "y": 326.5, "size": 9, "outline_width": 1, "original_bbox": [27, 322, 36, 331]}
+  ],
+  "shared_sources": [
+    {"id": "A7-Somalia-Merca-shared", "feature_id": "AM22-86-Merca", "owner_region": "AM-EastAfrica-z7-SouthEast", "kind": "city", "original": "Merca", "original_bbox": [-27, 350, 13, 372], "source_url": "@source/55026da0c776bbf0", "review_notes": "Exact complete old Merca Source instance; only 144 glyph pixels continue into the new output. Keep the existing owner label and point."}
+  ]
+}

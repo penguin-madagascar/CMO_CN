@@ -1,0 +1,38 @@
+{
+  "id": "IT8-Central-z9-279-192-1-2",
+  "z": 9,
+  "x": 279,
+  "y": 192,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/279/192.png",
+    "9/279/193.png"
+  ],
+  "context_tiles": [
+    "9/280/192.png"
+  ],
+  "features": [
+    {"id": "IT8-N06", "kind": "city", "original": "Altamura", "original_bbox": [113, 64, 164, 81], "source_url": "@source/9ac2e292704f2c42"},
+    {"id": "IT8-N07", "kind": "city", "original": "Matera", "original_bbox": [136, 142, 181, 159], "source_url": "@source/9ac2e292704f2c42"},
+    {"id": "IT8-N10", "kind": "city", "original": "Pisticci", "original_bbox": [120, 275, 160, 291], "source_url": "@source/2bc9c7ef856dc337"},
+    {"id": "IT8-N11", "kind": "city", "original": "Policoro", "original_bbox": [161, 361, 207, 377], "source_url": "@source/2bc9c7ef856dc337"}
+  ],
+  "translations": [
+    {"id": "IT8-N06", "zh": "阿尔塔穆拉", "status": "approved", "source": "@source/9ac2e292704f2c42", "record_sha256": "962ac38e5d553518493b8aae6d02c0e915b63dddf1a7359b3bd65c90d326d77b", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."},
+    {"id": "IT8-N07", "zh": "马泰拉", "status": "approved", "source": "@source/9ac2e292704f2c42", "record_sha256": "62885140051595e4851f600cc5a279629375d63965212d24e0fd5921a32632a8", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."},
+    {"id": "IT8-N10", "zh": "皮斯蒂奇", "status": "approved", "source": "@source/2bc9c7ef856dc337", "record_sha256": "57f8e0c91dc289f8a43854d70449109f7b4cc4d5ee3a250e028ed428457c0fc0", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."},
+    {"id": "IT8-N11", "zh": "波利科罗", "status": "approved", "source": "@source/2bc9c7ef856dc337", "record_sha256": "36cb6107e487bc858317a88c0e8717cbfb6a8294953e1676090d3486fc186321", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."}
+  ],
+  "layouts": [
+    {"id": "IT8-N06", "x": 138.5, "y": 72.5, "font_size": 12, "font_style": "regular", "lines": ["阿尔塔穆拉"]},
+    {"id": "IT8-N07", "x": 158.5, "y": 150.5, "font_size": 12, "font_style": "regular", "lines": ["马泰拉"]},
+    {"id": "IT8-N10", "x": 140.0, "y": 283.0, "font_size": 12, "font_style": "regular", "lines": ["皮斯蒂奇"]},
+    {"id": "IT8-N11", "x": 184.0, "y": 369.0, "font_size": 12, "font_style": "regular", "lines": ["波利科罗"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "IT8-SH08", "owner_region": "AM-WestGreeceAdriatic-z9-280-192", "feature_id": "AM20-5-Gioia-del-Colle", "kind": "city", "original": "Gioia del Colle", "source_url": "@source/e2d0993d104ef4a6", "original_bbox": [248, 70, 301, 106], "review_notes": "Proposed exact existing normal Source alias; preserve old whole/Chinese/layout and render no second caption/native here. Requires explicit Root model selection and different actual TARGET review."},
+    {"id": "IT8-SH09", "owner_region": "AM-WestGreeceAdriatic-z9-280-192", "feature_id": "AM20-16-Castellaneta", "kind": "city", "original": "Castellaneta", "source_url": "@source/e2d0993d104ef4a6", "original_bbox": [244, 158, 313, 177], "review_notes": "Proposed exact existing normal Source alias; preserve old whole/Chinese/layout and render no second caption/native here. Requires explicit Root model selection and different actual TARGET review."}
+  ]
+}

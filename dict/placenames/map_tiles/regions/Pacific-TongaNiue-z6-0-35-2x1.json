@@ -1,0 +1,33 @@
+{
+  "id": "Pacific-TongaNiue-z6-0-35-2x1",
+  "z": 6,
+  "x": 0,
+  "y": 35,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "6/0/35.png",
+    "6/1/35.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Tonga", "kind": "admin0", "original": "TONGA", "original_bbox": [167, 141, 271, 165], "source_url": "@source/7bbaa6a41fde8b62", "source_glyph_complete": true, "source_printed_full_literal": "TONGA"},
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Nukualofa", "kind": "city", "original": "Nuku'alofa", "original_bbox": [214, 212, 273, 231], "source_url": "@source/7bbaa6a41fde8b62", "source_glyph_complete": true, "source_printed_full_literal": "Nuku'alofa"},
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Niue", "kind": "admin0", "original": "NIUE", "original_bbox": [427, 101, 497, 124], "source_url": "@source/7b3d2f6ae3225e46", "source_glyph_complete": true, "source_printed_full_literal": "NIUE"}
+  ],
+  "translations": [
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Tonga", "zh": "汤加", "status": "approved", "source": "@source/f09a85ac86733be1", "record_sha256": "32fb197f849a6cbaabd14e542faea2650ac77a4658c36132c9cc12f724116d18", "review_notes": "Source print and official entity identity reviewed. Preserve applicable established Chinese names."},
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Nukualofa", "zh": "努库阿洛法", "status": "approved", "source": "@source/f09a85ac86733be1", "record_sha256": "191f11df1e2a4e676c86bb69429fff7c9ac4018174746ffa7e164ccc50b425d4", "review_notes": "Source print and official entity identity reviewed. Preserve applicable established Chinese names."},
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Niue", "zh": "纽埃", "status": "approved", "source": "@source/1a7eb001fbc88b8a", "record_sha256": "715b5885888bba817f7f097a60b4e580ea8893c11436bb7d014e79957e635d41", "review_notes": "Source print and official entity identity reviewed. Preserve applicable established Chinese names."}
+  ],
+  "layouts": [
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Tonga", "x": 224, "y": 153, "lines": ["汤加"], "font_style": "bold", "font_size": 20},
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Nukualofa", "x": 260, "y": 224, "lines": ["努库阿洛法"], "font_style": "regular", "font_size": 12},
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Niue", "x": 462, "y": 112, "lines": ["纽埃"], "font_style": "bold", "font_size": 20}
+  ],
+  "symbols": [
+    {"id": "Pacific-TongaNiue-z6-0-35-2x1-Nukualofa-point", "feature_id": "Pacific-TongaNiue-z6-0-35-2x1-Nukualofa", "kind": "circle", "x": 218.5, "y": 216.5, "original_bbox": [214, 212, 223, 221], "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

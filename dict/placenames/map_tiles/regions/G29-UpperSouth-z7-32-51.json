@@ -1,0 +1,88 @@
+{
+  "id": "G29-UpperSouth-z7-32-51",
+  "z": 7,
+  "x": 32,
+  "y": 51,
+  "width_tiles": 5,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/32/51.png",
+    "7/33/51.png",
+    "7/34/51.png",
+    "7/35/51.png",
+    "7/36/51.png"
+  ],
+  "context_tiles": [
+    "7/31/51.png",
+    "7/35/52.png"
+  ],
+  "features": [
+    {"id": "G29-N01-Tupelo", "kind": "city", "original": "Tupelo", "original_bbox": [113, 1, 155, 23], "source_url": "@source/98afff002dd7d565"},
+    {"id": "G29-N02-Wilmington", "kind": "city", "original": "Wilmington", "original_bbox": [1093, 5, 1157, 27], "source_url": "@source/1764dbf8fa905ce9"},
+    {"id": "G29-N03-Florence", "kind": "city", "original": "Florence", "original_bbox": [927, 7, 976, 27], "source_url": "@source/5f39267260004f17"},
+    {"id": "G29-N04-Athens", "kind": "city", "original": "Athens", "original_bbox": [598, 34, 640, 53], "source_url": "@source/5d43dbd0a124b537"},
+    {"id": "G29-N05-SOUTH-CAROLINA", "kind": "admin1", "original": "SOUTH CAROLINA", "original_bbox": [821, 46, 921, 85], "source_url": "@source/5f39267260004f17"},
+    {"id": "G29-N06-Atlanta", "kind": "city", "original": "Atlanta", "original_bbox": [506, 57, 560, 80], "source_url": "@source/22a800c15ff67bf3"},
+    {"id": "G29-N07-Myrtle-Beach", "kind": "city", "original": "Myrtle Beach", "original_bbox": [1007, 63, 1046, 97], "source_url": "@source/5f39267260004f17"},
+    {"id": "G29-N08-Augusta", "kind": "city", "original": "Augusta", "original_bbox": [726, 87, 774, 109], "source_url": "@source/5d43dbd0a124b537"},
+    {"id": "G29-N09-ALABAMA", "kind": "admin1", "original": "ALABAMA", "original_bbox": [241, 103, 337, 121], "source_url": "@source/98afff002dd7d565"},
+    {"id": "G29-N10-Macon", "kind": "city", "original": "Macon", "original_bbox": [575, 156, 616, 175], "source_url": "@source/5d43dbd0a124b537"},
+    {"id": "G29-N11-Charleston", "kind": "city", "original": "Charleston", "original_bbox": [911, 161, 970, 181], "source_url": "@source/5f39267260004f17"},
+    {"id": "G29-N12-Columbus", "kind": "city", "original": "Columbus", "original_bbox": [452, 197, 508, 216], "source_url": "@source/22a800c15ff67bf3"},
+    {"id": "G29-N13-GEORGIA", "kind": "admin1", "original": "GEORGIA", "original_bbox": [584, 204, 671, 222], "source_url": "@source/5d43dbd0a124b537"},
+    {"id": "G29-N14-Montgomery", "kind": "city", "original": "Montgomery", "original_bbox": [332, 207, 401, 229], "source_url": "@source/22a800c15ff67bf3"},
+    {"id": "G29-N15-Savannah", "kind": "city", "original": "Savannah", "original_bbox": [806, 238, 861, 257], "source_url": "@source/5f39267260004f17"}
+  ],
+  "translations": [
+    {"id": "G29-N01-Tupelo", "zh": "图珀洛", "status": "approved", "source": "@source/98afff002dd7d565", "record_sha256": "ad9504c18376cdb9b59810e3b1ca9928c020cd628f95adc54d7463c40e9fb57f", "review_notes": "C common Chinese transliteration, no official Chinese-name claim. Private author self-review only, independent Target pending."},
+    {"id": "G29-N02-Wilmington", "zh": "威尔明顿", "status": "approved", "source": "@source/24811cc14e31afe3", "record_sha256": "4086f8d9c4130ee6efb905c5358a06698c0efff5033d28faedc74ef5055f8f9c", "review_notes": "A direct official Chinese/English Wilmington port use, same North Carolina entity. Private author self-review only, independent Target pending."},
+    {"id": "G29-N03-Florence", "zh": "弗洛伦斯", "status": "approved", "source": "@source/82aad0197d3894fc", "record_sha256": "0e6df7ef84099750fa95b76988cab5c29730fbab0c8ca8fd345e77f189545849", "review_notes": "B official indexed South Carolina county/police word use; city contextual reading, not Italy. Private author self-review only, independent Target pending."},
+    {"id": "G29-N04-Athens", "zh": "雅典", "status": "approved", "source": "@source/29ac2617e0833e59", "record_sha256": "24a154aa8a4c41b44cbb202c20492b143ca064ee861a06adc7e619a547356915", "review_notes": "A2 Georgia official Chinese PDF search index; direct download unavailable; same Georgia map city. Private author self-review only, independent Target pending."},
+    {"id": "G29-N05-SOUTH-CAROLINA", "zh": "南卡罗来纳州", "status": "approved", "source": "@source/09f1bbaf09478e98", "record_sha256": "480798ef44fc5317b755bfdca736ed7351affbdc04f8055cee77e8074ea2fb19", "review_notes": "B direct official tourism Chinese route and named destinations. Private author self-review only, independent Target pending."},
+    {"id": "G29-N06-Atlanta", "zh": "亚特兰大", "status": "approved", "source": "@source/09f1bbaf09478e98", "record_sha256": "5c6b9460a964eeb1d78561d447e7f10edd206cdfb3813352755c7a016e2080bc", "review_notes": "B direct official tourism Chinese Atlanta city itinerary. Private author self-review only, independent Target pending."},
+    {"id": "G29-N07-Myrtle-Beach", "zh": "美特尔海滩", "status": "approved", "source": "@source/09f1bbaf09478e98", "record_sha256": "d11f905c5d95672a7e4e3fb2fda3115fa177553acf1eeadc4bfff4c6b6cac71a", "review_notes": "B direct official tourism PDF p6 names Myrtle Beach as 美特尔海滩; selected this supported city form. Private author self-review only, independent Target pending."},
+    {"id": "G29-N08-Augusta", "zh": "奥古斯塔", "status": "approved", "source": "@source/29ac2617e0833e59", "record_sha256": "cff68f4c23a31c072355701ead7ba9495e1e523ea3cdcc4b2e2badcf8d2c327a", "review_notes": "A2 Georgia official Chinese PDF indexed exact city pair; direct fetch unavailable. Private author self-review only, independent Target pending."},
+    {"id": "G29-N09-ALABAMA", "zh": "阿拉巴马州", "status": "approved", "source": "@source/ba91ff8bb24834f3", "record_sha256": "e634a790036c35c72397b3e6b7b00e2aa1bb36238869e0f0b5e235315529403a", "review_notes": "A2 Ministry of Education indexed official Chinese Alabama use; direct fetch timeout; common state form. Private author self-review only, independent Target pending."},
+    {"id": "G29-N10-Macon", "zh": "梅肯", "status": "approved", "source": "@source/09f1bbaf09478e98", "record_sha256": "849479864397f0dd748bb85479b0a01672e7ac22fa4d61d1f939345679b05126", "review_notes": "B direct official tourism PDF p9 Macon/梅肯. Private author self-review only, independent Target pending."},
+    {"id": "G29-N11-Charleston", "zh": "查尔斯顿", "status": "approved", "source": "@source/09f1bbaf09478e98", "record_sha256": "e50575b6df562b845e21ed5f788fc4cbb7a0ba8bc826a5f9d45ed2c174c8ea8d", "review_notes": "B direct official tourism PDF p7 Charleston Chinese pair. Private author self-review only, independent Target pending."},
+    {"id": "G29-N12-Columbus", "zh": "哥伦布", "status": "approved", "source": "@source/29ac2617e0833e59", "record_sha256": "636dfbe02d0d0f185515f1e8ebfc23fbf93c5d161e99437db43c0dbb5c9f7229", "review_notes": "A2 Georgia official Chinese PDF indexed Columbus/哥伦布 in Muscogee; not Ohio. Private author self-review only, independent Target pending."},
+    {"id": "G29-N13-GEORGIA", "zh": "佐治亚州", "status": "approved", "source": "@source/09f1bbaf09478e98", "record_sha256": "b70b288bc23e5f1a2c07b5a532f96cb5e1784773e511e4820cea22480fde031e", "review_notes": "B direct official tourism route state name. Private author self-review only, independent Target pending."},
+    {"id": "G29-N14-Montgomery", "zh": "蒙哥马利", "status": "approved", "source": "@source/22a800c15ff67bf3", "record_sha256": "500f0c6ff3cff2e72826ac0ffabfebb3633e85daf310b84f27b2f971d37e097b", "review_notes": "C common Chinese transliteration; English official map identity, no official Chinese-name claim. Private author self-review only, independent Target pending."},
+    {"id": "G29-N15-Savannah", "zh": "萨凡纳", "status": "approved", "source": "@source/09f1bbaf09478e98", "record_sha256": "8bd3a8f214a7e1dfc0f2285a0bcff3ecd359e7db7fbad59ef03ca4890ad9d0c0", "review_notes": "B direct official tourism PDF p8 Savannah Chinese pair; full Source instance preserved across upper/lower. Private author self-review only, independent Target pending."}
+  ],
+  "layouts": [
+    {"id": "G29-N01-Tupelo", "x": 142.0, "y": 16.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N02-Wilmington", "x": 1128.0, "y": 20.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N03-Florence", "x": 962.0, "y": 22.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N04-Athens", "x": 621.0, "y": 49.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N05-SOUTH-CAROLINA", "x": 871.0, "y": 65.5, "font_size": 14, "font_style": "bold"},
+    {"id": "G29-N06-Atlanta", "x": 541.0, "y": 72.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N07-Myrtle-Beach", "x": 1048.0, "y": 78.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N08-Augusta", "x": 761.0, "y": 102.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N09-ALABAMA", "x": 289.0, "y": 112.0, "font_size": 14, "font_style": "bold"},
+    {"id": "G29-N10-Macon", "x": 598.0, "y": 171.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N11-Charleston", "x": 946.0, "y": 176.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N12-Columbus", "x": 481.0, "y": 212.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N13-GEORGIA", "x": 627.5, "y": 213.0, "font_size": 14, "font_style": "bold"},
+    {"id": "G29-N14-Montgomery", "x": 367.0, "y": 222.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G29-N15-Savannah", "x": 835.0, "y": 248.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "G29-N01-Tupelo-ordinary-circle", "feature_id": "G29-N01-Tupelo", "kind": "circle", "x": 117.5, "y": 5.5, "size": 9, "outline_width": 1, "original_bbox": [113, 1, 122, 10]},
+    {"id": "G29-N02-Wilmington-ordinary-circle", "feature_id": "G29-N02-Wilmington", "kind": "circle", "x": 1097.5, "y": 9.5, "size": 9, "outline_width": 1, "original_bbox": [1093, 5, 1102, 14]},
+    {"id": "G29-N03-Florence-ordinary-circle", "feature_id": "G29-N03-Florence", "kind": "circle", "x": 931.5, "y": 11.5, "size": 9, "outline_width": 1, "original_bbox": [927, 7, 936, 16]},
+    {"id": "G29-N04-Athens-ordinary-circle", "feature_id": "G29-N04-Athens", "kind": "circle", "x": 602.5, "y": 38.5, "size": 9, "outline_width": 1, "original_bbox": [598, 34, 607, 43]},
+    {"id": "G29-N06-Atlanta-ordinary-circle", "feature_id": "G29-N06-Atlanta", "kind": "circle", "x": 510.5, "y": 61.5, "size": 9, "outline_width": 1, "original_bbox": [506, 57, 515, 66]},
+    {"id": "G29-N07-Myrtle-Beach-ordinary-circle", "feature_id": "G29-N07-Myrtle-Beach", "kind": "circle", "x": 1011.5, "y": 67.5, "size": 9, "outline_width": 1, "original_bbox": [1007, 63, 1016, 72]},
+    {"id": "G29-N08-Augusta-ordinary-circle", "feature_id": "G29-N08-Augusta", "kind": "circle", "x": 730.5, "y": 91.5, "size": 9, "outline_width": 1, "original_bbox": [726, 87, 735, 96]},
+    {"id": "G29-N10-Macon-ordinary-circle", "feature_id": "G29-N10-Macon", "kind": "circle", "x": 579.5, "y": 160.5, "size": 9, "outline_width": 1, "original_bbox": [575, 156, 584, 165]},
+    {"id": "G29-N11-Charleston-ordinary-circle", "feature_id": "G29-N11-Charleston", "kind": "circle", "x": 915.5, "y": 165.5, "size": 9, "outline_width": 1, "original_bbox": [911, 161, 920, 170]},
+    {"id": "G29-N12-Columbus-ordinary-circle", "feature_id": "G29-N12-Columbus", "kind": "circle", "x": 456.5, "y": 201.5, "size": 9, "outline_width": 1, "original_bbox": [452, 197, 461, 206]},
+    {"id": "G29-N14-Montgomery-ordinary-circle", "feature_id": "G29-N14-Montgomery", "kind": "circle", "x": 336.5, "y": 211.5, "size": 9, "outline_width": 1, "original_bbox": [332, 207, 341, 216]},
+    {"id": "G29-N15-Savannah-ordinary-circle", "feature_id": "G29-N15-Savannah", "kind": "circle", "x": 810.5, "y": 242.5, "size": 9, "outline_width": 1, "original_bbox": [806, 238, 815, 247]}
+  ],
+  "shared_sources": [
+    {"id": "G29-borrow-AM12-30-MISSISSIPPI", "owner_region": "AM-MississippiEast-z7-30-50", "feature_id": "AM12-30-MISSISSIPPI", "kind": "admin1", "original": "MISSISSIPPI", "source_url": "@source/bd8ab11e6d699510", "original_bbox": [-35, 133, 84, 153], "review_notes": "Exact same-z7 existing normal full world bbox; retain whole old owner and do not add a duplicate normal or point."},
+    {"id": "G29-borrow-AM12-45-Jackson", "owner_region": "AM-MississippiEast-z7-30-50", "feature_id": "AM12-45-Jackson", "kind": "city", "original": "Jackson", "source_url": "@source/bd8ab11e6d699510", "original_bbox": [-22, 213, 25, 234], "review_notes": "Exact same-z7 existing normal full world bbox; retain whole old owner and do not add a duplicate normal or point."}
+  ]
+}

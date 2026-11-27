@@ -594,5 +594,9 @@
     {"id": "shared-AP-W6-082", "owner_region": "AP-China-Mongolia-z6-50-19", "feature_id": "AP-C6-070", "kind": "admin1", "original": "Gansu", "source_url": "@source/c99418598e3d79b5", "original_bbox": [2303, 1440, 2374, 1468], "review_notes": "@note/shared_sources"},
     {"id": "shared-AP-W6-025", "owner_region": "EU-Samara-Bridge-z6-39-19", "feature_id": "EAB6-Samara", "kind": "city", "original": "Samara", "source_url": "@source/5f301c1f43f77b9c", "original_bbox": [-28, 454, 17, 473], "review_notes": "@note/shared_sources"},
     {"id": "shared-AP-W6-066", "owner_region": "EU-Caspian-Bridge-z6-39-22", "feature_id": "EAB6-Caspian-Sea", "kind": "marine", "original": "Caspian Sea", "source_url": "@source/a0240a0cef8fb9eb", "original_bbox": [-54, 1217, 60, 1238], "review_notes": "@note/shared_sources"}
+  ],
+  "canonical_captions": [
+    {"id": "WWP-Cities-2551-z6", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2551, "original_Chinese_name": "阿克套", "lat_f32_bits": 1110349725, "lon_f32_bits": 1112322138, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 25.0, "y": 1117.0, "font_style": "regular", "font_size": 12, "lines": ["阿克套"]}},
+    {"id": "WWP-Cities-2546-z6", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2546, "original_Chinese_name": "扎瑙津", "lat_f32_bits": 1110269273, "lon_f32_bits": 1112765083, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 103.0, "y": 1135.0, "font_style": "regular", "font_size": 12, "lines": ["扎瑙津"]}}
   ]
 }

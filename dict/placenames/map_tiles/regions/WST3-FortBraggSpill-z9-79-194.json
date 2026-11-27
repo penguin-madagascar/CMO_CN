@@ -1,0 +1,22 @@
+{
+  "id": "WST3-FortBraggSpill-z9-79-194",
+  "z": 9,
+  "x": 79,
+  "y": 194,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/79/194.png"
+  ],
+  "context_tiles": [
+    "9/80/194.png"
+  ],
+  "features": [],
+  "translations": [],
+  "layouts": [],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "shared_sources": [
+    {"id": "WST3-A02-Fort-Bragg", "owner_region": "AM-NorCalSierra-z9-80-192", "feature_id": "AM9N-18-Fort-Bragg", "kind": "city", "original": "Fort Bragg", "source_url": "@source/7f4981493c5d5e5d", "original_bbox": [206, 210, 266, 232], "review_notes": "Draft complete Source alias to existing 布拉格堡 sole normal; exact old feature/TR/layout/whole review remain unchanged. No second Chinese or native."}
+  ]
+}

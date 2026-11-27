@@ -1,0 +1,32 @@
+{
+  "id": "RU-LiskiBobrov-z9-312-171",
+  "z": 9,
+  "x": 312,
+  "y": 171,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/312/171.png"
+  ],
+  "context_tiles": [
+    "9/311/171.png",
+    "9/313/171.png"
+  ],
+  "features": [
+    {"id": "RU-LiskiBobrov-z9-312-171-S01", "kind": "city", "original": "Liski", "original_bbox": [34, 109, 61, 125], "source_url": "@source/777c954df8651fb9", "source_glyph_complete": true, "source_printed_full_literal": "Liski"},
+    {"id": "RU-LiskiBobrov-z9-312-171-S02", "kind": "city", "original": "Bobrov", "original_bbox": [219, 40, 260, 56], "source_url": "@source/777c954df8651fb9", "source_glyph_complete": true, "source_printed_full_literal": "Bobrov"}
+  ],
+  "translations": [
+    {"id": "RU-LiskiBobrov-z9-312-171-S01", "zh": "利斯基", "status": "approved", "source": "@source/6cb537d8b502b615", "record_sha256": "c0153e35e7a1f350bfd83e49637ddbd999227278a2cd91a6188055d13ac022f6", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "RU-LiskiBobrov-z9-312-171-S02", "zh": "博布罗夫", "status": "approved", "source": "@source/6cb537d8b502b615", "record_sha256": "7cba9f5815110f4b879d3c9db4b645c90682e88d5e43672734f1272daf72311b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "RU-LiskiBobrov-z9-312-171-S01", "x": 47, "y": 118, "font_style": "regular", "font_size": 12, "lines": ["利斯基"]},
+    {"id": "RU-LiskiBobrov-z9-312-171-S02", "x": 229, "y": 49, "font_style": "regular", "font_size": 12, "lines": ["博布罗夫"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Davydovka", "source_url": "@source/777c954df8651fb9", "id": "RU-LiskiBobrov-z9-312-171-shared-UAE9-053", "original_bbox": [-13, 4, 48, 22], "owner_region": "UA-East-z9-304-168", "feature_id": "UAE9-053", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

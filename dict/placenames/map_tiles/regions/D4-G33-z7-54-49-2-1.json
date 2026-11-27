@@ -1,0 +1,31 @@
+{
+  "id": "D4-G33-z7-54-49-2-1",
+  "z": 7,
+  "x": 54,
+  "y": 49,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/54/49.png",
+    "7/55/49.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "D4-G33-W01", "kind": "city", "original": "Angra do Heroísmo", "original_bbox": [78, 14, 132, 49], "source_url": "@source/3674273e74625e66"},
+    {"id": "D4-G33-W02", "kind": "city", "original": "Ponta Delgada", "original_bbox": [219, 121, 267, 159], "source_url": "@source/44128a10ff72e280"}
+  ],
+  "translations": [
+    {"id": "D4-G33-W01", "zh": "英雄港", "status": "approved", "source": "@source/3674273e74625e66", "record_sha256": "5b36f83a617723c1e1d7e8edf1540720461ee954dd6b28ec1bc7bdd6bf9df78e", "review_notes": "Root lexical selection 9fa6926e811c3d2ca3e30332bf1fd447e799598ca0311647493e33110be755ac; PRIMARY_PUBLISHED_CHINESE_USAGE_NOT_NATIONAL_NAMING_STANDARD_OR_VENDOR_ENTITY; Original image literal; Chinese authority is separate exact Root lexical selection, not image-Chinese or supplier entity; Root lexical evidence {\"path\": \"evidence/parallel_map/reviews/C4_D4_closed25_Chinese_lexical_PROPOSAL_PRIMARY_TEXT_ONLY_20261028/CHINESE25_LEXICAL_PROPOSALS_NOT_ROOT_SELECTION_OR_SOURCE_IDENTITY.json\", \"sha256\": \"ddeef1bff36bcd793ee2502a7043f53f8471f5c5b8f11111e8ba8b13a9199e88\"}. Supplier entity/point remain unassigned."},
+    {"id": "D4-G33-W02", "zh": "蓬塔德尔加达", "status": "approved", "source": "@source/44128a10ff72e280", "record_sha256": "839d9ee0f7c5de7967ddf591e98f17827b30d45ee43fe34c904f0c7beb003d88", "review_notes": "Root lexical selection 9fa6926e811c3d2ca3e30332bf1fd447e799598ca0311647493e33110be755ac; PRIMARY_PUBLISHED_CHINESE_USAGE_NOT_NATIONAL_NAMING_STANDARD_OR_VENDOR_ENTITY; Original image literal; Chinese authority is separate exact Root lexical selection, not image-Chinese or supplier entity; Root lexical evidence {\"path\": \"evidence/parallel_map/reviews/C4_D4_closed25_Chinese_lexical_PROPOSAL_PRIMARY_TEXT_ONLY_20261028/CHINESE25_LEXICAL_PROPOSALS_NOT_ROOT_SELECTION_OR_SOURCE_IDENTITY.json\", \"sha256\": \"ddeef1bff36bcd793ee2502a7043f53f8471f5c5b8f11111e8ba8b13a9199e88\"}. Supplier entity/point remain unassigned."}
+  ],
+  "layouts": [
+    {"id": "D4-G33-W01", "x": 105.0, "y": 35.5, "font_size": 12, "font_style": "regular"},
+    {"id": "D4-G33-W02", "x": 243.0, "y": 142.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "D4-G33-W01-point", "feature_id": "D4-G33-W01", "kind": "circle", "x": 82.5, "y": 18.5, "size": 9, "outline_width": 1, "original_bbox": [78, 14, 87, 23]},
+    {"id": "D4-G33-W02-point", "feature_id": "D4-G33-W02", "kind": "circle", "x": 223.5, "y": 125.5, "size": 9, "outline_width": 1, "original_bbox": [219, 121, 228, 130]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

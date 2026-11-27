@@ -1,0 +1,41 @@
+{
+  "id": "IT8-South-z9-279-195-1-2",
+  "z": 9,
+  "x": 279,
+  "y": 195,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/279/195.png",
+    "9/279/196.png"
+  ],
+  "context_tiles": [
+    "9/278/195.png",
+    "9/279/197.png"
+  ],
+  "features": [
+    {"id": "IT8-N15", "kind": "city", "original": "Cosenza", "original_bbox": [3, 18, 55, 36], "source_url": "@source/7d79e06a5f7be3f8"},
+    {"id": "IT8-N16", "kind": "city", "original": "San Giovanni in Fiore", "original_bbox": [155, 36, 227, 71], "source_url": "@source/7d79e06a5f7be3f8"},
+    {"id": "IT8-N17", "kind": "city", "original": "Lamezia Terme", "original_bbox": [25, 173, 71, 207], "source_url": "@source/7d79e06a5f7be3f8"},
+    {"id": "IT8-N18", "kind": "city", "original": "Catanzaro", "original_bbox": [124, 207, 185, 225], "source_url": "@source/7d79e06a5f7be3f8"},
+    {"id": "IT8-N19", "kind": "city", "original": "Soverato", "original_bbox": [113, 310, 164, 327], "source_url": "@source/f205c4165a2862c5"}
+  ],
+  "translations": [
+    {"id": "IT8-N15", "zh": "科森扎", "status": "approved", "source": "@source/7d79e06a5f7be3f8", "record_sha256": "c01259ce8970198929b90962ceb6441ebb75cddd27751e8700a8af469467bffe", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."},
+    {"id": "IT8-N16", "zh": "圣乔万尼因菲奥雷", "status": "approved", "source": "@source/7d79e06a5f7be3f8", "record_sha256": "98accbd6ded31e43c89226f8ab32e5221a2b246dead075720df68ef59457e7f6", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."},
+    {"id": "IT8-N17", "zh": "拉梅齐亚泰尔梅", "status": "approved", "source": "@source/7d79e06a5f7be3f8", "record_sha256": "26c9b919e1c5386d03b71e042bcdb454807e12a255cca58c5ba4d1c8482421b0", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."},
+    {"id": "IT8-N18", "zh": "卡坦扎罗", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "b00fb5e17f874c0e419dac2a8aaae53c9729481c2a0f0c0e76780a12c0a98caa", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."},
+    {"id": "IT8-N19", "zh": "索韦拉托", "status": "approved", "source": "@source/f205c4165a2862c5", "record_sha256": "d50c58173d0805ffe987a5e63b3bdc44b9fdd24609a4e57ffd49651cab5d1357", "review_notes": "Root5ced selected actual AUTHOR SELF private only; /root/levant_source different TARGET PENDING. Personally viewed new4 whole,19 complete Chinese glyphs,7 physical joins; pristine all-alpha/positiveRGBA and no missing glyphs. Source22full17800/core15645;19new Source Chinese plus3 exact existing-normal Source aliases render no second caption/native. No new native/height/C/rules, old3 whole129 incl review/native1/heightonly1/rule1 immutable. Source182 only, ban12 unread, HTTP0; finite137 once/std0. No formal promotion."}
+  ],
+  "layouts": [
+    {"id": "IT8-N15", "x": 29.0, "y": 27.0, "font_size": 12, "font_style": "regular", "lines": ["科森扎"]},
+    {"id": "IT8-N16", "x": 191.0, "y": 53.5, "font_size": 12, "font_style": "regular", "lines": ["圣乔万尼因菲奥雷"]},
+    {"id": "IT8-N17", "x": 48.0, "y": 190.0, "font_size": 12, "font_style": "regular", "lines": ["拉梅齐亚泰尔梅"]},
+    {"id": "IT8-N18", "x": 154.5, "y": 216.0, "font_size": 12, "font_style": "regular", "lines": ["卡坦扎罗"]},
+    {"id": "IT8-N19", "x": 138.5, "y": 318.5, "font_size": 12, "font_style": "regular", "lines": ["索韦拉托"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "IT8-SH20", "owner_region": "MedZ9-Closed-279-197", "feature_id": "GZ9-13-25", "kind": "city", "original": "Siderno", "source_url": "@source/f205c4165a2862c5", "original_bbox": [24, 502, 68, 518], "review_notes": "Proposed exact existing normal Source alias; preserve old whole/Chinese/layout and render no second caption/native here. Requires explicit Root model selection and different actual TARGET review."}
+  ]
+}

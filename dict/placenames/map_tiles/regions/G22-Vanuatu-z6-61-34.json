@@ -1,0 +1,28 @@
+{
+  "id": "G22-Vanuatu-z6-61-34",
+  "z": 6,
+  "x": 61,
+  "y": 34,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "6/61/34.png",
+    "6/62/34.png"
+  ],
+  "context_tiles": [
+    "6/61/35.png",
+    "6/62/35.png"
+  ],
+  "features": [
+    {"id": "G22-VANUATU-01", "kind": "admin0", "original": "VANUATU", "original_bbox": [154, 236, 298, 259], "source_url": "@source/7dbbe48f86412b2f"}
+  ],
+  "translations": [
+    {"id": "G22-VANUATU-01", "zh": "瓦努阿图", "status": "approved", "source": "@source/7dbbe48f86412b2f", "record_sha256": "2a937da72aedd046f828463797872a1bbff53cdd1c1129d7b98cff804f2363e9", "review_notes": "Root has selected the bare Chinese official word form only. Inert country-model proposal uses the full printed Source2194; layout and actual execution await Root named model and separate actual grant. No provider/admin-boundary or native/pure qualification inferred."}
+  ],
+  "layouts": [
+    {"id": "G22-VANUATU-01", "x": 226, "y": 238, "font_size": 20, "font_style": "regular", "lines": ["瓦努阿图"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

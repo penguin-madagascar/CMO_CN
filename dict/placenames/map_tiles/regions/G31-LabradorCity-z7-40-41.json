@@ -1,0 +1,26 @@
+{
+  "id": "G31-LabradorCity-z7-40-41",
+  "z": 7,
+  "x": 40,
+  "y": 41,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/40/41.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "G31-LabradorCity-01", "kind": "city", "original": "Labrador City", "original_bbox": [49, 183, 100, 220], "source_url": "@source/7b6d8de990fa5629"}
+  ],
+  "translations": [
+    {"id": "G31-LabradorCity-01", "zh": "拉布拉多市", "status": "approved", "source": "@source/7b6d8de990fa5629", "record_sha256": "bb5d2f5b66f70ef462f8494674842cf3aefcc70f750305e2fcb50ea7a22d1bbd", "review_notes": "Proposed wording requested by Root; this field is inert until a genuine Root model selection. The HTTP URL identifies the printed compound, not an official Chinese source. No provider/entity identity or pure native Source layer is asserted."}
+  ],
+  "layouts": [
+    {"id": "G31-LabradorCity-01", "x": 83, "y": 205, "font_size": 12, "font_style": "regular", "lines": ["拉布拉多市"]}
+  ],
+  "symbols": [
+    {"id": "G31-LabradorCity-01-point", "feature_id": "G31-LabradorCity-01", "kind": "circle", "original_bbox": [48, 183, 57, 192], "x": 52.5, "y": 187.5, "size": 9, "outline_width": 1, "review_notes": "Proposed project reconstruction using the existing circle9/outline1 primitive at the mixed-frame midpoint. Original62 is not a separable pure source circle; its mixed outline and the original compound918 remain qualified only in their original roles."}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

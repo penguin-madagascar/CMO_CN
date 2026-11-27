@@ -1,0 +1,52 @@
+{
+  "z": 9,
+  "x": 320,
+  "y": 199,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "id": "SRC62-Iran-z9-320-199-3-1",
+  "original_tiles": [
+    "9/320/199.png",
+    "9/321/199.png",
+    "9/322/199.png"
+  ],
+  "context_tiles": [
+    "9/319/199.png"
+  ],
+  "features": [
+    {"id": "NEXT8-G166-P01", "kind": "region", "original": "Oshnaviyeh", "original_bbox": [4, 45, 69, 65], "source_url": "@source/9f6bd6bb2ea17d1f"},
+    {"id": "NEXT8-G166-P02", "kind": "region", "original": "Naghadeh", "original_bbox": [113, 85, 170, 105], "source_url": "@source/9f6bd6bb2ea17d1f"},
+    {"id": "NEXT8-G166-P03", "kind": "region", "original": "Mahabad", "original_bbox": [237, 172, 289, 188], "source_url": "@source/9f6bd6bb2ea17d1f"},
+    {"id": "NEXT8-G166-P04", "kind": "region", "original": "Piranshahr", "original_bbox": [22, 202, 82, 218], "source_url": "@source/9f6bd6bb2ea17d1f"},
+    {"id": "R10", "kind": "region", "original": "Miandoab", "original_bbox": [373, 79, 428, 95], "source_url": "@source/ce007ce39428d335"},
+    {"id": "R11", "kind": "region", "original": "Banuq", "original_bbox": [466, 86, 499, 105], "source_url": "@source/ce007ce39428d335"},
+    {"id": "R13", "kind": "region", "original": "Simineh", "original_bbox": [397, 187, 443, 204], "source_url": "@source/ce007ce39428d335"},
+    {"id": "R12", "kind": "region", "original": "Keshavarz", "original_bbox": [466, 140, 523, 156], "source_url": "@source/0dda2c7f4da2613a"},
+    {"id": "S42-R2883-07", "kind": "region", "original": "Shahindezh", "original_bbox": [538, 211, 602, 228], "source_url": "@source/0dda2c7f4da2613a"}
+  ],
+  "translations": [
+    {"id": "NEXT8-G166-P01", "zh": "奥什纳维耶", "status": "approved", "source": "@source/9f6bd6bb2ea17d1f", "record_sha256": "8bce29d1b9198e02308088cd661358a5d2e83f3dbdc85983f050fe6f589dc050", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer /lexical_choices/0; grade C unchanged. Project caption only; no entity/provider point assignment."},
+    {"id": "NEXT8-G166-P02", "zh": "纳加代", "status": "approved", "source": "@source/9f6bd6bb2ea17d1f", "record_sha256": "9e1e80be0719a8606f6cb27cb18f370c1e36db42fcedbe27fca37e1adcea3a4e", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer /lexical_choices/1; grade C unchanged. Project caption only; no entity/provider point assignment."},
+    {"id": "NEXT8-G166-P03", "zh": "马哈巴德", "status": "approved", "source": "@source/9f6bd6bb2ea17d1f", "record_sha256": "500d4c5bc9121aac902061c610b2824ca557c5cc14225521ccf7f433d7b0c8cc", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_continuity7_Chinese_lexical_actual_selection_20261104/Root_SELECTED_CONTINUITY7_COMPLETE_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 837578f311b888d248ecad830ccf2428af6070f15dccf89df4e7e71048c77228 pointer /lexical_choices/0; grade B unchanged. Project caption only; no entity/provider point assignment."},
+    {"id": "NEXT8-G166-P04", "zh": "皮兰沙赫尔", "status": "approved", "source": "@source/9f6bd6bb2ea17d1f", "record_sha256": "9b72781c686a35300d41ba5697b2a9d29b7025f9317199d680b69c20395b148c", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer /lexical_choices/2; grade C unchanged. Project caption only; no entity/provider point assignment."},
+    {"id": "R10", "zh": "米安多阿布", "status": "approved", "source": "@source/ce007ce39428d335", "record_sha256": "a345c63422040f1f4e2dd0c5001283ca6cf72574000fb008ee77a14a8d22a7c7", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_residual8707_complete8_Chinese_actual_selection_20261104/Root_SELECTED_RESIDUAL_COMPLETE8_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 5b8bec296ec33968bd0e4b4879ffee2a29bd8c3402801af67ef9360bad712237 pointer /rows8/5; grade C unchanged. Project caption only; no entity/provider point assignment."},
+    {"id": "R11", "zh": "巴努克", "status": "approved", "source": "@source/ce007ce39428d335", "record_sha256": "13849075ecc8f6165489d222fc336644c919bcc905d5b99b258fb229f60cd4a1", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_residual8707_complete8_Chinese_actual_selection_20261104/Root_SELECTED_RESIDUAL_COMPLETE8_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 5b8bec296ec33968bd0e4b4879ffee2a29bd8c3402801af67ef9360bad712237 pointer /rows8/6; grade C unchanged. Project caption only; no entity/provider point assignment."},
+    {"id": "R13", "zh": "西米内", "status": "approved", "source": "@source/ce007ce39428d335", "record_sha256": "f5409856e417dbe547d9c0baab7bb74628d5a56f95199650708feff614b161d7", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_residual8707_complete8_Chinese_actual_selection_20261104/Root_SELECTED_RESIDUAL_COMPLETE8_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 5b8bec296ec33968bd0e4b4879ffee2a29bd8c3402801af67ef9360bad712237 pointer /rows8/7; grade C unchanged. Project caption only; no entity/provider point assignment."},
+    {"id": "R12", "zh": "凯沙瓦尔兹", "status": "approved", "source": "@source/0dda2c7f4da2613a", "record_sha256": "bc8e764a6e1621e29e207ce19c0148f366a8ec1088849bd768e446bfb94a2a2d", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_Source39_complete5_Chinese_actual_selection_20261104/Root_SELECTED_COMPLETE5_ALL_CHINESE_FOR_OBSERVED39_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 605ea63f1ecf3ca82335708fa27c47c82976bfda6c6e10600cebb7ce198d903b pointer /rows5/4; grade C unchanged. Project caption only; no entity/provider point assignment."},
+    {"id": "S42-R2883-07", "zh": "沙欣代日", "status": "approved", "source": "@source/0dda2c7f4da2613a", "record_sha256": "29409dbd74af6b509fd7460255548970093b224f6c88e39ba7dd7cf2139893f8", "review_notes": "source is only the original printed-label provenance URL, not an official Chinese-name source. Chinese display authorized by Root lexical evidence/tile_recovery/root_Source42_complete3_Chinese_actual_selection_20261104/Root_SELECTED_COMPLETE3_ALL_CHINESE_FOR_OBSERVED42_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256 c811a61cf727fcd41acb95e53948c20d71ba27525069b3718dc43a19abfa1c9c pointer /rows3/2; grade C unchanged. Project caption only; no entity/provider point assignment."}
+  ],
+  "layouts": [
+    {"id": "NEXT8-G166-P01", "x": 36.5, "y": 55.0, "font_size": 12, "font_style": "regular"},
+    {"id": "NEXT8-G166-P02", "x": 141.5, "y": 95.0, "font_size": 12, "font_style": "regular"},
+    {"id": "NEXT8-G166-P03", "x": 263.0, "y": 180.0, "font_size": 12, "font_style": "regular"},
+    {"id": "NEXT8-G166-P04", "x": 52.0, "y": 210.0, "font_size": 12, "font_style": "regular"},
+    {"id": "R10", "x": 400.5, "y": 87.0, "font_size": 12, "font_style": "regular"},
+    {"id": "R11", "x": 482.5, "y": 95.5, "font_size": 12, "font_style": "regular"},
+    {"id": "R13", "x": 420.0, "y": 195.5, "font_size": 12, "font_style": "regular"},
+    {"id": "R12", "x": 494.5, "y": 148.0, "font_size": 12, "font_style": "regular"},
+    {"id": "S42-R2883-07", "x": 570.0, "y": 219.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "NW-Luzon-z10-854-463",
+  "z": 10,
+  "x": 854,
+  "y": 463,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/854/463.png"
+  ],
+  "context_tiles": [
+    "10/854/464.png"
+  ],
+  "features": [
+    {"id": "NWPH10-Tagudin", "kind": "city", "original": "Tagudin", "original_bbox": [132, 22, 174, 39], "source_printed_full_literal": "Tagudin", "source_glyph_complete": true, "source_url": "@source/b3a4a9838ea5210c"},
+    {"id": "NWPH10-Luna", "kind": "city", "original": "Luna", "original_bbox": [90, 82, 119, 99], "source_printed_full_literal": "Luna", "source_glyph_complete": true, "source_url": "@source/b3a4a9838ea5210c"},
+    {"id": "NWPH10-Balaoan", "kind": "city", "original": "Balaoan", "original_bbox": [100, 107, 146, 124], "source_printed_full_literal": "Balaoan", "source_glyph_complete": true, "source_url": "@source/b3a4a9838ea5210c"},
+    {"id": "NWPH10-Bacnotan", "kind": "city", "original": "Bacnotan", "original_bbox": [63, 185, 110, 199], "source_printed_full_literal": "Bacnotan", "source_glyph_complete": true, "source_url": "@source/b3a4a9838ea5210c"}
+  ],
+  "translations": [
+    {"id": "NWPH10-Tagudin", "zh": "塔古丁", "status": "approved", "source": "@source/5c3f3b0369432e4c", "record_sha256": "32af60ff6f0328daa9adabf3341f5943766544a06c5066c0e494a611c0aecfc1", "review_notes": "Project transliteration, exact Philippine municipality checked."},
+    {"id": "NWPH10-Luna", "zh": "卢纳", "status": "approved", "source": "@source/317f7e76df5f1333", "record_sha256": "7e9c2afbe367157aa2e796d86caaefadced47e4aaa3db6b2ed4b0a3d75071b53", "review_notes": "Exact same locality Chinese spelling verified."},
+    {"id": "NWPH10-Balaoan", "zh": "巴老安", "status": "approved", "source": "@source/317f7e76df5f1333", "record_sha256": "03f1a23fc1261cbddd06cab27c710ffa5b102d2cba6626f4f11ce65966a98ef2", "review_notes": "Exact same locality Chinese spelling verified."},
+    {"id": "NWPH10-Bacnotan", "zh": "巴克诺坦", "status": "approved", "source": "@source/317f7e76df5f1333", "record_sha256": "450ac933f53ba666c703d8ab305072cea648e44b12ca0ff0cf80afed6a3e15e5", "review_notes": "Exact same locality Chinese spelling verified."}
+  ],
+  "layouts": [
+    {"id": "NWPH10-Tagudin", "x": 153.0, "y": 30.5, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Luna", "x": 104.5, "y": 90.5, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Balaoan", "x": 123.0, "y": 115.5, "font_style": "regular", "font_size": 12},
+    {"id": "NWPH10-Bacnotan", "x": 86.5, "y": 192.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "NWPH10-shared-NWPH10-San-Fernando", "owner_region": "NW-Luzon-z10-854-464", "feature_id": "NWPH10-San-Fernando", "original": "San Fernando", "kind": "city", "original_bbox": [31, 251, 90, 290], "source_url": "@source/b3a4a9838ea5210c", "review_notes": "Whole Source crosses into this exact same-zoom adjacent tile. One Chinese normal remains with its owner."}
+  ],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3",
+  "z": 9,
+  "x": 297,
+  "y": 192,
+  "width_tiles": 1,
+  "height_tiles": 3,
+  "original_tiles": [
+    "9/297/192.png",
+    "9/297/193.png",
+    "9/297/194.png"
+  ],
+  "context_tiles": [
+    "9/296/191.png",
+    "9/296/192.png",
+    "9/296/193.png",
+    "9/296/194.png",
+    "9/297/191.png",
+    "9/298/192.png",
+    "9/298/193.png",
+    "9/298/194.png"
+  ],
+  "features": [
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N00", "kind": "city", "original": "Pendik", "original_bbox": [129, 42, 169, 58], "source_url": "@source/1f674a29ef276fd8", "source_glyph_complete": true, "source_printed_full_literal": "Pendik"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N01", "kind": "city", "original": "Dilovası", "original_bbox": [232, 90, 277, 106], "source_url": "@source/1f674a29ef276fd8", "source_glyph_complete": true, "source_printed_full_literal": "Dilovası"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N02", "kind": "city", "original": "Çınarcık", "original_bbox": [84, 153, 129, 173], "source_url": "@source/1f674a29ef276fd8", "source_glyph_complete": true, "source_printed_full_literal": "Çınarcık"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N03", "kind": "city", "original": "Yalova", "original_bbox": [139, 146, 183, 164], "source_url": "@source/1f674a29ef276fd8", "source_glyph_complete": true, "source_printed_full_literal": "Yalova"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N04", "kind": "city", "original": "Gemlik", "original_bbox": [100, 255, 141, 272], "source_url": "@source/1f674a29ef276fd8", "source_glyph_complete": true, "source_printed_full_literal": "Gemlik"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N05", "kind": "city", "original": "Gürsu", "original_bbox": [117, 357, 150, 374], "source_url": "@source/64165165257353d1", "source_glyph_complete": true, "source_printed_full_literal": "Gürsu"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N06", "kind": "city", "original": "Bursa", "original_bbox": [66, 372, 108, 392], "source_url": "@source/64165165257353d1", "source_glyph_complete": true, "source_printed_full_literal": "Bursa"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N07", "kind": "city", "original": "İnegöl", "original_bbox": [230, 420, 267, 443], "source_url": "@source/64165165257353d1", "source_glyph_complete": true, "source_printed_full_literal": "İnegöl"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N08", "kind": "city", "original": "Orhaneli", "original_bbox": [34, 507, 82, 523], "source_url": "@source/64165165257353d1", "source_glyph_complete": true, "source_printed_full_literal": "Orhaneli"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N09", "kind": "city", "original": "Keles", "original_bbox": [132, 502, 164, 519], "source_url": "@source/64165165257353d1", "source_glyph_complete": true, "source_printed_full_literal": "Keles"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N10", "kind": "city", "original": "Harmancık", "original_bbox": [89, 614, 149, 630], "source_url": "@source/0287eb31ac541e8b", "source_glyph_complete": true, "source_printed_full_literal": "Harmancık"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N11", "kind": "city", "original": "Tavşanlı", "original_bbox": [219, 677, 266, 695], "source_url": "@source/0287eb31ac541e8b", "source_glyph_complete": true, "source_printed_full_literal": "Tavşanlı"}
+  ],
+  "translations": [
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N00", "zh": "彭迪克", "status": "approved", "source": "@source/b3969ef8cad67793", "record_sha256": "882356b665436b6c7651dc637b6d11693c7cfce1a282c58cb23ed498efa4bc23", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N01", "zh": "迪洛瓦瑟", "status": "approved", "source": "@source/75929b66676b1b77", "record_sha256": "553661b2599d9e255f780ba386f87d7e99bf46fa445251ff45b342fccb6ed6c8", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N02", "zh": "奇纳尔哲克", "status": "approved", "source": "@source/82d3303a246d7498", "record_sha256": "978c9ae5df6ecc7b521c29a1c617c0dbee38b8c0bd58559d88ddd6ad3eb4f113", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N03", "zh": "亚洛瓦", "status": "approved", "source": "@source/23f2e47e7ae3ae0b", "record_sha256": "ed71f6bdc74c868e4b8e0d5b76816cf199f85831b5dfb5892361ecf11ca59b8a", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N04", "zh": "盖姆利克", "status": "approved", "source": "@source/1313d04040c012da", "record_sha256": "87f28d85d7ca049f74d8f87919830a0202b5bad053826e54ddac435b2b3b7f85", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N05", "zh": "居尔苏", "status": "approved", "source": "@source/453f382e55052988", "record_sha256": "84635a1019374be747ed9458dfadf2b70cde704b763db7a36c09a8f95d8883aa", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N06", "zh": "布尔萨", "status": "approved", "source": "@source/4a08e01de36c2d71", "record_sha256": "1056e3359a2888ede95058a07c66337d7c96496cc69452910352aebe7ed283c2", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N07", "zh": "伊内格尔", "status": "approved", "source": "@source/8a44a8a67dbc3b58", "record_sha256": "6059012a733f0b43014f856741455686ef16bca730f893b8737a5ed5368fe17b", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N08", "zh": "奥尔哈内利", "status": "approved", "source": "@source/f1ab4acdde599a10", "record_sha256": "b888ab0789556e275ecb3c97905c22011ac564b2c86f4f7d089c2be92f1798fd", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N09", "zh": "凯莱斯", "status": "approved", "source": "@source/44851cafd9e4876e", "record_sha256": "2fca1ff2540ad0f93558ea99dbb7be592ce2c524609c48025ab9cc3b0a94fb20", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N10", "zh": "哈尔曼哲克", "status": "approved", "source": "@source/1c7e76cd65c44eb5", "record_sha256": "6272c2d29441e32013fd660a29c28d20b4bb7dcbe7fbad2428031df550256d1a", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N11", "zh": "塔夫尚勒", "status": "approved", "source": "@source/da619e57a46c152f", "record_sha256": "41145564ccf52223039341741bb7e551dded38b485a904bf2a9ca6370ef2837d", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N00", "x": 149.0, "y": 50.0, "font_size": 12, "font_style": "regular", "lines": ["彭迪克"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N01", "x": 227, "y": 98, "font_size": 12, "font_style": "regular", "lines": ["迪洛瓦瑟"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N02", "x": 106.5, "y": 163.0, "font_size": 12, "font_style": "regular", "lines": ["奇纳尔哲克"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N03", "x": 161.0, "y": 155.0, "font_size": 12, "font_style": "regular", "lines": ["亚洛瓦"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N04", "x": 120.5, "y": 263.5, "font_size": 12, "font_style": "regular", "lines": ["盖姆利克"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N05", "x": 133.5, "y": 365.5, "font_size": 12, "font_style": "regular", "lines": ["居尔苏"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N06", "x": 87.0, "y": 382.0, "font_size": 12, "font_style": "regular", "lines": ["布尔萨"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N07", "x": 223, "y": 432, "font_size": 12, "font_style": "regular", "lines": ["伊内格尔"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N08", "x": 58.0, "y": 515.0, "font_size": 12, "font_style": "regular", "lines": ["奥尔哈内利"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N09", "x": 148.0, "y": 510.5, "font_size": 12, "font_style": "regular", "lines": ["凯莱斯"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N10", "x": 119.0, "y": 622.0, "font_size": 12, "font_style": "regular", "lines": ["哈尔曼哲克"]},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-N11", "x": 227, "y": 686, "font_size": 12, "font_style": "regular", "lines": ["塔夫尚勒"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-Shared-0", "owner_region": "GR16-EastN-z9-296-191", "feature_id": "GR16-N-039", "kind": "city", "original": "Küçükçekmece", "original_bbox": [-61, -14, 20, 5], "source_url": "@source/ea09d2c7aad6437c", "review_notes": "跨片原文用完整墨迹连接到既有中文。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-Shared-1", "owner_region": "GR16-EastN-z9-296-191", "feature_id": "GR16-N-042", "kind": "city", "original": "Armutlu", "original_bbox": [-24, 212, 23, 229], "source_url": "@source/d98ab879ad95febb", "review_notes": "跨片原文用完整墨迹连接到既有中文。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-Shared-2", "owner_region": "GR16-EastN-z9-296-191", "feature_id": "GR16-N-043", "kind": "city", "original": "Mudanya", "original_bbox": [-5, 282, 46, 301], "source_url": "@source/b7aad46eef0df5d4", "review_notes": "跨片原文用完整墨迹连接到既有中文。"},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-Shared-3", "owner_region": "GR16-EastN-z9-296-191", "feature_id": "GR16-N-047", "kind": "city", "original": "Büyükorhan", "original_bbox": [-12, 570, 54, 589], "source_url": "@source/2d76308d50a38a49", "review_notes": "跨片原文用完整墨迹连接到既有中文。"}
+  ],
+  "canonical_captions": [
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-Cities3701", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 119.03680555555911, "y": 21.32347442190803, "font_style": "regular", "font_size": 12, "lines": ["马尔泰佩"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3701, "original_Chinese_name": "马尔泰佩", "lat_f32_bits": 1109638688, "lon_f32_bits": 1105804693, "flags": 0, "level": 1}},
+    {"id": "Turkey-Marmara-Pendik-Bursa-Tavsanli-z9-297-192-1x3-Cities3705", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 219.3833333333314, "y": 83.31444929417194, "font_style": "regular", "font_size": 12, "lines": ["盖布泽"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3705, "original_Chinese_name": "盖布泽", "lat_f32_bits": 1109603847, "lon_f32_bits": 1105949192, "flags": 0, "level": 1}}
+  ],
+  "legacy_suppressions": []
+}

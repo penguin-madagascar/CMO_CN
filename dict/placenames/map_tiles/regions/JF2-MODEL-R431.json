@@ -1,0 +1,36 @@
+{
+  "id": "JF2-MODEL-R431",
+  "z": 10,
+  "x": 839,
+  "y": 431,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/839/431.png"
+  ],
+  "context_tiles": [
+    "10/838/431.png",
+    "10/840/431.png"
+  ],
+  "features": [
+    {"id": "JF2-N002", "kind": "city", "original": "Jishui", "original_bbox": [103, 105, 141, 123], "source_url": "@source/f5db159e074d5b0a"},
+    {"id": "JF2-INFERRED-004", "kind": "city", "original": "Dingji", "original_bbox": [227, 157, 256, 174], "source_url": "@source/f5db159e074d5b0a", "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "Dingji", "resolved_semantic_name": "Dingjiang"},
+    {"id": "JF2-N005", "kind": "city", "original": "Jizhou District", "original_bbox": [-2, 166, 46, 205], "source_url": "@source/f5db159e074d5b0a"},
+    {"id": "JF2-N007", "kind": "city", "original": "Ji’an", "original_bbox": [-15, 219, 15, 237], "source_url": "@source/f5db159e074d5b0a"}
+  ],
+  "translations": [
+    {"id": "JF2-N002", "zh": "吉水", "status": "approved", "source": "@source/f5db159e074d5b0a", "record_sha256": "b5da2c59fc15e402e1bc946b64ed45ba287033910b386dc1b9180c2b0b8f2751", "review_notes": "Existing original complete Source/CJK qualification 8684fa4090751c774d52cb5b484aacc0f2de9167cc4ff189f6186122a6dc265a; exact original literal/full bbox retained; not a new supplier/admin/native identity."},
+    {"id": "JF2-INFERRED-004", "zh": "丁江", "status": "approved", "source": "@source/44fabe9a1f47f1d2", "record_sha256": "31f1d418ac6b4094ff7714032d22c47e8bbf7ffd512d66dae02b662ec4cc9cc0", "review_notes": "Root bounded external identity/Chinese stem c4ed9b4f412ff9674e018acd2835dd4d33025c43aacc3115fee09609f7969a50; Source observed prefix only, complete printed literal remains NULL; no supplier ID/provider point/canonical WWP is claimed."},
+    {"id": "JF2-N005", "zh": "吉州区", "status": "approved", "source": "@source/f5db159e074d5b0a", "record_sha256": "36bc2d731fe448189a52ebb5fb47520237858a2e4809696470d482312d125bf6", "review_notes": "Existing original complete Source/CJK qualification 8684fa4090751c774d52cb5b484aacc0f2de9167cc4ff189f6186122a6dc265a; exact original literal/full bbox retained; not a new supplier/admin/native identity."},
+    {"id": "JF2-N007", "zh": "吉安", "status": "approved", "source": "@source/f5db159e074d5b0a", "record_sha256": "ce66545cca2980a510dd57b174060dc3b3b140c0b03bcf03e619bbc8eb05d212", "review_notes": "Existing original complete Source/CJK qualification 8684fa4090751c774d52cb5b484aacc0f2de9167cc4ff189f6186122a6dc265a; exact original literal/full bbox retained; not a new supplier/admin/native identity."}
+  ],
+  "layouts": [
+    {"id": "JF2-N002", "x": 122.0, "y": 114.0, "font_size": 12, "font_style": "regular"},
+    {"id": "JF2-INFERRED-004", "x": 238.5, "y": 165.5, "font_size": 12, "font_style": "regular"},
+    {"id": "JF2-N005", "x": 24.0, "y": 185.5, "font_size": 12, "font_style": "regular"},
+    {"id": "JF2-N007", "x": 18.0, "y": 228.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

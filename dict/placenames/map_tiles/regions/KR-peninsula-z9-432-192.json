@@ -112,7 +112,7 @@
   "features": [
     {"id": "KR-P9-000", "kind": "city", "original": "Oman-dong", "original_bbox": [1173, -4, 1238, 16], "source_url": "@source/0a08699271f079ad"},
     {"id": "KR-P9-001", "kind": "city", "original": "Kanggye", "original_bbox": [1010, -2, 1064, 19], "source_url": "@source/d654d1dd3de4a87d"},
-    {"id": "KR-P9-002", "kind": "city", "original": "anguan", "original_bbox": [-9, -1, 40, 18], "source_url": "@source/439daff0d0fef2be"},
+    {"id": "KR-P9-002", "kind": "city", "original": "anguan", "original_bbox": [-37, -1, 40, 18], "source_url": "@source/439daff0d0fef2be"},
     {"id": "KR-P9-003", "kind": "city", "original": "Saima", "original_bbox": [164, 0, 200, 11], "source_url": "@source/2030f2edb5131036"},
     {"id": "KR-P9-004", "kind": "city", "original": "Qingshangou", "original_bbox": [512, 0, 546, 1], "source_url": "@source/bc7a572a3254ac4d"},
     {"id": "KR-P9-006", "kind": "city", "original": "Pungso", "original_bbox": [1555, 11, 1597, 30], "source_url": "@source/f3b55d6e1c0ffcea"},
@@ -307,7 +307,7 @@
   "translations": [
     {"id": "KR-P9-000", "zh": "奥曼洞", "status": "approved", "source": "@source/0a08699271f079ad", "record_sha256": "1ffde7c2f9806f74af440fec3bd0735fc75016104d0889c6fa00cae66a8c47e6", "review_notes": "@note/translations"},
     {"id": "KR-P9-001", "zh": "江界", "status": "approved", "source": "@source/9a1ee8aedcafa083", "record_sha256": "727069cc805c71f736980ae90fd549987f9a51b63940cc7679448f31fae7e84f", "review_notes": "@note/translations"},
-    {"id": "KR-P9-002", "zh": "连山关", "status": "approved", "source": "@source/899762e25505bc82", "record_sha256": "1d16b06ab38f531f7050c2dc4fb1c038bb77c65b81f980114b2c652e69f56255", "review_notes": "@note/translations"},
+    {"id": "KR-P9-002", "zh": "连山关", "status": "approved", "source": "@source/899762e25505bc82", "record_sha256": "25d132c62be7bd96e36e6d247949bf02c5f344f0630adeab78a2d6af8d44a3e6", "review_notes": "@note/translations"},
     {"id": "KR-P9-003", "zh": "赛马", "status": "approved", "source": "@source/4a73831272c0a4e2", "record_sha256": "d7cc8706fcbdbd328be7f67584f14fb5e6e1cc315d2998176d9e3a4dfda301ef", "review_notes": "@note/translations"},
     {"id": "KR-P9-004", "zh": "青山沟", "status": "approved", "source": "@source/4a73831272c0a4e2", "record_sha256": "1b5fb9f23876d22593e3dac138f7510dac9b7d3ff9b014145b5f0312dd8e80d2", "review_notes": "@note/translations"},
     {"id": "KR-P9-006", "zh": "丰西", "status": "approved", "source": "@source/ce9b728a45d8fbf2", "record_sha256": "cadbc8c44d342425733f9b99b55514d424fa669def9ca48af9867fd40df5e6e7", "review_notes": "@note/translations"},

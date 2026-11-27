@@ -1,0 +1,25 @@
+{
+  "id": "AEG9-Malia-z10-584-404-1-1",
+  "z": 10,
+  "x": 584,
+  "y": 404,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/584/404.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "AEG9-N04", "kind": "city", "original": "Malia", "original_bbox": [93, 151, 126, 167], "source_url": "@source/e7f88223019cfb7c"}
+  ],
+  "translations": [
+    {"id": "AEG9-N04", "zh": "马利亚", "status": "approved", "source": "@source/ebdf217936f24b39", "record_sha256": "cf2e15bffb36a08a54c622081561e92ea977df51262aa2c20d0bbfb67e11e863", "review_notes": "Draft wording from frozen SOURCE author contract; different SOURCE/CJK and all TARGET approval pending. Exact grading and identity limitations are in the per-ID proposal. Author actual SELF private-model glyph/Source5px/whole/joins accepted. Different Identity actual TARGET still pending; no formal approval. Different actual TARGET /root/identity_holds_research accepted complete CJK/whole/Sourcejoins under Root6180; independent finite10 and standard new7 are required evidence. No new official naming or supplier identity claim."}
+  ],
+  "layouts": [
+    {"id": "AEG9-N04", "x": 109.5, "y": 159.0, "font_size": 12, "font_style": "regular", "lines": ["马利亚"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

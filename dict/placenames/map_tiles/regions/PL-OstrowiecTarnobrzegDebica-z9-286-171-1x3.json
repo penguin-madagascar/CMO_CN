@@ -1,0 +1,77 @@
+{
+  "id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3",
+  "z": 9,
+  "x": 286,
+  "y": 171,
+  "width_tiles": 1,
+  "height_tiles": 3,
+  "original_tiles": [
+    "9/286/171.png",
+    "9/286/172.png",
+    "9/286/173.png"
+  ],
+  "context_tiles": [
+    "9/285/171.png",
+    "9/285/172.png",
+    "9/287/171.png",
+    "9/287/172.png"
+  ],
+  "features": [
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S01", "kind": "city", "original": "Iłża", "original_bbox": [42, 2, 63, 18], "source_url": "@source/8246a0ed719df0f2", "source_glyph_complete": true, "source_printed_full_literal": "Iłża"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S02", "kind": "city", "original": "Lipsko", "original_bbox": [184, 4, 221, 23], "source_url": "@source/8246a0ed719df0f2", "source_glyph_complete": true, "source_printed_full_literal": "Lipsko"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S03", "kind": "city", "original": "Starachowice", "original_bbox": [-43, 65, 30, 82], "source_url": "@source/8246a0ed719df0f2", "source_glyph_complete": true, "source_printed_full_literal": "Starachowice"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S04", "kind": "city", "original": "Ostrowiec Świętokrzyski", "original_bbox": [69, 121, 144, 158], "source_url": "@source/8246a0ed719df0f2", "source_glyph_complete": true, "source_printed_full_literal": "Ostrowiec Świętokrzyski"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S05", "kind": "city", "original": "Ożarów", "original_bbox": [187, 161, 231, 178], "source_url": "@source/8246a0ed719df0f2", "source_glyph_complete": true, "source_printed_full_literal": "Ożarów"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S06", "kind": "city", "original": "Opatów", "original_bbox": [98, 210, 144, 229], "source_url": "@source/8246a0ed719df0f2", "source_glyph_complete": true, "source_printed_full_literal": "Opatów"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S07", "kind": "city", "original": "Łagów", "original_bbox": [-23, 225, 17, 245], "source_url": "@source/8246a0ed719df0f2", "source_glyph_complete": true, "source_printed_full_literal": "Łagów"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S08", "kind": "city", "original": "Staszów", "original_bbox": [3, 348, 51, 365], "source_url": "@source/653f71adc7c8fd30", "source_glyph_complete": true, "source_printed_full_literal": "Staszów"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S09", "kind": "city", "original": "Tarnobrzeg", "original_bbox": [175, 342, 244, 363], "source_url": "@source/653f71adc7c8fd30", "source_glyph_complete": true, "source_printed_full_literal": "Tarnobrzeg"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S10", "kind": "city", "original": "Połaniec", "original_bbox": [45, 422, 93, 438], "source_url": "@source/653f71adc7c8fd30", "source_glyph_complete": true, "source_printed_full_literal": "Połaniec"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S11", "kind": "city", "original": "Szczucin", "original_bbox": [-31, 492, 18, 509], "source_url": "@source/653f71adc7c8fd30", "source_glyph_complete": true, "source_printed_full_literal": "Szczucin"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S12", "kind": "city", "original": "Mielec", "original_bbox": [101, 504, 140, 520], "source_url": "@source/58ce4282c1c9e344", "source_glyph_complete": true, "source_printed_full_literal": "Mielec"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S13", "kind": "city", "original": "Radomyśl Wielki", "original_bbox": [39, 547, 95, 582], "source_url": "@source/58ce4282c1c9e344", "source_glyph_complete": true, "source_printed_full_literal": "Radomyśl Wielki"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S14", "kind": "city", "original": "Dębica", "original_bbox": [96, 639, 135, 658], "source_url": "@source/58ce4282c1c9e344", "source_glyph_complete": true, "source_printed_full_literal": "Dębica"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S15", "kind": "city", "original": "Ropczyce", "original_bbox": [163, 638, 215, 657], "source_url": "@source/58ce4282c1c9e344", "source_glyph_complete": true, "source_printed_full_literal": "Ropczyce"}
+  ],
+  "translations": [
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S01", "zh": "伊乌扎", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "b096cfc18d5d4d8cab2e9b1430b46efa4a8e7de3591f716ddbc9b571c124870b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S02", "zh": "利普斯科", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "e4a2d294c708b874bb4ab2606e911af0d5718d7dbd989a3db641de78c47b5e6b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S03", "zh": "斯塔拉霍维采", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "2b161337cd57aa1a40a10f66867f1b1c3617aa19d4547830a80767f982ea06f0", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S04", "zh": "奥斯特罗维茨希维托克日斯基", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "19fa1088df6ea79fea70213f51e348101a0f6676ffa088392972b1e52ccfab57", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S05", "zh": "奥扎鲁夫", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "244c55ed7e291c3561fc31a74b1eac00fafdfb72f0e9f94061ea697df1933420", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S06", "zh": "奥帕图夫", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "3dd1b7db1ff412f71967dd93e0bd8159848d5f1e4ab0dd08d65187a208989c4b", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S07", "zh": "瓦古夫", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "c0a880a4118102083df4fc656d5904a45a9261737bd130f9ee76c23e2d7022db", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S08", "zh": "斯塔舒夫", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "941e4372c9fe9f6c71beb2d685367a11dee92abd686819d358d90ac450a28216", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S09", "zh": "塔尔诺布热格", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "a136e8e8f2ea1bd96ba2d938c492a8a6a8a77c558acd1b2821ed60147e7a1101", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S10", "zh": "波瓦涅茨", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "8b36e20b8473710f3bf96edb69423eb057f9a4f4d211518f04f6b3c57b2698fa", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S11", "zh": "什丘钦", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "9bbbb76784b9f7e68f59c563bca02e7c636eed8c9ee03d3b05352e1e5665a898", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S12", "zh": "梅莱茨", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "dab5386e4acaccd04e304cdc066e8c67cdaf08fc33744a592ecb5edc717cb7ec", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S13", "zh": "拉多梅希尔维尔基", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "899e4d1566f49bc1a41b67da3501c99eccc3bbbc6f45572a7be20704c353c996", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S14", "zh": "登比察", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "a8f7879f7262a7bb227e8aa3fe09fdad6a2a0ade44ad0b3e5161160a6cfd0dd1", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S15", "zh": "罗普奇采", "status": "approved", "source": "@source/30d21948d12ce23c", "record_sha256": "9cf9c74901510031a294115a3c48640ae906d793eed3da584b2cea472dc47c30", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S01", "x": 53, "y": 12, "font_style": "regular", "font_size": 12, "lines": ["伊乌扎"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S02", "x": 205, "y": 13, "font_style": "regular", "font_size": 12, "lines": ["利普斯科"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S03", "x": 46, "y": 74, "font_style": "regular", "font_size": 12, "lines": ["斯塔拉霍维采"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S04", "x": 110, "y": 137, "font_style": "regular", "font_size": 12, "lines": ["奥斯特罗维茨", "希维托克日斯基"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S05", "x": 209, "y": 169, "font_style": "regular", "font_size": 12, "lines": ["奥扎鲁夫"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S06", "x": 121, "y": 219, "font_style": "regular", "font_size": 12, "lines": ["奥帕图夫"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S07", "x": 38, "y": 235, "font_style": "regular", "font_size": 12, "lines": ["瓦古夫"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S08", "x": 38, "y": 358, "font_style": "regular", "font_size": 12, "lines": ["斯塔舒夫"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S09", "x": 207, "y": 353, "font_style": "regular", "font_size": 12, "lines": ["塔尔诺布热格"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S10", "x": 72, "y": 432, "font_style": "regular", "font_size": 12, "lines": ["波瓦涅茨"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S11", "x": 27, "y": 501, "font_style": "regular", "font_size": 12, "lines": ["什丘钦"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S12", "x": 119, "y": 502, "font_style": "regular", "font_size": 12, "lines": ["梅莱茨"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S13", "x": 68, "y": 564, "font_style": "regular", "font_size": 12, "lines": ["拉多梅希尔", "维尔基"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S14", "x": 119, "y": 647, "font_style": "regular", "font_size": 12, "lines": ["登比察"]},
+    {"id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-S15", "x": 191, "y": 647, "font_style": "regular", "font_size": 12, "lines": ["罗普奇采"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Annopol", "source_url": "@source/9149e7f8b5e5efa5", "id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-shared-PL-KrasnikSandomierzNisko-z9-287-171-1x2-S01", "original_bbox": [253, 162, 302, 181], "owner_region": "PL-KrasnikSandomierzNisko-z9-287-171-1x2", "feature_id": "PL-KrasnikSandomierzNisko-z9-287-171-1x2-S01", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Sandomierz", "source_url": "@source/5440a6c40f4a022e", "id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-shared-PL-KrasnikSandomierzNisko-z9-287-171-1x2-S07", "original_bbox": [206, 280, 272, 297], "owner_region": "PL-KrasnikSandomierzNisko-z9-287-171-1x2", "feature_id": "PL-KrasnikSandomierzNisko-z9-287-171-1x2-S07", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Nowa Dęba", "source_url": "@source/5440a6c40f4a022e", "id": "PL-OstrowiecTarnobrzegDebica-z9-286-171-1x3-shared-PL-KrasnikSandomierzNisko-z9-287-171-1x2-S08", "original_bbox": [209, 432, 272, 452], "owner_region": "PL-KrasnikSandomierzNisko-z9-287-171-1x2", "feature_id": "PL-KrasnikSandomierzNisko-z9-287-171-1x2-S08", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

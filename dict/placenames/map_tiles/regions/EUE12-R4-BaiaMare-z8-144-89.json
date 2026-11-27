@@ -1,0 +1,28 @@
+{
+  "id": "EUE12-R4-BaiaMare-z8-144-89",
+  "z": 8,
+  "x": 144,
+  "y": 89,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/144/89.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "EUE12-N05", "kind": "city", "original": "Baia Mare", "original_bbox": [191, 86, 227, 124], "source_url": "@source/ce002a8c2e1a4701"}
+  ],
+  "translations": [
+    {"id": "EUE12-N05", "zh": "巴亚马雷", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "2ab85eb255f990a53e4d40cdb5fa7baf58f81607132125ed3a10b414b4b7ddae", "review_notes": "ORIGINAL_NE_NAME_ZH_FIELD_WITH_COMPLETE_NAME_EN_OR_NAME_LEXICAL_MATCH; verbatim qualified Source Chinese. Metadata only; Root model and actual different TARGET pending. Root e094 actual private model, author SELF only; different /root/caribbean_author TARGET pending. Personally viewed all22 new complete glyphs (17 Source Chinese+5 separate original WWP captions),7 new whole owners,18 original mixed raw9-frame/target73 native pairs,5 internal joins and2 cross-owner joins. All original Source18 full13400/core13141/real5px15 verified; old Tetovo259 retained in its complete existing normal with603=344+259. Measured initial Elbasan N17 and fixed Albania C03 low-alpha3pixel overlap; only ordinary Source N17 x+4 removes all positive/alpha/RGBA contamination. First evidence retained. All5 canonical exact bodies/layouts/nominal f32 points,all18 native midpoints and complete Source boxes unchanged. Source1=None; new Tetovo rendered private1 is newly selected,not borrowed current19/future21. Old3 complete145 objects/reviews remain exact. No old preview exports,formal promotion,new Source HTTP,unknown15 or fullrunner. This author SELF receipt is not different TARGET approval or full_current canonical/rendered authority."}
+  ],
+  "layouts": [
+    {"id": "EUE12-N05", "x": 227.5, "y": 101.5, "font_size": 12, "font_style": "regular", "lines": ["巴亚马雷"]}
+  ],
+  "symbols": [
+    {"id": "EUE12-P05", "kind": "circle", "original_bbox": [191, 86, 200, 95], "x": 195.5, "y": 90.5, "size": 9, "outline_width": 1, "source_url": "@source/ce002a8c2e1a4701", "feature_id": "EUE12-N05"}
+  ],
+  "shared_sources": [],
+  "canonical_captions": [
+    {"id": "EUE12-C01-Cities3271", "origin": "canonical_wwp", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3271, "original_Chinese_name": "萨图马雷", "lat_f32_bits": 1111438131, "lon_f32_bits": 1102516495, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "kind": "region", "layout": {"x": 69.7829861111095, "y": 51.56569235310599, "font_size": 12, "font_style": "regular", "lines": ["萨图马雷"]}}
+  ]
+}

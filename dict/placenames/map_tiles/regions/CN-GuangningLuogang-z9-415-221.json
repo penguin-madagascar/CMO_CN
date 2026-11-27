@@ -1,0 +1,41 @@
+{
+  "id": "CN-GuangningLuogang-z9-415-221",
+  "z": 9,
+  "x": 415,
+  "y": 221,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/415/221.png"
+  ],
+  "context_tiles": [
+    "9/414/221.png",
+    "9/416/221.png"
+  ],
+  "features": [
+    {"id": "CN-GuangningLuogang-z9-415-221-Nanfeng", "kind": "city", "original": "Nanfeng", "original_bbox": [-24, 46, 22, 66], "source_url": "@source/5cc1f248d22f6cb8", "source_glyph_complete": true, "source_printed_full_literal": "Nanfeng"},
+    {"id": "CN-GuangningLuogang-z9-415-221-Luogang", "kind": "city", "original": "Luogang", "original_bbox": [239, 50, 256, 66], "source_url": "@source/80ef247068a6c787", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null, "source_observation": {"available_readable_lines": ["Lu[o]"], "complete_supplier_glyph": false, "printed_full_literal": null, "visible_world_bbox": [106479, 56626, 106496, 56642], "source_facts": {"path": "evidence/parallel_map/reviews/CN_GUANGNING_415221_AUTHOR_20261123/LUOGANG_BOUNDARY_EXACT.json", "sha256": "cad97d28999bc8e653ce721b88b706b9fc6be86beb3da378720bdb6fd92e3515", "bytes": 6738}, "boundary_axis": "east", "last_source_column_world_x": 106495, "opposite_source_column_world_x": 106496}},
+    {"id": "CN-GuangningLuogang-z9-415-221-Shidong", "kind": "city", "original": "Shidong", "original_bbox": [75, 97, 121, 118], "source_url": "@source/80ef247068a6c787", "source_glyph_complete": true, "source_printed_full_literal": "Shidong"},
+    {"id": "CN-GuangningLuogang-z9-415-221-Shuinan", "kind": "city", "original": "Shuinan", "original_bbox": [187, 224, 234, 241], "source_url": "@source/80ef247068a6c787", "source_glyph_complete": true, "source_printed_full_literal": "Shuinan"},
+    {"id": "CN-GuangningLuogang-z9-415-221-Gaoliang", "kind": "city", "original": "Gaoliang", "original_bbox": [27, 232, 76, 253], "source_url": "@source/80ef247068a6c787", "source_glyph_complete": true, "source_printed_full_literal": "Gaoliang"}
+  ],
+  "translations": [
+    {"id": "CN-GuangningLuogang-z9-415-221-Nanfeng", "zh": "南丰", "status": "approved", "source": "@source/525fbf0ae272ca1e", "record_sha256": "966124cd964f942437b7093575a1cacbc6f3af31d45588e962911c3181bb43a6", "review_notes": "Complete supplier print and official Guangdong township name."},
+    {"id": "CN-GuangningLuogang-z9-415-221-Luogang", "zh": "螺岗", "status": "approved", "source": "@source/525fbf0ae272ca1e", "record_sha256": "f87c836008c87f125abaf3de46c9a3f96d89f900d259a62abf472c81e4d7365c", "review_notes": "Bounded Lu[o] supplier prefix. Official 广宁县螺岗镇 and two matching gazetteer placements support 螺岗."},
+    {"id": "CN-GuangningLuogang-z9-415-221-Shidong", "zh": "诗洞", "status": "approved", "source": "@source/525fbf0ae272ca1e", "record_sha256": "0be0e904d1292cabf1cbe956055dfa8d8a8572e8000e605590abf88a7a34fb31", "review_notes": "Complete supplier print and official Guangdong township name."},
+    {"id": "CN-GuangningLuogang-z9-415-221-Shuinan", "zh": "水南", "status": "approved", "source": "@source/525fbf0ae272ca1e", "record_sha256": "1cfa11e22eb4eed9cd422d9800dd64f86027fe3ef81fc85eaacc807a400321a3", "review_notes": "Complete supplier print and official Guangdong township name."},
+    {"id": "CN-GuangningLuogang-z9-415-221-Gaoliang", "zh": "高良", "status": "approved", "source": "@source/525fbf0ae272ca1e", "record_sha256": "1ef321b2d6ae8f28675c7f3161b40110ac42c8972d96a5b8ece5d5745cac599b", "review_notes": "Complete supplier print and official Guangdong township name."}
+  ],
+  "layouts": [
+    {"id": "CN-GuangningLuogang-z9-415-221-Nanfeng", "x": 20, "y": 56, "lines": ["南丰"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangningLuogang-z9-415-221-Luogang", "x": 228, "y": 57, "lines": ["螺岗"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangningLuogang-z9-415-221-Shidong", "x": 99, "y": 109, "lines": ["诗洞"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangningLuogang-z9-415-221-Shuinan", "x": 211, "y": 232, "lines": ["水南"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-GuangningLuogang-z9-415-221-Gaoliang", "x": 52, "y": 241, "lines": ["高良"], "font_style": "regular", "font_size": 14}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-GuangningLuogang-z9-415-221-shared-Guangning", "owner_region": "CN-SOUTH-z9-416-216", "feature_id": "CNS9-243", "kind": "city", "original": "Guangning", "source_url": "@source/3a444b76cee22deb", "original_bbox": [198, 90, 264, 113], "review_notes": "Complete geographic source box matches the old CN-SOUTH owner and retains its actual 广宁县 label."}
+  ],
+  "legacy_suppressions": []
+}

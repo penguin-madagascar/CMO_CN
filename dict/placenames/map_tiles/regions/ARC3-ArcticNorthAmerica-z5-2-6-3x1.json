@@ -1,0 +1,32 @@
+{
+  "id": "ARC3-ArcticNorthAmerica-z5-2-6-3x1",
+  "z": 5,
+  "x": 2,
+  "y": 6,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    {"path": "5/2/6.png", "origin": "historical_attested_original", "source_alpha_count": 806},
+    {"path": "5/3/6.png", "origin": "historical_attested_original", "source_alpha_count": 1013},
+    {"path": "5/4/6.png", "origin": "historical_attested_original", "source_alpha_count": 247}
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "ARC3-S001", "kind": "city", "original": "Utqiaġvik", "original_bbox": [12, 204, 69, 226], "source_url": "@source/d4bf984a20f8f243"},
+    {"id": "ARC3-S002", "kind": "marine", "original": "Beaufort Sea", "original_bbox": [426, 109, 534, 127], "source_url": "@source/cccc4a28b3f132f9"}
+  ],
+  "translations": [
+    {"id": "ARC3-S001", "zh": "巴罗", "status": "approved", "source": "@source/feb0c21a22cd49f2", "record_sha256": "c3713f191a675704ce6d1257ed9b097f161ef3aac1db1edd21fd53995df83b0b", "review_notes": "UNRENDERED PROPOSAL. original_NE_NAME_ZH_direct_same_explicit_GN_primary_alias_identity. Exact original NE Chinese and original GN/NE identity roles retained. Root actual model and different TARGET approval absent. Author SELF private Chinese review only; different actual TARGET pending."},
+    {"id": "ARC3-S002", "zh": "波弗特海", "status": "approved", "source": "@source/9a654fb3722d61bb", "record_sha256": "cb59e80f6fef4ecc93078d5e5ce31c922cdf955abf5164f7cc2f28e9f16fa437", "review_notes": "UNRENDERED PROPOSAL. original_NE_marine_name_zh_direct_full_literal. Exact original NE Chinese and original GN/NE identity roles retained. Root actual model and different TARGET approval absent. Author SELF private Chinese review only; different actual TARGET pending."}
+  ],
+  "layouts": [
+    {"id": "ARC3-S001", "x": 40.5, "y": 215.0, "font_size": 12, "font_style": "regular", "lines": ["巴罗"]},
+    {"id": "ARC3-S002", "x": 480.0, "y": 118.0, "font_size": 18, "font_style": "bold", "lines": ["波弗特海"]}
+  ],
+  "symbols": [
+    {"id": "ARC3-S001-point", "feature_id": "ARC3-S001", "x": 16.5, "y": 208.5, "kind": "circle", "size": 9, "outline_width": 1, "original_bbox": [12, 204, 21, 213]}
+  ],
+  "shared_sources": [],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

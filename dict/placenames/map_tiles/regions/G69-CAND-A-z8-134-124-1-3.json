@@ -1,0 +1,55 @@
+{
+  "id": "G69-CAND-A-z8-134-124-1-3",
+  "z": 8,
+  "x": 134,
+  "y": 124,
+  "width_tiles": 1,
+  "height_tiles": 3,
+  "original_tiles": [
+    "8/134/124.png",
+    "8/134/125.png",
+    "8/134/126.png"
+  ],
+  "context_tiles": [
+    "8/133/124.png",
+    "8/135/125.png",
+    "8/135/126.png"
+  ],
+  "features": [
+    {"id": "G69-Calabar", "kind": "city", "original": "Calabar", "original_bbox": [-23, 112, 27, 133], "source_url": "@source/2ae3829fc05bf754"},
+    {"id": "G69-Kumba", "kind": "city", "original": "Kumba", "original_bbox": [178, 174, 225, 195], "source_url": "@source/2ae3829fc05bf754"},
+    {"id": "G69-Mont-Cameroun", "kind": "peak", "original": "Mont Cameroun", "original_bbox": [43, 217, 139, 259], "source_url": "@source/2ae3829fc05bf754", "original_elevation_m": "4095"},
+    {"id": "G69-Limbe", "kind": "city", "original": "Limbe", "original_bbox": [136, 289, 178, 310], "source_url": "@source/2ae3829fc05bf754"},
+    {"id": "G69-Malabo", "kind": "city", "original": "Malabo", "original_bbox": [55, 340, 107, 362], "source_url": "@source/2ae3829fc05bf754"},
+    {"id": "G69-Douala", "kind": "city", "original": "Douala", "original_bbox": [227, 283, 276, 305], "source_url": "@source/2ae3829fc05bf754"},
+    {"id": "G69-Bata", "kind": "city", "original": "Bata", "original_bbox": [238, 679, 273, 700], "source_url": "@source/2ae3829fc05bf754"}
+  ],
+  "translations": [
+    {"id": "G69-Calabar", "zh": "卡拉巴尔", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "ad0e2d2c85b8c623537522fb6c9aaad133c015c7bf5bf2306f3792d86bb71417", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."},
+    {"id": "G69-Kumba", "zh": "昆巴", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "3201ebd0826a6a7638c80104ad7af724c1cb3b450fdd6bf41002256293eac346", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."},
+    {"id": "G69-Mont-Cameroun", "zh": "喀麦隆山", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "07d75ec91232be29d863f5db681a1974442a9ef1735c0938ed66aedaf8059799", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."},
+    {"id": "G69-Limbe", "zh": "林贝", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "72f6963d4b823f9b108d122e1f65e27d1d42bab7407892c15719fadb3e313d2f", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."},
+    {"id": "G69-Malabo", "zh": "马拉博", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "9f0a4236815d2d9fab58246350317c3e70082b17e6c633fe54f4b5d2a18856c8", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."},
+    {"id": "G69-Douala", "zh": "杜阿拉", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "1422b8cc7b6ca9d043ce804e05c1a08139fa23f4ea93232cd96f94e088b79899", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."},
+    {"id": "G69-Bata", "zh": "巴塔", "status": "approved", "source": "@source/a14944280a3c1826", "record_sha256": "b08761e6b3e433937b3f78628bc954f8b01e8f4c38204d9cfa8c04c860f98eb5", "review_notes": "Private candidate lexical review only, using Root-supplied Chinese/current approved forms; does not approve new core or formal region."}
+  ],
+  "layouts": [
+    {"id": "G69-Calabar", "x": 32, "y": 125, "font_size": 12, "font_style": "regular"},
+    {"id": "G69-Kumba", "x": 206, "y": 188.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G69-Mont-Cameroun", "x": 97, "y": 232, "font_size": 12, "font_style": "regular"},
+    {"id": "G69-Limbe", "x": 161, "y": 303.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G69-Malabo", "x": 84, "y": 355.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G69-Douala", "x": 205.5, "y": 299, "font_size": 12, "font_style": "regular"},
+    {"id": "G69-Bata", "x": 219.5, "y": 695, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "G69-Kumba-point", "feature_id": "G69-Kumba", "kind": "circle", "x": 182.5, "y": 178.5, "size": 7, "outline_width": 1, "original_bbox": [178, 174, 187, 183]},
+    {"id": "G69-Mont-Cameroun-point", "feature_id": "G69-Mont-Cameroun", "kind": "triangle", "x": 134.0, "y": 254.5, "original_bbox": [129, 250, 139, 259], "render_mode": "source_rgba", "source_rgba_sha256": "759f6fc0734c0bdfbbde3f4e2830e0a513b8bd39e5188e31542e64072eecc89c", "source_symbol_only": true, "review_notes": "Root selected exact original10x9/68-positive-alpha native peak triangle. The source compound text/4095m ink has tightbbox[43,217,134,249]; row249 is entirely transparent and native triangle begins y250. Tight native frame[129,250,139,259] contains no Latin or height ink. Original x134,y254.5 and vertices/RGBA are retained without resizing; independent Target qualification remains pending."},
+    {"id": "G69-Limbe-point", "feature_id": "G69-Limbe", "kind": "circle", "x": 140.5, "y": 293.5, "size": 7, "outline_width": 1, "original_bbox": [136, 289, 145, 298]},
+    {"id": "G69-Malabo-point", "feature_id": "G69-Malabo", "kind": "circle", "x": 59.5, "y": 344.5, "size": 7, "outline_width": 1, "original_bbox": [55, 340, 64, 349]},
+    {"id": "G69-Douala-point", "feature_id": "G69-Douala", "kind": "circle", "x": 231.5, "y": 287.5, "size": 7, "outline_width": 1, "original_bbox": [227, 283, 236, 292]},
+    {"id": "G69-Bata-point", "feature_id": "G69-Bata", "kind": "circle", "x": 242.5, "y": 683.5, "size": 7, "outline_width": 1, "original_bbox": [238, 679, 247, 688]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

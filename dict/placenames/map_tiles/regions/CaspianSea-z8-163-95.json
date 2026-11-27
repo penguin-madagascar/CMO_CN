@@ -1,0 +1,27 @@
+{
+  "id": "CaspianSea-z8-163-95",
+  "z": 8,
+  "x": 163,
+  "y": 95,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/163/95.png"
+  ],
+  "context_tiles": [
+    "8/164/95.png"
+  ],
+  "features": [
+    {"id": "CaspianSea-z8-163-95-N00", "kind": "marine", "original": "Caspian Sea", "original_bbox": [197, 37, 334, 61], "source_url": "@source/839e1ab2e2339d79", "source_glyph_complete": true, "source_printed_full_literal": "Caspian Sea"}
+  ],
+  "translations": [
+    {"id": "CaspianSea-z8-163-95-N00", "zh": "里海", "status": "approved", "source": "@source/5e4f95cf2ba80463", "record_sha256": "d8e3bb102b2d8185d53caff6831ccf3d324d9040b3c075d6aa0f66c64def183a", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "CaspianSea-z8-163-95-N00", "x": 231, "y": 49, "font_size": 14, "font_style": "bold", "lines": ["里海"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

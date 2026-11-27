@@ -1,0 +1,68 @@
+{
+  "id": "S52-C4-Base7-z9-433-190-2-1",
+  "z": 9,
+  "x": 433,
+  "y": 190,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/433/190.png",
+    "9/434/190.png"
+  ],
+  "context_tiles": [
+    "9/432/190.png",
+    "9/433/188.png",
+    "9/433/189.png",
+    "9/433/191.png",
+    "9/434/188.png",
+    "9/434/189.png",
+    "9/434/191.png",
+    "9/435/187.png",
+    "9/435/188.png",
+    "9/436/188.png",
+    "9/436/189.png",
+    "9/437/188.png",
+    "9/437/189.png",
+    {"path": "9/435/190.png", "z": 9}
+  ],
+  "features": [
+    {"id": "S52-C4B7-N04", "kind": "city", "original": "Hongsheng", "original_bbox": [218, 152, 280, 171], "source_url": "@source/453431b2520f445b"},
+    {"id": "S52-C4B7-N05", "kind": "city", "original": "Hongmiaozi", "original_bbox": [219, 236, 284, 256], "source_url": "@source/453431b2520f445b"},
+    {"id": "S52-C4B7-N14", "kind": "city", "original": "Tonghua", "original_bbox": [445, 166, 502, 188], "source_url": "@source/d6f068a5fff7e7d9"},
+    {"id": "S52-C4B7-N22", "kind": "city", "original": "Yushu", "original_bbox": [114, 183, 150, 199], "source_url": "@source/453431b2520f445b"},
+    {"id": "S52-C4B7-N29", "kind": "city", "original": "Nanzamu", "original_bbox": [-44, 25, 8, 42], "source_url": "@source/453431b2520f445b"},
+    {"id": "S52-C4B7-N30", "kind": "city", "original": "Shangjiahe", "original_bbox": [-21, 80, 41, 100], "source_url": "@source/453431b2520f445b"},
+    {"id": "S52-C4B7-N32", "kind": "city", "original": "Aojiabao", "original_bbox": [93, 51, 143, 71], "source_url": "@source/453431b2520f445b"},
+    {"id": "S52-C4B7-N33", "kind": "city", "original": "Muji", "original_bbox": [49, 120, 75, 140], "source_url": "@source/453431b2520f445b"},
+    {"id": "S52-C4B7-CC016", "kind": "city", "original": "Wandia", "original_bbox": [212, 29, 256, 46], "source_url": "@source/453431b2520f445b", "source_glyph_complete": false, "source_printed_full_literal": null}
+  ],
+  "translations": [
+    {"id": "S52-C4B7-N04", "zh": "红升", "status": "approved", "source": "@source/453431b2520f445b", "record_sha256": "bd68430fc26b05519d75da93feed0602334f2ee3ed7bf022dbcca09043e88f76", "review_notes": "Root-selected project lexical stem for this exact physical printed occurrence; see uniform33 row and exact lexical Root. Supplier PNG URI is print evidence only, not official Chinese or entity ID. Physical source set SOURCE25. Source literal/fullbbox and all original lexical grades/limits retained. No supplier/GN/admin/vector/class/native assertion. Future Root model/actual Target pending."},
+    {"id": "S52-C4B7-N05", "zh": "红庙子", "status": "approved", "source": "@source/453431b2520f445b", "record_sha256": "ecdfabd8b806a3b32359aa5e6fe275b69fd84ef9f98253aace332f561d54ae35", "review_notes": "Root-selected project lexical stem for this exact physical printed occurrence; see uniform33 row and exact lexical Root. Supplier PNG URI is print evidence only, not official Chinese or entity ID. Physical source set SOURCE25. Source literal/fullbbox and all original lexical grades/limits retained. No supplier/GN/admin/vector/class/native assertion. Future Root model/actual Target pending."},
+    {"id": "S52-C4B7-N14", "zh": "通化", "status": "approved", "source": "@source/d6f068a5fff7e7d9", "record_sha256": "2d43756a57472b3a77d8a9fc43b1075ff4013fdc059a8244f301b6695c128526", "review_notes": "Root-selected project lexical stem for this exact physical printed occurrence; see uniform33 row and exact lexical Root. Supplier PNG URI is print evidence only, not official Chinese or entity ID. Physical source set SOURCE25. Source literal/fullbbox and all original lexical grades/limits retained. No supplier/GN/admin/vector/class/native assertion. Future Root model/actual Target pending."},
+    {"id": "S52-C4B7-N22", "zh": "榆树", "status": "approved", "source": "@source/453431b2520f445b", "record_sha256": "b22b5b01c3a6794ec35889b137368c7ba574394dac46bd2f0230ef386c7fd36c", "review_notes": "Root-selected project lexical stem for this exact physical printed occurrence; see uniform33 row and exact lexical Root. Supplier PNG URI is print evidence only, not official Chinese or entity ID. Physical source set SOURCE25. Source literal/fullbbox and all original lexical grades/limits retained. No supplier/GN/admin/vector/class/native assertion. Future Root model/actual Target pending."},
+    {"id": "S52-C4B7-N29", "zh": "南杂木", "status": "approved", "source": "@source/453431b2520f445b", "record_sha256": "686ed51b3d5030ba89b99375e2e20e05aecb617d450e3f369c9544b0cf6b44ef", "review_notes": "Root-selected project lexical stem for this exact physical printed occurrence; see uniform33 row and exact lexical Root. Supplier PNG URI is print evidence only, not official Chinese or entity ID. Physical source set SOURCE8. Source literal/fullbbox and all original lexical grades/limits retained. No supplier/GN/admin/vector/class/native assertion. Future Root model/actual Target pending."},
+    {"id": "S52-C4B7-N30", "zh": "上夹河", "status": "approved", "source": "@source/453431b2520f445b", "record_sha256": "8606452556cc61294b1b365d05402852aa3f402bfd55c1f7e6ab72dc2a376b6a", "review_notes": "Root-selected project lexical stem for this exact physical printed occurrence; see uniform33 row and exact lexical Root. Supplier PNG URI is print evidence only, not official Chinese or entity ID. Physical source set SOURCE8. Source literal/fullbbox and all original lexical grades/limits retained. No supplier/GN/admin/vector/class/native assertion. Future Root model/actual Target pending."},
+    {"id": "S52-C4B7-N32", "zh": "敖家堡", "status": "approved", "source": "@source/453431b2520f445b", "record_sha256": "1e62c22576a937ee9837380c70713fcae85a751739db60ccaa74b706710140ff", "review_notes": "Root-selected project lexical stem for this exact physical printed occurrence; see uniform33 row and exact lexical Root. Supplier PNG URI is print evidence only, not official Chinese or entity ID. Physical source set SOURCE25. Source literal/fullbbox and all original lexical grades/limits retained. No supplier/GN/admin/vector/class/native assertion. Future Root model/actual Target pending."},
+    {"id": "S52-C4B7-N33", "zh": "木奇", "status": "approved", "source": "@source/453431b2520f445b", "record_sha256": "514a7ef5b811f30944293d5dbf4394375d19a204f3ae04eea8b6a3ff2c976717", "review_notes": "Root-selected project lexical stem for this exact physical printed occurrence; see uniform33 row and exact lexical Root. Supplier PNG URI is print evidence only, not official Chinese or entity ID. Physical source set SOURCE25. Source literal/fullbbox and all original lexical grades/limits retained. No supplier/GN/admin/vector/class/native assertion. Future Root model/actual Target pending."},
+    {"id": "S52-C4B7-CC016", "zh": "湾甸子", "status": "approved", "source": "@source/453431b2520f445b", "record_sha256": "bb2f8b0f15f4f0872c7c2ed7c28f7193f856ccb79f5afae2c511715b91622827", "review_notes": "Reference-supported lexical recovery, not a complete old printed word. Original z9 source is the clipped visible prefix Wandia/670, complete old literal null. Independent new z10 reference Wandianzi/676 and Source Q cd602 support bounded recovery; Root lexical60da selects the explicit community bare stem 湾甸子. Supplier z9 PNG URI is original-print evidence, not official Chinese or entity identity. Keep old/new supports, zooms and completeness separate, no crosszoom alpha equality or pixel substitution. Exact Root recovery contract and selected model/feature/TR fingerprints plus single preflight must be bound before any actual Target. No supplier/GN/admin/vector/class/native or renderer-epoch assertion."}
+  ],
+  "layouts": [
+    {"id": "S52-C4B7-N04", "x": 249.0, "y": 161.5, "font_size": 12, "font_style": "regular", "lines": ["红升"]},
+    {"id": "S52-C4B7-N05", "x": 251.5, "y": 244.0, "font_size": 12, "font_style": "regular", "lines": ["红庙子"]},
+    {"id": "S52-C4B7-N14", "x": 473.5, "y": 177.0, "font_size": 12, "font_style": "regular", "lines": ["通化"]},
+    {"id": "S52-C4B7-N22", "x": 132.0, "y": 191.0, "font_size": 12, "font_style": "regular", "lines": ["榆树"]},
+    {"id": "S52-C4B7-N29", "x": 24.0, "y": 33.5, "font_size": 12, "font_style": "regular", "lines": ["南杂木"]},
+    {"id": "S52-C4B7-N30", "x": 24.0, "y": 90.0, "font_size": 12, "font_style": "regular", "lines": ["上夹河"]},
+    {"id": "S52-C4B7-N32", "x": 118.0, "y": 61.0, "font_size": 12, "font_style": "regular", "lines": ["敖家堡"]},
+    {"id": "S52-C4B7-N33", "x": 62.0, "y": 130.0, "font_size": 12, "font_style": "regular", "lines": ["木奇"]},
+    {"id": "S52-C4B7-CC016", "x": 234.0, "y": 37.5, "font_size": 12, "font_style": "regular", "lines": ["湾甸子"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "S52-C4B7-SH04", "owner_region": "S52-C4-Original5-z9-435-189-2-2", "feature_id": "S52-C4O5-N22", "kind": "city", "original": "Tonghua", "source_url": "@source/8499a48236c9ba84", "original_bbox": [511, 141, 567, 163], "review_notes": "Existing original5 sole normal full Source alias only. Preserve old139 whole/review/Chinese/layout; no duplicate caption/native. Historical709 outputHOLD is not rewritten."},
+    {"id": "S52-C4B7-SH05", "owner_region": "S52-C4-Base7-z9-434-189-1-1", "feature_id": "S52-C4B7-N03", "kind": "city", "original": "Xiangyang", "source_url": "@source/e56365aa59e69aba", "original_bbox": [337, -16, 397, 4], "review_notes": "Same exact physical Xiangyang has one normal at the maximum-positive Root rectangle (ties rectorder), and this one internal Source alias. No duplicate Chinese/native."}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

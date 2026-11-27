@@ -1,0 +1,29 @@
+{
+  "id": "Egypt-NorthSinai-AlArish-z10-608-418",
+  "z": 10,
+  "x": 608,
+  "y": 418,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/608/418.png"
+  ],
+  "context_tiles": [
+    "10/609/418.png"
+  ],
+  "features": [
+    {"id": "Egypt-NorthSinai-AlArish-z10-608-418-City", "kind": "city", "original": "Al Arish", "original_bbox": [14, 183, 65, 202], "source_url": "@source/52c731d6042dafdb", "source_glyph_complete": true, "source_printed_full_literal": "Al Arish"}
+  ],
+  "translations": [
+    {"id": "Egypt-NorthSinai-AlArish-z10-608-418-City", "zh": "阿里什", "source": "@source/4ec39e228bfd7e1e", "status": "approved", "record_sha256": "28dfa30b517d25c6ae2c7d4991f5f025db110e7e2b3fc8d4f5f6d3cfa604dfc0", "review_notes": "采用商务部国别指南及既有地图一致的译名，保留同瓦片原有 WWP 城名。"}
+  ],
+  "layouts": [
+    {"id": "Egypt-NorthSinai-AlArish-z10-608-418-City", "x": 39.5, "y": 192.5, "font_size": 12, "font_style": "regular", "lines": ["阿里什"]}
+  ],
+  "shared_sources": [
+    {"id": "Egypt-NorthSinai-AlArish-z10-608-418-SheikhJoin", "owner_region": "WGN-GazaSouth-z10-609-418", "feature_id": "WGN-007", "kind": "city", "original": "Sheikh Zuwayid", "original_bbox": [238, 99, 288, 137], "source_url": "@source/912347c642f0ea5e", "review_notes": "按完整的原文跨片范围关联相邻已译名谢赫祖韦德。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446",
+  "z": 10,
+  "x": 815,
+  "y": 446,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "features": [
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S01", "kind": "city", "original": "Shanglong", "source_url": "@source/5f3c83fee1ee4070", "original_bbox": [208, 128, 265, 149], "source_printed_full_literal": "Shanglong", "source_glyph_complete": true},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S02", "kind": "city", "original": "Xiadong", "source_url": "@source/5f3c83fee1ee4070", "original_bbox": [108, 149, 150, 167], "source_printed_full_literal": "Xiadong", "source_glyph_complete": true},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S03", "kind": "city", "original": "Longzhou", "source_url": "@source/5f3c83fee1ee4070", "original_bbox": [207, 186, 270, 208], "source_printed_full_literal": "Longzhou", "source_glyph_complete": true},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S04", "kind": "city", "original": "Zhubu", "source_url": "@source/37921ff67d5e2bbe", "original_bbox": [314, 9, 352, 25], "source_printed_full_literal": "Zhubu", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S01", "zh": "上龙", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "653af82d37ef91016188e841f0c75f04d40ab27cf053fadf9f9319229d52d739"},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S02", "zh": "下冻", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "677780a29836683954b47e69f31d16561cf372a4236c5d3d25268451fb8e7c5c"},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S03", "zh": "龙州", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "13b5d3d6e0f9a93d87fe113b40cdef7ebc1386b923796c99403b682a836a744e"},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S04", "zh": "逐卜", "source": "@source/f356f7ed39a79d86", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "73af2f793333cf1975e2d5e4b3ca0513c060447b2a50e46476ddbec9a0b04ddc"}
+  ],
+  "layouts": [
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S01", "x": 236.5, "y": 138.5, "font_style": "regular", "font_size": 12, "lines": ["上龙"]},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S02", "x": 129.0, "y": 158.0, "font_style": "regular", "font_size": 12, "lines": ["下冻"]},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S03", "x": 238.5, "y": 197.0, "font_style": "regular", "font_size": 12, "lines": ["龙州"]},
+    {"id": "CN-Longzhou-Xiadong-Zhubu-z10-815-446-S04", "x": 333.0, "y": 17.0, "font_style": "regular", "font_size": 12, "lines": ["逐卜"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "10/815/446.png",
+    "10/816/446.png"
+  ],
+  "context_tiles": []
+}

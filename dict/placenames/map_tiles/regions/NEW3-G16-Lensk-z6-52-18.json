@@ -1,0 +1,27 @@
+{
+  "id": "NEW3-G16-Lensk-z6-52-18",
+  "z": 6,
+  "x": 52,
+  "y": 18,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    {"path": "6/52/18.png", "z": 6}
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "NEW3-G16-N01", "kind": "city", "original": "Lensk", "original_bbox": [105, 80, 143, 99], "source_url": "@source/19903c4371e8e2fe"}
+  ],
+  "translations": [
+    {"id": "NEW3-G16-N01", "zh": "连斯克", "status": "approved", "source": "@source/19903c4371e8e2fe", "record_sha256": "c2cb706bcb6ef544ddd9840fa9cb707ec3a24f35827614e7ad86a0174e58d20a", "review_notes": "Root-selected exact project lexeme 96b4c955b0bf11a4b9a35313295747d4acec2e1b099f8da05aba5d56728c635e / component16 / grade PRIMARY_CHINESE_USAGE_AND_EXACT_PUBLIC_NAME_CORRESPONDENCE. Supplier PNG URI is original-print evidence only, not official Chinese or supplier/entity/GN/admin/vector/class certification. Different physical Source Q 6f83a96682b171a48d2809bc01e8774e6473e28dc02001a3e6c312402e0e0875 and mandatory 04e0e99fac89bd9e224cdca4adedf9be64cee30f8ca73fbe280ed8ea02c41c8d preserve all original Source/native mixed RGBA; Chinese selection is an independent lexical role. Original supplier point and isolated native RGBA layer remain unknown. Actual Target pending separate Root selection, font/phase/clearance measurements and different Target approval."}
+  ],
+  "layouts": [
+    {"id": "NEW3-G16-N01", "x": 136, "y": 94, "font_size": 12, "font_style": "regular", "lines": ["连斯克"]}
+  ],
+  "symbols": [
+    {"id": "NEW3-G16-P01", "feature_id": "NEW3-G16-N01", "kind": "circle", "x": 109.5, "y": 84.5, "size": 9, "outline_width": 1, "original_bbox": [105, 80, 114, 89]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177",
+  "z": 9,
+  "x": 292,
+  "y": 177,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/292/177.png"
+  ],
+  "context_tiles": [
+    "9/291/176.png",
+    "9/291/177.png",
+    "9/292/176.png",
+    "9/293/177.png"
+  ],
+  "features": [
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S01", "kind": "city", "original": "Kitsman", "original_bbox": [140, 3, 187, 19], "source_url": "@source/7c07dd5fc5c4af7a", "source_glyph_complete": true, "source_printed_full_literal": "Kitsman"},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S02", "kind": "city", "original": "Chernivtsi", "original_bbox": [197, 85, 258, 103], "source_url": "@source/7c07dd5fc5c4af7a", "source_glyph_complete": true, "source_printed_full_literal": "Chernivtsi"},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S03", "kind": "city", "original": "Storozhynets", "original_bbox": [113, 153, 185, 173], "source_url": "@source/7c07dd5fc5c4af7a", "source_glyph_complete": true, "source_printed_full_literal": "Storozhynets"},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S04", "kind": "city", "original": "Hlyboka", "original_bbox": [201, 196, 248, 215], "source_url": "@source/7c07dd5fc5c4af7a", "source_glyph_complete": true, "source_printed_full_literal": "Hlyboka"},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S05", "kind": "city", "original": "Krasnoilsk", "original_bbox": [76, 233, 134, 249], "source_url": "@source/7c07dd5fc5c4af7a", "source_glyph_complete": true, "source_printed_full_literal": "Krasnoilsk"}
+  ],
+  "translations": [
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S01", "zh": "基茨曼", "status": "approved", "source": "@source/537a428c97a4c48f", "record_sha256": "dc1f618e21588324ebb3d8cf9018e8d657cef95fa120622c6fdd764694a5d546", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S02", "zh": "切尔诺夫策", "status": "approved", "source": "@source/537a428c97a4c48f", "record_sha256": "79b2ba4508f257fa54f1da59e1c70efdd53e4ef8a39f73704d1925a85e148f1f", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S03", "zh": "斯托罗日涅茨", "status": "approved", "source": "@source/537a428c97a4c48f", "record_sha256": "f0e9825ce493491c736d74ade1366f4bc6c6a7c0514551c71f9ef4eacb0042e2", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S04", "zh": "赫利博卡", "status": "approved", "source": "@source/537a428c97a4c48f", "record_sha256": "790095591597d92937af4e6dc5ca05d81caed677e13fd646df3295c6e32f35fb", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S05", "zh": "克拉斯诺伊尔斯克", "status": "approved", "source": "@source/537a428c97a4c48f", "record_sha256": "75b2241aaa81f54def04a43358aafcaacf4b166c06335d10f0a918da85beda0e", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S01", "x": 163, "y": 13, "font_style": "regular", "font_size": 12, "lines": ["基茨曼"]},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S02", "x": 224, "y": 95, "font_style": "regular", "font_size": 12, "lines": ["切尔诺夫策"]},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S03", "x": 147, "y": 164, "font_style": "regular", "font_size": 12, "lines": ["斯托罗日涅茨"]},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S04", "x": 225, "y": 205, "font_style": "regular", "font_size": 12, "lines": ["赫利博卡"]},
+    {"id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-S05", "x": 106, "y": 241, "font_style": "regular", "font_size": 12, "lines": ["克拉斯诺伊尔斯克"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Zabolotiv", "source_url": "@source/d06794ce7d977650", "id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-shared-UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Zabolotiv", "original_bbox": [-38, -13, 17, 3], "owner_region": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1", "feature_id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Zabolotiv", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Sniatyn", "source_url": "@source/08a92e8983c4ca3c", "id": "UA-ChernivtsiKitsmanHlyboka-z9-292-177-shared-UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Sniatyn", "original_bbox": [65, -5, 109, 14], "owner_region": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1", "feature_id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Sniatyn", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

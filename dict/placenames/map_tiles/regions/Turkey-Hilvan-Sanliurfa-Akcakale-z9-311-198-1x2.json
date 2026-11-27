@@ -1,0 +1,36 @@
+{
+  "id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2",
+  "z": 9,
+  "x": 311,
+  "y": 198,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/311/198.png",
+    "9/311/199.png"
+  ],
+  "context_tiles": [
+    "9/311/200.png"
+  ],
+  "features": [
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N00", "kind": "city", "original": "Hilvan", "original_bbox": [85, 53, 122, 69], "source_url": "@source/2bcd380e0fa96ced", "source_glyph_complete": true, "source_printed_full_literal": "Hilvan"},
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N01", "kind": "city", "original": "Şanlıurfa", "original_bbox": [15, 247, 72, 268], "source_url": "@source/2bcd380e0fa96ced", "source_glyph_complete": true, "source_printed_full_literal": "Şanlıurfa"},
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N02", "kind": "city", "original": "Akçakale", "original_bbox": [76, 453, 126, 473], "source_url": "@source/48462aea9aad6603", "source_glyph_complete": true, "source_printed_full_literal": "Akçakale"}
+  ],
+  "translations": [
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N00", "zh": "希尔万", "status": "approved", "source": "@source/256b150910874af7", "record_sha256": "b7bac0afbe96076d23e7224dcb49a1520fb48798f800821d8e03903d9295107d", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N01", "zh": "尚勒乌尔法", "status": "approved", "source": "@source/05caf877fd8df761", "record_sha256": "a98e0da664fc046acd312963352c38df80ef7581bfea3914d03f1d47419e5880", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N02", "zh": "阿克恰卡莱", "status": "approved", "source": "@source/0cb555e6fb6ff0e1", "record_sha256": "3241eb51a8a77f54ddd2dcd008d026c8629615d7644fdca63cdb8cb31f0049ed", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N00", "x": 103.5, "y": 61.0, "font_size": 12, "font_style": "regular", "lines": ["希尔万"]},
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N01", "x": 43, "y": 246, "font_size": 12, "font_style": "regular", "lines": ["尚勒乌尔法"]},
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-N02", "x": 101.0, "y": 463.0, "font_size": 12, "font_style": "regular", "lines": ["阿克恰卡莱"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "Turkey-Hilvan-Sanliurfa-Akcakale-z9-311-198-1x2-Shared-0", "owner_region": "LEVANT-z9-304-200", "feature_id": "LEV9-002", "kind": "city", "original": "Suluk", "original_bbox": [150, 503, 184, 520], "source_url": "@source/c62bc3b9463ba98b", "review_notes": "跨片原文用完整墨迹连接到既有中文。"}
+  ],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

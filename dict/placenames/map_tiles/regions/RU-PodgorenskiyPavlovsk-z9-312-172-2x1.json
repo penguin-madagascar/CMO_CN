@@ -1,0 +1,35 @@
+{
+  "id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1",
+  "z": 9,
+  "x": 312,
+  "y": 172,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/312/172.png",
+    "9/313/172.png"
+  ],
+  "context_tiles": [
+    "9/311/172.png",
+    "9/311/173.png",
+    "9/312/173.png"
+  ],
+  "features": [
+    {"id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1-S01", "kind": "city", "original": "Podgorenskiy", "original_bbox": [59, 183, 133, 202], "source_url": "@source/cb85d251d8696c02", "source_glyph_complete": true, "source_printed_full_literal": "Podgorenskiy"},
+    {"id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1-S02", "kind": "city", "original": "Pavlovsk", "original_bbox": [254, 155, 304, 171], "source_url": "@source/960094f54b14db1a", "source_glyph_complete": true, "source_printed_full_literal": "Pavlovsk"}
+  ],
+  "translations": [
+    {"id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1-S01", "zh": "波德戈连斯基", "status": "approved", "source": "@source/6cb537d8b502b615", "record_sha256": "5795b5e7b221540db22c899835be5e2856e4004b3ead1a355922180fbf1f3439", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1-S02", "zh": "巴甫洛夫斯克", "status": "approved", "source": "@source/6cb537d8b502b615", "record_sha256": "9e1a0b20c8d7ce97a676a5ac0cc17e961262c15e9930fea124e74819cdb2ab59", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1-S01", "x": 97, "y": 192, "font_style": "regular", "font_size": 12, "lines": ["波德戈连斯基"]},
+    {"id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1-S02", "x": 281, "y": 163, "font_style": "regular", "font_size": 12, "lines": ["巴甫洛夫斯克"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Kamenka", "source_url": "@source/cb85d251d8696c02", "id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1-shared-UAE9-074", "original_bbox": [-4, 5, 47, 22], "owner_region": "UA-East-z9-304-168", "feature_id": "UAE9-074", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Olkhovatka", "source_url": "@source/ed4dd31fa2cd828b", "id": "RU-PodgorenskiyPavlovsk-z9-312-172-2x1-shared-UAE9-092", "original_bbox": [-59, 252, 3, 269], "owner_region": "UA-East-z9-304-168", "feature_id": "UAE9-092", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50",
+  "z": 7,
+  "x": 33,
+  "y": 50,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "7/33/50.png"
+  ],
+  "context_tiles": [
+    "7/32/50.png"
+  ],
+  "features": [
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Nashville", "original": "Nashville", "original_bbox": [40, 47, 86, 64], "kind": "city", "source_url": "@source/92aa0765a7e13baa", "source_glyph_complete": true, "source_printed_full_literal": "Nashville"},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-TENNESSEE", "original": "TENNESSEE", "original_bbox": [27, 81, 137, 99], "kind": "admin1", "source_url": "@source/92aa0765a7e13baa", "source_glyph_complete": true, "source_printed_full_literal": "TENNESSEE"},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Chattanooga", "original": "Chattanooga", "original_bbox": [174, 172, 235, 192], "kind": "city", "source_url": "@source/92aa0765a7e13baa", "source_glyph_complete": true, "source_printed_full_literal": "Chattanooga"},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Huntsville", "original": "Huntsville", "original_bbox": [57, 207, 107, 224], "kind": "city", "source_url": "@source/92aa0765a7e13baa", "source_glyph_complete": true, "source_printed_full_literal": "Huntsville"}
+  ],
+  "translations": [
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Nashville", "zh": "纳什维尔", "status": "approved", "source": "@source/df1e2e47459ae845", "record_sha256": "73ce49870c413ff2dc1ee039c4436988942e3e2b93eca262906435eaf0704f30", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-TENNESSEE", "zh": "田纳西州", "status": "approved", "source": "@source/83518c2e4a3f774c", "record_sha256": "5afb72ffc2383a62b2dc2de653628b7a763706d0ce72e50b365208f57354a37b", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Chattanooga", "zh": "查塔努加", "status": "approved", "source": "@source/5d92b708af658daa", "record_sha256": "e83eef95f31ee6e3bcf14915f15d05a6831b86a8f74d3804c63c133bf318e438", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Huntsville", "zh": "亨茨维尔", "status": "approved", "source": "@source/3923a3ad07dd51ac", "record_sha256": "34ebec1b726fe865caf1e728c1624b171f239f5536abde1551ac85164d4840c3", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"}
+  ],
+  "layouts": [
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Nashville", "x": 69, "y": 55.5, "font_style": "regular", "font_size": 12},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-TENNESSEE", "x": 82.0, "y": 90.0, "font_style": "bold", "font_size": 14},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Chattanooga", "x": 204.5, "y": 182.0, "font_style": "regular", "font_size": 12},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Huntsville", "x": 86, "y": 215.5, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Nashville-circle", "feature_id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Nashville", "kind": "circle", "x": 37.5, "y": 50.0, "original_bbox": [33, 45, 42, 55], "size": 10, "outline_width": 1},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Chattanooga-circle", "feature_id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Chattanooga", "kind": "circle", "x": 171.0, "y": 175.5, "original_bbox": [166, 170, 176, 181], "size": 11, "outline_width": 1},
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Huntsville-circle", "feature_id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-Huntsville", "kind": "circle", "x": 54.5, "y": 209.5, "original_bbox": [50, 205, 59, 214], "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-shared-US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Clarksville", "owner_region": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2", "feature_id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Clarksville", "original": "Clarksville", "kind": "city", "original_bbox": [-13, 5, 37, 23], "source_url": "@source/67a9550e0031bd28", "review_notes": "完整原文字框对应同一层级相同世界坐标，RGBA 逐字节对应正式所属区。已有中文与符号保持其原输出。"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "US-TennesseeNashvilleChattanoogaHuntsville-z7-33-50-C-Cities-3885", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3885, "original_Chinese_name": "默弗里斯伯勒", "lat_f32_bits": 1108304362, "lon_f32_bits": 3266103249, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 73, "y": 109, "font_style": "regular", "font_size": 12, "lines": ["默弗里斯伯勒"]}}
+  ]
+}

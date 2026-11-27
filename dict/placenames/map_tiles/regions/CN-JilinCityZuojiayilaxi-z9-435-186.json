@@ -1,0 +1,45 @@
+{
+  "id": "CN-JilinCityZuojiayilaxi-z9-435-186",
+  "z": 9,
+  "x": 435,
+  "y": 186,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/435/186.png"
+  ],
+  "context_tiles": [
+    "9/434/186.png",
+    "9/435/185.png",
+    "9/436/186.png",
+    "9/435/187.png"
+  ],
+  "features": [
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S01", "kind": "city", "original": "Tumenling", "original_bbox": [38, -15, 97, 5], "source_url": "@source/74bafed8b9b31ba7", "source_glyph_complete": true, "source_printed_full_literal": "Tumenling"},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S02", "kind": "city", "original": "Zuojia", "original_bbox": [84, 25, 121, 45], "source_url": "@source/74bafed8b9b31ba7", "source_glyph_complete": true, "source_printed_full_literal": "Zuojia"},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S03", "kind": "city", "original": "Jilin City", "original_bbox": [219, 117, 279, 141], "source_url": "@source/74bafed8b9b31ba7", "source_glyph_complete": true, "source_printed_full_literal": "Jilin City"},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S04", "kind": "city", "original": "Yilaxi", "original_bbox": [78, 146, 110, 163], "source_url": "@source/74bafed8b9b31ba7", "source_glyph_complete": true, "source_printed_full_literal": "Yilaxi"},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S05", "kind": "city", "original": "Yongji", "original_bbox": [211, 203, 252, 225], "source_url": "@source/74bafed8b9b31ba7", "source_glyph_complete": true, "source_printed_full_literal": "Yongji"}
+  ],
+  "translations": [
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S01", "zh": "土们岭", "status": "approved", "source": "@source/18d8567ffb5ec59c", "record_sha256": "6bfb0479c08512b121d3c38d62530dbcb3f1556823e1262a4d3c785577bfd915", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S02", "zh": "左家", "status": "approved", "source": "@source/678f35ebcf53c99b", "record_sha256": "8f164cc8c3887976559a06d6781576bec00fd9669341385c2c58ae0c46b3f58c", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S03", "zh": "吉林", "status": "approved", "source": "@source/995756dae2f41e1d", "record_sha256": "cca4b4c94c3c5228efbbe6780d37a9e3e1b37487ab5e04fc40aa0396ed6668f7", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S04", "zh": "一拉溪", "status": "approved", "source": "@source/678f35ebcf53c99b", "record_sha256": "e8f11ec71701b30e7bfb4301c1cb7378cd72eef65abf6cb9e6745da54024b836", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S05", "zh": "永吉", "status": "approved", "source": "@source/995756dae2f41e1d", "record_sha256": "73a60144c6e0d24d903a2f1394e411db3a61ef1a4bf9259079c05f3ad030c669", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S01", "x": 67, "y": 9, "font_style": "regular", "font_size": 12, "lines": ["土们岭"]},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S02", "x": 103, "y": 34, "font_style": "regular", "font_size": 12, "lines": ["左家"]},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S03", "x": 242, "y": 124, "font_style": "regular", "font_size": 12, "lines": ["吉林"]},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S04", "x": 94, "y": 154, "font_style": "regular", "font_size": 12, "lines": ["一拉溪"]},
+    {"id": "CN-JilinCityZuojiayilaxi-z9-435-186-S05", "x": 231, "y": 214, "font_style": "regular", "font_size": 12, "lines": ["永吉"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Xiyingcheng", "source_url": "@source/4628139efc3203a7", "id": "CN-JilinCityZuojiayilaxi-z9-435-186-shared-CN-ChangchunXiyingcheng-z9-434-186-S03", "original_bbox": [-51, 50, 18, 70], "owner_region": "CN-ChangchunXiyingcheng-z9-434-186", "feature_id": "CN-ChangchunXiyingcheng-z9-434-186-S03", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Jinjia", "source_url": "@source/a0a84fafe4feca5e", "id": "CN-JilinCityZuojiayilaxi-z9-435-186-shared-CN-PanshiNorthYantongshan-z9-435-187-N01", "original_bbox": [1, 247, 31, 266], "owner_region": "CN-PanshiNorthYantongshan-z9-435-187", "feature_id": "CN-PanshiNorthYantongshan-z9-435-187-N01", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"},
+    {"kind": "city", "original": "Xiyang", "source_url": "@source/a0a84fafe4feca5e", "id": "CN-JilinCityZuojiayilaxi-z9-435-186-shared-CN-PanshiNorthYantongshan-z9-435-187-N07", "original_bbox": [145, 240, 185, 260], "owner_region": "CN-PanshiNorthYantongshan-z9-435-187", "feature_id": "CN-PanshiNorthYantongshan-z9-435-187-N07", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

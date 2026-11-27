@@ -1,0 +1,38 @@
+{
+  "id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432",
+  "z": 10,
+  "x": 838,
+  "y": 432,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/838/432.png"
+  ],
+  "context_tiles": [
+    "10/838/431.png",
+    "10/837/432.png"
+  ],
+  "features": [
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N01", "kind": "city", "original": "Guantian", "original_bbox": [21, 0, 66, 3], "source_url": "@source/d137534631a99847", "source_glyph_complete": false, "source_printed_full_literal": null},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N02", "kind": "city", "original": "Antang", "original_bbox": [35, 37, 76, 58], "source_url": "@source/d137534631a99847", "source_glyph_complete": true, "source_printed_full_literal": "Antang"},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N03", "kind": "city", "original": "Zhiyang", "original_bbox": [0, 127, 16, 142], "source_url": "@source/d137534631a99847", "source_glyph_complete": false, "source_printed_full_literal": null},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N04", "kind": "city", "original": "Taihe", "original_bbox": [205, 200, 243, 218], "source_url": "@source/d137534631a99847", "source_glyph_complete": true, "source_printed_full_literal": "Taihe"}
+  ],
+  "translations": [
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N01", "zh": "官田", "status": "approved", "source": "@source/b45a6d83d3a1a75d", "record_sha256": "2deac886583d2e5ebc7891c9179b98915b884c829cb11e115f5f620958d70abb", "review_notes": "实体坐标、残留字形和吉安县正式地名核对。"},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N02", "zh": "安塘", "status": "approved", "source": "@source/b45a6d83d3a1a75d", "record_sha256": "3d4134bbfd3db06c03f9880419739da3bc3fcc3da5f100a4a76724ce6eaf6aa6", "review_notes": "同供应商原图完整字形、位置及官方地名核对。"},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N03", "zh": "指阳", "status": "approved", "source": "@source/b45a6d83d3a1a75d", "record_sha256": "daf4518ec20a90ee250ac9eecd9886583051a0d1fc5969a57caa6b57633bbe5c", "review_notes": "实体坐标、残留字形和吉安县正式地名核对。"},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N04", "zh": "泰和", "status": "approved", "source": "@source/eabeb3f0341e1fbb", "record_sha256": "3863b8624e102c4479443a8447f5f85b16f5ed340bb36ccfe1aa56b2bcf946e3", "review_notes": "同供应商原图完整字形、位置及官方地名核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N01", "x": 43.625, "y": 8.0, "font_style": "regular", "font_size": 12, "lines": ["官田"]},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N02", "x": 55.5, "y": 47.5, "font_style": "regular", "font_size": 12, "lines": ["安塘"]},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N03", "x": 14.0, "y": 131.8125, "font_style": "regular", "font_size": 12, "lines": ["指阳"]},
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-N04", "x": 224, "y": 209, "font_style": "regular", "font_size": 12, "lines": ["泰和"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-JiangxiGuantianAntangZhiyangTaihe-z10-838-432-JianCounty", "owner_region": "CN-Jiangxi-Anfu-Zhujiang-Tongping-JianCounty-z10-838-431", "feature_id": "CN-Jiangxi-Anfu-Zhujiang-Tongping-JianCounty-z10-838-431-JianCounty", "original_bbox": [192, -6, 237, 35], "original": "Ji'an County", "kind": "city", "source_url": "@source/da178f24eb5a74c8", "review_notes": "跨北缘的吉安县原字沿用现有地名所属区。"}
+  ],
+  "legacy_suppressions": []
+}

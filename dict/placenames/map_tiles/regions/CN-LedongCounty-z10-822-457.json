@@ -1,0 +1,28 @@
+{
+  "id": "CN-LedongCounty-z10-822-457",
+  "z": 10,
+  "x": 822,
+  "y": 457,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "features": [
+    {"id": "CN-LedongCounty-z10-822-457-S01", "kind": "city", "original": "Ledong Li Autonomous County", "source_url": "@source/0af8f4da1fcba04c", "original_bbox": [93, 146, 174, 208], "source_printed_full_literal": "Ledong Li Autonomous County", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "CN-LedongCounty-z10-822-457-S01", "zh": "乐东黎族自治县", "source": "@source/01105e61d5b5d69a", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "fead42ea5da2889cda6dfa9c58fe1a56dc4d429f72e349f83d515a3b1f70abf8"}
+  ],
+  "layouts": [
+    {"id": "CN-LedongCounty-z10-822-457-S01", "x": 133.5, "y": 177.0, "font_style": "regular", "font_size": 12, "lines": ["乐东黎族自治县"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Wanchong", "source_url": "@source/109a90b4bd210771", "id": "CN-LedongCounty-z10-822-457-shared-CN-WuzhishanMaoyang-z10-823-457-N02", "original_bbox": [216, 93, 268, 111], "owner_region": "CN-WuzhishanMaoyang-z10-823-457", "feature_id": "CN-WuzhishanMaoyang-z10-823-457-N02", "review_notes": "Complete original seam is attributed to the already-rendered Source owner."}
+  ],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "10/822/457.png"
+  ],
+  "context_tiles": [
+    "10/823/457.png"
+  ]
+}

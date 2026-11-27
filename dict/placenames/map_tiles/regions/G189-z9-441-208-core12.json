@@ -1,0 +1,78 @@
+{
+  "id": "G189-z9-441-208-core12",
+  "z": 9,
+  "x": 441,
+  "y": 208,
+  "width_tiles": 3,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/441/208.png",
+    "9/442/208.png",
+    "9/443/208.png",
+    "9/441/209.png",
+    "9/442/209.png",
+    "9/443/209.png"
+  ],
+  "context_tiles": [
+    "9/441/207.png",
+    "9/442/207.png",
+    "9/443/207.png",
+    "9/442/210.png"
+  ],
+  "features": [
+    {"id": "G189-N-01", "kind": "city", "original": "Takaharu", "original_bbox": [312, 2, 365, 18], "source_url": "@source/40e44286135cff5c"},
+    {"id": "G189-N-02", "kind": "city", "original": "Satsuma", "original_bbox": [112, 11, 161, 27], "source_url": "@source/406c054c9e51e241"},
+    {"id": "G189-N-03", "kind": "city", "original": "Miyazaki", "original_bbox": [458, 9, 519, 32], "source_url": "@source/40e44286135cff5c"},
+    {"id": "G189-N-04", "kind": "city", "original": "Satsumasendai", "original_bbox": [36, 50, 128, 68], "source_url": "@source/406c054c9e51e241"},
+    {"id": "G189-N-05", "kind": "city", "original": "Kirishima", "original_bbox": [220, 82, 279, 99], "source_url": "@source/406c054c9e51e241"},
+    {"id": "G189-N-06", "kind": "city", "original": "Ichikikushikino", "original_bbox": [25, 93, 117, 111], "source_url": "@source/406c054c9e51e241"},
+    {"id": "G189-N-07", "kind": "city", "original": "Miyakonojo", "original_bbox": [322, 91, 395, 112], "source_url": "@source/40e44286135cff5c"},
+    {"id": "G189-N-08", "kind": "city", "original": "Kagoshima", "original_bbox": [140, 143, 209, 165], "source_url": "@source/406c054c9e51e241"},
+    {"id": "G189-N-09", "kind": "city", "original": "Nichinan", "original_bbox": [446, 140, 502, 159], "source_url": "@source/40e44286135cff5c"},
+    {"id": "G189-N-10", "kind": "city", "original": "Shibushi", "original_bbox": [325, 186, 379, 204], "source_url": "@source/40e44286135cff5c"},
+    {"id": "G189-N-11", "kind": "city", "original": "Minamikyushu", "original_bbox": [88, 237, 178, 257], "source_url": "@source/406c054c9e51e241"},
+    {"id": "G189-N-12", "kind": "city", "original": "Kanoya", "original_bbox": [259, 237, 306, 258], "source_url": "@source/40e44286135cff5c"},
+    {"id": "G189-N-13", "kind": "city", "original": "Makurazaki", "original_bbox": [45, 281, 115, 299], "source_url": "@source/115cb4bba09ad593"},
+    {"id": "G189-N-14", "kind": "city", "original": "Ibusuki", "original_bbox": [179, 290, 225, 308], "source_url": "@source/115cb4bba09ad593"},
+    {"id": "G189-N-15", "kind": "city", "original": "Kinko", "original_bbox": [270, 306, 304, 322], "source_url": "@source/02d3261136cb54fc"}
+  ],
+  "translations": [
+    {"id": "G189-N-01", "zh": "高原", "status": "approved", "source": "@source/550513a49fcad54b", "record_sha256": "55c4e4ed7d40f8c189576248605d71166fb91ae3fb414cbef12efa5469b65680", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-02", "zh": "萨摩", "status": "approved", "source": "@source/0a9794858adeb2b9", "record_sha256": "dd025aed7484f4f8d9657a166b22bd21bceeab74060496f508ce97bc65bb8bec", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-03", "zh": "宫崎", "status": "approved", "source": "@source/b7f2ec2f9ce2b849", "record_sha256": "54440f33a5aec2afb936f4bfcd21d3fa0b979f5bfa1c82e25cfcb3d0e578deab", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-04", "zh": "萨摩川内", "status": "approved", "source": "@source/8deba58aa1ad30c6", "record_sha256": "efd8b4422f5a2aba69e83d965501a1eea636e0a477f321cd23681971ecccffc4", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-05", "zh": "雾岛", "status": "approved", "source": "@source/e2779012cd23cc09", "record_sha256": "30149e5181061ddf3c751191d40cedbeb958a3bdb375711476ac29397c028812", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-06", "zh": "市来串木野", "status": "approved", "source": "@source/cd60f9437de96ee6", "record_sha256": "a347f58564f95f6bff57bb23cb8f1732ef257235dbb2e2db7b0db825f8d253fc", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-07", "zh": "都城", "status": "approved", "source": "@source/1ccd3a917766bf34", "record_sha256": "f06bedddf9b8e00f60598c155abeeef1bacdb844f2d837ea6e75d422ffa7206b", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-08", "zh": "鹿儿岛", "status": "approved", "source": "@source/ff65e00c1b3e927d", "record_sha256": "6440443ef4390e93554631ed76e0e671f040d2b2aad7552bbfe93ef2d327adb3", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-09", "zh": "日南", "status": "approved", "source": "@source/166a436055d225d0", "record_sha256": "502681e0918c310d8bed21a80c2aac242a7e87e717c4d046e5ec71e4043b2951", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-10", "zh": "志布志", "status": "approved", "source": "@source/c0ea729951e819c7", "record_sha256": "55bd1abdfcc8dbfffadd962d4972ae9a6e2a67785d09bfed951671e1385e8fbd", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-11", "zh": "南九州", "status": "approved", "source": "@source/6ffa2b2f5cc60e1f", "record_sha256": "ae6124bb3ab022c2fd56988579b2755fa4ad2bf0949557baf652151150f94ca5", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-12", "zh": "鹿屋", "status": "approved", "source": "@source/8bd843acf337daee", "record_sha256": "009bdea2287cf920e9b64341f4f2e290463e97fe663e7bf4ac8ec7493339a9a6", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-13", "zh": "枕崎", "status": "approved", "source": "@source/9353f5f9cc23378e", "record_sha256": "fed5e8c1d54ad1ad2d2a3baaedfd0d83b1518cd7e4689eaf055efa704d79c4e6", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-14", "zh": "指宿", "status": "approved", "source": "@source/14a6db9c4508ef7e", "record_sha256": "fa99174e937cdfd75b7818df617e4838dcd0da9688aa75b9adcf9d25c78709c2", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."},
+    {"id": "G189-N-15", "zh": "锦江", "status": "approved", "source": "@source/5ef1b0bb75214afa", "record_sha256": "a6c1a9130d63fd406324cd3c7b9162bb99a62afa0b276d685e802ddfeb1c2731", "review_notes": "Private candidate Chinese selected from physically recognized print and official Japanese identity; no formal integration or independent Target approval."}
+  ],
+  "layouts": [
+    {"id": "G189-N-01", "x": 338.5, "y": 10.0, "font_size": 11, "font_style": "regular", "lines": ["高原"]},
+    {"id": "G189-N-02", "x": 136.5, "y": 19.0, "font_size": 11, "font_style": "regular", "lines": ["萨摩"]},
+    {"id": "G189-N-03", "x": 488.5, "y": 20.5, "font_size": 12, "font_style": "regular", "lines": ["宫崎"]},
+    {"id": "G189-N-04", "x": 82.0, "y": 59.0, "font_size": 11, "font_style": "regular", "lines": ["萨摩川内"]},
+    {"id": "G189-N-05", "x": 249.5, "y": 90.5, "font_size": 11, "font_style": "regular", "lines": ["雾岛"]},
+    {"id": "G189-N-06", "x": 71.0, "y": 102.0, "font_size": 11, "font_style": "regular", "lines": ["市来串木野"]},
+    {"id": "G189-N-07", "x": 358.5, "y": 101.5, "font_size": 12, "font_style": "regular", "lines": ["都城"]},
+    {"id": "G189-N-08", "x": 174.5, "y": 154.0, "font_size": 12, "font_style": "regular", "lines": ["鹿儿岛"]},
+    {"id": "G189-N-09", "x": 474.0, "y": 149.5, "font_size": 11, "font_style": "regular", "lines": ["日南"]},
+    {"id": "G189-N-10", "x": 352.0, "y": 195.0, "font_size": 11, "font_style": "regular", "lines": ["志布志"]},
+    {"id": "G189-N-11", "x": 133.0, "y": 247.0, "font_size": 11, "font_style": "regular", "lines": ["南九州"]},
+    {"id": "G189-N-12", "x": 282.5, "y": 247.5, "font_size": 11, "font_style": "regular", "lines": ["鹿屋"]},
+    {"id": "G189-N-13", "x": 80.0, "y": 290.0, "font_size": 11, "font_style": "regular", "lines": ["枕崎"]},
+    {"id": "G189-N-14", "x": 202.0, "y": 299.0, "font_size": 11, "font_style": "regular", "lines": ["指宿"]},
+    {"id": "G189-N-15", "x": 287.0, "y": 314.0, "font_size": 11, "font_style": "regular", "lines": ["锦江"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G189-S-Nishinoomote", "owner_region": "G189-context-z9-442-210-recognized3", "feature_id": "G189-C-27", "kind": "city", "original": "Nishinoomote", "source_url": "@source/193b2f78103a3ee5", "original_bbox": [292, 510, 378, 529], "review_notes": "Exact complete world word frame owned by the named normal feature; accounts only intersecting source ink, draws no duplicate label or symbol."}
+  ],
+  "legacy_suppressions": []
+}

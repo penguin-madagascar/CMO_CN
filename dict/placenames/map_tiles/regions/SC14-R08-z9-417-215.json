@@ -15,7 +15,7 @@
     "9/418/215.png"
   ],
   "features": [
-    {"id": "SC14-N001", "kind": "city", "original": "Pingxiang", "original_bbox": [214, 0, 277, 24], "source_url": "@source/75074caa1dfa365d"},
+    {"id": "SC14-N001", "kind": "city", "original": "Pingxiang", "original_bbox": [214, 0, 282, 24], "source_url": "@source/75074caa1dfa365d"},
     {"id": "SC14-N002", "kind": "city", "original": "Liling", "original_bbox": [87, 5, 123, 26], "source_url": "@source/75074caa1dfa365d"},
     {"id": "SC14-N003", "kind": "city", "original": "Shiting", "original_bbox": [-3, 15, 38, 35], "source_url": "@source/f2a56dacc248e608"},
     {"id": "SC14-N005", "kind": "city", "original": "Longmen", "original_bbox": [-41, 93, 12, 113], "source_url": "@source/f2a56dacc248e608"},
@@ -24,7 +24,7 @@
     {"id": "SC14-N011", "kind": "city", "original": "Lianhua", "original_bbox": [249, 218, 300, 236], "source_url": "@source/75074caa1dfa365d"}
   ],
   "translations": [
-    {"id": "SC14-N001", "zh": "萍乡", "status": "approved", "source": "@source/75074caa1dfa365d", "record_sha256": "f98b619ae5f28ca7a5ed1fb148cfeacb8e5b5721e2d8e37c82b83c65fb7e0387", "review_notes": "@note/translations"},
+    {"id": "SC14-N001", "zh": "萍乡", "status": "approved", "source": "@source/75074caa1dfa365d", "record_sha256": "05d7666c4834e690f4a697296a0b0cf6a264dca53b842fb0ca1359ecd83ff1b7", "review_notes": "@note/translations"},
     {"id": "SC14-N002", "zh": "醴陵", "status": "approved", "source": "@source/75074caa1dfa365d", "record_sha256": "626fe1ff35b7508326f41c797c1f0171b33b5fca32d09c8b64372a416092564b", "review_notes": "@note/translations"},
     {"id": "SC14-N003", "zh": "石亭", "status": "approved", "source": "@source/f2a56dacc248e608", "record_sha256": "ac5976e95aceaa037daff75cd346b402b3b95dfb954e9735d1af1fae60cded7a", "review_notes": "@note/translations"},
     {"id": "SC14-N005", "zh": "龙门", "status": "approved", "source": "@source/f2a56dacc248e608", "record_sha256": "371503c0cb42074791ac1c2de47ca9249e667d565cddad997c9bfaa1a811c14a", "review_notes": "@note/translations"},

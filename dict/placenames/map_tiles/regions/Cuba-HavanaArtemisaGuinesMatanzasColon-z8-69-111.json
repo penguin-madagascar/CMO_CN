@@ -1,0 +1,51 @@
+{
+  "id": "Cuba-HavanaArtemisaGuinesMatanzasColon-z8-69-111",
+  "z": 8,
+  "x": 69,
+  "y": 111,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/69/111.png",
+    "8/70/111.png"
+  ],
+  "context_tiles": [
+    "8/71/111.png"
+  ],
+  "features": [
+    {"id": "CU8-Havana", "kind": "city", "original": "Havana", "original_bbox": [114, 19, 164, 40], "source_url": "@source/c3e58cb66c0da34c", "source_glyph_complete": true, "source_printed_full_literal": "Havana"},
+    {"id": "CU8-Artemisa", "kind": "city", "original": "Artemisa", "original_bbox": [40, 85, 90, 101], "source_url": "@source/c3e58cb66c0da34c", "source_glyph_complete": true, "source_printed_full_literal": "Artemisa"},
+    {"id": "CU8-Guines", "kind": "city", "original": "Güines", "original_bbox": [174, 80, 213, 97], "source_url": "@source/c3e58cb66c0da34c", "source_glyph_complete": true, "source_printed_full_literal": "Güines"},
+    {"id": "CU8-Matanzas", "kind": "city", "original": "Matanzas", "original_bbox": [256, 39, 308, 55], "source_url": "@source/ece6392bd581d394", "source_glyph_complete": true, "source_printed_full_literal": "Matanzas"},
+    {"id": "CU8-Colon", "kind": "city", "original": "Colón", "original_bbox": [379, 104, 412, 120], "source_url": "@source/ece6392bd581d394", "source_glyph_complete": true, "source_printed_full_literal": "Colón"}
+  ],
+  "symbols": [
+    {"id": "CU8-Cienfuegos-shared-point", "shared_source_id": "Cuba-HavanaArtemisaGuinesMatanzasColon-z8-69-111-AM25-4-Cienfuegos-shared", "kind": "circle", "x": 458.5, "y": 216.5, "size": 7, "outline_width": 1, "original_bbox": [454, 212, 463, 221]},
+    {"id": "CU8-Havana-point", "feature_id": "CU8-Havana", "kind": "circle", "x": 110.5, "y": 21.5, "size": 7, "outline_width": 1, "original_bbox": [106, 17, 115, 26]},
+    {"id": "CU8-Artemisa-point", "feature_id": "CU8-Artemisa", "kind": "circle", "x": 37.5, "y": 84.5, "size": 7, "outline_width": 1, "original_bbox": [33, 80, 42, 89]},
+    {"id": "CU8-Guines-point", "feature_id": "CU8-Guines", "kind": "circle", "x": 171.5, "y": 79.5, "size": 7, "outline_width": 1, "original_bbox": [167, 75, 176, 84]},
+    {"id": "CU8-Matanzas-point", "feature_id": "CU8-Matanzas", "kind": "circle", "x": 253.5, "y": 38.5, "size": 7, "outline_width": 1, "original_bbox": [249, 34, 258, 43]},
+    {"id": "CU8-Colon-point", "feature_id": "CU8-Colon", "kind": "circle", "x": 375.5, "y": 103.5, "size": 7, "outline_width": 1, "original_bbox": [371, 99, 380, 108]}
+  ],
+  "translations": [
+    {"id": "CU8-Havana", "zh": "哈瓦那", "source": "@source/a0c71248982fbbe6", "status": "approved", "record_sha256": "4328d699aa5f66b463f94db1c016935798facab8db5d4f11dfb642e3d582f9e8", "review_notes": "核对原图和古巴地名坐标，沿用公开中文用字。"},
+    {"id": "CU8-Artemisa", "zh": "阿特米萨", "source": "@source/e031c4c07a3ec5eb", "status": "approved", "record_sha256": "5c74d78476fad9db34fd62793969adc9485d6684ac624cbb0d26bb395c5c5184", "review_notes": "核对原图和古巴地名坐标，沿用公开中文用字。"},
+    {"id": "CU8-Guines", "zh": "圭内斯", "source": "@source/435066a89847b060", "status": "approved", "record_sha256": "df13dd3928a3dc2f9334c8bd727eab3b5b8c9bab4baabe278d7b62845adf0571", "review_notes": "核对马亚韦克省的 Güines，采用该项目音译。"},
+    {"id": "CU8-Matanzas", "zh": "马坦萨斯", "source": "@source/e031c4c07a3ec5eb", "status": "approved", "record_sha256": "65adb1d9eb95bdaad01b15afb18a5bb7d75c7bfcf32f092220e1cdcb05f7a9d6", "review_notes": "核对原图和古巴地名坐标，沿用公开中文用字。"},
+    {"id": "CU8-Colon", "zh": "科隆", "source": "@source/4df96db7b86154c9", "status": "approved", "record_sha256": "96afe8de23d1c19e79b19c4a27cfeb8fbaa8132c6d877aeccee6e744eb451ae8", "review_notes": "核对原图和古巴地名坐标，沿用公开中文用字。"}
+  ],
+  "layouts": [
+    {"id": "CU8-Havana", "x": 139.0, "y": 29.5, "font_size": 12, "font_style": "regular"},
+    {"id": "CU8-Artemisa", "x": 65.0, "y": 93.0, "font_size": 12, "font_style": "regular"},
+    {"id": "CU8-Guines", "x": 193.5, "y": 88.5, "font_size": 12, "font_style": "regular"},
+    {"id": "CU8-Matanzas", "x": 282.0, "y": 47.0, "font_size": 12, "font_style": "regular"},
+    {"id": "CU8-Colon", "x": 395.5, "y": 112.0, "font_size": 12, "font_style": "regular"}
+  ],
+  "shared_sources": [
+    {"id": "Cuba-HavanaArtemisaGuinesMatanzasColon-z8-69-111-AM25-4-Cienfuegos-shared", "owner_region": "AM-Caribbean-z8-WestBridge", "feature_id": "AM25-4-Cienfuegos", "kind": "city", "original": "Cienfuegos", "original_bbox": [453, 211, 523, 237], "source_url": "@source/ece6392bd581d394", "review_notes": "精确跨片原图字迹，共用既有译名。"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "Cuba-HavanaArtemisaGuinesMatanzasColon-z8-69-111-Cities999", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_native": null, "source_png": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 999, "original_Chinese_name": "圣米格尔-德尔帕德龙", "lat_f32_bits": 1102612471, "lon_f32_bits": 3265566438, "flags": 0, "level": 1}, "layout": {"x": 122.70277777777665, "y": 51.5, "font_style": "regular", "font_size": 12, "lines": ["圣米格尔-德尔帕德龙"]}}
+  ]
+}

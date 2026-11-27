@@ -1,0 +1,44 @@
+{
+  "id": "CN-ZhuchengWulianJuxian-z9-425-201",
+  "z": 9,
+  "x": 425,
+  "y": 201,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/425/201.png"
+  ],
+  "context_tiles": [
+    "9/424/201.png",
+    "9/426/201.png"
+  ],
+  "features": [
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N00", "kind": "city", "original": "Dongguan", "original_bbox": [21, 12, 79, 31], "source_url": "@source/894c906f2ad52657", "source_glyph_complete": true, "source_printed_full_literal": "Dongguan"},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N01", "kind": "city", "original": "Zucheng", "original_bbox": [182, 7, 236, 29], "source_url": "@source/894c906f2ad52657", "source_glyph_complete": true, "source_printed_full_literal": "Zucheng"},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N02", "kind": "city", "original": "Wulian", "original_bbox": [113, 114, 159, 132], "source_url": "@source/894c906f2ad52657", "source_glyph_complete": true, "source_printed_full_literal": "Wulian"},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N03", "kind": "city", "original": "Juxian", "original_bbox": [-21, 191, 20, 209], "source_url": "@source/894c906f2ad52657", "source_glyph_complete": true, "source_printed_full_literal": "Juxian"},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N04", "kind": "city", "original": "Sanzhuang", "original_bbox": [93, 228, 153, 249], "source_url": "@source/894c906f2ad52657", "source_glyph_complete": true, "source_printed_full_literal": "Sanzhuang"}
+  ],
+  "translations": [
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N00", "zh": "东莞", "status": "approved", "source": "@source/9e003f2e302d39ad", "record_sha256": "b9d4fd1c7d0c35269c3856baa8d812d1a305c801df78d6a5cd9e394ce844fcdb", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N01", "zh": "诸城", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "faffec7d8e0b3f6077919c36cc61df52f684b43df02fc71a899155dd88ab1bf0", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N02", "zh": "五莲", "status": "approved", "source": "@source/7f7e2da9b9ccb216", "record_sha256": "3d6b7a362dc47e5bfb5e8c9c2f0df0566d4f73ee05e648ee3e718c31b2820a38", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N03", "zh": "莒县", "status": "approved", "source": "@source/7f7e2da9b9ccb216", "record_sha256": "24f721336de4af5455e7c8bcb302a4014511850ddb0571c765da78f86e2a7235", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N04", "zh": "三庄", "status": "approved", "source": "@source/9e003f2e302d39ad", "record_sha256": "374c78bc5b9251f50c104cb27ca79fa0dbe4cf0c52e3f2f2484d61a65d72220d", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N00", "x": 50.0, "y": 21.5, "font_size": 12, "font_style": "regular", "lines": ["东莞"]},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N01", "x": 210, "y": 34, "font_size": 12, "font_style": "regular", "lines": ["诸城"]},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N02", "x": 136.0, "y": 123.0, "font_size": 12, "font_style": "regular", "lines": ["五莲"]},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N03", "x": 17, "y": 200, "font_size": 12, "font_style": "regular", "lines": ["莒县"]},
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-N04", "x": 123.0, "y": 238.5, "font_size": 12, "font_style": "regular", "lines": ["三庄"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-Shared-0", "owner_region": "SDS2-Shandong-z9-426-201", "feature_id": "SDS2-003", "kind": "city", "original": "Haiqing", "original_bbox": [247, 158, 290, 178], "source_url": "@source/8dde482fc482b3bc", "review_notes": "跨片原文用完整墨迹连接到既有中文。"}
+  ],
+  "canonical_captions": [
+    {"id": "CN-ZhuchengWulianJuxian-z9-425-201-Cities561", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 207.3027777777752, "y": 16.47922962411394, "font_style": "regular", "font_size": 12, "lines": ["密州"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 561, "original_Chinese_name": "密州", "lat_f32_bits": 1108343448, "lon_f32_bits": 1122945925, "flags": 0, "level": 1}}
+  ],
+  "legacy_suppressions": []
+}

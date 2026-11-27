@@ -1,0 +1,31 @@
+{
+  "id": "SK-Medzilaborce-Snina-z9-287-175",
+  "z": 9,
+  "x": 287,
+  "y": 175,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/287/175.png"
+  ],
+  "context_tiles": [
+    "9/287/176.png"
+  ],
+  "features": [
+    {"id": "SK-Medzilaborce-Snina-z9-287-175-Medzilaborce", "kind": "city", "original": "Medzilaborce", "original_bbox": [3, 54, 76, 70], "source_url": "@source/3d4a09b724cba2a0", "source_glyph_complete": true, "source_printed_full_literal": "Medzilaborce"},
+    {"id": "SK-Medzilaborce-Snina-z9-287-175-Snina", "kind": "city", "original": "Snina", "original_bbox": [114, 210, 147, 227], "source_url": "@source/3d4a09b724cba2a0", "source_glyph_complete": true, "source_printed_full_literal": "Snina"}
+  ],
+  "translations": [
+    {"id": "SK-Medzilaborce-Snina-z9-287-175-Medzilaborce", "zh": "梅济拉博尔采", "status": "approved", "source": "@source/22f9668cb03b7aeb", "review_notes": "Read complete source literal. Simplified wording agrees with exact GeoNames local Prešov city alias and scoped municipal identity.", "record_sha256": "f725705bf668c5b24beb4439e63b30c4d7f64afd8f2e170cad568597cfb163cb"},
+    {"id": "SK-Medzilaborce-Snina-z9-287-175-Snina", "zh": "斯尼纳", "status": "approved", "source": "@source/2ed5a40eb3f75f3e", "review_notes": "Read complete source literal. Simplified wording agrees with exact GeoNames local Prešov city alias and scoped municipal identity.", "record_sha256": "9d555d9563eb2dde3ff4505883a090ef5145fd9d98726af2cc4a5fd057f56185"}
+  ],
+  "layouts": [
+    {"id": "SK-Medzilaborce-Snina-z9-287-175-Medzilaborce", "x": 39.5, "y": 62, "font_size": 12, "font_style": "regular"},
+    {"id": "SK-Medzilaborce-Snina-z9-287-175-Snina", "x": 130.5, "y": 218.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "SK-Medzilaborce-Snina-z9-287-175-Humenné-cross-boundary", "owner_region": "UA-SouthBoundary-z9-287-176", "feature_id": "UAS16-001", "kind": "city", "original": "Humenné", "original_bbox": [12, 240, 65, 257], "source_url": "@source/3d4a09b724cba2a0", "review_notes": "Exact north-side original text crop already owned and rendered once on the southern formal region."}
+  ],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,52 @@
+{
+  "id": "CN-YulinShenmu-z9-412-196",
+  "z": 9,
+  "x": 412,
+  "y": 196,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/412/196.png"
+  ],
+  "context_tiles": [
+    "9/411/196.png",
+    "9/411/197.png",
+    "9/412/197.png",
+    "9/413/196.png"
+  ],
+  "features": [
+    {"id": "CN-YulinShenmu-z9-412-196-N01", "kind": "city", "original": "Xiaohaotu", "original_bbox": [-52, 9, 6, 25], "source_url": "@source/ca1fc22fd5a6403b", "source_glyph_complete": true, "source_printed_full_literal": "Xiaohaotu"},
+    {"id": "CN-YulinShenmu-z9-412-196-N02", "kind": "city", "original": "Jinjie", "original_bbox": [164, 23, 194, 43], "source_url": "@source/ca1fc22fd5a6403b", "source_glyph_complete": true, "source_printed_full_literal": "Jinjie"},
+    {"id": "CN-YulinShenmu-z9-412-196-N03", "kind": "city", "original": "Dabaodang", "original_bbox": [80, 80, 142, 99], "source_url": "@source/ca1fc22fd5a6403b", "source_glyph_complete": true, "source_printed_full_literal": "Dabaodang"},
+    {"id": "CN-YulinShenmu-z9-412-196-N04", "kind": "city", "original": "Mengjiawan", "original_bbox": [-44, 102, 23, 122], "source_url": "@source/ca1fc22fd5a6403b", "source_glyph_complete": true, "source_printed_full_literal": "Mengjiawan"},
+    {"id": "CN-YulinShenmu-z9-412-196-N05", "kind": "city", "original": "Gaojiabu", "original_bbox": [194, 118, 245, 138], "source_url": "@source/ca1fc22fd5a6403b", "source_glyph_complete": true, "source_printed_full_literal": "Gaojiabu"},
+    {"id": "CN-YulinShenmu-z9-412-196-N06", "kind": "city", "original": "Mahuangliang", "original_bbox": [57, 166, 134, 186], "source_url": "@source/ca1fc22fd5a6403b", "source_glyph_complete": true, "source_printed_full_literal": "Mahuangliang"},
+    {"id": "CN-YulinShenmu-z9-412-196-N07", "kind": "city", "original": "Niujialiang", "original_bbox": [0, 193, 41, 212], "source_url": "@source/ca1fc22fd5a6403b", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null},
+    {"id": "CN-YulinShenmu-z9-412-196-N09", "kind": "city", "original": "Yulin", "original_bbox": [-4, 240, 34, 260], "source_url": "@source/ca1fc22fd5a6403b", "source_glyph_complete": true, "source_printed_full_literal": "Yulin"}
+  ],
+  "translations": [
+    {"id": "CN-YulinShenmu-z9-412-196-N01", "zh": "小壕兔", "status": "approved", "source": "@source/93e7347565e4480a", "record_sha256": "11b43370ac1c2abd64c9ebdb0135cabe8254238eede0342e57dd1a1d6967454f", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-YulinShenmu-z9-412-196-N02", "zh": "锦界", "status": "approved", "source": "@source/195ba0f3223c6c2d", "record_sha256": "4f3f7831eec4a8c53d1934e2d3e0239d47cd0f3cf197b3d1c6270c3ede53e545", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-YulinShenmu-z9-412-196-N03", "zh": "大保当", "status": "approved", "source": "@source/5676b743247ef9a9", "record_sha256": "018aac9d339c6d87ad9dc40aa0d329a859f5ec277399fba77b4c29944d802550", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-YulinShenmu-z9-412-196-N04", "zh": "孟家湾", "status": "approved", "source": "@source/0ebfd074e6b4cf94", "record_sha256": "55064a5c1ed397337df8b0d08306ed756431069ce996bd3e6c3bdeaa1f473c7a", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-YulinShenmu-z9-412-196-N05", "zh": "高家堡", "status": "approved", "source": "@source/22e13757ea41657b", "record_sha256": "d7c108617f7ac31d813198e33f27573817fa53caa1413e7470d5a06566877d43", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-YulinShenmu-z9-412-196-N06", "zh": "麻黄梁", "status": "approved", "source": "@source/a8897706fe3fd57f", "record_sha256": "d86fc5b6af5ed63e4b60783c1a5faae718630567fb86f2d85fcce368e607496c", "review_notes": "原图拼写与同地坐标的中英文地名对应。"},
+    {"id": "CN-YulinShenmu-z9-412-196-N07", "zh": "牛家梁", "status": "approved", "source": "@source/7ec1ef84aef70b74", "record_sha256": "1ef2354a56c52e154101915d2e645adedc62d3e72b6ac0a1bb06604cd0527f53", "review_notes": "同级原图西缘实见 jialiang；同源十级图在相应西邻保留起首笔画。中文与完整拼写采用同坐标历史地名牛家梁镇。"},
+    {"id": "CN-YulinShenmu-z9-412-196-N09", "zh": "榆林", "status": "approved", "source": "@source/bead74e3fd26e428", "record_sha256": "3af389ac954d4a3c028577647f404ad48b49473568236b81a52649b583b92226", "review_notes": "原图拼写与同地坐标的中英文地名对应。"}
+  ],
+  "layouts": [
+    {"id": "CN-YulinShenmu-z9-412-196-N01", "x": 20.5, "y": 17.0, "lines": ["小壕兔"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-YulinShenmu-z9-412-196-N02", "x": 179.0, "y": 33.0, "lines": ["锦界"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-YulinShenmu-z9-412-196-N03", "x": 111.0, "y": 89.5, "lines": ["大保当"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-YulinShenmu-z9-412-196-N04", "x": 20.5, "y": 112.0, "lines": ["孟家湾"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-YulinShenmu-z9-412-196-N05", "x": 219.5, "y": 128.0, "lines": ["高家堡"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-YulinShenmu-z9-412-196-N06", "x": 95.5, "y": 176.0, "lines": ["麻黄梁"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-YulinShenmu-z9-412-196-N07", "x": 20.5, "y": 202.5, "lines": ["牛家梁"], "font_size": 12, "font_style": "regular"},
+    {"id": "CN-YulinShenmu-z9-412-196-N09", "x": 15.0, "y": 247, "lines": ["榆林"], "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-YulinShenmu-z9-412-196-shared-Shanggaozhai", "owner_region": "CN-ShenmuWanzhen-z9-413-196", "feature_id": "CN-ShenmuWanzhen-z9-413-196-N04", "kind": "city", "original": "Shanggaozhai", "source_url": "@source/0064df5cb66f5027", "original_bbox": [184, 229, 261, 250], "review_notes": "拼接原版相邻瓦片，与同级既有标注的完整原字框一致。"}
+  ],
+  "legacy_suppressions": []
+}

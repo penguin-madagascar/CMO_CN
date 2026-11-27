@@ -357,5 +357,8 @@
   ],
   "shared_sources": [
     {"id": "shared-AP-I8-047", "owner_region": "AP-Myanmar-z8-192-112", "feature_id": "AP-M8-043", "kind": "city", "original": "Chon Buri", "source_url": "@source/de420b874dac0f81", "original_bbox": [-52, 1636, 2, 1655], "review_notes": "@note/shared_sources"}
+  ],
+  "canonical_captions": [
+    {"id": "WWP-Cities-4207-z8", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 4207, "original_Chinese_name": "保禄市", "lat_f32_bits": 1094239367, "lon_f32_bits": 1121426829, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 1177.0, "y": 1980.0, "font_style": "regular", "font_size": 12, "lines": ["保禄市"]}}
   ]
 }

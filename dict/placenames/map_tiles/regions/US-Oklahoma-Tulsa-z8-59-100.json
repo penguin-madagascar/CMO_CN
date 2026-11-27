@@ -1,0 +1,30 @@
+{
+  "id": "US-Oklahoma-Tulsa-z8-59-100",
+  "z": 8,
+  "x": 59,
+  "y": 100,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/59/100.png"
+  ],
+  "context_tiles": [
+    "8/58/100.png"
+  ],
+  "features": [
+    {"id": "US-Oklahoma-Tulsa-z8-59-100-Tulsa", "kind": "city", "original": "Tulsa", "original_bbox": [185, 95, 225, 117], "source_url": "@source/87b86da9c64bb41b", "source_glyph_complete": true, "source_printed_full_literal": "Tulsa"}
+  ],
+  "translations": [
+    {"id": "US-Oklahoma-Tulsa-z8-59-100-Tulsa", "zh": "图尔萨", "source": "@source/40a82b760636355a", "status": "approved", "record_sha256": "2a571a6526c605127c762d93f91afc15ffc941f15f993e0cf2be0fa0c53eee71", "review_notes": "原版文字和圆点完整，按同一城市坐标核对。已见的旧中文显示用名沿用。"}
+  ],
+  "layouts": [
+    {"id": "US-Oklahoma-Tulsa-z8-59-100-Tulsa", "x": 217, "y": 110, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [
+    {"id": "US-Oklahoma-Tulsa-z8-59-100-Tulsa-circle", "feature_id": "US-Oklahoma-Tulsa-z8-59-100-Tulsa", "kind": "circle", "size": 9, "outline_width": 1, "original_bbox": [185, 95, 194, 104], "x": 189.5, "y": 99.5}
+  ],
+  "shared_sources": [
+    {"id": "US-Oklahoma-Tulsa-z8-59-100-Stillwater-Shared", "owner_region": "US-Oklahoma-EnidStillwaterOklahomaCityNormanLawton-z8-58-100", "feature_id": "US-Oklahoma-EnidStillwaterOklahomaCityNormanLawton-z8-58-100-Stillwater", "kind": "city", "original": "Stillwater", "original_bbox": [-9, 104, 52, 126], "source_url": "@source/0e81824c522e8858", "review_notes": "横跨西侧瓦片缝的同一地名，由带城市点的西侧区域负责显示。"}
+  ],
+  "legacy_suppressions": []
+}

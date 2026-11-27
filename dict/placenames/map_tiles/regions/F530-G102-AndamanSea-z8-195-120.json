@@ -1,0 +1,24 @@
+{
+  "id": "F530-G102-AndamanSea-z8-195-120",
+  "z": 8,
+  "x": 195,
+  "y": 120,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/195/120.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "F5-N03", "kind": "marine", "original": "Andaman Sea", "original_bbox": [91, 193, 193, 237], "source_url": "@source/05f924dc872da7f4"}
+  ],
+  "symbols": [],
+  "translations": [
+    {"id": "F5-N03", "zh": "安达曼海", "status": "approved", "source": "@source/05f924dc872da7f4", "record_sha256": "3ecf6e6747acbefef9b83fffc937b7370053ae9aa769d0b51a4495e7438f28b0", "review_notes": "Original supplier PNG URI proves the original printed label only. Chinese uses the different-SOURCE effective lexical grade in the bound per-ID contract: EXISTING_ORIGINAL_WWP_PROJECT_DICTIONARY_CHINESE_LEXICAL_EVIDENCE_NOT_OFFICIAL_OR_SUPPLIER_VECTOR. NE GEONAMESID=-1 is not a record bridge; valid NE/GN links are database context only. Supplier ID/admin/vector remain null. Actual Target is pending Root selection and different review. Root61be actual author SELF model only; different TARGET pending."}
+  ],
+  "layouts": [
+    {"id": "F5-N03", "x": 142, "y": 215, "font_size": 18, "font_style": "regular", "lines": ["安达曼海"]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

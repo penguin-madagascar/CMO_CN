@@ -1,0 +1,32 @@
+{
+  "id": "Niger-Diffa-z8-136-118-2x1",
+  "z": 8,
+  "x": 136,
+  "y": 118,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/136/118.png",
+    "8/137/118.png"
+  ],
+  "context_tiles": [
+    "8/135/118.png"
+  ],
+  "features": [
+    {"id": "Niger-Diffa-z8-136-118-2x1-City", "kind": "city", "original": "Diffa", "original_bbox": [244, 110, 280, 131], "source_url": "@source/eb1511bc81b80449", "source_glyph_complete": true, "source_printed_full_literal": "Diffa"}
+  ],
+  "translations": [
+    {"id": "Niger-Diffa-z8-136-118-2x1-City", "zh": "迪法", "status": "approved", "source": "@source/88ba08a6f0b836c8", "record_sha256": "56e2c49553e3cdc463594e733f2876548a5df28422918436b135af9ee54d8555", "review_notes": "Official Chinese embassy economic office calls the regional capital Diffa city; same stem in approved z7 original labels. Local GeoNames PPLA point matches source circle."}
+  ],
+  "layouts": [
+    {"id": "Niger-Diffa-z8-136-118-2x1-City", "x": 265.5, "y": 123.5, "font_size": 11, "font_style": "regular", "lines": ["迪法"]}
+  ],
+  "symbols": [
+    {"id": "Niger-Diffa-z8-136-118-2x1-City-point", "feature_id": "Niger-Diffa-z8-136-118-2x1-City", "kind": "circle", "x": 248.5, "y": 114.5, "size": 7, "outline_width": 1, "original_bbox": [244, 110, 253, 119]}
+  ],
+  "shared_sources": [
+    {"id": "Niger-Diffa-z8-136-118-2x1-SharedGashua", "kind": "city", "original": "Gashua", "original_bbox": [-43, 192, 6, 213], "source_url": "@source/cb93582561e49973", "owner_region": "WCA-WestCentralAfrica-z8-main", "feature_id": "WCA8-018", "review_notes": "Complete same-zoom document box and exact source PNG seam matched WCA8-018. This is the same old Gashua ownership."}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

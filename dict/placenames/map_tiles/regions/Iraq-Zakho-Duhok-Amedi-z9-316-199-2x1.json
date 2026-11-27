@@ -1,0 +1,55 @@
+{
+  "id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1",
+  "z": 9,
+  "x": 316,
+  "y": 199,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/316/199.png",
+    "9/317/199.png"
+  ],
+  "context_tiles": [
+    "9/316/198.png",
+    "9/317/198.png",
+    "9/318/199.png"
+  ],
+  "features": [
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N00", "kind": "city", "original": "Zakho", "original_bbox": [162, 0, 198, 16], "source_url": "@source/e4a37850e1653dc8", "source_glyph_complete": true, "source_printed_full_literal": "Zakho"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N01", "kind": "city", "original": "new Bazalan", "original_bbox": [167, 86, 212, 117], "source_url": "@source/e4a37850e1653dc8", "source_glyph_complete": true, "source_printed_full_literal": "new Bazalan"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N02", "kind": "city", "original": "Zummar", "original_bbox": [130, 218, 178, 234], "source_url": "@source/e4a37850e1653dc8", "source_glyph_complete": true, "source_printed_full_literal": "Zummar"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N03", "kind": "city", "original": "Batifa", "original_bbox": [284, -14, 318, 2], "source_url": "@source/f9f8bc920a5509cc", "source_glyph_complete": true, "source_printed_full_literal": "Batifa"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N04", "kind": "city", "original": "Amedi", "original_bbox": [454, 22, 491, 39], "source_url": "@source/f9f8bc920a5509cc", "source_glyph_complete": true, "source_printed_full_literal": "Amedi"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N05", "kind": "city", "original": "Mangesh", "original_bbox": [305, 48, 356, 67], "source_url": "@source/f9f8bc920a5509cc", "source_glyph_complete": true, "source_printed_full_literal": "Mangesh"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N06", "kind": "city", "original": "Duhok", "original_bbox": [273, 131, 315, 148], "source_url": "@source/f9f8bc920a5509cc", "source_glyph_complete": true, "source_printed_full_literal": "Duhok"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N07", "kind": "city", "original": "En Sifne", "original_bbox": [401, 202, 448, 219], "source_url": "@source/f9f8bc920a5509cc", "source_glyph_complete": true, "source_printed_full_literal": "En Sifne"}
+  ],
+  "translations": [
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N00", "zh": "扎胡", "status": "approved", "source": "@source/de57b59c289acedb", "record_sha256": "c275802595c1b141aabac6982405ee836c18c5451096a5a4fe19adb6402488c1", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N01", "zh": "新巴扎兰", "status": "approved", "source": "@source/149811b315aa29c0", "record_sha256": "8d99e9d21483b28dc599b13f7b4bd8ace879534ce2e529c2a1f70cbc5775e9eb", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N02", "zh": "祖马尔", "status": "approved", "source": "@source/57ca771a9670b325", "record_sha256": "225d6b1969214314c40e94152263d01aab856c28e2ad3251f8b19d393bd15be8", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N03", "zh": "巴蒂法", "status": "approved", "source": "@source/6bbcdd578453b179", "record_sha256": "10b05f0cfd0d3249d490dc23ea7d0e24fceecf24ce0793af8c5155b74369b3fa", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N04", "zh": "阿迈迪耶", "status": "approved", "source": "@source/9b1f3179c8625d22", "record_sha256": "a4e9793c1899549927303faed7a8bb148c5a492eed3bca1b8a2e98c839b5b305", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N05", "zh": "曼盖什", "status": "approved", "source": "@source/e7c8eed1ecd71211", "record_sha256": "b94995f974b8b56e232468b57d5b791de6f04375495727bc9027f481b2610a0c", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N06", "zh": "达霍克", "status": "approved", "source": "@source/f90c386231088e31", "record_sha256": "5e7ce9f498180243fc9bcea404bd482ccb7ba1d399007933697eae0f515c9730", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N07", "zh": "艾因锡夫尼", "status": "approved", "source": "@source/95c6db3f652aacde", "record_sha256": "116a64d2df3f7f60aba9e2eaf286ae61d8e1a4e4181dcbe77a9542c8e62e9019", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N00", "x": 180.0, "y": 9.0, "font_size": 12, "font_style": "regular", "lines": ["扎胡"]},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N01", "x": 189.5, "y": 101.5, "font_size": 12, "font_style": "regular", "lines": ["新巴扎兰"]},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N02", "x": 154.0, "y": 226.0, "font_size": 12, "font_style": "regular", "lines": ["祖马尔"]},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N03", "x": 301.0, "y": 9.0, "font_size": 12, "font_style": "regular", "lines": ["巴蒂法"]},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N04", "x": 472.5, "y": 30.5, "font_size": 12, "font_style": "regular", "lines": ["阿迈迪耶"]},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N05", "x": 330.5, "y": 57.5, "font_size": 12, "font_style": "regular", "lines": ["曼盖什"]},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N06", "x": 294.0, "y": 139.5, "font_size": 12, "font_style": "regular", "lines": ["达霍克"]},
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-N07", "x": 424.5, "y": 210.5, "font_size": 12, "font_style": "regular", "lines": ["艾因锡夫尼"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-Shared-0", "owner_region": "LF20-R06-z9-318-199", "feature_id": "LF20-N006", "kind": "city", "original": "Deraluk", "original_bbox": [510, 40, 555, 56], "source_url": "@source/fee8bac461fbc938", "review_notes": "跨片原文用完整墨迹连接到既有中文。"}
+  ],
+  "canonical_captions": [
+    {"id": "Iraq-Zakho-Duhok-Amedi-z9-316-199-2x1-Cities2127", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 309.7708333333285, "y": 160.8016623378062, "font_style": "regular", "font_size": 12, "lines": ["西纳"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2127, "original_Chinese_name": "西纳", "lat_f32_bits": 1108556519, "lon_f32_bits": 1110189883, "flags": 0, "level": 1}}
+  ],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "B7-C115-z9-87-205-1-1",
+  "z": 9,
+  "x": 87,
+  "y": 205,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/87/205.png"
+  ],
+  "context_tiles": [
+    "9/87/204.png"
+  ],
+  "features": [
+    {"id": "B7-N16", "kind": "city", "original": "Avalon", "original_bbox": [162, 158, 202, 175], "source_url": "@source/e9785df0c4015e94"}
+  ],
+  "translations": [
+    {"id": "B7-N16", "zh": "阿瓦隆", "status": "approved", "source": "@source/e9785df0c4015e94", "review_notes": "Original printed-word evidence is the supplier PNG URL only. Chinese is Root-selected exact-instance lexical content, grade OFFICIAL_PUBLIC_TEXT_BILINGUAL_LEXICAL_USE_NOT_PROVIDER_ENTITY_BRIDGE; Source Q fa82 and Root 3a88 retain complete evidence. No supplier/GN/admin/vector identity certification.", "record_sha256": "3f0e33a8290661cfa52f6183b01481bb0ae96b1256a70df9653196bf76157d47"}
+  ],
+  "layouts": [
+    {"id": "B7-N16", "x": 182.0, "y": 166.5, "font_size": 12, "font_style": "regular", "lines": ["阿瓦隆"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "B7-A15", "owner_region": "WU-SealCorrectionPair-z9-87-203", "feature_id": "WUS2-006", "kind": "city", "original": "Rancho Palos Verdes", "original_bbox": [130, -27, 204, 6], "source_url": "@source/cfd30665a676a8ef", "review_notes": "Exact same physical original Source word/complete owner box and immutable sole normal Chinese output. No second caption; no owner-native-source ref. Source proof fa82 and Root lexical 3a88 remain separately bound."}
+  ],
+  "canonical_captions": [],
+  "legacy_suppressions": []
+}

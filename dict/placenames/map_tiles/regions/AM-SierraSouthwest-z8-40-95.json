@@ -422,5 +422,8 @@
     {"feature_id": "AM8-13-Reno", "name": "雷诺", "lat": 39.52962875366211, "lon": -119.81379699707031, "level": 1, "source": "@source/d032e5c5dba4155e", "review_notes": "@note/legacy_suppressions"},
     {"feature_id": "AM8-59-Provo", "name": "普罗沃", "lat": 40.23384094238281, "lon": -111.65853118896484, "level": 1, "source": "@source/4a1e80e024474005", "review_notes": "@note/legacy_suppressions"},
     {"feature_id": "AM8-51-Salt-Lake-City", "name": "盐湖城", "lat": 40.760780334472656, "lon": -111.89105224609375, "level": 1, "source": "@source/a9e420cb8f2f8fd4", "review_notes": "@note/legacy_suppressions"}
+  ],
+  "canonical_captions": [
+    {"id": "WWP-Cities-4010-z8", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 4010, "original_Chinese_name": "戴利城", "lat_f32_bits": 1108791989, "lon_f32_bits": 3270831233, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 231.0, "y": 1035.0, "font_style": "regular", "font_size": 12, "lines": ["戴利城"]}}
   ]
 }

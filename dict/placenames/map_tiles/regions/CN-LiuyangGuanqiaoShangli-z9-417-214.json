@@ -1,0 +1,41 @@
+{
+  "id": "CN-LiuyangGuanqiaoShangli-z9-417-214",
+  "z": 9,
+  "x": 417,
+  "y": 214,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/417/214.png"
+  ],
+  "context_tiles": [
+    "9/416/214.png"
+  ],
+  "features": [
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N00", "kind": "city", "original": "Dongyang", "original_bbox": [43, 29, 100, 49], "source_url": "@source/d972c3019a775169", "source_glyph_complete": true, "source_printed_full_literal": "Dongyang"},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N01", "kind": "city", "original": "Liuyang", "original_bbox": [133, 48, 183, 70], "source_url": "@source/d972c3019a775169", "source_glyph_complete": true, "source_printed_full_literal": "Liuyang"},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N02", "kind": "city", "original": "Baijia", "original_bbox": [-6, 96, 27, 115], "source_url": "@source/d972c3019a775169", "source_glyph_complete": true, "source_printed_full_literal": "Baijia"},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N03", "kind": "city", "original": "Guanqiao", "original_bbox": [28, 143, 81, 163], "source_url": "@source/d972c3019a775169", "source_glyph_complete": true, "source_printed_full_literal": "Guanqiao"},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N04", "kind": "city", "original": "Shangli", "original_bbox": [190, 164, 238, 186], "source_url": "@source/d972c3019a775169", "source_glyph_complete": true, "source_printed_full_literal": "Shangli"}
+  ],
+  "translations": [
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N00", "zh": "洞阳", "status": "approved", "source": "@source/9d3cdadd39ce1243", "record_sha256": "7f38d3b9a82db317591b2a3d102c38954f9bc2c72dacb492b7275981e67a769d", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N01", "zh": "浏阳", "status": "approved", "source": "@source/dd559c23c94295d2", "record_sha256": "c292f72da561dd2d2d5ae79282a8e122e3511e0f0ce6e5ccba83c2d222e20a77", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N02", "zh": "柏加", "status": "approved", "source": "@source/c4035e48e0057452", "record_sha256": "299272842d62f3e7c13159b8256d76f9f1e5bb96343aac67303704d4ed90908e", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N03", "zh": "官桥", "status": "approved", "source": "@source/9d3cdadd39ce1243", "record_sha256": "c162f8c444e2aba8e1ba6ab3ec4d07b94dedbfdfe6d98d129c2f4e0f3fec8ff4", "review_notes": "按原图完整字样和同地实体核对中文地名。"},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N04", "zh": "上栗", "status": "approved", "source": "@source/e5916ae83127dfe2", "record_sha256": "1a46e9e3a1ba8c916e66961cf570b703b0617a5f60d91d4c907bb208d8236842", "review_notes": "按原图完整字样和同地实体核对中文地名。"}
+  ],
+  "layouts": [
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N00", "x": 71.5, "y": 39.0, "font_size": 12, "font_style": "regular", "lines": ["洞阳"]},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N01", "x": 156, "y": 42, "font_size": 12, "font_style": "regular", "lines": ["浏阳"]},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N02", "x": 16, "y": 105, "font_size": 12, "font_style": "regular", "lines": ["柏加"]},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N03", "x": 54.5, "y": 153.0, "font_size": 12, "font_style": "regular", "lines": ["官桥"]},
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-N04", "x": 214.0, "y": 175.0, "font_size": 12, "font_style": "regular", "lines": ["上栗"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "canonical_captions": [
+    {"id": "CN-LiuyangGuanqiaoShangli-z9-417-214-Cities720", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 154.3611111111095, "y": 60.23962137361377, "font_style": "regular", "font_size": 12, "lines": ["关口"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 720, "original_Chinese_name": "关口", "lat_f32_bits": 1105282261, "lon_f32_bits": 1122189586, "flags": 0, "level": 1}}
+  ],
+  "legacy_suppressions": []
+}

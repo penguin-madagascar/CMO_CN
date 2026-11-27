@@ -1,0 +1,24 @@
+{
+  "id": "US-Flagstaff-z9-97-202",
+  "z": 9,
+  "x": 97,
+  "y": 202,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/97/202.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "US-Flagstaff-z9-97-202-label", "kind": "city", "original": "Flagstaff", "original_bbox": [23, 107, 84, 131], "source_url": "@source/1ee41c071a3a9481", "source_printed_full_literal": "Flagstaff", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "US-Flagstaff-z9-97-202-label", "zh": "弗拉格斯塔夫", "status": "approved", "source": "@source/702be5cda6f63b46", "record_sha256": "ea57f5203189086950e0f16d4647cc859ca7cee3c7fed8fb1e274606ab0c748d", "review_notes": "亚利桑那州科科尼诺县 Flagstaff。当地旅游机构简体正文与现行 z8 正式译名均为弗拉格斯塔夫；GeoNames 5294810 坐标吻合。"}
+  ],
+  "layouts": [
+    {"id": "US-Flagstaff-z9-97-202-label", "x": 53.5, "y": 119.0, "font_style": "regular", "font_size": 12, "lines": ["弗拉格斯塔夫"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

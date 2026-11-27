@@ -1,0 +1,48 @@
+{
+  "id": "CN-ChangchunXiyingcheng-z9-434-186",
+  "z": 9,
+  "x": 434,
+  "y": 186,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/434/186.png"
+  ],
+  "context_tiles": [
+    "9/435/186.png",
+    "9/434/187.png"
+  ],
+  "features": [
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S01", "kind": "city", "original": "Longjia", "original_bbox": [159, 4, 201, 23], "source_url": "@source/4628139efc3203a7", "source_glyph_complete": true, "source_printed_full_literal": "Longjia"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S02", "kind": "region", "original": "Changchun New Area", "original_bbox": [58, 38, 127, 76], "source_url": "@source/4628139efc3203a7", "source_glyph_complete": true, "source_printed_full_literal": "Changchun New Area"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S03", "kind": "city", "original": "Xiyingcheng", "original_bbox": [205, 50, 274, 70], "source_url": "@source/4628139efc3203a7", "source_glyph_complete": true, "source_printed_full_literal": "Xiyingcheng"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S04", "kind": "city", "original": "Changchun", "original_bbox": [17, 91, 101, 118], "source_url": "@source/4628139efc3203a7", "source_glyph_complete": true, "source_printed_full_literal": "Changchun"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S05", "kind": "city", "original": "Yutan", "original_bbox": [85, 147, 119, 163], "source_url": "@source/4628139efc3203a7", "source_glyph_complete": true, "source_printed_full_literal": "Yutan"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S06", "kind": "city", "original": "Yongchun", "original_bbox": [23, 173, 79, 192], "source_url": "@source/4628139efc3203a7", "source_glyph_complete": true, "source_printed_full_literal": "Yongchun"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S07", "kind": "city", "original": "Qijia", "original_bbox": [186, 194, 214, 214], "source_url": "@source/4628139efc3203a7", "source_glyph_complete": true, "source_printed_full_literal": "Qijia"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S08", "kind": "city", "original": "Leshan", "original_bbox": [31, 253, 71, 269], "source_url": "@source/4628139efc3203a7", "source_glyph_complete": true, "source_printed_full_literal": "Leshan"}
+  ],
+  "translations": [
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S01", "zh": "龙嘉", "status": "approved", "source": "@source/18d8567ffb5ec59c", "record_sha256": "5f4f3f618b10986a52db89de84c9e66edafc1846453e578f4cf12496b524bf4c", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S02", "zh": "长春新区", "status": "approved", "source": "@source/ab8842a99a98ff0b", "record_sha256": "e5c1a4f1fae39effb46360900e5f881b9c78e8a4a0ff70c6f160811f56a7dd33", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S03", "zh": "西营城", "status": "approved", "source": "@source/18d8567ffb5ec59c", "record_sha256": "579bf5a2f356324b9cc40a9ce2642ede245dccaeca1dc4ef31575d0c248f4405", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S04", "zh": "长春", "status": "approved", "source": "@source/995756dae2f41e1d", "record_sha256": "9744c1750325f3569ee7abed61558b09ee9d85902a746e1bb07f2432b941b822", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S05", "zh": "玉潭", "status": "approved", "source": "@source/18d8567ffb5ec59c", "record_sha256": "46a976a1bac3787e2bfe5d07e3292de1bafd5d3cda18d5c46785f17bfce2c6cc", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S06", "zh": "永春", "status": "approved", "source": "@source/18d8567ffb5ec59c", "record_sha256": "3a23327604ed3a0171df49310c35e3c6c36f348a7573c53b4d57190884544527", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S07", "zh": "齐家", "status": "approved", "source": "@source/18d8567ffb5ec59c", "record_sha256": "28255c1a8afc7053b8f927ba704cbce0d8e08bba1dbe3996937972b56b7b3451", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S08", "zh": "乐山", "status": "approved", "source": "@source/18d8567ffb5ec59c", "record_sha256": "cc05f9eb07c40adfa7644fcb7154c3de6a53c8c7011eec78844bb2c2eaf44d48", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S01", "x": 180, "y": 13, "font_style": "regular", "font_size": 12, "lines": ["龙嘉"]},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S02", "x": 93, "y": 58, "font_style": "regular", "font_size": 12, "lines": ["长春新区"]},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S03", "x": 236, "y": 61, "font_style": "regular", "font_size": 12, "lines": ["西营城"]},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S04", "x": 60.63, "y": 105.04, "font_style": "regular", "font_size": 12, "lines": ["长春"]},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S05", "x": 103, "y": 155, "font_style": "regular", "font_size": 12, "lines": ["玉潭"]},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S06", "x": 51, "y": 182, "font_style": "regular", "font_size": 12, "lines": ["永春"]},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S07", "x": 200, "y": 204, "font_style": "regular", "font_size": 12, "lines": ["齐家"]},
+    {"id": "CN-ChangchunXiyingcheng-z9-434-186-S08", "x": 50, "y": 247, "font_style": "regular", "font_size": 12, "lines": ["乐山"]}
+  ],
+  "shared_sources": [],
+  "symbols": [],
+  "legacy_suppressions": []
+}

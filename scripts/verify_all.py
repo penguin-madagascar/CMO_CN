@@ -13,10 +13,11 @@ Gates
   4. scenario meta 100% of <ScenTitle> / <ScenSetting> translated
   5. briefings     HTML briefings carry Chinese prose, structure intact
   6. placenames    all Synoptic + Cities labels uniquely match approved reviews
-  7. db templates  8 DB HTML templates localized
-  8. version       VERSION consistent across VERSION / engine / installer
-  9. repository    git worktree clean
- 10. secrets       no plaintext credentials in worktree or git history
+  7. hotkeys       快捷键窗口正文（DarkRichTextBox）与实机原文逐行对齐（R91）
+  8. db templates  8 DB HTML templates localized
+  9. version       VERSION consistent across VERSION / engine / installer
+ 10. repository    git worktree clean
+ 11. secrets       no plaintext credentials in worktree or git history
 """
 from __future__ import annotations
 
@@ -25,6 +26,8 @@ import json
 import os
 import re
 import subprocess
+import proc_util
+proc_util.utf8_stdout()
 import sys
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -45,8 +48,7 @@ def record(name: str, ok: bool, detail: str) -> None:
 
 def run(script: str, argv: list[str] | None = None) -> tuple[bool, str]:
     cmd = [sys.executable, str(ROOT / "scripts" / script)] + (argv or [])
-    p = subprocess.run(cmd, capture_output=True, text=True,
-                       encoding="utf-8", errors="replace")
+    p = proc_util.run(cmd, capture_output=True)
     tail = [l for l in (p.stdout or "").strip().splitlines() if l.strip()]
     return p.returncode == 0, (tail[-1] if tail else "(no output)")
 
@@ -75,7 +77,7 @@ def gate_scenario_meta() -> None:
     meta_file = DICT / "scenario_meta.json"
     # 有游戏目录时重新抽取（新增/更新过想定后会多出未翻译的标题）；无游戏时用已入库快照。
     if GAME.is_dir() or not meta_file.is_file():
-        subprocess.run([sys.executable, str(ROOT / "scripts/scenario_meta.py")],
+        proc_util.run([sys.executable, str(ROOT / "scripts/scenario_meta.py")],
                        capture_output=True)
     meta = json.loads(meta_file.read_text(encoding="utf-8"))
     miss_t = [t for t in meta["titles"] if t not in exact]
@@ -114,14 +116,16 @@ def gate_briefings() -> None:
         cjk += n
         if n == 0 and "<img" in text.lower():
             image_only += 1
+    # Entity-encoded Chinese (&#26085;...) is still Chinese; decoding before the
+    # CJK test prevents a translated page from being counted as untranslated.
     translated = sum(1 for f in files
-                     if HAN.search(re.sub(r"<[^>]+>", " ",
+                     if HAN.search(htmlmod.unescape(re.sub(r"<[^>]+>", " ",
                                           f.read_text(encoding="utf-8",
-                                                       errors="replace"))))
+                                                       errors="replace")))))
     # 空集不得空过：无文件、或「图片型」占比过高（>10%）都判 FAIL。
     # 旧式 `translated >= len(files) - image_only` 在 files 为空时是 0>=0，永远绿。
-    image_names = [f.name for f in files if not HAN.search(re.sub(r"<[^>]+>", " ",
-                                     f.read_text(encoding="utf-8", errors="replace"))) ]
+    image_names = [f.name for f in files if not HAN.search(htmlmod.unescape(re.sub(r"<[^>]+>", " ",
+                                     f.read_text(encoding="utf-8", errors="replace")))) ]
     allowed_image_only = [f for f in files if IMAGE_ONLY_ALLOW.search(str(f))]
     unconfirmed = image_only - len(allowed_image_only)
     denom = max(1, len(files) - len(allowed_image_only))
@@ -151,8 +155,33 @@ def gate_placenames() -> None:
                                   DICT / "placenames/metadata.json", name))
         summaries.append(f"{name} {result['verified_records']}/{config['count']} reviewed")
         errors.extend(f"{name}: {error}" for error in result["errors"])
+    # 省/州级标签（R88）：两套 WWP 之外的第三层，走词典 places 分区。
+    from verify_regions_placenames import collect_problems
+    region_problems, region_summary = collect_problems()
+    if region_problems:
+        errors.extend(region_problems[:6])
+    else:
+        summaries.append(f"Regions {region_summary.get('matched', 0)}/{region_summary.get('source_entries', 0)} places")
+    from verify_packed_regions import verify
+    try:
+        summaries.append(verify(ROOT))
+    except (ValueError, KeyError, OSError) as exc:
+        errors.append(f"R88 packed map coverage: {exc}")
+    from verify_packed_wwp import verify as verify_wwp
+    try:
+        summaries.append(verify_wwp(ROOT))
+    except (ValueError, KeyError, OSError) as exc:
+        errors.append(f"WWP packed map coverage: {exc}")
     record("placenames", not errors, "; ".join(summaries + errors[:6]))
 
+def gate_hotkeys() -> None:
+    """快捷键窗口正文（R91）：整段译文与实机采集原文逐行对齐，词典产物一致。"""
+    from verify_hotkeys_ui import collect_problems
+
+    problems, stats = collect_problems()
+    detail = (f"{stats.get('boxes', 0)} 段 / {stats.get('lines', 0)} 行与实机原文对齐"
+              if not problems else "; ".join(problems[:4]))
+    record("hotkeys", not problems, detail)
 
 def gate_db_templates() -> None:
     tpl = GAME / "DB/Templates"
@@ -249,17 +278,17 @@ def gate_readme_downloads() -> None:
     这里只做一致性检查（不联网），真正的可下载性由发布流程保证。
     """
     script = ROOT / "scripts/sync_readme_downloads.py"
-    proc = subprocess.run([sys.executable, str(script), "--check"],
-                          capture_output=True, text=True, encoding="utf-8",
-                          errors="replace", timeout=120)
+    proc = proc_util.run([sys.executable, str(script), "--check"],
+                          capture_output=True, 
+                          timeout=120)
     ok = proc.returncode == 0
     detail = ((proc.stdout or "") + (proc.stderr or "")).strip().splitlines()
     record("readme-downloads", ok, detail[-1] if detail else "无输出")
 
 
 def gate_repository() -> None:
-    p = subprocess.run(["git", "status", "--porcelain"], cwd=str(ROOT),
-                       capture_output=True, text=True)
+    p = proc_util.run(["git", "status", "--porcelain"], cwd=str(ROOT),
+                       capture_output=True)
     dirty = [l for l in p.stdout.splitlines() if l.strip()]
     record("repository", not dirty,
            "clean" if not dirty else f"{len(dirty)} uncommitted path(s)")
@@ -282,8 +311,8 @@ def gate_routing() -> None:
     路由表靠自觉维护必然腐烂：新加脚本忘了登记，半年后没人知道它干什么、
     能不能删。所以"新增文件要登记"必须是机械可检查的。
     """
-    r = subprocess.run([sys.executable, str(SCRIPTS / "verify_routing.py")],
-                       capture_output=True, text=True, encoding="utf-8", timeout=300)
+    r = proc_util.run([sys.executable, str(SCRIPTS / "verify_routing.py")],
+                       capture_output=True, timeout=300)
     lines = (r.stdout or "").strip().splitlines()
     summary = next((ln.strip() for ln in lines if "[PASS]" in ln or "[FAIL]" in ln), "")
     gaps = [ln.strip() for ln in lines if ln.startswith("   ") and "/" in ln]
@@ -294,7 +323,7 @@ def gate_routing() -> None:
 
 def main() -> int:
     for g in (gate_dictionary, gate_menu, gate_engine_parse,
-              gate_scenario_meta, gate_briefings, gate_placenames,
+              gate_scenario_meta, gate_briefings, gate_placenames, gate_hotkeys,
               gate_db_templates, gate_version, gate_no_secrets,
               gate_routing, gate_repository):
         try:

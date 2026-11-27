@@ -1,0 +1,37 @@
+{
+  "id": "WestAfrica-G64-z8-127-121-2x1",
+  "z": 8,
+  "x": 127,
+  "y": 121,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/127/121.png",
+    "8/128/121.png"
+  ],
+  "context_tiles": [
+    "8/129/121.png"
+  ],
+  "features": [
+    {"id": "WestAfrica-G64-001", "kind": "city", "original": "Tamale", "original_bbox": [98, 68, 147, 89], "source_url": "@source/8d3828d2efd78ddf"},
+    {"id": "WestAfrica-G64-002", "kind": "city", "original": "Yendi", "original_bbox": [251, 60, 286, 79], "source_url": "@source/8d3828d2efd78ddf"},
+    {"id": "WestAfrica-G64-003", "kind": "city", "original": "Sokodé", "original_bbox": [460, 145, 509, 166], "source_url": "@source/4c7bcbaced43d890"}
+  ],
+  "translations": [
+    {"id": "WestAfrica-G64-001", "zh": "塔马利", "status": "approved", "source": "@source/8d3828d2efd78ddf", "record_sha256": "23be759105ba456457b4c296fe19e55f449917295c5c4c87c222121ed899ea06", "review_notes": "Root-selected grade B Chinese body: evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer=/lexical_choices/5. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "WestAfrica-G64-002", "zh": "延迪", "status": "approved", "source": "@source/8d3828d2efd78ddf", "record_sha256": "a92456b641c8142c3f7a7d66023664710d192a69ae6cd354e83d024c6361bbaf", "review_notes": "Root-selected grade B Chinese body: evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer=/lexical_choices/6. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."},
+    {"id": "WestAfrica-G64-003", "zh": "索科德", "status": "approved", "source": "@source/4c7bcbaced43d890", "record_sha256": "45e37ce9d3a6ba323d89db3c3d88031175e8cc766554d1e0eabae2b0e416f196", "review_notes": "Root-selected grade B Chinese body: evidence/tile_recovery/root_NEXT8_Source19_Chinese_lexical_actual_selection_20261104/Root_SELECTED_NEXT8_COMPLETE19_ALL_CHINESE_WORDS_ONLY_NOT_SOURCE_OR_TARGET.json SHA256=0aeac3e07671579261bfefc6468e161724a61f55c0f6971ead9994f512de3896 pointer=/lexical_choices/7. source URL identifies the physical printed tile only, not Chinese lexical evidence. Project producer caption category; no supplier/entity assertion or Target approval."}
+  ],
+  "layouts": [
+    {"id": "WestAfrica-G64-001", "x": 131.5, "y": 78.5, "font_size": 12, "font_style": "regular", "lines": ["塔马利"]},
+    {"id": "WestAfrica-G64-002", "x": 278.5, "y": 69.5, "font_size": 12, "font_style": "regular", "lines": ["延迪"]},
+    {"id": "WestAfrica-G64-003", "x": 484.5, "y": 166.5, "font_size": 12, "font_style": "regular", "lines": ["索科德"]}
+  ],
+  "symbols": [
+    {"id": "WestAfrica-G64-001-point", "feature_id": "WestAfrica-G64-001", "kind": "circle", "original_bbox": [98, 68, 107, 77], "x": 102.5, "y": 72.5, "size": 9, "outline_width": 1},
+    {"id": "WestAfrica-G64-002-point", "feature_id": "WestAfrica-G64-002", "kind": "circle", "original_bbox": [251, 60, 260, 69], "x": 255.5, "y": 64.5, "size": 9, "outline_width": 1},
+    {"id": "WestAfrica-G64-003-point", "feature_id": "WestAfrica-G64-003", "kind": "circle", "original_bbox": [460, 145, 469, 154], "x": 464.5, "y": 149.5, "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

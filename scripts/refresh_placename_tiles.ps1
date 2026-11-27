@@ -15,6 +15,7 @@ if (-not [IO.Directory]::Exists($game)) { throw 'GameDir does not exist' }
 $cache = Join-Path $game 'WW\Cache\Stamen Terrain - Labels'
 $packPath = Join-Path $game 'ChineseMapTiles.dat'
 $catalogPath = Join-Path $game 'ChineseMapLabels.dat'
+$dictionaryPath = Join-Path $game 'CMOLocalizer.json'
 $hasPack = [IO.File]::Exists($packPath)
 $hasCatalog = [IO.File]::Exists($catalogPath)
 if (-not [IO.Directory]::Exists($cache) -and -not $hasPack) {
@@ -102,7 +103,7 @@ try {
         }
         finally { $reader.Dispose() }
     }
-    foreach ($optional in @($packPath, $catalogPath)) {
+    foreach ($optional in @($packPath, $catalogPath, $dictionaryPath)) {
         Assert-PlainPath $optional
         if ([IO.File]::Exists($optional)) {
             $sources.Add([IO.File]::Open($optional, [IO.FileMode]::Open, [IO.FileAccess]::Read, [IO.FileShare]::Read))
@@ -129,7 +130,15 @@ try {
     if ($hasPack) {
         $packType = $assembly.GetType('CMOShared.MapLabelTilePack', $true)
         $pack = $packType.GetMethod('Load').Invoke($null, [object[]]@([string]$packPath))
-        $lookup = $packType.GetMethod('TryGetTile')
+        $containsTile = $packType.GetMethod('ContainsTile', [Reflection.BindingFlags]'Instance,NonPublic')
+        $regionType = $assembly.GetType('CMOShared.MapLabelRegions', $true)
+        $regions = $regionType::LoadFromDictionary($dictionaryPath)
+        $catalogType = $assembly.GetType('CMOShared.MapLabelCatalog', $true)
+        $packedPlaces = $catalogType::LoadBasePlaces($game)
+        $packedPlaces.AddRange($regions)
+        $pack.IndexOverlayPlaces($packedPlaces)
+        $hasPlaces = $hasPlaces -or $regions.Count -gt 0
+        $rendererType = $assembly.GetType('CMOShared.MapLabelRenderer', $true)
     }
     if ($hasCatalog) {
         $null = $assembly.GetType('CMOShared.MapLabelCatalog', $true).GetMethod('Load').Invoke($null, [object[]]@([string]$catalogPath))
@@ -149,11 +158,14 @@ try {
             Assert-PlainPath $png
             $relative = $png.Substring($cache.Length).TrimStart('\', '/')
             if ($relative -notmatch '^([0-9]+)[\\/]([0-9]+)[\\/]([0-9]+)\.png$') { throw "Invalid output tile: $relative" }
-            $arguments = [object[]]@([int]$Matches[1], [int]$Matches[2], [int]$Matches[3], $null, 0)
-            if ($lookup.Invoke($pack, $arguments)) {
+            $z, $x, $y = [int]$Matches[1], [int]$Matches[2], [int]$Matches[3]
+            if ($containsTile.Invoke($pack, [object[]]@($z, $x, $y))) {
+                # R88 respects the original positions of visible regions and WWP countries before placing extra regions.
+                $candidates = 0; $rendered = 0
+                $expectedPng = $rendererType::RenderTileBytes($packedPlaces, $pack, $z, $x, $y, [ref]$candidates, [ref]$rendered)
                 $bytes = [Convert]::ToBase64String([IO.File]::ReadAllBytes($png))
-                if ($bytes -ne [Convert]::ToBase64String($arguments[3])) { throw "Pack tile bytes differ: $relative" }
-                if (-not $before.ContainsKey($png) -or $before[$png] -ne $bytes) { $expected++ }
+                if ($bytes -cne [Convert]::ToBase64String($expectedPng)) { throw "Rendered pack tile bytes differ: $relative" }
+                if (-not $before.ContainsKey($png) -or $before[$png] -cne $bytes) { $expected++ }
             }
             elseif ($hasPlaces -and $before.ContainsKey($png)) { $expected++ }
         }

@@ -1,0 +1,44 @@
+{
+  "id": "TH-Central-NakhonSawanUthai-z9-397-233",
+  "z": 9,
+  "x": 397,
+  "y": 233,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/397/233.png",
+    "9/398/233.png"
+  ],
+  "context_tiles": [
+    "9/399/233.png"
+  ],
+  "features": [
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-LatYao", "kind": "city", "original": "Lat Yao", "original_bbox": [216, 71, 258, 87], "source_url": "@source/dc795ebc108f86f5", "source_glyph_complete": true, "source_printed_full_literal": "Lat Yao"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-LanSak", "kind": "city", "original": "Lan Sak", "original_bbox": [123, 177, 168, 194], "source_url": "@source/dc795ebc108f86f5", "source_glyph_complete": true, "source_printed_full_literal": "Lan Sak"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-ThapThan", "kind": "city", "original": "Thap Than", "original_bbox": [243, 181, 303, 200], "source_url": "@source/dc795ebc108f86f5", "source_glyph_complete": true, "source_printed_full_literal": "Thap Than"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-NakhonSawan", "kind": "city", "original": "Nakhon Sawan", "original_bbox": [337, 77, 386, 116], "source_url": "@source/505edae389033dc1", "source_glyph_complete": true, "source_printed_full_literal": "Nakhon Sawan"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-UthaiThani", "kind": "city", "original": "Uthai Thani", "original_bbox": [291, 211, 355, 227], "source_url": "@source/505edae389033dc1", "source_glyph_complete": true, "source_printed_full_literal": "Uthai Thani"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-TakFa", "kind": "city", "original": "Tak Fa", "original_bbox": [474, 225, 512, 241], "source_url": "@source/505edae389033dc1", "source_glyph_complete": true, "source_printed_full_literal": "Tak Fa"}
+  ],
+  "translations": [
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-LatYao", "zh": "拉尧", "status": "approved", "source": "@source/7cf1f883b6d7cffa", "record_sha256": "ab0b08a1b4e9d2c0b17e595e4924de38e4b99584e9c98d2c4811306b87a8aa1c", "review_notes": "同级原图完整核对，依据泰国政府地名记录，并沿用既有中文或地名惯用音译。"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-LanSak", "zh": "兰萨", "status": "approved", "source": "@source/7cf1f883b6d7cffa", "record_sha256": "92d55f00a410ba86d62e5d5f06dc756202ff21a3a11bcf71cfe8c4b170139296", "review_notes": "同级原图完整核对，依据泰国政府地名记录，并沿用既有中文或地名惯用音译。"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-ThapThan", "zh": "塔贪", "status": "approved", "source": "@source/7cf1f883b6d7cffa", "record_sha256": "5c3ecec7b4fdf34a9b2b149a7b31bed31a1bb83b7899c9133059d6811e569d32", "review_notes": "同级原图完整核对，依据泰国政府地名记录，并沿用既有中文或地名惯用音译。"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-NakhonSawan", "zh": "那空沙旺", "status": "approved", "source": "@source/7cf1f883b6d7cffa", "record_sha256": "bc123a573ae5619e24d41c6bcdff06805a853b98c1c7a3ac041d21b25e602de6", "review_notes": "同级原图完整核对，依据泰国政府地名记录，并沿用既有中文或地名惯用音译。"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-UthaiThani", "zh": "乌泰他尼", "status": "approved", "source": "@source/7cf1f883b6d7cffa", "record_sha256": "2588da5f1c0d404b938dd252a4b2146c38a22f8c29cfa966d1462b0685dc8d50", "review_notes": "同级原图完整核对，依据泰国政府地名记录，并沿用既有中文或地名惯用音译。"},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-TakFa", "zh": "达法", "status": "approved", "source": "@source/7cf1f883b6d7cffa", "record_sha256": "837ae6ff164f72ffab55d8e213eaf8cabb55e93b4a3ec2880ea17449451ff61f", "review_notes": "同级原图完整核对，依据泰国政府地名记录，并沿用既有中文或地名惯用音译。"}
+  ],
+  "layouts": [
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-LatYao", "x": 237, "y": 79, "font_style": "regular", "font_size": 13, "lines": ["拉尧"]},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-LanSak", "x": 145, "y": 186, "font_style": "regular", "font_size": 13, "lines": ["兰萨"]},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-ThapThan", "x": 274, "y": 190, "font_style": "regular", "font_size": 13, "lines": ["塔贪"]},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-NakhonSawan", "x": 361, "y": 96, "font_style": "regular", "font_size": 15, "lines": ["那空沙旺"]},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-UthaiThani", "x": 324, "y": 219, "font_style": "regular", "font_size": 14, "lines": ["乌泰他尼"]},
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-TakFa", "x": 490, "y": 234, "font_style": "regular", "font_size": 13, "lines": ["达法"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "TH-Central-NakhonSawanUthai-z9-397-233-SharedNongBua", "owner_region": "TH-Phaisali-z9-399-233", "feature_id": "TH-Phaisali-z9-399-233-S01", "kind": "city", "original": "Nong Bua", "source_url": "@source/707aef3ccd948f86", "original_bbox": [498, 27, 553, 48], "review_notes": "沿用该印字的另一区域完整标签，避免重复绘制。"}
+  ],
+  "legacy_suppressions": []
+}

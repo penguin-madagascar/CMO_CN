@@ -1,0 +1,66 @@
+{
+  "id": "G122-WestNorth-z9-238-233-2x2",
+  "z": 9,
+  "x": 238,
+  "y": 233,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "original_tiles": [
+    "9/238/233.png",
+    "9/239/233.png",
+    "9/238/234.png",
+    "9/239/234.png"
+  ],
+  "context_tiles": [
+    "9/239/232.png",
+    "9/239/235.png",
+    "9/240/234.png"
+  ],
+  "features": [
+    {"id": "G122-W-01", "kind": "city", "original": "Kankossa", "original_bbox": [385, 0, 444, 18], "source_url": "@source/4aa44f1f7633159d"},
+    {"id": "G122-W-02", "kind": "city", "original": "Bouanze", "original_bbox": [130, 46, 178, 62], "source_url": "@source/2cb7acb882fa5880"},
+    {"id": "G122-W-03", "kind": "city", "original": "Dafort", "original_bbox": [167, 108, 204, 124], "source_url": "@source/2cb7acb882fa5880"},
+    {"id": "G122-W-04", "kind": "city", "original": "Ould Yenge", "original_bbox": [312, 149, 376, 169], "source_url": "@source/4aa44f1f7633159d"},
+    {"id": "G122-W-05", "kind": "city", "original": "Bafarara", "original_bbox": [408, 213, 454, 229], "source_url": "@source/4aa44f1f7633159d"},
+    {"id": "G122-W-06", "kind": "city", "original": "Teichibe", "original_bbox": [322, 252, 370, 268], "source_url": "@source/f6edceb6317551ef"},
+    {"id": "G122-W-10", "kind": "city", "original": "Sélibaby", "original_bbox": [144, 294, 199, 316], "source_url": "@source/f97ed728f619c1d8"},
+    {"id": "G122-W-13", "kind": "city", "original": "Leya", "original_bbox": [289, 314, 317, 333], "source_url": "@source/f6edceb6317551ef"},
+    {"id": "G122-W-16", "kind": "city", "original": "Aourou", "original_bbox": [368, 368, 411, 385], "source_url": "@source/f6edceb6317551ef"},
+    {"id": "G122-W-17", "kind": "city", "original": "Gouraye", "original_bbox": [52, 392, 98, 411], "source_url": "@source/f97ed728f619c1d8"},
+    {"id": "G122-W-20", "kind": "city", "original": "Khabou Guidimaka", "original_bbox": [178, 444, 237, 478], "source_url": "@source/f97ed728f619c1d8"},
+    {"id": "G122-W-22", "kind": "city", "original": "Sobokou", "original_bbox": [221, 483, 271, 500], "source_url": "@source/f97ed728f619c1d8"}
+  ],
+  "translations": [
+    {"id": "G122-W-01", "zh": "坎科萨", "status": "approved", "source": "@source/4aa44f1f7633159d", "record_sha256": "b0857a90ec4445fef7cbe7775bb706151c81d7b67811d2991628b990bef22739", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-02", "zh": "布安泽", "status": "approved", "source": "@source/2cb7acb882fa5880", "record_sha256": "fbc2255f6dcf83db425121def19ec44ac29a41341b238b67e754ba2eb12accf5", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-03", "zh": "达福尔", "status": "approved", "source": "@source/2cb7acb882fa5880", "record_sha256": "c38b0b5c9681aa69941373444237afebbfae1f41dd1da5fddd3f9f0c5ca663e9", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-04", "zh": "乌尔德延盖", "status": "approved", "source": "@source/4aa44f1f7633159d", "record_sha256": "f9d86e68bf566f13ec374d5ce8c404b39110bdcdc34c35ad71ae01e297012002", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-05", "zh": "巴法拉拉", "status": "approved", "source": "@source/4aa44f1f7633159d", "record_sha256": "ffd7998d4df51d2634430c669d8d0fa8a88ff59473c384df60cb5f1c7471a8ca", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-06", "zh": "泰希贝", "status": "approved", "source": "@source/f6edceb6317551ef", "record_sha256": "31b26e415d75316c84ad732e60c5f6ec399144ccc935f85e37a55f94a68f71ef", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-10", "zh": "塞利巴比", "status": "approved", "source": "@source/f97ed728f619c1d8", "record_sha256": "d5e13321e0f07135e73a0dd76051b8c4837fa2574a6eee6c0ef2d37fc27ba5e3", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-13", "zh": "莱亚", "status": "approved", "source": "@source/f6edceb6317551ef", "record_sha256": "6295cfb8ea5a45a495e0f056434523b61f49b9654a01bb84c0dfdc0996ce7e60", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-16", "zh": "奥鲁", "status": "approved", "source": "@source/f6edceb6317551ef", "record_sha256": "e73450d67ea1b52f58c639721184a100d41290aa52fc2394256547f7613bc94c", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-17", "zh": "古拉耶", "status": "approved", "source": "@source/f97ed728f619c1d8", "record_sha256": "7ffb46b18dcfe007aff7abcdbd0c6b75fa36f13264fdd2e2077de5f2abdc85dd", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-20", "zh": "卡布吉迪马卡", "status": "approved", "source": "@source/f97ed728f619c1d8", "record_sha256": "73dbad5f8469c2032d7c78b4882423a1b0aa69850556df3eda2035c5c8a60ac2", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."},
+    {"id": "G122-W-22", "zh": "索博库", "status": "approved", "source": "@source/f97ed728f619c1d8", "record_sha256": "00950bb55b63da8d8a1f3f5468811e94599f7c9d6f0106cf2c4e1a186e09bd2a", "review_notes": "Different reviewer personally checked the complete printed Source name and actual Chinese glyphs/layout. Chinese is the project mapping/phonetic candidate; no claim of an official national Chinese name standard. Root explicitly authorized scoped new51 review."}
+  ],
+  "layouts": [
+    {"id": "G122-W-01", "x": 414.5, "y": 9.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-02", "x": 154.0, "y": 54.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-03", "x": 185.5, "y": 116.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-04", "x": 344.0, "y": 159.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-05", "x": 431.0, "y": 221.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-06", "x": 346.0, "y": 260.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-10", "x": 171.5, "y": 305.0, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-13", "x": 303.0, "y": 323.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-16", "x": 389.5, "y": 376.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-17", "x": 75.0, "y": 401.5, "font_size": 12, "font_style": "regular"},
+    {"id": "G122-W-20", "x": 207.5, "y": 461.0, "font_size": 12, "font_style": "regular", "lines": ["卡布", "吉迪马卡"]},
+    {"id": "G122-W-22", "x": 246.0, "y": 491.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "G122-S-G122-W-23", "owner_region": "G122-WestSouth-z9-239-235-3x1", "feature_id": "G122-W-23", "kind": "city", "original": "Ambidédi Rive Droite", "source_url": "@source/155a9c521449f757", "original_bbox": [297, 501, 358, 535], "review_notes": "Actual complete Source word crosses these output owners. One normal Chinese owner only; other region accounts exact shared original ink without duplicating output."},
+    {"id": "G122-S-G122-W-18", "owner_region": "G122-WestMiddle-z9-240-234-2x1", "feature_id": "G122-W-18", "kind": "city", "original": "Koussané", "source_url": "@source/73a65a2135635a86", "original_bbox": [491, 398, 545, 414], "review_notes": "Actual complete Source word crosses these output owners. One normal Chinese owner only; other region accounts exact shared original ink without duplicating output."}
+  ]
+}

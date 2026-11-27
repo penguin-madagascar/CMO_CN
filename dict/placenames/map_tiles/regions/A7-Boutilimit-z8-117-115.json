@@ -1,0 +1,25 @@
+{
+  "id": "A7-Boutilimit-z8-117-115",
+  "z": 8,
+  "x": 117,
+  "y": 115,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/117/115.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "A7-Boutilimit", "kind": "city", "original": "Boutilimit", "original_bbox": [136, 78, 199, 99], "source_url": "@source/6e7877f14d82e09f", "source_glyph_complete": true, "source_full_literal": "Boutilimit"}
+  ],
+  "translations": [
+    {"id": "A7-Boutilimit", "zh": "布提利米特", "status": "approved", "source": "@source/07f29a8fbfcffab8", "record_sha256": "cf60c890e9a66bb7495bb99a2533ad8c0c13a191b1340eea4c46d55bcb5e7c25", "review_notes": "Exact previously approved same locality in z7 AM14-4-Boutilimit and its Natural Earth naming evidence. Mauritanian government confirms the Latin locality identity. Original full printed word and point; no unsafe claim about supplier classification."}
+  ],
+  "layouts": [
+    {"id": "A7-Boutilimit", "x": 178.0, "y": 92.0, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "A7-Boutilimit-point", "feature_id": "A7-Boutilimit", "kind": "circle", "x": 140.5, "y": 82.5, "size": 9, "outline_width": 1, "original_bbox": [136, 78, 145, 87]}
+  ],
+  "shared_sources": []
+}

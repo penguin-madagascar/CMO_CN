@@ -6,6 +6,9 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
+
+import release_check
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -38,38 +41,42 @@ class DeliveryContract(unittest.TestCase):
         self.assertIn('deploy_file "$ROOT/assets/placenames/ChineseMapTiles.dat" "$GAME/ChineseMapTiles.dat"', text)
 
     def test_deploy_byte_verification_detects_stale_pack(self):
-        code = blocks("deploy.sh")[0]
+        code = next(block for block in blocks("deploy.sh") if "stale = []" in block)
         with tempfile.TemporaryDirectory(dir=ROOT / "build") as temp:
             base = pathlib.Path(temp)
             root, game = base / "repo", base / "game"
             for path in [root / "build", root / "dict", root / "assets/placenames", game]:
                 path.mkdir(parents=True, exist_ok=True)
+            (game / "Command.exe.config").write_bytes(b"<configuration/>")
             for src, dst, data in [(root / "build/CMOLocalizer.dll", game / "CMOLocalizer.dll", b"dll"),
                                    (root / "dict/CMOLocalizer.json", game / "CMOLocalizer.json", json.dumps({"offsets": {}, "exact": {}, "_meta": {"version": "fixture"}}).encode()),
                                    (root / "assets/placenames/ChineseMapTiles.dat", game / "ChineseMapTiles.dat", b"verified")]:
                 src.write_bytes(data)
                 dst.write_bytes(data)
-            self.assertEqual(run_block(code, root, game).returncode, 0)
+            args = root, game, root / "build/CMOLocalizer.dll", root / "dict/CMOLocalizer.json"
+            self.assertEqual(run_block(code, *args).returncode, 0)
             (game / "ChineseMapTiles.dat").write_bytes(b"stale")
-            result = run_block(code, root, game)
+            result = run_block(code, *args)
             self.assertNotEqual(result.returncode, 0, result.stdout)
             self.assertIn("ChineseMapTiles.dat", result.stdout)
 
     def test_package_copy_and_missing_pack_gate(self):
         text = (ROOT / "scripts/package.sh").read_text(encoding="utf-8")
         self.assertIn('cp "$ROOT/assets/placenames/ChineseMapTiles.dat" "$PACK/"', text)
-        code = next(block for block in blocks("package.sh") if "required = [" in block)
         with tempfile.TemporaryDirectory(dir=ROOT / "build") as temp:
-            pack = pathlib.Path(temp)
-            for name in ["CMOLocalizer.dll", "CMOLocalizer.json", "CMO_Updater.exe", "Command.exe.config.patch", "汉化说明.md", "DB/Templates/Ship.html", "WW/PlacenameSets/Synoptic/0000_0000.wwp", "WW/PlacenameSets/Cities/0000_0000.wwp", "Launcher/Localization/stringsChinese.resx"] + [f"Symbols/Menu/{i}.png" for i in range(20)] + [f"Scenarios/{i}.html" for i in range(300)]:
-                path = pack / name
-                path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_bytes(b"fixture")
-            result = run_block(code, pack)
-            self.assertNotEqual(result.returncode, 0, result.stdout)
-            self.assertIn("ChineseMapTiles.dat", result.stdout)
-            (pack / "ChineseMapTiles.dat").write_bytes(b"verified")
-            self.assertEqual(run_block(code, pack).returncode, 0)
+            root = pathlib.Path(temp)
+            asset = root / "assets/placenames/ChineseMapTiles.dat"
+            asset.parent.mkdir(parents=True)
+            asset.write_bytes(b"verified")
+            pack = root / "portable.zip"
+            with zipfile.ZipFile(pack, "w"):
+                pass
+            self.assertTrue(release_check.placename_payload_problems(None, pack, root))
+            for payload in (b"stale", asset.read_bytes()):
+                with zipfile.ZipFile(pack, "w") as archive:
+                    archive.writestr(asset.name, payload)
+                problems = release_check.placename_payload_problems(None, pack, root)
+                self.assertEqual(not problems, payload == asset.read_bytes())
 
 
 if __name__ == "__main__":

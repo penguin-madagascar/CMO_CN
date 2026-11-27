@@ -1,0 +1,72 @@
+{
+  "id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1",
+  "z": 9,
+  "x": 290,
+  "y": 176,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/290/176.png",
+    "9/291/176.png",
+    "9/292/176.png"
+  ],
+  "context_tiles": [
+    "9/290/177.png",
+    "9/291/175.png",
+    "9/291/177.png",
+    "9/292/177.png",
+    "9/293/176.png"
+  ],
+  "features": [
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Perehinske", "kind": "city", "original": "Perehinske", "original_bbox": [75, 53, 135, 69], "source_url": "@source/d2eaed7cc970d118", "source_glyph_complete": true, "source_printed_full_literal": "Perehinske"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Bohorodchany", "kind": "city", "original": "Bohorodchany", "original_bbox": [194, 55, 273, 73], "source_url": "@source/d2eaed7cc970d118", "source_glyph_complete": true, "source_printed_full_literal": "Bohorodchany"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Solotvyn", "kind": "city", "original": "Solotvyn", "original_bbox": [163, 111, 213, 131], "source_url": "@source/d2eaed7cc970d118", "source_glyph_complete": true, "source_printed_full_literal": "Solotvyn"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Nadvirna", "kind": "city", "original": "Nadvirna", "original_bbox": [216, 151, 267, 168], "source_url": "@source/d2eaed7cc970d118", "source_glyph_complete": true, "source_printed_full_literal": "Nadvirna"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Lanchyn", "kind": "city", "original": "Lanchyn", "original_bbox": [285, 195, 332, 213], "source_url": "@source/d06794ce7d977650", "source_glyph_complete": true, "source_printed_full_literal": "Lanchyn"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Kolomyia", "kind": "city", "original": "Kolomyia", "original_bbox": [386, 211, 439, 230], "source_url": "@source/d06794ce7d977650", "source_glyph_complete": true, "source_printed_full_literal": "Kolomyia"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Yaremche", "kind": "city", "original": "Yaremche", "original_bbox": [207, 252, 262, 268], "source_url": "@source/d2eaed7cc970d118", "source_glyph_complete": true, "source_printed_full_literal": "Yaremche"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Chernelytsia", "kind": "city", "original": "Chernelytsia", "original_bbox": [520, 52, 587, 71], "source_url": "@source/08a92e8983c4ca3c", "source_glyph_complete": true, "source_printed_full_literal": "Chernelytsia"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Horodenka", "kind": "city", "original": "Horodenka", "original_bbox": [549, 130, 609, 146], "source_url": "@source/08a92e8983c4ca3c", "source_glyph_complete": true, "source_printed_full_literal": "Horodenka"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Tovste", "kind": "city", "original": "Tovste", "original_bbox": [643, 35, 682, 51], "source_url": "@source/08a92e8983c4ca3c", "source_glyph_complete": true, "source_printed_full_literal": "Tovste"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Zastavna", "kind": "city", "original": "Zastavna", "original_bbox": [681, 212, 732, 228], "source_url": "@source/08a92e8983c4ca3c", "source_glyph_complete": true, "source_printed_full_literal": "Zastavna"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Zabolotiv", "kind": "city", "original": "Zabolotiv", "original_bbox": [474, 243, 529, 259], "source_url": "@source/d06794ce7d977650", "source_glyph_complete": true, "source_printed_full_literal": "Zabolotiv"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Sniatyn", "kind": "city", "original": "Sniatyn", "original_bbox": [577, 251, 621, 270], "source_url": "@source/08a92e8983c4ca3c", "source_glyph_complete": true, "source_printed_full_literal": "Sniatyn"}
+  ],
+  "translations": [
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Perehinske", "zh": "佩雷欣斯凯", "status": "approved", "source": "@source/14b076ee79a5f6ec", "record_sha256": "d0fe37602dc055568e1c54f88f68695a0c3f0af4c3596bfe1ac93ccb10b2572f", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Bohorodchany", "zh": "博霍罗德恰尼", "status": "approved", "source": "@source/2c7fb094a924502e", "record_sha256": "056f5e3562a2bd1abd9440bfc332c95af085854e4b85f207cd7ae34af906a329", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Solotvyn", "zh": "索洛特温", "status": "approved", "source": "@source/83b4cc79a9839b8c", "record_sha256": "b12f5061bd6eea75628dfc01e4a84a62b0c127bb793e9a712a18f656d761f805", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Nadvirna", "zh": "纳德维尔纳", "status": "approved", "source": "@source/cc7acbef9ddc327d", "record_sha256": "53d897d0e6ac8602431d4c6c8cff5245b2c5c06ff33023ceb1a4851cd36bb3d7", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Lanchyn", "zh": "兰钦", "status": "approved", "source": "@source/a2685645b5dafa11", "record_sha256": "c65fe1372891227722582c1633cacb3ae2083a37f176b926a4393b819d61d7c6", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Kolomyia", "zh": "科洛梅亚", "status": "approved", "source": "@source/2dce26ea041a4ee1", "record_sha256": "4ebcc50e873ecd2d58370a548c79a1efe6ff14395610bc4ac1213be96c50b1c2", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Yaremche", "zh": "亚列姆恰", "status": "approved", "source": "@source/76e55ce8d357f987", "record_sha256": "f458eaa00de4a3efef5443039a44ab72cec31b03d79f7121f881720551a44579", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Chernelytsia", "zh": "切尔涅利察", "status": "approved", "source": "@source/61e91b8b405ea1e5", "record_sha256": "025222af529941b07370c4f6c0655f508cd2632b8180a874178bd689a625294e", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Horodenka", "zh": "霍罗登卡", "status": "approved", "source": "@source/59a416a4592e5105", "record_sha256": "823d71f4259c42d822b65e77b334b981618bcd26a7c6c3488e7baf522be70ddd", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Tovste", "zh": "托夫斯泰", "status": "approved", "source": "@source/5b9a6b6f9bc19b7a", "record_sha256": "4f9ff87aabc9841fffdf768539d0989874456307fe13a96d7dbb9972ba14d215", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Zastavna", "zh": "扎斯塔夫纳", "status": "approved", "source": "@source/c8627478d3e2185f", "record_sha256": "f737529d044e07da434b741b5c29033e53ea01be1f6baf2e8f54b5090dcb9fd4", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Zabolotiv", "zh": "扎博洛蒂夫", "status": "approved", "source": "@source/bdb5871ad1cd9b5f", "record_sha256": "fb238c4695d2d3e97c0cbe79d170d88ac2aa096b5e1ac873a001ee49014f8359", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Sniatyn", "zh": "斯尼亚滕", "status": "approved", "source": "@source/f7d0545d84073ec4", "record_sha256": "a405c5f802e02f04a50cc4786dc912285fd55481ee03c10023b671d06e3441b4", "review_notes": "完整原图字样、坐标与登记地名核对；使用简体中文通行译名或按原语音译。"}
+  ],
+  "layouts": [
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Perehinske", "x": 105.0, "y": 61.0, "font_style": "regular", "font_size": 12, "lines": ["佩雷欣斯凯"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Bohorodchany", "x": 233.5, "y": 64.0, "font_style": "regular", "font_size": 12, "lines": ["博霍罗德恰尼"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Solotvyn", "x": 188.0, "y": 121.0, "font_style": "regular", "font_size": 12, "lines": ["索洛特温"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Nadvirna", "x": 241.5, "y": 159.5, "font_style": "regular", "font_size": 12, "lines": ["纳德维尔纳"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Lanchyn", "x": 308.5, "y": 204.0, "font_style": "regular", "font_size": 12, "lines": ["兰钦"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Kolomyia", "x": 412.5, "y": 220.5, "font_style": "regular", "font_size": 12, "lines": ["科洛梅亚"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Yaremche", "x": 234.5, "y": 249.0, "font_style": "regular", "font_size": 12, "lines": ["亚列姆恰"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Chernelytsia", "x": 553.5, "y": 61.5, "font_style": "regular", "font_size": 12, "lines": ["切尔涅利察"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Horodenka", "x": 579.0, "y": 138.0, "font_style": "regular", "font_size": 12, "lines": ["霍罗登卡"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Tovste", "x": 662.5, "y": 43.0, "font_style": "regular", "font_size": 12, "lines": ["托夫斯泰"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Zastavna", "x": 706.5, "y": 220.0, "font_style": "regular", "font_size": 12, "lines": ["扎斯塔夫纳"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Zabolotiv", "x": 501.5, "y": 249.0, "font_style": "regular", "font_size": 12, "lines": ["扎博洛蒂夫"]},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-Sniatyn", "x": 599.0, "y": 249.0, "font_style": "regular", "font_size": 12, "lines": ["斯尼亚滕"]}
+  ],
+  "shared_sources": [
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-existing-Ivano-Frankivsk", "owner_region": "UA-West-z9-288-168", "feature_id": "UAW9-206", "kind": "city", "original": "Ivano-Frankivsk", "original_bbox": [264, -19, 323, 19], "source_url": "@source/d06794ce7d977650", "review_notes": "保留既有同一原字的完整所属区及已核验中文输出。"},
+    {"id": "UA9-Perehinske-Kolomyia-Zastavna-z9-290-176-3x1-existing-Borshchiv", "owner_region": "UA-SouthBoundary-z9-293-176", "feature_id": "UAS16-010", "kind": "city", "original": "Borshchiv", "original_bbox": [750, 58, 805, 74], "source_url": "@source/13c74f0ad4d59680", "review_notes": "保留既有同一原字的完整所属区及已核验中文输出。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

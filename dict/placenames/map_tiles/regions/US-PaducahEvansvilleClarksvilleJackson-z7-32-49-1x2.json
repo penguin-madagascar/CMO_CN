@@ -1,0 +1,47 @@
+{
+  "id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2",
+  "z": 7,
+  "x": 32,
+  "y": 49,
+  "width_tiles": 1,
+  "height_tiles": 2,
+  "original_tiles": [
+    "7/32/49.png",
+    "7/32/50.png"
+  ],
+  "context_tiles": [
+    "7/31/49.png",
+    "7/31/50.png",
+    "7/33/49.png",
+    "7/33/50.png"
+  ],
+  "features": [
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Evansville", "original": "Evansville", "original_bbox": [224, 98, 273, 114], "kind": "city", "source_url": "@source/ddb37bd89365a950", "source_glyph_complete": true, "source_printed_full_literal": "Evansville"},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Paducah", "original": "Paducah", "original_bbox": [130, 199, 172, 216], "kind": "city", "source_url": "@source/ddb37bd89365a950", "source_glyph_complete": true, "source_printed_full_literal": "Paducah"},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Clarksville", "original": "Clarksville", "original_bbox": [243, 261, 293, 279], "kind": "city", "source_url": "@source/67a9550e0031bd28", "source_glyph_complete": true, "source_printed_full_literal": "Clarksville"},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Jackson", "original": "Jackson", "original_bbox": [108, 365, 148, 382], "kind": "city", "source_url": "@source/67a9550e0031bd28", "source_glyph_complete": true, "source_printed_full_literal": "Jackson"}
+  ],
+  "translations": [
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Evansville", "zh": "埃文斯维尔", "status": "approved", "source": "@source/05f3cc04dd8bdf7b", "record_sha256": "bbf17d2a7d2530e86fc1be75c7906ae1d8c57a89aa54e5dde9f835a21ee85227", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Paducah", "zh": "帕迪尤卡", "status": "approved", "source": "@source/1ae0b69629f40306", "record_sha256": "c2b476bccd7597f2198bfc57a5673eb26dd8745e79e619ea075302adda62aba4", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Clarksville", "zh": "克拉克斯维尔", "status": "approved", "source": "@source/5c194e0fd06303af", "record_sha256": "cf88360c29190b29f0f9ce6ff4c5bbec354e0f9d69a1d9e44f87c4ecad02cc91", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Jackson", "zh": "杰克逊", "status": "approved", "source": "@source/5c194e0fd06303af", "record_sha256": "f8eb1674e71fac8210b40e8a07027ecac4750efc2526aabb8b597ae1b5c9aa30", "review_notes": "依据官方地名与同一实际原图全字框核对实体。沿用对应已有中文或采用项目音译。"}
+  ],
+  "layouts": [
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Evansville", "x": 220, "y": 118, "font_style": "regular", "font_size": 12},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Paducah", "x": 159, "y": 207.5, "font_style": "regular", "font_size": 12},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Clarksville", "x": 210, "y": 284, "font_style": "regular", "font_size": 12},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Jackson", "x": 134, "y": 373.5, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Evansville-circle", "feature_id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Evansville", "kind": "circle", "x": 220.5, "y": 99.5, "original_bbox": [216, 95, 225, 104], "size": 9, "outline_width": 1},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Paducah-circle", "feature_id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Paducah", "kind": "circle", "x": 127.5, "y": 201.0, "original_bbox": [123, 196, 132, 206], "size": 10, "outline_width": 1},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Clarksville-circle", "feature_id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Clarksville", "kind": "circle", "x": 240.5, "y": 264.5, "original_bbox": [236, 260, 245, 269], "size": 9, "outline_width": 1},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Jackson-circle", "feature_id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-Jackson", "kind": "circle", "x": 108.0, "y": 367.0, "original_bbox": [103, 362, 113, 372], "size": 10, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-shared-AM7-162-St--Louis", "owner_region": "AM-CanadaNorthWestUS-z7-18-39", "feature_id": "AM7-162-St--Louis", "original": "St. Louis", "kind": "city", "original_bbox": [-23, 17, 35, 41], "source_url": "@source/e205c9b0c7e807f6", "review_notes": "完整原文字框对应同一层级相同世界坐标，RGBA 逐字节对应正式所属区。已有中文与符号保持其原输出。"},
+    {"id": "US-PaducahEvansvilleClarksvilleJackson-z7-32-49-1x2-shared-AM12-16-Memphis", "owner_region": "AM-MississippiEast-z7-30-50", "feature_id": "AM12-16-Memphis", "original": "Memphis", "kind": "city", "original_bbox": [-10, 414, 44, 437], "source_url": "@source/2408c34d3d39144c", "review_notes": "完整原文字框对应同一层级相同世界坐标，RGBA 逐字节对应正式所属区。已有中文与符号保持其原输出。"}
+  ],
+  "legacy_suppressions": []
+}

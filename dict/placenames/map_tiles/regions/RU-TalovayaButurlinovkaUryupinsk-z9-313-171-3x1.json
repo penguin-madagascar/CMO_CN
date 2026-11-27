@@ -1,0 +1,39 @@
+{
+  "id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1",
+  "z": 9,
+  "x": 313,
+  "y": 171,
+  "width_tiles": 3,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/313/171.png",
+    "9/314/171.png",
+    "9/315/171.png"
+  ],
+  "context_tiles": [
+    "9/312/171.png"
+  ],
+  "features": [
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S01", "kind": "city", "original": "Talovaya", "original_bbox": [211, 29, 262, 48], "source_url": "@source/d03ee339ab9b9ffd", "source_glyph_complete": true, "source_printed_full_literal": "Talovaya"},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S02", "kind": "city", "original": "Buturlinovka", "original_bbox": [151, 195, 221, 211], "source_url": "@source/d03ee339ab9b9ffd", "source_glyph_complete": true, "source_printed_full_literal": "Buturlinovka"},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S03", "kind": "city", "original": "Novokhoperskiy", "original_bbox": [502, 47, 589, 67], "source_url": "@source/c930bfcf036b5414", "source_glyph_complete": true, "source_printed_full_literal": "Novokhoperskiy"},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S04", "kind": "city", "original": "Uryupinsk", "original_bbox": [674, 213, 731, 232], "source_url": "@source/c930bfcf036b5414", "source_glyph_complete": true, "source_printed_full_literal": "Uryupinsk"}
+  ],
+  "translations": [
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S01", "zh": "塔洛瓦亚", "status": "approved", "source": "@source/6cb537d8b502b615", "record_sha256": "0cea19940846c70016d50080c4591e4f8622e1ca58b96e793ea511f43aeee0e0", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S02", "zh": "布图尔利诺夫卡", "status": "approved", "source": "@source/6cb537d8b502b615", "record_sha256": "f24c87155421ef756b14ec41127efc1432d568bb4c6c58b015d7bdfdb4ca7afa", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S03", "zh": "新霍皮奥尔斯基", "status": "approved", "source": "@source/6cb537d8b502b615", "record_sha256": "1817823902bfa2ae9e015598bae0d06c1e35189e57bdd00d6ccc3da653a50e2c", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S04", "zh": "乌留平斯克", "status": "approved", "source": "@source/b1a5dbba7d569187", "record_sha256": "1c21468c674f4a5a0ac469ea25aee318954d9f91be6251dcabe840536769b6d4", "review_notes": "核对完整原图地名与官方地名来源。已有可见游戏译名按原字保留，其余采用通行译名或原语音译。"}
+  ],
+  "layouts": [
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S01", "x": 236, "y": 38, "font_style": "regular", "font_size": 12, "lines": ["塔洛瓦亚"]},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S02", "x": 186, "y": 203, "font_style": "regular", "font_size": 12, "lines": ["布图尔利诺夫卡"]},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S03", "x": 546, "y": 58, "font_style": "regular", "font_size": 12, "lines": ["新霍皮奥尔斯基"]},
+    {"id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-S04", "x": 705, "y": 222, "font_style": "regular", "font_size": 12, "lines": ["乌留平斯克"]}
+  ],
+  "shared_sources": [
+    {"kind": "city", "original": "Bobrov", "source_url": "@source/777c954df8651fb9", "id": "RU-TalovayaButurlinovkaUryupinsk-z9-313-171-3x1-shared-RU-LiskiBobrov-z9-312-171-S02", "original_bbox": [-37, 40, 4, 56], "owner_region": "RU-LiskiBobrov-z9-312-171", "feature_id": "RU-LiskiBobrov-z9-312-171-S02", "review_notes": "完整原图字形已有唯一归属，保持同一中文标签。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": []
+}

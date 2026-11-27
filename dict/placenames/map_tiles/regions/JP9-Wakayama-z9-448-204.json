@@ -1,0 +1,38 @@
+{
+  "id": "JP9-Wakayama-z9-448-204",
+  "z": 9,
+  "x": 448,
+  "y": 204,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/448/204.png"
+  ],
+  "context_tiles": [
+    "9/448/205.png"
+  ],
+  "features": [
+    {"id": "JP9-448204-Wakayama", "kind": "city", "original": "Wakayama", "original_bbox": [31, 23, 99, 44], "source_url": "@source/6613f9d2e266dbc3", "source_glyph_complete": true, "source_printed_full_literal": "Wakayama"},
+    {"id": "JP9-448204-Koya", "kind": "region", "original": "Koya", "original_bbox": [199, 32, 229, 51], "source_url": "@source/6613f9d2e266dbc3", "source_glyph_complete": true, "source_printed_full_literal": "Koya"},
+    {"id": "JP9-448204-Gobo", "kind": "city", "original": "Gobo", "original_bbox": [39, 173, 73, 192], "source_url": "@source/6613f9d2e266dbc3", "source_glyph_complete": true, "source_printed_full_literal": "Gobo"},
+    {"id": "JP9-448204-Tanabe", "kind": "city", "original": "Tanabe", "original_bbox": [114, 246, 161, 263], "source_url": "@source/6613f9d2e266dbc3", "source_glyph_complete": true, "source_printed_full_literal": "Tanabe"}
+  ],
+  "translations": [
+    {"id": "JP9-448204-Wakayama", "zh": "和歌山", "status": "approved", "source": "@source/92a262dde36b7e47", "record_sha256": "cabaaddd6317303925a92e83f2f110de2b341a06cd4a424b67c59199895f12c9", "review_notes": "Original WWP center and government city identity"},
+    {"id": "JP9-448204-Koya", "zh": "高野", "status": "approved", "source": "@source/e9d8c63d6b6f7a6d", "record_sha256": "8f601f4408cf4187f522ad8914fa2e2afcfc7e92403b57d14ba5e38e0b2b5e4d", "review_notes": "NII Japanese town office representative point, confirmed 高野町 in prefectural institution list"},
+    {"id": "JP9-448204-Gobo", "zh": "御坊", "status": "approved", "source": "@source/0f34b93f3b2ff68e", "record_sha256": "ab8fa625fd6732c9fcec06483d0ecac87a4c190983db52f9c2e2fac8b2b685f2", "review_notes": "NII Japanese city office representative point, confirmed 御坊市 in prefectural institution list"},
+    {"id": "JP9-448204-Tanabe", "zh": "田边", "status": "approved", "source": "@source/bc7e99855c053204", "record_sha256": "2f92a5ed586d35ac92efa9ff45ff23dbb280af14f0531e6a272dafbaaa378e43", "review_notes": "NII Japanese historical representative point and prefectural 田辺市; 辺 converted to simplified 边"}
+  ],
+  "layouts": [
+    {"id": "JP9-448204-Wakayama", "x": 65.0, "y": 29.5, "font_size": 12, "font_style": "regular", "lines": ["和歌山"]},
+    {"id": "JP9-448204-Koya", "x": 214.0, "y": 41.5, "font_size": 12, "font_style": "regular", "lines": ["高野"]},
+    {"id": "JP9-448204-Gobo", "x": 56.0, "y": 182.5, "font_size": 12, "font_style": "regular", "lines": ["御坊"]},
+    {"id": "JP9-448204-Tanabe", "x": 137.5, "y": 247.5, "font_size": 12, "font_style": "regular", "lines": ["田边"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "JP9-WAKAYAMA-C-Cities2305", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2305, "original_Chinese_name": "凑", "lat_f32_bits": 1107876957, "lon_f32_bits": 1124542061, "flags": 0, "level": 1}, "layout": {"x": 54.64999999999418, "y": 44.00465027221799, "font_style": "regular", "font_size": 12, "lines": ["凑"]}}
+  ]
+}

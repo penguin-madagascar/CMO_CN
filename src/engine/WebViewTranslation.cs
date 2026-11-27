@@ -20,13 +20,35 @@ namespace CMOLocalizer
             public MethodInfo Execute;
             public EventInfo Initialization;
             public EventInfo Messages;
+            public EventInfo Navigation;
             public Delegate InitializationHandler;
             public Delegate MessageHandler;
+            public Delegate NavigationHandler;
+            public readonly object WorkLock = new object();
+            public readonly Queue<WebTranslationBatch> Work = new Queue<WebTranslationBatch>();
+            public readonly Queue<string> RetiredNonces = new Queue<string>();
+            public bool WorkerRunning;
+            public int WorkVersion;
+            public int OutstandingItems;
+            public string DocumentNonce;
+            public string DocumentSource;
             public Task<string> Registration;
             public string RegistrationScript;
             public bool RegistrationMessagesEnabled;
             public bool RegistrationHandled;
             public string ScriptId;
+            // 诊断计数：消息为何被丢。只读探针 WEBVIEW_DIAG 读它，日志只记首次。
+            public int StaleBatches;
+            public int MessageEvents;
+            // 通道验证按**文档**算：面板每次换战役都会导航出新 document，
+            // 上一份文档验过的通道不能给下一份背书（R85）。
+            public int ChannelGeneration = 1;
+            public int VerifiedGeneration;
+            public System.Windows.Forms.Timer MessageWatchdog;
+            public DateTime MessageWatchdogStart;
+            public bool MessageWatchdogLogged;
+            public bool MessageVerifiedLogged;
+            public string LastReject;
             public bool Disposed;
             public bool SourceWarningLogged;
             public bool CapabilityWarningLogged;
@@ -37,6 +59,17 @@ namespace CMOLocalizer
             public System.Windows.Forms.Timer FallbackTimer;
         }
 
+        private sealed class WebTranslationBatch
+        {
+            public object Core;
+            public int Version;
+            public string Source;
+            public string Nonce;
+            public List<KeyValuePair<int, string>> Items;
+            public DateTime Expires;
+        }
+
+        private const int MaxWebTranslationItems = 2048;
         private static readonly ConditionalWeakTable<Control, WebTranslationState> webTranslations =
             new ConditionalWeakTable<Control, WebTranslationState>();
         private static readonly object webScriptLock = new object();
@@ -68,7 +101,9 @@ namespace CMOLocalizer
             owner.Disposed += (sender, args) =>
             {
                 state.Disposed = true;
+                InvalidateWebTranslationWork(state);
                 if (state.FallbackTimer != null) state.FallbackTimer.Dispose();
+                StopWebMessageWatchdog(state);
                 DetachWebMessages(state);
                 if (state.InitializationHandler != null)
                     state.Initialization.RemoveEventHandler(owner, state.InitializationHandler);
@@ -77,6 +112,7 @@ namespace CMOLocalizer
             owner.HandleDestroyed += (sender, args) =>
             {
                 state.FallbackVersion++;
+                InvalidateWebTranslationWork(state, false);
                 state.FallbackInFlight = false;
                 if (state.FallbackTimer != null) state.FallbackTimer.Stop();
             };
@@ -104,10 +140,14 @@ namespace CMOLocalizer
             {
                 if (state.Messages != null && state.MessageHandler != null)
                     state.Messages.RemoveEventHandler(state.Core, state.MessageHandler);
+                if (state.Navigation != null && state.NavigationHandler != null)
+                    state.Navigation.RemoveEventHandler(state.Core, state.NavigationHandler);
             }
             catch (Exception ex) { Log("Web translation detach: " + ex.GetBaseException().Message); }
             state.MessageHandler = null;
             state.Messages = null;
+            state.NavigationHandler = null;
+            state.Navigation = null;
         }
 
         private static void AttachWebTranslation(WebTranslationState state)
@@ -129,10 +169,13 @@ namespace CMOLocalizer
                     return;
                 }
                 DetachWebMessages(state);
+                InvalidateWebTranslationWork(state);
                 if (state.FallbackTimer != null) state.FallbackTimer.Stop();
                 state.Fallback = false;
                 state.FallbackInFlight = false;
                 state.FallbackVersion++;
+                // 新 core 也必须重新证明通道；旧回执不算数。
+                lock (state.WorkLock) { state.ChannelGeneration++; state.VerifiedGeneration = 0; }
                 state.Registration = null;
                 state.RegistrationScript = null;
                 state.RegistrationHandled = false;
@@ -151,8 +194,28 @@ namespace CMOLocalizer
                 }
                 if (state.Messages != null)
                 {
-                    state.MessageHandler = WebEventDelegate(state.Messages, (sender, args) => ReceiveWebTranslation(state, args));
+                    state.MessageHandler = WebEventDelegate(state.Messages, (sender, args) =>
+                    {
+                        if (ReferenceEquals(state.Core, core)) ReceiveWebTranslation(state, args);
+                    });
                     state.Messages.AddEventHandler(core, state.MessageHandler);
+                }
+                state.Navigation = core.GetType().GetEvent("NavigationStarting");
+                if (state.Navigation != null)
+                {
+                    state.NavigationHandler = WebEventDelegate(state.Navigation, (sender, args) =>
+                    {
+                        if (!ReferenceEquals(state.Core, core)) return;
+                        // Navigation may later be canceled. Invalidate old work now,
+                        // but retire its nonce only when a different document reports.
+                        InvalidateWebTranslationWork(state, false);
+                        state.FallbackVersion++;
+                        state.FallbackInFlight = false;
+                        // 新文档要自己证明一次页→宿主通道（R85）。
+                        lock (state.WorkLock) state.ChannelGeneration++;
+                        EnsureWebMessageWatchdog(state);
+                    });
+                    state.Navigation.AddEventHandler(core, state.NavigationHandler);
                 }
                 bool messagesEnabled = state.Messages != null && WebMessagesEnabled(core);
                 string script = GetWebTranslationScript(messagesEnabled);
@@ -206,7 +269,11 @@ namespace CMOLocalizer
                 state.ScriptId = registration.Result;
                 // Preserve the registered mode; Attach reconciles subsequent settings changes.
                 if (state.RegistrationMessagesEnabled && !state.Fallback)
+                {
                     ExecuteWebTranslation(state, script);
+                    // 脚本已在本页跑过一次（含 hello 回执）；没回音就改宿主轮询。
+                    EnsureWebMessageWatchdog(state);
+                }
                 else EnableWebFallback(state);
             }
         }
@@ -224,6 +291,80 @@ namespace CMOLocalizer
             if (state.CapabilityWarningLogged) return;
             state.CapabilityWarningLogged = true;
             Log("Web translation: " + message);
+        }
+
+        /// <summary>
+        /// 页面消息通道的死活只能主动探测：CMO 的系列战役描述面板
+        /// （CampaignPlayWindow/WebBrowser1）就是反例——控件属性说 IsWebMessageEnabled=true、
+        /// 事件也挂上了，但页面的 postMessage 一条也到不了（WEBVIEW_DIAG 实测
+        /// messageEvents=0），回包因此永远发不出去。
+        /// 轮询发 hello 探帧：收到就算**本份文档**可用；超时就改宿主轮询（take()），
+        /// 让已发出的请求重新取回来翻译。验证粒度必须是每份文档：实测同一控件先
+        /// verified、后仍 dead（换战役会导航出新 document，旧回执不能给新文档背书）。
+        /// </summary>
+        private static void EnsureWebMessageWatchdog(WebTranslationState state)
+        {
+            if (state.Disposed || state.Fallback) return;
+            try
+            {
+                lock (state.WorkLock)
+                {
+                    if (state.MessageWatchdog != null) return;
+                    if (state.VerifiedGeneration == state.ChannelGeneration) return;
+                    state.MessageWatchdog = new System.Windows.Forms.Timer { Interval = 400 };
+                    state.MessageWatchdogStart = DateTime.UtcNow;
+                }
+                state.MessageWatchdog.Tick += (sender, args) =>
+                {
+                    if (state.Disposed || state.Fallback)
+                    {
+                        StopWebMessageWatchdog(state);
+                        return;
+                    }
+                    bool verified;
+                    lock (state.WorkLock) verified = state.VerifiedGeneration == state.ChannelGeneration;
+                    if (verified)
+                    {
+                        StopWebMessageWatchdog(state);
+                        return;
+                    }
+                    if ((DateTime.UtcNow - state.MessageWatchdogStart).TotalSeconds >= 1.6)
+                    {
+                        StopWebMessageWatchdog(state);
+                        if (!state.MessageWatchdogLogged)
+                        {
+                            state.MessageWatchdogLogged = true;
+                            Log("Web translation: page messages never arrived; using host polling ("
+                                + (state.Owner == null ? "?" : state.Owner.Name) + ")");
+                        }
+                        EnableWebFallback(state);
+                        return;
+                    }
+                    // 探帧：宿主→页→宿主的回路，能收到就说明消息通道真能用。
+                    ExecuteWebTranslation(state,
+                        "window.__cmoWebTranslation && window.chrome && window.chrome.webview"
+                        + " && window.chrome.webview.postMessage('CMO_WEB_V1_HELLO\\t'"
+                        + " + window.__cmoWebTranslation.documentId);");
+                };
+                state.MessageWatchdog.Start();
+            }
+            catch (Exception ex)
+            {
+                WarnWebCapability(state, "watchdog unavailable: " + ex.GetBaseException().Message);
+            }
+        }
+
+        private static void StopWebMessageWatchdog(WebTranslationState state)
+        {
+            System.Windows.Forms.Timer timer;
+            lock (state.WorkLock)
+            {
+                timer = state.MessageWatchdog;
+                state.MessageWatchdog = null;
+            }
+            if (timer == null) return;
+            try { timer.Stop(); timer.Dispose(); }
+            catch { }
         }
 
         private static void EnableWebFallback(WebTranslationState state)
@@ -302,9 +443,9 @@ namespace CMOLocalizer
             }
         }
 
-        private static void PostWebTranslation(WebTranslationState state, Action action)
+        private static bool PostWebTranslation(WebTranslationState state, Action action)
         {
-            if (state.Disposed || state.Owner.IsDisposed || !state.Owner.IsHandleCreated) return;
+            if (state.Disposed || state.Owner.IsDisposed || !state.Owner.IsHandleCreated) return false;
             try
             {
                 state.Owner.BeginInvoke(new Action(() =>
@@ -313,8 +454,9 @@ namespace CMOLocalizer
                     try { action(); }
                     catch (Exception ex) { Log("Web translation UI callback: " + ex.GetBaseException().Message); }
                 }));
+                return true;
             }
-            catch (InvalidOperationException) { } // Control disposal can race a background reply.
+            catch (InvalidOperationException) { return false; } // Control disposal can race a background reply.
         }
 
         private static void ExecuteWebTranslation(WebTranslationState state, string script)
@@ -338,69 +480,331 @@ namespace CMOLocalizer
             {
                 string message = args.GetType().GetMethod("TryGetWebMessageAsString").Invoke(args, null) as string;
                 PropertyInfo sourceProperty = args.GetType().GetProperty("Source");
-                string eventSource = sourceProperty == null ? null : sourceProperty.GetValue(args, null) as string;
+                if (sourceProperty == null) return;
+                string eventSource = sourceProperty.GetValue(args, null) as string;
+                if (string.IsNullOrEmpty(eventSource)) return;
                 ProcessWebTranslationMessage(state, message, eventSource);
             }
             catch (Exception) { } // Other game messages may have an unrelated shape.
         }
 
+        private static void RejectWebMessage(WebTranslationState state, string reason)
+        {
+            // 静默丢弃会让「译文在词典里但界面不显示」无从定位，所以首次丢弃必须留痕；
+            // 之后只计数，避免每次扫描刷日志。
+            if (state.LastReject != reason)
+            {
+                state.LastReject = reason;
+                Log("Web translation: message dropped (" + reason + ")");
+            }
+        }
+
         private static void ProcessWebTranslationMessage(WebTranslationState state, string message, string eventSource)
         {
             string nonce;
+            string nativeSource;
             var items = new List<KeyValuePair<int, string>>();
             try
             {
-                if (message == null || !message.StartsWith("CMO_WEB_V1\t", StringComparison.Ordinal) || message.Length > 524288) return;
-                string nativeSource = WebNativeSource(state.Core);
+                if (state.Disposed || !state.Owner.IsHandleCreated || message == null
+                    || message.Length > 524288)
+                {
+                    RejectWebMessage(state, "malformed envelope");
+                    return;
+                }
+                if (!message.StartsWith("CMO_WEB_V1\t", StringComparison.Ordinal)
+                    && !message.StartsWith("CMO_WEB_V1_HELLO\t", StringComparison.Ordinal))
+                {
+                    RejectWebMessage(state, "malformed envelope");
+                    return;
+                }
+                nativeSource = WebNativeSource(state.Core);
                 if (!TrustedWebSource(nativeSource) || (eventSource != null && !TrustedWebSource(eventSource)))
                 {
                     if (!state.SourceWarningLogged) Log("Web translation: untrusted document origin; native bridge ignored");
                     state.SourceWarningLogged = true;
+                    RejectWebMessage(state, "untrusted origin: " + (nativeSource ?? "<null>"));
+                    return;
+                }
+                // Trusted but different local pages are still different documents.
+                if (!string.Equals(nativeSource, eventSource, StringComparison.Ordinal))
+                {
+                    RejectWebMessage(state, "source mismatch: native=" + (nativeSource ?? "<null>")
+                        + " event=" + (eventSource ?? "<null>"));
+                    return;
+                }
+                PropertyInfo actual = state.Owner.GetType().GetProperty("CoreWebView2");
+                if (actual == null || !ReferenceEquals(actual.GetValue(state.Owner, null), state.Core))
+                {
+                    RejectWebMessage(state, "stale core");
+                    return;
+                }
+                if (message.StartsWith("CMO_WEB_V1_HELLO\t", StringComparison.Ordinal))
+                {
+                    // 通道存活回执：只能给**当前这份文档**背书。
+                    state.MessageEvents++;
+                    lock (state.WorkLock) state.VerifiedGeneration = state.ChannelGeneration;
+                    if (!state.MessageVerifiedLogged)
+                    {
+                        state.MessageVerifiedLogged = true;
+                        Log("Web translation: page messages verified ("
+                            + (state.Owner == null ? "?" : state.Owner.Name) + ")");
+                    }
                     return;
                 }
                 string[] lines = message.Split('\n');
-                if (lines.Length < 2 || lines.Length > 65) return;
+                if (lines.Length < 2 || lines.Length > 65)
+                {
+                    RejectWebMessage(state, "bad batch size: " + lines.Length);
+                    return;
+                }
                 nonce = lines[0].Substring(11);
-                if (nonce.Length == 0 || nonce.Length > 80) return;
+                if (nonce.Length == 0 || nonce.Length > 80)
+                {
+                    RejectWebMessage(state, "bad nonce length");
+                    return;
+                }
+                var ids = new HashSet<int>();
                 for (int i = 1; i < lines.Length; i++)
                 {
                     int tab = lines[i].IndexOf('\t');
                     int id;
-                    if (tab < 1 || !int.TryParse(lines[i].Substring(0, tab), out id) || id < 1) return;
+                    if (tab < 1 || !int.TryParse(lines[i].Substring(0, tab), out id) || id < 1 || !ids.Add(id))
+                    {
+                        RejectWebMessage(state, "bad item header");
+                        return;
+                    }
                     string source = Uri.UnescapeDataString(lines[i].Substring(tab + 1));
-                    if (source.Length > 16384 || source.Trim().Length == 0) return;
+                    if (source.Length > 16384 || source.Trim().Length == 0)
+                    {
+                        RejectWebMessage(state, "bad item text");
+                        return;
+                    }
                     items.Add(new KeyValuePair<int, string>(id, source));
                 }
             }
-            catch (Exception) { return; } // Native event boundaries must also tolerate unrelated/malformed page messages.
-            object core = state.Core;
-            ThreadPool.QueueUserWorkItem(ignored =>
+            catch (Exception ex)
             {
+                RejectWebMessage(state, "parse: " + ex.GetBaseException().Message);
+                return; // Native event boundaries must also tolerate unrelated/malformed page messages.
+            }
+            var batch = new WebTranslationBatch
+            {
+                Core = state.Core, Source = nativeSource, Nonce = nonce, Items = items,
+                Expires = DateTime.UtcNow.AddSeconds(15)
+            };
+            bool start = false;
+            lock (state.WorkLock)
+            {
+                if (state.Disposed || state.RetiredNonces.Contains(nonce))
+                {
+                    RejectWebMessage(state, "retired nonce");
+                    return;
+                }
+                if (state.DocumentNonce != nonce || state.DocumentSource != nativeSource)
+                {
+                    ResetWebTranslationWork(state, true);
+                    state.DocumentNonce = nonce;
+                    state.DocumentSource = nativeSource;
+                }
+                // Include work already translated but awaiting its UI callback.
+                // One worker per Core prevents a burst from creating 2,048 workers.
+                if (state.OutstandingItems + items.Count > MaxWebTranslationItems)
+                {
+                    RejectWebMessage(state, "work queue full");
+                    return;
+                }
+                batch.Version = state.WorkVersion;
+                state.OutstandingItems += items.Count;
+                state.Work.Enqueue(batch);
+                if (!state.WorkerRunning) { state.WorkerRunning = true; start = true; }
+            }
+            if (start) ThreadPool.QueueUserWorkItem(ignored => DrainWebTranslationWork(state));
+        }
+
+        private static void ResetWebTranslationWork(WebTranslationState state, bool retireNonce)
+        {
+            // Called only under WorkLock. Keep a bounded history so an old native
+            // message cannot switch the active document back after navigation.
+            if (retireNonce && state.DocumentNonce != null)
+            {
+                state.RetiredNonces.Enqueue(state.DocumentNonce);
+                while (state.RetiredNonces.Count > 32) state.RetiredNonces.Dequeue();
+            }
+            state.WorkVersion++;
+            state.Work.Clear();
+            state.OutstandingItems = 0;
+            if (retireNonce)
+            {
+                state.DocumentNonce = null;
+                state.DocumentSource = null;
+            }
+        }
+
+        private static void InvalidateWebTranslationWork(WebTranslationState state, bool retireNonce = true)
+        {
+            lock (state.WorkLock) ResetWebTranslationWork(state, retireNonce);
+        }
+
+        private static bool CurrentWebTranslationBatch(WebTranslationState state, WebTranslationBatch batch)
+        {
+            lock (state.WorkLock)
+                return !state.Disposed && batch.Version == state.WorkVersion
+                    && ReferenceEquals(batch.Core, state.Core) && batch.Nonce == state.DocumentNonce
+                    && batch.Source == state.DocumentSource && DateTime.UtcNow < batch.Expires;
+        }
+
+        private static void CompleteWebTranslationBatch(WebTranslationState state, WebTranslationBatch batch)
+        {
+            lock (state.WorkLock)
+                if (batch.Version == state.WorkVersion) state.OutstandingItems -= batch.Items.Count;
+        }
+
+        private static void DrainWebTranslationWork(WebTranslationState state)
+        {
+            while (true)
+            {
+                WebTranslationBatch batch;
+                lock (state.WorkLock)
+                {
+                    if (state.Work.Count == 0) { state.WorkerRunning = false; return; }
+                    batch = state.Work.Dequeue();
+                }
+                bool posted = false;
                 try
                 {
-                    var reply = new StringBuilder("window.__cmoWebTranslation && window.__cmoWebTranslation.receive(");
-                    reply.Append(WebJsString(nonce)).Append(",[");
-                    for (int i = 0; i < items.Count; i++)
+                    if (!CurrentWebTranslationBatch(state, batch))
                     {
+                        state.StaleBatches++;
+                        if (state.StaleBatches == 1) Log("Web translation: batch superseded before translation (nonce/version changed)");
+                        continue;
+                    }
+                    var reply = new StringBuilder("window.__cmoWebTranslation && window.__cmoWebTranslation.receive(");
+                    reply.Append(WebJsString(batch.Nonce)).Append(",[");
+                    bool current = true;
+                    for (int i = 0; i < batch.Items.Count; i++)
+                    {
+                        // A navigation/disposal can happen during a long batch.
+                        if (!CurrentWebTranslationBatch(state, batch)) { current = false; break; }
                         if (i > 0) reply.Append(',');
-                        string source = items[i].Value;
+                        string source = batch.Items[i].Value;
                         string key = source.Trim();
-                        // This bridge translates text only: it must never resolve game document commands.
+                        // This bridge translates text only: never resolve game document commands.
                         string translated = key.IndexOf("[LOADDOC]", StringComparison.OrdinalIgnoreCase) >= 0 ? key : TranslateBriefingText(key);
                         int offset = source.IndexOf(key, StringComparison.Ordinal);
                         string target = source.Substring(0, offset) + translated + source.Substring(offset + key.Length);
-                        reply.Append('[').Append(items[i].Key).Append(',').Append(WebJsString(source))
+                        reply.Append('[').Append(batch.Items[i].Key).Append(',').Append(WebJsString(source))
                             .Append(',').Append(WebJsString(target)).Append(']');
                     }
+                    if (!current) continue;
                     reply.Append("]);");
-                    PostWebTranslation(state, () =>
+                    posted = PostWebTranslation(state, () =>
                     {
-                        if (ReferenceEquals(state.Core, core) && TrustedWebSource(WebNativeSource(core)))
-                            ExecuteWebTranslation(state, reply.ToString());
+                        try
+                        {
+                            // UI 线程才能建 Timer；本份文档的回执还没到就重新探测通道。
+                            EnsureWebMessageWatchdog(state);
+                            PropertyInfo actual = state.Owner.GetType().GetProperty("CoreWebView2");
+                            if (CurrentWebTranslationBatch(state, batch) && state.Owner.IsHandleCreated
+                                && actual != null && ReferenceEquals(actual.GetValue(state.Owner, null), batch.Core)
+                                && string.Equals(batch.Source, WebNativeSource(batch.Core), StringComparison.Ordinal)
+                                && TrustedWebSource(batch.Source)) ExecuteWebTranslation(state, reply.ToString());
+                        }
+                        finally { CompleteWebTranslationBatch(state, batch); }
                     });
                 }
                 catch (Exception ex) { Log("Web translation batch: " + ex.GetBaseException().Message); }
-            });
+                finally { if (!posted) CompleteWebTranslationBatch(state, batch); }
+            }
+        }
+
+        /// <summary>
+        /// WEBVIEW_DIAG：只读导出某个窗体里 WebView2 桥的状态。
+        /// 「词典有译文但界面还是英文」必须先分清是「桥没接上」「批次被丢」还是
+        /// 「译文没命中」，否则只能靠改新代码试错。
+        /// </summary>
+        private static string HandleWebViewDiag(string filter)
+        {
+            Form host = null;
+            Form[] forms = OpenFormsSnapshot();
+            for (int i = 0; i < forms.Length; i++)
+            {
+                Form f = forms[i];
+                if (f == null || f.IsDisposed) continue;
+                if (!string.IsNullOrEmpty(filter)
+                    && (f.Name ?? "").IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0
+                    && (f.Text ?? "").IndexOf(filter, StringComparison.OrdinalIgnoreCase) < 0) continue;
+                host = f;
+                break;
+            }
+            if (host == null) return "{\"status\":\"error\",\"message\":\"form not found\"}";
+            string report = null;
+            string failure = null;
+            host.BeginInvoke(new Action(delegate
+            {
+                try
+                {
+                    Control wv = FindWebView2In(host);
+                    if (wv == null) { failure = "WebView2 not found in form"; return; }
+                    WebTranslationState state;
+                    if (!webTranslations.TryGetValue(wv, out state) || state == null)
+                    {
+                        report = "{\"status\":\"ok\",\"attached\":false,\"control\":\"" + JsonEsc(wv.Name) + "\"}";
+                        return;
+                    }
+                    object core = state.Core;
+                    string nativeSource = null;
+                    bool trusted = false;
+                    bool messagesEnabled = false;
+                    try
+                    {
+                        if (core != null) nativeSource = WebNativeSource(core);
+                        trusted = TrustedWebSource(nativeSource);
+                    }
+                    catch { }
+                    try { if (core != null) messagesEnabled = WebMessagesEnabled(core); } catch { }
+                    StringBuilder sb2 = new StringBuilder();
+                    sb2.Append("{\"status\":\"ok\",\"attached\":true");
+                    sb2.Append(",\"form\":\"").Append(JsonEsc(host.Name)).Append('"');
+                    sb2.Append(",\"control\":\"").Append(JsonEsc(wv.Name)).Append('"');
+                    sb2.Append(",\"corePresent\":").Append(core != null ? "true" : "false");
+                    sb2.Append(",\"handleCreated\":").Append(wv.IsHandleCreated ? "true" : "false");
+                    sb2.Append(",\"messagesWired\":").Append(state.Messages != null ? "true" : "false");
+                    sb2.Append(",\"messagesEnabled\":").Append(messagesEnabled ? "true" : "false");
+                    sb2.Append(",\"fallback\":").Append(state.Fallback ? "true" : "false");
+                    sb2.Append(",\"registrationHandled\":").Append(state.RegistrationHandled ? "true" : "false");
+                    sb2.Append(",\"scriptId\":\"").Append(JsonEsc(state.ScriptId ?? "")).Append('"');
+                    sb2.Append(",\"documentNonce\":\"").Append(JsonEsc(state.DocumentNonce ?? "")).Append('"');
+                    sb2.Append(",\"documentSource\":\"").Append(JsonEsc(state.DocumentSource ?? "")).Append('"');
+                    sb2.Append(",\"nativeSource\":\"").Append(JsonEsc(nativeSource ?? "")).Append('"');
+                    sb2.Append(",\"trustedSource\":").Append(trusted ? "true" : "false");
+                    sb2.Append(",\"workVersion\":").Append(state.WorkVersion);
+                    sb2.Append(",\"outstandingItems\":").Append(state.OutstandingItems);
+                    sb2.Append(",\"workerRunning\":").Append(state.WorkerRunning ? "true" : "false");
+                    sb2.Append(",\"queuedBatches\":").Append(state.Work.Count);
+                    sb2.Append(",\"retiredNonces\":").Append(state.RetiredNonces.Count);
+                    sb2.Append(",\"staleBatches\":").Append(state.StaleBatches);
+                    sb2.Append(",\"messageEvents\":").Append(state.MessageEvents);
+                    sb2.Append(",\"channelGeneration\":").Append(state.ChannelGeneration);
+                    sb2.Append(",\"verifiedGeneration\":").Append(state.VerifiedGeneration);
+                    bool coreMatches = false;
+                    try
+                    {
+                        PropertyInfo current = wv.GetType().GetProperty("CoreWebView2");
+                        coreMatches = current != null && ReferenceEquals(current.GetValue(wv, null), state.Core);
+                    }
+                    catch { }
+                    sb2.Append(",\"coreMatches\":").Append(coreMatches ? "true" : "false");
+                    sb2.Append(",\"lastReject\":\"").Append(JsonEsc(state.LastReject ?? "")).Append('"');
+                    sb2.Append('}');
+                    report = sb2.ToString();
+                }
+                catch (Exception ex) { failure = ex.GetBaseException().Message; }
+            }));
+            for (int i = 0; i < 100 && report == null && failure == null; i++) Thread.Sleep(50);
+            if (failure != null) return "{\"status\":\"error\",\"message\":\"" + JsonEsc(failure) + "\"}";
+            if (report == null) return "{\"status\":\"error\",\"message\":\"diag timeout\"}";
+            return report;
         }
 
         private static string WebNativeSource(object core)

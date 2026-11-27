@@ -1,0 +1,42 @@
+{
+  "id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222",
+  "z": 9,
+  "x": 406,
+  "y": 222,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "features": [
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S01", "kind": "city", "original": "Baisheng", "source_url": "@source/6c0bbf796185d4ac", "original_bbox": [44, 29, 95, 49], "source_printed_full_literal": "Baisheng", "source_glyph_complete": true},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S02", "kind": "city", "original": "Baihe", "source_url": "@source/6c0bbf796185d4ac", "original_bbox": [126, 49, 159, 65], "source_printed_full_literal": "Baihe", "source_glyph_complete": true},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S03", "kind": "city", "original": "Tunpan", "source_url": "@source/6c0bbf796185d4ac", "original_bbox": [212, 61, 256, 80], "source_printed_full_literal": null, "source_glyph_complete": false, "source_visible_fragment": "Tunpan", "resolved_semantic_name": "Tunpan", "original_is_support_not_full_glyph_transcription": true, "semantic_resolution": {"type": "FULL_LITERAL_LEGIBLE_AT_OUTER_PIXEL_LIMIT", "administrative_name_source": "@source/98c2b36b6dc98d7d", "limits": "可逐字辨读 Tunpan。东侧实测无接续像素。保留实际正 alpha 边缘范围。", "exact_opposite_box": [256, 57, 270, 86], "exact_opposite_alpha": 0}},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S04", "kind": "city", "original": "Pác Miầu", "source_url": "@source/6c0bbf796185d4ac", "original_bbox": [-17, 150, 36, 169], "source_printed_full_literal": "Pác Miầu", "source_glyph_complete": true},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S05", "kind": "city", "original": "Tĩnh Túc", "source_url": "@source/6c0bbf796185d4ac", "original_bbox": [128, 225, 179, 242], "source_printed_full_literal": "Tĩnh Túc", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S01", "zh": "百省", "source": "@source/98c2b36b6dc98d7d", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "ba65bfd5bc8b165f55b5a1af7519d3b3a1c1d5b5d363499b268240ea643dad13"},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S02", "zh": "百合", "source": "@source/98c2b36b6dc98d7d", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "10ed7bb4776ed249959321cce0115c93d272abea29385b53ff7f4a2601968527"},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S03", "zh": "吞盘", "source": "@source/98c2b36b6dc98d7d", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "ff4a6126538ebfabab1af2ff8dab46c691d8eb318c13a95d1fb61f3d1d520db9"},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S04", "zh": "坡苗", "source": "@source/5905242753f70569", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "52a357ce15048d1c9dbb8dae60045c29cdf6341f581a08d7233111e3d9aa8176"},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S05", "zh": "静足", "source": "@source/eb192e45830435ed", "status": "approved", "review_notes": "Exact supplier name. Chinese rendering follows local naming and editorial transliteration where needed.", "record_sha256": "726f446c92002265be052fecdea0a03a023800d19de205f479d6315a36a8e287"}
+  ],
+  "layouts": [
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S01", "x": 69.5, "y": 39.0, "font_style": "regular", "font_size": 12, "lines": ["百省"]},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S02", "x": 142.5, "y": 57.0, "font_style": "regular", "font_size": 12, "lines": ["百合"]},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S03", "x": 234.0, "y": 70.5, "font_style": "regular", "font_size": 12, "lines": ["吞盘"]},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S04", "x": 13.5, "y": 159.5, "font_style": "regular", "font_size": 12, "lines": ["坡苗"]},
+    {"id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-S05", "x": 153.5, "y": 233.5, "font_style": "regular", "font_size": 12, "lines": ["静足"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"kind": "city", "original": "Bộc Bố", "source_url": "@source/b84085a1c88206e8", "id": "CNVN-Napo-PacMiau-TinhTuc-z9-406-222-shared-VN-BacKan-ChoRa-YenLac-z9-406-223-S01", "original_bbox": [50, 238, 96, 259], "owner_region": "VN-BacKan-ChoRa-YenLac-z9-406-223", "feature_id": "VN-BacKan-ChoRa-YenLac-z9-406-223-S01", "review_notes": "Complete original seam is attributed to the already-rendered Source owner."}
+  ],
+  "legacy_suppressions": [],
+  "original_tiles": [
+    "9/406/222.png"
+  ],
+  "context_tiles": [
+    "9/405/222.png",
+    "9/407/222.png",
+    "9/406/223.png"
+  ]
+}

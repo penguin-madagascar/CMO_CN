@@ -1,0 +1,34 @@
+{
+  "id": "CF-AkpiaMboloAlindao-z9-286-248",
+  "z": 9,
+  "x": 286,
+  "y": 248,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/286/248.png"
+  ],
+  "context_tiles": [
+    "9/287/248.png"
+  ],
+  "features": [
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Mbolo", "kind": "city", "original": "Mbolo", "original_bbox": [218, 27, 254, 44], "source_url": "@source/d863ff238c3349ba", "source_glyph_complete": true, "source_printed_full_literal": "Mbolo"},
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Akpia", "kind": "city", "original": "Akpia", "original_bbox": [9, 63, 43, 83], "source_url": "@source/d863ff238c3349ba", "source_glyph_complete": true, "source_printed_full_literal": "Akpia"},
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Alindao", "kind": "city", "original": "Alindao", "original_bbox": [21, 201, 65, 218], "source_url": "@source/d863ff238c3349ba", "source_glyph_complete": true, "source_printed_full_literal": "Alindao"}
+  ],
+  "translations": [
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Mbolo", "zh": "姆博洛", "status": "approved", "source": "@source/450e42ab69d75fe5", "review_notes": "Population centre in Alindao, Basse-Kotto confirmed. Editorial transcription; no established Chinese for this same town confirmed.", "record_sha256": "040a0c1278b724f3dc69344f6d95b8a07527299b2d873263e79614217284a0e5"},
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Akpia", "zh": "阿克皮亚", "status": "approved", "source": "@source/753d17bb3f9c4ee7", "review_notes": "Exact same Basse-Kotto settlement confirmed by independent point and map. Editorial transcription.", "record_sha256": "d021a2b3e49a7c92d0b6a7d2bf9ba92f4f23b4a78b3d9ccf9e3ed09709cd7b4e"},
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Alindao", "zh": "阿林道", "status": "approved", "source": "@source/a6095459a6b158fd", "review_notes": "Official UN use designates 阿林道 in Basse-Kotto, consistent with China embassy and WHO.", "record_sha256": "fb3e9ed868cd536a5f14712b07b77495c12234c90adc701a454246d38fb4ba11"}
+  ],
+  "layouts": [
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Mbolo", "x": 235.5, "y": 35.5, "font_size": 12, "font_style": "regular"},
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Akpia", "x": 28, "y": 73, "font_size": 12, "font_style": "regular"},
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-Alindao", "x": 43, "y": 209.5, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CF-AkpiaMboloAlindao-z9-286-248-shared-Mingala", "kind": "city", "original": "Mingala", "source_url": "@source/84d9cfc6e7227934", "owner_region": "P9-Closed6-z9-287-248", "feature_id": "P9-PH-025", "original_bbox": [237, 180, 282, 200], "review_notes": "Original raw frames join to the same full Mingala. Existing east output has intact 明加拉 and no extra Chinese needed here."}
+  ],
+  "legacy_suppressions": []
+}

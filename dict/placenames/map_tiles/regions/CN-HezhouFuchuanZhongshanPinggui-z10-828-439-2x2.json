@@ -1,0 +1,71 @@
+{
+  "id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2",
+  "z": 10,
+  "x": 828,
+  "y": 439,
+  "width_tiles": 2,
+  "height_tiles": 2,
+  "original_tiles": [
+    "10/828/439.png",
+    "10/828/440.png",
+    "10/829/439.png",
+    "10/829/440.png"
+  ],
+  "context_tiles": [
+    "10/830/439.png"
+  ],
+  "features": [
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N01", "kind": "city", "original": "Fuchuan", "original_bbox": [101, 11, 155, 29], "source_glyph_complete": true, "source_printed_full_literal": "Fuchuan", "source_url": "@source/dba8d18b67c562d8"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N02", "kind": "city", "original": "Lianshan", "original_bbox": [164, 61, 209, 75], "source_glyph_complete": true, "source_printed_full_literal": "Lianshan", "source_url": "@source/dba8d18b67c562d8"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N03", "kind": "city", "original": "Liujia", "original_bbox": [92, 81, 124, 101], "source_glyph_complete": true, "source_printed_full_literal": "Liujia", "source_url": "@source/dba8d18b67c562d8"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N04", "kind": "city", "original": "Honghua", "original_bbox": [33, 194, 80, 212], "source_glyph_complete": true, "source_printed_full_literal": "Honghua", "source_url": "@source/dba8d18b67c562d8"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N05", "kind": "city", "original": "Wanggao", "original_bbox": [210, 206, 264, 225], "source_glyph_complete": true, "source_printed_full_literal": "Wanggao", "source_url": "@source/dba8d18b67c562d8"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N06", "kind": "city", "original": "Zhongshan", "original_bbox": [113, 245, 184, 267], "source_glyph_complete": true, "source_printed_full_literal": "Zhongshan", "source_url": "@source/4b732b80b9b12744"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N07", "kind": "city", "original": "Yantang", "original_bbox": [4, 295, 46, 313], "source_glyph_complete": true, "source_printed_full_literal": "Yantang", "source_url": "@source/4b732b80b9b12744"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N08", "kind": "city", "original": "Pinggui", "original_bbox": [253, 302, 302, 324], "source_glyph_complete": true, "source_printed_full_literal": "Pinggui", "source_url": "@source/c89fade18c403b7a"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N09", "kind": "city", "original": "Huangyao", "original_bbox": [50, 470, 101, 488], "source_glyph_complete": true, "source_printed_full_literal": "Huangyao", "source_url": "@source/4b732b80b9b12744"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N10", "kind": "city", "original": "Gonghui", "original_bbox": [142, 478, 189, 498], "source_glyph_complete": true, "source_printed_full_literal": "Gonghui", "source_url": "@source/4b732b80b9b12744"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N11", "kind": "city", "original": "Kaishan", "original_bbox": [427, 46, 467, 61], "source_glyph_complete": true, "source_printed_full_literal": "Kaishan", "source_url": "@source/41a25400894266bd"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N12", "kind": "city", "original": "Guiling", "original_bbox": [498, 130, 538, 150], "source_glyph_complete": true, "source_printed_full_literal": "Guiling", "source_url": "@source/41a25400894266bd"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N13", "kind": "city", "original": "Hezhou", "original_bbox": [317, 343, 366, 361], "source_glyph_complete": true, "source_printed_full_literal": "Hezhou", "source_url": "@source/c89fade18c403b7a"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N14", "kind": "city", "original": "Hejie", "original_bbox": [396, 405, 423, 423], "source_glyph_complete": true, "source_printed_full_literal": "Hejie", "source_url": "@source/c89fade18c403b7a"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N15", "kind": "city", "original": "Butou", "original_bbox": [414, 493, 450, 509], "source_glyph_complete": true, "source_printed_full_literal": "Butou", "source_url": "@source/c89fade18c403b7a"}
+  ],
+  "translations": [
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N01", "zh": "富川", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "5931313c2b18818ba9630db71b0b6fdd177104610ea1f6cec82af298b964914f", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N02", "zh": "莲山", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "c7e1970a742aae9522d95e0118d6c5b5ae2599111d71f6c0b46061198a87fdc0", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N03", "zh": "柳家", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "672bd0acef3c0815242469f903f265d056bbbb80056df327d4ddca5d226c4ba0", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N04", "zh": "红花", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "61e2f68e3463eca1eeeb51ad94eee8aece829d993409035e2b3e9a6999dbf00a", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N05", "zh": "望高", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "cd79bf87e4b2f075ea2d2cba41634f8ba9cd3656892980975cb9baf19582cabc", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N06", "zh": "钟山", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "589f8b6caac166a7153d5362e43bdb4518e2541ec2b9138d911355129f464dfa", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N07", "zh": "燕塘", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "0fc9631bf423dfb3b45d75a074e5d376d5c6e4ce57ed5c4526d97624834f6d9d", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N08", "zh": "平桂", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "e9a0a5e0332f0cc937db06e7b75059ff39b57551bc68364b6e11b0b55f245e4f", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N09", "zh": "黄姚", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "89a66d04fff80d9c165e9399e3685377dbf564ea81aadd1245f9ef08f9910aa3", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N10", "zh": "公会", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "a54277c29c90b0e939f44a91517f470cfee7d0c07eb07b070bf79026d571683a", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N11", "zh": "开山", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "28be544ff4a5eb45441f98631ca076ddd8ac814111bc62cc585f0438491f221b", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N12", "zh": "桂岭", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "535eafcf84af27da9284b24281767e369b6327d28d99bd296065253d7f2515bd", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N13", "zh": "贺州", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "99bcfa7905d943fb8324136fc9c0cfae3a6331b450894f99e5ae6b80c9756dfc", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N14", "zh": "贺街", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "130f40295ee113a5d067cd9a0b5f906033d241924aed2c859b9e5be11cc780be", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N15", "zh": "步头", "status": "approved", "source": "@source/c6d755e9a205eed5", "record_sha256": "400ffa1f335b28b239ffb25928eb98f7a8ed4eabb834e90d07b711e2fe692839", "review_notes": "核对原图完整文字、地理位置和地方政府正式名称。"}
+  ],
+  "layouts": [
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N01", "x": 128.0, "y": 20.0, "font_style": "regular", "font_size": 12, "lines": ["富川"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N02", "x": 186.5, "y": 68.0, "font_style": "regular", "font_size": 12, "lines": ["莲山"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N03", "x": 108.0, "y": 91.0, "font_style": "regular", "font_size": 12, "lines": ["柳家"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N04", "x": 56.5, "y": 203.0, "font_style": "regular", "font_size": 12, "lines": ["红花"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N05", "x": 237.0, "y": 215.5, "font_style": "regular", "font_size": 12, "lines": ["望高"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N06", "x": 148.5, "y": 256.0, "font_style": "regular", "font_size": 12, "lines": ["钟山"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N07", "x": 25.0, "y": 304.0, "font_style": "regular", "font_size": 12, "lines": ["燕塘"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N08", "x": 277.5, "y": 313.0, "font_style": "regular", "font_size": 12, "lines": ["平桂"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N09", "x": 75.5, "y": 479.0, "font_style": "regular", "font_size": 12, "lines": ["黄姚"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N10", "x": 165.5, "y": 488.0, "font_style": "regular", "font_size": 12, "lines": ["公会"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N11", "x": 447.0, "y": 53.5, "font_style": "regular", "font_size": 12, "lines": ["开山"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N12", "x": 498.0, "y": 140.0, "font_style": "regular", "font_size": 12, "lines": ["桂岭"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N13", "x": 341.5, "y": 352.0, "font_style": "regular", "font_size": 12, "lines": ["贺州"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N14", "x": 409.5, "y": 414.0, "font_style": "regular", "font_size": 12, "lines": ["贺街"]},
+    {"id": "CN-HezhouFuchuanZhongshanPinggui-z10-828-439-2x2-N15", "x": 432.0, "y": 501.0, "font_style": "regular", "font_size": 12, "lines": ["步头"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

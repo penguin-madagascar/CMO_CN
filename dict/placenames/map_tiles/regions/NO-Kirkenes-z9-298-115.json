@@ -1,0 +1,24 @@
+{
+  "id": "NO-Kirkenes-z9-298-115",
+  "z": 9,
+  "x": 298,
+  "y": 115,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/298/115.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "NO-Kirkenes-z9-298-115-N01", "kind": "city", "original": "Kirkenes", "original_bbox": [163, 174, 211, 191], "source_glyph_complete": true, "source_printed_full_literal": "Kirkenes", "source_url": "@source/89b4c0a58d3ca35d"}
+  ],
+  "translations": [
+    {"id": "NO-Kirkenes-z9-298-115-N01", "zh": "希尔克内斯", "status": "approved", "source": "@source/a81517a90a9202a6", "record_sha256": "dcc9b17dbb356afce8de3f4c784cda35ad445a403be2b79ec61f59a39107968c", "review_notes": "挪威当地商务资料中的中文名称。"}
+  ],
+  "layouts": [
+    {"id": "NO-Kirkenes-z9-298-115-N01", "x": 187.0, "y": 182.5, "font_style": "regular", "font_size": 12, "lines": ["希尔克内斯"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

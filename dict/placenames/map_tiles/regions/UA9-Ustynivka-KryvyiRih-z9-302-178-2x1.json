@@ -1,0 +1,47 @@
+{
+  "id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1",
+  "z": 9,
+  "x": 302,
+  "y": 178,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/302/178.png",
+    "9/303/178.png"
+  ],
+  "context_tiles": [
+    "9/302/177.png",
+    "9/303/177.png",
+    "9/304/178.png"
+  ],
+  "features": [
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Ustynivka", "kind": "city", "original": "Ustynivka", "original_bbox": [43, 10, 98, 28], "source_url": "@source/7fa38a98d3284550", "source_glyph_complete": true, "source_printed_full_literal": "Ustynivka"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Kazanka", "kind": "city", "original": "Kazanka", "original_bbox": [152, 76, 199, 92], "source_url": "@source/7fa38a98d3284550", "source_glyph_complete": true, "source_printed_full_literal": "Kazanka"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-NovyiBuh", "kind": "city", "original": "Novyi Buh", "original_bbox": [32, 152, 90, 172], "source_url": "@source/7fa38a98d3284550", "source_glyph_complete": true, "source_printed_full_literal": "Novyi Buh"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-KryvyiRih", "kind": "city", "original": "Kryvyi Rih", "original_bbox": [362, 24, 401, 61], "source_url": "@source/5bbb9d146ae3858f", "source_glyph_complete": true, "source_printed_full_literal": "Kryvyi Rih"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Shyroke", "kind": "city", "original": "Shyroke", "original_bbox": [312, 157, 358, 176], "source_url": "@source/5bbb9d146ae3858f", "source_glyph_complete": true, "source_printed_full_literal": "Shyroke"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Apostolove", "kind": "city", "original": "Apostolove", "original_bbox": [469, 169, 532, 189], "source_url": "@source/5bbb9d146ae3858f", "source_glyph_complete": true, "source_printed_full_literal": "Apostolove"}
+  ],
+  "translations": [
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Ustynivka", "zh": "乌斯蒂尼夫卡", "status": "approved", "source": "@source/2bcfd904bf8d36bf", "record_sha256": "1553855b4bfec410d6c65e48802303ab988c517bff5404ea6f93bb5859b375a0", "review_notes": "核对完整原字和坐标，地名符合现有中文译名；换行保留地名整体。"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Kazanka", "zh": "卡赞卡", "status": "approved", "source": "@source/e52021c8a05d5c7a", "record_sha256": "ec30aa6d668fdffac468116c21dfd2accad6c5216eb47b32b3a34fbd090722d3", "review_notes": "核对完整原字和坐标，地名符合现有中文译名；换行保留地名整体。"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-NovyiBuh", "zh": "新布赫", "status": "approved", "source": "@source/2196a4433f34b7ae", "record_sha256": "8c5da8d09a9d20e89ce5b4930a3c71fedd1859f38e9065c4f9eb077ba915b4af", "review_notes": "核对完整原字和坐标，地名符合现有中文译名；换行保留地名整体。"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-KryvyiRih", "zh": "克里沃罗格", "status": "approved", "source": "@source/98c4e9b5d5742d6e", "record_sha256": "92a921ee340401dc470ffada8f87c043be1551de445773cddf49f22066ad8d8f", "review_notes": "核对完整原字和坐标，地名符合现有中文译名；换行保留地名整体。"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Shyroke", "zh": "希罗凯", "status": "approved", "source": "@source/9096b86fcccac07c", "record_sha256": "349d368ca56098112c087009be05a806c51a5c13bed275b69bb7a2ffbb57a4e3", "review_notes": "核对完整原字和坐标，地名符合现有中文译名；换行保留地名整体。"},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Apostolove", "zh": "阿波斯托洛韦", "status": "approved", "source": "@source/bdb35d04c7bf0c83", "record_sha256": "012a1abab6981f21e5c951382dd4a989870f8c6a5035c531abf76a1e0d9241f8", "review_notes": "核对完整原字和坐标，地名符合现有中文译名；换行保留地名整体。"}
+  ],
+  "layouts": [
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Ustynivka", "x": 70.5, "y": 19.0, "font_size": 12, "font_style": "regular", "lines": ["乌斯蒂尼夫卡"]},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Kazanka", "x": 175.5, "y": 84.0, "font_size": 12, "font_style": "regular", "lines": ["卡赞卡"]},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-NovyiBuh", "x": 61.0, "y": 162.0, "font_size": 12, "font_style": "regular", "lines": ["新布赫"]},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-KryvyiRih", "x": 381.5, "y": 42.5, "font_size": 12, "font_style": "regular", "lines": ["克里沃罗格"]},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Shyroke", "x": 335.0, "y": 166.5, "font_size": 12, "font_style": "regular", "lines": ["希罗凯"]},
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Apostolove", "x": 493.0, "y": 179.0, "font_size": 12, "font_style": "regular", "lines": ["阿波斯", "托洛韦"]}
+  ],
+  "shared_sources": [
+    {"id": "UA9-Ustynivka-KryvyiRih-z9-302-178-2x1-Khrystoforivka-share", "owner_region": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1", "feature_id": "UA9-Piatykhatky-ZhovtiVody-z9-302-177-3x1-Khrystoforivka", "kind": "city", "original": "Khrystoforivka", "original_bbox": [233, -4, 312, 15], "source_url": "@source/22eb464e5ba3f580", "review_notes": "原版四瓦片跨界地名保持在已经独立审核的北侧区域。"}
+  ],
+  "symbols": [],
+  "legacy_suppressions": [],
+  "canonical_captions": []
+}

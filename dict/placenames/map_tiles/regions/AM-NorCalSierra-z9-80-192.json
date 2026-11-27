@@ -470,5 +470,8 @@
     {"feature_id": "AM9N-55-Vallejo", "name": "瓦列霍", "lat": 38.10409164428711, "lon": -122.25663757324219, "level": 1, "source": "@source/71a89ac329d0164d", "review_notes": "@note/legacy_suppressions"},
     {"feature_id": "AM9N-100-Visalia", "name": "维塞利亚", "lat": 36.330230712890625, "lon": -119.29206085205078, "level": 1, "source": "@source/8eb1dfb450645f5c", "review_notes": "@note/legacy_suppressions"},
     {"feature_id": "AM9N-17-Reno", "name": "雷诺", "lat": 39.52962875366211, "lon": -119.81379699707031, "level": 1, "source": "@source/d032e5c5dba4155e", "review_notes": "@note/legacy_suppressions"}
+  ],
+  "canonical_captions": [
+    {"id": "WWP-Cities-4036-z9", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 4036, "original_Chinese_name": "奥克兰", "lat_f32_bits": 1108817837, "lon_f32_bits": 3270806182, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 539.0, "y": 1496.0, "font_style": "regular", "font_size": 12, "lines": ["奥克兰"]}}
   ]
 }

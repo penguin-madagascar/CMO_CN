@@ -1,0 +1,43 @@
+{
+  "id": "CN-TanchengGangtou-z9-424-203",
+  "z": 9,
+  "x": 424,
+  "y": 203,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/424/203.png"
+  ],
+  "context_tiles": [
+    "9/423/203.png",
+    "9/425/203.png",
+    "9/424/204.png",
+    "9/424/202.png"
+  ],
+  "features": [
+    {"id": "CN-TanchengGangtou-z9-424-203-N01", "kind": "city", "original": "Lanling", "original_bbox": [-45, 3, 1, 25], "source_url": "@source/c770741ccebf120f", "source_glyph_complete": true, "source_printed_full_literal": "Lanling"},
+    {"id": "CN-TanchengGangtou-z9-424-203-N02", "kind": "city", "original": "Tancheng", "original_bbox": [55, 113, 116, 134], "source_url": "@source/c770741ccebf120f", "source_glyph_complete": true, "source_printed_full_literal": "Tancheng"},
+    {"id": "CN-TanchengGangtou-z9-424-203-N03", "kind": "city", "original": "Donghai", "original_bbox": [205, 152, 258, 174], "source_url": "@source/c770741ccebf120f", "source_glyph_complete": true, "source_printed_full_literal": "Donghai"},
+    {"id": "CN-TanchengGangtou-z9-424-203-N04", "kind": "city", "original": "Xinyi", "original_bbox": [64, 219, 98, 240], "source_url": "@source/c770741ccebf120f", "source_glyph_complete": true, "source_printed_full_literal": "Xinyi"},
+    {"id": "CN-TanchengGangtou-z9-424-203-N05", "kind": "city", "original": "Gangtou", "original_bbox": [11, 239, 58, 259], "source_url": "@source/c770741ccebf120f", "source_glyph_complete": true, "source_printed_full_literal": "Gangtou"}
+  ],
+  "translations": [
+    {"id": "CN-TanchengGangtou-z9-424-203-N01", "zh": "兰陵", "status": "approved", "source": "@source/fca7cd301f155ae4", "record_sha256": "fb572c2b5228975ac3f61f46d845673c759e3946fafea6017abb15c0c4c06fe8", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-TanchengGangtou-z9-424-203-N02", "zh": "郯城", "status": "approved", "source": "@source/c6f7026ef68c1e9f", "record_sha256": "cb9b2b28efa8ab8605dd88fb727720878a53cfd411873036820498b79bbce381", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-TanchengGangtou-z9-424-203-N03", "zh": "东海", "status": "approved", "source": "@source/243aeec3487d6eb6", "record_sha256": "a5f211c256209220aab2ad11a805cd8c4627b0ce6cdb9ee4d4058c5758a335bd", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-TanchengGangtou-z9-424-203-N04", "zh": "新沂", "status": "approved", "source": "@source/c6f7026ef68c1e9f", "record_sha256": "e7c25bedb2dfe11471741ffe122c12cb7edaeec4fc90befb6c721376c3d7f7a0", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-TanchengGangtou-z9-424-203-N05", "zh": "港头", "status": "approved", "source": "@source/7620827b8ea20bee", "record_sha256": "ab8bdb235a0b690ff66dd3632282008b3ba22ba52f64d0cd1f80243e20f39933", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-TanchengGangtou-z9-424-203-N01", "x": 14, "y": 15, "font_size": 12, "font_style": "regular", "lines": ["兰陵"]},
+    {"id": "CN-TanchengGangtou-z9-424-203-N02", "x": 85.5, "y": 123.5, "font_size": 12, "font_style": "regular", "lines": ["郯城"]},
+    {"id": "CN-TanchengGangtou-z9-424-203-N03", "x": 231.5, "y": 163.0, "font_size": 12, "font_style": "regular", "lines": ["东海"]},
+    {"id": "CN-TanchengGangtou-z9-424-203-N04", "x": 81.0, "y": 229.5, "font_size": 12, "font_style": "regular", "lines": ["新沂"]},
+    {"id": "CN-TanchengGangtou-z9-424-203-N05", "x": 35, "y": 244, "font_size": 12, "font_style": "regular", "lines": ["港头"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-TanchengGangtou-z9-424-203-shared-CN-LinyiShuanghouLizhuang-z9-424-202-Licun", "owner_region": "CN-LinyiShuanghouLizhuang-z9-424-202", "feature_id": "CN-LinyiShuanghouLizhuang-z9-424-202-Licun", "kind": "city", "original": "Licun", "source_url": "@source/53ae66c3961146ec", "original_bbox": [86, -7, 118, 10], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": []
+}

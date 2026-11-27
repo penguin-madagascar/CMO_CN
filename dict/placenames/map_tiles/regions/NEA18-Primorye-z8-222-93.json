@@ -32,5 +32,8 @@
   "legacy_suppressions": [],
   "source_backgrounds": [
     {"x": 222, "y": 94, "sha256": "acddc56c62619b5022ef1bb101093b22a75555502f043fd2e5704156af3a03f8", "source_url": "@source/351a5c7c66b0119c", "rgba": [1, 1, 1, 1], "review_notes": "@note/source_backgrounds"}
+  ],
+  "canonical_captions": [
+    {"id": "WWP-Cities-3499-z8", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 3499, "original_Chinese_name": "阿尔乔姆", "lat_f32_bits": 1110274081, "lon_f32_bits": 1124347994, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 32.0, "y": 184.0, "font_style": "regular", "font_size": 12, "lines": ["阿尔乔姆"]}}
   ]
 }

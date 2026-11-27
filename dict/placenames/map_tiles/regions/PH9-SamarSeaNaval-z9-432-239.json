@@ -1,0 +1,43 @@
+{
+  "id": "PH9-SamarSeaNaval-z9-432-239",
+  "z": 9,
+  "x": 432,
+  "y": 239,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/432/239.png"
+  ],
+  "context_tiles": [
+    "9/431/239.png",
+    "9/431/240.png",
+    "9/432/238.png",
+    "9/432/240.png",
+    "9/433/239.png"
+  ],
+  "features": [
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S01", "original": "Samar Sea", "kind": "marine", "original_bbox": [210, 2, 337, 23], "source_url": "@source/9770f909adca139f", "source_glyph_complete": true, "source_printed_full_literal": "Samar Sea"},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S02", "original": "Naval", "kind": "city", "original_bbox": [218, 105, 253, 122], "source_url": "@source/9770f909adca139f", "source_glyph_complete": true, "source_printed_full_literal": "Naval"},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S03", "original": "Daanbantayan", "kind": "city", "original_bbox": [52, 222, 131, 241], "source_url": "@source/9770f909adca139f", "source_glyph_complete": true, "source_printed_full_literal": "Daanbantayan"},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S04", "original": "Villalba", "kind": "city", "original_bbox": [214, 235, 254, 251], "source_url": "@source/9770f909adca139f", "source_glyph_complete": true, "source_printed_full_literal": "Villalba"}
+  ],
+  "translations": [
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S01", "zh": "萨马海", "status": "approved", "source": "@source/3652a3fe33e680e2", "record_sha256": "544a065505b3e31de3c6ac7a6b2ce4a715e0929a39cafb01d419f84b96a2e259", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S02", "zh": "纳瓦尔", "status": "approved", "source": "@source/7f4fe96e233a1493", "record_sha256": "a86dac882cb64862c8654a13abdcab720347d793906060e94bcddfc611a5fe44", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S03", "zh": "达安班塔延", "status": "approved", "source": "@source/6f8d3b4e05770d75", "record_sha256": "806c431a14f360473739987d7e1c1d87ad87b80de8309e930b5ea1b2b6049326", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S04", "zh": "比利亚尔瓦", "status": "approved", "source": "@source/7f4fe96e233a1493", "record_sha256": "06ca6a56f19862419cc0e7aadf663588b2472f239be4030fa3f50c6132e4fd5b", "review_notes": "原版地名完整字形与行政区资料相符，采用简体中文地名。"}
+  ],
+  "layouts": [
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S01", "x": 229, "y": 11, "font_style": "regular", "font_size": 12, "lines": ["萨马海"]},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S02", "x": 235.5, "y": 113.5, "font_style": "regular", "font_size": 12, "lines": ["纳瓦尔"]},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S03", "x": 91.5, "y": 231.5, "font_style": "regular", "font_size": 12, "lines": ["达安班塔延"]},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-S04", "x": 224, "y": 239, "font_style": "regular", "font_size": 12, "lines": ["比利亚尔瓦"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "PH9-SamarSeaNaval-z9-432-239-SH1", "owner_region": "PHILIPPINES-z9-424-232", "feature_id": "PH9-117", "original_bbox": [-33, 101, 111, 127], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "marine", "original": "Visayan Sea", "source_url": "@source/573080c38fb95079"},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-SH2", "owner_region": "PHILIPPINES-z9-424-232", "feature_id": "PH9-124", "original_bbox": [-37, 252, 15, 271], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "city", "original": "Bantayan", "source_url": "@source/f4214a540337804c"},
+    {"id": "PH9-SamarSeaNaval-z9-432-239-SH3", "owner_region": "PH9-SorsogonBiri-z9-432-237", "feature_id": "PH9-SorsogonBiri-z9-432-237-S09", "original_bbox": [89, -23, 129, 13], "review_notes": "完整跨瓦片原文字形沿用既有唯一译文所属区。", "kind": "city", "original": "Pio V. Corpus", "source_url": "@source/a5127eeecab08133"}
+  ],
+  "legacy_suppressions": []
+}

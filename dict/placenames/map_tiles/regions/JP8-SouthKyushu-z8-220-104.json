@@ -1,0 +1,38 @@
+{
+  "id": "JP8-SouthKyushu-z8-220-104",
+  "z": 8,
+  "x": 220,
+  "y": 104,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/220/104.png",
+    "8/221/104.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "JP8-Kagoshima", "kind": "city", "original": "Kagoshima", "original_bbox": [211, 72, 280, 96], "source_url": "@source/60264a5b8878a6c8", "source_glyph_complete": true, "source_printed_full_literal": "Kagoshima"},
+    {"id": "JP8-Miyazaki", "kind": "city", "original": "Miyazaki", "original_bbox": [368, 5, 427, 30], "source_url": "@source/f584d19a7148c687", "source_glyph_complete": true, "source_printed_full_literal": "Miyazaki"},
+    {"id": "JP8-Kanoya", "kind": "city", "original": "Kanoya", "original_bbox": [265, 118, 314, 142], "source_url": "@source/f584d19a7148c687", "source_glyph_complete": true, "source_printed_full_literal": "Kanoya"}
+  ],
+  "translations": [
+    {"id": "JP8-Kagoshima", "zh": "鹿儿岛", "status": "approved", "source": "@source/ff65e00c1b3e927d", "record_sha256": "a614413506a66785ab48acb78674a7d069831a7b8d2182a41f621eb718d8820c", "review_notes": "沿用原项目同一地点现有译名 G189-z9-441-208-core12/G189-N-08。"},
+    {"id": "JP8-Miyazaki", "zh": "宫崎", "status": "approved", "source": "@source/b7f2ec2f9ce2b849", "record_sha256": "4527157daf7666c7c8a1bb22314fc6697b54c44cad87c97dbfb928f6eda00acf", "review_notes": "沿用原项目同一地点现有译名 G189-z9-441-208-core12/G189-N-03。"},
+    {"id": "JP8-Kanoya", "zh": "鹿屋", "status": "approved", "source": "@source/8bd843acf337daee", "record_sha256": "d4fb39f070ae4711343049179991f419438bf95c8b38456800fec0872b32e5f1", "review_notes": "沿用原项目同一地点现有译名 G189-z9-441-208-core12/G189-N-12。"}
+  ],
+  "layouts": [
+    {"id": "JP8-Kagoshima", "x": 248.5, "y": 87.0, "font_size": 12, "font_style": "regular", "lines": ["鹿儿岛"]},
+    {"id": "JP8-Miyazaki", "x": 398, "y": 21, "font_size": 12, "font_style": "regular", "lines": ["宫崎"]},
+    {"id": "JP8-Kanoya", "x": 293, "y": 133, "font_size": 12, "font_style": "regular", "lines": ["鹿屋"]}
+  ],
+  "symbols": [
+    {"id": "JP8-Kagoshima-point", "feature_id": "JP8-Kagoshima", "kind": "circle", "size": 7, "outline_width": 1, "x": 215, "y": 76, "original_bbox": [211, 72, 220, 81]},
+    {"id": "JP8-Miyazaki-point", "feature_id": "JP8-Miyazaki", "kind": "circle", "size": 7, "outline_width": 1, "x": 372, "y": 9, "original_bbox": [368, 5, 377, 14]},
+    {"id": "JP8-Kanoya-point", "feature_id": "JP8-Kanoya", "kind": "circle", "size": 7, "outline_width": 1, "x": 269, "y": 122, "original_bbox": [265, 118, 274, 127]}
+  ],
+  "shared_sources": [],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "JP8-SouthKyushu-C-Cities2340", "origin": "canonical_wwp", "kind": "region", "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 2340, "original_Chinese_name": "都城", "lat_f32_bits": 1107156444, "lon_f32_bits": 1124274449, "flags": 0, "level": 1}, "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 307.95833333333576, "y": 46.89500820529793, "font_style": "regular", "font_size": 12, "lines": ["都城"]}}
+  ]
+}

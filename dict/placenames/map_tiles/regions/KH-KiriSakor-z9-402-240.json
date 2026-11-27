@@ -1,0 +1,24 @@
+{
+  "id": "KH-KiriSakor-z9-402-240",
+  "z": 9,
+  "x": 402,
+  "y": 240,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/402/240.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "KH-KiriSakor-z9-402-240-name", "kind": "region", "original": "Kiri Sakor", "original_bbox": [135, 79, 190, 96], "source_url": "@source/aa372e5010535425", "source_printed_full_literal": "Kiri Sakor", "source_glyph_complete": true}
+  ],
+  "translations": [
+    {"id": "KH-KiriSakor-z9-402-240-name", "zh": "基里色空", "source": "@source/4a36a5a9fe18fc10", "status": "approved", "record_sha256": "7b5d30785795ccf29b16486056c6be8107777ea949d2fb0e03ddb7eec23c3c98", "review_notes": "Cambodia NCDD directory identifies Koh Kong district 0902 Kiri Sakor; Cambodia coastal industry authority gives the exact Chinese base form for its eponymous district project. Original shows the base name without an administrative suffix. Printed label midpoint only; no native/vector coordinate claim."}
+  ],
+  "layouts": [
+    {"id": "KH-KiriSakor-z9-402-240-name", "x": 162.5, "y": 87.5, "font_size": 12, "font_style": "regular", "lines": ["基里色空"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

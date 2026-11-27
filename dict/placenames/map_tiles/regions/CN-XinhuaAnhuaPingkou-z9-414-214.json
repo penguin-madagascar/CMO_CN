@@ -1,0 +1,47 @@
+{
+  "id": "CN-XinhuaAnhuaPingkou-z9-414-214",
+  "z": 9,
+  "x": 414,
+  "y": 214,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/414/214.png"
+  ],
+  "context_tiles": [
+    "9/413/214.png",
+    "9/414/215.png"
+  ],
+  "features": [
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N01", "kind": "city", "original": "Lean", "original_bbox": [163, 74, 192, 90], "source_url": "@source/965d8ed04ad1c70c", "source_glyph_complete": true, "source_printed_full_literal": "Lean"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N02", "kind": "city", "original": "Pingkou", "original_bbox": [0, 101, 25, 121], "source_url": "@source/965d8ed04ad1c70c", "source_glyph_complete": false, "source_printed_full_literal": null},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N03", "kind": "city", "original": "Baixi", "original_bbox": [58, 108, 87, 124], "source_url": "@source/965d8ed04ad1c70c", "source_glyph_complete": true, "source_printed_full_literal": "Baixi"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N04", "kind": "city", "original": "Tianping", "original_bbox": [153, 148, 202, 167], "source_url": "@source/965d8ed04ad1c70c", "source_glyph_complete": true, "source_printed_full_literal": "Tianping"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N05", "kind": "city", "original": "Xihe", "original_bbox": [16, 190, 45, 206], "source_url": "@source/965d8ed04ad1c70c", "source_glyph_complete": true, "source_printed_full_literal": "Xihe"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N06", "kind": "city", "original": "Xinhua", "original_bbox": [60, 228, 106, 246], "source_url": "@source/965d8ed04ad1c70c", "source_glyph_complete": true, "source_printed_full_literal": "Xinhua"}
+  ],
+  "translations": [
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N01", "zh": "乐安", "status": "approved", "source": "@source/4bb513d4f740a0ad", "record_sha256": "2b9fcab74808720e10fbbf26230aa646a3173dabd06911c5c6c2d66ca7da7975", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N02", "zh": "平口", "status": "approved", "source": "@source/f968d2f815aded34", "record_sha256": "d82c3be8c07447da708af0abecaee55a252fa2fa82a52581b19d9807e554bac8", "review_notes": "留存拼写及原位置与同地官方中文核对，邻片无续笔。"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N03", "zh": "白溪", "status": "approved", "source": "@source/4a0c7243142183c8", "record_sha256": "be8a7320ddec5a9ae7f2727f688c1fd06d49e5c4a5d1bb1d966c39a694604667", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N04", "zh": "田坪", "status": "approved", "source": "@source/4a0c7243142183c8", "record_sha256": "c5b582cc958f63efd1772096a28bad488d0d0af46fdeefdb0685c474ef91fccb", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N05", "zh": "西河", "status": "approved", "source": "@source/4a0c7243142183c8", "record_sha256": "ab8ef336012184255aa1dfa4b29f6ecd176ad677d13f286ee3bc4118e6baf465", "review_notes": "原图完整拼写与同地官方中文核对。"},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N06", "zh": "新化", "status": "approved", "source": "@source/4a0c7243142183c8", "record_sha256": "895bc8882a5ef2d3678f9a8fb5f2e9a7156379b18c3bd48c645ee5be2c7f0ccc", "review_notes": "原图完整拼写与同地官方中文核对。"}
+  ],
+  "layouts": [
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N01", "x": 177.5, "y": 82.0, "font_size": 12, "font_style": "regular", "lines": ["乐安"]},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N02", "x": 15, "y": 111, "font_size": 12, "font_style": "regular", "lines": ["平口"]},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N03", "x": 72.5, "y": 116.0, "font_size": 12, "font_style": "regular", "lines": ["白溪"]},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N04", "x": 177.5, "y": 157.5, "font_size": 12, "font_style": "regular", "lines": ["田坪"]},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N05", "x": 30.5, "y": 198.0, "font_size": 12, "font_style": "regular", "lines": ["西河"]},
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-N06", "x": 82, "y": 236, "font_size": 12, "font_style": "regular", "lines": ["新化"]}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-shared-CN-ShaoyangLengshuijiang-z9-414-215-N02", "owner_region": "CN-ShaoyangLengshuijiang-z9-414-215", "feature_id": "CN-ShaoyangLengshuijiang-z9-414-215-N02", "kind": "city", "original": "Lianyuan", "source_url": "@source/347835ce5c8874c2", "original_bbox": [178, 242, 235, 263], "review_notes": "既有同缩放原字跨片，沿用已入库中文的唯一归属。"}
+  ],
+  "legacy_suppressions": [],
+  "canonical_captions": [
+    {"id": "CN-XinhuaAnhuaPingkou-z9-414-214-Cities735", "origin": "canonical_wwp", "kind": "region", "source_bbox": null, "source_png": null, "source_native": null, "layout": {"x": 123, "y": 246, "font_size": 14, "font_style": "regular", "lines": ["冷水江"]}, "canonical_record": {"layer": "Cities", "wwp_file": {"path": "assets/placenames/Cities.wwp", "sha256": "f4913b5a3d77798c51db16ff5bc5d4c6d1c789ac40bed144c4eed3f4d5f3034a"}, "record_index_zero_based": 735, "original_Chinese_name": "冷水江", "lat_f32_bits": 1105035558, "lon_f32_bits": 1121901536, "flags": 0, "level": 1}}
+  ]
+}

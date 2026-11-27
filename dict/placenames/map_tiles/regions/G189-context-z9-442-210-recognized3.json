@@ -1,0 +1,32 @@
+{
+  "id": "G189-context-z9-442-210-recognized3",
+  "z": 9,
+  "x": 442,
+  "y": 210,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/442/210.png"
+  ],
+  "context_tiles": [
+    "9/442/209.png"
+  ],
+  "features": [
+    {"id": "G189-C-27", "kind": "city", "original": "Nishinoomote", "original_bbox": [36, -2, 122, 17], "source_url": "@source/193b2f78103a3ee5"},
+    {"id": "G189-C-28", "kind": "city", "original": "Nakatane", "original_bbox": [39, 83, 91, 100], "source_url": "@source/193b2f78103a3ee5"},
+    {"id": "G189-C-29", "kind": "city", "original": "Minamitane", "original_bbox": [15, 135, 80, 152], "source_url": "@source/193b2f78103a3ee5"}
+  ],
+  "translations": [
+    {"id": "G189-C-27", "zh": "西之表", "status": "approved", "source": "@source/92f2a914e247e8d1", "record_sha256": "6e1ca8ec909cbde163a7bc05468e7a756b492ae8046e4bc017ec97f793db0572", "review_notes": "Private candidate Chinese from personally observed complete roman print and official Japanese local-government name."},
+    {"id": "G189-C-28", "zh": "中种子", "status": "approved", "source": "@source/64053c08683a93c0", "record_sha256": "313752321546c197894158ca9d07d4e4dac059f881d375e12431c74a01d07655", "review_notes": "Private candidate Chinese from personally observed complete roman print and official Japanese local-government name."},
+    {"id": "G189-C-29", "zh": "南种子", "status": "approved", "source": "@source/42f18a4e9068967f", "record_sha256": "f8e69aacfff74d79257eee838d77eb05b07e7f8d2a6905ea091742347bad6031", "review_notes": "Private candidate Chinese from personally observed complete roman print and official Japanese local-government name."}
+  ],
+  "layouts": [
+    {"id": "G189-C-27", "x": 79.0, "y": 7.5, "font_size": 11, "font_style": "regular", "lines": ["西之表"]},
+    {"id": "G189-C-28", "x": 65.0, "y": 91.5, "font_size": 11, "font_style": "regular", "lines": ["中种子"]},
+    {"id": "G189-C-29", "x": 47.5, "y": 143.5, "font_size": 11, "font_style": "regular", "lines": ["南种子"]}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,27 @@
+{
+  "id": "US-Utah-Lehi-EagleMountain-z9-96-193",
+  "z": 9,
+  "x": 96,
+  "y": 193,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/96/193.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "US-Utah-Lehi-EagleMountain-z9-96-193-Lehi", "kind": "city", "original": "Lehi", "original_bbox": [223, 19, 251, 37], "source_url": "@source/943bbdb4ba3f29a3", "source_glyph_complete": true, "source_printed_full_literal": "Lehi"},
+    {"id": "US-Utah-Lehi-EagleMountain-z9-96-193-EagleMountain", "kind": "city", "original": "Eagle Mountain", "original_bbox": [151, 49, 205, 83], "source_url": "@source/943bbdb4ba3f29a3", "source_glyph_complete": true, "source_printed_full_literal": "Eagle Mountain"}
+  ],
+  "translations": [
+    {"id": "US-Utah-Lehi-EagleMountain-z9-96-193-Lehi", "zh": "李海", "status": "approved", "source": "@source/f803304ebd8ce412", "review_notes": "Texas Instruments Chinese fact sheet identifies its own facility in Lehi, Utah as the exact same Chinese name as the local GeoNames Utah city alias.", "record_sha256": "ca79cd20f814596088a7bd6e165857ffaf1f5eec1723e6824d63e33f243a654e"},
+    {"id": "US-Utah-Lehi-EagleMountain-z9-96-193-EagleMountain", "zh": "老鹰山", "status": "approved", "source": "@source/b6c1c89dd078824f", "review_notes": "Uber Chinese uses the exact same term as the local GeoNames Utah city alias, qualified by Utah and the US. The Minnesota summit is a different entity.", "record_sha256": "09f10ce99c3fe18601ae8f544c58750125d8d86e94cc532ae88f76295f27cd4b"}
+  ],
+  "layouts": [
+    {"id": "US-Utah-Lehi-EagleMountain-z9-96-193-Lehi", "x": 237, "y": 28, "font_size": 12, "font_style": "regular"},
+    {"id": "US-Utah-Lehi-EagleMountain-z9-96-193-EagleMountain", "x": 178, "y": 66, "font_size": 12, "font_style": "regular"}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

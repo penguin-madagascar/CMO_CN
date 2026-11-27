@@ -1,0 +1,45 @@
+{
+  "id": "CN-Liaoning-Panshan-z9-429-191",
+  "z": 9,
+  "x": 429,
+  "y": 191,
+  "width_tiles": 1,
+  "height_tiles": 1,
+  "original_tiles": [
+    "9/429/191.png"
+  ],
+  "context_tiles": [
+    "9/428/191.png",
+    "9/430/191.png",
+    "9/429/192.png"
+  ],
+  "features": [
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Sanglin", "kind": "city", "original": "Sanglin", "original_bbox": [217, 15, 256, 35], "source_url": "@source/c278428cbfcd84b1", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null, "source_observation": {"available_readable_lines": ["Sangli[n part]"], "complete_supplier_glyph": false, "printed_full_literal": null, "visible_world_bbox": [110041, 48911, 110080, 48931], "source_facts": {"path": "evidence/parallel_map/reviews/LIAONING_TWO_FIXED_SUFFIX_FORENSICS_20261123/LIAONING_429191_EXACT_BOUNDED_SOURCE.json", "sha256": "69ee08b460a9108e14ddf481bae1fcde22eaa4b79cbae18cf5fe3c36d2404393", "bytes": 14747}, "boundary_axis": "east", "last_source_column_world_x": 110079, "opposite_source_column_world_x": 110080}},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Tianshui", "kind": "city", "original": "Tianshui", "original_bbox": [38, 73, 86, 89], "source_url": "@source/c278428cbfcd84b1", "source_glyph_complete": true, "source_printed_full_literal": "Tianshui"},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Panshan", "kind": "city", "original": "Panshan", "original_bbox": [103, 121, 156, 138], "source_url": "@source/c278428cbfcd84b1", "source_glyph_complete": true, "source_printed_full_literal": "Panshan"},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Shaling", "kind": "city", "original": "Shaling", "original_bbox": [242, 166, 256, 183], "source_url": "@source/c278428cbfcd84b1", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null, "source_observation": {"available_readable_lines": ["S[h part]"], "complete_supplier_glyph": false, "printed_full_literal": null, "visible_world_bbox": [110066, 49062, 110080, 49079], "source_facts": {"path": "evidence/parallel_map/reviews/LIAONING_TWO_FIXED_SUFFIX_FORENSICS_20261123/LIAONING_429191_EXACT_BOUNDED_SOURCE.json", "sha256": "69ee08b460a9108e14ddf481bae1fcde22eaa4b79cbae18cf5fe3c36d2404393", "bytes": 14747}, "boundary_axis": "east", "last_source_column_world_x": 110079, "opposite_source_column_world_x": 110080}},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Panjin", "kind": "city", "original": "Panjin", "original_bbox": [135, 181, 175, 203], "source_url": "@source/c278428cbfcd84b1", "source_glyph_complete": true, "source_printed_full_literal": "Panjin"},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Dawa", "kind": "city", "original": "Dawa", "original_bbox": [139, 237, 176, 255], "source_url": "@source/c278428cbfcd84b1", "source_glyph_complete": true, "source_printed_full_literal": "Dawa"}
+  ],
+  "translations": [
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Sanglin", "zh": "桑林", "status": "approved", "source": "@source/853fa036ab393c7a", "record_sha256": "7f47de1c82a642d13cae440d4816569b2539e4492e26184ebc17a701044092eb", "review_notes": "仅有供应商东缘字形；依据官方地名和附带的独立位置证据核定中文实体。"},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Tianshui", "zh": "甜水", "status": "approved", "source": "@source/b780cdf756787a90", "record_sha256": "0cdda4c16e8716ed098f6a2f350be055443e578e58a56d835f1a136947468f7f", "review_notes": "完整原图印字和盘锦市官方区划。"},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Panshan", "zh": "盘山", "status": "approved", "source": "@source/b780cdf756787a90", "record_sha256": "99bffa98233f7e91443966bc6cc59f64845487d723e1806c6767ac66e0aab195", "review_notes": "完整原图印字和盘锦市官方区划；盘山沿用两种实际 DLL 均可见的既有用字。"},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Shaling", "zh": "沙岭", "status": "approved", "source": "@source/d7b91b66861fba52", "record_sha256": "2d8c8939b13e1190ef7bc5f9883a611f0f312fc0f412b85cb24be00c8badce98", "review_notes": "仅有供应商东缘字形；依据官方地名和附带的独立位置证据核定中文实体。"},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Panjin", "zh": "盘锦", "status": "approved", "source": "@source/b780cdf756787a90", "record_sha256": "63a61cc75583d7f3f98c630aaba41514c0d87400ce42175a9582a69b09349644", "review_notes": "完整原图印字和盘锦市官方区划。"},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Dawa", "zh": "大洼", "status": "approved", "source": "@source/b780cdf756787a90", "record_sha256": "39ad28a37e7ab12a38934b43ba245d7614816d783108e849a66580660ea45440", "review_notes": "完整原图印字和盘锦市官方区划。"}
+  ],
+  "layouts": [
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Sanglin", "x": 236, "y": 25, "lines": ["桑林"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Tianshui", "x": 62, "y": 81, "lines": ["甜水"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Panshan", "x": 129, "y": 129, "lines": ["盘山"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Shaling", "x": 239, "y": 174, "lines": ["沙岭"], "font_style": "regular", "font_size": 14},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Panjin", "x": 155, "y": 192, "lines": ["盘锦"], "font_style": "regular", "font_size": 16},
+    {"id": "CN-Liaoning-Panshan-z9-429-191-Dawa", "x": 158, "y": 245, "lines": ["大洼"], "font_style": "regular", "font_size": 14}
+  ],
+  "symbols": [],
+  "shared_sources": [
+    {"id": "CN-Liaoning-Panshan-z9-429-191-shared-Shixin", "owner_region": "CN-Liaoning-JinzhouLinghaiYanjia-z9-428-191", "feature_id": "CN-Liaoning-JinzhouLinghaiYanjia-z9-428-191-S04", "kind": "city", "original": "Shixin", "source_url": "@source/594a90f872497c9b", "original_bbox": [-21, 173, 16, 190], "review_notes": "西侧石新原图印字跨线拼合，保留现有片区及其准确来源。"}
+  ],
+  "legacy_suppressions": []
+}

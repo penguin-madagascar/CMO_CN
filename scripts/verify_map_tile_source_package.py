@@ -37,8 +37,23 @@ def required_inputs(manifest):
     return expected
 
 
+def verify_canonical_caption_evidence(selection):
+    """Verify the original review files when approving a public release."""
+    digests = {}
+    for entry in selection['instances']:
+        for role, ref in entry['evidence'].items():
+            path = Path(ref['path'])
+            if path not in digests:
+                if not path.is_file():
+                    raise ValueError(f'missing original caption {role} evidence: {path}')
+                digests[path] = hashlib.sha256(path.read_bytes()).hexdigest()
+            if digests[path] != ref['sha256']:
+                raise ValueError(f'original caption {role} evidence SHA changed: {path}')
+
+
 def verify(manifest_path, asset_path, directory, *, owner_native_source_approvals=None,
-           owner_native_source_approvals_sha256=None):
+           owner_native_source_approvals_sha256=None, canonical_caption_approvals=None,
+           canonical_caption_approvals_sha256=None):
     manifest_path, asset_path = Path(manifest_path), Path(asset_path)
     manifest_raw = manifest_path.read_bytes()
     manifest = load_manifest(manifest_path)
@@ -46,7 +61,12 @@ def verify(manifest_path, asset_path, directory, *, owner_native_source_approval
     if bool(owner_native_source_approvals) != bool(owner_native_source_approvals_sha256):
         raise ValueError('original external approval file and SHA must be supplied together')
     external = owner_native_source_approvals is not None
+    captions = any(r.get('canonical_captions') for r in manifest['regions'])
+    if bool(canonical_caption_approvals) != bool(canonical_caption_approvals_sha256):
+        raise ValueError('original caption selection and SHA must be supplied together')
     if directory is None:
+        if captions or canonical_caption_approvals:
+            raise ValueError('caption selection requires its reproducible source package')
         if needed or external:
             raise ValueError('strict native-source manifest requires its complete reproducible source package')
         return dict(source_package_required=False)
@@ -83,6 +103,20 @@ def verify(manifest_path, asset_path, directory, *, owner_native_source_approval
                  '--owner-native-source-approvals-sha256', digest]
     elif recipe.get('original_native_source_approvals') is not None:
         raise ValueError('package approval provenance has no independently supplied original input')
+    if captions and not canonical_caption_approvals:
+        raise ValueError('caption-bearing package requires the original caption selection and SHA')
+    if canonical_caption_approvals:
+        from build_map_tile_pack import audit_canonical_captions, read_canonical_caption_approvals
+        selection = read_canonical_caption_approvals(canonical_caption_approvals, canonical_caption_approvals_sha256)
+        if (not isinstance(selection, dict) or selection.get('schema') != 'root-approved-canonical-WWP-caption-v1'
+                or selection.get('role') != 'full_current'):
+            raise ValueError('release source package requires a full_current canonical caption selection')
+        audit_canonical_captions(manifest['regions'], selection)
+        verify_canonical_caption_evidence(selection)
+        relative = 'inputs/canonical_caption_approvals.json'
+        expected[relative] = canonical_caption_approvals_sha256
+        argv += ['--canonical-caption-approvals', relative,
+                 '--canonical-caption-approvals-sha256', canonical_caption_approvals_sha256]
     if recipe['argv'] != argv:
         raise ValueError('source package reproduction CLI differs from its complete fixed input set')
     seen = set()
@@ -101,7 +135,7 @@ def verify(manifest_path, asset_path, directory, *, owner_native_source_approval
         raise ValueError('source package pins omit required build inputs')
     if hashlib.sha256(asset_path.read_bytes()).hexdigest() != recipe['expected_pack_sha256']:
         raise ValueError('source package DAT differs from release DAT')
-    return dict(source_package_required=needed, files=len(seen), expected_pack_sha256=recipe['expected_pack_sha256'])
+    return dict(source_package_required=needed or captions, files=len(seen), expected_pack_sha256=recipe['expected_pack_sha256'])
 
 
 def main():
@@ -111,10 +145,14 @@ def main():
     parser.add_argument('--source-package', type=Path)
     parser.add_argument('--owner-native-source-approvals', type=Path)
     parser.add_argument('--owner-native-source-approvals-sha256')
+    parser.add_argument('--canonical-caption-approvals', type=Path)
+    parser.add_argument('--canonical-caption-approvals-sha256')
     args = parser.parse_args()
     print(json.dumps(verify(args.manifest, args.asset, args.source_package,
         owner_native_source_approvals=args.owner_native_source_approvals,
-        owner_native_source_approvals_sha256=args.owner_native_source_approvals_sha256), indent=2))
+        owner_native_source_approvals_sha256=args.owner_native_source_approvals_sha256,
+        canonical_caption_approvals=args.canonical_caption_approvals,
+        canonical_caption_approvals_sha256=args.canonical_caption_approvals_sha256), indent=2))
 
 
 if __name__ == '__main__':

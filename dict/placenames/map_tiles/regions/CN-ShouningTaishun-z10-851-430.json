@@ -1,0 +1,40 @@
+{
+  "id": "CN-ShouningTaishun-z10-851-430",
+  "z": 10,
+  "x": 851,
+  "y": 430,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "10/851/430.png",
+    "10/852/430.png"
+  ],
+  "context_tiles": [],
+  "features": [
+    {"id": "CN-ShouningTaishun-z10-851-430-Xianliang", "kind": "city", "original": "Xianliang", "original_bbox": [11, 21, 59, 38], "source_url": "@source/2349a16cc5885aa1", "source_glyph_complete": true, "source_printed_full_literal": "Xianliang"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Lingtou", "kind": "city", "original": "Lingtou", "original_bbox": [26, 101, 70, 121], "source_url": "@source/2349a16cc5885aa1", "source_glyph_complete": true, "source_printed_full_literal": "Lingtou"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Shouning", "kind": "city", "original": "Shouning", "original_bbox": [210, 176, 271, 199], "source_url": "@source/2349a16cc5885aa1", "source_glyph_complete": true, "source_printed_full_literal": "Shouning"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Xiadang", "kind": "city", "original": "Xiadang", "original_bbox": [71, 214, 113, 232], "source_url": "@source/2349a16cc5885aa1", "source_glyph_complete": true, "source_printed_full_literal": "Xiadang"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Qingyuan", "kind": "city", "original": "Qingyuan", "original_bbox": [199, 221, 255, 242], "source_url": "@source/2349a16cc5885aa1", "source_glyph_complete": true, "source_printed_full_literal": "Qingyuan"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Taishun", "kind": "city", "original": "Taishun", "original_bbox": [362, 93, 414, 111], "source_url": "@source/b3c27f43a8d77e3b", "source_glyph_complete": true, "source_printed_full_literal": "Taishun"}
+  ],
+  "translations": [
+    {"id": "CN-ShouningTaishun-z10-851-430-Xianliang", "zh": "贤良", "status": "approved", "source": "@source/66056df85d7bc3dd", "record_sha256": "c4621890b48476bbacf3a343f8803e89750466a513e967a47c51d9e9f073b441", "review_notes": "完整原图字形与同地官方汉字对照。"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Lingtou", "zh": "岭头", "status": "approved", "source": "@source/66056df85d7bc3dd", "record_sha256": "1e34c78b5c5dd14490ca684f45da5f13b7e5773a83fa1d154683159e55d74991", "review_notes": "完整原图字形与同地官方汉字对照。"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Shouning", "zh": "寿宁", "status": "approved", "source": "@source/c2f75cc445e29c1a", "record_sha256": "dda2d87a67e21c777b017b7cc4c2f5eb56560f19619351efda29c405718df04a", "review_notes": "完整原图字形与同地官方汉字对照。"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Xiadang", "zh": "下党", "status": "approved", "source": "@source/c2f75cc445e29c1a", "record_sha256": "a00828968653aaed201560093e70d73fb63bf78a50d184c6bc08bf7a88af4019", "review_notes": "完整原图字形与同地官方汉字对照。"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Qingyuan", "zh": "清源", "status": "approved", "source": "@source/c2f75cc445e29c1a", "record_sha256": "8c44b75b3f2f4eecd7ae4edd73f8d717b96547ed3c7cbf121426cc556284e121", "review_notes": "寿宁县清源镇，区别同画范围浙江庆元县。"},
+    {"id": "CN-ShouningTaishun-z10-851-430-Taishun", "zh": "泰顺", "status": "approved", "source": "@source/3952f06461a16e1f", "record_sha256": "b62f93df25e4b4e7afc8c8e8313dc1fbb622dc7e5b3f4505fd0504ecd70ad47e", "review_notes": "完整原图字形与同地官方汉字对照。"}
+  ],
+  "layouts": [
+    {"id": "CN-ShouningTaishun-z10-851-430-Xianliang", "x": 35.0, "y": 29.5, "lines": ["贤良"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-ShouningTaishun-z10-851-430-Lingtou", "x": 48.0, "y": 111.0, "lines": ["岭头"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-ShouningTaishun-z10-851-430-Shouning", "x": 240.5, "y": 187.5, "lines": ["寿宁"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-ShouningTaishun-z10-851-430-Xiadang", "x": 92.0, "y": 223.0, "lines": ["下党"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-ShouningTaishun-z10-851-430-Qingyuan", "x": 227.0, "y": 231.5, "lines": ["清源"], "font_style": "regular", "font_size": 12},
+    {"id": "CN-ShouningTaishun-z10-851-430-Taishun", "x": 388.0, "y": 102.0, "lines": ["泰顺"], "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [],
+  "shared_sources": [],
+  "legacy_suppressions": []
+}

@@ -1,0 +1,41 @@
+{
+  "id": "US-WestTexas-Pecos-Odessa-FortStockton-z8-54-104",
+  "z": 8,
+  "x": 54,
+  "y": 104,
+  "width_tiles": 2,
+  "height_tiles": 1,
+  "original_tiles": [
+    "8/54/104.png",
+    "8/55/104.png"
+  ],
+  "context_tiles": [
+    "8/55/103.png",
+    "8/54/105.png",
+    "8/55/105.png"
+  ],
+  "features": [
+    {"id": "US8-Pecos", "kind": "city", "original": "Pecos", "original_bbox": [99, 108, 135, 127], "source_url": "@source/dc24b56b3220a0f8", "source_glyph_complete": true, "source_printed_full_literal": "Pecos"},
+    {"id": "US8-Odessa", "kind": "city", "original": "Odessa", "original_bbox": [304, 18, 353, 39], "source_url": "@source/d96bbba38fa02153", "source_glyph_complete": true, "source_printed_full_literal": "Odessa"},
+    {"id": "US8-Fort-Stockton", "kind": "city", "original": "Fort Stockton", "original_bbox": [210, 222, 260, 256], "source_url": "@source/dc24b56b3220a0f8", "source_glyph_complete": false, "source_printed_full_literal": null, "providerpoint": null, "entity_assignment": null, "source_observation": {"available_readable_lines": ["Fort", "Stockton"], "complete_supplier_glyph": false, "printed_full_literal": null, "visible_world_bbox": [14034, 26846, 14084, 26880], "last_source_row_world_y": 26879, "official_southern_tiles_are_fully_transparent": true, "source_facts": {"path": "evidence/parallel_map/reviews/US_WICHITA_ODESSA_THREE_EXACT_SOURCE_READS_20261119.json", "sha256": "275a44786766906d0ff73fcb84b44d4f932cd5ce92a63ac8fe1bd3ade69efbc8"}}}
+  ],
+  "translations": [
+    {"id": "US8-Pecos", "zh": "佩科斯", "status": "approved", "source": "@source/5d39a00687a430ff", "record_sha256": "7df2282a6845bd630ea6e7369cdb0a1a14c270c2282e1eb3e4d80ac5b65b85e6", "review_notes": "Direct local identity corroborated by U.S. Census and TxDOT. Complete printed original."},
+    {"id": "US8-Odessa", "zh": "敖德萨", "status": "approved", "source": "@source/a1b7dd3f46b9f8c2", "record_sha256": "3225e9230ad1a1f69acb83fe951e6785f6319853168bc57986c429e84258479a", "review_notes": "Direct local identity corroborated by U.S. Census and TxDOT. Complete printed original."},
+    {"id": "US8-Fort-Stockton", "zh": "斯托克顿堡", "status": "approved", "source": "@source/00605331860c0cae", "record_sha256": "e17e7dd6a27f379a2a410e03b84e31e70ebcab9a73d9baa12cbea14d7673accb", "review_notes": "Direct local identity corroborated by U.S. Census and TxDOT. Both words are legible while the lower original outline is clipped."}
+  ],
+  "layouts": [
+    {"id": "US8-Pecos", "x": 128.5, "y": 120.5, "font_style": "regular", "font_size": 12},
+    {"id": "US8-Odessa", "x": 337.5, "y": 31.5, "font_style": "regular", "font_size": 12},
+    {"id": "US8-Fort-Stockton", "x": 235.5, "y": 245.5, "font_style": "regular", "font_size": 12}
+  ],
+  "symbols": [
+    {"id": "US8-Pecos-point", "feature_id": "US8-Pecos", "kind": "circle", "original_bbox": [99, 108, 108, 117], "x": 103.5, "y": 112.5, "size": 9, "outline_width": 1},
+    {"id": "US8-Odessa-point", "feature_id": "US8-Odessa", "kind": "circle", "original_bbox": [304, 18, 313, 27], "x": 308.5, "y": 22.5, "size": 9, "outline_width": 1},
+    {"id": "US8-Fort-Stockton-point", "feature_id": "US8-Fort-Stockton", "kind": "circle", "original_bbox": [210, 222, 219, 231], "x": 214.5, "y": 226.5, "size": 9, "outline_width": 1}
+  ],
+  "shared_sources": [
+    {"id": "US8-Midland-South-Shared", "owner_region": "AM-RockiesGreatPlains-z8-50-95", "feature_id": "AM11-49-Midland", "original": "Midland", "kind": "city", "source_url": "@source/381cadef7cd1bdec", "original_bbox": [356, -15, 411, 8], "review_notes": "The existing region retains the only rendered Midland name."}
+  ],
+  "legacy_suppressions": []
+}

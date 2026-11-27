@@ -222,11 +222,131 @@ public static class MapLabelRendererTests
         RejectCatalog(trailing, "trailing map catalog bytes are rejected");
     }
 
+    // Exercise deployed binary records through the same loader and PNG entry point as the game.
+    private static void ReleasedWwpTests(string assetDirectory, string packPath)
+    {
+        int[] indices = { 1203, 2419, 2679, 2684 };
+        string[] source = { "Tutamanda旅馆", "调布ケ丘", "古斯塔沃·A.马德罗", "古斯塔沃·A·马德罗" };
+        string[] display = { "途塔曼达旅馆", "调布丘", "古斯塔沃·阿道夫·马德罗", "古斯塔沃·阿道夫·马德罗" };
+        string scope = Path.Combine(Path.GetTempPath(), "wwp-display-" + Guid.NewGuid().ToString("N"));
+        string gameFile = Path.Combine(scope, @"WW\PlacenameSets\Cities\0000_0000.wwp");
+        string asset = Path.Combine(assetDirectory, "Cities.wwp");
+        Directory.CreateDirectory(Path.GetDirectoryName(gameFile));
+        try
+        {
+            File.Copy(asset, gameFile);
+            MethodInfo load = engine.GetType("CMOShared.MapLabelCatalog", true).GetMethod("LoadBasePlaces");
+            IList places = (IList)load.Invoke(null, new object[] { scope });
+            Check(places.Count == 4287, "all shipped Cities records load through the runtime");
+            Type type = places[0].GetType();
+            FieldInfo name = type.GetField("Name");
+            PropertyInfo printedName = type.GetProperty("DisplayName");
+            int changed = 0;
+            foreach (object place in places)
+                if (!Equals(name.GetValue(place), printedName.GetValue(place, null))) changed++;
+            Check(changed == indices.Length, "only the four reviewed WWP names change on screen");
+            MethodInfo render = engine.GetType("CMOShared.MapLabelRenderer", true).GetMethod("RenderTileBytes");
+            object pack = engine.GetType("CMOShared.MapLabelTilePack", true).GetMethod("Load").Invoke(null, new object[] { packPath });
+            MethodInfo tryTile = pack.GetType().GetMethod("TryGetTile");
+            for (int i = 0; i < indices.Length; i++)
+            {
+                object place = places[indices[i]];
+                Check(Equals(name.GetValue(place), source[i]) && Equals(printedName.GetValue(place, null), display[i]),
+                    "retained source identity and reviewed display at Cities index " + indices[i]);
+                float lat = (float)type.GetField("Lat").GetValue(place), lon = (float)type.GetField("Lon").GetValue(place);
+                double rad = lat * Math.PI / 180;
+                int z = 9, x, y;
+                while (true)
+                {
+                    double tiles = Math.Pow(2, z);
+                    x = (int)((lon + 180.0) / 360 * tiles);
+                    y = (int)((1 - Math.Log(Math.Tan(rad) + 1 / Math.Cos(rad)) / Math.PI) / 2 * tiles);
+                    if (!(bool)tryTile.Invoke(pack, new object[] { z, x, y, null, 0 })) break;
+                    if (++z > 30) throw new Exception("No unpacked host for WWP fallback test");
+                }
+                IList single = (IList)Activator.CreateInstance(places.GetType());
+                single.Add(place);
+                object[] renderArgs = { single, pack, z, x, y, 0, 0 };
+                byte[] actual = (byte[])render.Invoke(null, renderArgs);
+                Check((int)renderArgs[5] == 1 && (int)renderArgs[6] == 1, "released pack miss draws index " + indices[i] + " at zoom " + z);
+                renderArgs[1] = null;
+                object reference = Activator.CreateInstance(type);
+                foreach (string field in new[] { "Lat", "Lon", "Level" })
+                    type.GetField(field).SetValue(reference, type.GetField(field).GetValue(place));
+                single[0] = reference;
+                foreach (string referenceName in new[] { display[i], source[i] })
+                {
+                    name.SetValue(reference, referenceName);
+                    byte[] expected = (byte[])render.Invoke(null, renderArgs);
+                    using (var a = new MemoryStream(actual))
+                    using (var b = new MemoryStream(expected))
+                    using (var got = new Bitmap(a))
+                    using (var want = new Bitmap(b))
+                        Check(SamePixels(got, want) == (referenceName == display[i]),
+                            "compared actual WWP glyphs to " + referenceName);
+                }
+            }
+
+            // Each near match differs by one identity component. A duplicate of the unmodified
+            // first record is appended at a new index to exercise the index separately.
+            using (var reader = new BinaryReader(File.OpenRead(asset), Encoding.UTF8))
+            using (var writer = new BinaryWriter(File.Create(gameFile), Encoding.UTF8))
+            {
+                int count = reader.ReadInt32();
+                writer.Write(count + 1);
+                byte[] duplicate = null;
+                for (int i = 0; i < count; i++)
+                {
+                    long start = reader.BaseStream.Position;
+                    string text = reader.ReadString();
+                    int latBits = reader.ReadInt32(), lonBits = reader.ReadInt32();
+                    uint flags = reader.ReadUInt32();
+                    if (i == indices[0])
+                    {
+                        int size = (int)(reader.BaseStream.Position - start);
+                        reader.BaseStream.Position = start;
+                        duplicate = reader.ReadBytes(size);
+                        text += "甲";
+                    }
+                    if (i == indices[1]) latBits ^= 1;
+                    if (i == indices[2]) lonBits ^= 1;
+                    if (i == indices[3]) flags ^= 1;
+                    writer.Write(text); writer.Write(latBits); writer.Write(lonBits); writer.Write(flags);
+                }
+                writer.Write(duplicate);
+            }
+            IList nearMatches = (IList)load.Invoke(null, new object[] { scope });
+            Check(nearMatches.Count == places.Count + 1, "near-match WWP records remain readable");
+            foreach (object item in nearMatches)
+                if (!Equals(name.GetValue(item), printedName.GetValue(item, null)))
+                    throw new Exception("Unexpected display override for near match " + name.GetValue(item));
+            Check(Equals(name.GetValue(nearMatches[places.Count]), source[0]), "same record at another index retains its source name");
+
+            object[] packed = { 7, 28, 55, null, 0 };
+            Check((bool)tryTile.Invoke(pack, packed) && (int)packed[4] > 0,
+                "released pack contains the reviewed Tamaulipas tile");
+            IList madero = (IList)Activator.CreateInstance(places.GetType());
+            madero.Add(places[2679]);
+            Check((bool)pack.GetType().GetMethod("AlreadyInPack", BindingFlags.Instance | BindingFlags.NonPublic)
+                    .Invoke(pack, new object[] { places[2679], 7 }), "the original WWP key still resolves to its packed caption");
+            object[] drawPacked = { madero, pack, 7, 28, 55, 0, 0 };
+            byte[] rendered = (byte[])render.Invoke(null, drawPacked);
+            Check((int)drawPacked[6] == (int)packed[4] && System.Linq.Enumerable.SequenceEqual(rendered, (byte[])packed[3]),
+                "no duplicate glyphs or labels on the packed Tamaulipas tile");
+        }
+        finally { Directory.Delete(scope, true); }
+    }
+
     public static int Main(string[] args)
     {
         try
         {
             engine = Assembly.LoadFrom(args[0]);
+            if (args.Length == 4 && args[1] == "--released-wwp")
+            {
+                ReleasedWwpTests(args[2], args[3]);
+                return 0;
+            }
             int candidates, rendered;
             using (Bitmap image = Render(new[] { "鸟取" }, new[] { 128f }, new[] { 128f }, new[] { 1 }, 8, 14f,
                 out candidates, out rendered))
