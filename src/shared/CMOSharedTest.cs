@@ -539,12 +539,53 @@ internal static class CMOSharedSelfTest
         Check("embedded-map-package", PackageAssets.VerifyEngineFiles(package, three, out error), error);
         Check("required-map-not-deployed", !PackageAssets.VerifyEngineFiles(package, two, out error), error);
         Check("legacy-package-cannot-attest-leftover-map", !PackageAssets.VerifyEngineFiles(legacy, three, out error), error);
+        string sidecarHash = InstallManifest.Sha256OfFile(map);
+        Check("selected-sidecar-matches-deployment", PackageAssets.VerifyEngineFiles(legacy, three, out error, sidecarHash), error);
+        Check("selected-sidecar-must-be-deployed", !PackageAssets.VerifyEngineFiles(legacy, two, out error, sidecarHash), error);
+        string setup = Path.Combine(game, "CMO_Chinese_Setup_v4.3.1.exe");
+        File.Copy(legacy, setup, true);
+        string cached = VersionStore.Cache(setup, game, sidecarHash);
+        string cachedMap = PackageAssets.FindMapSidecar(cached, CmoPaths.PackagesDir);
+        Check("offline-sidecar-replay", cachedMap != null && InstallManifest.Sha256OfFile(cachedMap) == sidecarHash
+            && PackageAssets.VerifyEngineFiles(cached, three, out error, InstallManifest.Sha256OfFile(cachedMap)), error);
+        using (File.Open(Path.Combine(CmoPaths.PackagesDir, ".package-cache.lock"), FileMode.Open, FileAccess.Write, FileShare.None))
+            Check("concurrent-cache-writer-leaves-existing-package-intact", VersionStore.Cache(setup, game) == null && File.Exists(cachedMap), "");
+        Check("download-preserves-matching-cached-sidecar", VersionStore.Cache(setup) == cached && File.Exists(cachedMap), "");
+        File.Copy(package, setup, true);
+        Check("same-version-new-build-removes-old-sidecar", VersionStore.Cache(setup) == cached && !File.Exists(cachedMap)
+            && InstallManifest.Sha256OfFile(cached) == InstallManifest.Sha256OfFile(package), "");
+        File.Copy(legacy, setup, true);
+        VersionStore.Cache(setup, game, sidecarHash);
+        Check("confirmed-mapless-install-clears-cached-sidecar", VersionStore.Cache(setup, game) == cached && !File.Exists(cachedMap), "");
+        File.WriteAllText(Path.Combine(CmoPaths.PackagesDir, InstallManifest.MapTileFile), "unrelated cached neighbor");
+        string other = Path.Combine(game, "CMO_Chinese_Setup_v4.3.0.exe");
+        File.Copy(legacy, other, true);
+        string older = VersionStore.Cache(other);
+        Check("cached-sidecar-is-per-package", PackageAssets.FindMapSidecar(older, CmoPaths.PackagesDir) == null, "");
+        File.WriteAllText(map, "changed between verification and caching");
+        Check("cache-rejects-changed-sidecar", VersionStore.Cache(other, game, sidecarHash) == null
+            && PackageAssets.FindMapSidecar(older, CmoPaths.PackagesDir) == null, "");
+        File.WriteAllText(map, "embedded map");
+        // 此自测使用共同的版本缓存；后续用例有自己的一组固定版本。
+        VersionStore.Cache(other, game, sidecarHash);
+        string prunedMap = PackageAssets.FindMapSidecar(older, CmoPaths.PackagesDir);
+        string neighbor = older + ".unrelated.map.dat";
+        File.WriteAllText(neighbor, "user file");
+        VersionStore.Prune(1);
+        Check("prune-deletes-only-the-bound-sidecar", prunedMap != null && !File.Exists(older)
+            && !File.Exists(prunedMap) && File.Exists(neighbor), "");
+        File.Delete(neighbor);
+        File.Delete(cachedMap);
+        File.Delete(cached);
+        File.Delete(older);
+        File.Delete(Path.Combine(CmoPaths.PackagesDir, InstallManifest.MapTileFile));
         Check("adopt-existing-map", InstallManifest.Adopt(game, "4.3.1"), "");
         InstallManifest registered = InstallManifest.Read(game);
         Check("read-all-three-hashes", registered != null && registered.Files.Count == 3
             && registered.Files["ChineseMapTiles.dat"] == three["ChineseMapTiles.dat"], "");
         Check("verify-map-manifest", InstallManifest.Verify(game, out error) == ManifestState.Ok, error);
         File.WriteAllText(map, "different map");
+        Check("reject-tampered-sidecar", !PackageAssets.VerifyEngineFiles(legacy, InstallManifest.HashEngineFiles(game), out error, sidecarHash), error);
         Check("reject-tampered-map-package", !PackageAssets.VerifyEngineFiles(package, InstallManifest.HashEngineFiles(game), out error), error);
         Check("detect-tampered-registered-map", InstallManifest.Verify(game, out error) == ManifestState.Modified, error);
         File.Delete(map);

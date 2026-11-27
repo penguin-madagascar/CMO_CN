@@ -1058,7 +1058,8 @@ namespace CMOLocalizerInstaller
                 LocalizeScenarioBriefings(Path.Combine(gamePath, "Scenarios"));
 
                 // 先校验并部署已核验瓦片，再重建缓存；坏包必须使安装失败。
-                if (!DeployMapTilePack(gamePath, curDir, out writeErr))
+                string sidecarHash;
+                if (!DeployMapTilePack(gamePath, curDir, out sidecarHash, out writeErr))
                 {
                     errorMsg = writeErr;
                     return false;
@@ -1078,7 +1079,7 @@ namespace CMOLocalizerInstaller
                         + "，安装器 CurrentVersion=" + CurrentVersion);
                 }
                 Dictionary<string, string> manifestFiles = InstallManifest.HashEngineFiles(gamePath);
-                if (!PackageAssets.VerifyEngineFiles(Application.ExecutablePath, manifestFiles, out errorMsg))
+                if (!PackageAssets.VerifyEngineFiles(Application.ExecutablePath, manifestFiles, out errorMsg, sidecarHash))
                 {
                     CmoLog.Error(errorMsg);
                     return false;
@@ -1088,8 +1089,8 @@ namespace CMOLocalizerInstaller
                     errorMsg = "汉化文件已部署，但写入安装清单失败（状态可能显示不准，重新安装即可修复）。";
                     return false;
                 }
-                // 缓存自身安装包：回退以整个安装包为单位（权威、自带全部资产）
-                VersionStore.Cache(Application.ExecutablePath);
+                // 缓存安装器及本次实际使用的旁置地图，供离线回退。
+                VersionStore.Cache(Application.ExecutablePath, gamePath, sidecarHash);
 
                 return true;
             }
@@ -1544,9 +1545,10 @@ namespace CMOLocalizerInstaller
 
         // 来源仅限安装器目录、既有 patch_files 目录和精确命名的内嵌资源。
         // 先把候选完整写到同目录 staging 并验证，再原子发布，保留已有好包。
-        private static bool DeployMapTilePack(string gamePath, string sourceDir, out string error)
+        private static bool DeployMapTilePack(string gamePath, string sourceDir, out string sidecarHash, out string error)
         {
             error = "";
+            sidecarHash = null;
             string dest = Path.Combine(gamePath, "ChineseMapTiles.dat");
             string temp = dest + ".cmo_new-" + Guid.NewGuid().ToString("N");
             try
@@ -1560,9 +1562,9 @@ namespace CMOLocalizerInstaller
                     }
                     else
                     {
-                        string source = Path.Combine(sourceDir, "ChineseMapTiles.dat");
-                        if (!File.Exists(source)) source = Path.Combine(sourceDir, "patch_files", "ChineseMapTiles.dat");
-                        if (!File.Exists(source)) return true;
+                        string source = PackageAssets.FindMapSidecar(Assembly.GetExecutingAssembly().Location, sourceDir);
+                        if (source == null) return true;
+                        sidecarHash = InstallManifest.Sha256OfFile(source);
                         if (string.Equals(Path.GetFullPath(source), Path.GetFullPath(dest), StringComparison.OrdinalIgnoreCase))
                         {
                             MapLabelTilePack.Load(source);

@@ -25,8 +25,8 @@ class DeliveryContract(unittest.TestCase):
     def test_installer_call_order_and_failure(self):
         text = (ROOT / "src/installer/CMO_Chinese_Setup.cs").read_text(encoding="utf-8")
         install = text.split("public static bool Install(", 1)[1].split("private static void DeploySymbols", 1)[0]
-        self.assertIn("if (!DeployMapTilePack(gamePath, curDir, out writeErr))", install)
-        deploy = install.index("if (!DeployMapTilePack(gamePath, curDir, out writeErr))")
+        self.assertIn("if (!DeployMapTilePack(gamePath, curDir, out sidecarHash, out writeErr))", install)
+        deploy = install.index("if (!DeployMapTilePack(gamePath, curDir, out sidecarHash, out writeErr))")
         self.assertLess(deploy, install.index("LocalizeMapLabelTiles(gamePath)"))
         self.assertRegex(install[deploy:], r"out writeErr\)\)\s*\{\s*errorMsg = writeErr;\s*return false;")
         uninstall = text.split("public static bool Uninstall(", 1)[1]

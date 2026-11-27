@@ -678,7 +678,7 @@ namespace CMOShared
         }
 
         /// <summary>把安装包复制进缓存目录（按资产版本命名）；返回缓存路径，失败返回 null。</summary>
-        public static string Cache(string setupPath)
+        public static string Cache(string setupPath, string installedGame = null, string sidecarHash = null)
         {
             try
             {
@@ -690,23 +690,63 @@ namespace CMOShared
                     return null;
                 }
                 CmoPaths.EnsureDir(CmoPaths.PackagesDir);
-                string dest = Path.Combine(CmoPaths.PackagesDir, "CMO_Chinese_Setup_v" + ver + ".exe");
-                bool samePlace = string.Equals(Path.GetFullPath(dest), Path.GetFullPath(setupPath), StringComparison.OrdinalIgnoreCase);
-                if (!samePlace)
+                using (OpenCacheWriter())
                 {
-                    if (!File.Exists(dest) || new FileInfo(dest).Length != new FileInfo(setupPath).Length)
+                    string dest = Path.Combine(CmoPaths.PackagesDir, "CMO_Chinese_Setup_v" + ver + ".exe");
+                    bool samePlace = string.Equals(Path.GetFullPath(dest), Path.GetFullPath(setupPath), StringComparison.OrdinalIgnoreCase);
+                    // 旁置地图绑定到具体 EXE；不同版本或同版本的不同构建不能串用。
+                    string setupHash = InstallManifest.Sha256OfFile(setupPath);
+                    string map = CachedMapPath(dest, setupHash);
+                    string previousHash = samePlace ? setupHash : (File.Exists(dest) ? InstallManifest.Sha256OfFile(dest) : null);
+                    if (sidecarHash != null)
+                        CopyVerified(Path.Combine(installedGame, InstallManifest.MapTileFile), map, sidecarHash);
+                    else if (installedGame != null && File.Exists(map))
+                        File.Delete(map);
+                    if (setupHash != previousHash)
                     {
-                        File.Copy(setupPath, dest, true);
-                        CmoLog.Info("已缓存安装包: " + dest);
+                        try { CopyVerified(setupPath, dest, setupHash); }
+                        catch
+                        {
+                            if (sidecarHash != null) File.Delete(map);
+                            throw;
+                        }
+                        if (previousHash != null) File.Delete(CachedMapPath(dest, previousHash));
                     }
+                    return dest;
                 }
-                return dest;
             }
             catch (Exception ex)
             {
                 CmoLog.Warn("缓存安装包失败: " + ex.Message);
                 return null;
             }
+        }
+
+        private static FileStream OpenCacheWriter()
+        {
+            // 安装器和更新器共用目录。在另一个进程发布或清理时，沿用缓存失败不影响安装的处理。
+            return File.Open(Path.Combine(CmoPaths.PackagesDir, ".package-cache.lock"),
+                FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+        }
+
+        internal static string CachedMapPath(string setupPath, string setupHash)
+        {
+            return setupPath + "." + setupHash + ".map.dat";
+        }
+
+        private static void CopyVerified(string source, string target, string expectedHash)
+        {
+            if (File.Exists(target) && InstallManifest.Sha256OfFile(target) == expectedHash) return;
+            string temp = Path.Combine(Path.GetDirectoryName(target), Path.GetRandomFileName());
+            try
+            {
+                File.Copy(source, temp);
+                if (InstallManifest.Sha256OfFile(temp) != expectedHash)
+                    throw new IOException("缓存前文件已变化: " + source);
+                if (File.Exists(target)) File.Replace(temp, target, null);
+                else File.Move(temp, target);
+            }
+            finally { if (File.Exists(temp)) File.Delete(temp); }
         }
 
         public static List<string> CachedVersions()
@@ -765,13 +805,17 @@ namespace CMOShared
             try
             {
                 if (keep < 1) keep = 1;
-                List<string> vs = CachedVersions();
-                for (int i = keep; i < vs.Count; i++)
+                if (!Directory.Exists(CmoPaths.PackagesDir)) return;
+                using (OpenCacheWriter())
                 {
-                    string p = CachedPackage(vs[i]);
-                    if (p != null && File.Exists(p))
+                    List<string> vs = CachedVersions();
+                    for (int i = keep; i < vs.Count; i++)
                     {
+                        string p = CachedPackage(vs[i]);
+                        if (p == null || !File.Exists(p)) continue;
+                        string map = CachedMapPath(p, InstallManifest.Sha256OfFile(p));
                         File.Delete(p);
+                        File.Delete(map);
                         CmoLog.Info("清理旧安装包缓存: " + p);
                     }
                 }
@@ -848,7 +892,21 @@ namespace CMOShared
             }
         }
 
-        public static bool VerifyEngineFiles(string packagePath, Dictionary<string, string> files, out string error)
+        // 普通安装器按分发目录寻找旁置地图。缓存中多个安装器共享目录，只能读取本 EXE 的副本。
+        internal static string FindMapSidecar(string packagePath, string sourceDir)
+        {
+            if (string.Equals(Path.GetFullPath(sourceDir).TrimEnd(Path.DirectorySeparatorChar),
+                Path.GetFullPath(CmoPaths.PackagesDir).TrimEnd(Path.DirectorySeparatorChar), StringComparison.OrdinalIgnoreCase))
+            {
+                string cached = VersionStore.CachedMapPath(packagePath, InstallManifest.Sha256OfFile(packagePath));
+                return File.Exists(cached) ? cached : null;
+            }
+            string path = Path.Combine(sourceDir, InstallManifest.MapTileFile);
+            if (!File.Exists(path)) path = Path.Combine(sourceDir, "patch_files", InstallManifest.MapTileFile);
+            return File.Exists(path) ? path : null;
+        }
+
+        public static bool VerifyEngineFiles(string packagePath, Dictionary<string, string> files, out string error, string sidecarHash = null)
         {
             error = "";
             string[] resources = EmbeddedResourceNames(packagePath);
@@ -858,7 +916,8 @@ namespace CMOShared
                 return false;
             }
             var expectedFiles = new List<string>(InstallManifest.EngineFiles);
-            if (Array.IndexOf(resources, "MAP_TILES") >= 0) expectedFiles.Add(InstallManifest.MapTileFile);
+            bool embeddedMap = Array.IndexOf(resources, "MAP_TILES") >= 0;
+            if (embeddedMap || sidecarHash != null) expectedFiles.Add(InstallManifest.MapTileFile);
             if (files == null || files.Count != expectedFiles.Count)
             {
                 error = "已部署文件与安装包应校验的文件不一致（" + string.Join("、", expectedFiles.ToArray()) + "），已中止登记。";
@@ -866,7 +925,11 @@ namespace CMOShared
             }
             foreach (string name in expectedFiles)
             {
-                string expect = EmbeddedSha256(packagePath, name == InstallManifest.MapTileFile ? "MAP_TILES" : name);
+                string expect;
+                if (name == InstallManifest.MapTileFile)
+                    expect = embeddedMap ? EmbeddedSha256(packagePath, "MAP_TILES") : sidecarHash;
+                else
+                    expect = EmbeddedSha256(packagePath, name);
                 string actual;
                 if (string.IsNullOrEmpty(expect))
                 {
@@ -991,7 +1054,9 @@ namespace CMOShared
             }
 
             Dictionary<string, string> files = InstallManifest.HashEngineFiles(gamePath);
-            if (!PackageAssets.VerifyEngineFiles(pkg, files, out error))
+            string sidecar = PackageAssets.FindMapSidecar(pkg, Path.GetDirectoryName(pkg));
+            string sidecarHash = sidecar == null ? null : InstallManifest.Sha256OfFile(sidecar);
+            if (!PackageAssets.VerifyEngineFiles(pkg, files, out error, sidecarHash))
             {
                 CmoLog.Error(error);
                 return false;

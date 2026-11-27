@@ -35,9 +35,17 @@ public static class MapTileDeliveryTests
     static string Dir(string name) { string dir = Path.Combine(root, name); Directory.CreateDirectory(dir); return dir; }
     static bool Deploy(string game, string source, out string error)
     {
-        object[] args = { game, source, null };
+        object[] args = { game, source, null, null };
         bool ok = (bool)installer.GetMethod("DeployMapTilePack", BindingFlags.NonPublic | BindingFlags.Static).Invoke(null, args);
-        error = (string)args[2]; return ok;
+        error = (string)args[3];
+        if (ok && args[2] != null)
+        {
+            using (SHA256 sha = SHA256.Create())
+            using (FileStream output = File.OpenRead(PackPath(game)))
+                Check((string)args[2] == BitConverter.ToString(sha.ComputeHash(output)).Replace("-", "").ToLowerInvariant(),
+                    "selected sidecar digest matches published bytes");
+        }
+        return ok;
     }
     static bool Equal(byte[] a, byte[] b) { return Convert.ToBase64String(a) == Convert.ToBase64String(b); }
     static void Restore(string game) { installer.GetMethod("RestoreMapLabelTiles", BindingFlags.NonPublic | BindingFlags.Static).Invoke(null, new object[] { game }); }
