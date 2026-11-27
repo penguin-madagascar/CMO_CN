@@ -1,6 +1,7 @@
 [CmdletBinding()]
-param([string]$RepositoryRoot = (Split-Path -Parent $PSScriptRoot))
+param([string]$RepositoryRoot)
 $ErrorActionPreference = 'Stop'
+if (-not $RepositoryRoot) { $RepositoryRoot = Split-Path -Parent $PSScriptRoot }
 $repo = (Get-Item -LiteralPath $RepositoryRoot).FullName
 $tempRoot = (Get-Item -LiteralPath ([IO.Path]::GetTempPath())).FullName
 $work = Join-Path $tempRoot ('cmo-map-migration-' + [guid]::NewGuid().ToString('N'))

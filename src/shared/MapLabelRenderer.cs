@@ -537,7 +537,7 @@ namespace CMOShared
         public int ReviewedSymbolCount { get; private set; }
 
         internal bool ReviewedData;
-        const string Version = "r88-structured-2";
+        const string Version = "r88-structured-3";
         static readonly IList<MapLabelPlace> NoBase = new List<MapLabelPlace>().AsReadOnly();
         static readonly IList<ReviewedMark> NoMarks = new List<ReviewedMark>().AsReadOnly();
         internal static long Key(int z, int x, int y)
@@ -1216,10 +1216,15 @@ namespace CMOShared
 
         void Reserve(int x, int y)
         {
-            // A clear pixel between independent outlines keeps characters legible at native size.
-            for (int row = Math.Max(0, y - 1); row <= Math.Min(Size - 1, y + 1); row++)
-                for (int column = Math.Max(0, x - 1); column <= Math.Min(Size - 1, x + 1); column++)
-                    occupied[row * Size + column] = 1;
+            // Text layout needs a one-pixel gap. Leaders can use that gap, but can never
+            // replace an actual glyph pixel (including the antialias fringe).
+            for (int row = Math.Max(0, y-1); row <= Math.Min(Size-1, y+1); row++)
+                for (int column = Math.Max(0, x-1); column <= Math.Min(Size-1, x+1); column++)
+                {
+                    int index = row*Size + column;
+                    if (occupied[index] == 0) occupied[index] = 1;
+                }
+            occupied[y*Size+x] = 2;
         }
 
         void MeasureFixedInk(FontFamily family, StringFormat format, Pen halo)
@@ -1429,8 +1434,95 @@ namespace CMOShared
             var edge =
                 Point.Round(new PointF(Clamp(rawX, bounds.Left, bounds.Right), Clamp(rawY, bounds.Top, bounds.Bottom)));
             int dx = anchor.X - edge.X, dy = anchor.Y - edge.Y;
-            if (dx * dx + dy * dy > 64)
+            if (dx * dx + dy * dy > 36)
                 leaders.Add(new[] { anchor, edge });
+        }
+
+        static double Distance(Point a, Point b)
+        {
+            int dx = a.X - b.X, dy = a.Y - b.Y;
+            return Math.Sqrt(dx*dx + dy*dy);
+        }
+
+        // Prefer a short direct line. In crowded areas allow a single bend to expose the
+        // link on both sides of intervening letters, without changing any text or its anchor.
+        double RouteScore(Point[] route, double direct, int target)
+        {
+            int visible = 0, firstVisible = -1, lastVisible = -1, samples = 0;
+            double length = 0;
+            for (int segment = 1; segment < route.Length; segment++)
+            {
+                Point start = route[segment-1], end = route[segment];
+                double distance = Distance(start, end);
+                length += distance;
+                int steps = Math.Max(1, (int)Math.Ceiling(distance));
+                for (int step = segment == 1 ? 0 : 1; step <= steps; step++, samples++)
+                {
+                    double fraction = step / (double)steps;
+                    int x = (int)Math.Round(start.X + (end.X-start.X)*fraction);
+                    int y = (int)Math.Round(start.Y + (end.Y-start.Y)*fraction);
+                    if (occupied[y*Size+x] == 2) continue;
+                    if (firstVisible < 0) firstVisible = samples;
+                    lastVisible = samples;
+                    visible++;
+                }
+            }
+            if (visible == 0) return -direct*5 - length;
+            int endGaps = firstVisible + samples-1-lastVisible;
+            return 3*Math.Min(visible, target) - endGaps - 0.6*(length-direct);
+        }
+
+        Point[] RouteLeader(Point[] line)
+        {
+            Point anchor = line[0], edge = line[1];
+            double direct = Distance(anchor, edge);
+            int target = Math.Min(15, Math.Max(4, (int)Math.Ceiling(direct*0.55)));
+            double best = RouteScore(line, direct, target);
+            if (best >= 3*target-2) return line;
+            Point[] chosen = line;
+            int limit = Math.Min(30, Math.Max(12, (int)Math.Ceiling(direct)));
+            double normalX = (anchor.Y-edge.Y)/direct, normalY = (edge.X-anchor.X)/direct;
+            for (int bend = 3; bend <= limit; bend += 3)
+            {
+                for (int sign = -1; sign <= 1; sign += 2)
+                {
+                    var midpoint = new Point((int)Math.Round(Clamp((float)((anchor.X+edge.X)*0.5
+                        + sign*bend*normalX), 0, Size-1)), (int)Math.Round(Clamp((float)((anchor.Y+edge.Y)*0.5
+                        + sign*bend*normalY), 0, Size-1)));
+                    var candidate = new[] {anchor, midpoint, edge};
+                    double score = RouteScore(candidate, direct, target);
+                    if (score > best)
+                    {
+                        best = score;
+                        chosen = candidate;
+                    }
+                }
+            }
+            // An anchor and its label may both lie inside a dense row of other names.
+            // Also consider a short diagonal elbow when a perpendicular bend stays hidden.
+            if (best < 2*target)
+            {
+                int maxRadius = Math.Min(27, Math.Max(18, (int)Math.Ceiling(direct)+6));
+                for (int radius = 9; radius <= maxRadius; radius += 9)
+                {
+                    for (int direction = 0; direction < 8; direction++)
+                    {
+                        double angle = direction*Math.PI/4;
+                        int x = (int)Math.Round(Clamp((float)((anchor.X+edge.X)*0.5
+                            + radius*Math.Cos(angle)), 0, Size-1));
+                        int y = (int)Math.Round(Clamp((float)((anchor.Y+edge.Y)*0.5
+                            + radius*Math.Sin(angle)), 0, Size-1));
+                        var candidate = new[] {anchor, new Point(x,y), edge};
+                        double score = RouteScore(candidate, direct, target);
+                        if (score > best)
+                        {
+                            best = score;
+                            chosen = candidate;
+                        }
+                    }
+                }
+            }
+            return chosen;
         }
 
         public void DrawLeaders(Bitmap tile)
@@ -1449,14 +1541,15 @@ namespace CMOShared
                     graphics.SmoothingMode = SmoothingMode.AntiAlias;
                     foreach (var leader in leaders)
                     {
-                        graphics.DrawLine(halo, leader[0], leader[1]);
-                        graphics.DrawLine(fill, leader[0], leader[1]);
+                        Point[] route = RouteLeader(leader);
+                        graphics.DrawLines(halo, route);
+                        graphics.DrawLines(fill, route);
                     }
                 }
                 int[] pixels = Pixels(strokes);
                 for (int i = 0; i < pixels.Length; i++)
                 {
-                    if ((pixels[i] >> 24) == 0 || occupied[i] != 0)
+                    if ((pixels[i] >> 24) == 0 || occupied[i] == 2)
                         continue;
                     int x = i % Size, y = i / Size;
                     if (tile.GetPixel(x, y).A == 0)

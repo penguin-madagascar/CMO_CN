@@ -91,7 +91,7 @@ namespace CMOShared
                         byte[] png = MapLabelRenderer.RenderTileBytes(index, tile.Zoom, tile.X, tile.Y,
                             out candidates, out rendered);
                         expected = MapLabelOriginalCache.Hash(png);
-                        if (expected != actual)
+                        if (force || expected != actual)
                         {
                             if (!force && written == 0) MapLabelOriginalCache.EnsureOriginalBackup(gamePath);
                             Publish(tile.Path, png);
