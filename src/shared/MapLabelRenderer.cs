@@ -484,25 +484,32 @@ namespace CMOShared
                 using (var sha = SHA256.Create()) return BitConverter.ToString(sha.ComputeHash(input)).Replace("-", "");
             }
 
+            // An installer resource is immutable for this AppDomain. The Framework cannot reflection-load
+            // the same byte-array assembly twice, including from concurrent cache refreshes.
+            private static readonly Lazy<string> EmbeddedRendererBuild = new Lazy<string>(ReadEmbeddedRendererBuild);
+
+            private static string ReadEmbeddedRendererBuild()
+            {
+                var module = typeof(MapLabelRenderer).Module;
+                using (var resource = module.Assembly.GetManifestResourceStream("CMOLocalizer.dll"))
+                {
+                    if (resource == null) return null;
+                    using (var copy = new MemoryStream())
+                    {
+                        resource.CopyTo(copy);
+                        byte[] engine = copy.ToArray();
+                        try { return System.Reflection.Assembly.ReflectionOnlyLoad(engine).ManifestModule.ModuleVersionId.ToString(); }
+                        catch (BadImageFormatException) { return Hash(engine); } // Resource-only installer test hosts.
+                    }
+                }
+            }
+
             private static string RendererBuild(string gameDir)
             {
                 var module = typeof(MapLabelRenderer).Module;
                 if (module.Assembly.GetName().Name == "CMOLocalizer") return module.ModuleVersionId.ToString();
-                // A setup embeds the engine compiled from the same renderer. Match that build even
-                // when an updater replaces the disk DLL while an older game process still holds it.
-                using (var resource = module.Assembly.GetManifestResourceStream("CMOLocalizer.dll"))
-                {
-                    if (resource != null)
-                    {
-                        using (var copy = new MemoryStream())
-                        {
-                            resource.CopyTo(copy);
-                            byte[] engine = copy.ToArray();
-                            try { return System.Reflection.Assembly.ReflectionOnlyLoad(engine).ManifestModule.ModuleVersionId.ToString(); }
-                            catch (BadImageFormatException) { return Hash(engine); } // Resource-only installer test hosts.
-                        }
-                    }
-                }
+                string embedded = EmbeddedRendererBuild.Value;
+                if (embedded != null) return embedded;
                 string file = Path.Combine(gameDir, "CMOLocalizer.dll");
                 return File.Exists(file) ? FileHash(file) : module.ModuleVersionId.ToString();
             }

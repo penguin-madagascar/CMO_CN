@@ -295,9 +295,22 @@ public static class MapLabelTilePackTests
     static string Tile(string game) { return Path.Combine(Cache(game), @"3\4\4.png"); }
     static void Write(string file, byte[] bytes) { Directory.CreateDirectory(Path.GetDirectoryName(file)); File.WriteAllBytes(file, bytes); }
     static int Apply(object pack, string game) { object value = Call(pack, "ApplyToCache", game); return value == null ? -1 : (int)value; }
+    static void CheckRepeatedEmbeddedInstaller(string installerPath)
+    {
+        var setup = Assembly.LoadFrom(installerPath);
+        Check(Array.IndexOf(setup.GetManifestResourceNames(), "CMOLocalizer.dll") >= 0, "installer contains the real engine assembly");
+        var localize = setup.GetType("CMOLocalizerInstaller.InstallerCore", true).GetMethod(
+            "LocalizeMapLabelTiles", BindingFlags.Static | BindingFlags.NonPublic);
+        string game = Path.Combine(root, "embedded-twice");
+        Directory.CreateDirectory(game);
+        File.Copy(Valid(Png(256, Color.Red), "embedded-twice"), Path.Combine(game, "ChineseMapTiles.dat"));
+        Check((int)localize.Invoke(null, new object[]{game}) == 1, "embedded installer initializes the cache");
+        Check((int)localize.Invoke(null, new object[]{game}) == 0, "same installer reuses its embedded engine in the same AppDomain");
+    }
     public static int Main(string[] args) {
         try {
             root=Path.GetFullPath(args[2]); Directory.CreateDirectory(root);
+            CheckRepeatedEmbeddedInstaller(args[1]);
             var engine=Assembly.LoadFrom(args[0]); packType=engine.GetType("CMOShared.MapLabelTilePack");
             Check(packType != null, "shared verified tilepack API exists");
             byte[] rulePng=Png(256,Color.Red);
